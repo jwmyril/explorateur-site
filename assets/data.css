@@ -644,3 +644,31 @@ select:focus-visible, input:focus-visible {
 .x-serie-pt { fill: var(--teal); opacity: 0.75; }
 .x-serie-pt:hover { fill: var(--amber); opacity: 1; }
 #x-prix .x-adapter { margin: 0.9rem 0; }
+
+/* ===== Retour d'envoi des demandes =====
+   Le panneau ne dit jamais « envoyé » quand il ne l'est pas : les trois états
+   sont exclusifs, portés par une classe, et leurs phrases vivent dans le HTML
+   pour être traduites comme le reste de la page. */
+.d-envoi {
+  margin-top: 1.1rem; padding: 1rem 1.1rem; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--surface-2, rgba(127,127,127,0.06));
+}
+.d-envoi[hidden] { display: none; }
+.d-envoi .x-etat { margin: 0 0 0.8rem; font-weight: 600; line-height: 1.5; }
+.d-envoi .x-etat:focus { outline: 2px solid var(--teal); outline-offset: 3px; }
+.d-envoi .x-si-envoye, .d-envoi .x-si-pret, .d-envoi .x-si-erreur { display: none; }
+.d-envoi.est-envoye .x-si-envoye { display: inline; color: var(--teal); }
+.d-envoi.est-copie .x-si-pret { display: inline; }
+.d-envoi.est-erreur .x-si-erreur { display: inline; color: var(--amber); }
+/* Rien à recopier quand la demande est réellement partie. */
+.d-envoi.est-envoye .x-msg, .d-envoi.est-envoye .x-actions { display: none; }
+.d-envoi .x-msg {
+  width: 100%; box-sizing: border-box; font: 0.82rem/1.5 ui-monospace, Menlo, monospace;
+  padding: 0.7rem; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--bg); color: inherit; resize: vertical;
+}
+.d-envoi .x-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.7rem; }
+/* 44 px : une cible qu'un pouce atteint sans viser. */
+.d-envoi .x-actions .btn { min-height: 44px; display: inline-flex; align-items: center; }
+.d-envoi .x-fait { display: none; margin: 0.7rem 0 0; font-size: 0.85rem; color: var(--teal); }
+.d-envoi.a-copie .x-fait { display: block; }

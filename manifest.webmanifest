@@ -1,0 +1,21 @@
+{
+  "id": "/",
+  "name": "Explorateur Haïti — Atmart Data",
+  "short_name": "Explorateur Haïti",
+  "description": "Profils territoriaux des 140 communes d'Haïti : indicateurs sourcés et datés, comparaison, classement, exports.",
+  "lang": "fr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0e2240",
+  "theme_color": "#0e2240",
+  "categories": ["education", "government", "utilities"],
+  "icons": [
+    { "src": "assets/brand/logo-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "assets/brand/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "shortcuts": [
+    { "name": "Comparer des territoires", "url": "/?onglet=comparaison" },
+    { "name": "Classement des communes", "url": "/?onglet=classement" }
+  ]
+}

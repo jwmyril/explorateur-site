@@ -1,0 +1,646 @@
+/* ===== Atmart Data — composants de la section Données =====
+   Chargé uniquement par donnees*.html et datasets.html.
+   Ne touche pas style.css : pas de cache-busting global à faire. */
+
+.d-lbl {
+  font-family: var(--font-head); font-size: 0.75rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--teal); margin: 0 0 0.5rem;
+}
+.d-h { font-size: clamp(1.5rem, 3.2vw, 2.1rem); margin: 0 0 0.7rem; }
+.d-sub { color: var(--ink-dim); max-width: 78ch; font-size: 1rem; }
+.d-note { color: var(--ink-dim); font-size: 0.86rem; line-height: 1.65; }
+.d-sec { padding: 2.6rem 0 0; }
+.d-sec:first-of-type { padding-top: 1.6rem; }
+
+/* Bandeau de preuve chiffrée */
+.d-proof {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+.d-proof div {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+}
+.d-proof b { display: block; font-family: var(--font-head); font-size: 1.5rem; color: var(--teal); }
+.d-proof small { color: var(--ink-dim); font-size: 0.8rem; line-height: 1.4; display: block; }
+
+/* Tuiles (problème client, principes…) */
+.d-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.9rem; }
+.d-tiles > div {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1.1rem 1.15rem;
+}
+.d-tiles span.ico { display: block; font-size: 1.4rem; margin-bottom: 0.35rem; }
+.d-tiles b { display: block; font-family: var(--font-head); color: var(--ink); margin-bottom: 0.3rem; }
+.d-tiles p { color: var(--ink-dim); font-size: 0.88rem; margin: 0; line-height: 1.6; }
+
+/* Entrées par cas d'usage */
+.d-doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+.d-door {
+  display: block; background: var(--card); border: 1px solid var(--border);
+  border-left: 3px solid var(--teal); border-radius: var(--radius); padding: 1.15rem 1.2rem;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.d-door:hover { transform: translateY(-3px); border-color: var(--teal); }
+.d-door h3 { font-size: 1.02rem; color: var(--ink); margin-bottom: 0.35rem; }
+.d-door p { color: var(--ink-dim); font-size: 0.88rem; margin: 0 0 0.6rem; line-height: 1.6; }
+.d-door .go { color: var(--teal); font-size: 0.84rem; font-weight: 600; }
+.d-door:hover .go { color: var(--amber); }
+.d-door.amber { border-left-color: var(--amber); }
+.d-door.amber .go { color: var(--amber); }
+.d-door.red { border-left-color: var(--red); }
+
+/* Tableaux (niveaux d'offre, licences, sponsoring) */
+.d-tab-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; min-width: 0; max-width: 100%; }
+.d-tab {
+  width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 620px;
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden;
+}
+.d-tab th, .d-tab td {
+  text-align: left; padding: 0.7rem 0.85rem; vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+.d-tab thead th {
+  font-size: 0.74rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-dim);
+  font-family: var(--font-head); background: rgba(46, 196, 182, 0.06);
+}
+.d-tab td:first-child { color: var(--ink); font-weight: 600; }
+.d-tab td { color: var(--ink-dim); }
+.d-tab tbody tr:last-child td { border-bottom: 0; }
+.d-tab .p { color: var(--amber); font-weight: 600; white-space: nowrap; }
+
+/* Étapes numérotées */
+.d-steps { list-style: none; counter-reset: st; margin: 1rem 0 0; padding: 0; max-width: 82ch; }
+.d-steps li {
+  counter-increment: st; position: relative; padding: 0.45rem 0 0.45rem 2.4rem;
+  color: var(--ink-dim); font-size: 0.94rem;
+}
+.d-steps li::before {
+  content: counter(st); position: absolute; left: 0; top: 0.45rem;
+  width: 1.6rem; height: 1.6rem; border-radius: 50%; background: rgba(46, 196, 182, 0.13);
+  color: var(--teal); font-family: var(--font-head); font-size: 0.8rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.d-steps li b { color: var(--ink); }
+
+/* Liste à flèches */
+.d-list { list-style: none; margin: 0.9rem 0 0; padding: 0; }
+.d-list li {
+  color: var(--ink-dim); font-size: 0.93rem; padding: 0.28rem 0 0.28rem 1.5rem;
+  position: relative; line-height: 1.6;
+}
+.d-list li::before { content: "→"; position: absolute; left: 0; color: var(--teal); }
+.d-list.yes li::before { content: "✓"; color: var(--teal); }
+.d-list.no li::before { content: "✕"; color: var(--red); }
+
+/* Encadré */
+.d-box {
+  background: rgba(46, 196, 182, 0.06); border: 1px solid rgba(46, 196, 182, 0.28);
+  border-radius: var(--radius); padding: 1.2rem 1.3rem; margin-top: 1.4rem;
+}
+.d-box.amber { background: rgba(244, 162, 97, 0.06); border-color: rgba(244, 162, 97, 0.28); }
+.d-box h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+.d-box p { color: var(--ink-dim); font-size: 0.92rem; }
+.d-box p + p { margin-top: 0.6rem; }
+
+/* Pastilles de statut */
+.d-pill {
+  display: inline-block; font-size: 0.68rem; letter-spacing: 0.07em; text-transform: uppercase;
+  font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 999px; font-family: var(--font-head);
+}
+.d-pill.live { background: rgba(46, 196, 182, 0.16); color: var(--teal); }
+.d-pill.soon { background: rgba(159, 179, 200, 0.14); color: var(--ink-dim); }
+.d-pill.spons { background: rgba(244, 162, 97, 0.16); color: var(--amber); }
+
+/* Fiche produit (gabarit) */
+.d-fiche { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 2rem; align-items: start; }
+.d-fiche > div { min-width: 0; }
+.d-fiche h2 { font-size: 1.15rem; margin: 1.8rem 0 0.6rem; }
+.d-fiche h2:first-child { margin-top: 0; }
+.d-fiche p { color: var(--ink-dim); font-size: 0.94rem; }
+.d-buy {
+  position: sticky; top: 90px; background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.3rem;
+}
+.d-buy .price { font-family: var(--font-head); font-size: 1.9rem; color: var(--amber); margin: 0.3rem 0 0.1rem; }
+.d-buy .price small { display: block; font-size: 0.78rem; color: var(--ink-dim); font-family: var(--font-body); }
+.d-buy .btn { display: block; text-align: center; margin-top: 0.9rem; }
+.d-buy ul { list-style: none; margin: 1rem 0 0; padding: 0; }
+.d-buy li {
+  font-size: 0.83rem; color: var(--ink-dim); padding: 0.28rem 0 0.28rem 1.3rem; position: relative;
+}
+.d-buy li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); }
+.d-specs { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.d-specs th, .d-specs td { text-align: left; padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+.d-specs th { color: var(--ink-dim); font-weight: 500; width: 34%; font-family: var(--font-body); }
+.d-specs td { color: var(--ink); }
+
+/* Aperçu de données */
+.d-preview { min-width: 0; max-width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); margin-top: 0.8rem; }
+.d-preview table { width: 100%; border-collapse: collapse; font-size: 0.8rem; min-width: 560px; }
+.d-preview th, .d-preview td { padding: 0.45rem 0.7rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.d-preview th { background: rgba(46, 196, 182, 0.07); color: var(--teal); font-family: var(--font-head); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.d-preview td { color: var(--ink-dim); font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; }
+
+/* Formulaire */
+.d-form { max-width: 720px; margin-top: 1.3rem; }
+.d-form .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+.d-form label { display: block; font-size: 0.8rem; color: var(--ink-dim); margin: 0.8rem 0 0.3rem; }
+.d-form input, .d-form select, .d-form textarea {
+  width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+  color: var(--ink); padding: 0.6rem 0.75rem; font-family: var(--font-body); font-size: 0.92rem;
+}
+.d-form input:focus, .d-form select:focus, .d-form textarea:focus { outline: none; border-color: var(--teal); }
+.d-form button { margin-top: 1.1rem; }
+
+@media (max-width: 860px) {
+  .d-fiche { grid-template-columns: 1fr; }
+  .d-buy { position: static; }
+  .d-form .two { grid-template-columns: 1fr; }
+}
+
+/* ===== Carte du système (donnees-systeme.html) ===== */
+.sys-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.4rem 0 0.4rem; }
+.sys-note { color: var(--ink-dim); font-size: 0.85rem; margin-bottom: 1.4rem; }
+
+.sys-path {
+  background: rgba(46, 196, 182, 0.07); border: 1px solid rgba(46, 196, 182, 0.3);
+  border-radius: var(--radius); padding: 1rem 1.2rem; margin: 0 0 2rem;
+}
+.sys-path b { color: var(--teal); font-family: var(--font-head); }
+.sys-path p { color: var(--ink-dim); font-size: 0.92rem; margin: 0.3rem 0 0; line-height: 1.65; }
+
+.sys-layer { display: grid; grid-template-columns: 190px 1fr; gap: 1.3rem; margin-bottom: 1.6rem; }
+.sys-head { position: sticky; top: 88px; align-self: start; }
+.sys-head .num {
+  font-family: var(--font-head); font-size: 2rem; font-weight: 700;
+  color: var(--teal); line-height: 1; opacity: 0.5;
+}
+.sys-head h2 { font-size: 1.05rem; margin: 0.2rem 0 0.35rem; }
+.sys-head p { color: var(--ink-dim); font-size: 0.8rem; line-height: 1.5; margin: 0; }
+
+.sys-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(226px, 1fr)); gap: 0.8rem; }
+.sys-card {
+  display: block; background: var(--card); border: 1px solid var(--border);
+  border-left: 3px solid var(--border); border-radius: 12px; padding: 0.85rem 0.95rem;
+  transition: transform .14s ease, border-color .14s ease;
+}
+a.sys-card:hover { transform: translateY(-2px); border-color: var(--teal); }
+.sys-card h3 { font-size: 0.94rem; color: var(--ink); margin: 0.3rem 0 0.25rem; line-height: 1.3; }
+.sys-card p { color: var(--ink-dim); font-size: 0.8rem; margin: 0; line-height: 1.5; }
+.sys-card .vol {
+  display: block; margin-top: 0.45rem; font-family: var(--font-head);
+  font-size: 0.8rem; color: var(--teal);
+}
+.sys-card.live { border-left-color: var(--teal); }
+.sys-card.partiel { border-left-color: var(--amber); }
+.sys-card.finance { border-left-color: var(--red); }
+.sys-card.finance .vol { color: var(--amber); }
+.sys-card.dim { opacity: 0.28; }
+.sys-card.off { display: none; }
+
+.sys-legend { display: flex; flex-wrap: wrap; gap: 1.1rem; margin: 0.2rem 0 1.6rem; font-size: 0.82rem; color: var(--ink-dim); }
+.sys-legend span { display: flex; align-items: center; gap: 0.4rem; }
+.sys-legend i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+
+@media (max-width: 780px) {
+  .sys-layer { grid-template-columns: 1fr; gap: 0.7rem; }
+  .sys-head { position: static; }
+  .sys-head .num { font-size: 1.4rem; display: inline-block; margin-right: 0.5rem; }
+  .sys-head h2 { display: inline-block; }
+}
+
+/* ===== Explorateur Haïti (donnees-explorateur.html) ===== */
+.x-barre { position: relative; max-width: 720px; margin: 1.6rem auto 0; }
+.x-barre input {
+  width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 999px;
+  color: var(--ink); padding: 0.95rem 1.4rem; font-family: var(--font-body); font-size: 1.02rem;
+}
+.x-barre input:focus { outline: none; border-color: var(--teal); }
+.x-compte { text-align: center; color: var(--ink-dim); font-size: 0.82rem; margin-top: 0.6rem; }
+
+#x-resultats {
+  position: absolute; left: 0; right: 0; top: calc(100% + 0.4rem); z-index: 30;
+  background: var(--card); border: 1px solid var(--teal); border-radius: 14px;
+  max-height: 340px; overflow-y: auto; padding: 0.35rem;
+}
+.x-res {
+  display: block; width: 100%; text-align: left; background: none; border: 0; cursor: pointer;
+  color: var(--ink); padding: 0.5rem 0.7rem; border-radius: 9px; font-family: var(--font-body);
+}
+.x-res:hover { background: rgba(46, 196, 182, 0.12); }
+.x-res b { font-weight: 600; }
+.x-res i { color: var(--teal); font-style: normal; font-size: 0.88rem; }
+.x-res small { display: block; color: var(--ink-dim); font-size: 0.76rem; }
+.x-vide { color: var(--ink-dim); font-size: 0.9rem; padding: 0.8rem; margin: 0; }
+
+.x-onglets { display: flex; gap: 0.5rem; justify-content: center; margin: 2rem 0 1.2rem; }
+
+.x-tete { border-bottom: 1px solid var(--border); padding-bottom: 0.9rem; margin-bottom: 1.2rem; }
+.x-fil { font-size: 0.82rem; color: var(--ink-dim); margin: 0 0 0.4rem; }
+.x-fil span { color: var(--ink); }
+.x-tete h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); margin: 0; }
+.x-tete h2 em { color: var(--teal); font-style: normal; font-size: 0.7em; }
+.x-meta { color: var(--ink-dim); font-size: 0.84rem; margin: 0.35rem 0 0; }
+.x-meta code, .x-tab code { background: rgba(46,196,182,.1); color: var(--teal); padding: 0.05rem 0.35rem; border-radius: 5px; font-size: 0.92em; }
+
+/* Un bouton-lien mesurait 22 px de haut : sous le minimum de 24 px du critère
+   WCAG 2.5.8. L'exception « dans un bloc de texte » couvrait la plupart d'entre
+   eux, pas tous — deux pixels et un peu de padding coûtent moins cher que le
+   raisonnement qu'il faudrait tenir cas par cas. */
+.x-lien {
+  background: none; border: 0; color: var(--teal); cursor: pointer; font: inherit;
+  display: inline-block; min-height: 24px; padding: 0 0.1rem;
+}
+.x-lien:hover { color: var(--amber); text-decoration: underline; }
+
+.x-h3 { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal);
+        font-family: var(--font-head); margin: 1.7rem 0 0.7rem; }
+
+.x-tab { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.x-tab th, .x-tab td { text-align: left; padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+.x-tab th { color: var(--ink-dim); font-weight: 500; width: 34%; }
+.x-tab td { color: var(--ink); }
+
+.x-puces { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.x-puce {
+  background: rgba(46,196,182,.08); border: 1px solid var(--border); color: var(--ink);
+  border-radius: 999px; padding: 0.32rem 0.8rem; font-size: 0.85rem; cursor: pointer; font-family: var(--font-body);
+}
+.x-puce:hover { border-color: var(--teal); color: var(--teal); }
+
+.x-mesures { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 0.7rem; }
+.x-mesure { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 0.85rem 0.9rem; }
+.x-mesure b { display: block; font-family: var(--font-head); font-size: 1.35rem; color: var(--teal); line-height: 1.2; }
+.x-mesure span { display: block; color: var(--ink-dim); font-size: 0.78rem; margin-top: 0.25rem; line-height: 1.4; }
+
+.x-manque { list-style: none; margin: 0; padding: 0; }
+.x-manque li {
+  color: var(--ink-dim); font-size: 0.88rem; padding: 0.45rem 0 0.45rem 1.5rem;
+  position: relative; line-height: 1.6; border-bottom: 1px solid var(--border);
+}
+.x-manque li::before { content: "○"; position: absolute; left: 0; color: var(--amber); }
+.x-manque b { color: var(--amber); }
+
+.x-note { color: var(--ink-dim); font-size: 0.84rem; line-height: 1.6; margin-top: 0.8rem; }
+.x-cta {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  background: rgba(244,162,97,.06); border: 1px solid rgba(244,162,97,.28);
+  border-radius: var(--radius); padding: 1rem 1.2rem; margin-top: 1.6rem;
+}
+.x-cta p { color: var(--ink-dim); font-size: 0.9rem; margin: 0; }
+
+.x-outils { display: flex; gap: 0.7rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; }
+.x-outils select {
+  background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+  color: var(--ink); padding: 0.55rem 0.7rem; font-family: var(--font-body); font-size: 0.92rem;
+}
+.x-classement { font-size: 0.86rem; }
+.x-classement th { width: auto; }
+.x-classement td:first-child { color: var(--ink-dim); width: 3rem; }
+
+@media (max-width: 700px) {
+  .x-mesures { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .x-cta { flex-direction: column; align-items: flex-start; }
+}
+
+/* Explorateur — profils, thèmes, verrou, tableaux d'organisations */
+.x-profils { display: flex; flex-wrap: wrap; gap: 0.45rem; justify-content: center; margin: 0 0 1.2rem; }
+.x-profils .filter-btn { font-size: 0.84rem; padding: 0.4rem 0.9rem; }
+
+.x-theme { font-family: var(--font-head); font-size: 0.9rem; color: var(--ink);
+           margin: 1.1rem 0 0.5rem; }
+.x-mesure .x-meth { display: none; }
+.x-mesure:hover .x-meth {
+  display: block; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border);
+  color: var(--ink-dim); font-size: 0.72rem; line-height: 1.45;
+}
+
+.x-profil {
+  background: rgba(46,196,182,.07); border: 1px solid rgba(46,196,182,.3);
+  border-radius: var(--radius); padding: 1rem 1.2rem; margin-bottom: 1.4rem;
+}
+.x-profil p { color: var(--ink-dim); font-size: 0.9rem; margin: 0; line-height: 1.6; }
+.x-profil .x-theme { margin: 0 0 0.35rem; color: var(--teal); }
+
+.x-verrou {
+  display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; justify-content: space-between;
+  background: rgba(244,162,97,.06); border: 1px solid rgba(244,162,97,.3);
+  border-radius: var(--radius); padding: 1.1rem 1.3rem;
+}
+.x-verrou > div { flex: 1 1 380px; min-width: 0; }
+.x-verrou p { color: var(--ink-dim); font-size: 0.88rem; margin: 0; line-height: 1.6; }
+.x-verrou p + p { margin-top: 0.6rem; }
+
+.x-tabwrap { overflow-x: auto; max-width: 100%; min-width: 0; }
+.x-orgs { font-size: 0.82rem; min-width: 560px; }
+.x-orgs th { width: auto; }
+.x-orgs code { font-size: 0.9em; }
+
+.x-admin-bandeau {
+  background: rgba(230,57,70,.12); border: 1px solid rgba(230,57,70,.4);
+  border-radius: var(--radius); padding: 0.8rem 1.1rem; margin-bottom: 1.4rem;
+}
+.x-admin-bandeau b { color: var(--red); font-family: var(--font-head); }
+.x-admin-bandeau p { color: var(--ink-dim); font-size: 0.86rem; margin: 0.25rem 0 0; }
+
+/* ===== Explorateur v3 — premier écran, indicateurs contextualisés, mobile ===== */
+.x-label { display: block; font-size: 0.84rem; color: var(--ink-dim); margin-bottom: 0.4rem; }
+.x-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.x-exemples { text-align: center; color: var(--ink-dim); font-size: 0.9rem; margin: 0.8rem 0 0; }
+.x-exemples .x-lien { font-size: 0.9rem; min-height: 44px; padding: 0 0.2rem; }
+.x-preuve { text-align: center; color: var(--ink-dim); font-size: 0.82rem; margin: 0.7rem 0 0; }
+.x-couverture {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 0.85rem 1.1rem; color: var(--ink-dim); font-size: 0.87rem; line-height: 1.65; margin: 0 0 0.6rem;
+}
+.x-couverture b { color: var(--ink); }
+
+.x-adapter { display: flex; align-items: center; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+.x-adapter label { color: var(--ink-dim); font-size: 0.86rem; }
+.x-adapter select, .x-outils select {
+  background: var(--card); border: 1px solid var(--border); border-radius: 10px; color: var(--ink);
+  padding: 0.6rem 0.75rem; font-family: var(--font-body); font-size: 0.92rem; min-height: 44px; max-width: 100%;
+}
+
+.x-situe { color: var(--ink-dim); font-size: 0.95rem; margin: 0.3rem 0 0; }
+.x-actions { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1rem; }
+.x-actions .btn { font-size: 0.86rem; padding: 0.6rem 1rem; min-height: 44px; }
+.x-actions-sec { margin-top: 0.8rem; }
+.x-confiance { color: var(--ink-dim); font-size: 0.8rem; margin: 0.9rem 0 0; line-height: 1.6; }
+
+.x-objectif {
+  background: rgba(46,196,182,.07); border: 1px solid rgba(46,196,182,.3);
+  border-radius: var(--radius); padding: 1rem 1.2rem; margin: 1.4rem 0;
+}
+.x-objectif p { color: var(--ink-dim); font-size: 0.92rem; margin: 0; line-height: 1.65; }
+.x-objectif .x-theme { margin: 0 0 0.4rem; color: var(--teal); }
+
+/* ===== Résumé décisionnel =====
+   Deux colonnes de même poids : ce que la donnée dit, ce qu'elle ne dit pas.
+   Les mettre côte à côte est le propos — l'une ne se lit pas sans l'autre. */
+.x-dec-cols {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem 1.6rem; margin: 0.9rem 0 0.2rem;
+}
+.x-dec-t {
+  font-family: var(--font-head); font-size: 0.78rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink) !important; margin: 0 0 0.4rem !important;
+}
+.x-dec-cols ul { list-style: none; margin: 0; padding: 0; }
+.x-dec-cols li {
+  color: var(--ink-dim); font-size: 0.88rem; line-height: 1.5;
+  padding: 0.35rem 0 0.35rem 0.9rem; position: relative; border-bottom: 1px solid var(--border);
+}
+.x-dec-cols li:last-child { border-bottom: 0; }
+.x-dec-cols li::before { content: "·"; position: absolute; left: 0; color: var(--teal); }
+.x-dec-cols li b { color: var(--ink); font-weight: 600; }
+.x-dec-cols li small { display: block; color: var(--ink-dim); opacity: 0.85; font-size: 0.79rem; }
+.x-dec-plus::before { content: "" !important; }
+.x-dec-etat {
+  margin: 0.8rem 0 0 !important; font-size: 0.84rem !important; color: var(--ink-dim) !important;
+}
+.x-dec-avert { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+.x-dec-avert li {
+  color: var(--amber); font-size: 0.84rem; line-height: 1.55;
+  padding: 0.2rem 0 0.2rem 1.2rem; position: relative;
+}
+.x-dec-avert li::before { content: "⚠"; position: absolute; left: 0; font-size: 0.8rem; }
+
+/* ===== Accueil : la fiche montrée d'emblée est un exemple ===== */
+.x-accueil { margin: 0 0 1.4rem; }
+.x-accueil-vp {
+  font-size: 1.02rem; color: var(--ink); line-height: 1.6; margin: 0 0 0.5rem; max-width: 76ch;
+}
+.x-accueil-ex {
+  color: var(--amber); font-size: 0.88rem; margin: 0.6rem 0 0;
+  border-left: 3px solid var(--amber); padding-left: 0.7rem;
+}
+
+/* Le sélecteur d'usage était un libellé gris au-dessus d'une liste : il change
+   ce que la fiche montre, il doit se voir. */
+.x-adapter {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+}
+.x-adapter label { color: var(--ink) !important; font-weight: 600; }
+.x-adapter select { border-color: rgba(46,196,182,.45); }
+
+details.x-mesure { padding: 0; }
+details.x-mesure summary {
+  list-style: none; cursor: pointer; padding: 0.85rem 0.9rem; border-radius: 12px;
+}
+details.x-mesure summary::-webkit-details-marker { display: none; }
+details.x-mesure summary::after {
+  content: "Détails +"; display: block; margin-top: 0.5rem;
+  color: var(--teal); font-size: 0.72rem; font-family: var(--font-head);
+}
+details.x-mesure[open] summary::after { content: "Réduire −"; }
+details.x-mesure summary:hover { background: rgba(46,196,182,.05); }
+.x-mill { display: block; color: var(--ink-dim); font-size: 0.72rem; margin-top: 0.35rem; line-height: 1.45; }
+.x-rang { display: block; color: var(--amber); font-size: 0.72rem; margin-top: 0.2rem; }
+.x-detail { padding: 0 0.9rem 0.9rem; border-top: 1px solid var(--border); margin-top: 0.2rem; }
+.x-detail p { color: var(--ink-dim); font-size: 0.8rem; line-height: 1.6; margin-top: 0.6rem; }
+.x-detail b { color: var(--ink); }
+.x-detail .x-limite b { color: var(--amber); }
+/* Une révision en retard se voit : c'est une valeur qui a dépassé sa date. */
+.x-perime { color: var(--amber); font-weight: 600; }
+.x-mesure.x-statique { padding: 0.85rem 0.9rem; }
+
+.x-lacunes { font-size: 0.84rem; min-width: 620px; }
+.x-lacunes th { width: auto; }
+.x-lacunes td:first-child { color: var(--ink); }
+
+details.x-tech {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 0.9rem 1.1rem; margin-top: 1.8rem;
+}
+details.x-tech summary {
+  cursor: pointer; color: var(--teal); font-family: var(--font-head); font-size: 0.88rem;
+  min-height: 44px; display: flex; align-items: center;
+}
+.x-liste { list-style: none; margin: 0.7rem 0 0; padding: 0; }
+.x-liste li { color: var(--ink-dim); font-size: 0.86rem; padding: 0.3rem 0 0.3rem 1.4rem;
+              position: relative; line-height: 1.6; }
+.x-liste li::before { content: "→"; position: absolute; left: 0; color: var(--teal); }
+.x-liste b { color: var(--ink); }
+
+/* --- accessibilité --- */
+.x-res:focus-visible, .x-lien:focus-visible, .x-puce:focus-visible,
+.filter-btn:focus-visible, .btn:focus-visible, summary:focus-visible,
+select:focus-visible, input:focus-visible {
+  outline: 2px solid var(--teal); outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+
+/* --- mobile : cibles tactiles, onglets courts, bouton latéral --- */
+.x-court { display: none; }
+/* Cibles tactiles : jusqu'a 1024 px on est probablement au doigt, pas a la souris */
+@media (max-width: 1024px) {
+  .x-onglets .filter-btn, .x-adapter select, .x-outils select, .x-outils .btn,
+  .x-actions .btn, .x-puce, details.x-tech summary, .x-jeton-x, .filter-btn {
+    min-height: 44px;
+  }
+  .x-jeton-x { min-width: 44px; }
+}
+@media (max-width: 640px) {
+  .x-long { display: none; }
+  .x-court { display: inline; }
+  .x-onglets .filter-btn, .x-adapter select, .x-outils select, .x-outils .btn { min-height: 44px; }
+  .x-onglets { gap: 0.4rem; }
+  .x-actions .btn { flex: 1 1 100%; text-align: center; }
+  .x-adapter { flex-direction: column; align-items: stretch; }
+  .x-adapter select { width: 100%; }
+  .x-outils { flex-direction: column; align-items: stretch; }
+  .x-outils select, .x-outils .btn { width: 100%; }
+  .x-mesures { grid-template-columns: 1fr; }
+  .x-puce { min-height: 44px; display: inline-flex; align-items: center; }
+  /* le bouton latéral « Products » chevauche le bord gauche sur petit écran */
+  .atm-launch { transform: scale(0.8); transform-origin: left bottom; opacity: 0.65; }
+}
+
+/* ===== Carte de situation ===== */
+.x-carte { margin: 1.4rem 0 0; }
+.x-carte svg {
+  width: 100%; height: auto; max-height: 46vh; display: block;
+  background: rgba(46,196,182,.04); border: 1px solid var(--border); border-radius: var(--radius);
+}
+.x-terre { fill: rgba(46,196,182,.09); stroke: rgba(46,196,182,.45); stroke-width: 1.1; }
+.x-pt { fill: #7d92a8; opacity: 0.55; cursor: pointer; }
+.x-pt:hover { fill: var(--amber); opacity: 1; }
+.x-pt-pro { fill: var(--teal); opacity: 0.75; }
+.x-pt-sel { fill: var(--amber); opacity: 1; stroke: #0a1a2f; stroke-width: 1.6; }
+.x-pt-halo { fill: none; stroke: var(--amber); stroke-width: 1.4; opacity: 0.55; }
+.x-pt:focus-visible { outline: 2px solid var(--teal); }
+.x-legende { color: var(--ink-dim); font-size: 0.78rem; margin: 0.6rem 0 0; line-height: 1.8; }
+.x-legende span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 0.15rem; vertical-align: middle; }
+.x-l-sel { background: var(--amber); }
+.x-l-pro { background: var(--teal); }
+.x-l-autre { background: #7d92a8; opacity: 0.55; }
+@media (max-width: 640px) { .x-carte svg { max-height: 38vh; } }
+
+/* ===== Pyramide des âges =====
+   Deux couleurs de la charte, pas le rose et le bleu : le côté du graphique
+   distingue déjà les deux séries, et chaque barre porte son intitulé. */
+.x-pyr { margin: 1.6rem 0 0; }
+.x-pyr-fig svg {
+  width: 100%; height: auto; display: block;
+  background: rgba(46,196,182,.04); border: 1px solid var(--border); border-radius: var(--radius);
+}
+.x-pyr-f { fill: var(--amber); opacity: 0.85; }
+.x-pyr-m { fill: var(--teal); opacity: 0.85; }
+.x-pyr-f:hover, .x-pyr-m:hover { opacity: 1; }
+.x-pyr-grille { stroke: var(--border); stroke-width: 1; opacity: 0.55; }
+.x-pyr-axe { fill: var(--ink-dim); font-size: 11px; font-family: var(--font-body); }
+.x-pyr-lab { fill: var(--ink-dim); font-size: 11px; font-family: var(--font-body); }
+.x-pyr-tete {
+  fill: var(--ink); font-size: 12px; font-family: var(--font-head); letter-spacing: 0.04em;
+}
+.x-l-f { background: var(--amber); }
+.x-l-m { background: var(--teal); }
+.x-pyr-lect { color: var(--ink); font-size: 0.88rem; margin: 0.5rem 0 0; line-height: 1.7; }
+.x-pyr-tab { min-width: 420px; font-size: 0.86rem; }
+.x-pyr-tab td { text-align: right; }
+.x-pyr-tab tbody tr:last-child th, .x-pyr-tab tbody tr:last-child td { font-weight: 600; color: var(--ink); }
+/* Le cadre étroit est deux fois moins large : ses unités SVG valent presque un
+   pixel écran, les intitulés doivent grossir d'autant. */
+.x-pyr-etroit .x-pyr-axe, .x-pyr-etroit .x-pyr-lab { font-size: 15px; }
+.x-pyr-etroit .x-pyr-tete { font-size: 16px; }
+
+/* ===== Comparaison ===== */
+.x-jetons { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0 0 1rem; align-items: center; }
+.x-jeton {
+  display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(46,196,182,.12);
+  border: 1px solid rgba(46,196,182,.4); border-radius: 999px; color: var(--ink);
+  padding: 0.35rem 0.5rem 0.35rem 0.85rem; font-size: 0.86rem; min-height: 36px;
+}
+.x-jeton-x {
+  background: none; border: 0; color: var(--ink-dim); cursor: pointer; font-size: 1.1rem;
+  line-height: 1; padding: 0 0.35rem; min-width: 28px; min-height: 28px;
+}
+.x-jeton-x:hover { color: var(--red); }
+.x-comp { min-width: 560px; font-size: 0.86rem; }
+.x-comp th { width: auto; vertical-align: bottom; }
+.x-comp th small, .x-comp td small { display: block; color: var(--ink-dim); font-size: 0.72rem; font-weight: 400; }
+.x-comp td { text-align: right; }
+.x-comp td:first-child, .x-comp th:first-child { text-align: left; }
+.x-comp .x-nd { color: var(--ink-dim); font-style: italic; }
+.x-alerte { color: var(--amber); }
+
+/* ===== Impression / PDF ===== */
+@media print {
+  header, footer, .x-barre, .x-exemples, .x-preuve, .x-onglets, .x-adapter,
+  .x-actions, .atm-launch, .atm-share, .atm-drawer, #x-vue-classement,
+  .x-couverture, #x-millesimes, .d-box, .x-compte, #x-resultats { display: none !important; }
+  body { background: #fff !important; color: #111 !important; }
+  .hero { padding: 0 !important; }
+  h1, h2, h3, .x-tete h2, .x-h3, .x-theme { color: #111 !important; }
+  .x-note, .x-situe, .x-meta, .x-confiance, .x-mesure span, .x-detail p { color: #333 !important; }
+  .x-mesure, .x-tab, .x-carte svg, .x-pyr-fig svg, details.x-tech {
+    border-color: #bbb !important; background: #fff !important; break-inside: avoid;
+  }
+  .x-mesure b, .x-legende span { color: #111 !important; }
+  .x-terre { fill: #eee !important; stroke: #888 !important; }
+  /* Imprimée en noir et blanc, la pyramide doit rester lisible : le côté
+     distingue les séries, le remplissage donne le contraste. */
+  .x-pyr-f { fill: #999 !important; opacity: 1 !important; }
+  .x-serie { stroke: #111 !important; }
+  .x-serie-pt { fill: #333 !important; }
+  .x-pyr-m { fill: #333 !important; opacity: 1 !important; }
+  .x-pyr-axe, .x-pyr-lab { fill: #333 !important; }
+  .x-pyr-tete { fill: #111 !important; }
+  .x-pyr-grille { stroke: #ddd !important; }
+  .x-pyr, .x-pyr-fig { break-inside: avoid; }
+  .x-pt { fill: #bbb !important; } .x-pt-pro { fill: #666 !important; } .x-pt-sel { fill: #111 !important; }
+  details.x-mesure summary::after { content: "" !important; }
+  details[open] .x-detail, .x-detail { display: block !important; }
+  details.x-tech { break-before: auto; }
+  .x-mesures { grid-template-columns: repeat(3, 1fr) !important; }
+  a[href]::after { content: "" !important; }
+  @page { margin: 14mm; }
+}
+
+/* Classement multi-niveaux, avertissements, mini-boutons */
+.x-avert {
+  background: rgba(244,162,97,.09); border: 1px solid rgba(244,162,97,.35);
+  border-radius: 10px; padding: 0.7rem 0.9rem; color: var(--ink-dim);
+  font-size: 0.85rem; line-height: 1.6; margin: 0 0 1rem;
+}
+.x-avert b { color: var(--amber); }
+.x-mini {
+  background: rgba(46,196,182,.12); border: 1px solid rgba(46,196,182,.4); color: var(--teal);
+  border-radius: 8px; width: 32px; height: 32px; cursor: pointer; font-size: 1rem; line-height: 1;
+}
+.x-mini:hover { background: var(--teal); color: #0a1a2f; }
+.x-outils label { color: var(--ink-dim); font-size: 0.86rem; }
+.x-classement th small { display: block; color: var(--ink-dim); font-weight: 400; font-size: 0.72rem; }
+@media (max-width: 1024px) { .x-mini { width: 44px; height: 44px; } }
+
+/* Dans un tableau, le nom du territoire est une cible de navigation :
+   au doigt, il doit remplir sa cellule et non se limiter a la hauteur du texte. */
+@media (max-width: 1024px) {
+  .x-classement td .x-lien, .x-comp td .x-lien {
+    display: block; width: 100%; padding: 0.62rem 0; min-height: 44px; text-align: left;
+  }
+  .x-classement td, .x-comp td { padding-top: 0.2rem; padding-bottom: 0.2rem; }
+}
+
+/* ===== Matrice de couverture des sources =====
+   Une case vide n'est pas un zéro : elle est marquée comme telle, et une
+   couverture partielle se distingue d'une couverture complète au premier
+   regard — c'est tout l'objet du tableau. */
+.x-couv { min-width: 760px; font-size: 0.84rem; }
+.x-couv td { text-align: center; }
+.x-couv th[scope="row"] { text-align: left; font-weight: 600; color: var(--ink); }
+.x-couv-nul { color: var(--ink-dim); opacity: 0.5; }
+.x-couv-part { color: var(--amber); }
+
+/* ===== Série de prix =====
+   L'axe part de zéro : tronquer l'origine exagérerait la moindre variation. */
+.x-serie { fill: none; stroke: var(--teal); stroke-width: 2; stroke-linejoin: round; }
+.x-serie-pt { fill: var(--teal); opacity: 0.75; }
+.x-serie-pt:hover { fill: var(--amber); opacity: 1; }
+#x-prix .x-adapter { margin: 0.9rem 0; }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+  <title>Hors connexion — Explorateur Haïti</title>
+  <meta name="robots" content="noindex" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css?v=1" />
+  <link rel="stylesheet" href="assets/data.css?v=1" />
+  <meta name="theme-color" content="#0e2240" />
+</head>
+<body>
+
+<section class="hero" style="padding:4rem 0 2rem">
+  <div class="container" style="max-width:640px">
+    <p class="kreyol">Koneksyon an koupe.</p>
+    <h1>Vous êtes hors <em>connexion</em></h1>
+    <p class="lead">
+      Cette page n'a pas encore été consultée sur cet appareil, elle n'a donc pas pu être
+      gardée en mémoire. Mais une partie d'Atmart Data reste utilisable sans réseau.
+    </p>
+
+    <div class="d-box" style="text-align:left">
+      <h3>Ce qui fonctionne sans connexion</h3>
+      <p>
+        <b>L'Explorateur Haïti</b> et ses référentiels sont enregistrés sur votre appareil dès
+        votre première visite : les 192 territoires, les indicateurs des 140 communes, la carte
+        de situation et les définitions. Vous pouvez chercher une commune, lire sa fiche et
+        exporter ses données, hors réseau.
+      </p>
+      <div style="display:flex;gap:0.7rem;flex-wrap:wrap;margin-top:1rem">
+        <a href="/" class="btn btn-primary">Ouvrir l'Explorateur</a>
+        <a href="https://atmart.ltd/datasets.html" class="btn btn-outline">Le catalogue</a>
+        
+      </div>
+    </div>
+
+    <p class="d-note" style="margin-top:1.4rem">
+      Dès que la connexion revient, la page que vous cherchiez s'ouvrira normalement et sera
+      gardée à son tour. Rien n'est perdu.
+    </p>
+  </div>
+</section>
+
+<script>
+  // Rebasculer automatiquement quand le reseau revient.
+  window.addEventListener("online", function () { location.reload(); });
+</script>
+</body>
+</html>

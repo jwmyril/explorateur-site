@@ -1465,7 +1465,8 @@
         ["finance", "Banques et transferts (OSM)", "Banques, guichets, agences de transfert et bureaux de change cartographiés dans OpenStreetMap (ODbL)."],
         ["routes", "Routes (OSM)", "Longueurs par type, chaque tronçon affecté à la commune de son point médian — ordre de grandeur, pas un cadastre (~100 m de tolérance aux limites)."],
         ["lieux_habites", "Lieux habités (OSM)", "Villes, bourgs, villages, hameaux et habitats isolés typés dans OpenStreetMap — le référentiel CNIGS du socle reste la source des localités officielles."],
-        ["electricite", "Électricité (OSM)", "L'OSM haïtien ne recense que 74 objets électriques dans tout le pays (14/08/2026) : ce comptage dit surtout ce qui n'est pas cartographié. Aucune carte officielle ouverte du réseau EDH n'existe."]
+        ["electricite", "Électricité (OSM)", "L'OSM haïtien ne recense que 74 objets électriques dans tout le pays (14/08/2026) : ce comptage dit surtout ce qui n'est pas cartographié. Aucune carte officielle ouverte du réseau EDH n'existe."],
+        ["mobile", "Antennes mobiles (OpenCelliD)", "7 antennes recensées dans TOUT le pays (14/08/2026) : la base participative est quasi vide pour Haïti — ce chiffre mesure la participation, pas le réseau. Digicel et Natcom couvrent bien davantage ; leurs cartes ne sont pas ouvertes."]
       ];
       var corpsInfra = FAMILLES.map(function (fdef) {
         var lgs = parFam[fdef[0]];

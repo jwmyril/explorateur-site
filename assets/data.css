@@ -220,7 +220,7 @@ a.sys-card:hover { transform: translateY(-2px); border-color: var(--teal); }
 .x-barre input:focus { outline: none; border-color: var(--teal); }
 .x-compte { text-align: center; color: var(--ink-dim); font-size: 0.82rem; margin-top: 0.6rem; }
 
-#x-resultats {
+#x-resultats, #x-comp-res {
   position: absolute; left: 0; right: 0; top: calc(100% + 0.4rem); z-index: 30;
   background: var(--card); border: 1px solid var(--teal); border-radius: 14px;
   max-height: 340px; overflow-y: auto; padding: 0.35rem;

@@ -1854,9 +1854,37 @@
     return m;
   }
 
+  /* Le champ de recherche VIT dans le panneau de comparaison : l'utilisateur
+     qui ouvre l'onglet Comparer doit voir ou agir, pas deviner que la barre
+     d'en haut sert aussi a ca. Demande du proprietaire, 13/08 au soir. */
+  function chercheCompHtml() {
+    if (comparees.length >= MAX_COMP) return "";
+    return '<div class="x-barre" style="margin:0 0 1.1rem;max-width:34rem">' +
+      '<label for="x-comp-input" class="x-label">' +
+      T("Ajouter un territoire — tapez un nom de commune, d'arrondissement ou de département") + "</label>" +
+      '<input id="x-comp-input" type="search" autocomplete="off" spellcheck="false" placeholder="' +
+      esc(T("Léogâne, Gonaïves, HT0121…")) + '" />' +
+      '<div id="x-comp-res" role="listbox" hidden></div></div>';
+  }
+  function brancherChercheComp() {
+    var ci = $("#x-comp-input"), cr = $("#x-comp-res");
+    if (!ci || !cr) return;
+    ci.addEventListener("input", function () {
+      var q = ci.value.trim();
+      if (!q) { cr.hidden = true; cr.innerHTML = ""; return; }
+      var l = chercher(q).filter(function (r) {
+        return comparees.indexOf(r.atmart_geo_id) < 0; }).slice(0, 8);
+      cr.innerHTML = l.length ? l.map(carteResultat).join("")
+        : '<p class="x-vide">' + T("Aucun résultat.") + "</p>";
+      cr.hidden = false;
+    });
+  }
+
   function rendreComparaison() {
     var zone = $("#x-comparaison-corps");
     if (!zone) return;
+    /* si l'utilisateur enchaine les ajouts, le focus doit lui revenir */
+    var refocus = document.activeElement && document.activeElement.id === "x-comp-input";
     var choix = $("#x-comp-choix");
     if (choix) {
       choix.innerHTML = comparees.length
@@ -1870,9 +1898,11 @@
         : '<span class="x-note">' + T("Aucun territoire sélectionné.") + "</span>";
     }
     if (comparees.length < 2) {
-      zone.innerHTML = '<p class="x-note">' + TF(
+      zone.innerHTML = chercheCompHtml() + '<p class="x-note">' + TF(
         "Ajoutez au moins deux territoires. Depuis une fiche, le bouton « Ajouter à la comparaison » ; ou cherchez un territoire dans la barre ci-dessus puis ajoutez-le. Jusqu'à {max} territoires, communes et départements mélangés.",
         { max: MAX_COMP }) + "</p>";
+      brancherChercheComp();
+      if (refocus && $("#x-comp-input")) $("#x-comp-input").focus();
       return;
     }
     var ents = comparees.map(function (id) { return parId[id]; }).filter(Boolean);
@@ -1935,7 +1965,9 @@
            '<button class="btn btn-outline x-btn-lien">' +
            T("Copier le lien de cette comparaison") + "</button>" +
            '<button class="btn btn-outline x-btn-print">' + T("Imprimer / PDF") + "</button></div>");
-    zone.innerHTML = h.join("");
+    zone.innerHTML = chercheCompHtml() + h.join("");
+    brancherChercheComp();
+    if (refocus && $("#x-comp-input")) $("#x-comp-input").focus();
   }
 
   function exporterComparaison() {

@@ -6,8 +6,8 @@
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="assets/brand/logo-32.png" />
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
-  <title>Explorateur Haïti — chercher une commune, comparer, exporter</title>
-  <meta name="description" content="Recherchez une commune d'Haïti et consultez son profil territorial : services essentiels, indicateurs documentés avec leur millésime et leur source, complétude, et ce qui reste à documenter. Comparez et exportez. Gratuit, sans compte, sans traceur." />
+  <title data-i18n="xp.title">Explorateur Haïti — chercher une commune, comparer, exporter</title>
+  <meta name="description" data-i18n-content="xp.desc" content="Recherchez une commune d'Haïti et consultez son profil territorial : services essentiels, indicateurs documentés avec leur millésime et leur source, complétude, et ce qui reste à documenter. Comparez et exportez. Gratuit, sans compte, sans traceur." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="manifest" href="manifest.webmanifest" />
@@ -81,7 +81,7 @@
 <!-- /JSON-LD -->
 
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-6/zC/ygVi1ePSw35p2964MqXoim+vSVKqJbycSfPHnY=' 'sha256-A3QFttpDhgL2NMJqkYQLsIKK0JCeZSk2zfuPXFLSd4s=' 'sha256-HG+qUDTHA+Vol/Ajkuu3XMWfR+rEpUG2GgIr3GhB58c=' 'sha256-h2GltGjbI4WnMPNJY+nGcg4wdD799XolPZ/CuiR5I+Q='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-A3QFttpDhgL2NMJqkYQLsIKK0JCeZSk2zfuPXFLSd4s=' 'sha256-HG+qUDTHA+Vol/Ajkuu3XMWfR+rEpUG2GgIr3GhB58c=' 'sha256-OT0Pd9oHGCpUCfYQVMWE4dYv4DF/Zm4gQW64ud2micI=' 'sha256-h2GltGjbI4WnMPNJY+nGcg4wdD799XolPZ/CuiR5I+Q='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -109,24 +109,24 @@
 
 <section class="hero" style="padding:2.6rem 0 0.8rem">
   <div class="container">
-    <p class="kreyol">Chèche yon komin. Jwenn pwofil li.</p>
-    <h1>Explorez les territoires d’<em>Haïti</em></h1>
-    <p class="lead" style="max-width:64ch">Recherchez une commune, un arrondissement ou un département, et consultez son profil : services essentiels, indicateurs disponibles, sources et millésimes. <strong>Comparez les territoires, repérez les déficits de services et exportez les résultats</strong> pour vos rapports, projets et décisions.</p>
+    <p class="kreyol" data-i18n="xp.kreyol">Chèche yon komin. Jwenn pwofil li.</p>
+    <h1 data-i18n-html="xp.h1">Explorez les territoires d’<em>Haïti</em></h1>
+    <p class="lead" style="max-width:64ch" data-i18n-html="xp.lead">Recherchez une commune, un arrondissement ou un département, et consultez son profil : services essentiels, indicateurs disponibles, sources et millésimes. <strong>Comparez les territoires, repérez les déficits de services et exportez les résultats</strong> pour vos rapports, projets et décisions.</p>
 
     <div class="x-barre">
-      <label for="x-recherche" class="x-label">Rechercher une commune, un arrondissement ou un département</label>
+      <label for="x-recherche" class="x-label" data-i18n="xp.label">Rechercher une commune, un arrondissement ou un département</label>
       <input id="x-recherche" type="search" autocomplete="off" spellcheck="false"
              role="combobox" aria-expanded="false" aria-controls="x-resultats"
              aria-describedby="x-aide-recherche"
-             placeholder="Léogâne, Gonaïves, Pòtoprens, HT0121…" />
-      <div id="x-resultats" role="listbox" aria-label="Résultats de recherche" hidden></div>
+             placeholder="Léogâne, Gonaïves, Pòtoprens, HT0121…" data-i18n-ph="xp.ph" />
+      <div id="x-resultats" role="listbox" aria-label="Résultats de recherche" data-i18n-aria="xp.res_aria" hidden></div>
     </div>
     <p id="x-aide-recherche" class="x-exemples">
-      <span>Exemples :</span> <button class="x-lien" data-id="HTC-0111">Port-au-Prince</button> ·
+      <span data-i18n="xp.ex">Exemples :</span> <button class="x-lien" data-id="HTC-0111">Port-au-Prince</button> ·
       <button class="x-lien" data-id="HTC-0121">Léogâne</button> ·
       <button class="x-lien" data-id="HTC-0311">Cap-Haïtien</button>
     </p>
-    <p class="x-preuve">Sources institutionnelles · Millésimes affichés · Résultats téléchargeables</p>
+    <p class="x-preuve" data-i18n="xp.preuve">Sources institutionnelles · Millésimes affichés · Résultats téléchargeables</p>
     <p class="x-compte" id="x-compte">chargement…</p>
     <div aria-live="polite" class="x-sr" id="x-annonce"></div>
   </div>
@@ -137,85 +137,85 @@
 
     <p class="x-couverture" id="x-couverture"></p>
     <details class="x-tech" id="x-millesimes">
-      <summary>Pourquoi le nombre de communes varie-t-il selon les sources&nbsp;?</summary>
-      <p class="x-note">Haïti n’a pas un seul référentiel territorial, mais plusieurs millésimes qui coexistent :</p>
+      <summary data-i18n-html="xp.mil_sum">Pourquoi le nombre de communes varie-t-il selon les sources&nbsp;?</summary>
+      <p class="x-note" data-i18n-html="xp.mil_p1">Haïti n’a pas un seul référentiel territorial, mais plusieurs millésimes qui coexistent :</p>
       <ul class="x-liste">
         <li><b>Recensement de 2003 (IHSI)</b> — la dernière base démographique exhaustive.</li>
         <li><b>CNIGS / OCHA COD-AB</b> — le découpage administratif valide au 29 novembre 2018, republié le 26 janvier 2026. <b>C’est celui que cet explorateur retient pour cette édition</b>, parce que c’est le seul qui fournisse des codes de jointure officiels et des géométries. Retenu ne signifie pas en vigueur aujourd’hui&nbsp;: des communes ont été créées depuis.</li>
         <li><b>Estimations démographiques récentes de l’IHSI</b> — elles intègrent des communes créées après 2018 et affichent donc des totaux plus élevés.</li>
       </ul>
-      <p class="x-note"><b>Formulation exacte :</b> cette version de l’Explorateur couvre les <b>140 communes du référentiel CNIGS 2018</b>. Des millésimes plus récents reconnaissent des communes supplémentaires. Un territoire absent de 2018 n’est pas un territoire inexistant — il est absent de <em>ce</em> millésime.</p>
-      <p class="x-note">Pour le département de l’Ouest : le référentiel CNIGS 2018 y contient <b>20 communes</b>. Ce nombre peut différer dans des référentiels plus récents. Nous l’avons obtenu en comptant ce fichier, pas en le reprenant d’une source tierce.</p>
-      <p class="x-note">La <a href="data/atmart_millesimes_territoriaux.csv" download>table de correspondance des millésimes</a> (CSV, 192 entités) donne pour chaque territoire son identifiant Atmart, son p-code, son millésime, ses dates de validité et une note de divergence. Elle ne contient aujourd’hui que le millésime 2018 : les autres y seront ajoutés quand nous disposerons des fichiers officiels, pas avant.</p>
-      <p class="x-note">Nous ne choisissons pas un chiffre en silence : l’explorateur compte ce que contient le référentiel qu’il charge, et le nomme. Les communes créées après 2018 seront intégrées avec leurs dates de validité dès qu’un référentiel officiel les publiera avec leurs codes, sans réécrire l’historique. <a href="donnees-backbone.html#territoire">La construction du référentiel territoire →</a></p>
+      <p class="x-note" data-i18n-html="xp.mil_p2"><b>Formulation exacte :</b> cette version de l’Explorateur couvre les <b>140 communes du référentiel CNIGS 2018</b>. Des millésimes plus récents reconnaissent des communes supplémentaires. Un territoire absent de 2018 n’est pas un territoire inexistant — il est absent de <em>ce</em> millésime.</p>
+      <p class="x-note" data-i18n-html="xp.mil_p3">Pour le département de l’Ouest : le référentiel CNIGS 2018 y contient <b>20 communes</b>. Ce nombre peut différer dans des référentiels plus récents. Nous l’avons obtenu en comptant ce fichier, pas en le reprenant d’une source tierce.</p>
+      <p class="x-note" data-i18n-html="xp.mil_p4">La <a href="data/atmart_millesimes_territoriaux.csv" download>table de correspondance des millésimes</a> (CSV, 192 entités) donne pour chaque territoire son identifiant Atmart, son p-code, son millésime, ses dates de validité et une note de divergence. Elle ne contient aujourd’hui que le millésime 2018 : les autres y seront ajoutés quand nous disposerons des fichiers officiels, pas avant.</p>
+      <p class="x-note" data-i18n-html="xp.mil_p5">Nous ne choisissons pas un chiffre en silence : l’explorateur compte ce que contient le référentiel qu’il charge, et le nomme. Les communes créées après 2018 seront intégrées avec leurs dates de validité dès qu’un référentiel officiel les publiera avec leurs codes, sans réécrire l’historique. <a href="donnees-backbone.html#territoire">La construction du référentiel territoire →</a></p>
     </details>
 
     <details class="x-tech" id="x-couv-sources">
-      <summary>Quelle source couvre quel territoire&nbsp;?</summary>
+      <summary data-i18n-html="xp.couv_sum">Quelle source couvre quel territoire&nbsp;?</summary>
       <div id="x-couv-corps"></div>
     </details>
 
-    <div id="x-chargement"><p class="x-note" style="text-align:center">Chargement des référentiels…</p></div>
+    <div id="x-chargement"><p class="x-note" style="text-align:center" data-i18n="xp.charg">Chargement des référentiels…</p></div>
 
     <div id="x-app" hidden>
-      <div class="x-onglets" role="tablist" aria-label="Vues de l’explorateur">
+      <div class="x-onglets" role="tablist" aria-label="Vues de l’explorateur" data-i18n-aria="xp.ong_aria">
         <button class="filter-btn active" role="tab" aria-selected="true" data-onglet="fiche">
-          <span class="x-long">Fiche &amp; indicateurs</span><span class="x-court">Fiche</span></button>
+          <span class="x-long" data-i18n="xp.ong_fiche_l">Fiche &amp; indicateurs</span><span class="x-court" data-i18n="xp.ong_fiche_c">Fiche</span></button>
         <button class="filter-btn" role="tab" aria-selected="false" data-onglet="comparaison">
-          <span class="x-long">Comparer des territoires</span><span class="x-court">Comparer</span></button>
+          <span class="x-long" data-i18n="xp.ong_comp_l">Comparer des territoires</span><span class="x-court" data-i18n="xp.ong_comp_c">Comparer</span></button>
         <button class="filter-btn" role="tab" aria-selected="false" data-onglet="classement">
-          <span class="x-long">Classement des communes</span><span class="x-court">Classement</span></button>
+          <span class="x-long" data-i18n="xp.ong_class_l">Classement des communes</span><span class="x-court" data-i18n="xp.ong_class_c">Classement</span></button>
       </div>
 
       <div id="x-vue-fiche" role="tabpanel">
         <div class="x-adapter">
-          <label for="x-objectif">Adapter cette fiche à mon usage</label>
+          <label for="x-objectif" data-i18n="xp.obj_label">Adapter cette fiche à mon usage</label>
           <select id="x-objectif">
-            <option value="tout">Vue d’ensemble</option>
-            <option value="planifier">Planifier les services publics</option>
-            <option value="projet">Préparer un projet ou une intervention</option>
-            <option value="recherche">Réaliser une recherche</option>
-            <option value="implantation">Étudier une implantation économique</option>
-            <option value="macommune">Explorer ma commune</option>
+            <option value="tout" data-i18n="xp.opt_tout">Vue d’ensemble</option>
+            <option value="planifier" data-i18n="xp.opt_planifier">Planifier les services publics</option>
+            <option value="projet" data-i18n="xp.opt_projet">Préparer un projet ou une intervention</option>
+            <option value="recherche" data-i18n="xp.opt_recherche">Réaliser une recherche</option>
+            <option value="implantation" data-i18n="xp.opt_implantation">Étudier une implantation économique</option>
+            <option value="macommune" data-i18n="xp.opt_macommune">Explorer ma commune</option>
           </select>
         </div>
         <div id="x-fiche" hidden></div>
       </div>
 
       <div id="x-vue-comparaison" role="tabpanel" hidden>
-        <p class="x-note" style="margin-top:0">Deux à quatre territoires côte à côte — communes, arrondissements ou départements. Chaque valeur porte son millésime, et les comparaisons entre millésimes différents sont signalées plutôt que lissées.</p>
+        <p class="x-note" style="margin-top:0" data-i18n-html="xp.comp_note">Deux à quatre territoires côte à côte — communes, arrondissements ou départements. Chaque valeur porte son millésime, et les comparaisons entre millésimes différents sont signalées plutôt que lissées.</p>
         <div id="x-comp-choix" class="x-jetons"></div>
         <div id="x-comparaison-corps"></div>
       </div>
 
       <div id="x-vue-classement" role="tabpanel" hidden>
         <div class="x-outils">
-          <label for="x-niveau">Classer les</label>
+          <label for="x-niveau" data-i18n="xp.niv_label">Classer les</label>
           <select id="x-niveau">
-            <option value="3">Communes</option>
-            <option value="2">Arrondissements</option>
-            <option value="1">Départements</option>
+            <option value="3" data-i18n="xp.opt_3">Communes</option>
+            <option value="2" data-i18n="xp.opt_2">Arrondissements</option>
+            <option value="1" data-i18n="xp.opt_1">Départements</option>
           </select>
-          <label for="x-indicateur">par</label>
+          <label for="x-indicateur" data-i18n="xp.par_label">par</label>
           <select id="x-indicateur"></select>
-          <label for="x-normalisation">lecture</label>
+          <label for="x-normalisation" data-i18n="xp.lect_label">lecture</label>
           <select id="x-normalisation">
-            <option value="total">Valeur brute</option>
-            <option value="km2">Pour 100 km²</option>
-            <option value="part">Part du total national</option>
-            <option value="habitant">Pour 10 000 habitants</option>
+            <option value="total" data-i18n="xp.opt_total">Valeur brute</option>
+            <option value="km2" data-i18n="xp.opt_km2">Pour 100 km²</option>
+            <option value="part" data-i18n="xp.opt_part">Part du total national</option>
+            <option value="habitant" data-i18n="xp.opt_habitant">Pour 10 000 habitants</option>
           </select>
-          <button id="x-export" class="btn btn-outline">Exporter en CSV</button>
+          <button id="x-export" class="btn btn-outline" data-i18n="xp.export">Exporter en CSV</button>
         </div>
-        <p class="x-note" style="margin-top:0">Les départements et arrondissements n’ont pas de valeurs propres : elles sont agrégées depuis leurs communes selon la règle inscrite au dictionnaire, et le nombre de communes documentées est affiché en regard. Le bouton <b>+</b> ajoute un territoire à la comparaison.</p>
+        <p class="x-note" style="margin-top:0" data-i18n-html="xp.class_note">Les départements et arrondissements n’ont pas de valeurs propres : elles sont agrégées depuis leurs communes selon la règle inscrite au dictionnaire, et le nombre de communes documentées est affiché en regard. Le bouton <b>+</b> ajoute un territoire à la comparaison.</p>
         <div id="x-classement-corps"></div>
       </div>
     </div>
 
     <div class="d-box" style="margin-top:2.6rem">
-      <h3>Ce que cet explorateur fait — et ce qu’il ne fait pas</h3>
-      <p>Il affiche <b>les informations actuellement documentées par Atmart Data</b> — pas tout ce qui existe sur une commune. Tout tourne dans votre navigateur : quatre fichiers publics et un contour cartographique, aucun serveur d'application, aucun compte, aucun traceur publicitaire. Une mesure d'audience <b>anonyme et agrégée</b> compte les usages (une recherche a eu lieu) sans jamais savoir qui ni quoi — pas de cookie, pas d'identifiant, pas d'adresse IP conservée, et le texte tapé ne quitte jamais votre navigateur : <a href="donnees-confiance.html#mesure">méthode complète</a>. Ce que vous voyez, vous pouvez le télécharger tel quel depuis le <a href="datasets.html">catalogue</a> et le recalculer vous-même.</p>
-      <p>La <b>commune est le niveau territorial le plus détaillé de l’édition publique</b>. Les sections communales, les localités et les polygones détaillés sont disponibles dans le <a href="donnees-pack-geo-haiti.html">Pack Géo Haïti</a>. Les définitions, méthodes et statuts de qualité sont exposés sur la page <a href="donnees-backbone.html#statuts">Backbone</a>.</p>
+      <h3 data-i18n="xp.box_h3">Ce que cet explorateur fait — et ce qu’il ne fait pas</h3>
+      <p data-i18n-html="xp.box_p1">Il affiche <b>les informations actuellement documentées par Atmart Data</b> — pas tout ce qui existe sur une commune. Tout tourne dans votre navigateur : quatre fichiers publics et un contour cartographique, aucun serveur d'application, aucun compte, aucun traceur publicitaire. Une mesure d'audience <b>anonyme et agrégée</b> compte les usages (une recherche a eu lieu) sans jamais savoir qui ni quoi — pas de cookie, pas d'identifiant, pas d'adresse IP conservée, et le texte tapé ne quitte jamais votre navigateur : <a href="donnees-confiance.html#mesure">méthode complète</a>. Ce que vous voyez, vous pouvez le télécharger tel quel depuis le <a href="datasets.html">catalogue</a> et le recalculer vous-même.</p>
+      <p data-i18n-html="xp.box_p2">La <b>commune est le niveau territorial le plus détaillé de l’édition publique</b>. Les sections communales, les localités et les polygones détaillés sont disponibles dans le <a href="donnees-pack-geo-haiti.html">Pack Géo Haïti</a>. Les définitions, méthodes et statuts de qualité sont exposés sur la page <a href="donnees-backbone.html#statuts">Backbone</a>.</p>
     </div>
   </div>
 </section>
@@ -260,8 +260,9 @@
   /* Les pages Donnees vivent ICI depuis le 13/08 : le moteur genere des
      liens locaux (site vide). atmart.ltd n'est plus que pour les produits. */
   window.ATM_EXPLORATEUR = {};
-  window.ATM_LANGUES = ["fr"];
+  window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
+<script src="assets/i18n.js?v=15"></script>
 <script src="assets/explorateur.js?v=11"></script>
 <script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
 if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>

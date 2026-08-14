@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="assets/brand/logo-32.png" />
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
   <title>Couches — cartes d'utilité publique | Explorateur Haïti</title>
-  <meta name="description" content="Cartes des couches d'utilité publique sur Haïti : conflits par commune, personnes déplacées, insécurité alimentaire IPC, points d'eau, stations-service, banques et transferts, routes. Chaque couche porte sa source, sa licence et ses limites." />
+  <meta name="description" content="Cartes des couches d'utilité publique sur Haïti : aléa d'inondation et bassins versants (CNIGS), occupation du sol, conflits, déplacés, IPC, points d'eau, stations-service, banques, routes et tous les indicateurs Atmart. Chaque couche porte sa source, sa licence et ses limites." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
@@ -26,6 +26,11 @@
     .k-grad { display: inline-block; width: 5em; height: 0.8em; border-radius: 4px; vertical-align: baseline; margin-right: 0.3em;
               background: linear-gradient(to right, #eef2f6, #fee8c8, #9e1b31); }
     #k-source, #k-limite { font-size: 0.82rem; color: var(--ink-dim, #5b6b7b); margin-top: 0.35rem; }
+    #k-lecture { font-size: 0.95rem; font-weight: 600; min-height: 1.4em; margin-top: 0.5rem; }
+    #k-carte .k-nom-dep { font: 600 11px/1 Inter, sans-serif; fill: #0e2240; paint-order: stroke;
+                          stroke: #ffffff; stroke-width: 2.6px; text-anchor: middle; pointer-events: none; }
+    #k-carte .k-nom-bv { font: 500 9.5px/1 Inter, sans-serif; fill: #14532d; paint-order: stroke;
+                         stroke: #ffffff; stroke-width: 2.2px; text-anchor: middle; pointer-events: none; }
   </style>
 </head>
 <body>
@@ -71,6 +76,7 @@
 <section style="padding-top:0.2rem;padding-bottom:2.2rem">
   <div class="container">
     <div id="k-carte"><p class="x-note">Chargement du fond de carte…</p></div>
+    <p id="k-lecture" aria-live="polite">Survolez une commune pour lire son nom et sa valeur.</p>
     <p id="k-legende"></p>
     <p id="k-source"></p>
     <p id="k-limite"></p>
@@ -118,7 +124,7 @@
   </div>
 </footer>
 
-<script src="assets/couches.js?v=1"></script>
+<script src="assets/couches.js?v=2"></script>
 <script>
   (function () {
     var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");

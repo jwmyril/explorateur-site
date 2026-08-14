@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=32" />
-  <link rel="stylesheet" href="assets/data.css?v=20" />
+  <link rel="stylesheet" href="assets/data.css?v=21" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/datasets.html" />
 </head>
 <body>
@@ -134,7 +134,23 @@
         </div>
 
       </div>
-    </div>
+    <div class="card" data-cat="social gratuit">
+<span class="tag" data-i18n="ds.t_free">Gratuit</span>
+<h3 data-i18n-html="ds.c17_h">Pyramide des âges des 140 communes <span class="badge-new">NOUVO</span></h3>
+<p data-i18n-html="ds.c17_p">La population de chaque commune par tranche de cinq ans et par sexe. C'est ce qui permet de dire combien d'enfants scolarisables ou de personnes âgées vivent sur un territoire — et non plus seulement combien d'habitants. <strong>Ce sont des projections, pas un recensement</strong> : le dernier recensement haïtien date de 2003.</p>
+<p class="price" data-i18n-html="ds.c17_pr">0 $ <small>CSV • <span data-mf="prd_007_lignes">7 140</span> lignes • <span data-mf="prd_007_colonnes">18</span> colonnes</small></p>
+<p class="meta" data-i18n-html="ds.c17_meta">👥 Population • <span data-mf="nombre_tranches_age">17</span> tranches × 2 sexes × <span data-mf="nombre_communes">140</span> communes • Source : projections UNFPA 2024</p>
+<a href="data/atmart_pyramide_ages_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="economie gratuit">
+<span class="tag" data-i18n="ds.t_free">Gratuit</span>
+<h3 data-i18n-html="ds.c18_h">Prix des marchés — réseau sentinelle <span class="badge-new">NOUVO</span></h3>
+<p data-i18n-html="ds.c18_p">Relevés mensuels de prix, produit par produit et marché par marché : riz, haricots, maïs, huile, carburant. <strong>Le réseau ne couvre pas tout le pays</strong> — <span data-mf="nombre_communes_sentinelles">9</span> marchés sentinelles, un par département dans neuf départements sur dix. À lire comme un signal, jamais comme une moyenne nationale.</p>
+<p class="price" data-i18n-html="ds.c18_pr">0 $ <small>CSV • <span data-mf="nombre_releves_prix">14 140</span> relevés • <span data-mf="nombre_produits_suivis">32</span> produits suivis</small></p>
+<p class="meta" data-i18n-html="ds.c18_meta">💰 Économie • Source : WFP — VAM Food Prices • la série se lit aussi dans <a href="index.html">l'Explorateur</a></p>
+<a href="data/atmart_prix_marches_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+</div>
+</div>
 
     <!-- ===== EN VENTE ===== -->
     <div class="shelf" id="shelf-paid">
@@ -208,8 +224,8 @@
 
         <div class="card" data-cat="economie">
           <span class="d-pill spons" data-i18n="ds.pill_spons">Parrainable</span>
-          <h3 data-i18n="ds.s1_h">Prix des produits de base — marchés haïtiens (2018–2025)</h3>
-          <p data-i18n="ds.s1_p">Riz, haricots, maïs, huile, carburant : relevés de prix par marché et par mois. La base d'une analyse sérieuse de l'inflation alimentaire.</p>
+          <h3 data-i18n="ds.s1_h">Prix des marchés — couverture nationale et mise à jour mensuelle</h3>
+          <p data-i18n="ds.s1_p">Un réseau sentinelle de <span data-mf="nombre_communes_sentinelles">9</span> marchés est <strong>déjà publié et téléchargeable</strong>, gratuitement. Ce parrainage financerait l'étape suivante : étendre la couverture à l'ensemble des marchés suivis par la CNSA et FEWS NET, et tenir la série à jour chaque mois.</p>
           <p class="price" data-i18n-html="ds.s1_pr">≈ 2 500 $ <small>coût d'ouverture · + 1 200 $/an de mise à jour</small></p>
           <p class="meta" data-i18n-html="ds.s1_meta">💰 Économie • Sources identifiées : CNSA, FEWS NET</p>
           <a href="donnees-parrainage.html#catalogue" class="btn btn-outline" data-i18n="ds.spons_cta">Parrainer ce jeu</a>

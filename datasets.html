@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=32" />
-  <link rel="stylesheet" href="assets/data.css?v=24" />
+  <link rel="stylesheet" href="assets/data.css?v=25" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/datasets.html" />
 <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
@@ -175,7 +175,7 @@
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_sources.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "19350"
+       "contentSize": "21920"
       }
      ],
      "isBasedOn": "Atmart"
@@ -408,6 +408,146 @@
     },
     {
      "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-011",
+     "identifier": "PRD-011",
+     "name": "Présence des organisations — qui travaille où",
+     "description": "Quelles organisations interviennent dans quelle commune, et dans quel secteur. Ce sont des présences déclarées par les organisations elles-mêmes, pas un relevé de terrain.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html#organisations",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Infrastructures",
+      "Haïti"
+     ],
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_presence_organisations_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "476024"
+      }
+     ],
+     "isBasedOn": "OCHA — 3W Haïti"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-012",
+     "identifier": "PRD-012",
+     "name": "Registre des ONG reconnues",
+     "description": "Les organisations non gouvernementales reconnues par l'État, avec leur numéro d'inscription, leur date de reconnaissance, leur domaine d'intervention et les zones qu'elles déclarent couvrir.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html#organisations",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Infrastructures",
+      "Haïti"
+     ],
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_ong_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "266421"
+      }
+     ],
+     "isBasedOn": "MPCE — registre officiel des ONG"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-013",
+     "identifier": "PRD-013",
+     "name": "Annuaire des professions juridiques et foncières",
+     "description": "Notaires et arpenteurs, avec leur rattachement territorial. Attention à ce que ce fichier est : il nomme des personnes physiques et porte leurs coordonnées professionnelles, compilées depuis des sources de fiabilité inégale — certaines officielles, d'autres commerciales. Chaque ligne porte sa source et son degré de vérification : lisez-les avant de vous en servir.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html#organisations",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Infrastructures",
+      "Haïti"
+     ],
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_annuaire_professionnels_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "344189"
+      }
+     ],
+     "isBasedOn": "Sources multiples — fiabilité déclarée ligne par ligne"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-014",
+     "identifier": "PRD-014",
+     "name": "Infrastructures par commune",
+     "description": "Ce que chaque commune compte en équipements : stations-service, et autres familles d'infrastructures, en nombre. Une ligne par commune et par famille, avec sa source et son millésime.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html#organisations",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Infrastructures",
+      "Haïti"
+     ],
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_infrastructures_communes_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "229569"
+      }
+     ],
+     "isBasedOn": "Sources déclarées ligne par ligne"
+    },
+    {
+     "@type": "Dataset",
      "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-101",
      "identifier": "PRD-101",
      "name": "Pack Géo Haïti — toutes les coordonnées GPS",
@@ -597,6 +737,38 @@
 <p class="price" data-i18n-html="ds.c20_pr">0 $ <small>CSV • 2 indicateurs • cumul sur 9 mois</small></p>
 <p class="meta" data-i18n-html="ds.c20_meta">🏛 Finances publiques • exercice 2025-2026 • Sources : MEF / Direction Générale du Budget, TOFE</p>
 <a href="data/atmart_indicateurs_national_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="social gratuit">
+<span class="tag" data-i18n="ds.t_free">Gratuit</span>
+<h3 data-i18n-html="ds.c21_h">Présence des organisations — qui travaille où <span class="badge-new">NOUVO</span></h3>
+<p data-i18n-html="ds.c21_p">Quelles organisations interviennent dans quelle commune, et dans quel secteur. <strong>Ce sont des présences déclarées</strong> par les organisations elles-mêmes au 3W d'OCHA, pas un relevé de terrain : une absence dans ce fichier ne prouve pas une absence sur place.</p>
+<p class="price" data-i18n-html="ds.c21_pr">0 $ <small>CSV • <span data-mf="prd_011_lignes">1 457</span> lignes • <span data-mf="prd_011_colonnes">17</span> colonnes</small></p>
+<p class="meta" data-i18n-html="ds.c21_meta">🤝 Infrastructures • Source : OCHA — 3W Haïti</p>
+<a href="data/atmart_presence_organisations_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="social gratuit">
+<span class="tag" data-i18n="ds.t_free">Gratuit</span>
+<h3 data-i18n-html="ds.c22_h">Registre des ONG reconnues <span class="badge-new">NOUVO</span></h3>
+<p data-i18n-html="ds.c22_p">Les organisations non gouvernementales reconnues par l'État : numéro d'inscription, date de reconnaissance, domaine d'intervention et zones déclarées. Les coordonnées sont institutionnelles — celles du siège, pas de personnes.</p>
+<p class="price" data-i18n-html="ds.c22_pr">0 $ <small>CSV • <span data-mf="prd_012_lignes">680</span> lignes • <span data-mf="prd_012_colonnes">22</span> colonnes</small></p>
+<p class="meta" data-i18n-html="ds.c22_meta">🤝 Infrastructures • Source : MPCE — registre officiel des ONG</p>
+<a href="data/atmart_registre_ong_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="social gratuit">
+<span class="tag" data-i18n="ds.t_free">Gratuit</span>
+<h3 data-i18n-html="ds.c23_h">Annuaire des professions juridiques et foncières <span class="badge-new">NOUVO</span></h3>
+<p data-i18n-html="ds.c23_p">Notaires et arpenteurs, avec leur rattachement territorial. <strong>Lisez ce que ce fichier est avant de l'utiliser</strong> : il nomme des personnes physiques et porte des coordonnées professionnelles, compilées depuis des sources de fiabilité inégale — certaines officielles, d'autres commerciales. Chaque ligne porte sa source et son degré de vérification.</p>
+<p class="price" data-i18n-html="ds.c23_pr">0 $ <small>CSV • <span data-mf="prd_013_lignes">712</span> lignes • <span data-mf="prd_013_colonnes">21</span> colonnes</small></p>
+<p class="meta" data-i18n-html="ds.c23_meta">⚖️ Infrastructures • Niveau de confiance C • fiabilité déclarée ligne par ligne</p>
+<a href="data/atmart_annuaire_professionnels_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="social gratuit">
+<span class="tag" data-i18n="ds.t_free">Gratuit</span>
+<h3 data-i18n-html="ds.c24_h">Infrastructures par commune <span class="badge-new">NOUVO</span></h3>
+<p data-i18n-html="ds.c24_p">Ce que chaque commune compte en équipements, famille par famille. Une ligne par commune et par type, avec sa source et son millésime — de quoi comparer des territoires sans confondre ce qui est compté et ce qui est estimé.</p>
+<p class="price" data-i18n-html="ds.c24_pr">0 $ <small>CSV • <span data-mf="prd_014_lignes">1 895</span> lignes • <span data-mf="prd_014_colonnes">8</span> colonnes</small></p>
+<p class="meta" data-i18n-html="ds.c24_meta">🏗 Infrastructures • millésime et source déclarés ligne par ligne</p>
+<a href="data/atmart_infrastructures_communes_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
 </div>
 </div>
 

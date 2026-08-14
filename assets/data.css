@@ -707,3 +707,21 @@ a[download] { display: inline-block; padding: 0.3rem 0; min-height: 24px; }
 .d-besoin p { margin: 0; font-size: 0.92rem; line-height: 1.55; color: var(--ink-dim); }
 .d-besoin-vol { font-size: 0.84rem !important; color: var(--teal) !important; font-weight: 600; }
 .d-besoin-cta { margin-top: auto; padding-top: 0.4rem; font-weight: 600; color: var(--teal); font-size: 0.92rem; }
+
+/* ===== Contours des territoires sur la carte =====
+   Une bulle dit où est un chef-lieu ; un contour dit ce qu'un territoire
+   couvre. La couche affichée est cliquable, l'autre reste un repère et ne
+   capte pas le clic — sinon le doigt viserait deux choses à la fois. */
+.x-fond { fill: none; stroke: rgba(125,146,168,.30); stroke-width: .7; pointer-events: none; }
+.x-zone { fill: rgba(46,196,182,.10); stroke: rgba(46,196,182,.5); stroke-width: .8; cursor: pointer; }
+.x-zone:hover { fill: rgba(245,166,35,.35); }
+.x-zone:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.x-zone-pro { fill: rgba(46,196,182,.30); }
+.x-zone-sel { fill: rgba(245,166,35,.55); stroke: var(--amber); stroke-width: 1.8; }
+.x-carte-niv { display: inline-flex; gap: .3rem; margin: .6rem 0 0; }
+.x-carte-btn {
+  min-height: 32px; padding: .3rem .8rem; border: 1px solid var(--border);
+  background: transparent; color: var(--ink-dim); border-radius: 999px;
+  cursor: pointer; font: inherit; font-size: .84rem;
+}
+.x-carte-btn.actif { background: var(--teal); color: #04121f; border-color: var(--teal); font-weight: 600; }

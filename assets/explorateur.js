@@ -728,7 +728,11 @@
     var pts = terr.filter(function (x) {
       if (!x.latitude || !x.longitude) return false;
       if (!couche) return x.niveau_admin === "3";
-      return x.niveau_admin !== "1" && x.niveau_admin !== "3";
+      /* L'arrondissement est un regroupement administratif, pas un lieu : une
+         bulle posee sur son chef-lieu ferait croire a une ville de plus. Les
+         bulles ne restent donc que pour les niveaux fins — section communale,
+         localite — dont la geometrie n'est pas publiee. */
+      return x.niveau_admin !== "1" && x.niveau_admin !== "2" && x.niveau_admin !== "3";
     }).map(function (x) {
       var sel = x.atmart_geo_id === r.atmart_geo_id;
       var pro = !sel && famille[x.atmart_geo_id];
@@ -1303,10 +1307,15 @@
     svcPromesse = Promise.all([
       charger(DIR + "atmart_annuaire_professionnels_HT.csv", 1).catch(function () { return null; }),
       charger(DIR + "atmart_presence_organisations_HT.csv", 1).catch(function () { return null; }),
-      charger(DIR + "atmart_registre_ong_HT.csv", 1).catch(function () { return null; })
+      charger(DIR + "atmart_registre_ong_HT.csv", 1).catch(function () { return null; }),
+      charger(DIR + "atmart_infrastructures_communes_HT.csv", 1).catch(function () { return null; })
     ]).then(function (t) {
-      if (!t[0] && !t[1] && !t[2]) { svcIdx = null; return null; }
-      svcIdx = { pro: {}, orgs: {}, ong: {} };
+      if (!t[0] && !t[1] && !t[2] && !t[3]) { svcIdx = null; return null; }
+      svcIdx = { pro: {}, orgs: {}, ong: {}, infra: {} };
+      (t[3] ? parseCSV(t[3]) : []).forEach(function (l) {
+        if (l.pcode_commune)
+          (svcIdx.infra[l.pcode_commune] = svcIdx.infra[l.pcode_commune] || []).push(l);
+      });
       (t[0] ? parseCSV(t[0]) : []).forEach(function (l) {
         if (l.pcode_commune)
           (svcIdx.pro[l.pcode_commune] = svcIdx.pro[l.pcode_commune] || []).push(l);
@@ -1407,12 +1416,45 @@
         corpsOng,
         T("Registre MPCE/UCAONG capturé le 14/08/2026. Les zones d'intervention y sont du texte libre : seuls les noms reconnus sans ambiguïté sont rattachés.")));
 
+      /* -------- infrastructures : comptages par sources ouvertes (v39) */
+      var infra = ix.infra[r.pcode] || [];
+      var parFam = {};
+      infra.forEach(function (l) {
+        (parFam[l.famille] = parFam[l.famille] || []).push(l);
+      });
+      var FAMILLES = [
+        ["eau_wpdx", "Points d'eau (WPdx)", "Relevés de terrain Haiti Outreach et partenaires (CC BY-SA) — couverture concentrée dans le Nord et le Centre : un zéro ailleurs dit l'absence de relevé, pas l'absence d'eau."],
+        ["eau_osm", "Eau potable (OSM)", "Points « eau potable » d'OpenStreetMap (ODbL) — cartographie contributive, complète nulle part."],
+        ["carburant", "Stations-service (OSM)", "Objets « fuel » d'OpenStreetMap (ODbL, extrait HOT du 06/08/2026)."],
+        ["finance", "Banques et transferts (OSM)", "Banques, guichets, agences de transfert et bureaux de change cartographiés dans OpenStreetMap (ODbL)."],
+        ["routes", "Routes (OSM)", "Longueurs par type, chaque tronçon affecté à la commune de son point médian — ordre de grandeur, pas un cadastre (~100 m de tolérance aux limites)."],
+        ["lieux_habites", "Lieux habités (OSM)", "Villes, bourgs, villages, hameaux et habitats isolés typés dans OpenStreetMap — le référentiel CNIGS du socle reste la source des localités officielles."],
+        ["electricite", "Électricité (OSM)", "L'OSM haïtien ne recense que 74 objets électriques dans tout le pays (14/08/2026) : ce comptage dit surtout ce qui n'est pas cartographié. Aucune carte officielle ouverte du réseau EDH n'existe."]
+      ];
+      var corpsInfra = FAMILLES.map(function (fdef) {
+        var lgs = parFam[fdef[0]];
+        if (!lgs) return "";
+        var morceaux = lgs.map(function (l) {
+          return esc(l.sous_type) + " : " + fmt(nb(l.valeur), l.unite === "km" ? "km" : "");
+        }).join(" · ");
+        return "<p><b>" + T(fdef[1]) + ".</b> " + morceaux +
+               ' <span class="x-mill">— ' + T(fdef[2]) + "</span></p>";
+      }).filter(Boolean).join("");
+      h.push(sectionServices(
+        infra.length
+          ? T("Infrastructures — comptages par sources ouvertes")
+          : T("Infrastructures — aucun objet affecté à cette commune"),
+        corpsInfra || "<p>" +
+          T("Aucun objet des sources ouvertes (OSM, WPdx) n'est affecté à cette commune — cela mesure la cartographie, pas le terrain.") + "</p>",
+        T("Comptages, pas inventaires officiels : OpenStreetMap est contributif et inégal, WPdx suit ses contributeurs. Affectation par coordonnées aux polygones officiels COD-AB, tolérance ~100 m aux limites.")));
+
       h.push("</div>");
       h.push('<p class="x-note">' +
         T("Trois annuaires, trois niveaux de confiance — chaque section porte le sien.") + " " +
         '<a href="' + DIR + 'atmart_annuaire_professionnels_HT.csv" download>' + T("Professionnels (CSV)") + "</a> · " +
         '<a href="' + DIR + 'atmart_presence_organisations_HT.csv" download>' + T("Présence 3W (CSV)") + "</a> · " +
-        '<a href="' + DIR + 'atmart_registre_ong_HT.csv" download>' + T("ONG du registre (CSV)") + "</a></p>");
+        '<a href="' + DIR + 'atmart_registre_ong_HT.csv" download>' + T("ONG du registre (CSV)") + "</a> · " +
+        '<a href="' + DIR + 'atmart_infrastructures_communes_HT.csv" download>' + T("Infrastructures (CSV)") + "</a></p>");
       el.innerHTML = h.join("");
     });
   }

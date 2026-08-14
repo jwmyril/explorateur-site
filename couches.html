@@ -11,9 +11,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
-  <link rel="stylesheet" href="assets/style.css?v=32" />
+  <link rel="stylesheet" href="assets/style.css?v=33" />
   <link rel="stylesheet" href="assets/data.css?v=25" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/couches.html" />
+  <link rel="preload" href="data/haiti_communes_simplifie.geojson?d=2026-08-14b" as="fetch" crossorigin="anonymous" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/couches.html" />
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/couches.html" />
   <style>
@@ -33,6 +34,15 @@
                           stroke: #ffffff; stroke-width: 2.6px; text-anchor: middle; pointer-events: none; }
     #k-carte .k-nom-bv { font: 500 9.5px/1 Inter, sans-serif; fill: #14532d; paint-order: stroke;
                          stroke: #ffffff; stroke-width: 2.2px; text-anchor: middle; pointer-events: none; }
+    #k-info { background: #fff8e6; border: 1px solid #f2d894; border-radius: 10px;
+              padding: 0.7rem 0.9rem; font-size: 0.92rem; margin-bottom: 0.8rem; }
+    .k-erreur { padding: 2.2rem 1rem; text-align: center; }
+    .k-erreur .btn { margin-top: 0.6rem; min-height: 44px; min-width: 44px; }
+    .k-barre select { min-height: 44px; }
+    .k-squelette { height: 320px; border-radius: 12px; border: 1px solid var(--border, #dbe2ea);
+                   background: linear-gradient(100deg, #eef2f6 40%, #f7fafc 50%, #eef2f6 60%);
+                   background-size: 200% 100%; animation: k-shim 1.2s infinite linear; }
+    @keyframes k-shim { to { background-position: -200% 0; } }
   </style>
 
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
@@ -41,13 +51,14 @@
 <!-- /Sécurité -->
 </head>
 <body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
 
 <header>
   <nav class="nav">
     <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>les données d'Atmart</small></a>
     <button class="nav-toggle" aria-label="Menu">☰</button>
     <ul class="nav-links">
-      <li class="nav-grp"><span>🗂 Données</span>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span>Données</span>
         <ul class="nav-sub">
           <li><a href="/">Explorateur Haïti <small>chercher une commune</small></a></li>
           <li><a href="couches.html">Couches <small>cartes d'utilité publique</small></a></li>
@@ -63,9 +74,9 @@
   </nav>
 </header>
 
-<section class="hero" style="padding:2.6rem 0 0.8rem">
+<section id="contenu" class="hero" style="padding:2.6rem 0 0.8rem">
   <div class="container">
-    <p class="kreyol">Kat ki itil tout moun.</p>
+    <p class="kreyol" lang="ht">Kat ki itil tout moun.</p>
     <h1>Les <em>Couches</em></h1>
     <p class="lead" style="max-width:64ch">
       Une carte, une couche à la fois. Chaque couche dit <strong>sa source, sa licence,
@@ -82,7 +93,7 @@
 
 <section style="padding-top:0.2rem;padding-bottom:2.2rem">
   <div class="container">
-    <div id="k-carte"><p class="x-note">Chargement du fond de carte…</p></div>
+    <div id="k-carte"><div class="k-squelette" role="status" aria-label="Chargement du fond de carte"></div></div>
     <p id="k-lecture" aria-live="polite">Survolez une commune pour lire son nom et sa valeur.</p>
     <p id="k-legende"></p>
     <p id="k-source"></p>
@@ -97,7 +108,8 @@
       <a href="data/atmart_couche_carburant_HT.geojson" download>stations-service (GeoJSON)</a> ·
       <a href="data/atmart_couche_finance_HT.geojson" download>banques et transferts (GeoJSON)</a> ·
       <a href="data/atmart_infrastructures_communes_HT.csv" download>infrastructures (CSV)</a>.
-      Bassins versants, aléas d'inondation et usage du sol sont au chantier —
+      Bassins versants, zones inondables et occupation du sol (1998) sont désormais des couches ;
+      restent au chantier l'aléa sismique, la couverture mobile réelle et le réseau hydrographique —
       <a href="donnees-parrainage.html">parrainer une couche</a> accélère sa construction.
     </p>
   </div>
@@ -131,7 +143,7 @@
   </div>
 </footer>
 
-<script src="assets/couches.js?v=2"></script>
+<script src="assets/couches.js?v=3"></script>
 <script>
   (function () {
     var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
@@ -139,5 +151,6 @@
   })();
 </script>
 <script src="assets/mesure.js?v=2" defer></script>
+<script src="assets/ux.js?v=1" defer></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
-  <link rel="stylesheet" href="assets/style.css?v=32" />
+  <link rel="stylesheet" href="assets/style.css?v=33" />
   <link rel="stylesheet" href="assets/data.css?v=25" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees.html" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees.html" />
@@ -53,13 +53,14 @@
 <!-- /Sécurité -->
 </head>
 <body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
 
 <header>
   <nav class="nav">
     <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>les données d'Atmart</small></a>
     <button class="nav-toggle" aria-label="Menu">☰</button>
     <ul class="nav-links">
-      <li class="nav-grp"><span>🗂 Données</span>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span>Données</span>
         <ul class="nav-sub">
           <li><a href="/">Explorateur Haïti <small>chercher une commune</small></a></li>
           <li><a href="couches.html">Couches <small>cartes d'utilité publique</small></a></li>
@@ -76,9 +77,9 @@
 </header>
 
 <!-- HERO -->
-<section class="hero" style="padding:3.5rem 0 2rem">
+<section id="contenu" class="hero" style="padding:3.5rem 0 2rem">
   <div class="container">
-    <p class="kreyol">Done ki pare pou pran desizyon.</p>
+    <p class="kreyol" lang="ht">Done ki pare pou pran desizyon.</p>
     <h1>Atmart <em>Data</em></h1>
     <p class="lead">
       La plateforme de <strong>données reconstituées sur Haïti</strong>. Nous ne republions pas des
@@ -108,7 +109,7 @@
 <p class="d-sub" style="margin-bottom:1.6rem">Trois façons d'entrer, selon ce dont vous avez besoin aujourd'hui.</p>
 <div class="d-besoins">
 
-<a class="d-besoin" href="index.html">
+<a class="d-besoin" href="/">
 <span class="d-besoin-ic" aria-hidden="true">🔎</span>
 <h3>Je cherche un chiffre sur une commune</h3>
 <p>Ouvrez la fiche d'un territoire et lisez ses indicateurs&nbsp;: chacun porte sa source, son année de référence et sa limite. Ce qui manque est écrit comme manquant, jamais remplacé par un zéro.</p>
@@ -120,7 +121,7 @@
 <span class="d-besoin-ic" aria-hidden="true">⬇</span>
 <h3>J'ai besoin d'un fichier à télécharger</h3>
 <p>Des jeux prêts à ouvrir dans Excel, Power BI ou R, livrés avec leur documentation&nbsp;: sources, dictionnaire des variables, limites connues et licence. Sans compte à créer.</p>
-<p class="d-besoin-vol"><span data-mf="nombre_produits_gratuits">24</span> jeux gratuits · <span data-mf="nombre_produits_payants">6</span> pack payant</p>
+<p class="d-besoin-vol"><span data-mf="nombre_produits_gratuits">24</span> jeux gratuits · <span data-mf="nombre_produits_payants">6</span> packs payants</p>
 <span class="d-besoin-cta">Voir le catalogue →</span>
 </a>
 
@@ -362,9 +363,7 @@
         un bouton « Acheter » sur un fichier qui n'existe pas encore.
       </p>
       <p>
-        Au 31 juillet 2026 : <strong>1 jeu en vente</strong> (Pack Géo Haïti),
-        <strong>6 ressources gratuites</strong> — dont les quatre référentiels maîtres du Backbone
-        et le registre des sources — et <strong>5 jeux en préparation</strong>, tous parrainables.
+        Au 14 août 2026 : <strong><span data-mf="nombre_produits_payants">6</span> jeux en vente</strong>, <strong><span data-mf="nombre_produits_gratuits">24</span> ressources gratuites</strong> — dont les quatre référentiels maîtres du Backbone et le registre des sources — et <strong><span data-mf="nombre_produits_parrainables">5</span> jeux en préparation</strong>, parrainables.
         Tous portent sur Haïti : les jeux régionaux et africains sont retirés du catalogue jusqu'à
         la deuxième année.
       </p>
@@ -484,5 +483,6 @@
   })();
 </script>
 <script src="assets/mesure.js?v=2" defer></script>
+<script src="assets/ux.js?v=1" defer></script>
 </body>
 </html>

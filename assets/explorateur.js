@@ -218,7 +218,7 @@
     return dt.toLocaleDateString(LOCALE[LANG], { timeZone: "UTC" });
   }
 
-  var NIVEAU = { "1": "Département", "2": "Arrondissement", "3": "Commune",
+  var NIVEAU = { "0": "Pays", "1": "Département", "2": "Arrondissement", "3": "Commune",
                  "4": "Section communale", "5": "Localité" };
   var THEME = { Territoire: "🗺 Territoire", Santé: "🏥 Santé", Éducation: "🎓 Éducation",
                 Marchés: "🛒 Marchés", Qualité: "📋 Qualité de la donnée",
@@ -378,6 +378,9 @@
     terr.forEach(function (r) {
       var a = sansAccent(r.nom_fr), b = sansAccent(r.nom_ht),
           c = sansAccent(r.pcode), d = sansAccent(r.atmart_geo_id);
+      /* Les alias sont des mots entiers (« pays », « nasyonal ») : un match
+         partiel ferait remonter la fiche nationale sur « pa »… */
+      if (r.alias && sansAccent(r.alias).split(" ").indexOf(k) > -1) { exact.push(r); return; }
       if (a === k || b === k || c === k || d === k) exact.push(r);
       else if (a.indexOf(k) === 0 || b.indexOf(k) === 0 || c.indexOf(k) === 0 || d.indexOf(k) === 0) debut.push(r);
       else if (a.indexOf(k) > 0 || b.indexOf(k) > 0 || c.indexOf(k) > -1 || d.indexOf(k) > -1) dedans.push(r);
@@ -1164,6 +1167,57 @@
     });
   }
 
+  /* -------------------------------------------------- repères nationaux
+     La fiche du pays porte ce que l'État publie au niveau national et que
+     personne ne peut ventiler par territoire : le budget exécuté (SRC-024).
+     Chargé à la demande comme la pyramide — la plupart des visites ne
+     l'ouvrent jamais. S'il manque, la fiche s'affiche sans lui et le dit. */
+  var natLignes = null, natPromesse = null;
+
+  function chargerNat() {
+    if (natPromesse) return natPromesse;
+    natPromesse = charger(DIR + "atmart_indicateurs_national_HT.csv", 1)
+      .then(function (t) { natLignes = parseCSV(t); return natLignes; })
+      .catch(function () { natLignes = null; return null; });
+    return natPromesse;
+  }
+
+  function blocNat() { return '<div id="x-nat" class="x-pyr"></div>'; }
+
+  function remplirNat() {
+    var el = $("#x-nat");
+    if (!el) return;
+    chargerNat().then(function (lignes) {
+      if (!lignes || !lignes.length) {
+        el.innerHTML = '<p class="x-note">' +
+          T("Les repères nationaux n'ont pas pu être chargés — la fiche reste lisible sans eux.") + "</p>";
+        return;
+      }
+      var h = ['<h3 class="x-h3">' + T("Repères nationaux — finances publiques") + "</h3>"];
+      h.push('<div class="x-mesures">' + lignes.map(function (l) {
+        return '<details class="x-mesure"><summary><b>' + fmt(nb(l.valeur_htg), "HTG") +
+          "</b><span>" + esc(l.libelle) + '</span><small class="x-mill">' +
+          TF("Exercice {ex}", { ex: esc(l.exercice) }) + " · " + esc(l.couverture_periode) +
+          "</small></summary>" +
+          '<div class="x-detail">' +
+          "<p><b>" + T("Par habitant.") + "</b> " +
+          TF("{v} HTG sur la période — le dénominateur est une projection de population ({pop}) : un ordre de grandeur, pas une mesure.",
+             { v: fmt(nb(l.valeur_par_habitant_htg), ""), pop: esc(l.population_source) }) + "</p>" +
+          "<p><b>" + T("Concept.") + "</b> " + esc(l.concept) + "</p>" +
+          "<p><b>" + T("Source.") + "</b> " + esc(l.source_id) + " — " + esc(l.document) + " · " +
+          TF("extrait le {date}", { date: jour(l.date_extraction) }) + "</p>" +
+          (l.note ? '<p class="x-limite"><b>' + T("Limites.") + "</b> " + esc(l.note) + "</p>" : "") +
+          "</div></details>";
+      }).join("") + "</div>");
+      h.push('<p class="x-note">' +
+        T("Le budget de l'État n'est publié qu'au niveau national, par ministère : aucune répartition par département ou commune n'existe à ce jour. Le jour où le MEF la publiera, elle apparaîtra ici, territoire par territoire — l'afficher avant serait l'inventer.") +
+        ' <a href="' + DIR + 'atmart_indicateurs_national_HT.csv" download>' +
+        T("Télécharger le CSV des repères nationaux") + "</a> · " +
+        '<a href="https://budget.gouv.ht/" rel="noopener">budget.gouv.ht</a></p>');
+      el.innerHTML = h.join("");
+    });
+  }
+
   function blocObjectif(r) {
     if (ADMIN || r.niveau_admin !== "3") return "";
     var o = OBJECTIFS[objectif] || {};
@@ -1466,6 +1520,7 @@
     /* Le titre est une phrase complète par niveau : « 20 communes » ne se
        fabrique pas en collant un nombre et un mot, le créole intercale. */
     var titre = {
+      "0": { one: "{n} département", other: "{n} départements" },
       "1": { one: "{n} arrondissement", other: "{n} arrondissements" },
       "2": { one: "{n} commune", other: "{n} communes" },
       "3": { one: "{n} section communale", other: "{n} sections communales" },
@@ -1616,12 +1671,21 @@
     if (r.niveau_admin === "3") {
       h.push(blocObjectif(r), blocIndicateurs(r), blocPyramide(r), blocPrix(r),
              blocComparer(r), blocLacunes(r));
+    } else if (r.niveau_admin === "0") {
+      /* La fiche du pays : repères nationaux d'abord (ce qui n'existe qu'à ce
+         niveau), puis le même agrégat que pour un département. Pas de bloc
+         technique : l'entité est synthétique, ses métadonnées sont celles de
+         ses sources, affichées repère par repère. */
+      h.push(blocNat(), agregat(r), blocPyramide(r));
     } else h.push(agregat(r), blocPyramide(r));
-    h.push(blocOrganisations(r), blocEnfants(r), blocVerrou(r), blocTechnique(r));
+    if (r.niveau_admin !== "0") h.push(blocOrganisations(r));
+    h.push(blocEnfants(r), blocVerrou(r));
+    if (r.niveau_admin !== "0") h.push(blocTechnique(r));
     $("#x-fiche").innerHTML = h.join("");
     $("#x-fiche").hidden = false;
     observerPyramide(r);
     aLApproche("#x-prix", remplirPrix, r);
+    aLApproche("#x-nat", remplirNat, r);
     var t = $("#x-titre-fiche");
     if (t) t.textContent = nomT(r);
     majURL();
@@ -2106,6 +2170,16 @@
 
   /* ------------------------------------------------------------- démarrage */
   function pret() {
+    /* Le pays lui-même est cherchable : « Haïti » (ou « pays », « peyi »,
+       « national ») ouvre une fiche nationale. Entité synthétique — le socle
+       CNIGS s'arrête au département — raccrochée AU-DESSUS des départements
+       pour que fil d'Ariane, carte, pyramide et agrégats suivent exactement le
+       même chemin que pour n'importe quel territoire. Aucune valeur écrite en
+       dur : superficie et population restent des sommes de communes. */
+    terr.forEach(function (r) { if (r.niveau_admin === "1") r.parent_atmart_geo_id = "HT"; });
+    terr.push({ atmart_geo_id: "HT", pcode: "HT", nom_fr: "Haïti", nom_ht: "Ayiti",
+                niveau_admin: "0", type_entite: "Pays", parent_atmart_geo_id: "",
+                superficie_km2: "", alias: "pays peyi nation nasyonal national" });
     terr.forEach(function (r) {
       parId[r.atmart_geo_id] = r;
       if (r.pcode) parPcode[r.pcode] = r;
@@ -2148,8 +2222,12 @@
       /* « communes documentées » laissait entendre que les 140 le sont sur tout.
          Le socle territorial et la couverture d'un indicateur sont deux choses :
          la seconde se lit indicateur par indicateur, et va ici de 10 % à 100 %. */
+      /* terr contient l'entité synthétique « Haïti » : elle n'est pas une
+         entité du socle CNIGS, on ne la compte pas — le chiffre affiché doit
+         rester exactement celui du référentiel. */
+      var nTer = terr.filter(function (r) { return r.niveau_admin !== "0"; }).length;
       el.innerHTML = TF("{t} territoires au socle CNIGS 2018 · {c} communes · {o} valeurs sourcées · {a} absences documentées",
-        { t: terr.length.toLocaleString(LOCALE[LANG]), c: nCom,
+        { t: nTer.toLocaleString(LOCALE[LANG]), c: nCom,
           o: nObs.toLocaleString(LOCALE[LANG]),
           a: nAbs.toLocaleString(LOCALE[LANG]) }) +
         (ADMIN ? " · " + TF("{n} organisations",

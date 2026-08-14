@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
-  <link rel="stylesheet" href="assets/style.css?v=32" />
+  <link rel="stylesheet" href="assets/style.css?v=33" />
   <link rel="stylesheet" href="assets/data.css?v=25" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/datasets.html" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/datasets.html" />
@@ -1089,13 +1089,14 @@
 <!-- /Sécurité -->
 </head>
 <body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
 
 <header>
   <nav class="nav">
     <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>les données d'Atmart</small></a>
     <button class="nav-toggle" aria-label="Menu">☰</button>
     <ul class="nav-links">
-      <li class="nav-grp"><span>🗂 Données</span>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span>Données</span>
         <ul class="nav-sub">
           <li><a href="/">Explorateur Haïti <small>chercher une commune</small></a></li>
           <li><a href="couches.html">Couches <small>cartes d'utilité publique</small></a></li>
@@ -1111,9 +1112,9 @@
   </nav>
 </header>
 
-<section class="hero" style="padding:3.2rem 0 2rem">
+<section id="contenu" class="hero" style="padding:3.2rem 0 2rem">
   <div class="container">
-    <p class="kreyol" data-i18n="ds.kicker">Done ki pwòp, dokimante, pare pou analiz.</p>
+    <p class="kreyol" lang="ht" data-i18n="ds.kicker">Done ki pwòp, dokimante, pare pou analiz.</p>
     <h1 data-i18n-html="ds.title">Le <em>catalogue</em></h1>
     <p class="lead" data-i18n-html="ds.lead">
       Chaque jeu de données arrive avec sa source, sa date, son dictionnaire de variables, ses limites
@@ -1221,7 +1222,7 @@
 <h3 data-i18n-html="ds.c18_h">Prix des marchés — réseau sentinelle <span class="badge-new">NOUVO</span></h3>
 <p data-i18n-html="ds.c18_p">Relevés mensuels de prix, produit par produit et marché par marché : riz, haricots, maïs, huile, carburant. <strong>Le réseau ne couvre pas tout le pays</strong> — <span data-mf="nombre_communes_sentinelles">9</span> marchés sentinelles, un par département dans neuf départements sur dix. À lire comme un signal, jamais comme une moyenne nationale.</p>
 <p class="price" data-i18n-html="ds.c18_pr">0 $ <small>CSV • <span data-mf="nombre_releves_prix">14 140</span> relevés • <span data-mf="nombre_produits_suivis">32</span> produits suivis</small></p>
-<p class="meta" data-i18n-html="ds.c18_meta">💰 Économie • Source : WFP — VAM Food Prices • la série se lit aussi dans <a href="index.html">l'Explorateur</a></p>
+<p class="meta" data-i18n-html="ds.c18_meta">💰 Économie • Source : WFP — VAM Food Prices • la série se lit aussi dans <a href="/">l'Explorateur</a></p>
 <a href="data/atmart_prix_marches_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
 </div>
 <div class="card" data-cat="economie gratuit">
@@ -1473,5 +1474,6 @@
   })();
 </script>
 <script src="assets/mesure.js?v=2" defer></script>
+<script src="assets/ux.js?v=1" defer></script>
 </body>
 </html>

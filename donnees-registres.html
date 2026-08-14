@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
-  <link rel="stylesheet" href="assets/style.css?v=32" />
+  <link rel="stylesheet" href="assets/style.css?v=33" />
   <link rel="stylesheet" href="assets/data.css?v=25" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-registres.html" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-registres.html" />
@@ -23,13 +23,14 @@
 <!-- /Sécurité -->
 </head>
 <body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
 
 <header>
   <nav class="nav">
     <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>les données d'Atmart</small></a>
     <button class="nav-toggle" aria-label="Menu">☰</button>
     <ul class="nav-links">
-      <li class="nav-grp"><span>🗂 Données</span>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span>Données</span>
         <ul class="nav-sub">
           <li><a href="/">Explorateur Haïti <small>chercher une commune</small></a></li>
           <li><a href="datasets.html">Catalogue <small>jeux de données &amp; guides</small></a></li>
@@ -43,9 +44,9 @@
     </ul>
   </nav>
 </header>
-<section class="hero" style="padding:3rem 0 1.6rem">
+<section id="contenu" class="hero" style="padding:3rem 0 1.6rem">
 <div class="container">
-<p class="kreyol">Sa nou genyen, ak sa nou poko genyen.</p>
+<p class="kreyol" lang="ht">Sa nou genyen, ak sa nou poko genyen.</p>
 <h1>Registres <em>scolaire</em> et <em>sanitaire</em></h1>
 <p class="lead">
 Deux registres d'établissements, rattachés au découpage administratif officiel.
@@ -189,5 +190,6 @@ complet, et moins que les 34 $ des deux pris séparément.
   })();
 </script>
 <script src="assets/mesure.js?v=2" defer></script>
+<script src="assets/ux.js?v=1" defer></script>
 </body>
 </html>

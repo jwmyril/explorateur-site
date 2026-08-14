@@ -29,8 +29,15 @@
  "nombre_produits_suivis": 32,
  "nombre_releves_prix": 14140,
  "nombre_tranches_age": 17,
- "nombre_produits": 14,
- "nombre_produits_gratuits": 8,
+ "nombre_organisations": 5029,
+ "nombre_ecoles": 4117,
+ "nombre_etablissements_sante": 730,
+ "nombre_marches": 182,
+ "communes_couvertes_ecoles": 49,
+ "communes_couvertes_sante": 14,
+ "communes_couvertes_marches": 136,
+ "nombre_produits": 16,
+ "nombre_produits_gratuits": 10,
  "nombre_produits_payants": 1,
  "nombre_produits_parrainables": 5,
  "source_comptes_produits": "backbone/atmart_catalogue_produits.csv",
@@ -50,5 +57,9 @@
  "prd_007_colonnes": 18,
  "prd_008_lignes": 14140,
  "prd_008_colonnes": 23,
- "empreinte": "0ebc42cd79d11059"
+ "prd_009_lignes": 5029,
+ "prd_009_colonnes": 30,
+ "prd_010_lignes": 2,
+ "prd_010_colonnes": 18,
+ "empreinte": "18c660d8a0666267"
 }

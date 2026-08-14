@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=32" />
-  <link rel="stylesheet" href="assets/data.css?v=23" />
+  <link rel="stylesheet" href="assets/data.css?v=24" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/datasets.html" />
 <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
@@ -217,7 +217,7 @@
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_referentiel_indicateurs.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "42394"
+       "contentSize": "42611"
       }
      ],
      "isBasedOn": "CNIGS, UNFPA, MENFP, MSPP, WFP"
@@ -329,6 +329,82 @@
       }
      ],
      "isBasedOn": "WFP — VAM Food Prices"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-009",
+     "identifier": "PRD-009",
+     "name": "Référentiel organisations & infrastructures",
+     "description": "Écoles, établissements de santé et marchés, avec identifiant stable, nom normalisé et rattachement territorial. Les couvertures sont très inégales et c'est écrit dans le fichier : les marchés couvrent 136 communes et sont tous géolocalisés, la santé n'en couvre que 14, l'éducation 49 et sans aucune coordonnée.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html#organisations",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Infrastructures",
+      "Haïti"
+     ],
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_referentiel_organisations_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "3354971"
+      },
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_marches_HT.geojson",
+       "encodingFormat": "application/geo+json",
+       "contentSize": "81466"
+      }
+     ],
+     "isBasedOn": "MSPP, MENFP, WFP, OCHA"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-010",
+     "identifier": "PRD-010",
+     "name": "Repères budgétaires nationaux",
+     "description": "La dépense publique exécutée, au niveau national, sur l'exercice en cours. Deux repères seulement, et c'est volontaire : ils viennent de documents officiels citables, cumul sur neuf mois. Il n'y a pas de ventilation territoriale — la source n'en publie pas.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html#indicateurs",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Finances publiques",
+      "Haïti"
+     ],
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_indicateurs_national_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "1461"
+      }
+     ],
+     "isBasedOn": "MEF / Direction Générale du Budget ; TOFE"
     },
     {
      "@type": "Dataset",
@@ -504,6 +580,23 @@
 <p class="price" data-i18n-html="ds.c18_pr">0 $ <small>CSV • <span data-mf="nombre_releves_prix">14 140</span> relevés • <span data-mf="nombre_produits_suivis">32</span> produits suivis</small></p>
 <p class="meta" data-i18n-html="ds.c18_meta">💰 Économie • Source : WFP — VAM Food Prices • la série se lit aussi dans <a href="index.html">l'Explorateur</a></p>
 <a href="data/atmart_prix_marches_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="social gratuit">
+<span class="tag" data-i18n="ds.t_free">Gratuit</span>
+<h3 data-i18n-html="ds.c19_h">Référentiel organisations &amp; infrastructures <span class="badge-new">NOUVO</span></h3>
+<p data-i18n-html="ds.c19_p">Écoles, établissements de santé et marchés : identifiant stable, nom normalisé, nom d'origine et rattachement territorial. <strong>Les couvertures sont très inégales, et c'est écrit dans le fichier</strong> — les <span data-mf="nombre_marches">182</span> marchés couvrent <span data-mf="communes_couvertes_marches">136</span> communes et sont tous géolocalisés ; la santé n'en couvre que <span data-mf="communes_couvertes_sante">14</span>, l'éducation <span data-mf="communes_couvertes_ecoles">49</span>, et sans aucune coordonnée.</p>
+<p class="price" data-i18n-html="ds.c19_pr">0 $ <small>CSV + GeoJSON • <span data-mf="nombre_organisations">5 029</span> entités • 30 colonnes</small></p>
+<p class="meta" data-i18n-html="ds.c19_meta">🏫 Infrastructures • <span data-mf="nombre_ecoles">4 117</span> écoles · <span data-mf="nombre_etablissements_sante">730</span> établissements de santé · <span data-mf="nombre_marches">182</span> marchés • Sources : MENFP, MSPP, WFP, OCHA</p>
+<a href="data/atmart_referentiel_organisations_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+<a href="data/atmart_marches_HT.geojson" download class="btn btn-outline">Marchés en GeoJSON</a>
+</div>
+<div class="card" data-cat="economie gratuit">
+<span class="tag" data-i18n="ds.t_free">Gratuit</span>
+<h3 data-i18n-html="ds.c20_h">Repères budgétaires nationaux <span class="badge-new">NOUVO</span></h3>
+<p data-i18n-html="ds.c20_p">La dépense publique exécutée au niveau national, sur l'exercice en cours, tirée de documents officiels citables. <strong>Deux repères seulement, et c'est volontaire</strong> : il n'y a pas de ventilation par département ni par commune, parce que la source n'en publie pas. Mieux vaut deux chiffres sourcés qu'une répartition inventée.</p>
+<p class="price" data-i18n-html="ds.c20_pr">0 $ <small>CSV • 2 indicateurs • cumul sur 9 mois</small></p>
+<p class="meta" data-i18n-html="ds.c20_meta">🏛 Finances publiques • exercice 2025-2026 • Sources : MEF / Direction Générale du Budget, TOFE</p>
+<a href="data/atmart_indicateurs_national_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
 </div>
 </div>
 

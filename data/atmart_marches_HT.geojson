@@ -1,0 +1,3834 @@
+{
+ "type": "FeatureCollection",
+ "name": "Marchés d'Haïti — référentiel Atmart",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.34,
+     18.55
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011816",
+    "nom": "Canape-Vert",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0111-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0111",
+    "pcode_section": "HT0111-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.34,
+     18.56
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008048",
+    "nom": "Croix des Bossales",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0111-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0111",
+    "pcode_section": "HT0111-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.33,
+     18.54
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-000109",
+    "nom": "Port-Au-Prince",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0111-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0111",
+    "pcode_section": "HT0111-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.33,
+     18.54
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011893",
+    "nom": "Salomon",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0111-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0111",
+    "pcode_section": "HT0111-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.31,
+     18.55
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011895",
+    "nom": "Delmas",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0112-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0112",
+    "pcode_section": "HT0112-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.31,
+     18.56
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008049",
+    "nom": "Seradotte",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0112-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0112",
+    "pcode_section": "HT0112-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.38,
+     18.53
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011890",
+    "nom": "Bizoton",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0113-10",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0113",
+    "pcode_section": "HT0113-10"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.42,
+     18.54
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008041",
+    "nom": "Carrefour",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0113-11",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0113",
+    "pcode_section": "HT0113-11"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.28,
+     18.52
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011817",
+    "nom": "Kokoye",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0114-05",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0114",
+    "pcode_section": "HT0114-05"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.28,
+     18.52
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008045",
+    "nom": "Marché Marche Lacoupe",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0114-05",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0114",
+    "pcode_section": "HT0114-05"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.29,
+     18.52
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011818",
+    "nom": "Pétion-Ville",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0114-05",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0114",
+    "pcode_section": "HT0114-05"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.29,
+     18.47
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008046",
+    "nom": "Kenscoff",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0115-03",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0115",
+    "pcode_section": "HT0115-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.51,
+     18.55
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008040",
+    "nom": "Gressier",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0116-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0116",
+    "pcode_section": "HT0116-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.33,
+     18.59
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007982",
+    "nom": "Cité Soleil",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0117-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0117",
+    "pcode_section": "HT0117-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.34,
+     18.58
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011892",
+    "nom": "Terre Noire",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0117-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0117",
+    "pcode_section": "HT0117-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.33,
+     18.58
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011891",
+    "nom": "Wharf Jeremie",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0117-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0117",
+    "pcode_section": "HT0117-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.27,
+     18.58
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008047",
+    "nom": "Tabarre",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0118-03",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0118",
+    "pcode_section": "HT0118-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.63,
+     18.51
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008042",
+    "nom": "Chatuley",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0121-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0121",
+    "pcode_section": "HT0121-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.63,
+     18.46
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011896",
+    "nom": "Dufort",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0121-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0121",
+    "pcode_section": "HT0121-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.56,
+     18.53
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011897",
+    "nom": "Gressier 1 (flon)",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0121-03",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0121",
+    "pcode_section": "HT0121-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.59,
+     18.53
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011898",
+    "nom": "Gressier 2 (brache)",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0121-02",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0121",
+    "pcode_section": "HT0121-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.87,
+     18.43
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008053",
+    "nom": "Petit-Goâve",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0122-11",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0122",
+    "pcode_section": "HT0122-11"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.86,
+     18.43
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-012073",
+    "nom": "Seradot (petit-Goave)",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0122-11",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0122",
+    "pcode_section": "HT0122-11"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.77,
+     18.42
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008044",
+    "nom": "Grand-Goave",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0123-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0123",
+    "pcode_section": "HT0123-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.28,
+     18.81
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011906",
+    "nom": "Boule",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0131-10",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0131",
+    "pcode_section": "HT0131-10"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.22,
+     18.58
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008052",
+    "nom": "Croix-Des-Bouquets",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0131-05",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0131",
+    "pcode_section": "HT0131-05"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.28,
+     18.6
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011889",
+    "nom": "Croix-Des-Missions",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0131-03",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0131",
+    "pcode_section": "HT0131-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.26,
+     18.6
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011894",
+    "nom": "Santo 15",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0131-02",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0131",
+    "pcode_section": "HT0131-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.1,
+     18.65
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008043",
+    "nom": "Thomazeau",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0132-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0132",
+    "pcode_section": "HT0132-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.07,
+     18.53
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008038",
+    "nom": "Ganthier",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0133-05",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0133",
+    "pcode_section": "HT0133-05"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.95,
+     18.68
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008039",
+    "nom": "Cornillon / Grand-Bois",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0134-02",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0134",
+    "pcode_section": "HT0134-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.86,
+     18.39
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008037",
+    "nom": "Fonds-Verrettes",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0135-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0135",
+    "pcode_section": "HT0135-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.51,
+     18.77
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008050",
+    "nom": "Arcahaie",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0141-03",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0141",
+    "pcode_section": "HT0141-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.58,
+     18.84
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011899",
+    "nom": "Williamson",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0141-03",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0141",
+    "pcode_section": "HT0141-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.42,
+     18.74
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008051",
+    "nom": "Cabaret",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0142-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0142",
+    "pcode_section": "HT0142-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.4,
+     18.77
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011909",
+    "nom": "Chili",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0142-01",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0142",
+    "pcode_section": "HT0142-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.87,
+     18.83
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007980",
+    "nom": "Anse À Galets",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0151-02",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0151",
+    "pcode_section": "HT0151-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.06,
+     18.78
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007981",
+    "nom": "Pointe À Raquette",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0152-04",
+    "pcode_departement": "HT01",
+    "pcode_commune": "HT0152",
+    "pcode_section": "HT0152-04"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.54,
+     18.23
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008059",
+    "nom": "Fer Jacmel",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0211-10",
+    "pcode_departement": "HT02",
+    "pcode_commune": "HT0211",
+    "pcode_section": "HT0211-10"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.53,
+     18.23
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-000105",
+    "nom": "Jacmel",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0211-01",
+    "pcode_departement": "HT02",
+    "pcode_commune": "HT0211",
+    "pcode_section": "HT0211-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.33,
+     18.23
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008055",
+    "nom": "Marigot",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0212-01",
+    "pcode_departement": "HT02",
+    "pcode_commune": "HT0212",
+    "pcode_section": "HT0212-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.4,
+     18.23
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008058",
+    "nom": "Cayes-Jacmel",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0213-01",
+    "pcode_departement": "HT02",
+    "pcode_commune": "HT0213",
+    "pcode_section": "HT0213-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.66,
+     18.27
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008060",
+    "nom": "Vallée",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0214-01",
+    "pcode_departement": "HT02",
+    "pcode_commune": "HT0214",
+    "pcode_section": "HT0214-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.76,
+     18.18
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008061",
+    "nom": "Bainet",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0221-09",
+    "pcode_departement": "HT02",
+    "pcode_commune": "HT0221",
+    "pcode_section": "HT0221-09"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.07,
+     18.24
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007977",
+    "nom": "Belle Anse",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0231-05",
+    "pcode_departement": "HT02",
+    "pcode_commune": "HT0231",
+    "pcode_section": "HT0231-05"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.95,
+     18.26
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007978",
+    "nom": "Mapou",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0231-07",
+    "pcode_departement": "HT02",
+    "pcode_commune": "HT0231",
+    "pcode_section": "HT0231-07"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.92,
+     18.19
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007979",
+    "nom": "Grand Gosier",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0232-01",
+    "pcode_departement": "HT02",
+    "pcode_commune": "HT0232",
+    "pcode_section": "HT0232-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.84,
+     18.25
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008054",
+    "nom": "Thiotte",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0233-01",
+    "pcode_departement": "HT02",
+    "pcode_commune": "HT0233",
+    "pcode_section": "HT0233-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.76,
+     18.04
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008057",
+    "nom": "Anse-À-Pître",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0234-01",
+    "pcode_departement": "HT02",
+    "pcode_commune": "HT0234",
+    "pcode_section": "HT0234-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.2,
+     19.76
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-000107",
+    "nom": "Cap-Haïtien",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0311-02",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0311",
+    "pcode_section": "HT0311-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.2,
+     19.76
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008065",
+    "nom": "Cluny",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0311-02",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0311",
+    "pcode_section": "HT0311-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.16,
+     19.7
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008067",
+    "nom": "Quartier Morin",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0312-01",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0312",
+    "pcode_section": "HT0312-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.12,
+     19.67
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008072",
+    "nom": "Limonade",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0313-03",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0313",
+    "pcode_section": "HT0313-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.32,
+     19.68
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008077",
+    "nom": "Acul du Nord",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0321-02",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0321",
+    "pcode_section": "HT0321-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.35,
+     19.74
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008071",
+    "nom": "Bas Limbe",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0321-01",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0321",
+    "pcode_section": "HT0321-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.27,
+     19.68
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008076",
+    "nom": "Plaine du Nord",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0322-02",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0322",
+    "pcode_section": "HT0322-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.22,
+     19.61
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008066",
+    "nom": "Milot",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0323-02",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0323",
+    "pcode_section": "HT0323-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.17,
+     19.58
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007987",
+    "nom": "Grande Riviere du Nord",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0331-06",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0331",
+    "pcode_section": "HT0331-06"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.11,
+     19.47
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008073",
+    "nom": "Bahon",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0332-01",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0332",
+    "pcode_section": "HT0332-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.2,
+     19.44
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008075",
+    "nom": "Saint-Raphaël",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0341-04",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0341",
+    "pcode_section": "HT0341-04"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.24,
+     19.53
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008063",
+    "nom": "Dondon",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0342-04",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0342",
+    "pcode_section": "HT0342-04"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.08,
+     19.41
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007986",
+    "nom": "Ranquitte",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0343-01",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0343",
+    "pcode_section": "HT0343-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.12,
+     19.34
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007985",
+    "nom": "Pignon",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0344-01",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0344",
+    "pcode_section": "HT0344-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.02,
+     19.34
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008064",
+    "nom": "Victoire",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0345-01",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0345",
+    "pcode_section": "HT0345-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.52,
+     19.85
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008070",
+    "nom": "Borgne",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0351-07",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0351",
+    "pcode_section": "HT0351-07"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.43,
+     19.75
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008074",
+    "nom": "Port Margot",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0352-02",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0352",
+    "pcode_section": "HT0352-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.4,
+     19.7
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008068",
+    "nom": "Limbe",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0361-05",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0361",
+    "pcode_section": "HT0361-05"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.47,
+     19.6
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008062",
+    "nom": "Plaisance",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0371-07",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0371",
+    "pcode_section": "HT0371-07"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.55,
+     19.67
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008069",
+    "nom": "Pilate",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0372-01",
+    "pcode_departement": "HT03",
+    "pcode_commune": "HT0372",
+    "pcode_section": "HT0372-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.84,
+     19.66
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007970",
+    "nom": "Fort-Liberté",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0411-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0411",
+    "pcode_section": "HT0411-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.77,
+     19.62
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008079",
+    "nom": "Ferrier",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0412-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0412",
+    "pcode_section": "HT0412-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.93,
+     19.53
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007972",
+    "nom": "Perches",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0413-02",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0413",
+    "pcode_section": "HT0413-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.73,
+     19.55
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008080",
+    "nom": "Marché de Ouanaminthe",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0421-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0421",
+    "pcode_section": "HT0421-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.73,
+     19.55
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-000108",
+    "nom": "Ouanaminthe",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0421-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0421",
+    "pcode_section": "HT0421-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.69,
+     19.44
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008083",
+    "nom": "Capotille",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0422-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0422",
+    "pcode_section": "HT0422-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.78,
+     19.41
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007971",
+    "nom": "Mont-Organise",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0423-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0423",
+    "pcode_section": "HT0423-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.02,
+     19.62
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008078",
+    "nom": "Trou du Nord",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0431-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0431",
+    "pcode_section": "HT0431-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.09,
+     19.58
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007969",
+    "nom": "Sainte Suzane",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0432-02",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0432",
+    "pcode_section": "HT0432-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.96,
+     19.63
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008081",
+    "nom": "Terrier Rouge",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0433-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0433",
+    "pcode_section": "HT0433-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.02,
+     19.69
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008082",
+    "nom": "Caracol",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0434-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0434",
+    "pcode_section": "HT0434-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.92,
+     19.43
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007973",
+    "nom": "Valieres",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0441-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0441",
+    "pcode_section": "HT0441-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.83,
+     19.38
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008084",
+    "nom": "Carice",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0442-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0442",
+    "pcode_section": "HT0442-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.98,
+     19.37
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007968",
+    "nom": "Mombin Crochu",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0443-01",
+    "pcode_departement": "HT04",
+    "pcode_commune": "HT0443",
+    "pcode_section": "HT0443-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.68,
+     19.45
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-000103",
+    "nom": "Gonaives",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0511-01",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0511",
+    "pcode_section": "HT0511-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.69,
+     19.45
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008091",
+    "nom": "Marché de Gonaives",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0511-01",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0511",
+    "pcode_section": "HT0511-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.62,
+     19.52
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011900",
+    "nom": "Poteaux",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0511-04",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0511",
+    "pcode_section": "HT0511-04"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.48,
+     19.48
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007975",
+    "nom": "Ennery",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0512-04",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0512",
+    "pcode_section": "HT0512-04"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.61,
+     19.3
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008088",
+    "nom": "L'estère",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0513-01",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0513",
+    "pcode_section": "HT0513-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.68,
+     19.67
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007974",
+    "nom": "Gros Morne",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0521-03",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0521",
+    "pcode_section": "HT0521-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.76,
+     19.63
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011901",
+    "nom": "Moulin",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0522-01",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0522",
+    "pcode_section": "HT0522-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.78,
+     19.6
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008095",
+    "nom": "Terre Neuve",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0522-02",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0522",
+    "pcode_section": "HT0522-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.06,
+     19.63
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008086",
+    "nom": "Anse Rouge",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0523-01",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0523",
+    "pcode_section": "HT0523-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.61,
+     19.15
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011904",
+    "nom": "Pont Sonde",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0531-05",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0531",
+    "pcode_section": "HT0531-05"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.7,
+     19.11
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008096",
+    "nom": "Saint-Marc",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0531-06",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0531",
+    "pcode_section": "HT0531-06"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.39,
+     18.99
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011903",
+    "nom": "Desarmes",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0532-04",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0532",
+    "pcode_section": "HT0532-04"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.46,
+     19.05
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008092",
+    "nom": "Verrettes",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0532-04",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0532",
+    "pcode_section": "HT0532-04"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.31,
+     18.91
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008085",
+    "nom": "Chapelle",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0533-01",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0533",
+    "pcode_section": "HT0533-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.52,
+     19.26
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008094",
+    "nom": "Dessalines",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0541-03",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0541",
+    "pcode_section": "HT0541-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.48,
+     19.12
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008093",
+    "nom": "Petite Rivière de L'artibonite",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0542-03",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0542",
+    "pcode_section": "HT0542-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.4,
+     19.06
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011902",
+    "nom": "Plassac",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0542-03",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0542",
+    "pcode_section": "HT0542-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.77,
+     19.25
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008090",
+    "nom": "Grande Saline",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0543-01",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0543",
+    "pcode_section": "HT0543-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.64,
+     19.29
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008087",
+    "nom": "Desdunes",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0544-01",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0544",
+    "pcode_section": "HT0544-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.33,
+     19.37
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007976",
+    "nom": "Saint-Michel",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0551-08",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0551",
+    "pcode_section": "HT0551-08"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.36,
+     19.52
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008089",
+    "nom": "Marmelade",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0552-01",
+    "pcode_departement": "HT05",
+    "pcode_commune": "HT0552",
+    "pcode_section": "HT0552-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.02,
+     19.15
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-000104",
+    "nom": "Hinche",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0611-04",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0611",
+    "pcode_section": "HT0611-04"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.01,
+     19.15
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008103",
+    "nom": "Marché de Hinche",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0611-01",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0611",
+    "pcode_section": "HT0611-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.14,
+     19.18
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007989",
+    "nom": "Maissade",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0612-01",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0612",
+    "pcode_section": "HT0612-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.14,
+     19.18
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007991",
+    "nom": "Thomonde",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0612-01",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0612",
+    "pcode_section": "HT0612-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.91,
+     18.94
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011908",
+    "nom": "Casse",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0613-04",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0613",
+    "pcode_section": "HT0613-04"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.93,
+     19.27
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007992",
+    "nom": "Cerca Carvajal",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0614-01",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0614",
+    "pcode_section": "HT0614-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.2,
+     18.81
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008097",
+    "nom": "Saut-D'eau",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0622-01",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0622",
+    "pcode_section": "HT0622-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.15,
+     18.92
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008102",
+    "nom": "Boucan Carré",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0623-02",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0623",
+    "pcode_section": "HT0623-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.09,
+     18.91
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011905",
+    "nom": "Difaily",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0623-03",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0623",
+    "pcode_section": "HT0623-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.1,
+     18.84
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008100",
+    "nom": "Paskannot",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0623-03",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0623",
+    "pcode_section": "HT0623-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.94,
+     18.83
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008104",
+    "nom": "Lascahobas",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0631-02",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0631",
+    "pcode_section": "HT0631-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.81,
+     18.85
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008098",
+    "nom": "Croix Fer",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0632-01",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0632",
+    "pcode_section": "HT0632-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.76,
+     18.87
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-011907",
+    "nom": "Dumarsais Estime",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0632-01",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0632",
+    "pcode_section": "HT0632-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.82,
+     18.74
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008099",
+    "nom": "Savanette",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0633-02",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0633",
+    "pcode_section": "HT0633-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.79,
+     19.17
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007988",
+    "nom": "Cerca la Source",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0641-02",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0641",
+    "pcode_section": "HT0641-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.84,
+     19.08
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008101",
+    "nom": "Thomassique",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0642-02",
+    "pcode_departement": "HT06",
+    "pcode_commune": "HT0642",
+    "pcode_section": "HT0642-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.75,
+     18.2
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-000102",
+    "nom": "Cayes",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0711-01",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0711",
+    "pcode_section": "HT0711-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.75,
+     18.2
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006129",
+    "nom": "Les Cayes",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0711-01",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0711",
+    "pcode_section": "HT0711-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.88,
+     18.23
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007984",
+    "nom": "Ducis (chantal)",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0712-02",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0712",
+    "pcode_section": "HT0712-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.87,
+     18.15
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008106",
+    "nom": "Marche Arniquet",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0712-01",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0712",
+    "pcode_section": "HT0712-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.81,
+     18.16
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006132",
+    "nom": "Torbeck",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0712-01",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0712",
+    "pcode_section": "HT0712-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.89,
+     18.2
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008111",
+    "nom": "Chantal",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0713-02",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0713",
+    "pcode_section": "HT0713-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.87,
+     18.32
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006135",
+    "nom": "Camp-Perrin",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0714-03",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0714",
+    "pcode_section": "HT0714-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.78,
+     18.35
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006136",
+    "nom": "Maniche",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0715-03",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0715",
+    "pcode_section": "HT0715-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.65,
+     18.09
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008110",
+    "nom": "Ile a Vache",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0716-01",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0716",
+    "pcode_section": "HT0716-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.92,
+     18.09
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007983",
+    "nom": "Port-Salut",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0721-01",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0721",
+    "pcode_section": "HT0721-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.81,
+     18.08
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006131",
+    "nom": "Saint Jean du Sud",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0722-03",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0722",
+    "pcode_section": "HT0722-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.88,
+     18.15
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006133",
+    "nom": "Arniquet",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0723-03",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0723",
+    "pcode_section": "HT0723-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.4,
+     18.28
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006134",
+    "nom": "Aquin",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0731-03",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0731",
+    "pcode_section": "HT0731-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.01,
+     18.19
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008056",
+    "nom": "Cote-De-Fer",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0731-07",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0731",
+    "pcode_section": "HT0731-07"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.39,
+     18.28
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006137",
+    "nom": "Marche de Aquin",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0731-05",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0731",
+    "pcode_section": "HT0731-05"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.55,
+     18.26
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006138",
+    "nom": "Saint Louis",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0732-03",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0732",
+    "pcode_section": "HT0732-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.66,
+     18.3
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006130",
+    "nom": "Cavaillon",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0733-02",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0733",
+    "pcode_section": "HT0733-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.04,
+     18.21
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008108",
+    "nom": "Coteaux",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0741-02",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0741",
+    "pcode_section": "HT0741-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.1,
+     18.25
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008105",
+    "nom": "Port-A-Piment",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0742-01",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0742",
+    "pcode_section": "HT0742-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.0,
+     18.18
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008107",
+    "nom": "Roche À Bâteau",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0743-01",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0743",
+    "pcode_section": "HT0743-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.17,
+     18.28
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006128",
+    "nom": "Chardonnieres",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0751-03",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0751",
+    "pcode_section": "HT0751-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.22,
+     18.31
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006127",
+    "nom": "Anglais",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0752-03",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0752",
+    "pcode_section": "HT0752-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.4,
+     18.33
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008109",
+    "nom": "Marché de Tiburon",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0753-03",
+    "pcode_departement": "HT07",
+    "pcode_commune": "HT0753",
+    "pcode_section": "HT0753-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.08,
+     18.62
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-000106",
+    "nom": "Jérémie",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0811-01",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0811",
+    "pcode_section": "HT0811-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.11,
+     18.55
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006023",
+    "nom": "Leon",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0811-02",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0811",
+    "pcode_section": "HT0811-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.11,
+     18.65
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006014",
+    "nom": "Marche de Jeremie",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0811-08",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0811",
+    "pcode_section": "HT0811-08"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.22,
+     18.58
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006022",
+    "nom": "Marfranc",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0811-06",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0811",
+    "pcode_section": "HT0811-06"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.16,
+     18.54
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-010805",
+    "nom": "Previle",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0811-03",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0811",
+    "pcode_section": "HT0811-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.31,
+     18.65
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006019",
+    "nom": "Abricots",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0812-02",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0812",
+    "pcode_section": "HT0812-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.25,
+     18.67
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006017",
+    "nom": "Bonbon",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0813-01",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0813",
+    "pcode_section": "HT0813-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.26,
+     18.56
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006016",
+    "nom": "Moron",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0814-01",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0814",
+    "pcode_section": "HT0814-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.31,
+     18.55
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006015",
+    "nom": "Chambellan",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0815-01",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0815",
+    "pcode_section": "HT0815-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.45,
+     18.49
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006013",
+    "nom": "Anse D'hainault",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0821-01",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0821",
+    "pcode_section": "HT0821-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.42,
+     18.56
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006020",
+    "nom": "Dame Marie",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0822-03",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0822",
+    "pcode_section": "HT0822-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.45,
+     18.41
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006024",
+    "nom": "Les Irois",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0823-01",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0823",
+    "pcode_section": "HT0823-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.89,
+     18.57
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006012",
+    "nom": "Corail",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0831-01",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0831",
+    "pcode_section": "HT0831-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.02,
+     18.6
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006018",
+    "nom": "Roseaux",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0832-04",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0832",
+    "pcode_section": "HT0832-04"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.95,
+     18.48
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006025",
+    "nom": "Beaumont",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0833-01",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0833",
+    "pcode_section": "HT0833-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.8,
+     18.6
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006026",
+    "nom": "Les Cayimites",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0834-06",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0834",
+    "pcode_section": "HT0834-06"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.79,
+     18.54
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006021",
+    "nom": "Pestel",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0834-02",
+    "pcode_departement": "HT08",
+    "pcode_commune": "HT0834",
+    "pcode_section": "HT0834-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.84,
+     19.88
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007995",
+    "nom": "Chansolme",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0911-06",
+    "pcode_departement": "HT09",
+    "pcode_commune": "HT0911",
+    "pcode_section": "HT0911-06"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.83,
+     19.94
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008114",
+    "nom": "Marche de Port de Paix",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0911-03",
+    "pcode_departement": "HT09",
+    "pcode_commune": "HT0911",
+    "pcode_section": "HT0911-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.83,
+     19.94
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-000110",
+    "nom": "Port-De-Paix",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0911-03",
+    "pcode_departement": "HT09",
+    "pcode_commune": "HT0911",
+    "pcode_section": "HT0911-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.73,
+     20.02
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008112",
+    "nom": "Tortue",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0912-01",
+    "pcode_departement": "HT09",
+    "pcode_commune": "HT0912",
+    "pcode_section": "HT0912-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.8,
+     19.78
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007999",
+    "nom": "Bassin Bleu",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0913-01",
+    "pcode_departement": "HT09",
+    "pcode_commune": "HT0913",
+    "pcode_section": "HT0913-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.72,
+     19.93
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007998",
+    "nom": "Saint-Louis du Nord",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0921-02",
+    "pcode_departement": "HT09",
+    "pcode_commune": "HT0921",
+    "pcode_section": "HT0921-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.61,
+     19.89
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007997",
+    "nom": "Anse-A-Foleur",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0922-03",
+    "pcode_departement": "HT09",
+    "pcode_commune": "HT0922",
+    "pcode_section": "HT0922-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.37,
+     19.81
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007996",
+    "nom": "Môle Saint Nicolas",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0931-01",
+    "pcode_departement": "HT09",
+    "pcode_commune": "HT0931",
+    "pcode_section": "HT0931-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.21,
+     19.66
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008113",
+    "nom": "Baie de Henne",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0932-01",
+    "pcode_departement": "HT09",
+    "pcode_commune": "HT0932",
+    "pcode_section": "HT0932-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.34,
+     19.7
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007993",
+    "nom": "Bombardopolis",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0933-01",
+    "pcode_departement": "HT09",
+    "pcode_commune": "HT0933",
+    "pcode_section": "HT0933-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.19,
+     19.85
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-007994",
+    "nom": "Jean Rabel",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-0934-03",
+    "pcode_departement": "HT09",
+    "pcode_commune": "HT0934",
+    "pcode_section": "HT0934-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.09,
+     18.45
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008117",
+    "nom": "Miragoâne",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-1011-01",
+    "pcode_departement": "HT10",
+    "pcode_commune": "HT1011",
+    "pcode_section": "HT1011-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.24,
+     18.48
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006141",
+    "nom": "Petite-Riviere de Nippes",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-1012-02",
+    "pcode_departement": "HT10",
+    "pcode_commune": "HT1012",
+    "pcode_section": "HT1012-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.24,
+     18.36
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006144",
+    "nom": "Fonds des Nègres",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-1013-02",
+    "pcode_departement": "HT10",
+    "pcode_commune": "HT1013",
+    "pcode_section": "HT1013-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.15,
+     18.42
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008115",
+    "nom": "Paillant",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-1014-01",
+    "pcode_departement": "HT10",
+    "pcode_commune": "HT1014",
+    "pcode_section": "HT1014-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.34,
+     18.5
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006140",
+    "nom": "Anse-A-Veau",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-1021-02",
+    "pcode_departement": "HT10",
+    "pcode_commune": "HT1021",
+    "pcode_section": "HT1021-02"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.51,
+     18.53
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006146",
+    "nom": "Petit Trou de Nippes",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-1022-01",
+    "pcode_departement": "HT10",
+    "pcode_commune": "HT1022",
+    "pcode_section": "HT1022-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.42,
+     18.38
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006142",
+    "nom": "Asile",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-1023-03",
+    "pcode_departement": "HT10",
+    "pcode_commune": "HT1023",
+    "pcode_section": "HT1023-03"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.4,
+     18.45
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006145",
+    "nom": "Arnaud",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-1024-01",
+    "pcode_departement": "HT10",
+    "pcode_commune": "HT1024",
+    "pcode_section": "HT1024-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.59,
+     18.43
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006139",
+    "nom": "Plaisance du Sud",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-1025-01",
+    "pcode_departement": "HT10",
+    "pcode_commune": "HT1025",
+    "pcode_section": "HT1025-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.64,
+     18.48
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-006143",
+    "nom": "Baraderes",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-1031-01",
+    "pcode_departement": "HT10",
+    "pcode_commune": "HT1031",
+    "pcode_section": "HT1031-01"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.59,
+     18.55
+    ]
+   },
+   "properties": {
+    "atmart_org_id": "HTO-MAR-008116",
+    "nom": "Grand Boucan",
+    "categorie": "Marché",
+    "sous_categorie": "Marché suivi pour les prix",
+    "statut": "",
+    "atmart_geo_id": "HTS-1032-01",
+    "pcode_departement": "HT10",
+    "pcode_commune": "HT1032",
+    "pcode_section": "HT1032-01"
+   }
+  }
+ ]
+}

@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=32" />
-  <link rel="stylesheet" href="assets/data.css?v=23" />
+  <link rel="stylesheet" href="assets/data.css?v=24" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-backbone.html" />
 </head>
 <body>
@@ -95,7 +95,7 @@
       </a>
       <a class="d-door" href="#organisations">
         <h3>🏫 Organisations &amp; infrastructures <span class="d-pill live">v1 publié</span></h3>
-        <p>5 029 entités : 730 établissements de santé, 4 122 écoles, 182 marchés. Identifiant stable,
+        <p><span data-mf="nombre_organisations">5 029</span> entités : <span data-mf="nombre_etablissements_sante">730</span> établissements de santé, <span data-mf="nombre_ecoles">4 117</span> écoles, <span data-mf="nombre_marches">182</span> marchés. Identifiant stable,
           nom normalisé <em>et</em> nom source, rattachement territorial, degré de vérification.</p>
         <span class="go">Voir le référentiel →</span>
       </a>
@@ -251,7 +251,7 @@
 <section class="d-sec" id="organisations">
   <div class="container">
     <p class="d-lbl">Référentiel organisations &amp; infrastructures · v1.2026.07</p>
-    <h2 class="d-h">5 029 entités — et ce qu'elles révèlent des sources</h2>
+    <h2 class="d-h"><span data-mf="nombre_organisations">5 029</span> entités — et ce qu'elles révèlent des sources</h2>
     <p class="d-sub" style="margin-bottom:1.2rem">
       C'est le référentiel qui débloque les registres nationaux : sans identifiant stable rattaché au
       territoire, aucun indicateur de couverture ou d'accessibilité n'est calculable. Chaque entité porte
@@ -263,7 +263,7 @@
         <thead><tr><th scope="col">Catégorie</th><th scope="col">Entités</th><th scope="col">Couverture réelle</th><th scope="col">Géocodage</th><th scope="col">Source</th></tr></thead>
         <tbody>
           <tr><td>Santé</td><td>730</td><td><strong>14 communes sur 140</strong></td><td>66 % (480)</td><td>OCHA Haïti 2023 · CC BY</td></tr>
-          <tr><td>Éducation</td><td>4 122</td><td><strong>49 communes sur 140</strong></td><td>aucun</td><td>OCHA Haïti 2022 · CC BY</td></tr>
+          <tr><td>Éducation</td><td><span data-mf="nombre_ecoles">4 117</span></td><td><strong>49 communes sur 140</strong></td><td>aucun</td><td>OCHA Haïti 2022 · CC BY</td></tr>
           <tr><td>Marchés</td><td>182</td><td>136 communes</td><td>100 %</td><td>PAM · CC BY-IGO</td></tr>
         </tbody>
       </table></div>
@@ -273,7 +273,7 @@
       <h3>Ce que la reconstitution a mis au jour</h3>
       <p>
         <b>Aucune de ces sources n'est un registre national</b>, malgré leurs titres. Le fichier OCHA
-        intitulé « Location of health facilities » concentre ses 730 établissements sur
+        intitulé « Location of health facilities » concentre ses <span data-mf="nombre_etablissements_sante">730</span> établissements sur
         <strong>14 communes</strong>. La cartographie scolaire de 2022 couvre 4 départements, ceux de la
         réponse post-séisme. Une commune absente n'a pas zéro école : elle n'est pas couverte — et le
         référentiel écrit la différence au lieu de la laisser lire comme un zéro.

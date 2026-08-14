@@ -95,6 +95,17 @@
       limite: "Kilomètres CARTOGRAPHIÉS : mesure aussi la densité de cartographie. Tronçon affecté à la commune de son point médian (~100 m de tolérance)." }
   ];
 
+  /* Couches ANNONCÉES mais pas encore construites : jamais dans le
+     sélecteur actif — une section grisée les liste, avec le parrainage
+     comme chemin. Le registre des sources dit pourquoi chacune attend. */
+  var EN_PREPARATION = [
+    { slug: "mobile_reel", nom: "Couverture mobile réelle (opérateurs)" },
+    { slug: "sismique", nom: "Aléa sismique probabiliste (USGS)" },
+    { slug: "hydro", nom: "Réseau hydrographique et sous-bassins" },
+    { slug: "sol_recent", nom: "Occupation du sol récente (post-1998)" }
+  ];
+  var COUCHE_DEFAUT = "conflits";
+
   var IPC_COULEURS = { "1": "#cdfacd", "2": "#fae61e", "3": "#e67800", "4": "#c80000", "5": "#640000" };
 
   function plage12(dernierMois) {
@@ -142,7 +153,12 @@
      fois, en espaçant, avant d'abandonner — même doctrine que le moteur. */
   function charger(u, essais) {
     essais = essais === undefined ? 2 : essais;
-    return fetch(u + DV).then(function (r) {
+    /* 15 s par tentative : sur une 3G instable, mieux vaut un message et un
+       bouton Réessayer qu'un « chargement… » éternel. */
+    var coupe = new Promise(function (_, ko) {
+      setTimeout(function () { ko(new Error("délai dépassé (15 s)")); }, 15000);
+    });
+    return Promise.race([fetch(u + DV), coupe]).then(function (r) {
       if (!r.ok) throw new Error(u + " : " + r.status);
       return r.text();
     }).catch(function (e) {
@@ -409,8 +425,12 @@
       fini();
     }).catch(function (e) {
       fini();
-      $("#k-carte").innerHTML = '<p class="x-note">La couche n\'a pas pu être chargée (' +
-        String(e.message).replace(/[<>&]/g, "") + "). Réessayez — les fichiers restent téléchargeables plus bas.</p>";
+      $("#k-carte").innerHTML = '<div class="k-erreur"><p>Le fichier n\'a pas pu être chargé (' +
+        String(e.message).replace(/[<>&]/g, "") +
+        "). Vérifiez votre connexion.</p>" +
+        '<button type="button" class="btn btn-outline" id="k-reessayer">Réessayer</button></div>';
+      var bt = $("#k-reessayer");
+      if (bt) bt.addEventListener("click", function () { delete cache[u]; afficher(id); });
     });
   }
 
@@ -436,14 +456,42 @@
         });
         sel.appendChild(og);
       });
+      var ogPrep = document.createElement("optgroup");
+      ogPrep.label = "En préparation — parrainables";
+      EN_PREPARATION.forEach(function (c) {
+        var o = document.createElement("option");
+        o.value = "prep_" + c.slug; o.textContent = c.nom; o.disabled = true;
+        ogPrep.appendChild(o);
+      });
+      sel.appendChild(ogPrep);
       sel.addEventListener("change", function () { afficher(sel.value); });
       /* un clic sur une commune ouvre sa fiche ; le survol affiche son nom
          et sa valeur sous la carte — les 140 étiquettes simultanées seraient
          illisibles, le nom apparaît donc là où le regard est. */
+      var tactile = window.matchMedia && matchMedia("(pointer: coarse)").matches;
+      var dernierTap = { id: null, t: 0 };
       $("#k-carte").addEventListener("click", function (e) {
-        var id = e.target && e.target.getAttribute && e.target.getAttribute("data-id");
-        if (id) location.href = "/?id=" + id;
+        var cid = e.target && e.target.getAttribute && e.target.getAttribute("data-id");
+        if (!cid) return;
+        if (tactile) {
+          /* au doigt, le survol n'existe pas : le premier toucher LIT le nom
+             et la valeur, le second (même commune, moins de 5 s) ouvre la
+             fiche — jamais de navigation avant d'avoir pu lire. */
+          var t = Date.now();
+          if (dernierTap.id === cid && t - dernierTap.t < 5000) {
+            location.href = "/?id=" + cid;
+            return;
+          }
+          dernierTap = { id: cid, t: t };
+          var titre = e.target.querySelector && e.target.querySelector("title");
+          $("#k-lecture").textContent = (titre ? titre.textContent : "") +
+            " — touchez encore pour ouvrir la fiche";
+          return;
+        }
+        location.href = "/?id=" + cid;
       });
+      if (tactile) $("#k-lecture").textContent =
+        "Touchez une commune pour lire son nom et sa valeur ; touchez-la encore pour ouvrir sa fiche.";
       $("#k-carte").addEventListener("mouseover", function (e) {
         var t = e.target;
         if (t && t.tagName === "path") {
@@ -503,8 +551,25 @@
           }
         }).catch(function () {});   /* sans le dictionnaire, la page vit sans ce groupe */
 
-      var demande = (location.search.match(/[?&]couche=([a-z]+)/) || [])[1];
-      if (demande && COUCHES.some(function (c) { return c.id === demande; })) sel.value = demande;
+      var demande = (location.search.match(/[?&]couche=([a-zA-Z0-9_\-]+)/) || [])[1];
+      if (demande && COUCHES.some(function (c) { return c.id === demande; })) {
+        sel.value = demande;
+      } else if (demande && demande.indexOf("ind_") !== 0) {
+        /* couche annoncée mais pas construite, ou lien erroné : on le DIT,
+           on offre le parrainage, et on montre une couche qui existe. */
+        var prep = EN_PREPARATION.filter(function (c) {
+          return "prep_" + c.slug === demande || c.slug === demande; })[0];
+        var nomD = prep ? prep.nom : "« " + demande.replace(/[<>&"]/g, "") + " »";
+        var info = document.createElement("p");
+        info.id = "k-info";
+        info.innerHTML = "La couche <b>" + nomD + "</b> " +
+          (prep ? "est en préparation" : "n'existe pas (lien périmé ou erroné)") +
+          ' — <a href="donnees-parrainage.html">la parrainer accélère sa construction</a>. ' +
+          "En attendant, voici la couche des conflits.";
+        var carte = $("#k-carte");
+        carte.parentNode.insertBefore(info, carte);
+        sel.value = COUCHE_DEFAUT;
+      }
       afficher(sel.value);
     })
     .catch(function (e) {

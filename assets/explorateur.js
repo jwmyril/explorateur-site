@@ -635,13 +635,54 @@
      simplifié du CNIGS, les centres officiels des communes, et l'entité
      sélectionnée mise en évidence. Le découpage administratif détaillé reste
      dans le Pack Géo — cette carte situe, elle ne délimite pas. */
+  function anneauxDe(g) {
+    if (g.type === "Polygon") return g.coordinates;
+    var out = [];
+    g.coordinates.forEach(function (poly) {
+      poly.forEach(function (a) { out.push(a); });
+    });
+    return out;
+  }
+
+  /* Le département qui contient une entité, en remontant les parents. */
+  function departementDe(x) {
+    var cur = x, g = 0;
+    while (cur && cur.niveau_admin !== "1" && g++ < 5) cur = parId[cur.parent_atmart_geo_id];
+    return cur && cur.niveau_admin === "1" ? cur : null;
+  }
+
   function blocCarte(r) {
     if (!contour) return "";
     var L = 760, H = 420, M = 14;
+
+    /* Cadrage. À l'échelle du pays, une commune de la zone métropolitaine
+       mesure treize pixels de côté : Port-au-Prince s'y confondait avec le
+       département de l'Ouest, alors que son contour était bien tracé et bien
+       mis en évidence. Il était trop petit pour se voir.
+
+       Quand la fiche est une commune, on cadre donc sur son département. Les
+       communes voisines restent visibles et cliquables ; la bascule
+       « Départements » ramène à la vue du pays. */
+    var cadreSur = null;
+    if (r.niveau_admin === "3" && polyDep && (carteNiveau || "3") === "3") {
+      var dep = departementDe(r);
+      if (dep) {
+        var fd = polyDep.filter(function (f) {
+          return f.properties.atmart_geo_id === dep.atmart_geo_id; });
+        if (fd.length) cadreSur = fd[0].geometry;
+      }
+    }
+
     var xs = [], ys = [];
-    contour.forEach(function (poly) {
-      poly[0].forEach(function (p) { xs.push(p[0]); ys.push(p[1]); });
-    });
+    if (cadreSur) {
+      anneauxDe(cadreSur).forEach(function (a) {
+        a.forEach(function (p) { xs.push(p[0]); ys.push(p[1]); });
+      });
+    } else {
+      contour.forEach(function (poly) {
+        poly[0].forEach(function (p) { xs.push(p[0]); ys.push(p[1]); });
+      });
+    }
     var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs);
     var y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
     var kx = Math.cos((y0 + y1) / 2 * Math.PI / 180);   // correction méridienne
@@ -679,14 +720,6 @@
     var couche = niv === "3" ? polyCom : polyDep;
     var fond = niv === "3" ? polyDep : polyCom;
 
-    function anneauxDe(g) {
-      if (g.type === "Polygon") return g.coordinates;
-      var out = [];
-      g.coordinates.forEach(function (poly) {
-        poly.forEach(function (a) { out.push(a); });
-      });
-      return out;
-    }
     function trace(g) {
       return anneauxDe(g).map(function (a) {
         return "M" + a.map(function (p) {
@@ -781,7 +814,10 @@
       ' — <a href="' + SITE + 'donnees-pack-geo-haiti.html">' +
       T("géométrie complète, au mètre") + "</a></p>" +
       '<p class="x-note">' +
-      T("Contours d'affichage du CNIGS, simplifiés pour la lecture à l'échelle du pays. Cliquez un territoire pour ouvrir sa fiche.") +
+      (cadreSur
+        ? TF("Carte cadrée sur {dep} : à l'échelle du pays, une commune de cette taille serait illisible. Cliquez un territoire pour ouvrir sa fiche.",
+             { dep: nomT(departementDe(r) || r) })
+        : T("Contours d'affichage du CNIGS, simplifiés pour la lecture à l'échelle du pays. Cliquez un territoire pour ouvrir sa fiche.")) +
       "</p></div>";
   }
 

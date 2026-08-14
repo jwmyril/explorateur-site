@@ -16,11 +16,11 @@
  "nombre_observations": 4200,
  "nombre_valeurs_sourcees": 2949,
  "nombre_absences_documentees": 1251,
- "nombre_sources": 23,
+ "nombre_sources": 24,
  "nombre_sources_integrees": 6,
- "nombre_sources_identifiees": 17,
+ "nombre_sources_identifiees": 18,
  "nombre_sources_classe_a": 7,
- "nombre_sources_classe_b": 6,
+ "nombre_sources_classe_b": 7,
  "nombre_sources_classe_c": 9,
  "nombre_sources_classe_d": 1,
  "nombre_periodes": 1201,
@@ -40,7 +40,7 @@
  "prd_002_colonnes": 13,
  "prd_003_lignes": 192,
  "prd_003_colonnes": 25,
- "prd_004_lignes": 23,
+ "prd_004_lignes": 24,
  "prd_004_colonnes": 17,
  "prd_005_lignes": 4232,
  "prd_005_colonnes": 27,
@@ -50,5 +50,5 @@
  "prd_007_colonnes": 18,
  "prd_008_lignes": 14140,
  "prd_008_colonnes": 23,
- "empreinte": "897524e8991ab571"
+ "empreinte": "0ebc42cd79d11059"
 }

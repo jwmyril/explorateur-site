@@ -9,6 +9,7 @@ const DV = "?d=2026-08-14a";   // doit suivre le DV de assets/explorateur.js
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
   "/assets/style.css?v=32", "/assets/data.css?v=25", "/assets/explorateur.js?v=11",
+  "/couches.html", "/assets/couches.js?v=1",
   "/assets/brand/favicon.ico", "/assets/brand/logo-32.png",
   "/assets/brand/logo-dark-96.png", "/assets/brand/apple-touch-icon.png",
 ];

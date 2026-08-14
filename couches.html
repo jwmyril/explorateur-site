@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+  <title>Couches — cartes d'utilité publique | Explorateur Haïti</title>
+  <meta name="description" content="Cartes des couches d'utilité publique sur Haïti : conflits par commune, personnes déplacées, insécurité alimentaire IPC, points d'eau, stations-service, banques et transferts, routes. Chaque couche porte sa source, sa licence et ses limites." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="assets/style.css?v=32" />
+  <link rel="stylesheet" href="assets/data.css?v=25" />
+  <link rel="canonical" href="https://explorateur.atmart.ltd/couches.html" />
+  <style>
+    #k-carte svg { width: 100%; height: auto; display: block; background: #f7fafc; border-radius: 12px; border: 1px solid var(--border, #dbe2ea); }
+    #k-carte .k-com, #k-carte .k-dep { stroke: #ffffff; stroke-width: 0.6; cursor: pointer; }
+    #k-carte .k-com:hover { stroke: #0e2240; stroke-width: 1.2; }
+    #k-carte .k-fond { fill: #eef2f6; stroke: #ffffff; stroke-width: 0.6; }
+    .k-barre { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; margin: 0.8rem 0; }
+    .k-barre select { font: inherit; padding: 0.5rem 0.7rem; border-radius: 8px; border: 1px solid var(--border, #dbe2ea); max-width: 100%; }
+    #k-legende { font-size: 0.88rem; margin-top: 0.6rem; }
+    .k-p { display: inline-block; width: 0.85em; height: 0.85em; border-radius: 50%; margin-right: 0.25em; vertical-align: baseline; }
+    .k-grad { display: inline-block; width: 5em; height: 0.8em; border-radius: 4px; vertical-align: baseline; margin-right: 0.3em;
+              background: linear-gradient(to right, #eef2f6, #fee8c8, #9e1b31); }
+    #k-source, #k-limite { font-size: 0.82rem; color: var(--ink-dim, #5b6b7b); margin-top: 0.35rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>les données d'Atmart</small></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li class="nav-grp"><span>🗂 Données</span>
+        <ul class="nav-sub">
+          <li><a href="/">Explorateur Haïti <small>chercher une commune</small></a></li>
+          <li><a href="couches.html">Couches <small>cartes d'utilité publique</small></a></li>
+          <li><a href="datasets.html">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-solutions.html">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
+          <li><a href="donnees-campus.html">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+          <li><a href="donnees-parrainage.html">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
+          <li><a href="donnees.html">Comment ça marche <small>méthode, sources, système</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" style="padding:2.6rem 0 0.8rem">
+  <div class="container">
+    <p class="kreyol">Kat ki itil tout moun.</p>
+    <h1>Les <em>Couches</em></h1>
+    <p class="lead" style="max-width:64ch">
+      Une carte, une couche à la fois. Chaque couche dit <strong>sa source, sa licence,
+      son millésime et sa limite</strong> — un aplat sans provenance n'est pas une donnée.
+      Cliquez une commune pour ouvrir sa fiche complète.
+    </p>
+    <div class="k-barre">
+      <label for="k-choix"><b>Couche</b></label>
+      <select id="k-choix"></select>
+      <span id="k-attente" hidden>chargement…</span>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0.2rem;padding-bottom:2.2rem">
+  <div class="container">
+    <div id="k-carte"><p class="x-note">Chargement du fond de carte…</p></div>
+    <p id="k-legende"></p>
+    <p id="k-source"></p>
+    <p id="k-limite"></p>
+    <p class="x-note" style="margin-top:1rem">
+      Fond de carte : polygones COD-AB simplifiés (CNIGS via OCHA, CC BY-IGO).
+      Les couches se téléchargent :
+      <a href="data/atmart_conflits_HT.csv" download>conflits (CSV)</a> ·
+      <a href="data/atmart_deplaces_HT.csv" download>déplacés (CSV)</a> ·
+      <a href="data/atmart_ipc_HT.csv" download>IPC (CSV)</a> ·
+      <a href="data/atmart_couche_eau_HT.geojson" download>points d'eau (GeoJSON)</a> ·
+      <a href="data/atmart_couche_carburant_HT.geojson" download>stations-service (GeoJSON)</a> ·
+      <a href="data/atmart_couche_finance_HT.geojson" download>banques et transferts (GeoJSON)</a> ·
+      <a href="data/atmart_infrastructures_communes_HT.csv" download>infrastructures (CSV)</a>.
+      Bassins versants, aléas d'inondation et usage du sol sont au chantier —
+      <a href="donnees-parrainage.html">parrainer une couche</a> accélère sa construction.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem">Un produit <a href="https://atmart.ltd/">Atmart Data</a> — des données sourcées, datées, vérifiables sur les 140 communes d'Haïti.</p>
+      </div>
+      <div>
+        <h4>Données</h4>
+        <ul>
+          <li><a href="datasets.html">Catalogue</a></li>
+          <li><a href="donnees.html">Comment ça marche</a></li>
+          <li><a href="donnees-backbone.html">Définitions &amp; méthodes</a></li>
+          <li><a href="donnees-systeme.html">La carte du système</a></li>
+          <li><a href="donnees-confiance.html">Confiance &amp; méthode</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte et sans traceur.</div>
+  </div>
+</footer>
+
+<script src="assets/couches.js?v=1"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+</body>
+</html>

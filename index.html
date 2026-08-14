@@ -21,10 +21,18 @@
 <header>
   <nav class="nav">
     <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>chercher · comparer · exporter</small></a>
-    <ul class="nav-links" style="display:flex">
-      <li><a href="https://atmart.ltd/datasets.html">Catalogue de données</a></li>
-      <li><a href="https://atmart.ltd/donnees.html">Méthode</a></li>
-      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li class="nav-grp"><span>🗂 Données</span>
+        <ul class="nav-sub">
+          <li><a href="/" class="active">Explorateur Haïti <small>chercher une commune</small></a></li>
+          <li><a href="https://atmart.ltd/datasets.html">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="https://atmart.ltd/donnees-solutions.html">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
+          <li><a href="https://atmart.ltd/donnees-campus.html">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+          <li><a href="https://atmart.ltd/donnees-parrainage.html">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
+          <li><a href="https://atmart.ltd/donnees.html">Comment ça marche <small>méthode, sources, système</small></a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 </header>
@@ -169,6 +177,13 @@
   </div>
 </footer>
 
+<script>
+  /* Menu mobile — l'equivalent des trois lignes de script.js du site Atmart. */
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
 <script>
   /* Site autonome : donnees locales, liens editoriaux vers atmart.ltd.
      Francais seul pendant la finalisation — le multilingue reviendra d'un bloc. */

@@ -12,8 +12,363 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=32" />
-  <link rel="stylesheet" href="assets/data.css?v=21" />
+  <link rel="stylesheet" href="assets/data.css?v=22" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/datasets.html" />
+<!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://explorateur.atmart.ltd/#organisation",
+   "name": "Atmart Data",
+   "url": "https://explorateur.atmart.ltd/",
+   "email": "sales@atmart.ltd",
+   "parentOrganization": {
+    "@type": "Organization",
+    "name": "Atmart LLC"
+   }
+  },
+  {
+   "@type": "DataCatalog",
+   "@id": "https://explorateur.atmart.ltd/datasets.html#catalogue",
+   "name": "Catalogue Atmart Data",
+   "url": "https://explorateur.atmart.ltd/datasets.html",
+   "publisher": {
+    "@id": "https://explorateur.atmart.ltd/#organisation"
+   },
+   "dataset": [
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-001",
+     "identifier": "PRD-001",
+     "name": "Transferts de la diaspora vers Haïti",
+     "description": "Ce que la diaspora envoie chaque année, en dollars et en part du PIB.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Économie",
+      "Haïti"
+     ],
+     "temporalCoverage": "2000/2025",
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/transferts_diaspora_haiti_2000_2025.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "1402"
+      }
+     ],
+     "isBasedOn": "Banque mondiale"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-002",
+     "identifier": "PRD-002",
+     "name": "Échantillon — sections communales d'Haïti",
+     "description": "Extrait du Pack Géo Haïti, pour juger sur pièces avant d'acheter.",
+     "url": "https://explorateur.atmart.ltd/donnees-pack-geo-haiti.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Géographie",
+      "Haïti"
+     ],
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/ECHANTILLON_haiti_sections_gps.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "1661"
+      }
+     ],
+     "isBasedOn": "CNIGS via OCHA"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-003",
+     "identifier": "PRD-003",
+     "name": "Référentiel territorial Haïti — base",
+     "description": "Les 192 entités du socle administratif, du département à la commune.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Géographie",
+      "Haïti"
+     ],
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_referentiel_territoire_base_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "84343"
+      }
+     ],
+     "isBasedOn": "CNIGS via OCHA"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-004",
+     "identifier": "PRD-004",
+     "name": "Registre des sources Atmart",
+     "description": "Chaque source, sa licence, sa couverture et sa classe juridique A→E.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html#juridique",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Méthode",
+      "Haïti"
+     ],
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_sources.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "18583"
+      }
+     ],
+     "isBasedOn": "Atmart"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-005",
+     "identifier": "PRD-005",
+     "name": "Indicateurs des 140 communes",
+     "description": "Les valeurs communales et leur dictionnaire : méthode, comparabilité, limites et sens de lecture.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html#indicateurs",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Indicateurs",
+      "Haïti"
+     ],
+     "temporalCoverage": "2018/2026",
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_indicateurs_communes_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "1055122"
+      },
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_referentiel_indicateurs.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "42137"
+      }
+     ],
+     "isBasedOn": "CNIGS, UNFPA, MENFP, MSPP, WFP"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-006",
+     "identifier": "PRD-006",
+     "name": "Référentiel temps Haïti",
+     "description": "Une table de dates prête pour Power BI, du jour au trimestre.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html#temps",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Temps",
+      "Haïti"
+     ],
+     "temporalCoverage": "1971/2031",
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_referentiel_temps_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "376924"
+      }
+     ],
+     "isBasedOn": "Atmart"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-007",
+     "identifier": "PRD-007",
+     "name": "Pyramide des âges des 140 communes",
+     "description": "La population de chaque commune par tranche de cinq ans et par sexe — ce qui permet de dire combien d'enfants scolarisables ou de personnes âgées vivent réellement sur un territoire.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html#indicateurs",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Population",
+      "Haïti"
+     ],
+     "temporalCoverage": "2024",
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_pyramide_ages_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "1118844"
+      }
+     ],
+     "isBasedOn": "UNFPA — projections 2024"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-008",
+     "identifier": "PRD-008",
+     "name": "Prix des marchés — réseau sentinelle",
+     "description": "Relevés mensuels de prix par produit et par marché. Le réseau ne couvre pas tout le pays : ce sont des marchés sentinelles, un par département dans neuf départements sur dix. À lire comme un signal, pas comme une moyenne nationale.",
+     "url": "https://explorateur.atmart.ltd/donnees-backbone.html#indicateurs",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Économie",
+      "Haïti"
+     ],
+     "temporalCoverage": "2005/2025",
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_prix_marches_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "3342737"
+      }
+     ],
+     "isBasedOn": "WFP — VAM Food Prices"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-101",
+     "identifier": "PRD-101",
+     "name": "Pack Géo Haïti — toutes les coordonnées GPS",
+     "description": "Les 11 655 entités géolocalisées, jusqu'à la localité, avec les polygones des trois niveaux administratifs.",
+     "url": "https://explorateur.atmart.ltd/donnees-pack-geo-haiti.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Géographie",
+      "Haïti"
+     ],
+     "isAccessibleForFree": false,
+     "offers": {
+      "@type": "Offer",
+      "price": "29",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://explorateur.atmart.ltd/donnees-pack-geo-haiti.html"
+     },
+     "isBasedOn": "CNIGS via OCHA ; GeoNames"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- /JSON-LD -->
 </head>
 <body>
 

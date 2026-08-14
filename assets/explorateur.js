@@ -32,6 +32,10 @@
   var terr = [], vals = [], orgs = [], dico = {}, contour = null;
   var parId = {}, parPcode = {}, enfantsDe = {}, orgsCom = {}, orgsSec = {};
   var parIndicateur = {}, courant = null, objectif = "tout", comparees = [];
+  /* Contours d'affichage des départements et des communes, chargés avec le
+     contour national. Le niveau dessiné suit la fiche ; carteNiveau ne
+     retient que le choix explicite du lecteur. */
+  var polyDep = null, polyCom = null, carteNiveau = null;
   /* Couverture reelle : combien de communes du socle portent une valeur pour
      chaque indicateur. Comptee au demarrage, jamais ecrite en dur — c'est ce
      qui distingue « 140 communes au socle » de « 14 communes couvertes ». */
@@ -667,8 +671,64 @@
       });
     }
 
+    /* Le niveau dessiné suit la fiche : on regarde un département en
+       départements, une commune en communes. Le lecteur peut en décider
+       autrement, et son choix tient jusqu'à ce qu'il en change. */
+    var auto = r.niveau_admin === "3" ? "3" : "1";
+    var niv = carteNiveau || auto;
+    var couche = niv === "3" ? polyCom : polyDep;
+    var fond = niv === "3" ? polyDep : polyCom;
+
+    function anneauxDe(g) {
+      if (g.type === "Polygon") return g.coordinates;
+      var out = [];
+      g.coordinates.forEach(function (poly) {
+        poly.forEach(function (a) { out.push(a); });
+      });
+      return out;
+    }
+    function trace(g) {
+      return anneauxDe(g).map(function (a) {
+        return "M" + a.map(function (p) {
+          return px(p[0]).toFixed(1) + " " + py(p[1]).toFixed(1); }).join("L") + "Z";
+      }).join(" ");
+    }
+    /* Un territoire est mis en avant s'il est celui de la fiche, une de ses
+       communes, ou l'un de ses parents — un département reste visible quand on
+       regarde l'une de ses communes. */
+    function rang(id) {
+      if (id === r.atmart_geo_id) return "sel";
+      if (famille[id]) return "pro";
+      var cur = r, g = 0;
+      while (cur && g++ < 5) {
+        if (cur.atmart_geo_id === id) return "pro";
+        cur = parId[cur.parent_atmart_geo_id];
+      }
+      return "";
+    }
+
+    var formes = "";
+    if (fond) {
+      formes += fond.map(function (f) {
+        return '<path class="x-fond" d="' + trace(f.geometry) + '" />';
+      }).join("");
+    }
+    if (couche) {
+      formes += couche.map(function (f) {
+        var id = f.properties.atmart_geo_id, k = rang(id);
+        return '<path class="x-zone' + (k ? " x-zone-" + k : "") + '" d="' +
+          trace(f.geometry) + '" data-id="' + esc(id) + '" tabindex="0" role="button">' +
+          "<title>" + esc(f.properties.nom_fr) + "</title></path>";
+      }).join("");
+    }
+
+    /* Les bulles restent pour ce qui n'a pas de contour : le repli quand les
+       fichiers ne se chargent pas, et les niveaux fins — section communale,
+       localité — dont la géométrie n'est pas publiée. */
     var pts = terr.filter(function (x) {
-      return x.niveau_admin === "3" && x.latitude && x.longitude;
+      if (!x.latitude || !x.longitude) return false;
+      if (!couche) return x.niveau_admin === "3";
+      return x.niveau_admin !== "1" && x.niveau_admin !== "3";
     }).map(function (x) {
       var sel = x.atmart_geo_id === r.atmart_geo_id;
       var pro = !sel && famille[x.atmart_geo_id];
@@ -678,9 +738,8 @@
         esc(nomT(x)) + "</title></circle>";
     }).join("");
 
-    var cible = r.niveau_admin === "3" ? r :
-      (r.latitude ? r : null);
-    var repere = cible && cible.latitude ?
+    var cible = r.latitude ? r : null;
+    var repere = cible ?
       '<circle class="x-pt-halo" cx="' + px(+cible.longitude).toFixed(1) + '" cy="' +
       py(+cible.latitude).toFixed(1) + '" r="15" />' : "";
 
@@ -699,17 +758,26 @@
       : TF("{nom} sur la carte d'Haïti : {famille} sont mises en évidence.",
            { nom: nomT(r), famille: libFam, n: nFam });
 
+    var bascule = (polyDep && polyCom) ?
+      '<div class="x-carte-niv" role="group" aria-label="' +
+      esc(T("Niveau affiché sur la carte")) + '">' +
+      ["1", "3"].map(function (n) {
+        return '<button type="button" class="x-carte-btn' + (n === niv ? " actif" : "") +
+          '" data-niveau="' + n + '" aria-pressed="' + (n === niv) + '">' +
+          esc(n === "1" ? T("Départements") : T("Communes")) + "</button>";
+      }).join("") + "</div>" : "";
+
     return '<div class="x-carte"><svg viewBox="0 0 ' + L + " " + H + '" role="img" ' +
       'aria-label="' + esc(alt) + '" preserveAspectRatio="xMidYMid meet">' +
-      '<path class="x-terre" d="' + chemins + '" />' + repere + pts + "</svg>" +
+      '<path class="x-terre" d="' + chemins + '" />' + formes + repere + pts + "</svg>" +
+      bascule +
       '<p class="x-legende">' +
-      (commune ? '<span class="x-l-sel"></span> ' + esc(nomT(r)) + "  " : "") +
+      '<span class="x-l-sel"></span> ' + esc(nomT(r)) + "  " +
       '<span class="x-l-pro"></span> ' + esc(libFam) +
-      '  <span class="x-l-autre"></span> ' + T("autres communes du pays") +
       ' — <a href="' + SITE + 'donnees-pack-geo-haiti.html">' +
-      T("limites détaillées et polygones") + "</a></p>" +
+      T("géométrie complète, au mètre") + "</a></p>" +
       '<p class="x-note">' +
-      T("Carte de situation : contour national du CNIGS simplifié, centres officiels des communes. Cliquez un point pour ouvrir sa fiche.") +
+      T("Contours d'affichage du CNIGS, simplifiés pour la lecture à l'échelle du pays. Cliquez un territoire pour ouvrir sa fiche.") +
       "</p></div>";
   }
 
@@ -1218,6 +1286,137 @@
     });
   }
 
+  /* ------------------------------------------- services et organisations
+     Trois annuaires publiés le 14/08/2026, chargés à l'approche (≈ 1 Mo à
+     trois) et indexés par p-code de commune :
+       - professionnels du droit foncier (SRC-025, classe C — compilation web
+         non recoupée avec le registre MJSP : la fiabilité s'affiche par fiche) ;
+       - présence 3W OCHA (SRC-026, CC BY — présence humanitaire déclarée,
+         pas un recensement de toutes les organisations) ;
+       - registre légal des ONG MPCE (SRC-027 — zones déclarées en texte libre).
+     Une commune sans ligne n'est pas une commune sans services : chaque
+     section vide le dit avec la couverture réelle de sa source. */
+  var svcIdx = null, svcPromesse = null;
+
+  function chargerServices() {
+    if (svcPromesse) return svcPromesse;
+    svcPromesse = Promise.all([
+      charger(DIR + "atmart_annuaire_professionnels_HT.csv", 1).catch(function () { return null; }),
+      charger(DIR + "atmart_presence_organisations_HT.csv", 1).catch(function () { return null; }),
+      charger(DIR + "atmart_registre_ong_HT.csv", 1).catch(function () { return null; })
+    ]).then(function (t) {
+      if (!t[0] && !t[1] && !t[2]) { svcIdx = null; return null; }
+      svcIdx = { pro: {}, orgs: {}, ong: {} };
+      (t[0] ? parseCSV(t[0]) : []).forEach(function (l) {
+        if (l.pcode_commune)
+          (svcIdx.pro[l.pcode_commune] = svcIdx.pro[l.pcode_commune] || []).push(l);
+      });
+      (t[1] ? parseCSV(t[1]) : []).forEach(function (l) {
+        if (l.pcode_commune)
+          (svcIdx.orgs[l.pcode_commune] = svcIdx.orgs[l.pcode_commune] || []).push(l);
+      });
+      (t[2] ? parseCSV(t[2]) : []).forEach(function (l) {
+        String(l.pcodes_communes || "").split(";").forEach(function (p) {
+          p = p.trim();
+          if (p) (svcIdx.ong[p] = svcIdx.ong[p] || []).push(l);
+        });
+      });
+      return svcIdx;
+    });
+    return svcPromesse;
+  }
+
+  function blocServices(r) {
+    return r.niveau_admin === "3" ? '<div id="x-services" class="x-pyr"></div>' : "";
+  }
+
+  function sectionServices(titre, corps, note) {
+    return '<details class="x-mesure"><summary><b>' + titre + "</b></summary>" +
+      '<div class="x-detail">' + corps +
+      (note ? '<p class="x-limite">' + note + "</p>" : "") + "</div></details>";
+  }
+
+  function remplirServices(r) {
+    var el = $("#x-services");
+    if (!el) return;
+    chargerServices().then(function (ix) {
+      if (!ix) {
+        el.innerHTML = '<p class="x-note">' +
+          T("Les annuaires de services n'ont pas pu être chargés — la fiche reste lisible sans eux.") + "</p>";
+        return;
+      }
+      var pro = ix.pro[r.pcode] || [], decl = ix.orgs[r.pcode] || [], ong = ix.ong[r.pcode] || [];
+      /* 3W : une organisation apparaît une fois, avec ses secteurs réunis. */
+      var parOrg = {};
+      decl.forEach(function (l) {
+        var o = parOrg[l.acronyme] || (parOrg[l.acronyme] = { l: l, secteurs: {} });
+        if (l.secteur) o.secteurs[l.secteur] = 1;
+      });
+      var orgs = Object.keys(parOrg).map(function (k) { return parOrg[k]; });
+      var h = ['<h3 class="x-h3">' +
+               TF("Services et organisations — {nom}", { nom: esc(nomT(r)) }) + "</h3>",
+               '<div class="x-mesures">'];
+
+      var corpsPro = pro.length
+        ? '<div class="x-tabwrap"><table class="x-tab"><thead><tr><th scope="col">' +
+          T("Nom") + '</th><th scope="col">' + T("Profession") + '</th><th scope="col">' +
+          T("Contact") + '</th><th scope="col">' + T("Fiabilité de la fiche") + "</th></tr></thead><tbody>" +
+          pro.map(function (p) {
+            return "<tr><td>" + esc(p.nom) + "</td><td>" + esc(p.sous_categorie) + "</td><td>" +
+              esc([p.adresse, p.telephones, p.courriel].filter(Boolean).join(" · ") || "—") +
+              "</td><td>" + esc(p.fiabilite_source || "—") + "</td></tr>";
+          }).join("") + "</tbody></table></div>"
+        : "<p>" + T("Aucun professionnel recensé ici dans la compilation — qui couvre environ la moitié des quelque 1 500 notaires et arpenteurs du pays.") + "</p>";
+      h.push(sectionServices(
+        TN({ one: "{n} notaire ou arpenteur recensé",
+             other: "{n} notaires et arpenteurs recensés" }, pro.length, { n: pro.length }),
+        corpsPro,
+        T("Compilation de sources web (août 2026), non recoupée avec le registre officiel du MJSP, qui n'est pas publié. La fiabilité affichée est celle de chaque fiche — vérifiez avant tout acte.")));
+
+      var corpsOrg = orgs.length
+        ? '<div class="x-tabwrap"><table class="x-tab"><thead><tr><th scope="col">' +
+          T("Organisation") + '</th><th scope="col">' + T("Type") + '</th><th scope="col">' +
+          T("Secteurs ici") + "</th></tr></thead><tbody>" +
+          orgs.map(function (o) {
+            return "<tr><td>" + esc(o.l.nom) + (o.l.acronyme && o.l.acronyme !== o.l.nom ?
+              " <code>" + esc(o.l.acronyme) + "</code>" : "") + "</td><td>" +
+              esc(o.l.type_organisation || "—") + "</td><td>" +
+              esc(Object.keys(o.secteurs).join(", ") || "—") + "</td></tr>";
+          }).join("") + "</tbody></table></div>"
+        : "<p>" + T("Aucune présence déclarée aux clusters dans cette commune au dernier relevé.") + "</p>";
+      h.push(sectionServices(
+        TN({ one: "{n} organisation présente (3W OCHA, juin 2026)",
+             other: "{n} organisations présentes (3W OCHA, juin 2026)" },
+           orgs.length, { n: orgs.length }),
+        corpsOrg,
+        T("Le 3W recense la présence humanitaire et de développement déclarée aux clusters — pas toutes les organisations du pays. Licence CC BY, attribution OCHA Haïti.")));
+
+      var MAX_ONG = 40;
+      var corpsOng = ong.length
+        ? '<div class="x-puces">' + ong.slice(0, MAX_ONG).map(function (o) {
+            return '<span class="x-puce">' + esc(o.sigle || o.nom) + "</span>";
+          }).join("") + "</div>" +
+          (ong.length > MAX_ONG
+            ? '<p class="x-note">' + TF("{n} autres — la liste complète est dans le CSV.",
+                { n: ong.length - MAX_ONG }) + "</p>" : "")
+        : "<p>" + T("Aucune ONG du registre ne déclare nommément cette commune — beaucoup ne déclarent que leur département.") + "</p>";
+      h.push(sectionServices(
+        TN({ one: "{n} ONG du registre légal déclarant cette commune",
+             other: "{n} ONG du registre légal déclarant cette commune" },
+           ong.length, { n: ong.length }),
+        corpsOng,
+        T("Registre MPCE/UCAONG capturé le 14/08/2026. Les zones d'intervention y sont du texte libre : seuls les noms reconnus sans ambiguïté sont rattachés.")));
+
+      h.push("</div>");
+      h.push('<p class="x-note">' +
+        T("Trois annuaires, trois niveaux de confiance — chaque section porte le sien.") + " " +
+        '<a href="' + DIR + 'atmart_annuaire_professionnels_HT.csv" download>' + T("Professionnels (CSV)") + "</a> · " +
+        '<a href="' + DIR + 'atmart_presence_organisations_HT.csv" download>' + T("Présence 3W (CSV)") + "</a> · " +
+        '<a href="' + DIR + 'atmart_registre_ong_HT.csv" download>' + T("ONG du registre (CSV)") + "</a></p>");
+      el.innerHTML = h.join("");
+    });
+  }
+
   function blocObjectif(r) {
     if (ADMIN || r.niveau_admin !== "3") return "";
     var o = OBJECTIFS[objectif] || {};
@@ -1670,7 +1869,7 @@
     var h = [montrerAccueil ? blocAccueil(r) : "", blocResume(r), blocCarte(r)];
     if (r.niveau_admin === "3") {
       h.push(blocObjectif(r), blocIndicateurs(r), blocPyramide(r), blocPrix(r),
-             blocComparer(r), blocLacunes(r));
+             blocServices(r), blocComparer(r), blocLacunes(r));
     } else if (r.niveau_admin === "0") {
       /* La fiche du pays : repères nationaux d'abord (ce qui n'existe qu'à ce
          niveau), puis le même agrégat que pour un département. Pas de bloc
@@ -1686,6 +1885,7 @@
     observerPyramide(r);
     aLApproche("#x-prix", remplirPrix, r);
     aLApproche("#x-nat", remplirNat, r);
+    aLApproche("#x-services", remplirServices, r);
     var t = $("#x-titre-fiche");
     if (t) t.textContent = nomT(r);
     majURL();
@@ -2287,6 +2487,15 @@
     });
 
     document.addEventListener("click", function (e) {
+      /* La bascule ne change que la carte : redessiner la fiche entière
+         ferait sauter la page sous les yeux du lecteur. */
+      var niv = e.target.closest(".x-carte-btn");
+      if (niv) {
+        carteNiveau = niv.dataset.niveau;
+        var zone = document.querySelector(".x-carte");
+        if (zone && courant) zone.outerHTML = blocCarte(courant);
+        return;
+      }
       var b = e.target.closest("[data-id]");
       if (b) {
         /* Depuis l'onglet Comparer, un resultat de recherche s'AJOUTE a la
@@ -2547,6 +2756,19 @@
       .then(function (t) { return JSON.parse(t); })
       .then(function (g) {
         if (g) contour = g.features[0].geometry.coordinates;
+      })
+      .catch(function () {})
+      /* Les contours administratifs sont un agrément comme le contour
+         national : s'ils manquent, la carte retombe sur les bulles. */
+      .then(function () {
+        return Promise.all([
+          charger(DIR + "haiti_departements_simplifie.geojson")
+            .then(function (x) { polyDep = JSON.parse(x).features; })
+            .catch(function () { polyDep = null; }),
+          charger(DIR + "haiti_communes_simplifie.geojson")
+            .then(function (x) { polyCom = JSON.parse(x).features; })
+            .catch(function () { polyCom = null; })
+        ]);
       })
       .catch(function () {})
       /* La langue precede le premier rendu : sinon l'utilisateur voit un

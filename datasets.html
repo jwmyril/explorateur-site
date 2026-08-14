@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="assets/style.css?v=32" />
   <link rel="stylesheet" href="assets/data.css?v=25" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/datasets.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/datasets.html" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/datasets.html" />
 <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
 {
@@ -175,7 +177,7 @@
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_sources.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "27484"
+       "contentSize": "28428"
       }
      ],
      "isBasedOn": "Atmart"
@@ -746,6 +748,138 @@
     },
     {
      "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-021",
+     "identifier": "PRD-021",
+     "name": "Part de zone inondable par commune",
+     "description": "La part du territoire de chaque commune classée inondable. Attention à ce que cela mesure : une zone cartographiée comme inondable, pas un aléa probabiliste par période de retour. La méthode de la source n'est pas documentée.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Environnement",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_alea_inondation_communes_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "39942"
+      }
+     ],
+     "isBasedOn": "CNIGS via HaitiData"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-022",
+     "identifier": "PRD-022",
+     "name": "Zones inondables",
+     "description": "Les emprises cartographiées comme inondables. Géométries simplifiées pour l'affichage — à ne pas utiliser pour un calcul de surface au mètre.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Environnement",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_couche_inondable_HT.geojson",
+       "encodingFormat": "application/geo+json",
+       "contentSize": "373019"
+      }
+     ],
+     "isBasedOn": "CNIGS via HaitiData"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-023",
+     "identifier": "PRD-023",
+     "name": "Bassins versants",
+     "description": "Le découpage hydrologique de référence, issu du modèle SRTM de 2014. Géométries simplifiées pour l'affichage.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Environnement",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_couche_bassins_HT.geojson",
+       "encodingFormat": "application/geo+json",
+       "contentSize": "495115"
+      }
+     ],
+     "isBasedOn": "CNIGS via HaitiData"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-024",
+     "identifier": "PRD-024",
+     "name": "Occupation du sol par commune",
+     "description": "La répartition du territoire de chaque commune par grande classe d'occupation du sol. La couche date de 1998 — un quart de siècle : elle sert à lire une tendance, pas un état des lieux. Et c'est une classification d'images, donc ce qu'un capteur a vu, pas un cadastre.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Environnement",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_occupation_sol_communes_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "277963"
+      }
+     ],
+     "isBasedOn": "CNIGS via HaitiData"
+    },
+    {
+     "@type": "Dataset",
      "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-101",
      "identifier": "PRD-101",
      "name": "Pack Géo Haïti — toutes les coordonnées GPS",
@@ -908,6 +1042,39 @@
       "url": "https://explorateur.atmart.ltd/donnees-registres.html#pack"
      },
      "isBasedOn": "CNIGS via OCHA ; GeoNames ; MENFP ; MSPP"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-106",
+     "identifier": "PRD-106",
+     "name": "Classeur des 140 profils communaux",
+     "description": "Un classeur Excel prêt à ouvrir : une fiche par commune choisie dans une liste, un tableau des 140 communes, le détail avec le statut de chaque valeur, la pyramide des âges, le dictionnaire et les sources. Les données restent gratuites — ce qui se vend, c'est le montage, et l'honnêteté qu'il préserve : une absence y reste vide, jamais remplie d'un zéro.",
+     "url": "https://explorateur.atmart.ltd/donnees-solutions.html?produit=classeur-communes#demande",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Transversal",
+      "Haïti"
+     ],
+     "isAccessibleForFree": false,
+     "offers": {
+      "@type": "Offer",
+      "price": "25",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://explorateur.atmart.ltd/donnees-solutions.html?produit=classeur-communes#demande"
+     },
+     "isBasedOn": "Atmart Data — assemblage des jeux publiés"
     }
    ]
   }
@@ -1182,6 +1349,14 @@
 <p class="meta" data-i18n-html="ds.c28_meta">📦 Transversal • Sources : CNIGS via OCHA, GeoNames, MENFP, MSPP</p>
 <a href="donnees-registres.html#pack" class="btn btn-primary">Voir ce que réunit le pack</a>
 </div>
+<div class="card" data-cat="transversal payant">
+<span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
+<h3 data-i18n-html="ds.c29_h">Classeur des 140 profils communaux <span class="badge-new">NOUVO</span></h3>
+<p data-i18n-html="ds.c29_p">Un classeur Excel prêt à ouvrir : une fiche par commune choisie dans une liste, le tableau des <span data-mf="nombre_communes">140</span> communes, le détail avec le statut de chaque valeur, la pyramide des âges, le dictionnaire et les sources. <strong>Les données restent gratuites</strong> — ce qui se vend, c'est le montage, et ce qu'il préserve : une absence y reste vide, jamais remplie d'un zéro.</p>
+<p class="price" data-i18n-html="ds.c29_pr">25 $ <small>XLSX • 7 feuilles • <span data-mf="nombre_absences_documentees">1 251</span> absences laissées vides</small></p>
+<p class="meta" data-i18n-html="ds.c29_meta">📊 Transversal • assemblage des jeux publiés • licence CC BY 4.0 pour les données</p>
+<a href="donnees-solutions.html?produit=classeur-communes#demande" class="btn btn-primary">Commander le classeur — 25 $</a>
+</div>
 </div>
 
     <!-- ===== EN PRÉPARATION ===== -->
@@ -1281,7 +1456,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte et sans traceur.</div>
+    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte, sans traceur publicitaire — seule une mesure d'audience anonyme et agrégée existe, <a href="donnees-confiance.html#mesure">méthode publiée</a>.</div>
   </div>
 </footer>
 
@@ -1292,5 +1467,6 @@
     if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
   })();
 </script>
+<script src="assets/mesure.js?v=1" defer></script>
 </body>
 </html>

@@ -13,6 +13,8 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/" />
   <link rel="stylesheet" href="assets/style.css?v=32" />
   <link rel="stylesheet" href="assets/data.css?v=25" />
 <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
@@ -207,7 +209,7 @@
 
     <div class="d-box" style="margin-top:2.6rem">
       <h3>Ce que cet explorateur fait — et ce qu’il ne fait pas</h3>
-      <p>Il affiche <b>les informations actuellement documentées par Atmart Data</b> — pas tout ce qui existe sur une commune. Tout tourne dans votre navigateur : quatre fichiers publics et un contour cartographique, aucun serveur, aucun compte, aucun traceur. Ce que vous voyez, vous pouvez le télécharger tel quel depuis le <a href="datasets.html">catalogue</a> et le recalculer vous-même.</p>
+      <p>Il affiche <b>les informations actuellement documentées par Atmart Data</b> — pas tout ce qui existe sur une commune. Tout tourne dans votre navigateur : quatre fichiers publics et un contour cartographique, aucun serveur d'application, aucun compte, aucun traceur publicitaire. Une mesure d'audience <b>anonyme et agrégée</b> compte les usages (une recherche a eu lieu) sans jamais savoir qui ni quoi — pas de cookie, pas d'identifiant, pas d'adresse IP conservée, et le texte tapé ne quitte jamais votre navigateur : <a href="donnees-confiance.html#mesure">méthode complète</a>. Ce que vous voyez, vous pouvez le télécharger tel quel depuis le <a href="datasets.html">catalogue</a> et le recalculer vous-même.</p>
       <p>La <b>commune est le niveau territorial le plus détaillé de l’édition publique</b>. Les sections communales, les localités et les polygones détaillés sont disponibles dans le <a href="donnees-pack-geo-haiti.html">Pack Géo Haïti</a>. Les définitions, méthodes et statuts de qualité sont exposés sur la page <a href="donnees-backbone.html#statuts">Backbone</a>.</p>
     </div>
   </div>
@@ -236,7 +238,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte et sans traceur.</div>
+    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte, sans traceur publicitaire — seule une mesure d'audience anonyme et agrégée existe, <a href="donnees-confiance.html#mesure">méthode publiée</a>.</div>
   </div>
 </footer>
 
@@ -258,5 +260,6 @@
 <script src="assets/explorateur.js?v=11"></script>
 <script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
 if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>
+<script src="assets/mesure.js?v=1" defer></script>
 </body>
 </html>

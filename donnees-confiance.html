@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="assets/style.css?v=32" />
   <link rel="stylesheet" href="assets/data.css?v=25" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-confiance.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-confiance.html" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/donnees-confiance.html" />
 </head>
 <body>
 
@@ -255,6 +257,29 @@
   </div>
 </section>
 
+<section class="d-sec" id="mesure">
+  <div class="container">
+    <p class="d-lbl">Mesure d'audience</p>
+    <h2 class="d-h">Ce que nous comptons, et tout ce que nous ne comptons pas</h2>
+    <p class="d-sub" style="margin-bottom:1.1rem">
+      Depuis le 14/08/2026, l'Explorateur compte des <strong>événements agrégés</strong> pour
+      savoir ce qui sert : une recherche a été lancée, un export a eu lieu, une couche a été
+      ouverte. Treize compteurs, publiés ici — c'est la liste exhaustive&nbsp;: pages vues
+      (Explorateur, Couches), recherches lancées, territoires consultés, changements d'usage,
+      comparaisons, exports CSV, impressions, indicateurs dépliés, couches choisies, clics vers
+      le Pack Géo, demandes de financement, demandes de licence.
+    </p>
+    <p class="d-sub" style="margin-bottom:1.1rem">
+      <strong>Jamais collecté</strong> : adresse IP conservée, cookie, identifiant persistant,
+      empreinte de navigateur, contenu des recherches — le texte que vous tapez ne quitte pas
+      votre navigateur. Le visiteur unique du jour est compté par une empreinte salée qui change
+      chaque jour et ne se remonte pas. <strong>Conservation</strong> : compteurs agrégés,
+      purge automatique. Le script (<code>assets/mesure.js</code>) est lisible par tous et
+      peut être bloqué sans rien casser — l'Explorateur fonctionne à l'identique sans lui.
+    </p>
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -279,7 +304,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte et sans traceur.</div>
+    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte, sans traceur publicitaire — seule une mesure d'audience anonyme et agrégée existe, <a href="donnees-confiance.html#mesure">méthode publiée</a>.</div>
   </div>
 </footer>
 
@@ -290,5 +315,6 @@
     if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
   })();
 </script>
+<script src="assets/mesure.js?v=1" defer></script>
 </body>
 </html>

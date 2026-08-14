@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="assets/style.css?v=32" />
   <link rel="stylesheet" href="assets/data.css?v=25" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/couches.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/couches.html" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/couches.html" />
   <style>
     #k-carte svg { width: 100%; height: auto; display: block; background: #f7fafc; border-radius: 12px; border: 1px solid var(--border, #dbe2ea); }
     #k-carte .k-com, #k-carte .k-dep { stroke: #ffffff; stroke-width: 0.6; cursor: pointer; }
@@ -120,7 +122,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte et sans traceur.</div>
+    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte, sans traceur publicitaire — seule une mesure d'audience anonyme et agrégée existe, <a href="donnees-confiance.html#mesure">méthode publiée</a>.</div>
   </div>
 </footer>
 
@@ -131,5 +133,6 @@
     if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
   })();
 </script>
+<script src="assets/mesure.js?v=1" defer></script>
 </body>
 </html>

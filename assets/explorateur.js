@@ -2221,6 +2221,9 @@
           $("#x-resultats").hidden = true; champ.value = "";
           var oc = document.querySelector('[data-onglet="comparaison"]');
           if (oc) oc.click();
+          /* la main revient au champ : on enchaine les territoires sans re-cliquer */
+          var nc = $("#x-comp-input");
+          if (nc) nc.focus();
           return;
         }
         /* L'utilisateur a choisi un territoire : la fiche n'est plus un exemple. */

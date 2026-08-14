@@ -517,7 +517,10 @@ figure.tuto-fig figcaption { padding: 0.7rem 1rem; font-size: 0.85rem; color: va
     border-bottom: 1px solid var(--border); z-index: 20;
   }
   .nav-links.open { display: flex; }
-  .nav-toggle { display: block; }
+  /* 44 px : le bouton faisait 23 px de large, sous le seuil de ce qu'un pouce
+     atteint sans viser. */
+  .nav-toggle { display: block; min-width: 44px; min-height: 44px; line-height: 1;
+                display: flex; align-items: center; justify-content: center; }
   /* la barre repliable doit pouvoir defiler si elle est longue */
   .nav-links { max-height: calc(100vh - 68px); overflow-y: auto; }
 
@@ -795,4 +798,28 @@ figure.tuto-fig figcaption { padding: 0.7rem 1rem; font-size: 0.85rem; color: va
   .why-tab td:nth-child(2)::before{content:"Gratuit : ";color:#6f8296}
   .why-tab td:nth-child(3)::before{content:"En vente : ";color:#f4a261}
   .why-tab td:nth-child(2),.why-tab td:nth-child(3){width:auto}
+}
+
+/* ===== Très petits écrans =====
+   A 320 px, le logo occupait 293 px des 280 disponibles : le bouton de menu
+   etait coupe, 7 px visibles sur 23. Le menu devenait introuvable. La
+   signature disparait sous cette largeur — le nom du site suffit a dire ou
+   l'on est, et le menu redevient atteignable. */
+@media (max-width: 380px) {
+  .logo small { display: none; }
+  .logo { font-size: 1.15rem; }
+  .logo-img { width: 36px; height: 36px; margin-right: 0.4rem; }
+  .nav { padding: 0.75rem 0.9rem; }
+}
+
+/* ===== Hauteur des liens qu'on vise du doigt =====
+   Un lien seul sur sa ligne est une cible, pas du texte courant. Ceux du pied
+   de page et du menu repliable faisaient 17 px de haut : deux liens empilés se
+   touchent presque, et le doigt ne sait pas lequel il désigne. On leur donne
+   la hauteur qu'une pulpe demande. Les liens au milieu d'une phrase gardent
+   leur taille : ils sont portés par le texte, et les grossir hacherait la
+   lecture. */
+footer li a { display: inline-block; padding: 0.3rem 0; min-height: 24px; }
+@media (max-width: 860px) {
+  .nav-links a, .nav-links .lang-opt { display: block; padding: 0.45rem 0; min-height: 24px; }
 }

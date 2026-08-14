@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
-  <link rel="stylesheet" href="assets/style.css?v=31" />
-  <link rel="stylesheet" href="assets/data.css?v=18" />
+  <link rel="stylesheet" href="assets/style.css?v=32" />
+  <link rel="stylesheet" href="assets/data.css?v=20" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/datasets.html" />
 </head>
 <body>
@@ -144,10 +144,10 @@
       </div>
       <div class="why">
         <p class="why-lead" data-i18n="ds.why_lead">Le gratuit sert à apprendre. Le payant sert à livrer.</p>
-        <table class="why-tab">
-          <thead><tr><th></th>
-            <th data-i18n="ds.why_free">Gratuit</th>
-            <th data-i18n="ds.why_paid">En vente</th></tr></thead>
+        <div class="x-tableau" tabindex="0"><table class="why-tab">
+          <thead><tr><th scope="col"></th>
+            <th scope="col" data-i18n="ds.why_free">Gratuit</th>
+            <th scope="col" data-i18n="ds.why_paid">En vente</th></tr></thead>
           <tbody>
             <tr><td data-i18n="ds.why_r1">Ce que vous ouvrez</td>
               <td data-i18n="ds.why_r1f">Un CSV brut</td>
@@ -168,7 +168,7 @@
               <td data-i18n="ds.why_r6f">Apprentissage, tutoriels</td>
               <td data-i18n="ds.why_r6p">Licence d'utilisation : mémoire, rapport client, publication</td></tr>
           </tbody>
-        </table>
+        </table></div>
         <p class="why-note" data-i18n="ds.why_note">Le calcul est simple : nettoyer et documenter une de ces séries à la main prend deux à trois jours de travail. C'est ce que vous achetez — pas les chiffres, qui sont souvent publics, mais le temps.</p>
       </div>
       <div class="grid grid-3" id="data-grid-paid">

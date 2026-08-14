@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
-  <link rel="stylesheet" href="assets/style.css?v=31" />
-  <link rel="stylesheet" href="assets/data.css?v=18" />
+  <link rel="stylesheet" href="assets/style.css?v=32" />
+  <link rel="stylesheet" href="assets/data.css?v=20" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-backbone.html" />
 </head>
 <body>
@@ -127,8 +127,8 @@
       Une ligne par entité, tous niveaux confondus, chacune rattachée à son parent.
     </p>
     <div class="d-tab-wrap">
-      <table class="d-tab">
-        <thead><tr><th>Niveau</th><th>Entités</th><th>Identifiant Atmart</th><th>Provenance</th></tr></thead>
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">Niveau</th><th scope="col">Entités</th><th scope="col">Identifiant Atmart</th><th scope="col">Provenance</th></tr></thead>
         <tbody>
           <tr><td>1 · Département</td><td>10</td><td><code>HTD-01</code></td><td>CNIGS — couche officielle</td></tr>
           <tr><td>2 · Arrondissement</td><td>42</td><td><code>HTA-011</code></td><td><strong>Dérivé Atmart</strong> — voir ci-dessous</td></tr>
@@ -136,7 +136,7 @@
           <tr><td>4 · Section communale</td><td><span data-mf="nombre_sections_communales">570</span></td><td><code>HTS-0111-01</code></td><td>CNIGS ; noms kreyòl normalisés Atmart</td></tr>
           <tr><td>5 · Localité</td><td><span data-mf="nombre_localites">10 945</span></td><td><code>HTL-3715776</code></td><td>GeoNames ; rattachement calculé par Atmart</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
 
     <div class="d-box amber" style="margin-top:1.4rem">
@@ -197,8 +197,8 @@
     </div>
 
     <div class="d-tab-wrap" style="margin-top:1.4rem">
-      <table class="d-tab">
-        <thead><tr><th>Fréquence</th><th>Périodes</th><th>Identifiant</th><th>Exemple</th></tr></thead>
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">Fréquence</th><th scope="col">Périodes</th><th scope="col">Identifiant</th><th scope="col">Exemple</th></tr></thead>
         <tbody>
           <tr><td>Annuelle</td><td>60</td><td><code>HT-A-2026</code></td><td>Année 2026 · Ane 2026</td></tr>
           <tr><td>Exercice fiscal</td><td>61</td><td><code>HT-F-2025-2026</code></td><td>1<sup>er</sup> oct. 2025 → 30 sept. 2026</td></tr>
@@ -206,7 +206,7 @@
           <tr><td>Trimestrielle</td><td>240</td><td><code>HT-T-2026-T3</code></td><td>T3 2026 · 3yèm trimès 2026</td></tr>
           <tr><td>Mensuelle</td><td>720</td><td><code>HT-M-2026-07</code></td><td>juillet 2026 · jiyè 2026</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
 
     <h2 style="font-size:1.1rem;margin-top:1.6rem">Ce que chaque période porte</h2>
@@ -259,14 +259,14 @@
       vérification.
     </p>
     <div class="d-tab-wrap">
-      <table class="d-tab">
-        <thead><tr><th>Catégorie</th><th>Entités</th><th>Couverture réelle</th><th>Géocodage</th><th>Source</th></tr></thead>
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">Catégorie</th><th scope="col">Entités</th><th scope="col">Couverture réelle</th><th scope="col">Géocodage</th><th scope="col">Source</th></tr></thead>
         <tbody>
           <tr><td>Santé</td><td>730</td><td><strong>14 communes sur 140</strong></td><td>66 % (480)</td><td>OCHA Haïti 2023 · CC BY</td></tr>
           <tr><td>Éducation</td><td>4 122</td><td><strong>49 communes sur 140</strong></td><td>aucun</td><td>OCHA Haïti 2022 · CC BY</td></tr>
           <tr><td>Marchés</td><td>182</td><td>136 communes</td><td>100 %</td><td>PAM · CC BY-IGO</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
 
     <div class="d-box amber" style="margin-top:1.4rem">
@@ -316,14 +316,14 @@
       et comment — pour que deux produits Atmart ne calculent jamais la même notion de deux façons.
     </p>
     <div class="d-tab-wrap">
-      <table class="d-tab">
-        <thead><tr><th>Statut</th><th>Indicateurs</th><th>Ce que cela signifie</th></tr></thead>
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">Statut</th><th scope="col">Indicateurs</th><th scope="col">Ce que cela signifie</th></tr></thead>
         <tbody>
           <tr><td>Disponible</td><td>16</td><td>Calculable aujourd'hui avec le backbone seul</td></tr>
           <tr><td>Définition prête, donnée absente</td><td>2</td><td>La formule est écrite, la source manque — registre scolaire national et population par âge</td></tr>
           <tr><td>À construire</td><td>3</td><td>Dépend d'une source non encore reconstituée : réseau routier, séries de prix, budget</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
     <p class="d-note" style="margin-top:0.9rem">
       Écrire la définition d'un indicateur qu'on ne peut pas encore calculer n'est pas un exercice
@@ -376,8 +376,8 @@
       joignables sans retraitement.
     </p>
     <div class="d-tab-wrap">
-      <table class="d-tab">
-        <thead><tr><th>Champ</th><th>Rôle</th></tr></thead>
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">Champ</th><th scope="col">Rôle</th></tr></thead>
         <tbody>
           <tr><td><code>atmart_geo_id</code></td><td>Identifiant Atmart immuable — ne change jamais, même si la source renumérote</td></tr>
           <tr><td><code>pcode</code> · <code>source_geo_id</code></td><td>Code officiel OCHA et identifiant dans la source d'origine</td></tr>
@@ -389,7 +389,7 @@
           <tr><td><code>statut_valeur</code> · <code>methode</code></td><td>Observé, dérivé, harmonisé, estimé… et comment</td></tr>
           <tr><td><code>niveau_qualite</code> · <code>version</code></td><td>Degré de confiance et millésime du produit</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
   </div>
 </section>
@@ -404,8 +404,8 @@
       données puisse commettre. Signaler l'incertitude est en soi un produit.
     </p>
     <div class="d-tab-wrap">
-      <table class="d-tab">
-        <thead><tr><th>Statut</th><th>Ce qu'il signifie</th><th>Dans le référentiel territoire</th></tr></thead>
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">Statut</th><th scope="col">Ce qu'il signifie</th><th scope="col">Dans le référentiel territoire</th></tr></thead>
         <tbody>
           <tr><td>O — Observée</td><td>Reprise directement de la source, sans transformation</td><td>10 958 entités</td></tr>
           <tr><td>H — Harmonisée</td><td>Normalisée par Atmart pour être comparable</td><td><span data-mf="nombre_sections_communales">570</span> sections (noms kreyòl)</td></tr>
@@ -415,7 +415,7 @@
           <tr><td>E — Estimée</td><td>Approximation documentée</td><td>aucune</td></tr>
           <tr><td>N — Non disponible</td><td>Absente, et déclarée absente</td><td>population : 10 831 entités</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
   </div>
 </section>
@@ -430,8 +430,8 @@
       classement qui détermine ce qui peut être publié, agrégé, ou seulement consulté.
     </p>
     <div class="d-tab-wrap">
-      <table class="d-tab">
-        <thead><tr><th>Classe</th><th>Ce qui est permis</th><th>Exemples au registre</th></tr></thead>
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">Classe</th><th scope="col">Ce qui est permis</th><th scope="col">Exemples au registre</th></tr></thead>
         <tbody>
           <tr><td>A</td><td>Redistribution autorisée, avec attribution</td><td>CNIGS/OCHA COD-AB, GeoNames</td></tr>
           <tr><td>B</td><td>Agrégats et transformations autorisés, pas la source brute</td><td>BRH, CNSA, IHSI (à confirmer)</td></tr>
@@ -439,7 +439,7 @@
           <tr><td>D</td><td>Convention institutionnelle nécessaire</td><td>AGD/ASYCUDA, registres DGI</td></tr>
           <tr><td>E</td><td>Données personnelles ou sensibles — jamais diffusées</td><td>ONI, dossiers individuels, listes de déplacés</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
     <p class="d-note" style="margin-top:0.9rem">
       Le registre des sources est public : <a href="data/atmart_registre_sources.csv" download>le télécharger (CSV)</a>.
@@ -492,8 +492,8 @@
       scolaire avant d'avoir stabilisé le territoire, c'est se condamner à le refaire.
     </p>
     <div class="d-tab-wrap">
-      <table class="d-tab">
-        <thead><tr><th>Couche</th><th>Contenu</th><th>État</th></tr></thead>
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">Couche</th><th scope="col">Contenu</th><th scope="col">État</th></tr></thead>
         <tbody>
           <tr><td>1 · Fondations communes</td><td>Référentiel territoire, temps, indicateurs, règles de version, standards de fiche</td><td><span class="d-pill live">Territoire publié</span></td></tr>
           <tr><td>2 · Registres nationaux géocodés</td><td>Registre scolaire, registre sanitaire, répertoire des marchés, infrastructures</td><td><span class="d-pill spons">Parrainable</span></td></tr>
@@ -501,7 +501,7 @@
           <tr><td>4 · Croisements multi-sources</td><td>Accessibilité aux services, couverture territoriale, prix–change–carburant–climat, profils communaux</td><td><span class="d-pill soon">Après les couches 2 et 3</span></td></tr>
           <tr><td>5 · Produits décisionnels</td><td>Observatoires, packs sectoriels, tableaux de bord, licences institutionnelles, API</td><td><span class="d-pill soon">12–24 mois</span></td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
     <p class="d-note" style="margin-top:0.9rem">
       Le prochain produit visé est le <strong>Profil des 140 communes</strong> : identité territoriale,
@@ -522,8 +522,8 @@
       celui qui décide. Aucun n'existe aujourd'hui sous une forme directement utilisable.
     </p>
     <div class="d-tab-wrap">
-      <table class="d-tab">
-        <thead><tr><th>#</th><th>Produit</th><th>Ce qu'il rend possible</th><th>Difficulté</th><th>Valeur</th></tr></thead>
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">#</th><th scope="col">Produit</th><th scope="col">Ce qu'il rend possible</th><th scope="col">Difficulté</th><th scope="col">Valeur</th></tr></thead>
         <tbody>
           <tr><td>1</td><td>Profil des 140 communes</td><td>Une fiche complète par commune, transversale à tous les publics</td><td>Moyenne</td><td class="p">Très forte</td></tr>
           <tr><td>2</td><td>Écoles Haïti 360</td><td>Registre scolaire géocodé, historisé, avec effectifs et résultats</td><td>Moyenne</td><td class="p">Très forte</td></tr>
@@ -538,7 +538,7 @@
           <tr><td>11</td><td>Risques naturels par localité</td><td>Exposition inondation, séisme, cyclone croisée à la population</td><td>Élevée</td><td class="p">Forte</td></tr>
           <tr><td>12</td><td>Atlas santé EMMUS 1994–2017</td><td>Agrégats harmonisés sur 23 ans de vagues d'enquêtes</td><td>Moyenne</td><td class="p">Forte</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
     <p class="d-note" style="margin-top:0.9rem">
       Certains de ces produits dépendent de sources en classe C ou D — accès sur inscription ou convention

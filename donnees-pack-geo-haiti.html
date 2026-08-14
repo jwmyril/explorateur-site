@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
-  <link rel="stylesheet" href="assets/style.css?v=31" />
-  <link rel="stylesheet" href="assets/data.css?v=18" />
+  <link rel="stylesheet" href="assets/style.css?v=32" />
+  <link rel="stylesheet" href="assets/data.css?v=20" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-pack-geo-haiti.html" />
 </head>
 <body>
@@ -64,8 +64,8 @@
 
         <h2>Ce que contient le pack</h2>
         <div class="d-tab-wrap">
-          <table class="d-tab">
-            <thead><tr><th>Fichier</th><th>Une ligne = </th><th>Volume</th></tr></thead>
+          <div class="x-tableau" tabindex="0"><table class="d-tab">
+            <thead><tr><th scope="col">Fichier</th><th scope="col">Une ligne = </th><th scope="col">Volume</th></tr></thead>
             <tbody>
               <tr><td>haiti_570_sections_communales_gps.csv</td><td>Une section communale (admin 3)</td><td>570 lignes · 13 colonnes</td></tr>
               <tr><td>haiti_140_villes_chefs_lieux_gps.csv</td><td>Une ville chef-lieu, avec son statut</td><td>140 lignes · 13 colonnes</td></tr>
@@ -74,15 +74,15 @@
               <tr><td>hti_admin2.geojson</td><td>Une commune (polygone)</td><td>140 entités</td></tr>
               <tr><td>hti_admin3.geojson</td><td>Une section communale (polygone)</td><td>570 entités</td></tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
 
         <h2>Aperçu réel — sections communales</h2>
         <p>Extrait exact du fichier livré, colonnes comprises. L'échantillon complet (10 lignes) se télécharge sans compte.</p>
         <div class="d-preview">
-          <table>
+          <div class="x-tableau" tabindex="0"><table>
             <thead>
-              <tr><th>departement_ht</th><th>commune_ht</th><th>section_communale_fr</th><th>section_communale_ht</th><th>pcode_section</th><th>superficie_km2</th><th>latitude</th><th>longitude</th></tr>
+              <tr><th scope="col">departement_ht</th><th scope="col">commune_ht</th><th scope="col">section_communale_fr</th><th scope="col">section_communale_ht</th><th scope="col">pcode_section</th><th scope="col">superficie_km2</th><th scope="col">latitude</th><th scope="col">longitude</th></tr>
             </thead>
             <tbody>
               <tr><td>Lwès</td><td>Pòtoprens</td><td>1re Section Turgeau</td><td>1ye Seksyon Turgeau</td><td>HT0111-01</td><td>18.35</td><td>18.536790</td><td>-72.322631</td></tr>
@@ -90,7 +90,7 @@
               <tr><td>Lwès</td><td>Dèlma</td><td>1re Section St Martin</td><td>1ye Seksyon St Martin</td><td>HT0112-01</td><td>26.04</td><td>18.551396</td><td>-72.287185</td></tr>
               <tr><td>Lwès</td><td>Leyogàn</td><td>11e Section Gros Morne</td><td>11yèm Seksyon Gro Mòn</td><td>HT0121-11</td><td>28.37</td><td>18.433665</td><td>-72.590076</td></tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
         <p class="d-note" style="margin-top:0.6rem">
           <a href="data/ECHANTILLON_haiti_sections_gps.csv" download>Télécharger l'échantillon (CSV, 10 lignes)</a>
@@ -120,15 +120,15 @@
           il existe réellement, et dit clairement ce qui relève de la source et ce qui relève de nous.
         </p>
         <div class="d-tab-wrap">
-          <table class="d-tab">
-            <thead><tr><th>Niveau</th><th>Kreyòl dans le pack</th><th>Provenance</th></tr></thead>
+          <div class="x-tableau" tabindex="0"><table class="d-tab">
+            <thead><tr><th scope="col">Niveau</th><th scope="col">Kreyòl dans le pack</th><th scope="col">Provenance</th></tr></thead>
             <tbody>
               <tr><td>10 départements</td><td>10 / 10</td><td>CNIGS — noms officiels</td></tr>
               <tr><td>140 communes</td><td>140 / 140</td><td>CNIGS — récupérés dans la couche des chefs-lieux</td></tr>
               <tr><td>140 villes chefs-lieux</td><td>140 / 140</td><td>CNIGS — noms officiels</td></tr>
               <tr><td>570 sections communales</td><td>570 / 570</td><td>Normalisation Atmart documentée, toponyme CNIGS conservé</td></tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
         <p class="d-note" style="margin-top:0.8rem">
           La règle appliquée aux sections est déterministe : l'ordinal passe en kreyòl
@@ -162,18 +162,18 @@
         </div>
 
         <h2>Fiche de données (Fèy Done)</h2>
-        <table class="d-specs">
-          <tr><th>Version</th><td>v2.2026.07 — reconstruit intégralement depuis le CNIGS</td></tr>
-          <tr><th>Prochaine mise à jour</th><td>à la prochaine publication COD-AB du CNIGS ; incluse sans surcoût pour les acheteurs de l'année</td></tr>
-          <tr><th>Couverture géographique</th><td>Haïti — 10 départements, 140 communes, 570 sections communales, 10 945 lieux habités</td></tr>
-          <tr><th>Formats</th><td>3 CSV (UTF-8 avec BOM) + 3 GeoJSON (WGS84) + LISEZMOI + Fèy Done en 4 langues</td></tr>
-          <tr><th>Système de coordonnées</th><td>WGS84 (EPSG:4326)</td></tr>
-          <tr><th>Clé de jointure</th><td>p-codes OCHA : <code>pcode_departement</code>, <code>pcode_commune</code>, <code>pcode_section</code> — présents dans les trois CSV et dans les trois GeoJSON</td></tr>
-          <tr><th>Niveau de confiance</th><td>A pour le référentiel et les noms français ; B pour les noms kreyòl des sections (normalisation Atmart) — <a href="donnees-confiance.html#niveaux">voir l'échelle</a></td></tr>
-          <tr><th>Données personnelles</th><td>Aucune</td></tr>
-          <tr><th>Licence</th><td>Usage mono-organisation, revente et redistribution interdites ; attribution « Pack Géo Haïti — Atmart / CNIGS-OCHA / GeoNames »</td></tr>
-          <tr><th>Contact</th><td><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></td></tr>
-        </table>
+        <div class="x-tableau" tabindex="0"><table class="d-specs">
+          <tr><th scope="row">Version</th><td>v2.2026.07 — reconstruit intégralement depuis le CNIGS</td></tr>
+          <tr><th scope="row">Prochaine mise à jour</th><td>à la prochaine publication COD-AB du CNIGS ; incluse sans surcoût pour les acheteurs de l'année</td></tr>
+          <tr><th scope="row">Couverture géographique</th><td>Haïti — 10 départements, 140 communes, 570 sections communales, 10 945 lieux habités</td></tr>
+          <tr><th scope="row">Formats</th><td>3 CSV (UTF-8 avec BOM) + 3 GeoJSON (WGS84) + LISEZMOI + Fèy Done en 4 langues</td></tr>
+          <tr><th scope="row">Système de coordonnées</th><td>WGS84 (EPSG:4326)</td></tr>
+          <tr><th scope="row">Clé de jointure</th><td>p-codes OCHA : <code>pcode_departement</code>, <code>pcode_commune</code>, <code>pcode_section</code> — présents dans les trois CSV et dans les trois GeoJSON</td></tr>
+          <tr><th scope="row">Niveau de confiance</th><td>A pour le référentiel et les noms français ; B pour les noms kreyòl des sections (normalisation Atmart) — <a href="donnees-confiance.html#niveaux">voir l'échelle</a></td></tr>
+          <tr><th scope="row">Données personnelles</th><td>Aucune</td></tr>
+          <tr><th scope="row">Licence</th><td>Usage mono-organisation, revente et redistribution interdites ; attribution « Pack Géo Haïti — Atmart / CNIGS-OCHA / GeoNames »</td></tr>
+          <tr><th scope="row">Contact</th><td><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></td></tr>
+        </table></div>
 
         <h2>Citation</h2>
         <p style="font-family:ui-monospace,Menlo,monospace;font-size:0.85rem;color:var(--ink);background:var(--card);border:1px solid var(--border);border-radius:10px;padding:0.9rem">

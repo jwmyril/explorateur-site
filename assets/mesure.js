@@ -17,11 +17,20 @@
     dernier[nom] = t;
     var corps = JSON.stringify({ name: nom, lang: "fr", src: document.referrer ? "ref" : "" });
     try {
+      /* « text/plain » et non « application/json » : sendBeacon envoie
+         toujours avec les identifiants, et un type JSON declenche alors un
+         controle prealable que le navigateur refuse faute d'en-tete
+         Access-Control-Allow-Credentials. En text/plain, la requete est
+         simple : pas de controle prealable, donc rien a echouer. Le Worker
+         lit le corps de la meme facon — verifie, il repond 204. */
       if (navigator.sendBeacon) {
-        navigator.sendBeacon(POINT, new Blob([corps], { type: "application/json" }));
+        navigator.sendBeacon(POINT,
+          new Blob([corps], { type: "text/plain;charset=UTF-8" }));
       } else {
         fetch(POINT, { method: "POST", body: corps, keepalive: true,
-                       headers: { "Content-Type": "application/json" } }).catch(function () {});
+                       credentials: "omit",
+                       headers: { "Content-Type": "text/plain;charset=UTF-8" }
+                     }).catch(function () {});
       }
     } catch (e) { /* la mesure ne casse jamais l'expérience */ }
   }

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+  <title>Confiance &amp; méthode — sources, qualité, licences | Atmart Data</title>
+  <meta name="description" content="La charte Atmart Data : politique de sourcing, contrôles avant publication, niveaux de confiance, versions et corrections, licences, protection des données personnelles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="assets/style.css?v=31" />
+  <link rel="stylesheet" href="assets/data.css?v=18" />
+  <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-confiance.html" />
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>les données d'Atmart</small></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li class="nav-grp"><span>🗂 Données</span>
+        <ul class="nav-sub">
+          <li><a href="/">Explorateur Haïti <small>chercher une commune</small></a></li>
+          <li><a href="datasets.html">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-solutions.html">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
+          <li><a href="donnees-campus.html">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+          <li><a href="donnees-parrainage.html">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
+          <li><a href="donnees.html">Comment ça marche <small>méthode, sources, système</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" style="padding:3.2rem 0 1.8rem">
+  <div class="container">
+    <p class="kreyol">Konfyans pa yon pawòl : li dokimante.</p>
+    <h1>Confiance &amp; <em>méthode</em></h1>
+    <p class="lead">
+      Dans un marché où la donnée est rare, une erreur mal gérée coûte plus cher qu'un lancement en retard.
+      Cette page dit comment nous choisissons nos sources, ce que nous vérifions, ce que nous affichons —
+      et ce que nous nous interdisons.
+    </p>
+  </div>
+</section>
+
+<!-- SOURCING -->
+<section class="d-sec" style="padding-top:1rem" id="sources">
+  <div class="container">
+    <p class="d-lbl">1 · Politique de sourcing</p>
+    <h2 class="d-h">Une source entre au catalogue si elle passe quatre tests</h2>
+    <ul class="d-list yes">
+      <li><b>Traçable</b> — l'origine est nommée, publique ou contractuelle, et citable telle quelle.</li>
+      <li><b>Datée</b> — on sait de quand datent les chiffres, et quand ils ont été extraits.</li>
+      <li><b>Documentée</b> — la méthode de collecte est publiée, ou reconstituable, ou explicitement inconnue.</li>
+      <li><b>Réutilisable</b> — la licence de la source autorise l'usage que nous en faisons, attribution comprise.</li>
+    </ul>
+    <p class="d-sub" style="margin-top:1.4rem">Les sources que nous utilisons régulièrement :</p>
+    <div class="d-tiles" style="margin-top:0.9rem">
+      <div><b>Institutions internationales</b><p>Banque mondiale (WDI, Findex), FMI, ONU DAES, UNESCO UIS, OMS/OPS.</p></div>
+      <div><b>Humanitaire &amp; territorial</b><p>UN OCHA / HDX (COD-AB), CNIGS, GeoNames, haitidata.org.</p></div>
+      <div><b>Haïti — institutions nationales</b><p>IHSI, BRH, CNSA, MENFP, MSPP, enquêtes EMMUS.</p></div>
+      <div><b>Enquêtes &amp; observatoires</b><p>LAPOP AmericasBarometer, FEWS NET, GSMA.</p></div>
+    </div>
+    <div class="d-box" style="margin-top:1.4rem">
+      <h3>Ce que nous refusons</h3>
+      <p>
+        Les chiffres sans source identifiable, les données recopiées d'un rapport lui-même sans source,
+        les fichiers dont la licence interdit la réutilisation, et les extractions obtenues en contournant
+        les conditions d'un site. Quand un chiffre circule partout sans origine, nous ne le republions pas —
+        nous écrivons qu'il n'est pas vérifiable.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRÔLES -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">2 · Avant publication</p>
+    <h2 class="d-h">Huit contrôles sur chaque jeu de données</h2>
+    <ol class="d-steps">
+      <li><b>Complétude</b> — volume de valeurs manquantes, par colonne et par année, documenté et non masqué.</li>
+      <li><b>Cohérence des identifiants</b> — codes territoriaux, clés de jointure, orthographes normalisées (français et kreyòl).</li>
+      <li><b>Doublons</b> — détection et suppression tracée dans le journal du jeu.</li>
+      <li><b>Valeurs aberrantes</b> — repérage, vérification à la source, conservation ou retrait justifié.</li>
+      <li><b>Unités et devises</b> — harmonisation explicite, année de référence indiquée pour tout montant.</li>
+      <li><b>Continuité temporelle</b> — années manquantes signalées, ruptures de série documentées.</li>
+      <li><b>Recoupement</b> — quand deux sources existent, les écarts sont mesurés et expliqués, pas moyennés en silence.</li>
+      <li><b>Relecture de la fiche</b> — la Fèy Done est complétée et relue avant toute mise en ligne.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- NIVEAUX DE CONFIANCE -->
+<section class="d-sec" id="niveaux">
+  <div class="container">
+    <p class="d-lbl">3 · Niveau de confiance</p>
+    <h2 class="d-h">Chaque jeu affiche son niveau, y compris quand il est faible</h2>
+    <div class="d-tab-wrap">
+      <table class="d-tab">
+        <thead><tr><th>Niveau</th><th>Ce que cela signifie</th><th>Usage recommandé</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>A — Solide</td>
+            <td>Source officielle unique, méthode publiée, mise à jour régulière et prévisible</td>
+            <td>Décision, publication, plaidoyer, mémoire</td>
+          </tr>
+          <tr>
+            <td>B — Croisé</td>
+            <td>Plusieurs sources combinées par Atmart, écarts mesurés et documentés</td>
+            <td>Analyse et décision, en citant la méthode de croisement</td>
+          </tr>
+          <tr>
+            <td>C — Indicatif</td>
+            <td>Source unique non officielle, ancienne ou partiellement couvrante</td>
+            <td>Cadrage, ordre de grandeur, exploration — jamais seul face à une décision lourde</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="d-note" style="margin-top:0.9rem">
+      Un jeu de niveau C n'est pas un mauvais jeu : c'est un jeu dont on connaît la limite. Le problème
+      commence quand cette limite n'est pas écrite.
+    </p>
+    <div class="d-box" style="margin-top:1.2rem">
+      <h3>Au niveau de la valeur, pas seulement du jeu de données</h3>
+      <p>
+        Depuis l'entrée en service du Backbone, chaque <strong>valeur</strong> porte aussi son propre statut :
+        <code>O</code> observée, <code>H</code> harmonisée, <code>A</code> agrégée ou dérivée par Atmart,
+        <code>I</code> interpolée, <code>M</code> modélisée, <code>E</code> estimée, <code>N</code> non disponible.
+        Une colonne vide reste vide et se déclare : nous ne comblons jamais un trou en silence.
+      </p>
+      <p>
+        Le classement juridique des sources (A à E) suit la même logique de transparence.
+        <a href="donnees-backbone.html#statuts">Voir les statuts de valeur et la matrice juridique →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- VERSIONS -->
+<section class="d-sec" id="versions">
+  <div class="container">
+    <p class="d-lbl">4 · Versions et mises à jour</p>
+    <h2 class="d-h">Une donnée sans version n'est pas une donnée sérieuse</h2>
+    <ul class="d-list">
+      <li><b>Numérotation</b> — chaque jeu porte un numéro de la forme <code>v1.2026.06</code> : version majeure, année et mois de la donnée.</li>
+      <li><b>Journal des modifications</b> — ce qui a changé, quand, et pourquoi, conservé dans la fiche du jeu.</li>
+      <li><b>Prochaine mise à jour annoncée</b> — la date visée figure sur la fiche ; si elle glisse, elle est corrigée publiquement.</li>
+      <li><b>Versions antérieures</b> — accessibles sur demande pendant deux ans, pour que les travaux publiés restent reproductibles.</li>
+      <li><b>Acheteurs prévenus</b> — toute mise à jour majeure d'un jeu acheté est signalée par e-mail, sans surcoût dans l'année.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CORRECTION -->
+<section class="d-sec" id="correction">
+  <div class="container">
+    <p class="d-lbl">5 · Signaler une erreur</p>
+    <h2 class="d-h">La procédure, écrite à l'avance</h2>
+    <ol class="d-steps">
+      <li><b>Vous signalez</b> — à <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a>, avec le nom du jeu, sa version et la ligne concernée.</li>
+      <li><b>Accusé sous 48 h ouvrées</b> — même si l'analyse doit prendre plus de temps.</li>
+      <li><b>Vérification à la source</b> — nous remontons à l'origine du chiffre, pas à notre copie.</li>
+      <li><b>Correction et nouvelle version</b> — publiée avec sa note explicative.</li>
+      <li><b>Information des utilisateurs</b> — les acheteurs et les accès académiques concernés sont prévenus.</li>
+      <li><b>Mention publique</b> — si l'erreur a pu influencer une décision, elle est signalée sur la fiche, pas effacée.</li>
+    </ol>
+    <p class="d-note" style="margin-top:0.9rem">
+      Nous documentons ce que nous savons de nos données — leurs forces <em>et</em> leurs faiblesses.
+      C'est l'engagement inscrit à la neuvième rubrique de chaque Fèy Done.
+    </p>
+  </div>
+</section>
+
+<!-- LICENCES -->
+<section class="d-sec" id="licences">
+  <div class="container">
+    <p class="d-lbl">6 · Droits d'usage</p>
+    <h2 class="d-h">Ce que vous pouvez faire, et ce qui est exclu</h2>
+    <div class="grid grid-2" style="margin-top:1rem">
+      <div>
+        <p style="color:var(--teal);font-family:var(--font-head);margin-bottom:0.2rem">Autorisé selon votre licence</p>
+        <ul class="d-list yes">
+          <li>Analyser, croiser avec vos propres données, produire des visuels et des rapports.</li>
+          <li>Publier des résultats et des extraits, avec attribution à Atmart et aux sources primaires.</li>
+          <li>Utiliser dans un mémoire, un article, un livrable client (selon le niveau de licence).</li>
+          <li>Conserver le fichier après la fin de l'abonnement, pour les travaux déjà engagés.</li>
+        </ul>
+      </div>
+      <div>
+        <p style="color:var(--red);font-family:var(--font-head);margin-bottom:0.2rem">Exclu dans toutes les licences</p>
+        <ul class="d-list no">
+          <li>Revendre ou redistribuer le jeu de données tel quel, gratuitement ou non.</li>
+          <li>Retirer les colonnes de source ou les mentions de licence.</li>
+          <li>Utiliser les données pour du démarchage non sollicité.</li>
+          <li>Tenter de réidentifier des personnes à partir de données agrégées.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="d-note" style="margin-top:1.1rem">
+      Les jeux gratuits publiés sur ce site sont diffusés sous licence <strong>CC BY 4.0</strong>
+      (voir <a href="https://github.com/jwmyril/atmart-site/blob/main/LICENSE.md">LICENSE.md</a>).
+      Les jeux premium relèvent d'une licence d'utilisation Atmart, jointe à chaque livraison.
+      Les licences des sources primaires s'appliquent en plus : elles ne peuvent jamais être affaiblies par la nôtre.
+      <a href="donnees-solutions.html#licences">Voir la grille complète des licences →</a>
+    </p>
+  </div>
+</section>
+
+<!-- DONNÉES PERSONNELLES -->
+<section class="d-sec" id="personnelles">
+  <div class="container">
+    <p class="d-lbl">7 · Données personnelles et sujets sensibles</p>
+    <h2 class="d-h">La règle : agrégé par défaut</h2>
+    <ul class="d-list">
+      <li><b>Par défaut, aucune donnée personnelle.</b> Nos jeux décrivent des territoires, des marchés et des séries, pas des individus.</li>
+      <li><b>Exception encadrée : les annuaires professionnels publics.</b> Certains jeux B2B contiennent des coordonnées professionnelles déjà publiées par une administration (par exemple des directions d'établissements scolaires). Ils sont vendus pour de la prospection professionnelle légitime, jamais pour du démarchage de masse, et le retrait d'une inscription est appliqué sur simple demande.</li>
+      <li><b>Aucune donnée de santé, de religion, d'opinion politique ou d'origine</b> au niveau individuel, en aucune circonstance.</li>
+      <li><b>Pas de réidentification.</b> Toute tentative de recomposer des identités à partir de nos jeux agrégés met fin à la licence immédiatement.</li>
+      <li><b>Sujets sensibles</b> — sécurité, déplacements de population, violences : traités uniquement à un niveau géographique qui ne met personne en danger, et avec les avertissements d'usage correspondants.</li>
+      <li><b>Retrait</b> — une administration, une organisation ou une personne concernée peut demander le retrait d'une information la concernant à <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<section class="d-sec" style="padding-bottom:3rem">
+  <div class="container">
+    <div class="d-box amber">
+      <h3>8 · Ce que nous ne ferons pas</h3>
+      <p>
+        Nous ne mettrons pas en vente un fichier que nous ne pouvons pas livrer aujourd'hui.
+        Nous ne publierons pas un chiffre dont nous ne pouvons pas nommer la source.
+        Nous ne présenterons pas une estimation comme une mesure.
+        Nous ne supprimerons pas une erreur en silence.
+        Et nous ne laisserons pas un parrain, un client ou un partenaire décider de ce que les données doivent dire.
+      </p>
+      <p>
+        Ces règles nous coûtent des ventes à court terme. C'est précisément ce qui les rend crédibles.
+      </p>
+    </div>
+    <p class="d-note" style="margin-top:1.2rem">
+      Une question sur cette charte, ou un désaccord argumenté ?
+      <a href="mailto:sales@atmart.ltd">Écrivez-nous</a> — les corrections apportées à cette page sont datées.
+      <br />Version de la charte : 1.0 — 30 juillet 2026.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem">Un produit <a href="https://atmart.ltd/">Atmart Data</a> — des données sourcées, datées, vérifiables sur les 140 communes d'Haïti.</p>
+      </div>
+      <div>
+        <h4>Données</h4>
+        <ul>
+          <li><a href="datasets.html">Catalogue</a></li>
+          <li><a href="donnees.html">Comment ça marche</a></li>
+          <li><a href="donnees-backbone.html">Définitions &amp; méthodes</a></li>
+          <li><a href="donnees-systeme.html">La carte du système</a></li>
+          <li><a href="donnees-confiance.html">Confiance &amp; méthode</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte et sans traceur.</div>
+  </div>
+</footer>
+
+<script src="assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+</body>
+</html>

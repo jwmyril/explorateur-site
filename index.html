@@ -26,11 +26,11 @@
       <li class="nav-grp"><span>🗂 Données</span>
         <ul class="nav-sub">
           <li><a href="/" class="active">Explorateur Haïti <small>chercher une commune</small></a></li>
-          <li><a href="https://atmart.ltd/datasets.html">Catalogue <small>jeux de données &amp; guides</small></a></li>
-          <li><a href="https://atmart.ltd/donnees-solutions.html">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
-          <li><a href="https://atmart.ltd/donnees-campus.html">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
-          <li><a href="https://atmart.ltd/donnees-parrainage.html">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
-          <li><a href="https://atmart.ltd/donnees.html">Comment ça marche <small>méthode, sources, système</small></a></li>
+          <li><a href="datasets.html">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-solutions.html">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
+          <li><a href="donnees-campus.html">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+          <li><a href="donnees-parrainage.html">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
+          <li><a href="donnees.html">Comment ça marche <small>méthode, sources, système</small></a></li>
         </ul>
       </li>
     </ul>
@@ -77,7 +77,7 @@
       <p class="x-note"><b>Formulation exacte :</b> cette version de l’Explorateur couvre les <b>140 communes du référentiel CNIGS 2018</b>. Des millésimes plus récents reconnaissent des communes supplémentaires. Un territoire absent de 2018 n’est pas un territoire inexistant — il est absent de <em>ce</em> millésime.</p>
       <p class="x-note">Pour le département de l’Ouest : le référentiel CNIGS 2018 y contient <b>20 communes</b>. Ce nombre peut différer dans des référentiels plus récents. Nous l’avons obtenu en comptant ce fichier, pas en le reprenant d’une source tierce.</p>
       <p class="x-note">La <a href="data/atmart_millesimes_territoriaux.csv" download>table de correspondance des millésimes</a> (CSV, 192 entités) donne pour chaque territoire son identifiant Atmart, son p-code, son millésime, ses dates de validité et une note de divergence. Elle ne contient aujourd’hui que le millésime 2018 : les autres y seront ajoutés quand nous disposerons des fichiers officiels, pas avant.</p>
-      <p class="x-note">Nous ne choisissons pas un chiffre en silence : l’explorateur compte ce que contient le référentiel qu’il charge, et le nomme. Les communes créées après 2018 seront intégrées avec leurs dates de validité dès qu’un référentiel officiel les publiera avec leurs codes, sans réécrire l’historique. <a href="https://atmart.ltd/donnees-backbone.html#territoire">La construction du référentiel territoire →</a></p>
+      <p class="x-note">Nous ne choisissons pas un chiffre en silence : l’explorateur compte ce que contient le référentiel qu’il charge, et le nomme. Les communes créées après 2018 seront intégrées avec leurs dates de validité dès qu’un référentiel officiel les publiera avec leurs codes, sans réécrire l’historique. <a href="donnees-backbone.html#territoire">La construction du référentiel territoire →</a></p>
     </details>
 
     <details class="x-tech" id="x-couv-sources">
@@ -144,8 +144,8 @@
 
     <div class="d-box" style="margin-top:2.6rem">
       <h3>Ce que cet explorateur fait — et ce qu’il ne fait pas</h3>
-      <p>Il affiche <b>les informations actuellement documentées par Atmart Data</b> — pas tout ce qui existe sur une commune. Tout tourne dans votre navigateur : quatre fichiers publics et un contour cartographique, aucun serveur, aucun compte, aucun traceur. Ce que vous voyez, vous pouvez le télécharger tel quel depuis le <a href="https://atmart.ltd/datasets.html">catalogue</a> et le recalculer vous-même.</p>
-      <p>La <b>commune est le niveau territorial le plus détaillé de l’édition publique</b>. Les sections communales, les localités et les polygones détaillés sont disponibles dans le <a href="https://atmart.ltd/donnees-pack-geo-haiti.html">Pack Géo Haïti</a>. Les définitions, méthodes et statuts de qualité sont exposés sur la page <a href="https://atmart.ltd/donnees-backbone.html#statuts">Backbone</a>.</p>
+      <p>Il affiche <b>les informations actuellement documentées par Atmart Data</b> — pas tout ce qui existe sur une commune. Tout tourne dans votre navigateur : quatre fichiers publics et un contour cartographique, aucun serveur, aucun compte, aucun traceur. Ce que vous voyez, vous pouvez le télécharger tel quel depuis le <a href="datasets.html">catalogue</a> et le recalculer vous-même.</p>
+      <p>La <b>commune est le niveau territorial le plus détaillé de l’édition publique</b>. Les sections communales, les localités et les polygones détaillés sont disponibles dans le <a href="donnees-pack-geo-haiti.html">Pack Géo Haïti</a>. Les définitions, méthodes et statuts de qualité sont exposés sur la page <a href="donnees-backbone.html#statuts">Backbone</a>.</p>
     </div>
   </div>
 </section>
@@ -160,10 +160,10 @@
       <div>
         <h4>Atmart Data</h4>
         <ul>
-          <li><a href="https://atmart.ltd/datasets.html">Catalogue de données</a></li>
-          <li><a href="https://atmart.ltd/donnees.html">Comment ça marche</a></li>
-          <li><a href="https://atmart.ltd/donnees-backbone.html">Définitions &amp; méthodes</a></li>
-          <li><a href="https://atmart.ltd/donnees-solutions.html">Solutions &amp; licences</a></li>
+          <li><a href="datasets.html">Catalogue de données</a></li>
+          <li><a href="donnees.html">Comment ça marche</a></li>
+          <li><a href="donnees-backbone.html">Définitions &amp; méthodes</a></li>
+          <li><a href="donnees-solutions.html">Solutions &amp; licences</a></li>
         </ul>
       </div>
       <div>
@@ -187,10 +187,12 @@
 <script>
   /* Site autonome : donnees locales, liens editoriaux vers atmart.ltd.
      Francais seul pendant la finalisation — le multilingue reviendra d'un bloc. */
-  window.ATM_EXPLORATEUR = { site: "https://atmart.ltd/" };
+  /* Les pages Donnees vivent ICI depuis le 13/08 : le moteur genere des
+     liens locaux (site vide). atmart.ltd n'est plus que pour les produits. */
+  window.ATM_EXPLORATEUR = {};
   window.ATM_LANGUES = ["fr"];
 </script>
-<script src="assets/explorateur.js?v=1"></script>
+<script src="assets/explorateur.js?v=2"></script>
 <script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
 if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>
 </body>

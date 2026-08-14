@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+  <title>Atmart Data — des données prêtes à décider sur Haïti | Atmart</title>
+  <meta name="description" content="La plateforme de données reconstituées sur Haïti : jeux de données documentés, packs décisionnels pour entreprises et ONG, accès académique, parrainage de datasets. Année 1 : Haïti exclusivement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="assets/style.css?v=31" />
+  <link rel="stylesheet" href="assets/data.css?v=18" />
+  <link rel="canonical" href="https://explorateur.atmart.ltd/donnees.html" />
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>les données d'Atmart</small></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li class="nav-grp"><span>🗂 Données</span>
+        <ul class="nav-sub">
+          <li><a href="/">Explorateur Haïti <small>chercher une commune</small></a></li>
+          <li><a href="datasets.html">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-solutions.html">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
+          <li><a href="donnees-campus.html">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+          <li><a href="donnees-parrainage.html">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
+          <li><a href="donnees.html">Comment ça marche <small>méthode, sources, système</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding:3.5rem 0 2rem">
+  <div class="container">
+    <p class="kreyol">Done ki pare pou pran desizyon.</p>
+    <h1>Atmart <em>Data</em></h1>
+    <p class="lead">
+      La plateforme de <strong>données reconstituées sur Haïti</strong>. Nous ne republions pas des
+      fichiers publics : nous fabriquons des jeux de données qui n'existent pas encore, en reliant des
+      sources dispersées à des identifiants communs, à un historique et à une documentation qui tiennent
+      devant un comité. <strong>Pendant sa première année, Atmart Data ne publie que des données sur
+      Haïti</strong> — un seul pays, traité en profondeur, plutôt que dix survolés.
+    </p>
+    <div class="cta-row" style="display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.5rem">
+      <a href="https://explorateur.atmart.ltd/" class="btn btn-primary">Ouvrir l’Explorateur</a>
+      <a href="datasets.html" class="btn btn-outline">Le catalogue</a>
+      <a href="donnees-systeme.html" class="btn btn-outline">Comment c’est fait</a>
+    </div>
+    <div class="d-proof">
+      <div><b><span data-mf="nombre_entites_territoriales">11 707</span></b><small>entités territoriales identifiées, du département à la localité</small></div>
+      <div><b>5 niveaux</b><small>département › arrondissement › commune › section › localité</small></div>
+      <div><b><span data-mf="nombre_valeurs_sourcees">2 949</span></b><small>valeurs d’indicateurs calculées sur les 140 communes</small></div>
+      <div><b>1 standard</b><small>la Fèy Done Atmart, appliquée à chaque jeu de données</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- LE PROBLÈME -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">Le problème</p>
+    <h2 class="d-h">Dans nos marchés, la donnée existe. C'est de l'utiliser qui coûte cher.</h2>
+    <p class="d-sub" style="margin-bottom:1.3rem">
+      Le chiffre brut est rarement le vrai obstacle. Ce qui bloque, c'est le temps perdu entre la source
+      et la décision. Atmart Data travaille exactement sur cet intervalle.
+    </p>
+    <div class="d-tiles">
+      <div><span class="ico">🧩</span><b>Fragmentation</b><p>Les sources sont dispersées entre institutions, bailleurs, portails et PDF. Personne ne les tient ensemble.</p></div>
+      <div><span class="ico">📐</span><b>Absence de norme</b><p>Noms de communes, unités, années, codes : rien ne se joint sans être harmonisé à la main.</p></div>
+      <div><span class="ico">❓</span><b>Incertitude méthodologique</b><p>D'où vient le chiffre ? De quand date-t-il ? Que ne couvre-t-il pas ? Sans réponse, il est indéfendable.</p></div>
+      <div><span class="ico">⏱</span><b>Temps de nettoyage</b><p>Deux à trois jours de préparation par série. C'est ce coût que nous supprimons, pas les chiffres, qui sont souvent publics.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LE BACKBONE -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">Notre réponse</p>
+    <h2 class="d-h">Un backbone, pas un entrepôt de fichiers</h2>
+    <p class="d-sub">
+      Le vrai manque en Haïti n'est pas la donnée : ce sont les <strong>identifiants communs</strong>.
+      Sans clé partagée, une école, un marché, une clinique, un prix et un budget ne peuvent pas être
+      rapportés à la même commune ni à la même période. Le Backbone est ce socle — et chaque nouveau
+      jeu de données qui s'y raccroche augmente la valeur de tous les précédents.
+    </p>
+    <div class="d-tiles" style="margin-top:1.2rem">
+      <div><span class="ico">1️⃣</span><b>Reconstruction</b><p>PDF, tableaux HTML, API instables et Excel mal structurés deviennent des tables propres.</p></div>
+      <div><span class="ico">2️⃣</span><b>Harmonisation</b><p>Une série redevient comparable malgré les changements de nomenclature et de méthode.</p></div>
+      <div><span class="ico">3️⃣</span><b>Croisement</b><p>Des sources qui ne se parlent pas sont reliées par la même clé territoriale et temporelle.</p></div>
+      <div><span class="ico">4️⃣</span><b>Indicateurs dérivés</b><p>Des mesures publiées nulle part : accès aux services, volatilité des prix, couverture réelle.</p></div>
+      <div><span class="ico">5️⃣</span><b>Produit décisionnel</b><p>CSV, Excel, GeoJSON, Power BI, dictionnaire, note méthodologique et lecture de départ.</p></div>
+    </div>
+    <p class="d-note" style="margin-top:1rem">
+      Le référentiel territoire est publié : <strong><span data-mf="nombre_entites_territoriales">11 707</span> entités</strong>, du département à la localité,
+      arrondissements compris. <a href="donnees-backbone.html">Voir le Backbone et sa méthode →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ENTRÉES PAR USAGE -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">Par où entrer</p>
+    <h2 class="d-h">Six publics, six portes d'entrée</h2>
+    <p class="d-sub" style="margin-bottom:1.3rem">
+      Le même catalogue, mais pas le même besoin. Choisissez la porte qui vous concerne.
+    </p>
+    <div class="d-doors">
+      <a class="d-door" href="donnees-solutions.html#entreprises">
+        <h3>🏢 Entreprises</h3>
+        <p>Implantation, ciblage territorial, étude de marché, benchmark régional. Vous payez pour arriver plus vite à une recommandation défendable.</p>
+        <span class="go">Packs décisionnels &amp; licences →</span>
+      </a>
+      <a class="d-door" href="donnees-solutions.html#ong">
+        <h3>🌍 ONG &amp; bailleurs</h3>
+        <p>Cibler, prioriser, justifier, évaluer. Des bases géographiques et socio-économiques alignées sur les p-codes officiels.</p>
+        <span class="go">Voir les cas d'usage →</span>
+      </a>
+      <a class="d-door" href="donnees-solutions.html#administrations">
+        <h3>🏛 Administrations</h3>
+        <p>Structurer le suivi, le plaidoyer et la planification sur des fondations documentées, traçables et citables.</p>
+        <span class="go">Licences institutionnelles →</span>
+      </a>
+      <a class="d-door amber" href="donnees-campus.html">
+        <h3>🎓 Étudiants &amp; chercheurs</h3>
+        <p>Atmart Campus : accès académique vérifié, packs mémoire par discipline, guides méthodologiques et règles de citation.</p>
+        <span class="go">Découvrir Atmart Campus →</span>
+      </a>
+      <a class="d-door amber" href="donnees-parrainage.html">
+        <h3>🤝 Sponsors &amp; institutions</h3>
+        <p>Financer l'ouverture, la documentation ou la mise à jour d'un jeu de données utile à toute une promotion.</p>
+        <span class="go">Parrainer un dataset →</span>
+      </a>
+      <a class="d-door" href="datasets.html#shelf-free">
+        <h3>👥 Grand public &amp; journalistes</h3>
+        <p>Des jeux gratuits, des visualisations et des lectures courtes pour comprendre son territoire sans être analyste.</p>
+        <span class="go">Ce qui est gratuit →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- QUATRE NIVEAUX -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">L'offre</p>
+    <h2 class="d-h">Quatre niveaux, pas un de plus</h2>
+    <p class="d-sub" style="margin-bottom:1.2rem">
+      Une offre qu'on ne comprend pas en quelques secondes ne se vend pas. Voici toute l'architecture.
+    </p>
+    <div class="d-tab-wrap">
+      <table class="d-tab">
+        <thead><tr><th>Niveau</th><th>Pour qui</th><th>Ce que vous obtenez</th><th>Prix</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Gratuit</td>
+            <td>Grand public, découverte, usage académique de base</td>
+            <td>Aperçus, échantillons, visualisations, jeux d'apprentissage, contenus pédagogiques</td>
+            <td class="p">0 $</td>
+          </tr>
+          <tr>
+            <td>Jeu de données</td>
+            <td>Besoin ponctuel, budget serré</td>
+            <td>Un jeu complet, sa Fèy Done, son dictionnaire de variables, une licence explicite</td>
+            <td class="p">15 – 34 $</td>
+          </tr>
+          <tr>
+            <td>Pack décisionnel</td>
+            <td>PME, consultants, ONG, équipes métiers</td>
+            <td>Plusieurs jeux assemblés autour d'une question métier + lecture de départ (« prêt à décider »)</td>
+            <td class="p">sur devis</td>
+          </tr>
+          <tr>
+            <td>Licence institutionnelle</td>
+            <td>Entreprises, universités, administrations, ONG structurées</td>
+            <td>Accès multi-utilisateurs, catalogue élargi, mises à jour, support méthodologique</td>
+            <td class="p">annuelle, sur devis</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="d-note" style="margin-top:0.9rem">
+      Le prix suit la valeur de transformation — rareté, préparation, actualisation, temps épargné —
+      et non le nombre de lignes. <a href="donnees-solutions.html#licences">Détail des licences →</a>
+    </p>
+  </div>
+</section>
+
+<!-- STANDARD -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">La méthode</p>
+    <h2 class="d-h">Chaque jeu de données arrive avec sa fiche signée</h2>
+    <p class="d-sub">
+      C'est la <strong>Fèy Done Atmart</strong> : neuf rubriques, la même pour tous les jeux, en quatre langues.
+      Elle dit ce que la donnée sait faire — et ce qu'elle ne sait pas faire.
+    </p>
+    <div class="d-tiles" style="margin-top:1.2rem">
+      <div><b>1 · Identification</b><p>Version, date, prochaine mise à jour, licence, contact.</p></div>
+      <div><b>2 · Description</b><p>Ce qu'une ligne représente, volumétrie, couverture géographique et temporelle.</p></div>
+      <div><b>3 · Source et méthode</b><p>Source officielle, date d'extraction, nettoyages effectués, enrichissements ajoutés.</p></div>
+      <div><b>4 · Représentativité</b><p>Ce que le jeu représente et ce qu'il ne représente pas. Qui manque.</p></div>
+      <div><b>5 · Qualité</b><p>Données manquantes, limites connues, décalage éventuel de la source.</p></div>
+      <div><b>6 · Usages</b><p>Usages prévus et usages interdits, explicitement.</p></div>
+      <div><b>7 · Éthique</b><p>Données personnelles, base légale, règles applicables.</p></div>
+      <div><b>8 · Versions</b><p>Journal des modifications, jeu par jeu.</p></div>
+      <div><b>9 · Engagement</b><p>Une erreur signalée est corrigée à la version suivante.</p></div>
+    </div>
+    <p class="d-note" style="margin-top:1rem">
+      <a href="donnees-confiance.html">Lire la charte de confiance et de méthode →</a> ·
+      <a href="donnees-pack-geo-haiti.html">Voir une fiche produit complète →</a>
+    </p>
+  </div>
+</section>
+
+<!-- PROGRAMMES -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">Les programmes</p>
+    <h2 class="d-h">Trois programmes qui font tenir le modèle</h2>
+    <div class="d-doors" style="margin-top:1.2rem">
+      <a class="d-door amber" href="donnees-campus.html">
+        <h3>Atmart Campus <span class="d-pill spons">Pilote</span></h3>
+        <p>L'accès académique vérifié : packs mémoire par discipline, quotas, guides méthodologiques,
+          règles de citation. La gratuité y est encadrée, jamais indifférenciée.</p>
+        <span class="go">Demander un accès →</span>
+      </a>
+      <a class="d-door amber" href="donnees-parrainage.html">
+        <h3>Parrainer un dataset <span class="d-pill spons">Ouvert</span></h3>
+        <p>Une banque, une ONG, un ministère ou une fondation finance l'ouverture d'un jeu de données —
+          qui devient accessible à toute une cohorte d'étudiants ou de chercheurs.</p>
+        <span class="go">Voir les jeux parrainables →</span>
+      </a>
+      <a class="d-door" href="datasets.html#shelf-soon">
+        <h3>Observatoires Atmart <span class="d-pill soon">En préparation</span></h3>
+        <p>Des produits récurrents et publics sur des thèmes à forte utilité : prix des marchés,
+          territoires, emploi, inclusion financière. Premier observatoire visé pour 2027.</p>
+        <span class="go">Voir la feuille de route →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSPARENCE -->
+<section class="d-sec">
+  <div class="container">
+    <div class="d-box amber">
+      <h3>Où en est réellement le catalogue</h3>
+      <p>
+        Nous appliquons une règle simple, y compris à nous-mêmes : <strong>on ne met en vente que ce qu'on peut
+        livrer aujourd'hui.</strong> Le catalogue affiche donc trois états — <span class="d-pill live">Disponible</span>
+        <span class="d-pill spons">Parrainable</span> <span class="d-pill soon">En préparation</span> — et jamais
+        un bouton « Acheter » sur un fichier qui n'existe pas encore.
+      </p>
+      <p>
+        Au 31 juillet 2026 : <strong>1 jeu en vente</strong> (Pack Géo Haïti),
+        <strong>6 ressources gratuites</strong> — dont les quatre référentiels maîtres du Backbone
+        et le registre des sources — et <strong>5 jeux en préparation</strong>, tous parrainables.
+        Tous portent sur Haïti : les jeux régionaux et africains sont retirés du catalogue jusqu'à
+        la deuxième année.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">Trajectoire</p>
+    <h2 class="d-h">Haïti d'abord, la région ensuite</h2>
+    <p class="d-sub">
+      L'extension régionale n'est pas une diversification : c'est la réplication d'une méthode déjà éprouvée
+      sur un terrain difficile.
+    </p>
+    <ol class="d-steps">
+      <li><b>Phase 1 — poser le backbone (0–6 mois).</b> Référentiel territoire stabilisé ✓, référentiels temps et indicateurs, standards de fiche et règles de version, registre des sources et matrice juridique ✓, cadre d'accès académique ✓, offres parrainables ✓.</li>
+      <li><b>Phase 2 — les produits piliers (6–12 mois).</b> Profil des 140 communes, premier registre scolaire géocodé, premier registre sanitaire versionné, panel mensuel des marchés, base macrofinancière harmonisée, premières licences et premiers parrainages.</li>
+      <li><b>Phase 3 — industrialiser, puis seulement étendre (12–24 mois).</b> Croisements multi-sources, accessibilité aux services, packs sectoriels, conventions universitaires. La réplication de la méthode vers la Caraïbe puis l'Afrique francophone ne commence qu'après la première année, une fois Haïti couvert.</li>
+    </ol>
+    <p class="d-note" style="margin-top:0.9rem">
+      L'ordre n'est pas décoratif : publier un registre scolaire avant d'avoir stabilisé le territoire,
+      c'est se condamner à le refaire. <a href="donnees-backbone.html#portefeuille">Le portefeuille en 5 couches →</a>
+    </p>
+  </div>
+</section>
+
+<!-- POUR ALLER PLUS LOIN -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">Pour aller plus loin</p>
+    <h2 class="d-h">Les quatre pages de méthode</h2>
+    <p class="d-sub" style="margin-bottom:1.2rem">
+      Elles ne sont plus au menu — six entrées suffisent pour travailler. Elles restent ici,
+      pour qui veut vérifier comment tout cela est construit.
+    </p>
+    <div class="d-doors">
+      <a class="d-door" href="donnees-systeme.html">
+        <h3>🗺 La carte du système</h3>
+        <p>Les quatre étages — sources, backbone, registres, produits — sur une page,
+          filtrable selon votre situation.</p>
+        <span class="go">Voir la carte →</span>
+      </a>
+      <a class="d-door" href="donnees-backbone.html">
+        <h3>🧱 Le Backbone</h3>
+        <p>Les quatre référentiels maîtres, le schéma commun, les statuts de valeur et les
+          douze produits à reconstruire.</p>
+        <span class="go">Voir la méthode →</span>
+      </a>
+      <a class="d-door" href="donnees-confiance.html">
+        <h3>🛡 Confiance &amp; méthode</h3>
+        <p>Politique de sourcing, contrôles avant publication, versions, corrections, licences
+          et données personnelles.</p>
+        <span class="go">Lire la charte →</span>
+      </a>
+      <a class="d-door" href="https://atmart.ltd/outils.html">
+        <h3>🧰 Outils &amp; sources</h3>
+        <p>Les outils que nous utilisons et les portails où trouver des données publiques
+          sur Haïti.</p>
+        <span class="go">Voir la liste →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="d-sec" style="padding-bottom:3rem">
+  <div class="container">
+    <div class="banner">
+      <h2>Dites-nous ce que vous devez décider</h2>
+      <p>
+        Un besoin précis, un territoire, une échéance : nous répondons en indiquant ce qui existe déjà,
+        ce qui se prépare, et ce que cela coûterait de le construire. Réponse sous 48 h ouvrées.
+      </p>
+      <div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
+        <a href="donnees-solutions.html#contact" class="btn btn-primary">Décrire mon besoin</a>
+        <a href="datasets.html" class="btn btn-outline">Parcourir le catalogue</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem">Un produit <a href="https://atmart.ltd/">Atmart Data</a> — des données sourcées, datées, vérifiables sur les 140 communes d'Haïti.</p>
+      </div>
+      <div>
+        <h4>Données</h4>
+        <ul>
+          <li><a href="datasets.html">Catalogue</a></li>
+          <li><a href="donnees.html">Comment ça marche</a></li>
+          <li><a href="donnees-backbone.html">Définitions &amp; méthodes</a></li>
+          <li><a href="donnees-systeme.html">La carte du système</a></li>
+          <li><a href="donnees-confiance.html">Confiance &amp; méthode</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte et sans traceur.</div>
+  </div>
+</footer>
+
+<script src="assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+</body>
+</html>

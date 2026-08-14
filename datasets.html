@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+  <title>Catalogue des jeux de données — Atmart Data</title>
+  <meta name="description" content="Jeux de données économiques, géographiques, sociaux et financiers sur Haïti — sourcés, nettoyés, documentés, avec leur fiche de données et leur licence. Année 1 : Haïti exclusivement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="assets/style.css?v=31" />
+  <link rel="stylesheet" href="assets/data.css?v=18" />
+  <link rel="canonical" href="https://explorateur.atmart.ltd/datasets.html" />
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>les données d'Atmart</small></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li class="nav-grp"><span>🗂 Données</span>
+        <ul class="nav-sub">
+          <li><a href="/">Explorateur Haïti <small>chercher une commune</small></a></li>
+          <li><a href="datasets.html">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-solutions.html">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
+          <li><a href="donnees-campus.html">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+          <li><a href="donnees-parrainage.html">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
+          <li><a href="donnees.html">Comment ça marche <small>méthode, sources, système</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" style="padding:3.2rem 0 2rem">
+  <div class="container">
+    <p class="kreyol" data-i18n="ds.kicker">Done ki pwòp, dokimante, pare pou analiz.</p>
+    <h1 data-i18n-html="ds.title">Le <em>catalogue</em></h1>
+    <p class="lead" data-i18n-html="ds.lead">
+      Chaque jeu de données arrive avec sa source, sa date, son dictionnaire de variables, ses limites
+      connues et sa licence. Trois états, affichés sans détour :
+      <span class="d-pill live">Disponible</span> ·
+      <span class="d-pill spons">Parrainable</span> ·
+      <span class="d-pill soon">En préparation</span>.
+      Nous ne mettons pas de bouton « Acheter » sur un fichier qui n'existe pas encore.
+    </p>
+    <p class="d-note" style="margin-top:0.8rem">
+      <strong>Année 1 : Haïti exclusivement.</strong> Tout ce qui figure ici porte sur Haïti.
+      Les jeux régionaux et africains reviendront en deuxième année, une fois le pays couvert.
+    </p>
+    <p class="d-note" style="margin-top:0.5rem" data-i18n-html="ds.hero_note">
+      Vous cherchez plutôt une solution complète pour votre organisation ?
+      <a href="donnees-solutions.html">Voir les packs décisionnels et les licences →</a>
+    </p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="filters" data-target="#data-grid-free,#data-grid-paid,#data-grid-soon">
+      <button class="filter-btn active" data-filter="all" data-i18n="ds.f_all">Tout</button>
+      <button class="filter-btn" data-filter="economie" data-i18n="ds.f_eco">💰 Économie</button>
+      <button class="filter-btn" data-filter="geo" data-i18n="ds.f_geo">🗺 Géographie</button>
+      <button class="filter-btn" data-filter="social" data-i18n="ds.f_soc">👥 Social</button>
+      <button class="filter-btn" data-filter="finance" data-i18n="ds.f_fin">📈 Finance</button>
+      <button class="filter-btn" data-filter="guide" data-i18n="ds.f_gui">📘 Guides</button>
+    </div>
+
+    <!-- ===== GRATUITS ===== -->
+    <div class="shelf" id="shelf-free">
+      <div class="shelf-head">
+        <h2 data-i18n="ds.free_h">🎁 Gratuits — servez-vous</h2>
+        <p data-i18n="ds.free_p">Téléchargement immédiat, sans compte et sans e-mail. Chaque fichier arrive avec sa documentation. Licence CC BY 4.0 : citez la source, et c'est à vous.</p>
+      </div>
+      <div class="grid grid-3" id="data-grid-free">
+
+        <div class="card" data-cat="economie gratuit">
+          <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+          <h3 data-i18n="ds.c2_h">Transferts de la diaspora vers Haïti (2000–2024)</h3>
+          <p data-i18n="ds.c2_p">Ce que la diaspora envoie chaque année, en dollars et en part du PIB. Le sommet est atteint en 2020 à 22,45 % du PIB ; en 2024, 4,1 milliards de dollars, soit 16,3 %. Source : Banque mondiale.</p>
+          <p class="price" data-i18n-html="ds.c2_pr">0 $ <small>CSV • 26 lignes • 25 années renseignées</small></p>
+          <p class="meta" data-i18n-html="ds.c2_meta">💰 Économie • Haïti • Niveau de confiance A • <a href="data/LISEZMOI_transferts_diaspora.md">documentation</a></p>
+          <a href="data/transferts_diaspora_haiti_2000_2025.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+        </div>
+
+        <div class="card" data-cat="geo gratuit">
+          <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+          <h3 data-i18n="ds.c11_h">Échantillon — sections communales d'Haïti</h3>
+          <p data-i18n="ds.c11_p">Dix sections communales avec p-codes OCHA, superficie et coordonnées GPS : exactement la structure du Pack Géo, pour juger avant d'acheter.</p>
+          <p class="price" data-i18n-html="ds.c11_pr">0 $ <small>CSV • 10 lignes • 13 colonnes</small></p>
+          <p class="meta" data-i18n-html="ds.c11_meta">🗺 Géographie • Extrait du <a href="donnees-pack-geo-haiti.html">Pack Géo Haïti</a></p>
+          <a href="data/ECHANTILLON_haiti_sections_gps.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+        </div>
+
+        <div class="card" data-cat="geo gratuit">
+          <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+          <h3 data-i18n-html="ds.c13_h">Référentiel territorial Haïti — base <span class="badge-new">NOUVO</span></h3>
+          <p data-i18n="ds.c13_p">Les 10 départements, 42 arrondissements et 140 communes d'Haïti avec identifiant Atmart stable, p-code OCHA, noms en français et en kreyòl, chef-lieu, superficie et coordonnées. La clé de jointure à mettre dans vos propres bases.</p>
+          <p class="price" data-i18n-html="ds.c13_pr">0 $ <small>CSV • 192 lignes • 23 colonnes</small></p>
+          <p class="meta" data-i18n-html="ds.c13_meta">🗺 Géographie • Couche ouverte du <a href="donnees-backbone.html">Backbone</a> • Source : CNIGS via OCHA</p>
+          <a href="data/atmart_referentiel_territoire_base_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+        </div>
+
+        <div class="card" data-cat="guide gratuit">
+          <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+          <h3 data-i18n="ds.c14_h">Registre des sources Atmart</h3>
+          <p data-i18n="ds.c14_p">Pour chaque source que nous exploitons : organisme, URL, licence, classe juridique, couverture, fréquence et date de dernière vérification. Ce que nous avons le droit de publier, et ce que nous n'avons pas le droit de publier.</p>
+          <p class="price" data-i18n-html="ds.c14_pr">0 $ <small>CSV • mis à jour en continu</small></p>
+          <p class="meta" data-i18n-html="ds.c14_meta">📘 Méthode • <a href="donnees-backbone.html#juridique">la matrice juridique A→E</a></p>
+          <a href="data/atmart_registre_sources.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+        </div>
+
+        <div class="card" data-cat="social gratuit">
+          <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+          <h3 data-i18n-html="ds.c16_h">Indicateurs des 140 communes <span class="badge-new">NOUVO</span></h3>
+          <p data-i18n-html="ds.c16_p"><span data-mf="nombre_valeurs_sourcees">2 949</span> valeurs calculées sur les 140 communes : superficie, sections, localités, population, <strong>densité de population</strong>, établissements de santé, écoles, marchés et score de complétude administrative. Livré avec son dictionnaire : méthode de calcul, comparabilité, limites et sens d'interprétation pour chacun des <span data-mf="nombre_indicateurs_definis">32</span> indicateurs définis.</p>
+          <p class="price" data-i18n-html="ds.c16_pr">0 $ <small>2 CSV • <span data-mf="nombre_valeurs_sourcees">2 949</span> valeurs • <span data-mf="nombre_indicateurs_definis">32</span> définitions</small></p>
+          <p class="meta" data-i18n-html="ds.c16_meta">📊 4<sup>e</sup> référentiel maître du <a href="donnees-backbone.html#indicateurs">Backbone</a> • <span data-mf="nombre_absences_documentees">1 251</span> valeurs déclarées non disponibles plutôt que mises à zéro</p>
+          <a href="data/atmart_indicateurs_communes_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+        </div>
+
+        <div class="card" data-cat="economie gratuit">
+          <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+          <h3 data-i18n-html="ds.c15_h">Référentiel temps Haïti <span class="badge-new">NOUVO</span></h3>
+          <p data-i18n-html="ds.c15_p">1 201 périodes de 1971 à 2030 : annuel, semestriel, trimestriel, mensuel — et l'<strong>exercice fiscal haïtien</strong>, du 1<sup>er</sup> octobre au 30 septembre. Chaque mois connaît son trimestre, son exercice budgétaire et son statut de fraîcheur. Libellés en français et en kreyòl.</p>
+          <p class="price" data-i18n-html="ds.c15_pr">0 $ <small>CSV • 1 201 lignes • 24 colonnes</small></p>
+          <p class="meta" data-i18n-html="ds.c15_meta">📅 Temps • 2<sup>e</sup> référentiel maître du <a href="donnees-backbone.html#temps">Backbone</a> • table de dates prête pour Power BI</p>
+          <a href="data/atmart_referentiel_temps_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== EN VENTE ===== -->
+    <div class="shelf" id="shelf-paid">
+      <div class="shelf-head">
+        <h2 data-i18n="ds.paid_h">🛒 En vente — livrables aujourd'hui</h2>
+        <p data-i18n="ds.paid_p">Collectés, nettoyés et documentés à la main. Paiement unique, téléchargement immédiat par carte ou PayPal, licence écrite.</p>
+      </div>
+      <div class="why">
+        <p class="why-lead" data-i18n="ds.why_lead">Le gratuit sert à apprendre. Le payant sert à livrer.</p>
+        <table class="why-tab">
+          <thead><tr><th></th>
+            <th data-i18n="ds.why_free">Gratuit</th>
+            <th data-i18n="ds.why_paid">En vente</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n="ds.why_r1">Ce que vous ouvrez</td>
+              <td data-i18n="ds.why_r1f">Un CSV brut</td>
+              <td data-i18n="ds.why_r1p">Plusieurs fichiers assemblés, prêts pour Excel, Power BI et QGIS</td></tr>
+            <tr><td data-i18n="ds.why_r2">Portée</td>
+              <td data-i18n="ds.why_r2f">Un indicateur, pour s'exercer</td>
+              <td data-i18n="ds.why_r2p">Séries et référentiels complets, jusqu'à 11 655 lignes géolocalisées</td></tr>
+            <tr><td data-i18n="ds.why_r3">Comprendre les colonnes</td>
+              <td data-i18n="ds.why_r3f">Un fichier LISEZMOI</td>
+              <td data-i18n="ds.why_r3p">Dictionnaire de variables : chaque colonne, son unité, sa source</td></tr>
+            <tr><td data-i18n="ds.why_r4">Cartographie</td>
+              <td data-i18n="ds.why_r4f">—</td>
+              <td data-i18n="ds.why_r4p">GeoJSON prêt pour Power BI et QGIS, p-codes officiels OCHA</td></tr>
+            <tr><td data-i18n="ds.why_r5">Le travail déjà fait</td>
+              <td data-i18n="ds.why_r5f">À vous de nettoyer et de croiser</td>
+              <td data-i18n="ds.why_r5p">Sources croisées, unités harmonisées, limites connues écrites</td></tr>
+            <tr><td data-i18n="ds.why_r6">Usage</td>
+              <td data-i18n="ds.why_r6f">Apprentissage, tutoriels</td>
+              <td data-i18n="ds.why_r6p">Licence d'utilisation : mémoire, rapport client, publication</td></tr>
+          </tbody>
+        </table>
+        <p class="why-note" data-i18n="ds.why_note">Le calcul est simple : nettoyer et documenter une de ces séries à la main prend deux à trois jours de travail. C'est ce que vous achetez — pas les chiffres, qui sont souvent publics, mais le temps.</p>
+      </div>
+      <div class="grid grid-3" id="data-grid-paid">
+
+        <div class="card" data-cat="geo">
+          <span class="tag amber" data-i18n="ds.t_prem">Premium</span>
+          <h3 data-i18n-html="ds.c4_h">Pack Géo Haïti — toutes les coordonnées GPS</h3>
+          <p data-i18n-html="ds.c4_p"><strong>570 sections communales</strong> + <strong>140 villes chefs-lieux</strong> + <strong>10 945 lieux habités</strong>, tous nommés en français <strong>et en kreyòl</strong>, avec les p-codes officiels OCHA, superficies et coordonnées WGS84. Chaque lieu habité est rattaché à sa section communale. GeoJSON des trois niveaux inclus pour Power BI et QGIS.</p>
+          <p class="price" data-i18n-html="ds.c4_pr">29 $ <small>3 CSV + 3 GeoJSON + documentation</small></p>
+          <p class="meta" data-i18n-html="ds.c4_meta">🗺 Géographie • v2 • Source : CNIGS via OCHA + GeoNames • <a href="donnees-pack-geo-haiti.html">fiche complète, provenance des noms et limites connues</a></p>
+          <a href="donnees-pack-geo-haiti.html" class="btn btn-primary" data-i18n="ds.c4_cta">Voir la fiche &amp; acheter</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== EN PRÉPARATION ===== -->
+    <div class="shelf" id="shelf-soon">
+      <div class="shelf-head">
+        <h2 data-i18n="ds.soon_h">🧭 En préparation — et parrainables</h2>
+        <p data-i18n-html="ds.soon_p">
+          Sources identifiées, méthode écrite : il manque le financement du travail de préparation.
+          Une institution peut <a href="donnees-parrainage.html">parrainer l'ouverture</a> d'un de ces jeux —
+          il devient alors accessible gratuitement à toute une cohorte d'étudiants et de chercheurs.
+        </p>
+      </div>
+      <div class="grid grid-3" id="data-grid-soon">
+
+        <div class="card" data-cat="geo social economie">
+          <span class="d-pill spons" data-i18n="ds.pill_spons">Parrainable</span>
+          <h3 data-i18n-html="ds.s0_h">Profil des 140 communes d'Haïti <span class="badge-new">PRIORITÉ 1</span></h3>
+          <p data-i18n="ds.s0_p">Une fiche standardisée par commune : identité territoriale, population, superficie, localités, écoles, établissements sanitaires, marchés, routes, exposition aux risques, dix indicateurs socio-économiques — chacun avec sa source et son score de qualité. Le premier produit qui exploite le Backbone de bout en bout.</p>
+          <p class="price" data-i18n-html="ds.s0_pr">≈ 6 000 $ <small>coût de construction · Excel + GeoJSON + Power BI + fiches PDF</small></p>
+          <p class="meta" data-i18n-html="ds.s0_meta">🗺 Transversal • S'appuie sur le <a href="donnees-backbone.html">référentiel territoire</a> déjà publié</p>
+          <a href="donnees-parrainage.html#catalogue" class="btn btn-outline" data-i18n="ds.spons_cta">Parrainer ce jeu</a>
+        </div>
+
+        <div class="card" data-cat="economie">
+          <span class="d-pill spons" data-i18n="ds.pill_spons">Parrainable</span>
+          <h3 data-i18n="ds.s1_h">Prix des produits de base — marchés haïtiens (2018–2025)</h3>
+          <p data-i18n="ds.s1_p">Riz, haricots, maïs, huile, carburant : relevés de prix par marché et par mois. La base d'une analyse sérieuse de l'inflation alimentaire.</p>
+          <p class="price" data-i18n-html="ds.s1_pr">≈ 2 500 $ <small>coût d'ouverture · + 1 200 $/an de mise à jour</small></p>
+          <p class="meta" data-i18n-html="ds.s1_meta">💰 Économie • Sources identifiées : CNSA, FEWS NET</p>
+          <a href="donnees-parrainage.html#catalogue" class="btn btn-outline" data-i18n="ds.spons_cta">Parrainer ce jeu</a>
+        </div>
+
+        <div class="card" data-cat="economie finance">
+          <span class="d-pill spons" data-i18n="ds.pill_spons">Parrainable</span>
+          <h3 data-i18n="ds.s2_h">Indicateurs économiques Haïti (2000–2025)</h3>
+          <p data-i18n="ds.s2_p">PIB, inflation, taux de change gourde/USD, importations et exportations sur 25 ans, harmonisés entre sources.</p>
+          <p class="price" data-i18n-html="ds.s2_pr">≈ 2 000 $ <small>coût d'ouverture</small></p>
+          <p class="meta" data-i18n-html="ds.s2_meta">💰 Économie • Sources identifiées : Banque mondiale, FMI, BRH</p>
+          <a href="donnees-parrainage.html#catalogue" class="btn btn-outline" data-i18n="ds.spons_cta">Parrainer ce jeu</a>
+        </div>
+
+        <div class="card" data-cat="social">
+          <span class="d-pill spons" data-i18n="ds.pill_spons">Parrainable</span>
+          <h3 data-i18n="ds.s3_h">Éducation en Haïti — indicateurs par département</h3>
+          <p data-i18n="ds.s3_p">Scolarisation, alphabétisation et dépenses publiques par département : le socle des mémoires en sciences de l'éducation.</p>
+          <p class="price" data-i18n-html="ds.s3_pr">≈ 2 500 $ <small>coût d'ouverture</small></p>
+          <p class="meta" data-i18n-html="ds.s3_meta">👥 Social • Sources identifiées : MENFP, UNESCO UIS, Banque mondiale</p>
+          <a href="donnees-parrainage.html#catalogue" class="btn btn-outline" data-i18n="ds.spons_cta">Parrainer ce jeu</a>
+        </div>
+
+        <div class="card" data-cat="social">
+          <span class="d-pill spons" data-i18n="ds.pill_spons">Parrainable</span>
+          <h3 data-i18n="ds.s4_h">Santé publique — indicateurs par département</h3>
+          <p data-i18n="ds.s4_p">Couverture, mortalité, personnel et infrastructures de santé, avec les dénominateurs de population correspondants.</p>
+          <p class="price" data-i18n-html="ds.s4_pr">≈ 3 000 $ <small>coût d'ouverture</small></p>
+          <p class="meta" data-i18n-html="ds.s4_meta">👥 Social • Sources identifiées : MSPP, OMS/OPS, EMMUS</p>
+          <a href="donnees-parrainage.html#catalogue" class="btn btn-outline" data-i18n="ds.spons_cta">Parrainer ce jeu</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COMMENT ÇA MARCHE -->
+    <div class="banner" style="margin-top:3rem">
+      <h2 data-i18n="ds.how_h">Comment ça marche ?</h2>
+      <p data-i18n-html="ds.how_p">Paiement sécurisé par carte ou PayPal via Payhip — téléchargement immédiat. Chaque jeu inclut sa documentation (sources, dictionnaire de variables, limites connues, licence). <strong>En Haïti, sans carte bancaire ?</strong> Écrivez-nous pour payer par MonCash : <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a> — le lien de téléchargement est envoyé sous 24 h.</p>
+      <div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
+        <a href="donnees-confiance.html" class="btn btn-outline" data-i18n="ds.how_b1">Comment nous garantissons la qualité</a>
+        <a href="donnees-campus.html" class="btn btn-outline" data-i18n="ds.how_b2">Étudiant ou chercheur : accès gratuit</a>
+        <a href="mailto:sales@atmart.ltd?subject=Demande%20de%20dataset%20sur%20mesure" class="btn btn-outline" data-i18n="ds.how_cta">Demander un dataset sur mesure</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem">Un produit <a href="https://atmart.ltd/">Atmart Data</a> — des données sourcées, datées, vérifiables sur les 140 communes d'Haïti.</p>
+      </div>
+      <div>
+        <h4>Données</h4>
+        <ul>
+          <li><a href="datasets.html">Catalogue</a></li>
+          <li><a href="donnees.html">Comment ça marche</a></li>
+          <li><a href="donnees-backbone.html">Définitions &amp; méthodes</a></li>
+          <li><a href="donnees-systeme.html">La carte du système</a></li>
+          <li><a href="donnees-confiance.html">Confiance &amp; méthode</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte et sans traceur.</div>
+  </div>
+</footer>
+
+<script src="assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+</body>
+</html>

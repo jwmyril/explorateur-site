@@ -2179,6 +2179,18 @@
     document.addEventListener("click", function (e) {
       var b = e.target.closest("[data-id]");
       if (b) {
+        /* Depuis l'onglet Comparer, un resultat de recherche s'AJOUTE a la
+           comparaison au lieu d'ouvrir sa fiche : c'est ce que le texte d'aide
+           promet, et renvoyer l'utilisateur vers la fiche lui faisait perdre
+           l'onglet et croire la comparaison impossible. */
+        if (ongletActif === "comparaison" && b.classList.contains("x-res")) {
+          ajouterComparaison(b.dataset.id);
+          rendreComparaison(); majURL();
+          $("#x-resultats").hidden = true; champ.value = "";
+          var oc = document.querySelector('[data-onglet="comparaison"]');
+          if (oc) oc.click();
+          return;
+        }
         /* L'utilisateur a choisi un territoire : la fiche n'est plus un exemple. */
         montrerAccueil = false;
         fiche(b.dataset.id);

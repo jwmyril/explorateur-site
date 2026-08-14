@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+  <title>La carte du système — tout Atmart Data sur une page | Atmart Data</title>
+  <meta name="description" content="Les quatre couches d'Atmart Data — sources, backbone, registres et séries, produits décisionnels — sur une seule page, filtrable selon que vous êtes une entreprise, une ONG, une administration, un chercheur, un sponsor ou simplement curieux." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="assets/style.css?v=31" />
+  <link rel="stylesheet" href="assets/data.css?v=18" />
+  <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-systeme.html" />
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>les données d'Atmart</small></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li class="nav-grp"><span>🗂 Données</span>
+        <ul class="nav-sub">
+          <li><a href="/">Explorateur Haïti <small>chercher une commune</small></a></li>
+          <li><a href="datasets.html">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-solutions.html">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
+          <li><a href="donnees-campus.html">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+          <li><a href="donnees-parrainage.html">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
+          <li><a href="donnees.html">Comment ça marche <small>méthode, sources, système</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" style="padding:3rem 0 1.4rem">
+  <div class="container">
+    <p class="kreyol">Tout bagay la, sou yon sèl paj.</p>
+    <h1>La carte du <em>système</em></h1>
+    <p class="lead">
+      Atmart Data n'est pas une collection de fichiers : c'est un empilement.
+      Les sources autorisent, le backbone relie, les registres accumulent, les produits décident.
+      Chaque étage ne tient que par celui du dessous — et chaque profil n'entre pas au même étage.
+    </p>
+    <p class="d-note" style="margin-top:0.9rem;max-width:70ch">
+      <strong>Année 1 : Haïti exclusivement.</strong> Un seul pays, traité en profondeur, plutôt que
+      dix survolés. La Caraïbe et l'Afrique francophone viendront quand la méthode aura fait ses
+      preuves ici.
+    </p>
+  </div>
+</section>
+
+<section style="padding-top:0.5rem">
+  <div class="container">
+
+    <p class="d-lbl">Filtrer selon qui vous êtes</p>
+    <div class="sys-filter" id="profils">
+      <button class="filter-btn active" data-p="tout">Tout afficher</button>
+      <button class="filter-btn" data-p="entreprise">🏢 Entreprise</button>
+      <button class="filter-btn" data-p="ong">🌍 ONG &amp; bailleur</button>
+      <button class="filter-btn" data-p="admin">🏛 Administration</button>
+      <button class="filter-btn" data-p="recherche">🎓 Chercheur &amp; étudiant</button>
+      <button class="filter-btn" data-p="sponsor">🤝 Sponsor</button>
+      <button class="filter-btn" data-p="public">👥 Grand public</button>
+    </div>
+    <p class="sys-note">Le filtre atténue ce qui ne vous concerne pas — rien n'est caché, tout reste vérifiable.</p>
+
+    <div class="sys-path" id="parcours"></div>
+
+    <div class="sys-legend">
+      <span><i style="background:#2ec4b6"></i> Disponible aujourd'hui</span>
+      <span><i style="background:#f4a261"></i> Partiel — couverture déclarée</span>
+      <span><i style="background:#e63946"></i> À financer ou à construire</span>
+    </div>
+
+    <!-- ================= COUCHE 0 ================= -->
+    <div class="sys-layer">
+      <div class="sys-head">
+        <div class="num">00</div>
+        <h2>Les sources</h2>
+        <p>Ce que nous avons le droit d'utiliser, et sous quelles conditions. Rien n'entre sans classement juridique.</p>
+      </div>
+      <div class="sys-cards">
+        <a class="sys-card live" href="data/atmart_registre_sources.csv" download data-p="entreprise ong admin recherche sponsor public">
+          <span class="d-pill live">Publié</span>
+          <h3>Registre des sources</h3>
+          <p>Organisme, URL, licence, couverture, fréquence, date de dernière vérification.</p>
+          <span class="vol"><span data-mf="nombre_sources">23</span> sources · <span data-mf="nombre_sources_integrees">6</span> intégrées · CSV libre</span>
+        </a>
+        <a class="sys-card live" href="donnees-backbone.html#juridique" data-p="entreprise ong admin recherche sponsor">
+          <span class="d-pill live">Publié</span>
+          <h3>Matrice juridique A → E</h3>
+          <p><span data-mf="nombre_sources_classe_a">7</span> sources redistribuables, <span data-mf="nombre_sources_classe_b">6</span> en agrégats seulement, <span data-mf="nombre_sources_classe_c">9</span> sur inscription sans redistribution, <span data-mf="nombre_sources_classe_d">1</span> sous convention.</p>
+          <span class="vol">Accessible ≠ revendable</span>
+        </a>
+        <a class="sys-card partiel" href="donnees-backbone.html#organisations" data-p="entreprise ong admin recherche sponsor">
+          <span class="d-pill spons">Écarté</span>
+          <h3>OpenStreetMap (ODbL)</h3>
+          <p>Plus récent et national, mais le partage à l'identique interdit son usage dans un produit propriétaire.</p>
+          <span class="vol">Décision tracée · SRC-012</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ================= COUCHE 1 ================= -->
+    <div class="sys-layer">
+      <div class="sys-head">
+        <div class="num">01</div>
+        <h2>Le Backbone</h2>
+        <p>Les quatre référentiels maîtres. Sans identifiants communs, aucune source ne se croise.</p>
+      </div>
+      <div class="sys-cards">
+        <a class="sys-card live" href="donnees-backbone.html#territoire" data-p="entreprise ong admin recherche sponsor public">
+          <span class="d-pill live">v1 publié</span>
+          <h3>🗺 Territoire</h3>
+          <p>Département › arrondissement › commune › section › localité, avec identifiant Atmart immuable.</p>
+          <span class="vol"><span data-mf="nombre_entites_territoriales">11 707</span> entités</span>
+        </a>
+        <a class="sys-card live" href="donnees-backbone.html#temps" data-p="entreprise admin recherche">
+          <span class="d-pill live">v1 publié</span>
+          <h3>📅 Temps</h3>
+          <p>Cinq fréquences de 1971 à 2030, dont l'exercice fiscal haïtien du 1<sup>er</sup> octobre au 30 septembre.</p>
+          <span class="vol">1 201 périodes</span>
+        </a>
+        <a class="sys-card partiel" href="donnees-backbone.html#organisations" data-p="ong admin recherche sponsor">
+          <span class="d-pill spons">v1 partiel</span>
+          <h3>🏫 Organisations</h3>
+          <p>Santé, écoles, marchés — rattachés au territoire. Couverture des sources déclarée sans détour.</p>
+          <span class="vol">5 029 entités</span>
+        </a>
+        <a class="sys-card live" href="donnees-backbone.html#indicateurs" data-p="entreprise ong admin recherche public">
+          <span class="d-pill live">v1 publié</span>
+          <h3>📊 Indicateurs</h3>
+          <p>Définition, méthode, comparabilité, limites. Le dictionnaire qui empêche deux chiffres de se contredire.</p>
+          <span class="vol">17 définitions</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ================= COUCHE 2 ================= -->
+    <div class="sys-layer">
+      <div class="sys-head">
+        <div class="num">02</div>
+        <h2>Registres &amp; séries</h2>
+        <p>Ce qui s'accumule au-dessus du socle. Chaque registre complété augmente la valeur de tous les autres.</p>
+      </div>
+      <div class="sys-cards">
+        <a class="sys-card live" href="donnees-pack-geo-haiti.html" data-p="entreprise ong admin recherche">
+          <span class="d-pill live">En vente</span>
+          <h3>Pack Géo Haïti v2</h3>
+          <p>Le référentiel complet avec géométries : 570 sections, 140 villes, 10 945 lieux, 3 GeoJSON.</p>
+          <span class="vol">29 $ · échantillon libre</span>
+        </a>
+        <a class="sys-card live" href="data/atmart_indicateurs_communes_HT.csv" download data-p="entreprise ong admin recherche public">
+          <span class="d-pill live">Publié</span>
+          <h3>Indicateurs communaux</h3>
+          <p>Superficie, localités, santé, écoles, marchés et score de complétude, sur les 140 communes.</p>
+          <span class="vol"><span data-mf="nombre_valeurs_sourcees">2 949</span> valeurs · libre</span>
+        </a>
+        <a class="sys-card finance" href="donnees-parrainage.html#catalogue" data-p="ong admin recherche sponsor">
+          <span class="d-pill spons">Parrainable</span>
+          <h3>Registre scolaire national</h3>
+          <p>Passer de 49 à 140 communes, avec géocodage, effectifs et identifiants stables.</p>
+          <span class="vol">≈ 2 500 $ d'ouverture</span>
+        </a>
+        <a class="sys-card finance" href="donnees-parrainage.html#catalogue" data-p="ong admin recherche sponsor">
+          <span class="d-pill spons">Parrainable</span>
+          <h3>Registre sanitaire national</h3>
+          <p>Passer de 14 à 140 communes, avec capacité, services et géocodage complet.</p>
+          <span class="vol">≈ 3 000 $ d'ouverture</span>
+        </a>
+        <a class="sys-card finance" href="donnees-parrainage.html#catalogue" data-p="entreprise ong sponsor public">
+          <span class="d-pill spons">Parrainable</span>
+          <h3>Prix &amp; marchés</h3>
+          <p>Panel mensuel harmonisé : produit, marché, unité normalisée, prix réel, volatilité.</p>
+          <span class="vol">≈ 2 500 $ + 1 200 $/an</span>
+        </a>
+        <a class="sys-card finance" href="donnees-parrainage.html#catalogue" data-p="entreprise admin recherche sponsor">
+          <span class="d-pill spons">Parrainable</span>
+          <h3>Macro &amp; budget</h3>
+          <p>Change, IPC, monnaie, exécution budgétaire — alignés sur l'exercice fiscal, pas l'année civile.</p>
+          <span class="vol">≈ 2 000 $ d'ouverture</span>
+        </a>
+        <a class="sys-card finance" href="donnees-backbone.html#indicateurs" data-p="ong admin recherche sponsor">
+          <span class="d-pill soon">Bloqué</span>
+          <h3>Population par commune</h3>
+          <p>Le dénominateur de presque tout. Sans lui, aucun ratio par habitant n'est calculable.</p>
+          <span class="vol">Dépend de l'IHSI</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ================= COUCHE 3 ================= -->
+    <div class="sys-layer">
+      <div class="sys-head">
+        <div class="num">03</div>
+        <h2>Produits décisionnels</h2>
+        <p>Ce qui se vend et ce qui s'ouvre. La valeur commerciale commence ici.</p>
+      </div>
+      <div class="sys-cards">
+        <a class="sys-card live" href="donnees-solutions.html#packs" data-p="entreprise ong admin">
+          <span class="d-pill live">Sur devis</span>
+          <h3>Packs décisionnels</h3>
+          <p>Implantation, ciblage, diagnostic, étude de marché, suivi de programme, benchmark.</p>
+          <span class="vol">6 packs · 250 – 1 500 $</span>
+        </a>
+        <a class="sys-card live" href="donnees-solutions.html#licences" data-p="entreprise ong admin">
+          <span class="d-pill live">Disponible</span>
+          <h3>Licences</h3>
+          <p>Découverte, académique, professionnelle, institutionnelle, sponsorisée, premium.</p>
+          <span class="vol">6 niveaux de droits</span>
+        </a>
+        <a class="sys-card live" href="donnees-campus.html" data-p="recherche sponsor">
+          <span class="d-pill live">Pilote</span>
+          <h3>Atmart Campus</h3>
+          <p>Accès académique vérifié, packs mémoire par discipline, règles de citation.</p>
+          <span class="vol">8 disciplines visées</span>
+        </a>
+        <a class="sys-card live" href="donnees-parrainage.html" data-p="sponsor admin ong">
+          <span class="d-pill live">Ouvert</span>
+          <h3>Parrainer un dataset</h3>
+          <p>Financer l'ouverture d'un jeu utile à toute une promotion. Le parrain finance une capacité, jamais une conclusion.</p>
+          <span class="vol">5 formules</span>
+        </a>
+        <a class="sys-card live" href="datasets.html#shelf-free" data-p="public recherche">
+          <span class="d-pill live">Gratuit</span>
+          <h3>La couche ouverte</h3>
+          <p>Référentiels de base, indicateurs communaux, registre des sources, transferts de la diaspora vers Haïti.</p>
+          <span class="vol">6 ressources libres</span>
+        </a>
+        <a class="sys-card finance" href="donnees-parrainage.html#catalogue" data-p="entreprise ong admin sponsor">
+          <span class="d-pill spons">Priorité 1</span>
+          <h3>Profil des 140 communes</h3>
+          <p>Une fiche par commune, transversale à tous les publics. Le premier produit qui exploite tout le backbone.</p>
+          <span class="vol">≈ 6 000 $</span>
+        </a>
+        <a class="sys-card finance" href="donnees-backbone.html#packs" data-p="ong admin sponsor">
+          <span class="d-pill soon">Couche 4</span>
+          <h3>Accessibilité aux services</h3>
+          <p>Temps de trajet jusqu'à l'école, la clinique, le marché. Le produit le plus difficile à reproduire.</p>
+          <span class="vol">Après les registres</span>
+        </a>
+        <a class="sys-card finance" href="donnees-backbone.html#packs" data-p="entreprise ong admin public">
+          <span class="d-pill soon">Couche 5</span>
+          <h3>Observatoires</h3>
+          <p>Produits récurrents et publics : prix, territoires, emploi, inclusion financière.</p>
+          <span class="vol">12–24 mois</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="d-box" style="margin-bottom:2.6rem">
+      <h3>La règle qui tient l'ensemble</h3>
+      <p>
+        On ne saute pas d'étage. Publier un registre scolaire avant d'avoir stabilisé le territoire, c'est
+        se condamner à le refaire ; calculer un ratio par habitant sans population, c'est publier un chiffre
+        qu'on ne pourra pas défendre. C'est pourquoi certaines cases restent rouges : elles ne sont pas
+        oubliées, elles attendent leur étage.
+      </p>
+      <p>
+        <a href="donnees-backbone.html">La méthode en détail →</a> ·
+        <a href="datasets.html">Le catalogue →</a> ·
+        <a href="donnees-solutions.html#contact">Décrire un besoin →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem">Un produit <a href="https://atmart.ltd/">Atmart Data</a> — des données sourcées, datées, vérifiables sur les 140 communes d'Haïti.</p>
+      </div>
+      <div>
+        <h4>Données</h4>
+        <ul>
+          <li><a href="datasets.html">Catalogue</a></li>
+          <li><a href="donnees.html">Comment ça marche</a></li>
+          <li><a href="donnees-backbone.html">Définitions &amp; méthodes</a></li>
+          <li><a href="donnees-systeme.html">La carte du système</a></li>
+          <li><a href="donnees-confiance.html">Confiance &amp; méthode</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte et sans traceur.</div>
+  </div>
+</footer>
+
+<script src="assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+<script>
+(function () {
+  "use strict";
+  var PARCOURS = {
+    tout: ["Les quatre étages, sans filtre",
+           "Les sources disent ce qui est permis. Le backbone donne les identifiants communs. Les registres accumulent la matière. Les produits transforment tout cela en décision. Choisissez un profil pour voir votre chemin."],
+    entreprise: ["Votre chemin : territoire → Pack Géo → pack décisionnel",
+                 "Vous partez du référentiel territoire pour joindre vos propres données aux communes d'Haïti, vous achetez le Pack Géo pour les géométries, puis vous commandez un pack décisionnel calé sur votre question — implantation, ciblage ou étude de marché. Le référentiel temps vous évite le piège de comparer un budget à une année civile."],
+    ong: ["Votre chemin : territoire → registres → ciblage",
+          "Les p-codes officiels vous permettent de joindre vos bases de bénéficiaires à celles de vos partenaires. Les registres santé et écoles sont aujourd'hui partiels : c'est précisément là que le parrainage change la donne. Le score de complétude vous dit où vos analyses seront fragiles avant que vous ne les fassiez."],
+    admin: ["Votre chemin : backbone complet → licence institutionnelle",
+            "Un référentiel territorial partagé par tous vos services, un calendrier qui respecte l'exercice fiscal, un dictionnaire d'indicateurs qui empêche deux directions de calculer différemment. La licence institutionnelle couvre les accès multiples, les mises à jour et le support."],
+    recherche: ["Votre chemin : couche ouverte → Campus → citation",
+                "Tout le socle est gratuit et citable. Atmart Campus ouvre l'accès aux jeux complets pour un mémoire ou une thèse, avec les règles de citation et les guides méthodologiques. Le dictionnaire d'indicateurs vous donne les définitions à reprendre telles quelles dans votre méthodologie."],
+    sponsor: ["Votre chemin : choisir un angle mort → le financer → le voir servir",
+              "Les cases rouges sont votre terrain : registres incomplets, séries fermées, population manquante. Vous financez l'ouverture d'un jeu de données ; il devient accessible à toute une promotion d'étudiants et de chercheurs. Vous recevez un rapport d'usage, jamais un droit de regard sur les conclusions."],
+    public: ["Votre chemin : ce qui est gratuit, et qui le restera",
+             "Le référentiel de base, les indicateurs communaux, le registre des sources et les transferts de la diaspora sont libres, sous CC BY 4.0. Le score de complétude administrative vous montre ce que l'on sait — et ne sait pas — de votre commune."]
+  };
+  var cartes = [].slice.call(document.querySelectorAll(".sys-card"));
+  var boutons = [].slice.call(document.querySelectorAll("#profils .filter-btn"));
+  var zone = document.getElementById("parcours");
+
+  function appliquer(p) {
+    var t = PARCOURS[p] || PARCOURS.tout;
+    zone.innerHTML = "<b>" + t[0] + "</b><p>" + t[1] + "</p>";
+    cartes.forEach(function (c) {
+      var concerne = p === "tout" || (" " + c.dataset.p + " ").indexOf(" " + p + " ") > -1;
+      c.classList.toggle("dim", !concerne);
+    });
+    boutons.forEach(function (b) { b.classList.toggle("active", b.dataset.p === p); });
+    try { history.replaceState(null, "", p === "tout" ? location.pathname : "?profil=" + p); } catch (e) {}
+  }
+
+  boutons.forEach(function (b) {
+    b.addEventListener("click", function () { appliquer(b.dataset.p); });
+  });
+
+  var initial = (location.search.match(/profil=([a-z]+)/) || [])[1];
+  appliquer(PARCOURS[initial] ? initial : "tout");
+})();
+</script>
+</body>
+</html>

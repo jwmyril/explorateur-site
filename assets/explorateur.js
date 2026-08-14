@@ -1341,7 +1341,10 @@
   function chargerServices() {
     if (svcPromesse) return svcPromesse;
     svcPromesse = Promise.all([
-      charger(DIR + "atmart_annuaire_professionnels_HT.csv", 1).catch(function () { return null; }),
+      /* Dénombrement, pas annuaire : décision du 14/08/2026 — on publie
+         combien de notaires et d'arpenteurs par commune, jamais les noms,
+         adresses ou téléphones de personnes physiques compilés du web. */
+      charger(DIR + "atmart_professions_communes_HT.csv", 1).catch(function () { return null; }),
       charger(DIR + "atmart_presence_organisations_HT.csv", 1).catch(function () { return null; }),
       charger(DIR + "atmart_registre_ong_HT.csv", 1).catch(function () { return null; }),
       charger(DIR + "atmart_infrastructures_communes_HT.csv", 1).catch(function () { return null; })
@@ -1402,21 +1405,19 @@
                TF("Services et organisations — {nom}", { nom: esc(nomT(r)) }) + "</h3>",
                '<div class="x-mesures">'];
 
+      var nPro = 0;
       var corpsPro = pro.length
-        ? '<div class="x-tabwrap"><table class="x-tab"><thead><tr><th scope="col">' +
-          T("Nom") + '</th><th scope="col">' + T("Profession") + '</th><th scope="col">' +
-          T("Contact") + '</th><th scope="col">' + T("Fiabilité de la fiche") + "</th></tr></thead><tbody>" +
-          pro.map(function (p) {
-            return "<tr><td>" + esc(p.nom) + "</td><td>" + esc(p.sous_categorie) + "</td><td>" +
-              esc([p.adresse, p.telephones, p.courriel].filter(Boolean).join(" · ") || "—") +
-              "</td><td>" + esc(p.fiabilite_source || "—") + "</td></tr>";
-          }).join("") + "</tbody></table></div>"
-        : "<p>" + T("Aucun professionnel recensé ici dans la compilation — qui couvre environ la moitié des quelque 1 500 notaires et arpenteurs du pays.") + "</p>";
+        ? "<p>" + pro.map(function (p) {
+            nPro += nb(p.effectif) || 0;
+            return "<b>" + fmt(nb(p.effectif), "") + "</b> " + esc(p.profession.toLowerCase()) +
+                   (nb(p.effectif) > 1 ? "s" : "");
+          }).join(" · ") + "</p>"
+        : "<p>" + T("Aucun professionnel dans nos sources pour cette commune — ce qui ne veut pas dire aucun sur le territoire : la compilation couvre environ la moitié des quelque 1 500 notaires et arpenteurs du pays, sur 55 communes.") + "</p>";
       h.push(sectionServices(
-        TN({ one: "{n} notaire ou arpenteur recensé",
-             other: "{n} notaires et arpenteurs recensés" }, pro.length, { n: pro.length }),
+        TN({ one: "{n} notaire ou arpenteur dénombré",
+             other: "{n} notaires et arpenteurs dénombrés" }, nPro, { n: nPro }),
         corpsPro,
-        T("Compilation de sources web (août 2026), non recoupée avec le registre officiel du MJSP, qui n'est pas publié. La fiabilité affichée est celle de chaque fiche — vérifiez avant tout acte.")));
+        T("Dénombrement issu d'une compilation de sources web (août 2026), non recoupée avec le registre officiel du MJSP, qui n'est pas publié. Les noms ne sont pas publiés : un décideur a besoin de savoir s'il y a un notaire, pas de son téléphone.")));
 
       var corpsOrg = orgs.length
         ? '<div class="x-tabwrap"><table class="x-tab"><thead><tr><th scope="col">' +
@@ -1488,7 +1489,7 @@
       h.push("</div>");
       h.push('<p class="x-note">' +
         T("Trois annuaires, trois niveaux de confiance — chaque section porte le sien.") + " " +
-        '<a href="' + DIR + 'atmart_annuaire_professionnels_HT.csv" download>' + T("Professionnels (CSV)") + "</a> · " +
+        '<a href="' + DIR + 'atmart_professions_communes_HT.csv" download>' + T("Professions dénombrées (CSV)") + "</a> · " +
         '<a href="' + DIR + 'atmart_presence_organisations_HT.csv" download>' + T("Présence 3W (CSV)") + "</a> · " +
         '<a href="' + DIR + 'atmart_registre_ong_HT.csv" download>' + T("ONG du registre (CSV)") + "</a> · " +
         '<a href="' + DIR + 'atmart_infrastructures_communes_HT.csv" download>' + T("Infrastructures (CSV)") + "</a></p>");

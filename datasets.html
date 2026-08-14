@@ -175,7 +175,7 @@
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_sources.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "25267"
+       "contentSize": "25354"
       }
      ],
      "isBasedOn": "Atmart"
@@ -334,8 +334,8 @@
      "@type": "Dataset",
      "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-009",
      "identifier": "PRD-009",
-     "name": "Référentiel organisations & infrastructures",
-     "description": "Écoles, établissements de santé et marchés, avec identifiant stable, nom normalisé et rattachement territorial. Les couvertures sont très inégales et c'est écrit dans le fichier : les marchés couvrent 136 communes et sont tous géolocalisés, la santé n'en couvre que 14, l'éducation 49 et sans aucune coordonnée.",
+     "name": "Registre des marchés d'Haïti",
+     "description": "Les marchés recensés, avec identifiant stable, nom normalisé, rattachement à la section communale et coordonnées. C'est la famille dont la couverture tient : 136 communes sur 140, et toutes les fiches sont géolocalisées.",
      "url": "https://explorateur.atmart.ltd/donnees-backbone.html#organisations",
      "creator": {
       "@id": "https://explorateur.atmart.ltd/#organisation"
@@ -358,9 +358,9 @@
      "distribution": [
       {
        "@type": "DataDownload",
-       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_referentiel_organisations_HT.csv",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_marches_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "3354971"
+       "contentSize": "95507"
       },
       {
        "@type": "DataDownload",
@@ -369,7 +369,7 @@
        "contentSize": "81466"
       }
      ],
-     "isBasedOn": "MSPP, MENFP, WFP, OCHA"
+     "isBasedOn": "WFP, OCHA"
     },
     {
      "@type": "Dataset",
@@ -480,8 +480,8 @@
      "@type": "Dataset",
      "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-013",
      "identifier": "PRD-013",
-     "name": "Annuaire des professions juridiques et foncières",
-     "description": "Notaires et arpenteurs, avec leur rattachement territorial. Attention à ce que ce fichier est : il nomme des personnes physiques et porte leurs coordonnées professionnelles, compilées depuis des sources de fiabilité inégale — certaines officielles, d'autres commerciales. Chaque ligne porte sa source et son degré de vérification : lisez-les avant de vous en servir.",
+     "name": "Professions juridiques et foncières par commune",
+     "description": "Combien de notaires et d'arpenteurs sont recensés dans chaque commune. Le dénombrement seul : aucun nom, aucune adresse, aucun téléphone. Un zéro veut dire « aucun dans nos sources », jamais « aucun sur le territoire » — 55 communes sur 140 sont couvertes.",
      "url": "https://explorateur.atmart.ltd/donnees-backbone.html#organisations",
      "creator": {
       "@id": "https://explorateur.atmart.ltd/#organisation"
@@ -504,12 +504,12 @@
      "distribution": [
       {
        "@type": "DataDownload",
-       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_annuaire_professionnels_HT.csv",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_professions_communes_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "344189"
+       "contentSize": "65046"
       }
      ],
-     "isBasedOn": "Sources multiples — fiabilité déclarée ligne par ligne"
+     "isBasedOn": "Sources compilées, hors registre professionnel officiel"
     },
     {
      "@type": "Dataset",
@@ -541,7 +541,7 @@
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_infrastructures_communes_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "229569"
+       "contentSize": "230074"
       }
      ],
      "isBasedOn": "Sources déclarées ligne par ligne"
@@ -573,6 +573,105 @@
      "offers": {
       "@type": "Offer",
       "price": "29",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://explorateur.atmart.ltd/donnees-pack-geo-haiti.html"
+     },
+     "isBasedOn": "CNIGS via OCHA ; GeoNames"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-102",
+     "identifier": "PRD-102",
+     "name": "Registre des écoles d'Haïti",
+     "description": "4 117 établissements scolaires, publics et non publics, rattachés à leur commune. Couverture partielle et assumée : 49 communes sur 140, aucune coordonnée GPS. Le prix en tient compte.",
+     "url": "https://explorateur.atmart.ltd/donnees-registres.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Social",
+      "Haïti"
+     ],
+     "isAccessibleForFree": false,
+     "offers": {
+      "@type": "Offer",
+      "price": "19",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://explorateur.atmart.ltd/donnees-registres.html"
+     },
+     "isBasedOn": "MENFP, OCHA"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-103",
+     "identifier": "PRD-103",
+     "name": "Registre des établissements de santé",
+     "description": "730 établissements — hôpitaux, centres, dispensaires — rattachés à leur section communale, dont 480 géolocalisés. Couverture de 14 communes sur 140 : c'est peu, c'est écrit, et le prix le reflète.",
+     "url": "https://explorateur.atmart.ltd/donnees-registres.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Social",
+      "Haïti"
+     ],
+     "isAccessibleForFree": false,
+     "offers": {
+      "@type": "Offer",
+      "price": "15",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://explorateur.atmart.ltd/donnees-registres.html"
+     },
+     "isBasedOn": "MSPP, OCHA"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-104",
+     "identifier": "PRD-104",
+     "name": "Pack Géo — un département",
+     "description": "La part du Pack Géo qui concerne un seul département : sections, chefs-lieux, lieux habités et polygones. Pour qui ne travaille que sur un territoire.",
+     "url": "https://explorateur.atmart.ltd/donnees-pack-geo-haiti.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Géographie",
+      "Haïti"
+     ],
+     "isAccessibleForFree": false,
+     "offers": {
+      "@type": "Offer",
+      "price": "9",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "url": "https://explorateur.atmart.ltd/donnees-pack-geo-haiti.html"
@@ -721,14 +820,14 @@
 <p class="meta" data-i18n-html="ds.c18_meta">💰 Économie • Source : WFP — VAM Food Prices • la série se lit aussi dans <a href="index.html">l'Explorateur</a></p>
 <a href="data/atmart_prix_marches_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
 </div>
-<div class="card" data-cat="social gratuit">
+<div class="card" data-cat="economie gratuit">
 <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-<h3 data-i18n-html="ds.c19_h">Référentiel organisations &amp; infrastructures <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c19_p">Écoles, établissements de santé et marchés : identifiant stable, nom normalisé, nom d'origine et rattachement territorial. <strong>Les couvertures sont très inégales, et c'est écrit dans le fichier</strong> — les <span data-mf="nombre_marches">182</span> marchés couvrent <span data-mf="communes_couvertes_marches">136</span> communes et sont tous géolocalisés ; la santé n'en couvre que <span data-mf="communes_couvertes_sante">14</span>, l'éducation <span data-mf="communes_couvertes_ecoles">49</span>, et sans aucune coordonnée.</p>
-<p class="price" data-i18n-html="ds.c19_pr">0 $ <small>CSV + GeoJSON • <span data-mf="nombre_organisations">5 029</span> entités • 30 colonnes</small></p>
-<p class="meta" data-i18n-html="ds.c19_meta">🏫 Infrastructures • <span data-mf="nombre_ecoles">4 117</span> écoles · <span data-mf="nombre_etablissements_sante">730</span> établissements de santé · <span data-mf="nombre_marches">182</span> marchés • Sources : MENFP, MSPP, WFP, OCHA</p>
-<a href="data/atmart_referentiel_organisations_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
-<a href="data/atmart_marches_HT.geojson" download class="btn btn-outline">Marchés en GeoJSON</a>
+<h3 data-i18n-html="ds.c19_h">Registre des marchés d'Haïti <span class="badge-new">NOUVO</span></h3>
+<p data-i18n-html="ds.c19_p">Les marchés recensés : identifiant stable, nom normalisé, rattachement à la section communale et coordonnées. <strong>C'est la famille dont la couverture tient</strong> — <span data-mf="communes_couvertes_marches">136</span> communes sur <span data-mf="nombre_communes">140</span>, et toutes les fiches sont géolocalisées.</p>
+<p class="price" data-i18n-html="ds.c19_pr">0 $ <small>CSV + GeoJSON • <span data-mf="nombre_marches">182</span> marchés</small></p>
+<p class="meta" data-i18n-html="ds.c19_meta">🏪 Infrastructures • Sources : WFP, OCHA</p>
+<a href="data/atmart_registre_marches_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+<a href="data/atmart_marches_HT.geojson" download class="btn btn-outline">GeoJSON</a>
 </div>
 <div class="card" data-cat="economie gratuit">
 <span class="tag" data-i18n="ds.t_free">Gratuit</span>
@@ -819,7 +918,31 @@
         </div>
 
       </div>
-    </div>
+    <div class="card" data-cat="social payant">
+<span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
+<h3 data-i18n-html="ds.c25_h">Registre des écoles d'Haïti</h3>
+<p data-i18n-html="ds.c25_p"><span data-mf="nombre_ecoles">4 117</span> établissements scolaires, publics et non publics, rattachés à leur commune. <strong>Couverture partielle et assumée</strong> : <span data-mf="communes_couvertes_ecoles">49</span> communes sur <span data-mf="nombre_communes">140</span>, et aucune coordonnée GPS. Le prix en tient compte.</p>
+<p class="price" data-i18n-html="ds.c25_pr">19 $ <small>CSV • paiement unique</small></p>
+<p class="meta" data-i18n-html="ds.c25_meta">🏫 Social • Sources : MENFP, OCHA • niveau de confiance C</p>
+<a href="donnees-registres.html#ecoles" class="btn btn-primary">Voir ce qu'il contient</a>
+</div>
+<div class="card" data-cat="social payant">
+<span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
+<h3 data-i18n-html="ds.c26_h">Registre des établissements de santé</h3>
+<p data-i18n-html="ds.c26_p"><span data-mf="nombre_etablissements_sante">730</span> établissements — hôpitaux, centres, dispensaires — rattachés à leur section communale, dont 480 géolocalisés. <strong>Couverture de <span data-mf="communes_couvertes_sante">14</span> communes sur <span data-mf="nombre_communes">140</span></strong> : c'est peu, c'est écrit, et le prix le reflète.</p>
+<p class="price" data-i18n-html="ds.c26_pr">15 $ <small>CSV • paiement unique</small></p>
+<p class="meta" data-i18n-html="ds.c26_meta">🏥 Social • Sources : MSPP, OCHA • niveau de confiance C</p>
+<a href="donnees-registres.html#sante" class="btn btn-primary">Voir ce qu'il contient</a>
+</div>
+<div class="card" data-cat="geographie payant">
+<span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
+<h3 data-i18n-html="ds.c27_h">Pack Géo — un seul département</h3>
+<p data-i18n-html="ds.c27_p">La part du Pack Géo qui concerne un département : sections communales, chef-lieu, lieux habités et polygones. Pour qui ne travaille que sur un territoire. <strong>Le pays entier reste l'affaire</strong> — dix départements séparés coûtent 90 $, le pack complet 29 $.</p>
+<p class="price" data-i18n-html="ds.c27_pr">9 $ <small>par département • paiement unique</small></p>
+<p class="meta" data-i18n-html="ds.c27_meta">🗺 Géographie • Source : CNIGS via OCHA ; GeoNames</p>
+<a href="donnees-pack-geo-haiti.html#departement" class="btn btn-primary">Choisir un département</a>
+</div>
+</div>
 
     <!-- ===== EN PRÉPARATION ===== -->
     <div class="shelf" id="shelf-soon">

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+  <title>Registres scolaire et sanitaire — Atmart Data</title>
+  <meta name="description" content="Les registres des établissements scolaires et de santé d'Haïti : ce qu'ils contiennent, ce qu'ils ne couvrent pas, et leur prix." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="assets/style.css?v=32" />
+  <link rel="stylesheet" href="assets/data.css?v=25" />
+  <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-registres.html" />
+
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>les données d'Atmart</small></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li class="nav-grp"><span>🗂 Données</span>
+        <ul class="nav-sub">
+          <li><a href="/">Explorateur Haïti <small>chercher une commune</small></a></li>
+          <li><a href="datasets.html">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-solutions.html">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
+          <li><a href="donnees-campus.html">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+          <li><a href="donnees-parrainage.html">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
+          <li><a href="donnees.html">Comment ça marche <small>méthode, sources, système</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+<section class="hero" style="padding:3rem 0 1.6rem">
+<div class="container">
+<p class="kreyol">Sa nou genyen, ak sa nou poko genyen.</p>
+<h1>Registres <em>scolaire</em> et <em>sanitaire</em></h1>
+<p class="lead">
+Deux registres d'établissements, rattachés au découpage administratif officiel.
+<strong>Lisez leur couverture avant leur prix</strong> : ils ne couvrent pas le
+pays. C'est écrit ici, dans le fichier, et sur chaque fiche du catalogue —
+parce qu'un acheteur qui découvre la limite après l'achat a été trompé.
+</p>
+</div>
+</section>
+
+<section class="d-sec">
+<div class="container">
+<h2 class="d-h">Ce que chaque registre couvre réellement</h2>
+<p class="d-sub" style="margin-bottom:1.2rem">
+Les comptes ci-dessous sont calculés dans les fichiers, jamais saisis à la main.
+</p>
+<div class="x-tableau" tabindex="0"><table class="d-tab">
+<thead><tr><th scope="col">Registre</th><th scope="col">Fiches</th><th scope="col">Communes couvertes</th><th scope="col">Géolocalisées</th><th scope="col">Prix</th></tr></thead>
+<tbody>
+<tr><th scope="row">Écoles</th><td><span data-mf="nombre_ecoles">4 117</span></td><td><span data-mf="communes_couvertes_ecoles">49</span> sur <span data-mf="nombre_communes">140</span></td><td>aucune</td><td class="p">19 $</td></tr>
+<tr><th scope="row">Santé</th><td><span data-mf="nombre_etablissements_sante">730</span></td><td><span data-mf="communes_couvertes_sante">14</span> sur <span data-mf="nombre_communes">140</span></td><td>480 sur 730</td><td class="p">15 $</td></tr>
+</tbody>
+</table></div>
+</div>
+</section>
+
+<section class="d-sec" id="ecoles">
+<div class="container">
+<p class="d-lbl">Registre scolaire</p>
+<h2 class="d-h"><span data-mf="nombre_ecoles">4 117</span> établissements, <span data-mf="communes_couvertes_ecoles">49</span> communes</h2>
+<p class="d-sub">
+Établissements publics et non publics, avec identifiant stable Atmart, nom
+normalisé, nom tel qu'il figure à la source, statut, et rattachement au
+département et à la commune.
+</p>
+<p class="d-sub"><strong>Ce que ce registre n'a pas</strong> : aucune coordonnée
+GPS, aucun rattachement à la section communale, et 91 communes ne sont pas
+couvertes du tout. Le degré de vérification est C sur la totalité des fiches.
+C'est précisément le travail que le <a href="donnees-parrainage.html#catalogue">parrainage
+du registre scolaire géocodé</a> financerait.</p>
+</div>
+</section>
+
+<section class="d-sec" id="sante">
+<div class="container">
+<p class="d-lbl">Registre sanitaire</p>
+<h2 class="d-h"><span data-mf="nombre_etablissements_sante">730</span> établissements, <span data-mf="communes_couvertes_sante">14</span> communes</h2>
+<p class="d-sub">
+Hôpitaux, centres de santé avec et sans lit, dispensaires. Tous rattachés à leur
+section communale — un niveau de précision que le registre scolaire n'a pas — et
+480 portent des coordonnées vérifiées.
+</p>
+<p class="d-sub"><strong>Ce que ce registre n'a pas</strong> : 126 communes sur
+140 n'y figurent pas. Quatorze communes, c'est un dixième du pays. Utilisez-le
+pour ce qu'il est — un point de départ documenté sur les territoires couverts —
+et jamais pour conclure qu'une commune absente n'a pas d'établissement.</p>
+</div>
+</section>
+
+<section class="d-sec" id="acheter">
+<div class="container">
+<p class="d-lbl">Acheter</p>
+<h2 class="d-h">Comment se procurer un registre</h2>
+<p class="d-sub">
+Écrivez-nous en indiquant le registre voulu. <strong>Nous envoyons le lien de
+paiement et le fichier sous 24 h</strong> — c'est le même engagement que pour
+MonCash. Le paiement automatique par carte sera ouvert dès que la demande le
+justifie ; annoncer un bouton qui ne mène nulle part serait pire que ce délai.
+</p>
+<div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1.2rem">
+<a href="donnees-solutions.html?produit=registre-scolaire#demande" class="btn btn-primary">Commander le registre scolaire — 19 $</a>
+<a href="donnees-solutions.html?produit=registre-sanitaire#demande" class="btn btn-primary">Commander le registre sanitaire — 15 $</a>
+<a href="donnees-solutions.html?produit=registres-les-deux#demande" class="btn btn-outline">Les deux — 29 $</a>
+</div>
+<p class="d-note" style="margin-top:0.9rem">
+La commande passe par le formulaire, qui arrive chez Atmart et vous laisse une
+trace. Si vous préférez écrire vous-même :
+<a href="mailto:sales@atmart.ltd?subject=Commande%20registre">sales@atmart.ltd</a>.
+</p>
+<p class="d-note" style="margin-top:1.2rem">
+Les deux registres se vendent aussi ensemble, à 29 $ — le prix du Pack Géo
+complet, et moins que les 34 $ des deux pris séparément.
+</p>
+</div>
+</section>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem">Un produit <a href="https://atmart.ltd/">Atmart Data</a> — des données sourcées, datées, vérifiables sur les 140 communes d'Haïti.</p>
+      </div>
+      <div>
+        <h4>Données</h4>
+        <ul>
+          <li><a href="datasets.html">Catalogue</a></li>
+          <li><a href="donnees.html">Comment ça marche</a></li>
+          <li><a href="donnees-backbone.html">Définitions &amp; méthodes</a></li>
+          <li><a href="donnees-systeme.html">La carte du système</a></li>
+          <li><a href="donnees-confiance.html">Confiance &amp; méthode</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte et sans traceur.</div>
+  </div>
+</footer>
+
+<script src="assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+</body>
+</html>

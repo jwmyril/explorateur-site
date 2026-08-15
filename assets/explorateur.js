@@ -17,7 +17,7 @@
   /* Version des donnees. A incrementer des qu'un fichier de data/ est
      regenere : sinon le cache du navigateur sert l'ancien fichier et
      l'interface affiche du perime sans le savoir. */
-  var DV = "?d=2026-08-14a";
+  var DV = "?d=2026-08-15a";
   var F = {
     terr: DIR + (ADMIN ? "atmart_referentiel_territoire_HT.csv"
                        : "atmart_referentiel_territoire_base_HT.csv"),
@@ -2513,22 +2513,33 @@
         (ADMIN ? " · " + TF("{n} organisations",
           { n: orgs.length.toLocaleString(LOCALE[LANG]) }) : "");
     }
-    compteurs();
-    var mc = $("#x-couv-corps");
-    if (mc) mc.innerHTML = matriceCouverture();
-    var cv = $("#x-couverture");
-    if (cv) {
-      cv.innerHTML = TF(
-        /* « en vigueur » laissait entendre que le millésime 2018 est le
-           découpage légal d'aujourd'hui. Il est le référentiel que cette
-           édition retient, parce qu'il est le seul à fournir des codes de
-           jointure et des géométries — ce n'est pas la même affirmation. */
-        "Le référentiel territorial CNIGS 2018 retenu pour cette édition compte {decompte}. D'autres référentiels haïtiens, dont les estimations démographiques récentes de l'IHSI, en dénombrent davantage.",
+    /* Le bandeau de couverture et la matrice etaient ecrits une seule fois, au
+       demarrage : changer de langue les laissait dans la precedente — du
+       francais au milieu du kreyol, juste sous la barre de recherche. Ils
+       deviennent une fonction, appelee ici ET par redessiner().
+
+       « en vigueur » laissait entendre que le millesime 2018 est le decoupage
+       legal d'aujourd'hui. Il est le referentiel que cette edition retient,
+       parce qu'il est le seul a fournir des codes de jointure et des
+       geometries — ce n'est pas la meme affirmation.
+
+       Ce commentaire vivait entre TF( et sa chaine : verif_i18n_explorateur ne
+       relevait alors pas la phrase, elle n'etait jamais comptee manquante,
+       donc jamais traduite, et l'audit affichait 100 %. Rien ne doit se
+       glisser entre l'appel et son premier argument. */
+    function rendreCouverture() {
+      var mc = $("#x-couv-corps");
+      if (mc) mc.innerHTML = matriceCouverture();
+      var cv = $("#x-couverture");
+      if (!cv) return;
+      cv.innerHTML = TF("Le référentiel territorial CNIGS 2018 retenu pour cette édition compte {decompte}. D'autres référentiels haïtiens, dont les estimations démographiques récentes de l'IHSI, en dénombrent davantage.",
         { decompte: "<b>" + TF("{dep} départements, {arr} arrondissements et {com} communes",
             { dep: nDep, arr: nArr, com: nCom }) + "</b>" }) +
         ' <button class="x-lien" id="x-pourquoi">' +
         T("Pourquoi ce nombre varie-t-il ?") + "</button>";
     }
+    compteurs();
+    rendreCouverture();
 
     var sel = $("#x-indicateur"), dispo = {};
     vals.forEach(function (v) { dispo[v.indicateur_id] = 1; });
@@ -2798,6 +2809,7 @@
     function redessiner() {
       remplirIndicateurs();
       compteurs();
+      rendreCouverture();
       classement(sel.value);
       rendreComparaison();
       if (courant) fiche(courant.atmart_geo_id);

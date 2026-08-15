@@ -1460,14 +1460,15 @@
         (parFam[l.famille] = parFam[l.famille] || []).push(l);
       });
       var FAMILLES = [
-        ["eau_wpdx", "Points d'eau (WPdx)", "Relevés de terrain Haiti Outreach et partenaires (CC BY-SA) — couverture concentrée dans le Nord et le Centre : un zéro ailleurs dit l'absence de relevé, pas l'absence d'eau."],
-        ["eau_osm", "Eau potable (OSM)", "Points « eau potable » d'OpenStreetMap (ODbL) — cartographie contributive, complète nulle part."],
-        ["carburant", "Stations-service (OSM)", "Objets « fuel » d'OpenStreetMap (ODbL, extrait HOT du 06/08/2026)."],
-        ["finance", "Banques et transferts (OSM)", "Banques, guichets, agences de transfert et bureaux de change cartographiés dans OpenStreetMap (ODbL)."],
-        ["routes", "Routes (OSM)", "Longueurs par type, chaque tronçon affecté à la commune de son point médian — ordre de grandeur, pas un cadastre (~100 m de tolérance aux limites)."],
-        ["lieux_habites", "Lieux habités (OSM)", "Villes, bourgs, villages, hameaux et habitats isolés typés dans OpenStreetMap — le référentiel CNIGS du socle reste la source des localités officielles."],
-        ["electricite", "Électricité (OSM)", "L'OSM haïtien ne recense que 74 objets électriques dans tout le pays (14/08/2026) : ce comptage dit surtout ce qui n'est pas cartographié. Aucune carte officielle ouverte du réseau EDH n'existe."],
-        ["mobile", "Antennes mobiles (OpenCelliD)", "7 antennes recensées dans TOUT le pays (14/08/2026) : la base participative est quasi vide pour Haïti — ce chiffre mesure la participation, pas le réseau. Digicel et Natcom couvrent bien davantage ; leurs cartes ne sont pas ouvertes."]
+        ["eau_wpdx", T("Points d'eau (WPdx)"), T("Relevés de terrain Haiti Outreach et partenaires (CC BY-SA) — couverture concentrée dans le Nord et le Centre : un zéro ailleurs dit l'absence de relevé, pas l'absence d'eau.")],
+        ["eau_osm", T("Eau potable (OSM)"), T("Points « eau potable » d'OpenStreetMap (ODbL) — cartographie contributive, complète nulle part.")],
+        ["carburant", T("Stations-service (OSM)"), T("Objets « fuel » d'OpenStreetMap (ODbL, extrait HOT du 06/08/2026).")],
+        ["finance", T("Banques et transferts (OSM)"), T("Banques, guichets, agences de transfert et bureaux de change cartographiés dans OpenStreetMap (ODbL).")],
+        ["routes", T("Routes (OSM)"), T("Longueurs par type, chaque tronçon affecté à la commune de son point médian — ordre de grandeur, pas un cadastre (~100 m de tolérance aux limites).")],
+        ["lieux_habites", T("Lieux habités (OSM)"), T("Villes, bourgs, villages, hameaux et habitats isolés typés dans OpenStreetMap — le référentiel CNIGS du socle reste la source des localités officielles.")],
+        ["electricite", T("Électricité (OSM)"), T("L'OSM haïtien ne recense que 74 objets électriques dans tout le pays (14/08/2026) : ce comptage dit surtout ce qui n'est pas cartographié. Aucune carte officielle ouverte du réseau EDH n'existe.")],
+        ["mobile", T("Antennes mobiles (OpenCelliD)"), T("7 antennes recensées dans TOUT le pays (14/08/2026) : la base participative est quasi vide pour Haïti — ce chiffre mesure la participation, pas le réseau. Digicel et Natcom couvrent bien davantage ; leurs cartes ne sont pas ouvertes.")],
+        ["telecom", T("Équipements télécom par opérateur (OSM)"), T("Pylônes et mâts de communication, boutiques mobiles, bureaux d'opérateur et accès internet cartographiés dans OpenStreetMap (ODbL, Overpass du 15/08/2026), rattachés à Digicel, Natcom, Voilà ou Access Haiti quand la source les nomme. Ce n'est PAS le parc des opérateurs : ni Digicel, ni Natcom, ni le CONATEL ne le publient. 498 équipements dans 81 communes sur 140 — une commune sans point n'est pas une commune sans couverture.")]
       ];
       var corpsInfra = FAMILLES.map(function (fdef) {
         var lgs = parFam[fdef[0]];
@@ -1475,8 +1476,12 @@
         var morceaux = lgs.map(function (l) {
           return esc(l.sous_type) + " : " + fmt(nb(l.valeur), l.unite === "km" ? "km" : "");
         }).join(" · ");
-        return "<p><b>" + T(fdef[1]) + ".</b> " + morceaux +
-               ' <span class="x-mill">— ' + T(fdef[2]) + "</span></p>";
+        /* fdef[1] et fdef[2] sont deja traduits : la table les enveloppe
+           dans T() a sa construction, ce qui les rend visibles au releve
+           statique. Les repasser par T() ici chercherait la traduction
+           d'une traduction. */
+        return "<p><b>" + fdef[1] + ".</b> " + morceaux +
+               ' <span class="x-mill">— ' + fdef[2] + "</span></p>";
       }).filter(Boolean).join("");
       h.push(sectionServices(
         infra.length

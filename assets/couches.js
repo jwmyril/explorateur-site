@@ -61,6 +61,17 @@
                  transfert: { c: "#ffbe0b", l: "agence de transfert" },
                  change: { c: "#fb5607", l: "bureau de change" },
                  poste: { c: "#8338ec", l: "bureau de poste" } }, prop: "t" },
+    /* Télécom : la couleur porte l'OPÉRATEUR, parce que c'est la question
+       posée — où sont Digicel, Natcom et les autres. Voilà a été absorbé par
+       Digicel en 2012 : les objets qui portent encore ce nom ne sont pas
+       réaffectés, réécrire la source serait une interprétation. */
+    { id: "telecom", nom: "Équipements télécom par opérateur (OSM)", type: "points",
+      geojson: "data/atmart_couche_telecom_HT.geojson",
+      classes: { D: { c: "#e63946", l: "Digicel" }, N: { c: "#3a86ff", l: "Natcom" },
+                 V: { c: "#8338ec", l: "Voilà (absorbé par Digicel en 2012)" },
+                 A: { c: "#2ec4b6", l: "Access Haiti" },
+                 "?": { c: "#8d99ae", l: "opérateur non précisé" } }, prop: "o",
+      limite: "Équipements présents dans OpenStreetMap — pylônes et mâts de communication, boutiques, bureaux d'opérateur, accès internet. Ce n'est pas le parc des opérateurs : ni Digicel, ni Natcom, ni le CONATEL ne publient le leur. Une commune sans point n'est pas une commune sans couverture." },
     { id: "inondation", nom: "Part de la commune en zone inondable (CNIGS)", type: "choroplethe",
       csv: "data/atmart_alea_inondation_communes_HT.csv", pcode: "pcode_commune",
       agreger: function (rows) {
@@ -443,7 +454,14 @@
       var sel = $("#k-choix");
       var GROUPES = [["Aléas, eau et territoire", ["inondation", "inondable", "bassins", "sol"]],
                      ["Conjoncturel", ["conflits", "deplaces", "ipc"]],
-                     ["Services et infrastructures", ["eau", "carburant", "finance", "routes"]]];
+                     /* « telecom » compte les équipements cartographiés dans OSM ;
+                        « Couverture mobile réelle » reste en préparation juste
+                        en dessous, et les deux ne se remplacent pas — l'un dit
+                        ce qui est cartographié, l'autre dirait ce qui est
+                        couvert. Les confondre serait la faute la plus facile
+                        à commettre sur cette couche. */
+                     ["Services et infrastructures",
+                      ["eau", "carburant", "finance", "telecom", "routes"]]];
       GROUPES.forEach(function (g) {
         var og = document.createElement("optgroup");
         og.label = g[0];

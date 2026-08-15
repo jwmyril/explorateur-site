@@ -725,3 +725,14 @@ a[download] { display: inline-block; padding: 0.3rem 0; min-height: 24px; }
   cursor: pointer; font: inherit; font-size: .84rem;
 }
 .x-carte-btn.actif { background: var(--teal); color: #04121f; border-color: var(--teal); font-weight: 600; }
+
+/* ===== Traduction en cours =====
+   La bannière ne s'affiche que dans les langues où le corps de la page est
+   encore en français. Une règle CSS sur html[lang] suffit : pas de script,
+   donc pas d'empreinte de plus dans la politique de sécurité. */
+.x-partiel {
+  margin: 1rem 0 0; padding: 0.6rem 0.9rem; border-radius: 8px;
+  border: 1px solid var(--amber); background: rgba(245,166,35,.10);
+  color: var(--ink-dim); font-size: 0.86rem; line-height: 1.5;
+}
+html[lang="fr"] .x-partiel { display: none; }

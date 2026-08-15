@@ -16,7 +16,7 @@
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/" />
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/" />
   <link rel="stylesheet" href="assets/style.css?v=33" />
-  <link rel="stylesheet" href="assets/data.css?v=25" />
+  <link rel="stylesheet" href="assets/data.css?v=26" />
 <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
 {
@@ -86,22 +86,22 @@
 <!-- /Sécurité -->
 </head>
 <body>
-<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+<a class="lien-evitement" href="#contenu" data-i18n="nv.skip">Aller au contenu</a>
 
 <header>
   <nav class="nav">
-    <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small>les données d'Atmart</small></a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">les données d'Atmart</small></a>
+    <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
-      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span>Données</span>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Données</span></span>
         <ul class="nav-sub">
-          <li><a href="/">Explorateur Haïti <small>chercher une commune</small></a></li>
-          <li><a href="couches.html">Couches <small>cartes d'utilité publique</small></a></li>
-          <li><a href="datasets.html">Catalogue <small>jeux de données &amp; guides</small></a></li>
-          <li><a href="donnees-solutions.html">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
-          <li><a href="donnees-campus.html">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
-          <li><a href="donnees-parrainage.html">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
-          <li><a href="donnees.html">Comment ça marche <small>méthode, sources, système</small></a></li>
+          <li><a href="/" data-i18n-html="nv.expl">Explorateur Haïti <small>chercher une commune</small></a></li>
+          <li><a href="couches.html" data-i18n-html="nv.couches">Couches <small>cartes d'utilité publique</small></a></li>
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">Comment ça marche <small>méthode, sources, système</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
@@ -142,9 +142,9 @@
       <summary data-i18n-html="xp.mil_sum">Pourquoi le nombre de communes varie-t-il selon les sources&nbsp;?</summary>
       <p class="x-note" data-i18n-html="xp.mil_p1">Haïti n’a pas un seul référentiel territorial, mais plusieurs millésimes qui coexistent :</p>
       <ul class="x-liste">
-        <li><b>Recensement de 2003 (IHSI)</b> — la dernière base démographique exhaustive.</li>
-        <li><b>CNIGS / OCHA COD-AB</b> — le découpage administratif valide au 29 novembre 2018, republié le 26 janvier 2026. <b>C’est celui que cet explorateur retient pour cette édition</b>, parce que c’est le seul qui fournisse des codes de jointure officiels et des géométries. Retenu ne signifie pas en vigueur aujourd’hui&nbsp;: des communes ont été créées depuis.</li>
-        <li><b>Estimations démographiques récentes de l’IHSI</b> — elles intègrent des communes créées après 2018 et affichent donc des totaux plus élevés.</li>
+        <li data-i18n-html="xp.mil_l1"><b>Recensement de 2003 (IHSI)</b> — la dernière base démographique exhaustive.</li>
+        <li data-i18n-html="xp.mil_l2"><b>CNIGS / OCHA COD-AB</b> — le découpage administratif valide au 29 novembre 2018, republié le 26 janvier 2026. <b>C’est celui que cet explorateur retient pour cette édition</b>, parce que c’est le seul qui fournisse des codes de jointure officiels et des géométries. Retenu ne signifie pas en vigueur aujourd’hui&nbsp;: des communes ont été créées depuis.</li>
+        <li data-i18n-html="xp.mil_l3"><b>Estimations démographiques récentes de l’IHSI</b> — elles intègrent des communes créées après 2018 et affichent donc des totaux plus élevés.</li>
       </ul>
       <p class="x-note" data-i18n-html="xp.mil_p2"><b>Formulation exacte :</b> cette version de l’Explorateur couvre les <b>140 communes du référentiel CNIGS 2018</b>. Des millésimes plus récents reconnaissent des communes supplémentaires. Un territoire absent de 2018 n’est pas un territoire inexistant — il est absent de <em>ce</em> millésime.</p>
       <p class="x-note" data-i18n-html="xp.mil_p3">Pour le département de l’Ouest : le référentiel CNIGS 2018 y contient <b>20 communes</b>. Ce nombre peut différer dans des référentiels plus récents. Nous l’avons obtenu en comptant ce fichier, pas en le reprenant d’une source tierce.</p>
@@ -227,28 +227,28 @@
     <div class="footer-grid">
       <div>
         <a href="/" class="logo">Explorateur <span>Haïti</span></a>
-        <p style="margin-top:0.7rem">Un produit <a href="https://atmart.ltd/">Atmart Data</a> — des données sourcées, datées, vérifiables sur les 140 communes d'Haïti.</p>
+        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">Un produit <a href="https://atmart.ltd/">Atmart Data</a> — des données sourcées, datées, vérifiables sur les 140 communes d'Haïti.</p>
       </div>
       <div>
-        <h4>Données</h4>
+        <h4 data-i18n="ft.h_donnees">Données</h4>
         <ul>
-          <li><a href="couches.html">Couches</a></li>
-          <li><a href="datasets.html">Catalogue</a></li>
-          <li><a href="donnees.html">Comment ça marche</a></li>
-          <li><a href="donnees-solutions.html">Solutions &amp; licences</a></li>
-          <li><a href="donnees-backbone.html">Définitions &amp; méthodes</a></li>
-          <li><a href="donnees-systeme.html">La carte du système</a></li>
-          <li><a href="donnees-confiance.html">Confiance &amp; méthode</a></li>
+          <li><a href="couches.html" data-i18n="ft.couches">Couches</a></li>
+          <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
+          <li><a href="donnees.html" data-i18n="ft.comment">Comment ça marche</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
+          <li><a href="donnees-backbone.html" data-i18n="ft.def">Définitions &amp; méthodes</a></li>
+          <li><a href="donnees-systeme.html" data-i18n="ft.carte">La carte du système</a></li>
+          <li><a href="donnees-confiance.html" data-i18n="ft.conf">Confiance &amp; méthode</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h4 data-i18n="ft.h_contact">Contact</h4>
         <ul>
           <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte, sans traceur publicitaire — seule une mesure d'audience anonyme et agrégée existe, <a href="donnees-confiance.html#mesure">méthode publiée</a>.</div>
+    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte, sans traceur publicitaire — seule une mesure d'audience anonyme et agrégée existe, <a href="donnees-confiance.html#mesure">méthode publiée</a>.</div>
   </div>
 </footer>
 

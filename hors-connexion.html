@@ -4,15 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
-  <title>Hors connexion — Explorateur Haïti</title>
+  <title data-i18n="pg.horsligne.title">Hors connexion — Explorateur Haïti</title>
   <meta name="robots" content="noindex" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css?v=33" />
-  <link rel="stylesheet" href="assets/data.css?v=25" />
+  <link rel="stylesheet" href="assets/data.css?v=26" />
   <meta name="theme-color" content="#0e2240" />
 
+<script>
+  window.ATM_LANGUES = ["fr", "ht", "en", "es"];
+</script>
+
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-ncXJ2XiPXZ41YNGn+pbcQ0lZmIWvutAFCNTwRsnKves='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-ncXJ2XiPXZ41YNGn+pbcQ0lZmIWvutAFCNTwRsnKves=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -20,12 +24,13 @@
 
 <section class="hero" style="padding:4rem 0 2rem">
   <div class="container" style="max-width:640px">
-    <p class="kreyol" lang="ht">Koneksyon an koupe.</p>
-    <h1>Vous êtes hors <em>connexion</em></h1>
-    <p class="lead">
+    <p class="kreyol" lang="ht" data-i18n="pg.horsligne.accroche">La connexion est coupée.</p>
+    <h1 data-i18n-html="pg.horsligne.h1">Vous êtes hors <em>connexion</em></h1>
+    <p class="lead" data-i18n-html="pg.horsligne.lead">
       Cette page n'a pas encore été consultée sur cet appareil, elle n'a donc pas pu être
       gardée en mémoire. Mais une partie d'Atmart Data reste utilisable sans réseau.
     </p>
+<p class="x-partiel" data-i18n="pg.partiel">Le contenu détaillé de cette page est encore en français : sa traduction est en cours.</p>
 
     <div class="d-box" style="text-align:left">
       <h3>Ce qui fonctionne sans connexion</h3>
@@ -55,5 +60,6 @@
 </script>
 <script src="assets/mesure.js?v=2" defer></script>
 <script src="assets/ux.js?v=1" defer></script>
+<script src="assets/i18n.js?v=15"></script>
 </body>
 </html>

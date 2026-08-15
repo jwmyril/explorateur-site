@@ -94,15 +94,15 @@
     </p>
 <p class="x-partiel" data-i18n="pg.partiel">Le contenu détaillé de cette page est encore en français : sa traduction est en cours.</p>
     <div class="cta-row" style="display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.5rem">
-      <a href="https://explorateur.atmart.ltd/" class="btn btn-primary">Ouvrir l’Explorateur</a>
-      <a href="datasets.html" class="btn btn-outline">Le catalogue</a>
-      <a href="donnees-systeme.html" class="btn btn-outline">Comment c’est fait</a>
+      <a data-i18n="cm.cta_expl" href="https://explorateur.atmart.ltd/" class="btn btn-primary">Ouvrir l’Explorateur</a>
+      <a data-i18n="cm.cta_cat" href="datasets.html" class="btn btn-outline">Le catalogue</a>
+      <a data-i18n="cm.cta_fait" href="donnees-systeme.html" class="btn btn-outline">Comment c’est fait</a>
     </div>
     <div class="d-proof">
-      <div><b><span data-mf="nombre_entites_territoriales">11 707</span></b><small>entités territoriales identifiées, du département à la localité</small></div>
-      <div><b>5 niveaux</b><small>département › arrondissement › commune › section › localité</small></div>
-      <div><b><span data-mf="nombre_valeurs_sourcees">2 949</span></b><small>valeurs d’indicateurs calculées sur les 140 communes</small></div>
-      <div><b>1 standard</b><small>la Fèy Done Atmart, appliquée à chaque jeu de données</small></div>
+      <div><b><span data-mf="nombre_entites_territoriales">11 707</span></b><small data-i18n-html="cm.pr1">entités territoriales identifiées, du département à la localité</small></div>
+      <div><b data-i18n="cm.pr2_b">5 niveaux</b><small data-i18n-html="cm.pr2">département › arrondissement › commune › section › localité</small></div>
+      <div><b><span data-mf="nombre_valeurs_sourcees">2 949</span></b><small data-i18n-html="cm.pr3">valeurs d’indicateurs calculées sur les <span data-mf="nombre_communes">140</span> communes</small></div>
+      <div><b data-i18n="cm.pr4_b">1 standard</b><small data-i18n-html="cm.pr4">la Fèy Done Atmart, appliquée à chaque jeu de données</small></div>
     </div>
   </div>
 </section>
@@ -110,32 +110,32 @@
 <!-- PAR BESOIN — trois portes, trois destinations -->
 <section class="d-sec d-besoins-sec" style="padding-top:0">
 <div class="container">
-<h2 class="d-h" style="margin-bottom:0.4rem">Que cherchez-vous&nbsp;?</h2>
-<p class="d-sub" style="margin-bottom:1.6rem">Trois façons d'entrer, selon ce dont vous avez besoin aujourd'hui.</p>
+<h2 data-i18n="cm.bes_h" class="d-h" style="margin-bottom:0.4rem">Que cherchez-vous&nbsp;?</h2>
+<p data-i18n="cm.bes_sub" class="d-sub" style="margin-bottom:1.6rem">Trois façons d'entrer, selon ce dont vous avez besoin aujourd'hui.</p>
 <div class="d-besoins">
 
 <a class="d-besoin" href="/">
 <span class="d-besoin-ic" aria-hidden="true">🔎</span>
-<h3>Je cherche un chiffre sur une commune</h3>
-<p>Ouvrez la fiche d'un territoire et lisez ses indicateurs&nbsp;: chacun porte sa source, son année de référence et sa limite. Ce qui manque est écrit comme manquant, jamais remplacé par un zéro.</p>
-<p class="d-besoin-vol"><span data-mf="nombre_communes">140</span> communes · <span data-mf="nombre_valeurs_sourcees">2 949</span> valeurs sourcées</p>
-<span class="d-besoin-cta">Ouvrir l'Explorateur →</span>
+<h3 data-i18n="cm.bes1_h">Je cherche un chiffre sur une commune</h3>
+<p data-i18n-html="cm.bes1_p">Ouvrez la fiche d'un territoire et lisez ses indicateurs&nbsp;: chacun porte sa source, son année de référence et sa limite. Ce qui manque est écrit comme manquant, jamais remplacé par un zéro.</p>
+<p data-i18n-html="cm.bes1_vol" class="d-besoin-vol"><span data-mf="nombre_communes">140</span> communes · <span data-mf="nombre_valeurs_sourcees">2 949</span> valeurs sourcées</p>
+<span data-i18n="cm.bes1_cta" class="d-besoin-cta">Ouvrir l'Explorateur →</span>
 </a>
 
 <a class="d-besoin" href="datasets.html">
 <span class="d-besoin-ic" aria-hidden="true">⬇</span>
-<h3>J'ai besoin d'un fichier à télécharger</h3>
-<p>Des jeux prêts à ouvrir dans Excel, Power BI ou R, livrés avec leur documentation&nbsp;: sources, dictionnaire des variables, limites connues et licence. Sans compte à créer.</p>
-<p class="d-besoin-vol"><span data-mf="nombre_produits_gratuits">24</span> jeux gratuits · <span data-mf="nombre_produits_payants">6</span> packs payants</p>
-<span class="d-besoin-cta">Voir le catalogue →</span>
+<h3 data-i18n="cm.bes2_h">J'ai besoin d'un fichier à télécharger</h3>
+<p data-i18n-html="cm.bes2_p">Des jeux prêts à ouvrir dans Excel, Power BI ou R, livrés avec leur documentation&nbsp;: sources, dictionnaire des variables, limites connues et licence. Sans compte à créer.</p>
+<p data-i18n-html="cm.bes2_vol" class="d-besoin-vol"><span data-mf="nombre_produits_gratuits">24</span> jeux gratuits · <span data-mf="nombre_produits_payants">6</span> packs payants</p>
+<span data-i18n="cm.bes2_cta" class="d-besoin-cta">Voir le catalogue →</span>
 </a>
 
 <a class="d-besoin" href="donnees-solutions.html">
 <span class="d-besoin-ic" aria-hidden="true">🧩</span>
-<h3>Ce dont j'ai besoin n'existe pas encore</h3>
-<p>Dites-nous quelle décision vous devez prendre. Nous produisons le jeu sur mesure, ou nous le faisons financer pour qu'il devienne public&nbsp;— et gratuit pour tout le monde.</p>
-<p class="d-besoin-vol"><span data-mf="nombre_produits_parrainables">5</span> jeux attendent un parrainage</p>
-<span class="d-besoin-cta">Décrire mon besoin →</span>
+<h3 data-i18n="cm.bes3_h">Ce dont j'ai besoin n'existe pas encore</h3>
+<p data-i18n-html="cm.bes3_p">Dites-nous quelle décision vous devez prendre. Nous produisons le jeu sur mesure, ou nous le faisons financer pour qu'il devienne public&nbsp;— et gratuit pour tout le monde.</p>
+<p data-i18n-html="cm.bes3_vol" class="d-besoin-vol"><span data-mf="nombre_produits_parrainables">5</span> jeux attendent un parrainage</p>
+<span data-i18n="cm.bes3_cta" class="d-besoin-cta">Décrire mon besoin →</span>
 </a>
 
 </div>
@@ -145,9 +145,9 @@
 <!-- REPÈRE NATIONAL — budget exécuté (SRC-024, ajouté le 14/08/2026) -->
 <section class="d-sec">
   <div class="container">
-    <p class="d-lbl">Repère national</p>
-    <h2 class="d-h">La dépense publique, rapportée à la population</h2>
-    <p class="d-sub" style="margin-bottom:1.3rem">
+    <p data-i18n="cm.rep_lbl" class="d-lbl">Repère national</p>
+    <h2 data-i18n="cm.rep_h" class="d-h">La dépense publique, rapportée à la population</h2>
+    <p data-i18n-html="cm.rep_sub" class="d-sub" style="margin-bottom:1.3rem">
       Le Ministère de l'Économie et des Finances publie l'exécution du budget sur
       <a href="https://budget.gouv.ht/" rel="noopener">budget.gouv.ht</a> — mais uniquement au
       niveau <strong>national</strong>, par ministère&nbsp;: aucune ventilation par commune ou
@@ -156,11 +156,11 @@
       (cumul du 1<sup>er</sup> octobre 2025 au 30 juin 2026, soit 9 mois sur 12).
     </p>
     <div class="d-proof">
-      <div><b>186,4 Mds HTG</b><small>dépenses autorisées exécutées en 9 mois — 51,75&nbsp;% du budget rectificatif de 360,3&nbsp;Mds</small></div>
-      <div><b>≈ 15 670 HTG</b><small>par habitant sur ces 9 mois (population&nbsp;: projection 2024 UNFPA — un ordre de grandeur, pas une mesure)</small></div>
-      <div><b>176,0 Mds HTG</b><small>décaissements effectifs selon le TOFE (base caisse) — un référentiel différent, l'écart est normal et documenté</small></div>
+      <div><b data-i18n-html="cm.rep_b1">186,4 Mds HTG</b><small data-i18n-html="cm.rep_p1">dépenses autorisées exécutées en 9 mois — 51,75&nbsp;% du budget rectificatif de 360,3&nbsp;Mds</small></div>
+      <div><b data-i18n-html="cm.rep_b2">≈ 15 670 HTG</b><small data-i18n-html="cm.rep_p2">par habitant sur ces 9 mois (population&nbsp;: projection 2024 UNFPA — un ordre de grandeur, pas une mesure)</small></div>
+      <div><b data-i18n-html="cm.rep_b3">176,0 Mds HTG</b><small data-i18n-html="cm.rep_p3">décaissements effectifs selon le TOFE (base caisse) — un référentiel différent, l'écart est normal et documenté</small></div>
     </div>
-    <p class="d-sub" style="margin-top:1.1rem">
+    <p data-i18n-html="cm.rep_note" class="d-sub" style="margin-top:1.1rem">
       Chaque chiffre est extrait d'un PDF officiel scellé par empreinte SHA-256, avec ses
       vérifications internes (somme des mois, taux d'exécution).
       <a href="data/atmart_indicateurs_national_HT.csv" download>Télécharger le CSV du repère national</a>
@@ -172,17 +172,17 @@
 <!-- LE PROBLÈME -->
 <section class="d-sec">
   <div class="container">
-    <p class="d-lbl">Le problème</p>
-    <h2 class="d-h">Dans nos marchés, la donnée existe. C'est de l'utiliser qui coûte cher.</h2>
-    <p class="d-sub" style="margin-bottom:1.3rem">
+    <p data-i18n="cm.pb_lbl" class="d-lbl">Le problème</p>
+    <h2 data-i18n="cm.pb_h" class="d-h">Dans nos marchés, la donnée existe. C'est de l'utiliser qui coûte cher.</h2>
+    <p data-i18n-html="cm.pb_sub" class="d-sub" style="margin-bottom:1.3rem">
       Le chiffre brut est rarement le vrai obstacle. Ce qui bloque, c'est le temps perdu entre la source
       et la décision. Atmart Data travaille exactement sur cet intervalle.
     </p>
     <div class="d-tiles">
-      <div><span class="ico">🧩</span><b>Fragmentation</b><p>Les sources sont dispersées entre institutions, bailleurs, portails et PDF. Personne ne les tient ensemble.</p></div>
-      <div><span class="ico">📐</span><b>Absence de norme</b><p>Noms de communes, unités, années, codes : rien ne se joint sans être harmonisé à la main.</p></div>
-      <div><span class="ico">❓</span><b>Incertitude méthodologique</b><p>D'où vient le chiffre ? De quand date-t-il ? Que ne couvre-t-il pas ? Sans réponse, il est indéfendable.</p></div>
-      <div><span class="ico">⏱</span><b>Temps de nettoyage</b><p>Deux à trois jours de préparation par série. C'est ce coût que nous supprimons, pas les chiffres, qui sont souvent publics.</p></div>
+      <div><span class="ico">🧩</span><b data-i18n="cm.pb1_t">Fragmentation</b><p data-i18n-html="cm.pb1_p">Les sources sont dispersées entre institutions, bailleurs, portails et PDF. Personne ne les tient ensemble.</p></div>
+      <div><span class="ico">📐</span><b data-i18n="cm.pb2_t">Absence de norme</b><p data-i18n-html="cm.pb2_p">Noms de communes, unités, années, codes : rien ne se joint sans être harmonisé à la main.</p></div>
+      <div><span class="ico">❓</span><b data-i18n="cm.pb3_t">Incertitude méthodologique</b><p data-i18n-html="cm.pb3_p">D'où vient le chiffre ? De quand date-t-il ? Que ne couvre-t-il pas ? Sans réponse, il est indéfendable.</p></div>
+      <div><span class="ico">⏱</span><b data-i18n="cm.pb4_t">Temps de nettoyage</b><p data-i18n-html="cm.pb4_p">Deux à trois jours de préparation par série. C'est ce coût que nous supprimons, pas les chiffres, qui sont souvent publics.</p></div>
     </div>
   </div>
 </section>
@@ -190,22 +190,22 @@
 <!-- LE BACKBONE -->
 <section class="d-sec">
   <div class="container">
-    <p class="d-lbl">Notre réponse</p>
-    <h2 class="d-h">Un backbone, pas un entrepôt de fichiers</h2>
-    <p class="d-sub">
+    <p data-i18n="cm.bb_lbl" class="d-lbl">Notre réponse</p>
+    <h2 data-i18n="cm.bb_h" class="d-h">Un backbone, pas un entrepôt de fichiers</h2>
+    <p data-i18n-html="cm.bb_sub" class="d-sub">
       Le vrai manque en Haïti n'est pas la donnée : ce sont les <strong>identifiants communs</strong>.
       Sans clé partagée, une école, un marché, une clinique, un prix et un budget ne peuvent pas être
       rapportés à la même commune ni à la même période. Le Backbone est ce socle — et chaque nouveau
       jeu de données qui s'y raccroche augmente la valeur de tous les précédents.
     </p>
     <div class="d-tiles" style="margin-top:1.2rem">
-      <div><span class="ico">1️⃣</span><b>Reconstruction</b><p>PDF, tableaux HTML, API instables et Excel mal structurés deviennent des tables propres.</p></div>
-      <div><span class="ico">2️⃣</span><b>Harmonisation</b><p>Une série redevient comparable malgré les changements de nomenclature et de méthode.</p></div>
-      <div><span class="ico">3️⃣</span><b>Croisement</b><p>Des sources qui ne se parlent pas sont reliées par la même clé territoriale et temporelle.</p></div>
-      <div><span class="ico">4️⃣</span><b>Indicateurs dérivés</b><p>Des mesures publiées nulle part : accès aux services, volatilité des prix, couverture réelle.</p></div>
-      <div><span class="ico">5️⃣</span><b>Produit décisionnel</b><p>CSV, Excel, GeoJSON, Power BI, dictionnaire, note méthodologique et lecture de départ.</p></div>
+      <div><span class="ico">1️⃣</span><b data-i18n="cm.bb1_t">Reconstruction</b><p data-i18n-html="cm.bb1_p">PDF, tableaux HTML, API instables et Excel mal structurés deviennent des tables propres.</p></div>
+      <div><span class="ico">2️⃣</span><b data-i18n="cm.bb2_t">Harmonisation</b><p data-i18n-html="cm.bb2_p">Une série redevient comparable malgré les changements de nomenclature et de méthode.</p></div>
+      <div><span class="ico">3️⃣</span><b data-i18n="cm.bb3_t">Croisement</b><p data-i18n-html="cm.bb3_p">Des sources qui ne se parlent pas sont reliées par la même clé territoriale et temporelle.</p></div>
+      <div><span class="ico">4️⃣</span><b data-i18n="cm.bb4_t">Indicateurs dérivés</b><p data-i18n-html="cm.bb4_p">Des mesures publiées nulle part : accès aux services, volatilité des prix, couverture réelle.</p></div>
+      <div><span class="ico">5️⃣</span><b data-i18n="cm.bb5_t">Produit décisionnel</b><p data-i18n-html="cm.bb5_p">CSV, Excel, GeoJSON, Power BI, dictionnaire, note méthodologique et lecture de départ.</p></div>
     </div>
-    <p class="d-note" style="margin-top:1rem">
+    <p data-i18n-html="cm.bb_note" class="d-note" style="margin-top:1rem">
       Le référentiel territoire est publié : <strong><span data-mf="nombre_entites_territoriales">11 707</span> entités</strong>, du département à la localité,
       arrondissements compris. <a href="donnees-backbone.html">Voir le Backbone et sa méthode →</a>
     </p>
@@ -215,41 +215,41 @@
 <!-- ENTRÉES PAR USAGE -->
 <section class="d-sec">
   <div class="container">
-    <p class="d-lbl">Par où entrer</p>
-    <h2 class="d-h">Six publics, six portes d'entrée</h2>
-    <p class="d-sub" style="margin-bottom:1.3rem">
+    <p data-i18n="cm.pt_lbl" class="d-lbl">Par où entrer</p>
+    <h2 data-i18n="cm.pt_h" class="d-h">Six publics, six portes d'entrée</h2>
+    <p data-i18n-html="cm.pt_sub" class="d-sub" style="margin-bottom:1.3rem">
       Le même catalogue, mais pas le même besoin. Choisissez la porte qui vous concerne.
     </p>
     <div class="d-doors">
       <a class="d-door" href="donnees-solutions.html#entreprises">
-        <h3>🏢 Entreprises</h3>
-        <p>Implantation, ciblage territorial, étude de marché, benchmark régional. Vous payez pour arriver plus vite à une recommandation défendable.</p>
-        <span class="go">Packs décisionnels &amp; licences →</span>
+        <h3 data-i18n-html="cm.pt1_h">🏢 Entreprises</h3>
+        <p data-i18n-html="cm.pt1_p">Implantation, ciblage territorial, étude de marché, benchmark régional. Vous payez pour arriver plus vite à une recommandation défendable.</p>
+        <span data-i18n-html="cm.pt1_go" class="go">Packs décisionnels &amp; licences →</span>
       </a>
       <a class="d-door" href="donnees-solutions.html#ong">
-        <h3>🌍 ONG &amp; bailleurs</h3>
-        <p>Cibler, prioriser, justifier, évaluer. Des bases géographiques et socio-économiques alignées sur les p-codes officiels.</p>
-        <span class="go">Voir les cas d'usage →</span>
+        <h3 data-i18n-html="cm.pt2_h">🌍 ONG &amp; bailleurs</h3>
+        <p data-i18n-html="cm.pt2_p">Cibler, prioriser, justifier, évaluer. Des bases géographiques et socio-économiques alignées sur les p-codes officiels.</p>
+        <span data-i18n-html="cm.pt2_go" class="go">Voir les cas d'usage →</span>
       </a>
       <a class="d-door" href="donnees-solutions.html#administrations">
-        <h3>🏛 Administrations</h3>
-        <p>Structurer le suivi, le plaidoyer et la planification sur des fondations documentées, traçables et citables.</p>
-        <span class="go">Licences institutionnelles →</span>
+        <h3 data-i18n-html="cm.pt3_h">🏛 Administrations</h3>
+        <p data-i18n-html="cm.pt3_p">Structurer le suivi, le plaidoyer et la planification sur des fondations documentées, traçables et citables.</p>
+        <span data-i18n-html="cm.pt3_go" class="go">Licences institutionnelles →</span>
       </a>
       <a class="d-door amber" href="donnees-campus.html">
-        <h3>🎓 Étudiants &amp; chercheurs</h3>
-        <p>Atmart Campus : accès académique vérifié, packs mémoire par discipline, guides méthodologiques et règles de citation.</p>
-        <span class="go">Découvrir Atmart Campus →</span>
+        <h3 data-i18n-html="cm.pt4_h">🎓 Étudiants &amp; chercheurs</h3>
+        <p data-i18n-html="cm.pt4_p">Atmart Campus : accès académique vérifié, packs mémoire par discipline, guides méthodologiques et règles de citation.</p>
+        <span data-i18n-html="cm.pt4_go" class="go">Découvrir Atmart Campus →</span>
       </a>
       <a class="d-door amber" href="donnees-parrainage.html">
-        <h3>🤝 Sponsors &amp; institutions</h3>
-        <p>Financer l'ouverture, la documentation ou la mise à jour d'un jeu de données utile à toute une promotion.</p>
-        <span class="go">Parrainer un dataset →</span>
+        <h3 data-i18n-html="cm.pt5_h">🤝 Sponsors &amp; institutions</h3>
+        <p data-i18n-html="cm.pt5_p">Financer l'ouverture, la documentation ou la mise à jour d'un jeu de données utile à toute une promotion.</p>
+        <span data-i18n-html="cm.pt5_go" class="go">Parrainer un dataset →</span>
       </a>
       <a class="d-door" href="datasets.html#shelf-free">
-        <h3>👥 Grand public &amp; journalistes</h3>
-        <p>Des jeux gratuits, des visualisations et des lectures courtes pour comprendre son territoire sans être analyste.</p>
-        <span class="go">Ce qui est gratuit →</span>
+        <h3 data-i18n-html="cm.pt6_h">👥 Grand public &amp; journalistes</h3>
+        <p data-i18n-html="cm.pt6_p">Des jeux gratuits, des visualisations et des lectures courtes pour comprendre son territoire sans être analyste.</p>
+        <span data-i18n-html="cm.pt6_go" class="go">Ce qui est gratuit →</span>
       </a>
     </div>
   </div>
@@ -258,43 +258,43 @@
 <!-- QUATRE NIVEAUX -->
 <section class="d-sec">
   <div class="container">
-    <p class="d-lbl">L'offre</p>
-    <h2 class="d-h">Quatre niveaux, pas un de plus</h2>
-    <p class="d-sub" style="margin-bottom:1.2rem">
+    <p data-i18n="cm.of_lbl" class="d-lbl">L'offre</p>
+    <h2 data-i18n="cm.of_h" class="d-h">Quatre niveaux, pas un de plus</h2>
+    <p data-i18n-html="cm.of_sub" class="d-sub" style="margin-bottom:1.2rem">
       Une offre qu'on ne comprend pas en quelques secondes ne se vend pas. Voici toute l'architecture.
     </p>
     <div class="d-tab-wrap">
       <div class="x-tableau" tabindex="0"><table class="d-tab">
-        <thead><tr><th scope="col">Niveau</th><th scope="col">Pour qui</th><th scope="col">Ce que vous obtenez</th><th scope="col">Prix</th></tr></thead>
+        <thead><tr><th data-i18n="cm.of_c1" scope="col">Niveau</th><th data-i18n="cm.of_c2" scope="col">Pour qui</th><th data-i18n="cm.of_c3" scope="col">Ce que vous obtenez</th><th data-i18n="cm.of_c4" scope="col">Prix</th></tr></thead>
         <tbody>
           <tr>
-            <td>Gratuit</td>
-            <td>Grand public, découverte, usage académique de base</td>
-            <td>Aperçus, échantillons, visualisations, jeux d'apprentissage, contenus pédagogiques</td>
-            <td class="p">0 $</td>
+            <td data-i18n-html="cm.of_r1c1">Gratuit</td>
+            <td data-i18n-html="cm.of_r1c2">Grand public, découverte, usage académique de base</td>
+            <td data-i18n-html="cm.of_r1c3">Aperçus, échantillons, visualisations, jeux d'apprentissage, contenus pédagogiques</td>
+            <td data-i18n-html="cm.of_r1c4" class="p">0 $</td>
           </tr>
           <tr>
-            <td>Jeu de données</td>
-            <td>Besoin ponctuel, budget serré</td>
-            <td>Un jeu complet, sa Fèy Done, son dictionnaire de variables, une licence explicite</td>
-            <td class="p">15 – 34 $</td>
+            <td data-i18n-html="cm.of_r2c1">Jeu de données</td>
+            <td data-i18n-html="cm.of_r2c2">Besoin ponctuel, budget serré</td>
+            <td data-i18n-html="cm.of_r2c3">Un jeu complet, sa Fèy Done, son dictionnaire de variables, une licence explicite</td>
+            <td data-i18n-html="cm.of_r2c4" class="p">15 – 34 $</td>
           </tr>
           <tr>
-            <td>Pack décisionnel</td>
-            <td>PME, consultants, ONG, équipes métiers</td>
-            <td>Plusieurs jeux assemblés autour d'une question métier + lecture de départ (« prêt à décider »)</td>
-            <td class="p">sur devis</td>
+            <td data-i18n-html="cm.of_r3c1">Pack décisionnel</td>
+            <td data-i18n-html="cm.of_r3c2">PME, consultants, ONG, équipes métiers</td>
+            <td data-i18n-html="cm.of_r3c3">Plusieurs jeux assemblés autour d'une question métier + lecture de départ (« prêt à décider »)</td>
+            <td data-i18n-html="cm.of_r3c4" class="p">sur devis</td>
           </tr>
           <tr>
-            <td>Licence institutionnelle</td>
-            <td>Entreprises, universités, administrations, ONG structurées</td>
-            <td>Accès multi-utilisateurs, catalogue élargi, mises à jour, support méthodologique</td>
-            <td class="p">annuelle, sur devis</td>
+            <td data-i18n-html="cm.of_r4c1">Licence institutionnelle</td>
+            <td data-i18n-html="cm.of_r4c2">Entreprises, universités, administrations, ONG structurées</td>
+            <td data-i18n-html="cm.of_r4c3">Accès multi-utilisateurs, catalogue élargi, mises à jour, support méthodologique</td>
+            <td data-i18n-html="cm.of_r4c4" class="p">annuelle, sur devis</td>
           </tr>
         </tbody>
       </table></div>
     </div>
-    <p class="d-note" style="margin-top:0.9rem">
+    <p data-i18n-html="cm.of_note" class="d-note" style="margin-top:0.9rem">
       Le prix suit la valeur de transformation — rareté, préparation, actualisation, temps épargné —
       et non le nombre de lignes. <a href="donnees-solutions.html#licences">Détail des licences →</a>
     </p>
@@ -304,24 +304,24 @@
 <!-- STANDARD -->
 <section class="d-sec">
   <div class="container">
-    <p class="d-lbl">La méthode</p>
-    <h2 class="d-h">Chaque jeu de données arrive avec sa fiche signée</h2>
-    <p class="d-sub">
+    <p data-i18n="cm.fd_lbl" class="d-lbl">La méthode</p>
+    <h2 data-i18n="cm.fd_h" class="d-h">Chaque jeu de données arrive avec sa fiche signée</h2>
+    <p data-i18n-html="cm.fd_sub" class="d-sub">
       C'est la <strong>Fèy Done Atmart</strong> : neuf rubriques, la même pour tous les jeux, en quatre langues.
       Elle dit ce que la donnée sait faire — et ce qu'elle ne sait pas faire.
     </p>
     <div class="d-tiles" style="margin-top:1.2rem">
-      <div><b>1 · Identification</b><p>Version, date, prochaine mise à jour, licence, contact.</p></div>
-      <div><b>2 · Description</b><p>Ce qu'une ligne représente, volumétrie, couverture géographique et temporelle.</p></div>
-      <div><b>3 · Source et méthode</b><p>Source officielle, date d'extraction, nettoyages effectués, enrichissements ajoutés.</p></div>
-      <div><b>4 · Représentativité</b><p>Ce que le jeu représente et ce qu'il ne représente pas. Qui manque.</p></div>
-      <div><b>5 · Qualité</b><p>Données manquantes, limites connues, décalage éventuel de la source.</p></div>
-      <div><b>6 · Usages</b><p>Usages prévus et usages interdits, explicitement.</p></div>
-      <div><b>7 · Éthique</b><p>Données personnelles, base légale, règles applicables.</p></div>
-      <div><b>8 · Versions</b><p>Journal des modifications, jeu par jeu.</p></div>
-      <div><b>9 · Engagement</b><p>Une erreur signalée est corrigée à la version suivante.</p></div>
+      <div><b data-i18n="cm.fd1_t">1 · Identification</b><p data-i18n-html="cm.fd1_p">Version, date, prochaine mise à jour, licence, contact.</p></div>
+      <div><b data-i18n="cm.fd2_t">2 · Description</b><p data-i18n-html="cm.fd2_p">Ce qu'une ligne représente, volumétrie, couverture géographique et temporelle.</p></div>
+      <div><b data-i18n="cm.fd3_t">3 · Source et méthode</b><p data-i18n-html="cm.fd3_p">Source officielle, date d'extraction, nettoyages effectués, enrichissements ajoutés.</p></div>
+      <div><b data-i18n="cm.fd4_t">4 · Représentativité</b><p data-i18n-html="cm.fd4_p">Ce que le jeu représente et ce qu'il ne représente pas. Qui manque.</p></div>
+      <div><b data-i18n="cm.fd5_t">5 · Qualité</b><p data-i18n-html="cm.fd5_p">Données manquantes, limites connues, décalage éventuel de la source.</p></div>
+      <div><b data-i18n="cm.fd6_t">6 · Usages</b><p data-i18n-html="cm.fd6_p">Usages prévus et usages interdits, explicitement.</p></div>
+      <div><b data-i18n="cm.fd7_t">7 · Éthique</b><p data-i18n-html="cm.fd7_p">Données personnelles, base légale, règles applicables.</p></div>
+      <div><b data-i18n="cm.fd8_t">8 · Versions</b><p data-i18n-html="cm.fd8_p">Journal des modifications, jeu par jeu.</p></div>
+      <div><b data-i18n="cm.fd9_t">9 · Engagement</b><p data-i18n-html="cm.fd9_p">Une erreur signalée est corrigée à la version suivante.</p></div>
     </div>
-    <p class="d-note" style="margin-top:1rem">
+    <p data-i18n-html="cm.fd_note" class="d-note" style="margin-top:1rem">
       <a href="donnees-confiance.html">Lire la charte de confiance et de méthode →</a> ·
       <a href="donnees-pack-geo-haiti.html">Voir une fiche produit complète →</a>
     </p>
@@ -331,26 +331,26 @@
 <!-- PROGRAMMES -->
 <section class="d-sec">
   <div class="container">
-    <p class="d-lbl">Les programmes</p>
-    <h2 class="d-h">Trois programmes qui font tenir le modèle</h2>
+    <p data-i18n="cm.pgm_lbl" class="d-lbl">Les programmes</p>
+    <h2 data-i18n="cm.pgm_h" class="d-h">Trois programmes qui font tenir le modèle</h2>
     <div class="d-doors" style="margin-top:1.2rem">
       <a class="d-door amber" href="donnees-campus.html">
-        <h3>Atmart Campus <span class="d-pill spons">Pilote</span></h3>
-        <p>L'accès académique vérifié : packs mémoire par discipline, quotas, guides méthodologiques,
+        <h3 data-i18n-html="cm.pgm1_h">Atmart Campus <span class="d-pill spons">Pilote</span></h3>
+        <p data-i18n-html="cm.pgm1_p">L'accès académique vérifié : packs mémoire par discipline, quotas, guides méthodologiques,
           règles de citation. La gratuité y est encadrée, jamais indifférenciée.</p>
-        <span class="go">Demander un accès →</span>
+        <span data-i18n-html="cm.pgm1_go" class="go">Demander un accès →</span>
       </a>
       <a class="d-door amber" href="donnees-parrainage.html">
-        <h3>Parrainer un dataset <span class="d-pill spons">Ouvert</span></h3>
-        <p>Une banque, une ONG, un ministère ou une fondation finance l'ouverture d'un jeu de données —
+        <h3 data-i18n-html="cm.pgm2_h">Parrainer un dataset <span class="d-pill spons">Ouvert</span></h3>
+        <p data-i18n-html="cm.pgm2_p">Une banque, une ONG, un ministère ou une fondation finance l'ouverture d'un jeu de données —
           qui devient accessible à toute une cohorte d'étudiants ou de chercheurs.</p>
-        <span class="go">Voir les jeux parrainables →</span>
+        <span data-i18n-html="cm.pgm2_go" class="go">Voir les jeux parrainables →</span>
       </a>
       <a class="d-door" href="datasets.html#shelf-soon">
-        <h3>Observatoires Atmart <span class="d-pill soon">En préparation</span></h3>
-        <p>Des produits récurrents et publics sur des thèmes à forte utilité : prix des marchés,
+        <h3 data-i18n-html="cm.pgm3_h">Observatoires Atmart <span class="d-pill soon">En préparation</span></h3>
+        <p data-i18n-html="cm.pgm3_p">Des produits récurrents et publics sur des thèmes à forte utilité : prix des marchés,
           territoires, emploi, inclusion financière. Premier observatoire visé pour 2027.</p>
-        <span class="go">Voir la feuille de route →</span>
+        <span data-i18n-html="cm.pgm3_go" class="go">Voir la feuille de route →</span>
       </a>
     </div>
   </div>
@@ -360,14 +360,14 @@
 <section class="d-sec">
   <div class="container">
     <div class="d-box amber">
-      <h3>Où en est réellement le catalogue</h3>
-      <p>
+      <h3 data-i18n="cm.tr_h">Où en est réellement le catalogue</h3>
+      <p data-i18n-html="cm.tr_p1">
         Nous appliquons une règle simple, y compris à nous-mêmes : <strong>on ne met en vente que ce qu'on peut
         livrer aujourd'hui.</strong> Le catalogue affiche donc trois états — <span class="d-pill live">Disponible</span>
         <span class="d-pill spons">Parrainable</span> <span class="d-pill soon">En préparation</span> — et jamais
         un bouton « Acheter » sur un fichier qui n'existe pas encore.
       </p>
-      <p>
+      <p data-i18n-html="cm.tr_p2">
         Au 14 août 2026 : <strong><span data-mf="nombre_produits_payants">6</span> jeux en vente</strong>, <strong><span data-mf="nombre_produits_gratuits">24</span> ressources gratuites</strong> — dont les quatre référentiels maîtres du Backbone et le registre des sources — et <strong><span data-mf="nombre_produits_parrainables">5</span> jeux en préparation</strong>, parrainables.
         Tous portent sur Haïti : les jeux régionaux et africains sont retirés du catalogue jusqu'à
         la deuxième année.
@@ -379,18 +379,18 @@
 <!-- ROADMAP -->
 <section class="d-sec">
   <div class="container">
-    <p class="d-lbl">Trajectoire</p>
-    <h2 class="d-h">Haïti d'abord, la région ensuite</h2>
-    <p class="d-sub">
+    <p data-i18n="cm.rd_lbl" class="d-lbl">Trajectoire</p>
+    <h2 data-i18n="cm.rd_h" class="d-h">Haïti d'abord, la région ensuite</h2>
+    <p data-i18n-html="cm.rd_sub" class="d-sub">
       L'extension régionale n'est pas une diversification : c'est la réplication d'une méthode déjà éprouvée
       sur un terrain difficile.
     </p>
     <ol class="d-steps">
-      <li><b>Phase 1 — poser le backbone (0–6 mois).</b> Référentiel territoire stabilisé ✓, référentiels temps et indicateurs, standards de fiche et règles de version, registre des sources et matrice juridique ✓, cadre d'accès académique ✓, offres parrainables ✓.</li>
-      <li><b>Phase 2 — les produits piliers (6–12 mois).</b> Profil des 140 communes, premier registre scolaire géocodé, premier registre sanitaire versionné, panel mensuel des marchés, base macrofinancière harmonisée, premières licences et premiers parrainages.</li>
-      <li><b>Phase 3 — industrialiser, puis seulement étendre (12–24 mois).</b> Croisements multi-sources, accessibilité aux services, packs sectoriels, conventions universitaires. La réplication de la méthode vers la Caraïbe puis l'Afrique francophone ne commence qu'après la première année, une fois Haïti couvert.</li>
+      <li data-i18n-html="cm.rd1"><b>Phase 1 — poser le backbone (0–6 mois).</b> Référentiel territoire stabilisé ✓, référentiels temps et indicateurs, standards de fiche et règles de version, registre des sources et matrice juridique ✓, cadre d'accès académique ✓, offres parrainables ✓.</li>
+      <li data-i18n-html="cm.rd2"><b>Phase 2 — les produits piliers (6–12 mois).</b> Profil des 140 communes, premier registre scolaire géocodé, premier registre sanitaire versionné, panel mensuel des marchés, base macrofinancière harmonisée, premières licences et premiers parrainages.</li>
+      <li data-i18n-html="cm.rd3"><b>Phase 3 — industrialiser, puis seulement étendre (12–24 mois).</b> Croisements multi-sources, accessibilité aux services, packs sectoriels, conventions universitaires. La réplication de la méthode vers la Caraïbe puis l'Afrique francophone ne commence qu'après la première année, une fois Haïti couvert.</li>
     </ol>
-    <p class="d-note" style="margin-top:0.9rem">
+    <p data-i18n-html="cm.rd_note" class="d-note" style="margin-top:0.9rem">
       L'ordre n'est pas décoratif : publier un registre scolaire avant d'avoir stabilisé le territoire,
       c'est se condamner à le refaire. <a href="donnees-backbone.html#portefeuille">Le portefeuille en 5 couches →</a>
     </p>
@@ -400,36 +400,36 @@
 <!-- POUR ALLER PLUS LOIN -->
 <section class="d-sec">
   <div class="container">
-    <p class="d-lbl">Pour aller plus loin</p>
-    <h2 class="d-h">Les quatre pages de méthode</h2>
-    <p class="d-sub" style="margin-bottom:1.2rem">
+    <p data-i18n="cm.pl_lbl" class="d-lbl">Pour aller plus loin</p>
+    <h2 data-i18n="cm.pl_h" class="d-h">Les quatre pages de méthode</h2>
+    <p data-i18n-html="cm.pl_sub" class="d-sub" style="margin-bottom:1.2rem">
       Elles ne sont plus au menu — six entrées suffisent pour travailler. Elles restent ici,
       pour qui veut vérifier comment tout cela est construit.
     </p>
     <div class="d-doors">
       <a class="d-door" href="donnees-systeme.html">
-        <h3>🗺 La carte du système</h3>
-        <p>Les quatre étages — sources, backbone, registres, produits — sur une page,
+        <h3 data-i18n="cm.pl1_h">🗺 La carte du système</h3>
+        <p data-i18n-html="cm.pl1_p">Les quatre étages — sources, backbone, registres, produits — sur une page,
           filtrable selon votre situation.</p>
-        <span class="go">Voir la carte →</span>
+        <span data-i18n="cm.pl1_go" class="go">Voir la carte →</span>
       </a>
       <a class="d-door" href="donnees-backbone.html">
-        <h3>🧱 Le Backbone</h3>
-        <p>Les quatre référentiels maîtres, le schéma commun, les statuts de valeur et les
+        <h3 data-i18n="cm.pl2_h">🧱 Le Backbone</h3>
+        <p data-i18n-html="cm.pl2_p">Les quatre référentiels maîtres, le schéma commun, les statuts de valeur et les
           douze produits à reconstruire.</p>
-        <span class="go">Voir la méthode →</span>
+        <span data-i18n="cm.pl2_go" class="go">Voir la méthode →</span>
       </a>
       <a class="d-door" href="donnees-confiance.html">
-        <h3>🛡 Confiance &amp; méthode</h3>
-        <p>Politique de sourcing, contrôles avant publication, versions, corrections, licences
+        <h3 data-i18n="cm.pl3_h">🛡 Confiance &amp; méthode</h3>
+        <p data-i18n-html="cm.pl3_p">Politique de sourcing, contrôles avant publication, versions, corrections, licences
           et données personnelles.</p>
-        <span class="go">Lire la charte →</span>
+        <span data-i18n="cm.pl3_go" class="go">Lire la charte →</span>
       </a>
       <a class="d-door" href="https://atmart.ltd/outils.html">
-        <h3>🧰 Outils &amp; sources</h3>
-        <p>Les outils que nous utilisons et les portails où trouver des données publiques
+        <h3 data-i18n="cm.pl4_h">🧰 Outils &amp; sources</h3>
+        <p data-i18n-html="cm.pl4_p">Les outils que nous utilisons et les portails où trouver des données publiques
           sur Haïti.</p>
-        <span class="go">Voir la liste →</span>
+        <span data-i18n="cm.pl4_go" class="go">Voir la liste →</span>
       </a>
     </div>
   </div>
@@ -439,14 +439,14 @@
 <section class="d-sec" style="padding-bottom:3rem">
   <div class="container">
     <div class="banner">
-      <h2>Dites-nous ce que vous devez décider</h2>
-      <p>
+      <h2 data-i18n="cm.ct_h">Dites-nous ce que vous devez décider</h2>
+      <p data-i18n-html="cm.ct_p">
         Un besoin précis, un territoire, une échéance : nous répondons en indiquant ce qui existe déjà,
         ce qui se prépare, et ce que cela coûterait de le construire. Réponse sous 48 h ouvrées.
       </p>
       <div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
-        <a href="donnees-solutions.html#contact" class="btn btn-primary">Décrire mon besoin</a>
-        <a href="datasets.html" class="btn btn-outline">Parcourir le catalogue</a>
+        <a data-i18n="cm.ct_b1" href="donnees-solutions.html#contact" class="btn btn-primary">Décrire mon besoin</a>
+        <a data-i18n="cm.ct_b2" href="datasets.html" class="btn btn-outline">Parcourir le catalogue</a>
       </div>
     </div>
   </div>

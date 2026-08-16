@@ -1,0 +1,37 @@
+/* L'état partagé du moteur. Les 32 variables qui changent d'identité en
+   cours de route vivent ici ; les 33 autres sont remplies sur place et se
+   partagent telles quelles, sans passer par cet objet. */
+export const S = {
+  DICO: {},
+  LANG: "fr",
+  aggNational: null,
+  carteNiveau: null,
+  comparees: [],
+  contour: null,
+  courant: null,
+  ficheComplete: false,
+  indBloques: [],
+  montrerAccueil: false,
+  nCommunes: 0,
+  natLignes: null,
+  natPromesse: null,
+  niveauComp: "3",
+  normalisation: "total",
+  objectif: "tout",
+  ongletActif: "fiche",
+  orgs: [],
+  polyCom: null,
+  polyDep: null,
+  prixIdx: null,
+  prixMeta: {},
+  prixProduit: null,
+  prixPromesse: null,
+  pyrIdx: null,
+  pyrMeta: {},
+  pyrPromesse: null,
+  pyrTranches: [],
+  svcIdx: null,
+  svcPromesse: null,
+  terr: [],
+  vals: []
+};

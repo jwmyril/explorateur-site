@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
+  <title data-i18n="xp.title">Haiti Explorer — find a commune, compare, export</title>
+  <meta name="description" data-i18n-content="xp.desc" content="Search any commune in Haiti and read its territorial profile: essential services, available indicators, sources and reference years." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="../assets/style.css?v=33" />
+  <link rel="stylesheet" href="../assets/data.css?v=27" />
+<!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://explorateur.atmart.ltd/#organisation",
+   "name": "Atmart Data",
+   "url": "https://explorateur.atmart.ltd/",
+   "email": "sales@atmart.ltd",
+   "parentOrganization": {
+    "@type": "Organization",
+    "name": "Atmart LLC"
+   }
+  }
+ ]
+}
+</script>
+<!-- /JSON-LD -->
+
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-A3QFttpDhgL2NMJqkYQLsIKK0JCeZSk2zfuPXFLSd4s=' 'sha256-OT0Pd9oHGCpUCfYQVMWE4dYv4DF/Zm4gQW64ud2micI=' 'sha256-h2GltGjbI4WnMPNJY+nGcg4wdD799XolPZ/CuiR5I+Q=' 'sha256-k/mngXq/pMo0Z7M1B/5mrJlr13h+3Ae2+VbIrud0SUw='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+    <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/index.html", "ht": "https://explorateur.atmart.ltd/ht/index.html", "en": "https://explorateur.atmart.ltd/en/index.html", "es": "https://explorateur.atmart.ltd/es/index.html"};</script>
+  <link rel="canonical" href="https://explorateur.atmart.ltd/en/index.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/index.html" />
+  <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/index.html" />
+  <link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/index.html" />
+  <link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/index.html" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/index.html" />
+  <script>window.ATM_LANG_FORCE = "en"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/index.html", "ht": "https://explorateur.atmart.ltd/ht/index.html", "en": "https://explorateur.atmart.ltd/en/index.html", "es": "https://explorateur.atmart.ltd/es/index.html"};</script>
+</head>
+<body>
+<a class="lien-evitement" href="#contenu" data-i18n="nv.skip">Skip to content</a>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="../assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">Atmart's data</small></a>
+    <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nv.expl_h">Haiti Explorer</a></li>
+      <li><a href="/couches.html" data-i18n="nv.couches_h">Layers</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Data</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue <small>datasets &amp; guides</small></a></li>
+          <li><a href="/donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>companies, NGOs, administrations</small></a></li>
+          <li><a href="/donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>students &amp; researchers</small></a></li>
+          <li><a href="/donnees-parrainage.html" data-i18n-html="nv.parr">Sponsor a dataset <small>institutions &amp; companies</small></a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">How it works <small>method, sources, system</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="contenu" class="hero" style="padding:2.6rem 0 0.8rem">
+  <div class="container">
+    <p class="kreyol" lang="ht" data-i18n="xp.kreyol">Find a commune. Read its profile.</p>
+    <h1 data-i18n-html="xp.h1">Explore the territories of <em>Haiti</em></h1>
+    <p class="lead" style="max-width:64ch" data-i18n-html="xp.lead">Search a commune, an arrondissement or a department, and read its profile: essential services, available indicators, sources and reference years. <strong>Compare territories, spot service gaps and export the results</strong> for your reports, projects and decisions.</p>
+
+    <div class="x-barre">
+      <label for="x-recherche" class="x-label" data-i18n="xp.label">Search a commune, an arrondissement or a department</label>
+      <input id="x-recherche" type="search" autocomplete="off" spellcheck="false"
+             role="combobox" aria-expanded="false" aria-controls="x-resultats"
+             aria-describedby="x-aide-recherche"
+             placeholder="Léogâne, Gonaïves, Pòtoprens, HT0121…" data-i18n-ph="xp.ph" />
+      <div id="x-resultats" role="listbox" aria-label="Search results" data-i18n-aria="xp.res_aria" hidden></div>
+    </div>
+    <p id="x-aide-recherche" class="x-exemples">
+      <span data-i18n="xp.ex">Examples:</span> <button class="x-lien" data-id="HTC-0111">Port-au-Prince</button> ·
+      <button class="x-lien" data-id="HTC-0121">Léogâne</button> ·
+      <button class="x-lien" data-id="HTC-0311">Cap-Haïtien</button>
+    </p>
+    <p class="x-preuve" data-i18n="xp.preuve">Institutional sources · Reference years shown · Downloadable results</p>
+    <p class="x-compte" id="x-compte">chargement…</p>
+    <div aria-live="polite" class="x-sr" id="x-annonce"></div>
+  </div>
+</section>
+
+<section style="padding-top:0.4rem;padding-bottom:3rem">
+  <div class="container">
+
+    <p class="x-couverture" id="x-couverture"></p>
+    <details class="x-tech" id="x-millesimes">
+      <summary data-i18n-html="xp.mil_sum">Why does the number of communes vary from one source to another&nbsp;?</summary>
+      <p class="x-note" data-i18n-html="xp.mil_p1">Haiti does not have a single territorial reference set, but several vintages that coexist:</p>
+      <ul class="x-liste">
+        <li data-i18n-html="xp.mil_l1"><b>2003 census (IHSI)</b> — the last exhaustive demographic base.</li>
+        <li data-i18n-html="xp.mil_l2"><b>CNIGS / OCHA COD-AB</b> — the administrative division valid as at 29 November 2018, republished on 26 January 2026. <b>This is the one this explorer uses for this edition</b>, because it is the only one providing official join codes and geometries. Used does not mean in force today&nbsp;: communes have been created since.</li>
+        <li data-i18n-html="xp.mil_l3"><b>Recent IHSI demographic estimates</b> — they include communes created after 2018 and therefore show higher totals.</li>
+      </ul>
+      <p class="x-note" data-i18n-html="xp.mil_p2"><b>Exact wording:</b> this version of the Explorer covers the <b>140 communes of the 2018 CNIGS reference set</b>. More recent vintages recognise additional communes. A territory absent from 2018 is not a territory that does not exist — it is absent from <em>that</em> vintage.</p>
+      <p class="x-note" data-i18n-html="xp.mil_p3">For the Ouest department: the 2018 CNIGS reference set contains <b>20 communes</b>. This number may differ in more recent reference sets. We obtained it by counting this file, not by taking it from a third party.</p>
+      <p class="x-note" data-i18n-html="xp.mil_p4">The <a href="../data/atmart_millesimes_territoriaux.csv" download>vintage correspondence table</a> (CSV, 192 entities) gives, for each territory, its Atmart identifier, its p-code, its vintage, its validity dates and a divergence note. Today it holds only the 2018 vintage: the others will be added when we have the official files, not before.</p>
+      <p class="x-note" data-i18n-html="xp.mil_p5">We do not pick a number in silence: the explorer counts what the reference set it loads actually contains, and names it. Communes created after 2018 will be added with their validity dates as soon as an official reference set publishes them with their codes, without rewriting history. <a href="/donnees-backbone.html#territoire">How the territory reference set is built →</a></p>
+    </details>
+
+    <details class="x-tech" id="x-couv-sources">
+      <summary data-i18n-html="xp.couv_sum">Which source covers which territory&nbsp;?</summary>
+      <div id="x-couv-corps"></div>
+    </details>
+
+    <div id="x-chargement"><p class="x-note" style="text-align:center" data-i18n="xp.charg">Loading the reference sets…</p></div>
+
+    <div id="x-app" hidden>
+      <div class="x-onglets" role="tablist" aria-label="Explorer views" data-i18n-aria="xp.ong_aria">
+        <button class="filter-btn active" role="tab" aria-selected="true" data-onglet="fiche">
+          <span class="x-long" data-i18n="xp.ong_fiche_l">Profile &amp; indicators</span><span class="x-court" data-i18n="xp.ong_fiche_c">Profile</span></button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-onglet="comparaison">
+          <span class="x-long" data-i18n="xp.ong_comp_l">Compare territories</span><span class="x-court" data-i18n="xp.ong_comp_c">Compare</span></button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-onglet="classement">
+          <span class="x-long" data-i18n="xp.ong_class_l">Ranking of communes</span><span class="x-court" data-i18n="xp.ong_class_c">Ranking</span></button>
+      </div>
+
+      <div id="x-vue-fiche" role="tabpanel">
+        <div class="x-adapter">
+          <label for="x-objectif" data-i18n="xp.obj_label">Adapt this profile to my use</label>
+          <select id="x-objectif">
+            <option value="tout" data-i18n="xp.opt_tout">Overview</option>
+            <option value="planifier" data-i18n="xp.opt_planifier">Plan public services</option>
+            <option value="projet" data-i18n="xp.opt_projet">Prepare a project or an intervention</option>
+            <option value="recherche" data-i18n="xp.opt_recherche">Carry out research</option>
+            <option value="implantation" data-i18n="xp.opt_implantation">Study a business location</option>
+            <option value="macommune" data-i18n="xp.opt_macommune">Explore my commune</option>
+          </select>
+        </div>
+        <div id="x-fiche" hidden></div>
+      </div>
+
+      <div id="x-vue-comparaison" role="tabpanel" hidden>
+        <p class="x-note" style="margin-top:0" data-i18n-html="xp.comp_note">Two to four territories side by side — communes, arrondissements or departments. Every value carries its reference year, and comparisons across different years are flagged rather than smoothed over.</p>
+        <div id="x-comp-choix" class="x-jetons"></div>
+        <div id="x-comparaison-corps"></div>
+      </div>
+
+      <div id="x-vue-classement" role="tabpanel" hidden>
+        <div class="x-outils">
+          <label for="x-niveau" data-i18n="xp.niv_label">Rank the</label>
+          <select id="x-niveau">
+            <option value="3" data-i18n="xp.opt_3">Communes</option>
+            <option value="2" data-i18n="xp.opt_2">Arrondissements</option>
+            <option value="1" data-i18n="xp.opt_1">Departments</option>
+          </select>
+          <label for="x-indicateur" data-i18n="xp.par_label">by</label>
+          <select id="x-indicateur"></select>
+          <label for="x-normalisation" data-i18n="xp.lect_label">reading</label>
+          <select id="x-normalisation">
+            <option value="total" data-i18n="xp.opt_total">Raw value</option>
+            <option value="km2" data-i18n="xp.opt_km2">Per 100 km²</option>
+            <option value="part" data-i18n="xp.opt_part">Share of national total</option>
+            <option value="habitant" data-i18n="xp.opt_habitant">Per 10,000 inhabitants</option>
+          </select>
+          <button id="x-export" class="btn btn-outline" data-i18n="xp.export">Export to CSV</button>
+        </div>
+        <p class="x-note" style="margin-top:0" data-i18n-html="xp.class_note">Departments and arrondissements have no values of their own: they are aggregated from their communes according to the rule written in the dictionary, and the number of documented communes is shown alongside. The <b>+</b> button adds a territory to the comparison.</p>
+        <div id="x-classement-corps"></div>
+      </div>
+    </div>
+
+    <div class="d-box" style="margin-top:2.6rem">
+      <h3 data-i18n="xp.box_h3">What this explorer does — and what it does not</h3>
+      <p data-i18n-html="xp.box_p1">It shows <b>the information currently documented by Atmart Data</b> — not everything that exists about a commune. Everything runs in your browser: four public files and one map outline, no application server, no account, no advertising tracker. An <b>anonymous and aggregated</b> audience measurement counts uses (a search happened) without ever knowing who or what — no cookie, no identifier, no IP address kept, and the text you type never leaves your browser: <a href="/donnees-confiance.html#mesure">full method</a>. What you see, you can download as is from the <a href="datasets.html">catalogue</a> and recompute yourself.</p>
+      <p data-i18n-html="xp.box_p2">The <b>commune is the most detailed territorial level of the public edition</b>. Communal sections, populated places and detailed polygons are available in the <a href="/donnees-pack-geo-haiti.html">Haiti Geo Pack</a>. Definitions, methods and quality statuses are set out on the <a href="/donnees-backbone.html#statuts">Backbone</a> page.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">A product of <a href="https://atmart.ltd/">Atmart Data</a> — sourced, dated, verifiable data on the 140 communes of Haiti.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_donnees">Data</h4>
+        <ul>
+          <li><a href="/couches.html" data-i18n="ft.couches">Layers</a></li>
+          <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
+          <li><a href="donnees.html" data-i18n="ft.comment">How it works</a></li>
+          <li><a href="/donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
+          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definitions &amp; methods</a></li>
+          <li><a href="/donnees-systeme.html" data-i18n="ft.carte">The system map</a></li>
+          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Trust &amp; method</a></li>
+          <li><a href="/archives.html" data-i18n="ft.arch">Archives & citation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_contact">Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. The Haiti Explorer is free, with no account and no advertising tracker — only an anonymous and aggregated audience measurement exists, <a href="/donnees-confiance.html#mesure">method published</a>.</div>
+  </div>
+</footer>
+
+<script>
+  /* Menu mobile — l'equivalent des trois lignes de script.js du site Atmart. */
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+<script>
+  /* Site autonome : donnees locales, liens editoriaux vers atmart.ltd.
+     Francais seul pendant la finalisation — le multilingue reviendra d'un bloc. */
+  /* Les pages Donnees vivent ICI depuis le 13/08 : le moteur genere des
+     liens locaux (site vide). atmart.ltd n'est plus que pour les produits. */
+  window.ATM_EXPLORATEUR = {};
+  window.ATM_LANGUES = ["fr", "ht", "en", "es"];
+</script>
+<script src="../assets/i18n.js?v=15"></script>
+<script type="module" src="../assets/modules/explorateur.js?v=2"></script>
+<script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
+if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>
+<script src="../assets/mesure.js?v=2" defer></script>
+<script src="../assets/ux.js?v=1" defer></script>
+</body>
+</html>

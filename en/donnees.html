@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
+  <title data-i18n="pg.accueil.title">Atmart Data — decision-ready data on Haiti | Atmart</title>
+  <meta name="description" data-i18n-content="pg.accueil.desc" content="The platform of reconstructed data on Haiti: documented datasets, decision packs for companies and NGOs, academic access, dataset sponsorship. Year 1: Haiti only." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="../assets/style.css?v=33" />
+  <link rel="stylesheet" href="../assets/data.css?v=27" />
+  <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://explorateur.atmart.ltd/#organisation",
+   "name": "Atmart Data",
+   "url": "https://explorateur.atmart.ltd/",
+   "email": "sales@atmart.ltd",
+   "parentOrganization": {
+    "@type": "Organization",
+    "name": "Atmart LLC"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://explorateur.atmart.ltd/#site",
+   "url": "https://explorateur.atmart.ltd/",
+   "name": "Atmart Data — Explorateur Haïti",
+   "publisher": {
+    "@id": "https://explorateur.atmart.ltd/#organisation"
+   },
+   "inLanguage": "fr"
+  }
+ ]
+}
+</script>
+<!-- /JSON-LD -->
+
+<script>
+  window.ATM_LANGUES = ["fr", "ht", "en", "es"];
+</script>
+
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-A4SXCLCv2gNUZcEN2WaS8jcf7c2GQLT8XVp/fJ0CZkk=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+    <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees.html", "ht": "https://explorateur.atmart.ltd/ht/donnees.html", "en": "https://explorateur.atmart.ltd/en/donnees.html", "es": "https://explorateur.atmart.ltd/es/donnees.html"};</script>
+  <link rel="canonical" href="https://explorateur.atmart.ltd/en/donnees.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees.html" />
+  <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees.html" />
+  <link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees.html" />
+  <link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees.html" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/donnees.html" />
+  <script>window.ATM_LANG_FORCE = "en"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees.html", "ht": "https://explorateur.atmart.ltd/ht/donnees.html", "en": "https://explorateur.atmart.ltd/en/donnees.html", "es": "https://explorateur.atmart.ltd/es/donnees.html"};</script>
+</head>
+<body>
+<a class="lien-evitement" href="#contenu" data-i18n="nv.skip">Skip to content</a>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="../assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">Atmart's data</small></a>
+    <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nv.expl_h">Haiti Explorer</a></li>
+      <li><a href="/couches.html" data-i18n="nv.couches_h">Layers</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Data</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue <small>datasets &amp; guides</small></a></li>
+          <li><a href="/donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>companies, NGOs, administrations</small></a></li>
+          <li><a href="/donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>students &amp; researchers</small></a></li>
+          <li><a href="/donnees-parrainage.html" data-i18n-html="nv.parr">Sponsor a dataset <small>institutions &amp; companies</small></a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">How it works <small>method, sources, system</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="contenu" class="hero" style="padding:3.5rem 0 2rem">
+  <div class="container">
+    <p class="kreyol" lang="ht" data-i18n="pg.accueil.accroche">Decision-ready data.</p>
+    <h1 data-i18n-html="pg.accueil.h1">Atmart <em>Data</em></h1>
+    <p class="lead" data-i18n-html="pg.accueil.lead">The platform of <strong>reconstructed data on Haiti</strong>. We do not republish public files: we build datasets that do not exist yet, by linking scattered sources to shared identifiers, to a history and to documentation that hold up in front of a committee. <strong>During its first year, Atmart Data publishes data on Haiti only</strong> — one country, treated in depth, rather than ten skimmed over.</p>
+    <div class="cta-row" style="display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.5rem">
+      <a data-i18n="cm.cta_expl" href="https://explorateur.atmart.ltd/" class="btn btn-primary">Open the Explorer</a>
+      <a data-i18n="cm.cta_cat" href="datasets.html" class="btn btn-outline">The catalogue</a>
+      <a data-i18n="cm.cta_fait" href="/donnees-systeme.html" class="btn btn-outline">How it is built</a>
+    </div>
+    <div class="d-proof">
+      <div><b><span data-mf="nombre_entites_territoriales">11 707</span></b><small data-i18n-html="cm.pr1">territorial entities identified, from department down to locality</small></div>
+      <div><b data-i18n="cm.pr2_b">5 levels</b><small data-i18n-html="cm.pr2">department › arrondissement › commune › section › locality</small></div>
+      <div><b><span data-mf="nombre_valeurs_sourcees">2 949</span></b><small data-i18n-html="cm.pr3">indicator values computed across the <span data-mf="nombre_communes">140</span> communes</small></div>
+      <div><b data-i18n="cm.pr4_b">1 standard</b><small data-i18n-html="cm.pr4">the Fèy Done Atmart, applied to every dataset</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAR BESOIN — trois portes, trois destinations -->
+<section class="d-sec d-besoins-sec" style="padding-top:0">
+<div class="container">
+<h2 data-i18n="cm.bes_h" class="d-h" style="margin-bottom:0.4rem">What are you looking for?</h2>
+<p data-i18n="cm.bes_sub" class="d-sub" style="margin-bottom:1.6rem">Three ways in, depending on what you need today.</p>
+<div class="d-besoins">
+
+<a class="d-besoin" href="/">
+<span class="d-besoin-ic" aria-hidden="true">🔎</span>
+<h3 data-i18n="cm.bes1_h">I am looking for a figure on a commune</h3>
+<p data-i18n-html="cm.bes1_p">Open a territory's profile and read its indicators: each one carries its source, its reference year and its limitation. What is missing is written as missing, never replaced by a zero.</p>
+<p data-i18n-html="cm.bes1_vol" class="d-besoin-vol"><span data-mf="nombre_communes">140</span> communes · <span data-mf="nombre_valeurs_sourcees">2,949</span> sourced values</p>
+<span data-i18n="cm.bes1_cta" class="d-besoin-cta">Open the Explorer →</span>
+</a>
+
+<a class="d-besoin" href="datasets.html">
+<span class="d-besoin-ic" aria-hidden="true">⬇</span>
+<h3 data-i18n="cm.bes2_h">I need a file to download</h3>
+<p data-i18n-html="cm.bes2_p">Datasets ready to open in Excel, Power BI or R, delivered with their documentation: sources, variable dictionary, known limitations and licence. No account to create.</p>
+<p data-i18n-html="cm.bes2_vol" class="d-besoin-vol"><span data-mf="nombre_produits_gratuits">23</span> free datasets · <span data-mf="nombre_produits_payants">5</span> paid packs</p>
+<span data-i18n="cm.bes2_cta" class="d-besoin-cta">See the catalogue →</span>
+</a>
+
+<a class="d-besoin" href="/donnees-solutions.html">
+<span class="d-besoin-ic" aria-hidden="true">🧩</span>
+<h3 data-i18n="cm.bes3_h">What I need does not exist yet</h3>
+<p data-i18n-html="cm.bes3_p">Tell us which decision you have to make. We build the dataset to order, or we get it funded so that it becomes public — and free for everyone.</p>
+<p data-i18n-html="cm.bes3_vol" class="d-besoin-vol"><span data-mf="nombre_produits_parrainables">5</span> datasets awaiting a sponsor</p>
+<span data-i18n="cm.bes3_cta" class="d-besoin-cta">Describe my need →</span>
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- REPÈRE NATIONAL — budget exécuté (SRC-024, ajouté le 14/08/2026) -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n="cm.rep_lbl" class="d-lbl">National benchmark</p>
+    <h2 data-i18n="cm.rep_h" class="d-h">Public spending, per inhabitant</h2>
+    <p data-i18n-html="cm.rep_sub" class="d-sub" style="margin-bottom:1.3rem">The Ministry of Economy and Finance publishes budget execution on <a href="https://budget.gouv.ht/" rel="noopener">budget.gouv.ht</a> — but only at the <strong>national</strong> level, ministry by ministry: no breakdown by commune or department exists to date. Here, then, is what can honestly be published, taken from the official documents of the <strong>ongoing</strong> 2025-2026 fiscal year (cumulative from 1 October 2025 to 30 June 2026, that is 9 months out of 12).</p>
+    <div class="d-proof">
+      <div><b data-i18n-html="cm.rep_b1">186.4 bn HTG</b><small data-i18n-html="cm.rep_p1">authorized spending executed over 9 months — 51.75% of the revised budget of 360.3 bn</small></div>
+      <div><b data-i18n-html="cm.rep_b2">≈ 15,670 HTG</b><small data-i18n-html="cm.rep_p2">per inhabitant over these 9 months (population: 2024 UNFPA projection — an order of magnitude, not a measurement)</small></div>
+      <div><b data-i18n-html="cm.rep_b3">176.0 bn HTG</b><small data-i18n-html="cm.rep_p3">actual disbursements according to the TOFE (cash basis) — a different reference frame; the gap is normal and documented</small></div>
+    </div>
+    <p data-i18n-html="cm.rep_note" class="d-sub" style="margin-top:1.1rem">Every figure is extracted from an official PDF sealed by a SHA-256 hash, with its internal checks (sum of the months, execution rate). <a href="../data/atmart_indicateurs_national_HT.csv" download>Download the national benchmark CSV</a> — documented columns: concept, period, source, document hash, limitations.</p>
+  </div>
+</section>
+
+<!-- LE PROBLÈME -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n="cm.pb_lbl" class="d-lbl">The problem</p>
+    <h2 data-i18n="cm.pb_h" class="d-h">In our markets, the data exists. It is using it that costs.</h2>
+    <p data-i18n-html="cm.pb_sub" class="d-sub" style="margin-bottom:1.3rem">The raw figure is rarely the real obstacle. What blocks you is the time lost between the source and the decision. That interval is exactly what Atmart Data works on.</p>
+    <div class="d-tiles">
+      <div><span class="ico">🧩</span><b data-i18n="cm.pb1_t">Fragmentation</b><p data-i18n-html="cm.pb1_p">Sources are scattered across institutions, donors, portals and PDFs. Nobody holds them together.</p></div>
+      <div><span class="ico">📐</span><b data-i18n="cm.pb2_t">No standard</b><p data-i18n-html="cm.pb2_p">Commune names, units, years, codes: nothing joins without being harmonized by hand.</p></div>
+      <div><span class="ico">❓</span><b data-i18n="cm.pb3_t">Methodological uncertainty</b><p data-i18n-html="cm.pb3_p">Where does the figure come from? How old is it? What does it not cover? Without an answer, it is indefensible.</p></div>
+      <div><span class="ico">⏱</span><b data-i18n="cm.pb4_t">Cleaning time</b><p data-i18n-html="cm.pb4_p">Two to three days of preparation per series. That cost is what we remove — not the figures, which are often public.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LE BACKBONE -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n="cm.bb_lbl" class="d-lbl">Our answer</p>
+    <h2 data-i18n="cm.bb_h" class="d-h">A backbone, not a file warehouse</h2>
+    <p data-i18n-html="cm.bb_sub" class="d-sub">What is truly missing in Haiti is not the data: it is <strong>common identifiers</strong>. Without a shared key, a school, a market, a clinic, a price and a budget cannot be tied to the same commune or the same period. The Backbone is that foundation — and every new dataset that connects to it increases the value of all the previous ones.</p>
+    <div class="d-tiles" style="margin-top:1.2rem">
+      <div><span class="ico">1️⃣</span><b data-i18n="cm.bb1_t">Reconstruction</b><p data-i18n-html="cm.bb1_p">PDFs, HTML tables, unstable APIs and badly structured Excel files become clean tables.</p></div>
+      <div><span class="ico">2️⃣</span><b data-i18n="cm.bb2_t">Harmonization</b><p data-i18n-html="cm.bb2_p">A series becomes comparable again despite changes of nomenclature and method.</p></div>
+      <div><span class="ico">3️⃣</span><b data-i18n="cm.bb3_t">Cross-referencing</b><p data-i18n-html="cm.bb3_p">Sources that do not talk to each other are linked by the same territorial and temporal key.</p></div>
+      <div><span class="ico">4️⃣</span><b data-i18n="cm.bb4_t">Derived indicators</b><p data-i18n-html="cm.bb4_p">Measures published nowhere else: access to services, price volatility, real coverage.</p></div>
+      <div><span class="ico">5️⃣</span><b data-i18n="cm.bb5_t">Decision-ready product</b><p data-i18n-html="cm.bb5_p">CSV, Excel, GeoJSON, Power BI, dictionary, methodological note and a starting reading.</p></div>
+    </div>
+    <p data-i18n-html="cm.bb_note" class="d-note" style="margin-top:1rem">The territory reference set is published: <strong><span data-mf="nombre_entites_territoriales">11,707</span> entities</strong>, from department down to locality, arrondissements included. <a href="/donnees-backbone.html">See the Backbone and its method →</a></p>
+  </div>
+</section>
+
+<!-- ENTRÉES PAR USAGE -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n="cm.pt_lbl" class="d-lbl">Where to start</p>
+    <h2 data-i18n="cm.pt_h" class="d-h">Six audiences, six ways in</h2>
+    <p data-i18n-html="cm.pt_sub" class="d-sub" style="margin-bottom:1.3rem">The same catalogue, but not the same need. Choose the door that concerns you.</p>
+    <div class="d-doors">
+      <a class="d-door" href="/donnees-solutions.html#entreprises">
+        <h3 data-i18n-html="cm.pt1_h">🏢 Companies</h3>
+        <p data-i18n-html="cm.pt1_p">Site selection, territorial targeting, market study, regional benchmark. You pay to reach a defensible recommendation faster.</p>
+        <span data-i18n-html="cm.pt1_go" class="go">Decision packs &amp; licences →</span>
+      </a>
+      <a class="d-door" href="/donnees-solutions.html#ong">
+        <h3 data-i18n-html="cm.pt2_h">🌍 NGOs &amp; donors</h3>
+        <p data-i18n-html="cm.pt2_p">Target, prioritize, justify, evaluate. Geographic and socio-economic bases aligned with the official p-codes.</p>
+        <span data-i18n-html="cm.pt2_go" class="go">See the use cases →</span>
+      </a>
+      <a class="d-door" href="/donnees-solutions.html#administrations">
+        <h3 data-i18n-html="cm.pt3_h">🏛 Public administrations</h3>
+        <p data-i18n-html="cm.pt3_p">Structure monitoring, advocacy and planning on documented, traceable and citable foundations.</p>
+        <span data-i18n-html="cm.pt3_go" class="go">Institutional licences →</span>
+      </a>
+      <a class="d-door amber" href="/donnees-campus.html">
+        <h3 data-i18n-html="cm.pt4_h">🎓 Students &amp; researchers</h3>
+        <p data-i18n-html="cm.pt4_p">Atmart Campus: verified academic access, thesis packs by discipline, methodological guides and citation rules.</p>
+        <span data-i18n-html="cm.pt4_go" class="go">Discover Atmart Campus →</span>
+      </a>
+      <a class="d-door amber" href="/donnees-parrainage.html">
+        <h3 data-i18n-html="cm.pt5_h">🤝 Sponsors &amp; institutions</h3>
+        <p data-i18n-html="cm.pt5_p">Fund the opening, the documentation or the updating of a dataset useful to an entire cohort.</p>
+        <span data-i18n-html="cm.pt5_go" class="go">Sponsor a dataset →</span>
+      </a>
+      <a class="d-door" href="datasets.html#shelf-free">
+        <h3 data-i18n-html="cm.pt6_h">👥 General public &amp; journalists</h3>
+        <p data-i18n-html="cm.pt6_p">Free datasets, visualizations and short readings to understand your territory without being an analyst.</p>
+        <span data-i18n-html="cm.pt6_go" class="go">What is free →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- QUATRE NIVEAUX -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n="cm.of_lbl" class="d-lbl">The offer</p>
+    <h2 data-i18n="cm.of_h" class="d-h">Four levels, not one more</h2>
+    <p data-i18n-html="cm.of_sub" class="d-sub" style="margin-bottom:1.2rem">An offer you cannot grasp in a few seconds does not sell. Here is the whole architecture.</p>
+    <div class="d-tab-wrap">
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th data-i18n="cm.of_c1" scope="col">Level</th><th data-i18n="cm.of_c2" scope="col">For whom</th><th data-i18n="cm.of_c3" scope="col">What you get</th><th data-i18n="cm.of_c4" scope="col">Price</th></tr></thead>
+        <tbody>
+          <tr>
+            <td data-i18n-html="cm.of_r1c1">Free</td>
+            <td data-i18n-html="cm.of_r1c2">General public, discovery, basic academic use</td>
+            <td data-i18n-html="cm.of_r1c3">Previews, samples, visualizations, learning datasets, teaching material</td>
+            <td data-i18n-html="cm.of_r1c4" class="p">$0</td>
+          </tr>
+          <tr>
+            <td data-i18n-html="cm.of_r2c1">Dataset</td>
+            <td data-i18n-html="cm.of_r2c2">One-off need, tight budget</td>
+            <td data-i18n-html="cm.of_r2c3">One complete dataset, its Fèy Done, its variable dictionary, an explicit licence</td>
+            <td data-i18n-html="cm.of_r2c4" class="p">$15 – 34</td>
+          </tr>
+          <tr>
+            <td data-i18n-html="cm.of_r3c1">Decision pack</td>
+            <td data-i18n-html="cm.of_r3c2">SMEs, consultants, NGOs, business teams</td>
+            <td data-i18n-html="cm.of_r3c3">Several datasets assembled around a business question + a starting reading ("decision-ready")</td>
+            <td data-i18n-html="cm.of_r3c4" class="p">on quotation</td>
+          </tr>
+          <tr>
+            <td data-i18n-html="cm.of_r4c1">Institutional licence</td>
+            <td data-i18n-html="cm.of_r4c2">Companies, universities, public administrations, structured NGOs</td>
+            <td data-i18n-html="cm.of_r4c3">Multi-user access, extended catalogue, updates, methodological support</td>
+            <td data-i18n-html="cm.of_r4c4" class="p">annual, on quotation</td>
+          </tr>
+        </tbody>
+      </table></div>
+    </div>
+    <p data-i18n-html="cm.of_note" class="d-note" style="margin-top:0.9rem">The price follows the value of the transformation — scarcity, preparation, updating, time saved — not the number of rows. <a href="/donnees-solutions.html#licences">Licence details →</a></p>
+  </div>
+</section>
+
+<!-- STANDARD -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n="cm.fd_lbl" class="d-lbl">The method</p>
+    <h2 data-i18n="cm.fd_h" class="d-h">Every dataset arrives with its signed data sheet</h2>
+    <p data-i18n-html="cm.fd_sub" class="d-sub">This is the <strong>Fèy Done Atmart</strong>: nine sections, the same for every dataset, in four languages. It states what the data can do — and what it cannot do.</p>
+    <div class="d-tiles" style="margin-top:1.2rem">
+      <div><b data-i18n="cm.fd1_t">1 · Identification</b><p data-i18n-html="cm.fd1_p">Version, date, next update, licence, contact.</p></div>
+      <div><b data-i18n="cm.fd2_t">2 · Description</b><p data-i18n-html="cm.fd2_p">What a row represents, volume, geographic and temporal coverage.</p></div>
+      <div><b data-i18n="cm.fd3_t">3 · Source and method</b><p data-i18n-html="cm.fd3_p">Official source, extraction date, cleaning performed, enrichments added.</p></div>
+      <div><b data-i18n="cm.fd4_t">4 · Representativeness</b><p data-i18n-html="cm.fd4_p">What the dataset represents and what it does not. Who is missing.</p></div>
+      <div><b data-i18n="cm.fd5_t">5 · Quality</b><p data-i18n-html="cm.fd5_p">Missing data, known limitations, possible lag in the source.</p></div>
+      <div><b data-i18n="cm.fd6_t">6 · Uses</b><p data-i18n-html="cm.fd6_p">Intended uses and forbidden uses, explicitly.</p></div>
+      <div><b data-i18n="cm.fd7_t">7 · Ethics</b><p data-i18n-html="cm.fd7_p">Personal data, legal basis, applicable rules.</p></div>
+      <div><b data-i18n="cm.fd8_t">8 · Versions</b><p data-i18n-html="cm.fd8_p">Change log, dataset by dataset.</p></div>
+      <div><b data-i18n="cm.fd9_t">9 · Commitment</b><p data-i18n-html="cm.fd9_p">A reported error is corrected in the next version.</p></div>
+    </div>
+    <p data-i18n-html="cm.fd_note" class="d-note" style="margin-top:1rem"><a href="/donnees-confiance.html">Read the trust and method charter →</a> · <a href="/donnees-pack-geo-haiti.html">See a complete product sheet →</a></p>
+  </div>
+</section>
+
+<!-- PROGRAMMES -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n="cm.pgm_lbl" class="d-lbl">The programmes</p>
+    <h2 data-i18n="cm.pgm_h" class="d-h">Three programmes that hold the model together</h2>
+    <div class="d-doors" style="margin-top:1.2rem">
+      <a class="d-door amber" href="/donnees-campus.html">
+        <h3 data-i18n-html="cm.pgm1_h">Atmart Campus <span class="d-pill spons">Pilot</span></h3>
+        <p data-i18n-html="cm.pgm1_p">Verified academic access: thesis packs by discipline, quotas, methodological guides, citation rules. Free access here is framed, never undifferentiated.</p>
+        <span data-i18n-html="cm.pgm1_go" class="go">Request access →</span>
+      </a>
+      <a class="d-door amber" href="/donnees-parrainage.html">
+        <h3 data-i18n-html="cm.pgm2_h">Sponsor a dataset <span class="d-pill spons">Open</span></h3>
+        <p data-i18n-html="cm.pgm2_p">A bank, an NGO, a ministry or a foundation funds the opening of a dataset — which then becomes accessible to a whole cohort of students or researchers.</p>
+        <span data-i18n-html="cm.pgm2_go" class="go">See the sponsorable datasets →</span>
+      </a>
+      <a class="d-door" href="datasets.html#shelf-soon">
+        <h3 data-i18n-html="cm.pgm3_h">Atmart Observatories <span class="d-pill soon">In preparation</span></h3>
+        <p data-i18n-html="cm.pgm3_p">Recurring, public products on high-utility themes: market prices, territories, employment, financial inclusion. First observatory targeted for 2027.</p>
+        <span data-i18n-html="cm.pgm3_go" class="go">See the roadmap →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSPARENCE -->
+<section class="d-sec">
+  <div class="container">
+    <div class="d-box amber">
+      <h3 data-i18n="cm.tr_h">Where the catalogue really stands</h3>
+      <p data-i18n-html="cm.tr_p1">We apply a simple rule, to ourselves included: <strong>we only put on sale what we can deliver today.</strong> The catalogue therefore shows three states — <span class="d-pill live">Available</span> <span class="d-pill spons">Sponsorable</span> <span class="d-pill soon">In preparation</span> — and never a "Buy" button on a file that does not exist yet.</p>
+      <p data-i18n-html="cm.tr_p2">As of 14 August 2026: <strong><span data-mf="nombre_produits_payants">5</span> datasets on sale</strong>, <strong><span data-mf="nombre_produits_gratuits">23</span> free resources</strong> — including the four master reference sets of the Backbone and the source register — and <strong><span data-mf="nombre_produits_parrainables">5</span> datasets in preparation</strong>, open to sponsorship. All of them cover Haiti: regional and African datasets are withdrawn from the catalogue until the second year.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n="cm.rd_lbl" class="d-lbl">Trajectory</p>
+    <h2 data-i18n="cm.rd_h" class="d-h">Haiti first, the region afterwards</h2>
+    <p data-i18n-html="cm.rd_sub" class="d-sub">Regional expansion is not a diversification: it is the replication of a method already proven on difficult ground.</p>
+    <ol class="d-steps">
+      <li data-i18n-html="cm.rd1"><b>Phase 1 — lay the backbone (0–6 months).</b> Territory reference set stabilized ✓, time and indicator reference sets, data-sheet standards and versioning rules, source register and legal matrix ✓, academic access framework ✓, sponsorable offers ✓.</li>
+      <li data-i18n-html="cm.rd2"><b>Phase 2 — the pillar products (6–12 months).</b> Profile of the 140 communes, first geocoded school register, first versioned health register, monthly market panel, harmonized macro-financial base, first licences and first sponsorships.</li>
+      <li data-i18n-html="cm.rd3"><b>Phase 3 — industrialize, and only then extend (12–24 months).</b> Multi-source cross-referencing, access to services, sector packs, university agreements. Replicating the method to the Caribbean and then to Francophone Africa only begins after the first year, once Haiti is covered.</li>
+    </ol>
+    <p data-i18n-html="cm.rd_note" class="d-note" style="margin-top:0.9rem">The order is not decorative: publishing a school register before stabilizing the territory means condemning yourself to redo it. <a href="/donnees-backbone.html#portefeuille">The portfolio in 5 layers →</a></p>
+  </div>
+</section>
+
+<!-- POUR ALLER PLUS LOIN -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n="cm.pl_lbl" class="d-lbl">Going further</p>
+    <h2 data-i18n="cm.pl_h" class="d-h">The four method pages</h2>
+    <p data-i18n-html="cm.pl_sub" class="d-sub" style="margin-bottom:1.2rem">They are no longer in the menu — six entries are enough to work with. They stay here, for anyone who wants to check how all this is built.</p>
+    <div class="d-doors">
+      <a class="d-door" href="/donnees-systeme.html">
+        <h3 data-i18n="cm.pl1_h">🗺 The system map</h3>
+        <p data-i18n-html="cm.pl1_p">The four layers — sources, backbone, registers, products — on one page, filterable according to your situation.</p>
+        <span data-i18n="cm.pl1_go" class="go">See the map →</span>
+      </a>
+      <a class="d-door" href="/donnees-backbone.html">
+        <h3 data-i18n="cm.pl2_h">🧱 The Backbone</h3>
+        <p data-i18n-html="cm.pl2_p">The four master reference sets, the common schema, the value statuses and the twelve products still to be rebuilt.</p>
+        <span data-i18n="cm.pl2_go" class="go">See the method →</span>
+      </a>
+      <a class="d-door" href="/donnees-confiance.html">
+        <h3 data-i18n="cm.pl3_h">🛡 Trust & method</h3>
+        <p data-i18n-html="cm.pl3_p">Sourcing policy, checks before publication, versions, corrections, licences and personal data.</p>
+        <span data-i18n="cm.pl3_go" class="go">Read the charter →</span>
+      </a>
+      <a class="d-door" href="https://atmart.ltd/outils.html">
+        <h3 data-i18n="cm.pl4_h">🧰 Tools & sources</h3>
+        <p data-i18n-html="cm.pl4_p">The tools we use and the portals where public data on Haiti can be found.</p>
+        <span data-i18n="cm.pl4_go" class="go">See the list →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="d-sec" style="padding-bottom:3rem">
+  <div class="container">
+    <div class="banner">
+      <h2 data-i18n="cm.ct_h">Tell us what you have to decide</h2>
+      <p data-i18n-html="cm.ct_p">A precise need, a territory, a deadline: we reply by stating what already exists, what is being prepared, and what it would cost to build it. Answer within 48 working hours.</p>
+      <div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
+        <a data-i18n="cm.ct_b1" href="/donnees-solutions.html#contact" class="btn btn-primary">Describe my need</a>
+        <a data-i18n="cm.ct_b2" href="datasets.html" class="btn btn-outline">Browse the catalogue</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">A product of <a href="https://atmart.ltd/">Atmart Data</a> — sourced, dated, verifiable data on the 140 communes of Haiti.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_donnees">Data</h4>
+        <ul>
+          <li><a href="/couches.html" data-i18n="ft.couches">Layers</a></li>
+          <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
+          <li><a href="donnees.html" data-i18n="ft.comment">How it works</a></li>
+          <li><a href="/donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
+          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definitions &amp; methods</a></li>
+          <li><a href="/donnees-systeme.html" data-i18n="ft.carte">The system map</a></li>
+          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Trust &amp; method</a></li>
+          <li><a href="/archives.html" data-i18n="ft.arch">Archives & citation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_contact">Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. The Haiti Explorer is free, with no account and no advertising tracker — only an anonymous and aggregated audience measurement exists, <a href="/donnees-confiance.html#mesure">method published</a>.</div>
+  </div>
+</footer>
+
+<script src="../assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+<script src="../assets/mesure.js?v=2" defer></script>
+<script src="../assets/ux.js?v=1" defer></script>
+<script src="../assets/i18n.js?v=15"></script>
+</body>
+</html>

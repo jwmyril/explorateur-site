@@ -1,15 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://explorateur.atmart.ltd/</loc>
-    <priority>1.0</priority>
+    <loc>https://explorateur.atmart.ltd/archives.html</loc>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/couches.html</loc>
-    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/datasets.html</loc>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/datasets.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/datasets.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/datasets.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/datasets.html"/>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/donnees-backbone.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/donnees-campus.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/donnees-confiance.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/donnees-pack-geo-haiti.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/donnees-parrainage.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/donnees-registres.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/donnees-solutions.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/donnees-systeme.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/donnees.html</loc>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees.html"/>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/fiche.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/fiche.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/fiche.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/fiche.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/fiche.html"/>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/</loc>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/"/>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/ht/datasets.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/ht/donnees.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/ht/fiche.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/ht/index.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/en/datasets.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/en/donnees.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/en/fiche.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/en/index.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/es/datasets.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/es/donnees.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/es/fiche.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/es/index.html</loc>
   </url>
 </urlset>

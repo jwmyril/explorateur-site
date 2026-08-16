@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" href="assets/brand/logo-32.png" />
-  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
-  <title data-i18n="pg.catalogue.title">Catalogue des jeux de données — Atmart Data</title>
-  <meta name="description" data-i18n-content="pg.catalogue.desc" content="Jeux de données économiques, géographiques, sociaux et financiers sur Haïti — sourcés, nettoyés, documentés, avec leur fiche de données et leur licence. Année 1 : Haïti exclusivement." />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
+  <title data-i18n="pg.catalogue.title">Dataset catalogue — Atmart Data</title>
+  <meta name="description" data-i18n-content="pg.catalogue.desc" content="Economic, geographic, social and financial datasets on Haiti — sourced, cleaned, documented, each with its data sheet and its licence. Year 1: Haiti only." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
-  <link rel="stylesheet" href="assets/style.css?v=33" />
-  <link rel="stylesheet" href="assets/data.css?v=27" />
-  <link rel="canonical" href="https://explorateur.atmart.ltd/datasets.html" />
+  <link rel="stylesheet" href="../assets/style.css?v=33" />
+  <link rel="stylesheet" href="../assets/data.css?v=27" />
   <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
 {
@@ -1019,30 +1018,32 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-6JKcQsR69yR98POUmuvdWQIgmDyLA/WEbrivnsety64=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
-      <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/datasets.html" />
+    <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
+  <link rel="canonical" href="https://explorateur.atmart.ltd/en/datasets.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/datasets.html" />
   <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/datasets.html" />
   <link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/datasets.html" />
   <link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/datasets.html" />
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/datasets.html" />
-  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
+  <script>window.ATM_LANG_FORCE = "en"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
 </head>
 <body>
-<a class="lien-evitement" href="#contenu" data-i18n="nv.skip">Aller au contenu</a>
+<a class="lien-evitement" href="#contenu" data-i18n="nv.skip">Skip to content</a>
 
 <header>
   <nav class="nav">
-    <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">les données d'Atmart</small></a>
+    <a href="/" class="logo"><img src="../assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">Atmart's data</small></a>
     <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
-      <li><a href="/" data-i18n="nv.expl_h">Explorateur Haïti</a></li>
-      <li><a href="couches.html" data-i18n="nv.couches_h">Couches</a></li>
-      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Données</span></span>
+      <li><a href="/" data-i18n="nv.expl_h">Haiti Explorer</a></li>
+      <li><a href="/couches.html" data-i18n="nv.couches_h">Layers</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Data</span></span>
         <ul class="nav-sub">
-          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue <small>jeux de données &amp; guides</small></a></li>
-          <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
-          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
-          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
-          <li><a href="donnees.html" data-i18n-html="nv.comment">Comment ça marche <small>méthode, sources, système</small></a></li>
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue <small>datasets &amp; guides</small></a></li>
+          <li><a href="/donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>companies, NGOs, administrations</small></a></li>
+          <li><a href="/donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>students &amp; researchers</small></a></li>
+          <li><a href="/donnees-parrainage.html" data-i18n-html="nv.parr">Sponsor a dataset <small>institutions &amp; companies</small></a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">How it works <small>method, sources, system</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
@@ -1052,30 +1053,20 @@
 
 <section id="contenu" class="hero" style="padding:3.2rem 0 2rem">
   <div class="container">
-    <p class="kreyol" lang="ht" data-i18n="ds.kicker" data-i18n="pg.catalogue.accroche">Des données propres, documentées, prêtes à analyser.</p>
-    <h1 data-i18n-html="ds.title" data-i18n-html="pg.catalogue.h1">Le <em>catalogue</em></h1>
-    <p class="lead" data-i18n-html="ds.lead" data-i18n-html="pg.catalogue.lead">
-      Chaque jeu de données arrive avec sa source, sa date, son dictionnaire de variables, ses limites
-      connues et sa licence. Trois états, affichés sans détour :
-      <span class="d-pill live">Disponible</span> ·
-      <span class="d-pill spons">Parrainable</span> ·
-      <span class="d-pill soon">En préparation</span>.
-      Nous ne mettons pas de bouton « Acheter » sur un fichier qui n'existe pas encore.
-    </p>
-    <p class="d-note" style="margin-top:0.8rem" data-i18n-html="ds.an1_p"><strong>Année 1 : Haïti exclusivement.</strong> Tout ce qui figure ici porte sur Haïti. Les jeux régionaux et africains reviendront en deuxième année, une fois le pays couvert.</p>
-    <p class="d-note" style="margin-top:0.5rem" data-i18n-html="ds.hero_note">
-      Vous cherchez plutôt une solution complète pour votre organisation ?
-      <a href="donnees-solutions.html">Voir les packs décisionnels et les licences →</a>
-    </p>
+    <p class="kreyol" lang="ht" data-i18n="ds.kicker" data-i18n="pg.catalogue.accroche">Clean data, documented, ready to analyse.</p>
+    <h1 data-i18n-html="ds.title" data-i18n-html="pg.catalogue.h1">The <em>catalogue</em></h1>
+    <p class="lead" data-i18n-html="ds.lead" data-i18n-html="pg.catalogue.lead">Every dataset comes with its source, its date, its variable dictionary, its known limits and its licence. Three states, shown plainly: <span class="d-pill live">Available</span> · <span class="d-pill spons">Sponsorable</span> · <span class="d-pill soon">In preparation</span>. We do not put a "Buy" button on a file that does not exist yet.</p>
+    <p class="d-note" style="margin-top:0.8rem" data-i18n-html="ds.an1_p"><strong>Year 1: Haiti only.</strong> Everything here concerns Haiti. Regional and African datasets will return in the second year, once the country is covered.</p>
+    <p class="d-note" style="margin-top:0.5rem" data-i18n-html="ds.hero_note">Looking for a complete solution for your organisation instead? <a href="/donnees-solutions.html">See the decision packs and licences →</a></p>
   </div>
 </section>
 
 <section style="padding-top:0">
   <div class="container">
     <div class="filters" data-target="#data-grid-free,#data-grid-paid,#data-grid-soon">
-      <button class="filter-btn active" data-filter="all" data-i18n="ds.f_all">Tout</button>
-      <button class="filter-btn" data-filter="economie" data-i18n="ds.f_eco">💰 Économie</button>
-      <button class="filter-btn" data-filter="geo" data-i18n="ds.f_geo">🗺 Géographie</button>
+      <button class="filter-btn active" data-filter="all" data-i18n="ds.f_all">All</button>
+      <button class="filter-btn" data-filter="economie" data-i18n="ds.f_eco">💰 Economy</button>
+      <button class="filter-btn" data-filter="geo" data-i18n="ds.f_geo">🗺 Geography</button>
       <button class="filter-btn" data-filter="social" data-i18n="ds.f_soc">👥 Social</button>
       <button class="filter-btn" data-filter="finance" data-i18n="ds.f_fin">📈 Finance</button>
       <button class="filter-btn" data-filter="guide" data-i18n="ds.f_gui">📘 Guides</button>
@@ -1085,78 +1076,78 @@
     <div class="rayons-cote-a-cote">
 <div class="shelf" id="shelf-paid">
       <div class="shelf-head">
-        <h2 data-i18n="ds.paid_h">🛒 En vente — livrables aujourd'hui</h2>
-        <p data-i18n="ds.paid_p">Collectés, nettoyés et documentés à la main. Paiement unique, téléchargement immédiat par carte ou PayPal, licence écrite.</p>
+        <h2 data-i18n="ds.paid_h">🛒 For sale — deliverable today</h2>
+        <p data-i18n="ds.paid_p">Collected, cleaned and documented by hand. One-time payment, instant download by card or PayPal, a written licence.</p>
       </div>
       <div class="why">
-        <p class="why-lead" data-i18n="ds.why_lead">Le gratuit sert à apprendre. Le payant sert à livrer.</p>
+        <p class="why-lead" data-i18n="ds.why_lead">The free files are for learning. The paid ones are for delivering.</p>
         <div class="x-tableau" tabindex="0"><table class="why-tab">
           <thead><tr><th scope="col"></th>
-            <th scope="col" data-i18n="ds.why_free">Gratuit</th>
-            <th scope="col" data-i18n="ds.why_paid">En vente</th></tr></thead>
+            <th scope="col" data-i18n="ds.why_free">Free</th>
+            <th scope="col" data-i18n="ds.why_paid">For sale</th></tr></thead>
           <tbody>
-            <tr><td data-i18n="ds.why_r1">Ce que vous ouvrez</td>
-              <td data-i18n="ds.why_r1f">Un CSV brut</td>
-              <td data-i18n="ds.why_r1p">Plusieurs fichiers assemblés, prêts pour Excel, Power BI et QGIS</td></tr>
-            <tr><td data-i18n="ds.why_r2">Portée</td>
-              <td data-i18n="ds.why_r2f">Un indicateur, pour s'exercer</td>
-              <td data-i18n="ds.why_r2p">Séries et référentiels complets, jusqu'à 11 655 lignes géolocalisées</td></tr>
-            <tr><td data-i18n="ds.why_r3">Comprendre les colonnes</td>
-              <td data-i18n="ds.why_r3f">Un fichier LISEZMOI</td>
-              <td data-i18n="ds.why_r3p">Dictionnaire de variables : chaque colonne, son unité, sa source</td></tr>
-            <tr><td data-i18n="ds.why_r4">Cartographie</td>
+            <tr><td data-i18n="ds.why_r1">What you open</td>
+              <td data-i18n="ds.why_r1f">A raw CSV</td>
+              <td data-i18n="ds.why_r1p">Several files already assembled, ready for Excel, Power BI and QGIS</td></tr>
+            <tr><td data-i18n="ds.why_r2">Scope</td>
+              <td data-i18n="ds.why_r2f">One indicator, to practise on</td>
+              <td data-i18n="ds.why_r2p">Complete reference sets and series, up to 11,655 geolocated rows</td></tr>
+            <tr><td data-i18n="ds.why_r3">Understanding the columns</td>
+              <td data-i18n="ds.why_r3f">A README file</td>
+              <td data-i18n="ds.why_r3p">Variable dictionary: every column, its unit, its source</td></tr>
+            <tr><td data-i18n="ds.why_r4">Mapping</td>
               <td data-i18n="ds.why_r4f">—</td>
-              <td data-i18n="ds.why_r4p">GeoJSON prêt pour Power BI et QGIS, p-codes officiels OCHA</td></tr>
-            <tr><td data-i18n="ds.why_r5">Le travail déjà fait</td>
-              <td data-i18n="ds.why_r5f">À vous de nettoyer et de croiser</td>
-              <td data-i18n="ds.why_r5p">Sources croisées, unités harmonisées, limites connues écrites</td></tr>
-            <tr><td data-i18n="ds.why_r6">Usage</td>
-              <td data-i18n="ds.why_r6f">Apprentissage, tutoriels</td>
-              <td data-i18n="ds.why_r6p">Licence d'utilisation : mémoire, rapport client, publication</td></tr>
+              <td data-i18n="ds.why_r4p">GeoJSON ready for Power BI and QGIS, official OCHA p-codes</td></tr>
+            <tr><td data-i18n="ds.why_r5">The work already done</td>
+              <td data-i18n="ds.why_r5f">You clean and cross-reference it</td>
+              <td data-i18n="ds.why_r5p">Cross-checked sources, harmonised units, known limitations written down</td></tr>
+            <tr><td data-i18n="ds.why_r6">Use</td>
+              <td data-i18n="ds.why_r6f">Learning, tutorials</td>
+              <td data-i18n="ds.why_r6p">Usage licence: thesis, client report, publication</td></tr>
           </tbody>
         </table></div>
-        <p class="why-note" data-i18n="ds.why_note">Le calcul est simple : nettoyer et documenter une de ces séries à la main prend deux à trois jours de travail. C'est ce que vous achetez — pas les chiffres, qui sont souvent publics, mais le temps.</p>
+        <p class="why-note" data-i18n="ds.why_note">The maths is simple: cleaning and documenting one of these series by hand takes two to three days. That is what you are buying — not the numbers, which are often public, but the time.</p>
       </div>
       <div class="grid grid-3" id="data-grid-paid">
 <!-- CARTES:payant — engendré par build_vitrine.py, ne pas éditer à la main -->
 <div class="card" data-cat="geo">
-  <span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
-  <h3 data-i18n-html="ds.c4_h">Pack Géo Haïti — toutes les coordonnées GPS</h3>
-  <p data-i18n-html="ds.c4_p"><strong>570 sections communales</strong> + <strong>140 villes chefs-lieux</strong> + <strong>10 945 lieux habités</strong>, tous nommés en français <strong>et en kreyòl</strong>, avec les p-codes officiels OCHA, superficies et coordonnées WGS84. Chaque lieu habité est rattaché à sa section communale. GeoJSON des trois niveaux inclus pour Power BI et QGIS.</p>
-  <p class="price" data-i18n-html="ds.c4_pr">45 $ <small>3 CSV + 3 GeoJSON + documentation</small></p>
-  <p class="meta" data-i18n-html="ds.c4_meta">🗺 Géographie • v2 • Source : CNIGS via OCHA + GeoNames • <a href="donnees-pack-geo-haiti.html">fiche complète, provenance des noms et limites connues</a></p>
-  <a href="donnees-pack-geo-haiti.html" class="btn btn-primary" data-i18n="ds.c4_cta">fiche complète, provenance des noms et limites connues</a>
+  <span class="tag tag-paid" data-i18n="ds.t_paid">Paid</span>
+  <h3 data-i18n-html="ds.c4_h">Haiti Geo Pack — every GPS coordinate</h3>
+  <p data-i18n-html="ds.c4_p"><strong>570 communal sections</strong> + <strong>140 chief towns</strong> + <strong>10,945 populated places</strong>, all named in French <strong>and in Haitian Creole</strong>, with official OCHA p-codes, areas and WGS84 coordinates. Every populated place is attached to its communal section. GeoJSON for all three levels included, ready for Power BI and QGIS.</p>
+  <p class="price" data-i18n-html="ds.c4_pr">$29 <small>3 CSV + 3 GeoJSON + documentation</small></p>
+  <p class="meta" data-i18n-html="ds.c4_meta">🗺 Geography • v2 • Source: CNIGS via OCHA + GeoNames • <a href="/donnees-pack-geo-haiti.html">full datasheet, name provenance and known limitations</a></p>
+  <a href="/donnees-pack-geo-haiti.html" class="btn btn-primary" data-i18n="ds.c4_cta">See the datasheet & buy</a>
 </div>
 <div class="card" data-cat="payant">
-  <span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
+  <span class="tag tag-paid" data-i18n="ds.t_paid">Paid</span>
   <h3 data-i18n-html="ds.prd104_h">Pack Géo — un département</h3>
   <p data-i18n-html="ds.prd104_p">La part du Pack Géo qui concerne un seul département : sections, chefs-lieux, lieux habités et polygones. Pour qui ne travaille que sur un territoire.</p>
   <p class="price" data-i18n-html="ds.prd104_pr">5 $</p>
   <p class="meta" data-i18n-html="ds.prd104_meta">🗺 Géographie • Sources : CNIGS via OCHA ; GeoNames • niveau de confiance A • Licence Atmart — écrite</p>
-  <a href="donnees-pack-geo-haiti.html" class="btn btn-primary" data-i18n="ds.prd104_cta">Acheter — 5 $</a>
+  <a href="/donnees-pack-geo-haiti.html" class="btn btn-primary" data-i18n="ds.prd104_cta">Acheter — 5 $</a>
 </div>
 <div class="card" data-cat="transversal payant">
-  <span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
-  <h3 data-i18n-html="ds.c29_h">Classeur des 140 profils communaux</h3>
-  <p data-i18n-html="ds.c29_p">Un classeur Excel prêt à ouvrir : une fiche par commune choisie dans une liste, le tableau des <span data-mf="nombre_communes">140</span> communes, le détail avec le statut de chaque valeur, la pyramide des âges, le dictionnaire et les sources. <strong>Les données restent gratuites</strong> — ce qui se vend, c'est le montage, et ce qu'il préserve : une absence y reste vide, jamais remplie d'un zéro.</p>
-  <p class="price" data-i18n-html="ds.c29_pr">25 $ <small>XLSX • 7 feuilles • <span data-mf="nombre_absences_documentees">1 251</span> absences laissées vides</small></p>
-  <p class="meta" data-i18n-html="ds.c29_meta">📊 Transversal • assemblage des jeux publiés • licence CC BY 4.0 pour les données</p>
-  <a href="donnees-solutions.html?produit=classeur-communes#demande" class="btn btn-primary" data-i18n="ds.c29_cta">Commander le classeur — 25 $</a>
+  <span class="tag tag-paid" data-i18n="ds.t_paid">Paid</span>
+  <h3 data-i18n-html="ds.c29_h">Workbook of the 140 communal profiles <span class="badge-new">NEW</span></h3>
+  <p data-i18n-html="ds.c29_p">An Excel workbook ready to open: one sheet per commune chosen from a list, the table of the <span data-mf="nombre_communes">140</span> communes, the detail with the status of every value, the age pyramid, the dictionary and the sources. <strong>The data stays free</strong> — what is sold is the assembly, and what it preserves: an absence stays empty, never filled with a zero.</p>
+  <p class="price" data-i18n-html="ds.c29_pr">$25 <small>XLSX • 7 sheets • <span data-mf="nombre_absences_documentees">1,251</span> absences left empty</small></p>
+  <p class="meta" data-i18n-html="ds.c29_meta">📊 Cross-cutting • assembly of the published datasets • CC BY 4.0 licence for the data</p>
+  <a href="/donnees-solutions.html?produit=classeur-communes#demande" class="btn btn-primary" data-i18n="ds.c29_cta">Commander le classeur — 25 $</a>
 </div>
 <div class="card" data-cat="transversal payant">
-  <span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
-  <h3 data-i18n-html="ds.c30_h">Modèle Power BI — Explorateur Haïti</h3>
-  <p data-i18n-html="ds.c30_p">Un projet Power BI (PBIP) prêt à ouvrir : 7 tables branchées sur les données publiées du site, relations posées sur les p-codes, mesures documentées avec leurs limites. <strong>Il se rafraîchit d'un clic</strong> — le jour où Atmart met à jour un fichier, vos rapports suivent. Construit et validé dans Power BI Desktop.</p>
-  <p class="price" data-i18n-html="ds.c30_pr">50 $ <small>PBIP • 7 tables • connexion requise au rafraîchissement</small></p>
-  <p class="meta" data-i18n-html="ds.c30_meta">📊 Transversal • assemblage des jeux publiés • les données restent sous leurs licences</p>
+  <span class="tag tag-paid" data-i18n="ds.t_paid">Paid</span>
+  <h3 data-i18n-html="ds.c30_h">Power BI template — Haiti Explorer <span class="badge-new">NEW</span></h3>
+  <p data-i18n-html="ds.c30_p">A Power BI project (PBIP) ready to open: 7 tables wired to the site's published data, relationships set on the p-codes, measures documented with their limitations. <strong>It refreshes in one click</strong> — the day Atmart updates a file, your reports follow. Built and validated in Power BI Desktop.</p>
+  <p class="price" data-i18n-html="ds.c30_pr">$50 <small>PBIP • 7 tables • connection required to refresh</small></p>
+  <p class="meta" data-i18n-html="ds.c30_meta">📊 Cross-cutting • assembly of the published datasets • the data stays under its own licences</p>
   <a href="https://payhip.com/b/XSAdi" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.c30_cta">Acheter — 50 $</a>
 </div>
 <div class="card" data-cat="geographie payant">
-  <span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
-  <h3 data-i18n-html="ds.c31_h">Modèle QGIS — Explorateur Haïti</h3>
-  <p data-i18n-html="ds.c31_p">Un projet QGIS prêt à ouvrir : communes et départements, bassins versants nommés, zones inondables, points d'eau fonctionnels et en panne, stations-service et finance — couches distantes stylées, chargées depuis le site. Construit et validé dans QGIS.</p>
-  <p class="price" data-i18n-html="ds.c31_pr">50 $ <small>QGZ + script • 7 couches • connexion requise</small></p>
-  <p class="meta" data-i18n-html="ds.c31_meta">🗺 Géographie • assemblage des jeux publiés • les données restent sous leurs licences</p>
+  <span class="tag tag-paid" data-i18n="ds.t_paid">Paid</span>
+  <h3 data-i18n-html="ds.c31_h">QGIS template — Haiti Explorer <span class="badge-new">NEW</span></h3>
+  <p data-i18n-html="ds.c31_p">A QGIS project ready to open: communes and departments, named watersheds, flood-prone zones, working and broken water points, filling stations and finance — styled remote layers, loaded from the site. Built and validated in QGIS.</p>
+  <p class="price" data-i18n-html="ds.c31_pr">$50 <small>QGZ + script • 7 layers • connection required</small></p>
+  <p class="meta" data-i18n-html="ds.c31_meta">🗺 Geography • assembly of the published datasets • the data stays under its own licences</p>
   <a href="https://payhip.com/b/DBirg" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.c31_cta">Acheter — 50 $</a>
 </div>
 <!-- /CARTES:payant -->
@@ -1164,298 +1155,298 @@
     
 
 <div class="card" data-cat="geographie payant">
-<span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
-<h3 data-i18n-html="ds.c27_h">Pack Géo — un seul département</h3>
-<p data-i18n-html="ds.c27_p">La part du Pack Géo qui concerne un département : sections communales, chef-lieu, lieux habités et polygones. Pour qui ne travaille que sur un territoire. <strong>Le pays entier reste l'affaire</strong> — dix départements séparés coûtent 50 $, le pack complet 45 $.</p>
-<p class="price" data-i18n-html="ds.c27_pr">5 $ <small>par département • paiement unique</small></p>
-<p class="meta" data-i18n-html="ds.c27_meta">🗺 Géographie • Source : CNIGS via OCHA ; GeoNames</p>
-<a href="donnees-pack-geo-haiti.html#departement" class="btn btn-primary" data-i18n="ds.b_dep">Choisir un département</a>
+<span class="tag tag-paid" data-i18n="ds.t_paid">Paid</span>
+<h3 data-i18n-html="ds.c27_h">Geo Pack — a single department</h3>
+<p data-i18n-html="ds.c27_p">The part of the Geo Pack that concerns one department: communal sections, chief town, populated places and polygons. For anyone working on a single territory. <strong>The whole country remains the better deal</strong> — ten separate departments cost $90, the full pack $29.</p>
+<p class="price" data-i18n-html="ds.c27_pr">$9 <small>per department • one-off payment</small></p>
+<p class="meta" data-i18n-html="ds.c27_meta">🗺 Geography • Source: CNIGS via OCHA; GeoNames</p>
+<a href="/donnees-pack-geo-haiti.html#departement" class="btn btn-primary" data-i18n="ds.b_dep">Choose a department</a>
 </div>
 
 <div class="card" data-cat="transversal payant">
-<span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
-<h3 data-i18n-html="ds.c29_h">Classeur des 140 profils communaux <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c29_p">Un classeur Excel prêt à ouvrir : une fiche par commune choisie dans une liste, le tableau des <span data-mf="nombre_communes">140</span> communes, le détail avec le statut de chaque valeur, la pyramide des âges, le dictionnaire et les sources. <strong>Les données restent gratuites</strong> — ce qui se vend, c'est le montage, et ce qu'il préserve : une absence y reste vide, jamais remplie d'un zéro.</p>
-<p class="price" data-i18n-html="ds.c29_pr">25 $ <small>XLSX • 7 feuilles • <span data-mf="nombre_absences_documentees">1 251</span> absences laissées vides</small></p>
-<p class="meta" data-i18n-html="ds.c29_meta">📊 Transversal • assemblage des jeux publiés • licence CC BY 4.0 pour les données</p>
-<a href="donnees-solutions.html?produit=classeur-communes#demande" class="btn btn-primary" data-i18n="ds.b_classeur">Commander le classeur — 25 $</a>
+<span class="tag tag-paid" data-i18n="ds.t_paid">Paid</span>
+<h3 data-i18n-html="ds.c29_h">Workbook of the 140 communal profiles <span class="badge-new">NEW</span></h3>
+<p data-i18n-html="ds.c29_p">An Excel workbook ready to open: one sheet per commune chosen from a list, the table of the <span data-mf="nombre_communes">140</span> communes, the detail with the status of every value, the age pyramid, the dictionary and the sources. <strong>The data stays free</strong> — what is sold is the assembly, and what it preserves: an absence stays empty, never filled with a zero.</p>
+<p class="price" data-i18n-html="ds.c29_pr">$25 <small>XLSX • 7 sheets • <span data-mf="nombre_absences_documentees">1,251</span> absences left empty</small></p>
+<p class="meta" data-i18n-html="ds.c29_meta">📊 Cross-cutting • assembly of the published datasets • CC BY 4.0 licence for the data</p>
+<a href="/donnees-solutions.html?produit=classeur-communes#demande" class="btn btn-primary" data-i18n="ds.b_classeur">Order the workbook — $25</a>
 </div>
 <div class="card" data-cat="transversal payant">
-<span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
-<h3 data-i18n-html="ds.c30_h">Modèle Power BI — Explorateur Haïti <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c30_p">Un projet Power BI (PBIP) prêt à ouvrir : 7 tables branchées sur les données publiées du site, relations posées sur les p-codes, mesures documentées avec leurs limites. <strong>Il se rafraîchit d'un clic</strong> — le jour où Atmart met à jour un fichier, vos rapports suivent. Construit et validé dans Power BI Desktop.</p>
-<p class="price" data-i18n-html="ds.c30_pr">50 $ <small>PBIP • 7 tables • connexion requise au rafraîchissement</small></p>
-<p class="meta" data-i18n-html="ds.c30_meta">📊 Transversal • assemblage des jeux publiés • les données restent sous leurs licences</p>
-<a href="https://payhip.com/b/XSAdi" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.b_pbi">Acheter — 50 $</a>
+<span class="tag tag-paid" data-i18n="ds.t_paid">Paid</span>
+<h3 data-i18n-html="ds.c30_h">Power BI template — Haiti Explorer <span class="badge-new">NEW</span></h3>
+<p data-i18n-html="ds.c30_p">A Power BI project (PBIP) ready to open: 7 tables wired to the site's published data, relationships set on the p-codes, measures documented with their limitations. <strong>It refreshes in one click</strong> — the day Atmart updates a file, your reports follow. Built and validated in Power BI Desktop.</p>
+<p class="price" data-i18n-html="ds.c30_pr">$50 <small>PBIP • 7 tables • connection required to refresh</small></p>
+<p class="meta" data-i18n-html="ds.c30_meta">📊 Cross-cutting • assembly of the published datasets • the data stays under its own licences</p>
+<a href="https://payhip.com/b/XSAdi" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.b_pbi">Buy — $50</a>
 </div>
 <div class="card" data-cat="geographie payant">
-<span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
-<h3 data-i18n-html="ds.c31_h">Modèle QGIS — Explorateur Haïti <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c31_p">Un projet QGIS prêt à ouvrir : communes et départements, bassins versants nommés, zones inondables, points d'eau fonctionnels et en panne, stations-service et finance — couches distantes stylées, chargées depuis le site. Construit et validé dans QGIS.</p>
-<p class="price" data-i18n-html="ds.c31_pr">50 $ <small>QGZ + script • 7 couches • connexion requise</small></p>
-<p class="meta" data-i18n-html="ds.c31_meta">🗺 Géographie • assemblage des jeux publiés • les données restent sous leurs licences</p>
-<a href="https://payhip.com/b/DBirg" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.b_qgis">Acheter — 50 $</a>
+<span class="tag tag-paid" data-i18n="ds.t_paid">Paid</span>
+<h3 data-i18n-html="ds.c31_h">QGIS template — Haiti Explorer <span class="badge-new">NEW</span></h3>
+<p data-i18n-html="ds.c31_p">A QGIS project ready to open: communes and departments, named watersheds, flood-prone zones, working and broken water points, filling stations and finance — styled remote layers, loaded from the site. Built and validated in QGIS.</p>
+<p class="price" data-i18n-html="ds.c31_pr">$50 <small>QGZ + script • 7 layers • connection required</small></p>
+<p class="meta" data-i18n-html="ds.c31_meta">🗺 Geography • assembly of the published datasets • the data stays under its own licences</p>
+<a href="https://payhip.com/b/DBirg" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.b_qgis">Buy — $50</a>
 </div>
 </div>
 
     <!-- ===== EN PRÉPARATION ===== -->
     <div class="shelf" id="shelf-free">
       <div class="shelf-head">
-        <h2 data-i18n="ds.free_h">🎁 Gratuits — servez-vous</h2>
-        <p data-i18n="ds.free_p">Téléchargement immédiat, sans compte et sans e-mail. Chaque fichier arrive avec sa documentation. Licence CC BY 4.0 : citez la source, et c'est à vous.</p>
+        <h2 data-i18n="ds.free_h">🎁 Free — help yourself</h2>
+        <p data-i18n="ds.free_p">Instant download, no account, no email. Every file comes with its documentation. CC BY 4.0 licence: cite the source and it is yours.</p>
       </div>
       <div class="grid grid-3" id="data-grid-free">
 <!-- CARTES:gratuit — engendré par build_vitrine.py, ne pas éditer à la main -->
 <div class="card" data-cat="economie gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-  <h3 data-i18n-html="ds.c2_h">Transferts de la diaspora vers Haïti</h3>
-  <p data-i18n-html="ds.c2_p">Ce que la diaspora envoie chaque année, en dollars et en part du PIB. Le sommet est atteint en 2020 à 22,45 % du PIB ; en 2024, 4,1 milliards de dollars, soit 16,3 %. Source : Banque mondiale.</p>
-  <p class="price" data-i18n-html="ds.c2_pr">Gratuit <small>CSV • 26 lignes • 25 années renseignées</small></p>
-  <p class="meta" data-i18n-html="ds.c2_meta">💰 Économie • Haïti • Niveau de confiance A • <a href="data/LISEZMOI_transferts_diaspora.md">documentation</a></p>
-  <a href="data/transferts_diaspora_haiti_2000_2025.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
+  <h3 data-i18n-html="ds.c2_h">Diaspora remittances (2000–2025) — Haiti + 7 countries</h3>
+  <p data-i18n-html="ds.c2_p">Remittances received in USD and as a % of GDP: Haiti, Dominican Republic, Jamaica, Senegal, Côte d'Ivoire, Mali, Cameroon, Togo. Real, documented data. Source: World Bank.</p>
+  <p class="price" data-i18n-html="ds.c2_pr">$0 <small>CSV • 208 rows</small></p>
+  <p class="meta" data-i18n-html="ds.c2_meta">💰 Economy • 26 years • Confidence level A • <a href="../data/LISEZMOI_transferts_diaspora.md">documentation</a></p>
+  <a href="../data/transferts_diaspora_haiti_2000_2025.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="geo gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-  <h3 data-i18n-html="ds.c11_h">Échantillon — sections communales d'Haïti</h3>
-  <p data-i18n-html="ds.c11_p">Dix sections communales avec p-codes OCHA, superficie et coordonnées GPS : exactement la structure du Pack Géo, pour juger avant d'acheter.</p>
-  <p class="price" data-i18n-html="ds.c11_pr">Gratuit <small>CSV • 10 lignes • 13 colonnes</small></p>
-  <p class="meta" data-i18n-html="ds.c11_meta">🗺 Géographie • Extrait du <a href="donnees-pack-geo-haiti.html">Pack Géo Haïti</a></p>
-  <a href="data/ECHANTILLON_haiti_sections_gps.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
+  <h3 data-i18n-html="ds.c11_h">Sample — communal sections of Haiti</h3>
+  <p data-i18n-html="ds.c11_p">Ten communal sections with their French and Haitian Creole names, OCHA p-codes, area and GPS coordinates: exactly the structure of the Geo Pack, so you can judge before buying.</p>
+  <p class="price" data-i18n-html="ds.c11_pr">0 $ <small>CSV • 10 rows • 13 columns</small></p>
+  <p class="meta" data-i18n-html="ds.c11_meta">🗺 Geography • Extract from the <a href="/donnees-pack-geo-haiti.html">Haiti Geo Pack</a></p>
+  <a href="../data/ECHANTILLON_haiti_sections_gps.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="guide gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-  <h3 data-i18n-html="ds.c14_h">Registre des sources Atmart</h3>
-  <p data-i18n-html="ds.c14_p">Pour chaque source que nous exploitons : organisme, URL, licence, classe juridique, couverture, fréquence et date de dernière vérification. Ce que nous avons le droit de publier, et ce que nous n'avons pas le droit de publier.</p>
-  <p class="price" data-i18n-html="ds.c14_pr">Gratuit <small>CSV • mis à jour en continu</small></p>
-  <p class="meta" data-i18n-html="ds.c14_meta">📘 Méthode • <a href="donnees-backbone.html#juridique">la matrice juridique A→E</a></p>
-  <a href="data/atmart_registre_sources.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
+  <h3 data-i18n-html="ds.c14_h">Atmart source register</h3>
+  <p data-i18n-html="ds.c14_p">For every source we use: organisation, URL, licence, legal class, coverage, frequency and last verification date. What we are allowed to publish, and what we are not.</p>
+  <p class="price" data-i18n-html="ds.c14_pr">0 $ <small>CSV • continuously updated</small></p>
+  <p class="meta" data-i18n-html="ds.c14_meta">📘 Method • <a href="/donnees-backbone.html#juridique">the A→E legal matrix</a></p>
+  <a href="../data/atmart_registre_sources.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="social gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-  <h3 data-i18n-html="ds.c17_h">Pyramide des âges des 140 communes</h3>
-  <p data-i18n-html="ds.c17_p">La population de chaque commune par tranche de cinq ans et par sexe. C'est ce qui permet de dire combien d'enfants scolarisables ou de personnes âgées vivent sur un territoire — et non plus seulement combien d'habitants. <strong>Ce sont des projections, pas un recensement</strong> : le dernier recensement haïtien date de 2003.</p>
-  <p class="price" data-i18n-html="ds.c17_pr">Gratuit <small>CSV • <span data-mf="prd_007_lignes">7 140</span> lignes • <span data-mf="prd_007_colonnes">18</span> colonnes</small></p>
-  <p class="meta" data-i18n-html="ds.c17_meta">👥 Population • <span data-mf="nombre_tranches_age">17</span> tranches × 2 sexes × <span data-mf="nombre_communes">140</span> communes • Source : projections UNFPA 2024</p>
-  <a href="data/atmart_pyramide_ages_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Télécharger gratuitement</a>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
+  <h3 data-i18n-html="ds.c17_h">Age pyramid of the 140 communes <span class="badge-new">NEW</span></h3>
+  <p data-i18n-html="ds.c17_p">The population of each commune by five-year bracket and by sex. This is what makes it possible to say how many school-age children or elderly people live in a territory — and no longer just how many inhabitants. <strong>These are projections, not a census</strong>: Haiti's last census dates from 2003.</p>
+  <p class="price" data-i18n-html="ds.c17_pr">$0 <small>CSV • <span data-mf="prd_007_lignes">7,140</span> rows • <span data-mf="prd_007_colonnes">18</span> columns</small></p>
+  <p class="meta" data-i18n-html="ds.c17_meta">👥 Population • <span data-mf="nombre_tranches_age">17</span> brackets × 2 sexes × <span data-mf="nombre_communes">140</span> communes • Source: UNFPA 2024 projections</p>
+  <a href="../data/atmart_pyramide_ages_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="economie gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-  <h3 data-i18n-html="ds.c18_h">Prix des marchés — réseau sentinelle</h3>
-  <p data-i18n-html="ds.c18_p">Relevés mensuels de prix, produit par produit et marché par marché : riz, haricots, maïs, huile, carburant. <strong>Le réseau ne couvre pas tout le pays</strong> — <span data-mf="nombre_communes_sentinelles">9</span> marchés sentinelles, un par département dans neuf départements sur dix. À lire comme un signal, jamais comme une moyenne nationale.</p>
-  <p class="price" data-i18n-html="ds.c18_pr">Gratuit <small>CSV • <span data-mf="nombre_releves_prix">14 140</span> relevés • <span data-mf="nombre_produits_suivis">32</span> produits suivis</small></p>
-  <p class="meta" data-i18n-html="ds.c18_meta">💰 Économie • Source : WFP — VAM Food Prices • la série se lit aussi dans <a href="/">l'Explorateur</a></p>
-  <a href="data/atmart_prix_marches_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
+  <h3 data-i18n-html="ds.c18_h">Market prices — sentinel network <span class="badge-new">NEW</span></h3>
+  <p data-i18n-html="ds.c18_p">Monthly price readings, product by product and market by market: rice, beans, maize, oil, fuel. <strong>The network does not cover the whole country</strong> — <span data-mf="nombre_communes_sentinelles">9</span> sentinel markets, one per department in nine departments out of ten. To be read as a signal, never as a national average.</p>
+  <p class="price" data-i18n-html="ds.c18_pr">$0 <small>CSV • <span data-mf="nombre_releves_prix">14,140</span> readings • <span data-mf="nombre_produits_suivis">32</span> products tracked</small></p>
+  <p class="meta" data-i18n-html="ds.c18_meta">💰 Economy • Source: WFP — VAM Food Prices • the series can also be read in <a href="/">the Explorer</a></p>
+  <a href="../data/atmart_prix_marches_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="economie gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-  <h3 data-i18n-html="ds.c19_h">Registre des marchés d'Haïti</h3>
-  <p data-i18n-html="ds.c19_p">Les marchés recensés : identifiant stable, nom normalisé, rattachement à la section communale et coordonnées. <strong>C'est la famille dont la couverture tient</strong> — <span data-mf="communes_couvertes_marches">136</span> communes sur <span data-mf="nombre_communes">140</span>, et toutes les fiches sont géolocalisées.</p>
-  <p class="price" data-i18n-html="ds.c19_pr">Gratuit <small>CSV + GeoJSON • <span data-mf="nombre_marches">182</span> marchés</small></p>
-  <p class="meta" data-i18n-html="ds.c19_meta">🏪 Infrastructures • Sources : WFP, OCHA</p>
-  <a href="data/atmart_registre_marches_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Télécharger gratuitement</a>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
+  <h3 data-i18n-html="ds.c19_h">Register of Haiti's markets <span class="badge-new">NEW</span></h3>
+  <p data-i18n-html="ds.c19_p">The recorded markets: stable identifier, normalised name, attachment to the communal section and coordinates. <strong>This is the family whose coverage holds</strong> — <span data-mf="communes_couvertes_marches">136</span> communes out of <span data-mf="nombre_communes">140</span>, and every record is geolocated.</p>
+  <p class="price" data-i18n-html="ds.c19_pr">$0 <small>CSV + GeoJSON • <span data-mf="nombre_marches">182</span> markets</small></p>
+  <p class="meta" data-i18n-html="ds.c19_meta">🏪 Infrastructure • Sources: WFP, OCHA</p>
+  <a href="../data/atmart_registre_marches_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="economie gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-  <h3 data-i18n-html="ds.c20_h">Repères budgétaires nationaux</h3>
-  <p data-i18n-html="ds.c20_p">La dépense publique exécutée au niveau national, sur l'exercice en cours, tirée de documents officiels citables. <strong>Deux repères seulement, et c'est volontaire</strong> : il n'y a pas de ventilation par département ni par commune, parce que la source n'en publie pas. Mieux vaut deux chiffres sourcés qu'une répartition inventée.</p>
-  <p class="price" data-i18n-html="ds.c20_pr">Gratuit <small>CSV • 2 indicateurs • cumul sur 9 mois</small></p>
-  <p class="meta" data-i18n-html="ds.c20_meta">🏛 Finances publiques • exercice 2025-2026 • Sources : MEF / Direction Générale du Budget, TOFE</p>
-  <a href="data/atmart_indicateurs_national_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Télécharger gratuitement</a>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
+  <h3 data-i18n-html="ds.c20_h">National budget markers <span class="badge-new">NEW</span></h3>
+  <p data-i18n-html="ds.c20_p">Public spending actually executed at national level, for the current financial year, drawn from citable official documents. <strong>Two markers only, and that is deliberate</strong>: there is no breakdown by department or by commune, because the source does not publish one. Two sourced figures are worth more than an invented distribution.</p>
+  <p class="price" data-i18n-html="ds.c20_pr">$0 <small>CSV • 2 indicators • 9-month cumulative</small></p>
+  <p class="meta" data-i18n-html="ds.c20_meta">🏛 Public finance • 2025-2026 financial year • Sources: MEF / Direction Générale du Budget, TOFE</p>
+  <a href="../data/atmart_indicateurs_national_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="social gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-  <h3 data-i18n-html="ds.c21_h">Présence des organisations — qui travaille où</h3>
-  <p data-i18n-html="ds.c21_p">Quelles organisations interviennent dans quelle commune, et dans quel secteur. <strong>Ce sont des présences déclarées</strong> par les organisations elles-mêmes au 3W d'OCHA, pas un relevé de terrain : une absence dans ce fichier ne prouve pas une absence sur place.</p>
-  <p class="price" data-i18n-html="ds.c21_pr">Gratuit <small>CSV • <span data-mf="prd_011_lignes">1 457</span> lignes • <span data-mf="prd_011_colonnes">17</span> colonnes</small></p>
-  <p class="meta" data-i18n-html="ds.c21_meta">🤝 Infrastructures • Source : OCHA — 3W Haïti</p>
-  <a href="data/atmart_presence_organisations_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Télécharger gratuitement</a>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
+  <h3 data-i18n-html="ds.c21_h">Presence of organisations — who works where <span class="badge-new">NEW</span></h3>
+  <p data-i18n-html="ds.c21_p">Which organisations work in which commune, and in which sector. <strong>These are presences declared</strong> by the organisations themselves to OCHA's 3W, not a field survey: an absence from this file does not prove an absence on the ground.</p>
+  <p class="price" data-i18n-html="ds.c21_pr">$0 <small>CSV • <span data-mf="prd_011_lignes">1,457</span> rows • <span data-mf="prd_011_colonnes">17</span> columns</small></p>
+  <p class="meta" data-i18n-html="ds.c21_meta">🤝 Infrastructure • Source: OCHA — 3W Haiti</p>
+  <a href="../data/atmart_presence_organisations_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="social gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-  <h3 data-i18n-html="ds.c22_h">Registre des ONG reconnues</h3>
-  <p data-i18n-html="ds.c22_p">Les organisations non gouvernementales reconnues par l'État : numéro d'inscription, date de reconnaissance, domaine d'intervention et zones déclarées. Les coordonnées sont institutionnelles — celles du siège, pas de personnes.</p>
-  <p class="price" data-i18n-html="ds.c22_pr">Gratuit <small>CSV • <span data-mf="prd_012_lignes">680</span> lignes • <span data-mf="prd_012_colonnes">22</span> colonnes</small></p>
-  <p class="meta" data-i18n-html="ds.c22_meta">🤝 Infrastructures • Source : MPCE — registre officiel des ONG</p>
-  <a href="data/atmart_registre_ong_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Télécharger gratuitement</a>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
+  <h3 data-i18n-html="ds.c22_h">Register of recognised NGOs <span class="badge-new">NEW</span></h3>
+  <p data-i18n-html="ds.c22_p">Non-governmental organisations recognised by the State: registration number, date of recognition, field of work and declared areas. The contact details are institutional — those of the head office, not of individuals.</p>
+  <p class="price" data-i18n-html="ds.c22_pr">$0 <small>CSV • <span data-mf="prd_012_lignes">680</span> rows • <span data-mf="prd_012_colonnes">22</span> columns</small></p>
+  <p class="meta" data-i18n-html="ds.c22_meta">🤝 Infrastructure • Source: MPCE — official NGO register</p>
+  <a href="../data/atmart_registre_ong_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="social gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-  <h3 data-i18n-html="ds.c23_h">Professions juridiques et foncières par commune</h3>
-  <p data-i18n-html="ds.c23_p">Combien de notaires et d'arpenteurs sont recensés dans chaque commune. <strong>Le dénombrement seul</strong> : aucun nom, aucune adresse, aucun téléphone. Un zéro veut dire « aucun dans nos sources », jamais « aucun sur le territoire » — <span data-mf="communes_avec_profession">55</span> communes sur <span data-mf="nombre_communes">140</span> sont couvertes.</p>
-  <p class="price" data-i18n-html="ds.c23_pr">Gratuit <small>CSV • <span data-mf="prd_013_lignes">280</span> lignes • <span data-mf="prd_013_colonnes">9</span> colonnes</small></p>
-  <p class="meta" data-i18n-html="ds.c23_meta">⚖️ Infrastructures • Niveau de confiance C • sources compilées, hors registre officiel</p>
-  <a href="data/atmart_professions_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Télécharger gratuitement</a>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
+  <h3 data-i18n-html="ds.c23_h">Legal and land professions by commune <span class="badge-new">NEW</span></h3>
+  <p data-i18n-html="ds.c23_p">How many notaries and land surveyors are recorded in each commune. <strong>The count alone</strong>: no name, no address, no telephone. A zero means "none in our sources", never "none in the territory" — <span data-mf="communes_avec_profession">55</span> communes out of <span data-mf="nombre_communes">140</span> are covered.</p>
+  <p class="price" data-i18n-html="ds.c23_pr">$0 <small>CSV • <span data-mf="prd_013_lignes">280</span> rows • <span data-mf="prd_013_colonnes">9</span> columns</small></p>
+  <p class="meta" data-i18n-html="ds.c23_meta">⚖️ Infrastructure • Trust level C • compiled sources, outside the official register</p>
+  <a href="../data/atmart_professions_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="social gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-  <h3 data-i18n-html="ds.c24_h">Infrastructures par commune</h3>
-  <p data-i18n-html="ds.c24_p">Ce que chaque commune compte en équipements, famille par famille. Une ligne par commune et par type, avec sa source et son millésime — de quoi comparer des territoires sans confondre ce qui est compté et ce qui est estimé.</p>
-  <p class="price" data-i18n-html="ds.c24_pr">Gratuit <small>CSV • <span data-mf="prd_014_lignes">1 899</span> lignes • <span data-mf="prd_014_colonnes">8</span> colonnes</small></p>
-  <p class="meta" data-i18n-html="ds.c24_meta">🏗 Infrastructures • millésime et source déclarés ligne par ligne</p>
-  <a href="data/atmart_infrastructures_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Télécharger gratuitement</a>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
+  <h3 data-i18n-html="ds.c24_h">Infrastructure by commune <span class="badge-new">NEW</span></h3>
+  <p data-i18n-html="ds.c24_p">What each commune has in facilities, family by family. One row per commune and per type, with its source and its vintage — enough to compare territories without confusing what is counted with what is estimated.</p>
+  <p class="price" data-i18n-html="ds.c24_pr">$0 <small>CSV • <span data-mf="prd_014_lignes">1,899</span> rows • <span data-mf="prd_014_colonnes">8</span> columns</small></p>
+  <p class="meta" data-i18n-html="ds.c24_meta">🏗 Infrastructure • vintage and source declared row by row</p>
+  <a href="../data/atmart_infrastructures_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd015_h">Conflits — événements et décès par commune</h3>
   <p data-i18n-html="ds.prd015_p">Événements de violence et décès recensés, par commune et par mois, de 2018 à aujourd'hui. Un relevé d'événements rapportés : ce qui n'est pas rapporté n'y figure pas.</p>
   <p class="price" data-i18n-html="ds.prd015_pr">Gratuit <small>4 368 lignes • 8 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd015_meta">⚠ Sécurité • Sources : ACLED via HDX • niveau de confiance B • ACLED — attribution requise</p>
-  <a href="data/atmart_conflits_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_conflits_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd016_h">Déplacements de population</h3>
   <p data-i18n-html="ds.prd016_p">Personnes déplacées recensées par la Matrice de suivi des déplacements de l'OIM. Un relevé de terrain, daté, qui ne prétend pas couvrir ce que les équipes n'ont pas pu atteindre.</p>
   <p class="price" data-i18n-html="ds.prd016_pr">Gratuit <small>150 lignes • 9 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd016_meta">👥 Social • Sources : OIM — Displacement Tracking Matrix • niveau de confiance B • OIM — DTM</p>
-  <a href="data/atmart_deplaces_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_deplaces_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd017_h">Insécurité alimentaire — phases IPC</h3>
   <p data-i18n-html="ds.prd017_p">Les phases du Cadre intégré de classification de la sécurité alimentaire, par zone et par période. Une classification d'experts, pas une mesure directe.</p>
   <p class="price" data-i18n-html="ds.prd017_pr">Gratuit <small>210 lignes • 12 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd017_meta">👥 Social • Sources : IPC — Cadre intégré de classification • niveau de confiance B • IPC</p>
-  <a href="data/atmart_ipc_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_ipc_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd018_h">Points d'eau</h3>
   <p data-i18n-html="ds.prd018_p">Points d'eau relevés et leur état de fonctionnement. La couverture est concentrée dans le Nord et le Centre : ailleurs, l'absence de point ne veut pas dire absence d'eau.</p>
   <p class="price" data-i18n-html="ds.prd018_pr">Gratuit <small>6 276 lignes • 1 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd018_meta">🔌 Infrastructures • Sources : Water Point Data Exchange • niveau de confiance B • CC BY-SA</p>
-  <a href="data/atmart_couche_eau_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_couche_eau_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd019_h">Stations-service</h3>
   <p data-i18n-html="ds.prd019_p">Stations-service cartographiées par les contributeurs OpenStreetMap. Cartographie contributive : complète nulle part, inégale d'une commune à l'autre.</p>
   <p class="price" data-i18n-html="ds.prd019_pr">Gratuit <small>310 lignes</small></p>
   <p class="meta" data-i18n-html="ds.prd019_meta">🔌 Infrastructures • Sources : OpenStreetMap via HOT • niveau de confiance C • ODbL</p>
-  <a href="data/atmart_couche_carburant_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_couche_carburant_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd020_h">Banques, guichets et transferts</h3>
   <p data-i18n-html="ds.prd020_p">Points de service financier cartographiés par les contributeurs OpenStreetMap. Même réserve : contributive, donc inégale.</p>
   <p class="price" data-i18n-html="ds.prd020_pr">Gratuit <small>474 lignes • 1 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd020_meta">🔌 Infrastructures • Sources : OpenStreetMap via HOT • niveau de confiance C • ODbL</p>
-  <a href="data/atmart_couche_finance_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_couche_finance_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd021_h">Part de zone inondable par commune</h3>
   <p data-i18n-html="ds.prd021_p">La part du territoire de chaque commune classée inondable. Attention à ce que cela mesure : une zone cartographiée comme inondable, pas un aléa probabiliste par période de retour. La méthode de la source n'est pas documentée.</p>
   <p class="price" data-i18n-html="ds.prd021_pr">Gratuit <small>140 lignes • 7 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd021_meta">📄 Environnement • Sources : CNIGS via HaitiData • niveau de confiance C • Données publiques CNIGS — attribution</p>
-  <a href="data/atmart_alea_inondation_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_alea_inondation_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd022_h">Zones inondables</h3>
   <p data-i18n-html="ds.prd022_p">Les emprises cartographiées comme inondables. Géométries simplifiées pour l'affichage — à ne pas utiliser pour un calcul de surface au mètre.</p>
   <p class="price" data-i18n-html="ds.prd022_pr">Gratuit <small>134 lignes</small></p>
   <p class="meta" data-i18n-html="ds.prd022_meta">📄 Environnement • Sources : CNIGS via HaitiData • niveau de confiance C • Données publiques CNIGS — attribution</p>
-  <a href="data/atmart_couche_inondable_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_couche_inondable_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd023_h">Bassins versants</h3>
   <p data-i18n-html="ds.prd023_p">Le découpage hydrologique de référence, issu du modèle SRTM de 2014. Géométries simplifiées pour l'affichage.</p>
   <p class="price" data-i18n-html="ds.prd023_pr">Gratuit <small>31 lignes • 3 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd023_meta">📄 Environnement • Sources : CNIGS via HaitiData • niveau de confiance B • Données publiques CNIGS — attribution</p>
-  <a href="data/atmart_couche_bassins_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_couche_bassins_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd024_h">Occupation du sol par commune</h3>
   <p data-i18n-html="ds.prd024_p">La répartition du territoire de chaque commune par grande classe d'occupation du sol. La couche date de 1998 — un quart de siècle : elle sert à lire une tendance, pas un état des lieux. Et c'est une classification d'images, donc ce qu'un capteur a vu, pas un cadastre.</p>
   <p class="price" data-i18n-html="ds.prd024_pr">Gratuit <small>1 042 lignes • 7 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd024_meta">📄 Environnement • Sources : CNIGS via HaitiData • niveau de confiance B • Données publiques CNIGS — attribution</p>
-  <a href="data/atmart_occupation_sol_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_occupation_sol_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd025_h">Équipements télécom par opérateur</h3>
   <p data-i18n-html="ds.prd025_p">Pylônes et mâts de communication, boutiques mobiles, bureaux d'opérateur et accès internet public cartographiés dans OpenStreetMap, colorés par opérateur (Digicel, Natcom, Voilà, Access Haiti). Ce n'est PAS le parc des opérateurs : ni Digicel, ni Natcom, ni le CONATEL ne le publient. Une commune sans point n'est pas une commune sans couverture.</p>
   <p class="price" data-i18n-html="ds.prd025_pr">Gratuit <small>498 lignes</small></p>
   <p class="meta" data-i18n-html="ds.prd025_meta">🔌 Infrastructures • Sources : OpenStreetMap via Overpass • niveau de confiance C • ODbL</p>
-  <a href="data/atmart_couche_telecom_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_couche_telecom_HT.geojson" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
-  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <span class="tag" data-i18n="ds.t_free">Free</span>
   <h3 data-i18n-html="ds.prd026_h">Télécom par commune — dénombrement</h3>
   <p data-i18n-html="ds.prd026_p">Dénombrement des équipements télécom par commune, par opérateur et par genre — 498 équipements dans 81 communes sur 140. Comptage contributif : il mesure autant l'effort de cartographie que le parc réel.</p>
   <p class="price" data-i18n-html="ds.prd026_pr">Gratuit <small>219 lignes • 9 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd026_meta">🔌 Infrastructures • Sources : OpenStreetMap via Overpass • niveau de confiance C • ODbL</p>
-  <a href="data/atmart_telecom_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+  <a href="../data/atmart_telecom_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <!-- /CARTES:gratuit -->
 </div>
     <div class="card" data-cat="social gratuit">
-<span class="tag" data-i18n="ds.t_free">Gratuit</span>
-<h3 data-i18n-html="ds.c17_h">Pyramide des âges des 140 communes <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c17_p">La population de chaque commune par tranche de cinq ans et par sexe. C'est ce qui permet de dire combien d'enfants scolarisables ou de personnes âgées vivent sur un territoire — et non plus seulement combien d'habitants. <strong>Ce sont des projections, pas un recensement</strong> : le dernier recensement haïtien date de 2003.</p>
-<p class="price" data-i18n-html="ds.c17_pr">0 $ <small>CSV • <span data-mf="prd_007_lignes">7 140</span> lignes • <span data-mf="prd_007_colonnes">18</span> colonnes</small></p>
-<p class="meta" data-i18n-html="ds.c17_meta">👥 Population • <span data-mf="nombre_tranches_age">17</span> tranches × 2 sexes × <span data-mf="nombre_communes">140</span> communes • Source : projections UNFPA 2024</p>
-<a href="data/atmart_pyramide_ages_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+<span class="tag" data-i18n="ds.t_free">Free</span>
+<h3 data-i18n-html="ds.c17_h">Age pyramid of the 140 communes <span class="badge-new">NEW</span></h3>
+<p data-i18n-html="ds.c17_p">The population of each commune by five-year bracket and by sex. This is what makes it possible to say how many school-age children or elderly people live in a territory — and no longer just how many inhabitants. <strong>These are projections, not a census</strong>: Haiti's last census dates from 2003.</p>
+<p class="price" data-i18n-html="ds.c17_pr">$0 <small>CSV • <span data-mf="prd_007_lignes">7,140</span> rows • <span data-mf="prd_007_colonnes">18</span> columns</small></p>
+<p class="meta" data-i18n-html="ds.c17_meta">👥 Population • <span data-mf="nombre_tranches_age">17</span> brackets × 2 sexes × <span data-mf="nombre_communes">140</span> communes • Source: UNFPA 2024 projections</p>
+<a href="../data/atmart_pyramide_ages_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="economie gratuit">
-<span class="tag" data-i18n="ds.t_free">Gratuit</span>
-<h3 data-i18n-html="ds.c18_h">Prix des marchés — réseau sentinelle <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c18_p">Relevés mensuels de prix, produit par produit et marché par marché : riz, haricots, maïs, huile, carburant. <strong>Le réseau ne couvre pas tout le pays</strong> — <span data-mf="nombre_communes_sentinelles">9</span> marchés sentinelles, un par département dans neuf départements sur dix. À lire comme un signal, jamais comme une moyenne nationale.</p>
-<p class="price" data-i18n-html="ds.c18_pr">0 $ <small>CSV • <span data-mf="nombre_releves_prix">14 140</span> relevés • <span data-mf="nombre_produits_suivis">32</span> produits suivis</small></p>
-<p class="meta" data-i18n-html="ds.c18_meta">💰 Économie • Source : WFP — VAM Food Prices • la série se lit aussi dans <a href="/">l'Explorateur</a></p>
-<a href="data/atmart_prix_marches_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+<span class="tag" data-i18n="ds.t_free">Free</span>
+<h3 data-i18n-html="ds.c18_h">Market prices — sentinel network <span class="badge-new">NEW</span></h3>
+<p data-i18n-html="ds.c18_p">Monthly price readings, product by product and market by market: rice, beans, maize, oil, fuel. <strong>The network does not cover the whole country</strong> — <span data-mf="nombre_communes_sentinelles">9</span> sentinel markets, one per department in nine departments out of ten. To be read as a signal, never as a national average.</p>
+<p class="price" data-i18n-html="ds.c18_pr">$0 <small>CSV • <span data-mf="nombre_releves_prix">14,140</span> readings • <span data-mf="nombre_produits_suivis">32</span> products tracked</small></p>
+<p class="meta" data-i18n-html="ds.c18_meta">💰 Economy • Source: WFP — VAM Food Prices • the series can also be read in <a href="/">the Explorer</a></p>
+<a href="../data/atmart_prix_marches_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="economie gratuit">
-<span class="tag" data-i18n="ds.t_free">Gratuit</span>
-<h3 data-i18n-html="ds.c19_h">Registre des marchés d'Haïti <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c19_p">Les marchés recensés : identifiant stable, nom normalisé, rattachement à la section communale et coordonnées. <strong>C'est la famille dont la couverture tient</strong> — <span data-mf="communes_couvertes_marches">136</span> communes sur <span data-mf="nombre_communes">140</span>, et toutes les fiches sont géolocalisées.</p>
-<p class="price" data-i18n-html="ds.c19_pr">0 $ <small>CSV + GeoJSON • <span data-mf="nombre_marches">182</span> marchés</small></p>
-<p class="meta" data-i18n-html="ds.c19_meta">🏪 Infrastructures • Sources : WFP, OCHA</p>
-<a href="data/atmart_registre_marches_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
-<a href="data/atmart_marches_HT.geojson" download class="btn btn-outline">GeoJSON</a>
+<span class="tag" data-i18n="ds.t_free">Free</span>
+<h3 data-i18n-html="ds.c19_h">Register of Haiti's markets <span class="badge-new">NEW</span></h3>
+<p data-i18n-html="ds.c19_p">The recorded markets: stable identifier, normalised name, attachment to the communal section and coordinates. <strong>This is the family whose coverage holds</strong> — <span data-mf="communes_couvertes_marches">136</span> communes out of <span data-mf="nombre_communes">140</span>, and every record is geolocated.</p>
+<p class="price" data-i18n-html="ds.c19_pr">$0 <small>CSV + GeoJSON • <span data-mf="nombre_marches">182</span> markets</small></p>
+<p class="meta" data-i18n-html="ds.c19_meta">🏪 Infrastructure • Sources: WFP, OCHA</p>
+<a href="../data/atmart_registre_marches_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Download free</a>
+<a href="../data/atmart_marches_HT.geojson" download class="btn btn-outline">GeoJSON</a>
 </div>
 <div class="card" data-cat="economie gratuit">
-<span class="tag" data-i18n="ds.t_free">Gratuit</span>
-<h3 data-i18n-html="ds.c20_h">Repères budgétaires nationaux <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c20_p">La dépense publique exécutée au niveau national, sur l'exercice en cours, tirée de documents officiels citables. <strong>Deux repères seulement, et c'est volontaire</strong> : il n'y a pas de ventilation par département ni par commune, parce que la source n'en publie pas. Mieux vaut deux chiffres sourcés qu'une répartition inventée.</p>
-<p class="price" data-i18n-html="ds.c20_pr">0 $ <small>CSV • 2 indicateurs • cumul sur 9 mois</small></p>
-<p class="meta" data-i18n-html="ds.c20_meta">🏛 Finances publiques • exercice 2025-2026 • Sources : MEF / Direction Générale du Budget, TOFE</p>
-<a href="data/atmart_indicateurs_national_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+<span class="tag" data-i18n="ds.t_free">Free</span>
+<h3 data-i18n-html="ds.c20_h">National budget markers <span class="badge-new">NEW</span></h3>
+<p data-i18n-html="ds.c20_p">Public spending actually executed at national level, for the current financial year, drawn from citable official documents. <strong>Two markers only, and that is deliberate</strong>: there is no breakdown by department or by commune, because the source does not publish one. Two sourced figures are worth more than an invented distribution.</p>
+<p class="price" data-i18n-html="ds.c20_pr">$0 <small>CSV • 2 indicators • 9-month cumulative</small></p>
+<p class="meta" data-i18n-html="ds.c20_meta">🏛 Public finance • 2025-2026 financial year • Sources: MEF / Direction Générale du Budget, TOFE</p>
+<a href="../data/atmart_indicateurs_national_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="social gratuit">
-<span class="tag" data-i18n="ds.t_free">Gratuit</span>
-<h3 data-i18n-html="ds.c21_h">Présence des organisations — qui travaille où <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c21_p">Quelles organisations interviennent dans quelle commune, et dans quel secteur. <strong>Ce sont des présences déclarées</strong> par les organisations elles-mêmes au 3W d'OCHA, pas un relevé de terrain : une absence dans ce fichier ne prouve pas une absence sur place.</p>
-<p class="price" data-i18n-html="ds.c21_pr">0 $ <small>CSV • <span data-mf="prd_011_lignes">1 457</span> lignes • <span data-mf="prd_011_colonnes">17</span> colonnes</small></p>
-<p class="meta" data-i18n-html="ds.c21_meta">🤝 Infrastructures • Source : OCHA — 3W Haïti</p>
-<a href="data/atmart_presence_organisations_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+<span class="tag" data-i18n="ds.t_free">Free</span>
+<h3 data-i18n-html="ds.c21_h">Presence of organisations — who works where <span class="badge-new">NEW</span></h3>
+<p data-i18n-html="ds.c21_p">Which organisations work in which commune, and in which sector. <strong>These are presences declared</strong> by the organisations themselves to OCHA's 3W, not a field survey: an absence from this file does not prove an absence on the ground.</p>
+<p class="price" data-i18n-html="ds.c21_pr">$0 <small>CSV • <span data-mf="prd_011_lignes">1,457</span> rows • <span data-mf="prd_011_colonnes">17</span> columns</small></p>
+<p class="meta" data-i18n-html="ds.c21_meta">🤝 Infrastructure • Source: OCHA — 3W Haiti</p>
+<a href="../data/atmart_presence_organisations_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="social gratuit">
-<span class="tag" data-i18n="ds.t_free">Gratuit</span>
-<h3 data-i18n-html="ds.c22_h">Registre des ONG reconnues <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c22_p">Les organisations non gouvernementales reconnues par l'État : numéro d'inscription, date de reconnaissance, domaine d'intervention et zones déclarées. Les coordonnées sont institutionnelles — celles du siège, pas de personnes.</p>
-<p class="price" data-i18n-html="ds.c22_pr">0 $ <small>CSV • <span data-mf="prd_012_lignes">680</span> lignes • <span data-mf="prd_012_colonnes">22</span> colonnes</small></p>
-<p class="meta" data-i18n-html="ds.c22_meta">🤝 Infrastructures • Source : MPCE — registre officiel des ONG</p>
-<a href="data/atmart_registre_ong_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+<span class="tag" data-i18n="ds.t_free">Free</span>
+<h3 data-i18n-html="ds.c22_h">Register of recognised NGOs <span class="badge-new">NEW</span></h3>
+<p data-i18n-html="ds.c22_p">Non-governmental organisations recognised by the State: registration number, date of recognition, field of work and declared areas. The contact details are institutional — those of the head office, not of individuals.</p>
+<p class="price" data-i18n-html="ds.c22_pr">$0 <small>CSV • <span data-mf="prd_012_lignes">680</span> rows • <span data-mf="prd_012_colonnes">22</span> columns</small></p>
+<p class="meta" data-i18n-html="ds.c22_meta">🤝 Infrastructure • Source: MPCE — official NGO register</p>
+<a href="../data/atmart_registre_ong_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="social gratuit">
-<span class="tag" data-i18n="ds.t_free">Gratuit</span>
-<h3 data-i18n-html="ds.c23_h">Professions juridiques et foncières par commune <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c23_p">Combien de notaires et d'arpenteurs sont recensés dans chaque commune. <strong>Le dénombrement seul</strong> : aucun nom, aucune adresse, aucun téléphone. Un zéro veut dire « aucun dans nos sources », jamais « aucun sur le territoire » — <span data-mf="communes_avec_profession">55</span> communes sur <span data-mf="nombre_communes">140</span> sont couvertes.</p>
-<p class="price" data-i18n-html="ds.c23_pr">0 $ <small>CSV • <span data-mf="prd_013_lignes">280</span> lignes • <span data-mf="prd_013_colonnes">9</span> colonnes</small></p>
-<p class="meta" data-i18n-html="ds.c23_meta">⚖️ Infrastructures • Niveau de confiance C • sources compilées, hors registre officiel</p>
-<a href="data/atmart_professions_communes_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+<span class="tag" data-i18n="ds.t_free">Free</span>
+<h3 data-i18n-html="ds.c23_h">Legal and land professions by commune <span class="badge-new">NEW</span></h3>
+<p data-i18n-html="ds.c23_p">How many notaries and land surveyors are recorded in each commune. <strong>The count alone</strong>: no name, no address, no telephone. A zero means "none in our sources", never "none in the territory" — <span data-mf="communes_avec_profession">55</span> communes out of <span data-mf="nombre_communes">140</span> are covered.</p>
+<p class="price" data-i18n-html="ds.c23_pr">$0 <small>CSV • <span data-mf="prd_013_lignes">280</span> rows • <span data-mf="prd_013_colonnes">9</span> columns</small></p>
+<p class="meta" data-i18n-html="ds.c23_meta">⚖️ Infrastructure • Trust level C • compiled sources, outside the official register</p>
+<a href="../data/atmart_professions_communes_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Download free</a>
 </div>
 <div class="card" data-cat="social gratuit">
-<span class="tag" data-i18n="ds.t_free">Gratuit</span>
-<h3 data-i18n-html="ds.c24_h">Infrastructures par commune <span class="badge-new">NOUVO</span></h3>
-<p data-i18n-html="ds.c24_p">Ce que chaque commune compte en équipements, famille par famille. Une ligne par commune et par type, avec sa source et son millésime — de quoi comparer des territoires sans confondre ce qui est compté et ce qui est estimé.</p>
-<p class="price" data-i18n-html="ds.c24_pr">0 $ <small>CSV • <span data-mf="prd_014_lignes">1 899</span> lignes • <span data-mf="prd_014_colonnes">8</span> colonnes</small></p>
-<p class="meta" data-i18n-html="ds.c24_meta">🏗 Infrastructures • millésime et source déclarés ligne par ligne</p>
-<a href="data/atmart_infrastructures_communes_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
+<span class="tag" data-i18n="ds.t_free">Free</span>
+<h3 data-i18n-html="ds.c24_h">Infrastructure by commune <span class="badge-new">NEW</span></h3>
+<p data-i18n-html="ds.c24_p">What each commune has in facilities, family by family. One row per commune and per type, with its source and its vintage — enough to compare territories without confusing what is counted with what is estimated.</p>
+<p class="price" data-i18n-html="ds.c24_pr">$0 <small>CSV • <span data-mf="prd_014_lignes">1,899</span> rows • <span data-mf="prd_014_colonnes">8</span> columns</small></p>
+<p class="meta" data-i18n-html="ds.c24_meta">🏗 Infrastructure • vintage and source declared row by row</p>
+<a href="../data/atmart_infrastructures_communes_HT.csv" download class="btn btn-primary" data-i18n="ds.dl">Download free</a>
 </div>
 </div>
 
@@ -1463,38 +1454,34 @@
     </div>
 <div class="shelf" id="shelf-soon">
       <div class="shelf-head">
-        <h2 data-i18n="ds.soon_h">🧭 En préparation — et parrainables</h2>
-        <p data-i18n-html="ds.soon_p">
-          Sources identifiées, méthode écrite : il manque le financement du travail de préparation.
-          Une institution peut <a href="donnees-parrainage.html">parrainer l'ouverture</a> d'un de ces jeux —
-          il devient alors accessible gratuitement à toute une cohorte d'étudiants et de chercheurs.
-        </p>
+        <h2 data-i18n="ds.soon_h">🧭 In preparation — and open to sponsorship</h2>
+        <p data-i18n-html="ds.soon_p">Sources identified, method written: what is missing is the funding for the preparation work. An institution can <a href="/donnees-parrainage.html">sponsor the opening</a> of one of these datasets — it then becomes free for a whole cohort of students and researchers.</p>
       </div>
       <div class="grid grid-3" id="data-grid-soon">
 <!-- CARTES:parrainable — engendré par build_vitrine.py, ne pas éditer à la main -->
 <div class="card" data-cat="geo social economie">
   <span class="tag amber" data-i18n="ds.t_soon">À financer</span>
-  <h3 data-i18n-html="ds.s0_h">Profil des 140 communes d'Haïti</h3>
-  <p data-i18n-html="ds.s0_p">Une fiche standardisée par commune : identité territoriale, population, superficie, localités, écoles, établissements sanitaires, marchés, routes, exposition aux risques, dix indicateurs socio-économiques — chacun avec sa source et son score de qualité. Le premier produit qui exploite le Backbone de bout en bout.</p>
-  <p class="price" data-i18n-html="ds.s0_pr">6000 $ <small>parrainage</small> <small>coût de construction · Excel + GeoJSON + Power BI + fiches PDF</small></p>
-  <p class="meta" data-i18n-html="ds.s0_meta">🗺 Transversal • S'appuie sur le <a href="donnees-backbone.html">référentiel territoire</a> déjà publié</p>
-  <a href="donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.s0_cta">référentiel territoire</a>
+  <h3 data-i18n-html="ds.s0_h">Profile of Haiti's 140 communes <span class="badge-new">PRIORITY 1</span></h3>
+  <p data-i18n-html="ds.s0_p">A standardised sheet per commune: territorial identity, population, area, localities, schools, health facilities, markets, roads, risk exposure, ten socio-economic indicators — each with its source and quality score. The first product that uses the Backbone end to end.</p>
+  <p class="price" data-i18n-html="ds.s0_pr">≈ 6,000 $ <small>build cost · Excel + GeoJSON + Power BI + PDF sheets</small></p>
+  <p class="meta" data-i18n-html="ds.s0_meta">🗺 Cross-cutting • Built on the <a href="/donnees-backbone.html">territorial reference set</a> already published</p>
+  <a href="/donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.s0_cta">référentiel territoire</a>
 </div>
 <div class="card" data-cat="economie">
   <span class="tag amber" data-i18n="ds.t_soon">À financer</span>
-  <h3 data-i18n-html="ds.s1_h">Prix des marchés — couverture nationale et mise à jour mensuelle</h3>
-  <p data-i18n-html="ds.s1_p">Un réseau sentinelle de <span data-mf="nombre_communes_sentinelles">9</span> marchés est <strong>déjà publié et téléchargeable</strong>, gratuitement. Ce parrainage financerait l'étape suivante : étendre la couverture à l'ensemble des marchés suivis par la CNSA et FEWS NET, et tenir la série à jour chaque mois.</p>
-  <p class="price" data-i18n-html="ds.s1_pr">2500 $ <small>parrainage</small> <small>coût d'ouverture · + 1 200 $/an de mise à jour</small></p>
-  <p class="meta" data-i18n-html="ds.s1_meta">💰 Économie • Sources identifiées : CNSA, FEWS NET</p>
-  <a href="donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.b_parr">Parrainer ce jeu</a>
+  <h3 data-i18n-html="ds.s1_h">Staple food prices — Haitian markets (2018–2025)</h3>
+  <p data-i18n-html="ds.s1_p">Rice, beans, maize, oil, fuel: price readings by market and by month. The basis for any serious analysis of food inflation.</p>
+  <p class="price" data-i18n-html="ds.s1_pr">≈ 2,500 $ <small>opening cost · + 1,200 $/yr to keep it current</small></p>
+  <p class="meta" data-i18n-html="ds.s1_meta">💰 Economy • Sources identified: CNSA, FEWS NET</p>
+  <a href="/donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.b_parr">Parrainer ce jeu</a>
 </div>
 <div class="card" data-cat="economie finance">
   <span class="tag amber" data-i18n="ds.t_soon">À financer</span>
-  <h3 data-i18n-html="ds.s2_h">Indicateurs économiques Haïti</h3>
-  <p data-i18n-html="ds.s2_p">PIB, inflation, taux de change gourde/USD, importations et exportations sur 25 ans, harmonisés entre sources.</p>
-  <p class="price" data-i18n-html="ds.s2_pr">2000 $ <small>parrainage</small> <small>coût d'ouverture</small></p>
-  <p class="meta" data-i18n-html="ds.s2_meta">💰 Économie • Sources identifiées : Banque mondiale, FMI, BRH</p>
-  <a href="donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.b_parr">Parrainer ce jeu</a>
+  <h3 data-i18n-html="ds.s2_h">Haiti economic indicators (2000–2025)</h3>
+  <p data-i18n-html="ds.s2_p">GDP, inflation, gourde/USD exchange rate, imports and exports over 25 years, harmonised across sources.</p>
+  <p class="price" data-i18n-html="ds.s2_pr">≈ 2,000 $ <small>opening cost</small></p>
+  <p class="meta" data-i18n-html="ds.s2_meta">💰 Economy • Sources identified: World Bank, IMF, BRH</p>
+  <a href="/donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.b_parr">Parrainer ce jeu</a>
 </div>
 <div class="card" data-cat="parrainable">
   <span class="tag amber" data-i18n="ds.t_soon">À financer</span>
@@ -1502,7 +1489,7 @@
   <p data-i18n-html="ds.prd204_p">Effectifs, établissements, résultats.</p>
   <p class="price" data-i18n-html="ds.prd204_pr">2500 $ <small>parrainage</small></p>
   <p class="meta" data-i18n-html="ds.prd204_meta">👥 Social • Sources : MENFP, UNESCO UIS, Banque mondiale</p>
-  <a href="donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.b_parr">Parrainer ce jeu</a>
+  <a href="/donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.b_parr">Parrainer ce jeu</a>
 </div>
 <div class="card" data-cat="parrainable">
   <span class="tag amber" data-i18n="ds.t_soon">À financer</span>
@@ -1510,7 +1497,7 @@
   <p data-i18n-html="ds.prd205_p">Structures, personnels, couverture vaccinale.</p>
   <p class="price" data-i18n-html="ds.prd205_pr">3000 $ <small>parrainage</small></p>
   <p class="meta" data-i18n-html="ds.prd205_meta">👥 Social • Sources : MSPP, OMS/OPS, EMMUS</p>
-  <a href="donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.b_parr">Parrainer ce jeu</a>
+  <a href="/donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.b_parr">Parrainer ce jeu</a>
 </div>
 <!-- /CARTES:parrainable -->
 </div>
@@ -1518,12 +1505,12 @@
 
     <!-- COMMENT ÇA MARCHE -->
     <div class="banner" style="margin-top:3rem">
-      <h2 data-i18n="ds.how_h">Comment ça marche ?</h2>
-      <p data-i18n-html="ds.how_p">Paiement sécurisé par carte ou PayPal via Payhip — téléchargement immédiat. Chaque jeu inclut sa documentation (sources, dictionnaire de variables, limites connues, licence). <strong>En Haïti, sans carte bancaire ?</strong> Écrivez-nous pour payer par MonCash : <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a> — le lien de téléchargement est envoyé sous 24 h.</p>
+      <h2 data-i18n="ds.how_h">How does it work?</h2>
+      <p data-i18n-html="ds.how_p">Secure payment by card or PayPal through Payhip — instant download. Every dataset comes with its documentation (sources, variable dictionary, known limitations, licence). <strong>In Haiti, no bank card?</strong> Write to us to pay by MonCash: <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a> — the download link is sent within 24 h.</p>
       <div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
-        <a href="donnees-confiance.html" class="btn btn-outline" data-i18n="ds.how_b1">Comment nous garantissons la qualité</a>
-        <a href="donnees-campus.html" class="btn btn-outline" data-i18n="ds.how_b2">Étudiant ou chercheur : accès gratuit</a>
-        <a href="mailto:sales@atmart.ltd?subject=Demande%20de%20dataset%20sur%20mesure" class="btn btn-outline" data-i18n="ds.how_cta">Demander un dataset sur mesure</a>
+        <a href="/donnees-confiance.html" class="btn btn-outline" data-i18n="ds.how_b1">How we guarantee quality</a>
+        <a href="/donnees-campus.html" class="btn btn-outline" data-i18n="ds.how_b2">Student or researcher: free access</a>
+        <a href="mailto:sales@atmart.ltd?subject=Demande%20de%20dataset%20sur%20mesure" class="btn btn-outline" data-i18n="ds.how_cta">Request a custom dataset</a>
       </div>
     </div>
   </div>
@@ -1534,19 +1521,19 @@
     <div class="footer-grid">
       <div>
         <a href="/" class="logo">Explorateur <span>Haïti</span></a>
-        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">Un produit <a href="https://atmart.ltd/">Atmart Data</a> — des données sourcées, datées, vérifiables sur les 140 communes d'Haïti.</p>
+        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">A product of <a href="https://atmart.ltd/">Atmart Data</a> — sourced, dated, verifiable data on the 140 communes of Haiti.</p>
       </div>
       <div>
-        <h4 data-i18n="ft.h_donnees">Données</h4>
+        <h4 data-i18n="ft.h_donnees">Data</h4>
         <ul>
-          <li><a href="couches.html" data-i18n="ft.couches">Couches</a></li>
+          <li><a href="/couches.html" data-i18n="ft.couches">Layers</a></li>
           <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
-          <li><a href="donnees.html" data-i18n="ft.comment">Comment ça marche</a></li>
-          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
-          <li><a href="donnees-backbone.html" data-i18n="ft.def">Définitions &amp; méthodes</a></li>
-          <li><a href="donnees-systeme.html" data-i18n="ft.carte">La carte du système</a></li>
-          <li><a href="donnees-confiance.html" data-i18n="ft.conf">Confiance &amp; méthode</a></li>
-          <li><a href="archives.html" data-i18n="ft.arch">Archives &amp; citation</a></li>
+          <li><a href="donnees.html" data-i18n="ft.comment">How it works</a></li>
+          <li><a href="/donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
+          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definitions &amp; methods</a></li>
+          <li><a href="/donnees-systeme.html" data-i18n="ft.carte">The system map</a></li>
+          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Trust &amp; method</a></li>
+          <li><a href="/archives.html" data-i18n="ft.arch">Archives & citation</a></li>
         </ul>
       </div>
       <div>
@@ -1556,19 +1543,19 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte, sans traceur publicitaire — seule une mesure d'audience anonyme et agrégée existe, <a href="donnees-confiance.html#mesure">méthode publiée</a>.</div>
+    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. The Haiti Explorer is free, with no account and no advertising tracker — only an anonymous and aggregated audience measurement exists, <a href="/donnees-confiance.html#mesure">method published</a>.</div>
   </div>
 </footer>
 
-<script src="assets/script.js?v=2"></script>
+<script src="../assets/script.js?v=2"></script>
 <script>
   (function () {
     var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
     if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
   })();
 </script>
-<script src="assets/mesure.js?v=2" defer></script>
-<script src="assets/ux.js?v=1" defer></script>
-<script src="assets/i18n.js?v=15"></script>
+<script src="../assets/mesure.js?v=2" defer></script>
+<script src="../assets/ux.js?v=1" defer></script>
+<script src="../assets/i18n.js?v=15"></script>
 </body>
 </html>

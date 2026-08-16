@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v35";
+const CACHE = "explorateur-v36";
 const DV = "?d=2026-08-15a";   // doit suivre le DV de assets/explorateur.js
 
 const CORE = [

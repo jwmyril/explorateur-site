@@ -460,15 +460,6 @@ import { S } from "./etat.js";
         if (zone && S.courant) zone.outerHTML = A.blocCarte(S.courant);
         return;
       }
-      /* Longueur de la fiche : le choix du lecteur, mémorisé. On redessine
-         la fiche entière puisque c'est justement ce qui change. */
-      var vue = e.target.closest("[data-vue]");
-      if (vue) {
-        S.vue = vue.dataset.vue;
-        try { localStorage.setItem("atmart_vue", S.vue); } catch (err) {}
-        if (S.courant) A.fiche(S.courant.atmart_geo_id);
-        return;
-      }
       var b = e.target.closest("[data-id]");
       if (b) {
         /* Depuis l'onglet Comparer, un resultat de recherche s'AJOUTE a la
@@ -743,29 +734,35 @@ import { S } from "./etat.js";
     (await import("./explorateur-" + m + ".js")).default(A);
   }
 
+  /* TOUT part en même temps (15/08/2026). Le chargement se faisait en trois
+     vagues : les référentiels, PUIS le contour, PUIS les polygones — chaque
+     vague attendant la précédente. Sur une connexion à 300 ms d'aller-retour,
+     c'étaient deux attentes pures, pendant lesquelles rien ne transitait ;
+     les 65 Ko de polygones ne commençaient à descendre qu'une fois le CSV
+     entièrement lu. Les requêtes partent maintenant ensemble : le navigateur
+     les mène de front, et l'ordre d'ATTENTE ci-dessous ne change rien à ce
+     qui est déjà en vol.
+
+     Les trois géométries restent facultatives, exactement comme avant : si
+     l'une manque, la carte retombe sur les bulles et la fiche s'affiche. */
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);
-  Promise.all(liste.map(function (u) { return charger(u); })).then(function (t) {
+  var pDonnees = liste.map(function (u) { return charger(u); });
+  var pContour = charger(CFG.contour || DIR + "haiti_contour_simplifie.geojson")
+    .then(function (t) { return JSON.parse(t); }).catch(function () { return null; });
+  var pDep = charger(DIR + "haiti_departements_simplifie.geojson")
+    .then(function (x) { return JSON.parse(x).features; }).catch(function () { return null; });
+  var pCom = charger(DIR + "haiti_communes_simplifie.geojson")
+    .then(function (x) { return JSON.parse(x).features; }).catch(function () { return null; });
+
+  Promise.all(pDonnees).then(function (t) {
     S.terr = parseCSV(t[0]); S.vals = parseCSV(t[1]);
     parseCSV(t[2]).forEach(function (d) { dico[d.indicateur_id] = d; });
     if (t[3]) S.orgs = parseCSV(t[3]);
-    /* Le contour est un agrement : s'il manque, la fiche s'affiche sans carte. */
-    return charger(CFG.contour || DIR + "haiti_contour_simplifie.geojson")
-      .then(function (t) { return JSON.parse(t); })
+    return Promise.all([pContour, pDep, pCom])
       .then(function (g) {
-        if (g) S.contour = g.features[0].geometry.coordinates;
-      })
-      .catch(function () {})
-      /* Les contours administratifs sont un agrément comme le contour
-         national : s'ils manquent, la carte retombe sur les bulles. */
-      .then(function () {
-        return Promise.all([
-          charger(DIR + "haiti_departements_simplifie.geojson")
-            .then(function (x) { S.polyDep = JSON.parse(x).features; })
-            .catch(function () { S.polyDep = null; }),
-          charger(DIR + "haiti_communes_simplifie.geojson")
-            .then(function (x) { S.polyCom = JSON.parse(x).features; })
-            .catch(function () { S.polyCom = null; })
-        ]);
+        if (g[0] && g[0].features) S.contour = g[0].features[0].geometry.coordinates;
+        S.polyDep = g[1];
+        S.polyCom = g[2];
       })
       .catch(function () {})
       /* La langue precede le premier rendu : sinon l'utilisateur voit un

@@ -460,6 +460,15 @@ import { S } from "./etat.js";
         if (zone && S.courant) zone.outerHTML = A.blocCarte(S.courant);
         return;
       }
+      /* Longueur de la fiche : le choix du lecteur, mémorisé. On redessine
+         la fiche entière puisque c'est justement ce qui change. */
+      var vue = e.target.closest("[data-vue]");
+      if (vue) {
+        S.vue = vue.dataset.vue;
+        try { localStorage.setItem("atmart_vue", S.vue); } catch (err) {}
+        if (S.courant) A.fiche(S.courant.atmart_geo_id);
+        return;
+      }
       var b = e.target.closest("[data-id]");
       if (b) {
         /* Depuis l'onglet Comparer, un resultat de recherche s'AJOUTE a la
@@ -736,8 +745,8 @@ import { S } from "./etat.js";
 
   /* TOUT part en même temps (15/08/2026). Le chargement se faisait en trois
      vagues : les référentiels, PUIS le contour, PUIS les polygones — chaque
-     vague attendant la précédente. Sur une connexion à 300 ms d'aller-retour,
-     c'étaient deux attentes pures, pendant lesquelles rien ne transitait ;
+     vague attendant la précédente. Sur une liaison à 300 ms d'aller-retour,
+     c'étaient deux attentes pures pendant lesquelles rien ne transitait ;
      les 65 Ko de polygones ne commençaient à descendre qu'une fois le CSV
      entièrement lu. Les requêtes partent maintenant ensemble : le navigateur
      les mène de front, et l'ordre d'ATTENTE ci-dessous ne change rien à ce

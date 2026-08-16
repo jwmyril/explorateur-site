@@ -142,7 +142,7 @@
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_sources.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "28428"
+       "contentSize": "29577"
       }
      ],
      "isBasedOn": "Atmart"
@@ -430,7 +430,7 @@
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_infrastructures_communes_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "230074"
+       "contentSize": "260444"
       }
      ],
      "isBasedOn": "Sources déclarées ligne par ligne"
@@ -767,6 +767,72 @@
     },
     {
      "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-025",
+     "identifier": "PRD-025",
+     "name": "Équipements télécom par opérateur",
+     "description": "Pylônes et mâts de communication, boutiques mobiles, bureaux d'opérateur et accès internet public cartographiés dans OpenStreetMap, colorés par opérateur (Digicel, Natcom, Voilà, Access Haiti). Ce n'est PAS le parc des opérateurs : ni Digicel, ni Natcom, ni le CONATEL ne le publient. Une commune sans point n'est pas une commune sans couverture.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Infrastructures",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_couche_telecom_HT.geojson",
+       "encodingFormat": "application/geo+json",
+       "contentSize": "73142"
+      }
+     ],
+     "isBasedOn": "OpenStreetMap via Overpass"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-026",
+     "identifier": "PRD-026",
+     "name": "Télécom par commune — dénombrement",
+     "description": "Dénombrement des équipements télécom par commune, par opérateur et par genre — 498 équipements dans 81 communes sur 140. Comptage contributif : il mesure autant l'effort de cartographie que le parc réel.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Infrastructures",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_telecom_communes_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "33130"
+      }
+     ],
+     "isBasedOn": "OpenStreetMap via Overpass"
+    },
+    {
+     "@type": "Dataset",
      "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-101",
      "identifier": "PRD-101",
      "name": "Pack Géo Haïti — toutes les coordonnées GPS",
@@ -952,7 +1018,7 @@
 </style>
 
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-gXD5j25CDqjbUjeY+S4WrSmPh+SEZ+S0CCjjr3hx9jM=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-6JKcQsR69yR98POUmuvdWQIgmDyLA/WEbrivnsety64=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>

@@ -1274,14 +1274,59 @@ export default function (A) {
     return h.join("");
   }
 
+  /* ------------------------------------------------- longueur de la fiche
+     Une fiche complète fait plusieurs écrans de défilement : c'est trop pour
+     qui vient chercher un chiffre, et pas assez pour qui prépare un dossier.
+     Trois longueurs, donc, choisies par le lecteur et mémorisées — jamais
+     imposées. « Moyen » reste le défaut.
+
+     Aucune donnée n'est cachée : ce qui n'est pas affiché est à un clic, et
+     le sélecteur DIT ce que la longueur active montre. Masquer sans le dire
+     serait une autre façon de mentir sur ce que le site sait. */
+  var VUES = {
+    court: { l: "Court", b: { resume: 1, indicateurs: 1, lacunes: 1 },
+             d: "l'essentiel : les chiffres et ce qui manque" },
+    moyen: { l: "Moyen", b: { resume: 1, carte: 1, objectif: 1, indicateurs: 1,
+                              services: 1, comparer: 1, lacunes: 1, enfants: 1 },
+             d: "avec la carte, les services et la comparaison" },
+    complet: { l: "Complet", b: null,
+               d: "tout, y compris pyramide, prix et informations techniques" }
+  };
+
+  function vueCourante() {
+    var v = S.vue;
+    if (!v) { try { v = localStorage.getItem("atmart_vue"); } catch (e) {} }
+    return VUES[v] ? v : "moyen";
+  }
+
+  function montrer(bloc) {
+    var v = VUES[vueCourante()];
+    return !v.b || v.b[bloc] === 1;
+  }
+
+  function selecteurVue() {
+    var a = vueCourante();
+    return '<div class="x-vues" role="group" aria-label="' + T("Longueur de la fiche") + '">' +
+      Object.keys(VUES).map(function (k) {
+        return '<button type="button" class="x-vue' + (k === a ? " actif" : "") +
+          '" data-vue="' + k + '" aria-pressed="' + (k === a) + '" title="' +
+          T(VUES[k].d) + '">' + T(VUES[k].l) + "</button>";
+      }).join("") + "<small>" + T(VUES[a].d) + "</small></div>";
+  }
+
   function fiche(id) {
     var r = parId[id];
     if (!r) return;
     S.courant = r;
-    var h = [S.montrerAccueil ? blocAccueil(r) : "", blocResume(r), blocCarte(r)];
+    var h = [S.montrerAccueil ? blocAccueil(r) : "", blocResume(r), selecteurVue()];
+    if (montrer("carte")) h.push(blocCarte(r));
     if (r.niveau_admin === "3") {
-      h.push(blocObjectif(r), blocIndicateurs(r), blocPyramide(r), blocPrix(r),
-             blocServices(r), blocComparer(r), blocLacunes(r));
+      h.push(montrer("objectif") ? blocObjectif(r) : "", blocIndicateurs(r),
+             montrer("pyramide") ? blocPyramide(r) : "",
+             montrer("prix") ? blocPrix(r) : "",
+             montrer("services") ? blocServices(r) : "",
+             montrer("comparer") ? blocComparer(r) : "",
+             montrer("lacunes") ? blocLacunes(r) : "");
     } else if (r.niveau_admin === "0") {
       /* La fiche du pays : repères nationaux d'abord (ce qui n'existe qu'à ce
          niveau), puis le même agrégat que pour un département. Pas de bloc
@@ -1289,9 +1334,10 @@ export default function (A) {
          ses sources, affichées repère par repère. */
       h.push(blocNat(), agregat(r), blocPyramide(r));
     } else h.push(agregat(r), blocPyramide(r));
-    if (r.niveau_admin !== "0") h.push(blocOrganisations(r));
-    h.push(blocEnfants(r), blocVerrou(r));
-    if (r.niveau_admin !== "0") h.push(blocTechnique(r));
+    if (r.niveau_admin !== "0" && montrer("organisations")) h.push(blocOrganisations(r));
+    if (montrer("enfants")) h.push(blocEnfants(r));
+    if (montrer("verrou")) h.push(blocVerrou(r));
+    if (r.niveau_admin !== "0" && montrer("technique")) h.push(blocTechnique(r));
     $("#x-fiche").innerHTML = h.join("");
     $("#x-fiche").hidden = false;
     observerPyramide(r);

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ma commune — édition légère | Explorateur Haïti</title>
+<meta name="description" content="Les chiffres d'une commune d'Haïti en 26 Ko : version texte de l'Explorateur, faite pour les connexions lentes. Chaque valeur porte sa source, son millésime et sa couverture." />
+<link rel="canonical" href="https://explorateur.atmart.ltd/fiche.html" />
+<link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/fiche.html" />
+<link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/fiche.html" />
+<meta name="theme-color" content="#0e2240" />
+<link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+<style>
+/* Tout est ici : aucune feuille externe, aucune police téléchargée.
+   Sur 3G, chaque requête évitée vaut mieux qu'un octet économisé. */
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+     color:#16202c;background:#fff}
+header{background:#0e2240;color:#fff;padding:.8rem 1rem}
+header a{color:#fff;text-decoration:none;font-weight:600}
+header p{margin:.25rem 0 0;font-size:.82rem;opacity:.85}
+main{max-width:44rem;margin:0 auto;padding:1rem 1rem 3rem}
+h1{font-size:1.5rem;margin:.6rem 0 .2rem}
+.sous{color:#5b6b7b;margin:0 0 1rem;font-size:.95rem}
+label{display:block;font-weight:600;margin:.4rem 0 .3rem}
+input{width:100%;font:inherit;padding:.7rem .8rem;border:2px solid #c9d4e0;border-radius:10px;min-height:48px}
+input:focus{outline:3px solid #2a6df4;outline-offset:1px}
+ul{list-style:none;margin:.5rem 0;padding:0}
+#res li a{display:block;padding:.75rem .8rem;border:1px solid #dbe2ea;border-radius:10px;
+          margin-bottom:.4rem;text-decoration:none;color:inherit;min-height:48px}
+#res li a:hover,#res li a:focus{background:#eef4ff;border-color:#2a6df4}
+#res small{color:#5b6b7b;display:block;font-size:.8rem}
+.mes{border-top:1px solid #e6ecf2;padding:.7rem 0}
+.mes b{font-size:1.15rem}
+.mes span{display:block;font-size:.95rem}
+.mes small{color:#5b6b7b;font-size:.78rem;display:block;margin-top:.15rem}
+.nd{color:#8d99ae;font-style:italic}
+.note{background:#f5f8fb;border-left:3px solid #2a6df4;padding:.7rem .9rem;
+      font-size:.86rem;margin:1rem 0;border-radius:0 8px 8px 0}
+.err{background:#fff4f4;border-left-color:#e63946}
+footer{border-top:1px solid #e6ecf2;margin-top:2rem;padding-top:1rem;font-size:.84rem;color:#5b6b7b}
+footer a,main a.lien{color:#1550b8}
+.btn{display:inline-block;margin-top:.6rem;padding:.7rem 1rem;background:#0e2240;color:#fff;
+     border-radius:10px;text-decoration:none;min-height:48px;line-height:1.9}
+</style>
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-91DkGZR/4WuL2zzob8VkCEcMEuNPBeAC7T57XVeq5Cg='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+</head>
+<body>
+
+<header>
+  <a href="/">Explorateur Haïti</a>
+  <p>Édition légère — texte seul, pour les connexions lentes</p>
+</header>
+
+<main>
+  <h1 id="titre">Ma commune</h1>
+  <p class="sous" id="sous">Cherchez votre commune : la fiche s'affiche en quelques kilooctets.</p>
+
+  <div id="recherche">
+    <label for="q">Nom de la commune</label>
+    <input id="q" type="search" autocomplete="off" placeholder="Léogâne, Gonaïves, Pòtoprens…"
+           aria-describedby="aide" />
+    <p class="sous" id="aide" style="font-size:.82rem;margin:.4rem 0 0">
+      Tapez les premières lettres — les noms en kreyòl fonctionnent aussi.
+    </p>
+    <ul id="res"></ul>
+  </div>
+
+  <div id="fiche" hidden></div>
+
+  <footer>
+    <p id="pied">
+      Cette page affiche les mêmes chiffres que l'Explorateur complet, sans carte ni
+      graphique. <a class="lien" href="/">Ouvrir la version complète</a> —
+      <a class="lien" href="datasets.html">télécharger les données</a>.
+    </p>
+    <p>Un produit <a href="https://atmart.ltd/">Atmart Data</a> — gratuit, sans compte,
+       sans traceur publicitaire.</p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (s) { return document.querySelector(s); };
+  var index = null;
+
+  function texte(x) {
+    return String(x == null ? "" : x).replace(/[<>&"]/g, function (c) {
+      return { "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c];
+    });
+  }
+  function sansAccent(s) {
+    return String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  }
+  function nombre(v, u) {
+    var n = parseFloat(String(v).replace(",", "."));
+    if (isNaN(n)) return texte(v) + (u ? " " + texte(u) : "");
+    var s = n % 1 === 0 ? n.toLocaleString("fr-FR")
+                        : n.toLocaleString("fr-FR", { maximumFractionDigits: 2 });
+    return s + (u ? " " + texte(u) : "");
+  }
+
+  /* Deux essais avant d'abandonner : une connexion instable coupe souvent la
+     première requête, et un message d'échec prématuré ferait fuir. */
+  function charger(u, essais) {
+    essais = essais === undefined ? 2 : essais;
+    return fetch(u).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    }).catch(function (e) {
+      if (essais <= 0) throw e;
+      return new Promise(function (ok) { setTimeout(ok, 700); })
+        .then(function () { return charger(u, essais - 1); });
+    });
+  }
+
+  function echec(ou, quoi, refaire) {
+    ou.innerHTML = '<div class="note err"><b>' + quoi + "</b><br>Vérifiez votre connexion, " +
+      'puis <button type="button" id="rf" class="btn" style="margin-top:.5rem">Réessayer</button></div>';
+    var b = document.getElementById("rf");
+    if (b) b.addEventListener("click", refaire);
+  }
+
+  function afficherResultats(liste) {
+    var ul = $("#res");
+    if (!liste.length) { ul.innerHTML = ""; return; }
+    ul.innerHTML = liste.slice(0, 12).map(function (c) {
+      return '<li><a href="?c=' + c.i + '">' + texte(c.n) +
+        (c.h && c.h !== c.n ? " <i>" + texte(c.h) + "</i>" : "") +
+        "<small>" + texte(c.d) + "</small></a></li>";
+    }).join("");
+  }
+
+  function chercher(q) {
+    var k = sansAccent(q).trim();
+    if (!k || !index) return [];
+    var debut = [], dedans = [];
+    index.forEach(function (c) {
+      var a = sansAccent(c.n), b = sansAccent(c.h), p = sansAccent(c.p);
+      if (a.indexOf(k) === 0 || b.indexOf(k) === 0 || p.indexOf(k) === 0) debut.push(c);
+      else if (a.indexOf(k) > 0 || b.indexOf(k) > 0) dedans.push(c);
+    });
+    return debut.concat(dedans);
+  }
+
+  function afficherFiche(f) {
+    document.title = f.n + " — édition légère | Explorateur Haïti";
+    $("#titre").textContent = f.n + (f.h && f.h !== f.n ? " · " + f.h : "");
+    $("#sous").textContent = [f.arr && "arrondissement de " + f.arr,
+                              f.dep && "département " + f.dep].filter(Boolean).join(", ");
+    var connues = f.m.filter(function (m) { return m.v !== null; });
+    var absentes = f.m.filter(function (m) { return m.v === null; });
+    var h = ['<p class="note">' + connues.length + " valeur" + (connues.length > 1 ? "s" : "") +
+             " documentée" + (connues.length > 1 ? "s" : "") + " · " + absentes.length +
+             " non documentée" + (absentes.length > 1 ? "s" : "") +
+             " — une absence n'est jamais un zéro." +
+             (f.maj ? " Mise à jour Atmart : " + texte(f.maj) + "." : "") + "</p>"];
+    f.m.forEach(function (m) {
+      h.push('<div class="mes">' +
+        (m.v === null ? '<b class="nd">non documenté</b>' : "<b>" + nombre(m.v, m.u) + "</b>") +
+        "<span>" + texte(m.n) + "</span><small>" +
+        (m.a ? "millésime " + texte(m.a) + " · " : "") + texte(m.s) +
+        (m.c ? " · " + m.c + " communes sur 140 couvertes par cette source" : "") +
+        (m.src ? " · " + texte(m.src) : "") + "</small></div>");
+    });
+    h.push('<p style="margin-top:1.2rem"><a class="btn" href="/?id=' + texte(f.id) +
+           '">Voir la fiche complète (carte, pyramide, comparaison)</a></p>');
+    h.push('<p style="margin-top:.8rem"><a class="lien" href="fiche.html">← chercher une autre commune</a></p>');
+    var d = $("#fiche");
+    d.innerHTML = h.join("");
+    d.hidden = false;
+    $("#recherche").hidden = true;
+  }
+
+  function ouvrir(id) {
+    var d = $("#fiche");
+    d.hidden = false;
+    d.innerHTML = '<p class="note">Chargement de la fiche…</p>';
+    $("#recherche").hidden = true;
+    charger("data/leger/" + id + ".json")
+      .then(afficherFiche)
+      .catch(function () {
+        echec(d, "La fiche n'a pas pu être chargée.", function () { ouvrir(id); });
+      });
+  }
+
+  function demarrer() {
+    var id = (location.search.match(/[?&]c=([A-Za-z0-9\-]+)/) || [])[1];
+    if (id) return ouvrir(id);
+    charger("data/leger/communes.json").then(function (data) {
+      index = data;
+      var q = $("#q");
+      q.addEventListener("input", function () { afficherResultats(chercher(q.value)); });
+      q.focus();
+    }).catch(function () {
+      echec($("#res"), "La liste des communes n'a pas pu être chargée.", demarrer);
+    });
+  }
+  demarrer();
+
+  /* Mesure d'audience : un seul compteur, agrégé, sans identifiant — même
+     doctrine que le reste du site (méthode publiée sur la page Confiance). */
+  try {
+    var c = JSON.stringify({ name: "xpl_leger", lang: "fr" });
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon("https://atmart-chat.atmartllc.workers.dev/ev",
+        new Blob([c], { type: "text/plain;charset=UTF-8" }));
+    }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

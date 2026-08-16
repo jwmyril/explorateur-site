@@ -4,7 +4,7 @@
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
 const CACHE = "explorateur-v37";
-const DV = "?d=2026-08-15a";   // doit suivre le DV de assets/explorateur.js
+const DV = "?d=2026-08-15a";   // doit suivre le DV de assets/modules/explorateur.js
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",

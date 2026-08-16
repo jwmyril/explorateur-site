@@ -17,6 +17,9 @@ const DATA = [
   "/data/atmart_referentiel_territoire_base_HT.csv",
   "/data/atmart_indicateurs_communes_HT.csv",
   "/data/atmart_referentiel_indicateurs.csv",
+  // 72 Ko reels sur le reseau : la pyramide avait ete tenue hors du
+  // precache pour son poids suppose, motif qui ne tenait plus une fois
+  // mesure. Hors connexion, une fiche sans pyramide est une fiche amputee.
   "/data/atmart_pyramide_ages_HT.csv",
   "/data/atmart_prix_marches_HT.csv",
   "/data/haiti_contour_simplifie.geojson",

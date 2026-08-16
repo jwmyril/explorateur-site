@@ -1,0 +1,421 @@
+﻿indicateur_id,langue,champ,valeur
+IND-GEO-001,ht,nom,Sipèfisi
+IND-GEO-001,ht,definition,Sipèfisi antite teritoryal la.
+IND-GEO-001,ht,methode_calcul,Total sipèfisi seksyon kominal yo (CNIGS).
+IND-GEO-001,ht,comparabilite,Konparab toutotan dekoupaj administratif la pa chanje.
+IND-GEO-001,ht,limites_connues,Total nasyonal seksyon yo (26 942 km²) diferan ak 27 750 km² yo abitye site a : se trase kòt polygòn yo.
+IND-GEO-001,ht,unite,km²
+IND-GEO-001,ht,sens_interpretation,Net
+IND-GEO-001,en,nom,Area
+IND-GEO-001,en,definition,Area of the territorial entity.
+IND-GEO-001,en,methode_calcul,Sum of the areas of the communal sections (CNIGS).
+IND-GEO-001,en,comparabilite,Comparable as long as the administrative division does not change.
+IND-GEO-001,en,limites_connues,"The national total of the sections (26,942 km²) differs from the usual 27,750 km²: coastal tracing of the polygons."
+IND-GEO-001,en,unite,km²
+IND-GEO-001,en,sens_interpretation,Neutral
+IND-GEO-001,es,nom,Superficie
+IND-GEO-001,es,definition,Superficie de la entidad territorial.
+IND-GEO-001,es,methode_calcul,Suma de las superficies de las secciones comunales (CNIGS).
+IND-GEO-001,es,comparabilite,Comparable mientras la división administrativa no cambie.
+IND-GEO-001,es,limites_connues,El total nacional de las secciones (26 942 km²) difiere de los 27 750 km² habituales: trazado costero de los polígonos.
+IND-GEO-001,es,unite,km²
+IND-GEO-001,es,sens_interpretation,Neutro
+IND-GEO-002,ht,nom,Kantite seksyon kominal
+IND-GEO-002,ht,definition,Kantite seksyon kominal ki fòme komin nan.
+IND-GEO-002,ht,methode_calcul,Konte nan baz referans teritwa a.
+IND-GEO-002,ht,comparabilite,Konparab ant komin.
+IND-GEO-002,ht,limites_connues,Dekoupaj 2018 la.
+IND-GEO-002,ht,unite,kantite
+IND-GEO-002,ht,sens_interpretation,Net
+IND-GEO-002,en,nom,Number of communal sections
+IND-GEO-002,en,definition,Number of communal sections making up the commune.
+IND-GEO-002,en,methode_calcul,Count in the territory referential.
+IND-GEO-002,en,comparabilite,Comparable between communes.
+IND-GEO-002,en,limites_connues,2018 division.
+IND-GEO-002,en,unite,count
+IND-GEO-002,en,sens_interpretation,Neutral
+IND-GEO-002,es,nom,Número de secciones comunales
+IND-GEO-002,es,definition,Número de secciones comunales que componen la comuna.
+IND-GEO-002,es,methode_calcul,Recuento en el referencial territorio.
+IND-GEO-002,es,comparabilite,Comparable entre comunas.
+IND-GEO-002,es,limites_connues,División de 2018.
+IND-GEO-002,es,unite,número
+IND-GEO-002,es,sens_interpretation,Neutro
+IND-GEO-003,ht,nom,Kantite lokalite ki resanse
+IND-GEO-003,ht,definition,Kantite kote moun rete yo resanse nan komin nan.
+IND-GEO-003,ht,methode_calcul,Konte lokalite GeoNames yo rache ak komin nan pa metòd pwen-nan-polygòn.
+IND-GEO-003,ht,comparabilite,"Fè atansyon : li reflete efò resansman GeoNames la, se pa sèlman reyalite kote moun rete."
+IND-GEO-003,ht,limites_connues,"Ti lokalite ka manke ; 1,3 % nan pwen yo rache pa pwoksimite."
+IND-GEO-003,ht,unite,kantite
+IND-GEO-003,ht,sens_interpretation,Yon valè ki wo pa yon merit : li vle di tou dokimantasyon an pi konplè.
+IND-GEO-003,en,nom,Recorded localities
+IND-GEO-003,en,definition,Number of inhabited places recorded in the commune.
+IND-GEO-003,en,methode_calcul,Count of GeoNames localities attached to the commune by point-in-polygon.
+IND-GEO-003,en,comparabilite,"Caution: reflects the recording effort of GeoNames, not settlement reality alone."
+IND-GEO-003,en,limites_connues,Small localities may be missing; 1.3 % of points are attached by proximity.
+IND-GEO-003,en,unite,count
+IND-GEO-003,en,sens_interpretation,A high value is not a merit: it also reflects better documentary coverage.
+IND-GEO-003,es,nom,Localidades registradas
+IND-GEO-003,es,definition,Número de lugares habitados registrados en la comuna.
+IND-GEO-003,es,methode_calcul,Recuento de localidades GeoNames vinculadas a la comuna mediante punto-en-polígono.
+IND-GEO-003,es,comparabilite,"Precaución: refleja el esfuerzo de registro de GeoNames, no solo la realidad del poblamiento."
+IND-GEO-003,es,limites_connues,"Pueden faltar pequeñas localidades; el 1,3 % de los puntos se vinculan por proximidad."
+IND-GEO-003,es,unite,número
+IND-GEO-003,es,sens_interpretation,Un valor alto no es un mérito: refleja también una mejor cobertura documental.
+IND-GEO-004,ht,nom,Dansite lokalite
+IND-GEO-004,ht,definition,Kantite lokalite ki resanse pou chak 100 km².
+IND-GEO-004,ht,methode_calcul,IND-GEO-003 ÷ IND-GEO-001 × 100.
+IND-GEO-004,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-GEO-004,ht,limites_connues,Li pote menm limit ak IND-GEO-003.
+IND-GEO-004,ht,unite,lokalite / 100 km²
+IND-GEO-004,ht,sens_interpretation,"Yon apwòch sou kote moun rete, se pa yon dansite popilasyon."
+IND-GEO-004,en,nom,Density of localities
+IND-GEO-004,en,definition,Number of recorded localities per 100 km².
+IND-GEO-004,en,methode_calcul,IND-GEO-003 ÷ IND-GEO-001 × 100.
+IND-GEO-004,en,comparabilite,Comparable between communes of the same reference year.
+IND-GEO-004,en,limites_connues,Inherits the limitations of IND-GEO-003.
+IND-GEO-004,en,unite,localities / 100 km²
+IND-GEO-004,en,sens_interpretation,"An approximation of settlement, not a population density."
+IND-GEO-004,es,nom,Densidad de localidades
+IND-GEO-004,es,definition,Número de localidades registradas por 100 km².
+IND-GEO-004,es,methode_calcul,IND-GEO-003 ÷ IND-GEO-001 × 100.
+IND-GEO-004,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-GEO-004,es,limites_connues,Hereda las limitaciones de IND-GEO-003.
+IND-GEO-004,es,unite,localidades / 100 km²
+IND-GEO-004,es,sens_interpretation,"Una aproximación del poblamiento, no una densidad de población."
+IND-SAN-001,ht,nom,Etablisman sante ki resanse
+IND-SAN-001,ht,definition,Kantite etablisman sante k ap fonksyone yo resanse.
+IND-SAN-001,ht,methode_calcul,"Konte nan baz referans òganizasyon yo, kategori Sante."
+IND-SAN-001,ht,comparabilite,PA konparab ant komin ki deyò zòn kouvri a : sous la kouvri sèlman 14 komin sou 140.
+IND-SAN-001,ht,limites_connues,"KOUVÈTI PASYÈL — 14 komin (Latibonit, Sant, Nò, Lwès). Yon komin ki absan pa gen zewo etablisman : li pa kouvri, se poutèt sa estati a se N. Resansman 2023."
+IND-SAN-001,ht,unite,kantite
+IND-SAN-001,ht,sens_interpretation,"Pi wo = òf la pi dans, men fòk ou rapòte l ak popilasyon an."
+IND-SAN-001,en,nom,Recorded health facilities
+IND-SAN-001,en,definition,Number of operating health facilities recorded.
+IND-SAN-001,en,methode_calcul,"Count in the organisations referential, Health category."
+IND-SAN-001,en,comparabilite,NOT comparable between communes outside the covered area: the source covers only 14 communes out of 140.
+IND-SAN-001,en,limites_connues,"PARTIAL COVERAGE — 14 communes (Artibonite, Centre, Nord, Ouest). An absent commune does not have zero facilities: it is not covered, hence status N. 2023 census."
+IND-SAN-001,en,unite,count
+IND-SAN-001,en,sens_interpretation,"Higher = denser provision, to be related to the population."
+IND-SAN-001,es,nom,Establecimientos de salud registrados
+IND-SAN-001,es,definition,Número de establecimientos de salud en funcionamiento registrados.
+IND-SAN-001,es,methode_calcul,"Recuento en el referencial de organizaciones, categoría Salud."
+IND-SAN-001,es,comparabilite,NO comparable entre comunas fuera de la zona cubierta: la fuente solo cubre 14 comunas de 140.
+IND-SAN-001,es,limites_connues,"COBERTURA PARCIAL — 14 comunas (Artibonite, Centre, Nord, Ouest). Una comuna ausente no tiene cero establecimientos: no está cubierta, de ahí el estado N. Censo de 2023."
+IND-SAN-001,es,unite,número
+IND-SAN-001,es,sens_interpretation,"Más alto = oferta más densa, a relacionar con la población."
+IND-SAN-002,ht,nom,Pòsyon etablisman sante leta
+IND-SAN-002,ht,definition,Pòsyon etablisman sante ki gen estati leta.
+IND-SAN-002,ht,methode_calcul,Etablisman ki gen estati « Public » ÷ total ki resanse × 100.
+IND-SAN-002,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-SAN-002,ht,limites_connues,Estati « Mikst » pa konte kòm leta.
+IND-SAN-002,ht,unite,%
+IND-SAN-002,ht,sens_interpretation,"Net : li dekri jan òf la òganize, se pa kalite l."
+IND-SAN-002,en,nom,Share of public health facilities
+IND-SAN-002,en,definition,Share of health facilities with public status.
+IND-SAN-002,en,methode_calcul,Facilities with “Public” status ÷ total recorded × 100.
+IND-SAN-002,en,comparabilite,Comparable between communes of the same reference year.
+IND-SAN-002,en,limites_connues,“Mixed” status is counted outside public.
+IND-SAN-002,en,unite,%
+IND-SAN-002,en,sens_interpretation,"Neutral: describes the structure of provision, not its quality."
+IND-SAN-002,es,nom,Proporción de establecimientos de salud públicos
+IND-SAN-002,es,definition,Proporción de establecimientos de salud de estatus público.
+IND-SAN-002,es,methode_calcul,Establecimientos con estatus «Público» ÷ total registrado × 100.
+IND-SAN-002,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-SAN-002,es,limites_connues,El estatus «Mixto» se cuenta fuera de público.
+IND-SAN-002,es,unite,%
+IND-SAN-002,es,sens_interpretation,"Neutro: describe la estructura de la oferta, no su calidad."
+IND-SAN-003,ht,nom,Konplè jeyokodaj sante a
+IND-SAN-003,ht,definition,Pòsyon etablisman sante kote sous la bay kowòdone.
+IND-SAN-003,ht,methode_calcul,Etablisman ki jeyokode ÷ total ki resanse × 100.
+IND-SAN-003,ht,comparabilite,Konparab ant komin.
+IND-SAN-003,ht,limites_connues,"Li mezire kalite SOUS la, se pa kalite sistèm sante a."
+IND-SAN-003,ht,unite,%
+IND-SAN-003,ht,sens_interpretation,Yon valè ki ba vle di nenpòt analiz espasyal sou sante nan komin sa a ap frajil.
+IND-SAN-003,en,nom,Health geocoding completeness
+IND-SAN-003,en,definition,Share of health facilities for which the source provides coordinates.
+IND-SAN-003,en,methode_calcul,Geocoded facilities ÷ total recorded × 100.
+IND-SAN-003,en,comparabilite,Comparable between communes.
+IND-SAN-003,en,limites_connues,"Measures the quality of the SOURCE, not of the health system."
+IND-SAN-003,en,unite,%
+IND-SAN-003,en,sens_interpretation,A low value flags a commune where any spatial health analysis will be fragile.
+IND-SAN-003,es,nom,Completitud de la geocodificación sanitaria
+IND-SAN-003,es,definition,Proporción de establecimientos de salud para los que la fuente aporta coordenadas.
+IND-SAN-003,es,methode_calcul,Establecimientos geocodificados ÷ total registrado × 100.
+IND-SAN-003,es,comparabilite,Comparable entre comunas.
+IND-SAN-003,es,limites_connues,"Mide la calidad de la FUENTE, no la del sistema de salud."
+IND-SAN-003,es,unite,%
+IND-SAN-003,es,sens_interpretation,Un valor bajo señala una comuna donde todo análisis espacial sanitario será frágil.
+IND-SAN-004,ht,nom,Etablisman sante leta
+IND-SAN-004,ht,definition,Kantite etablisman sante ki gen estati leta.
+IND-SAN-004,ht,methode_calcul,Konte etablisman kote estati sous la se « Public ».
+IND-SAN-004,ht,comparabilite,Menm limit kouvèti ak etablisman ki resanse yo.
+IND-SAN-004,ht,limites_connues,Estati « Mikst » pa konte kòm leta.
+IND-SAN-004,ht,unite,kantite
+IND-SAN-004,ht,sens_interpretation,Se numeratè pòsyon etablisman leta yo ; nou pibliye l apa pou nenpòt moun ka rekalkile to a nan nenpòt nivo.
+IND-SAN-004,en,nom,Public health facilities
+IND-SAN-004,en,definition,Number of health facilities with public status.
+IND-SAN-004,en,methode_calcul,Count of facilities whose source status is “Public”.
+IND-SAN-004,en,comparabilite,Same coverage limitations as recorded facilities.
+IND-SAN-004,en,limites_connues,“Mixed” status is not counted as public.
+IND-SAN-004,en,unite,count
+IND-SAN-004,en,sens_interpretation,Numerator of the share of public facilities; published separately so that this rate can be recomputed at any level.
+IND-SAN-004,es,nom,Establecimientos de salud públicos
+IND-SAN-004,es,definition,Número de establecimientos de salud de estatus público.
+IND-SAN-004,es,methode_calcul,Recuento de establecimientos cuyo estatus de origen es «Público».
+IND-SAN-004,es,comparabilite,Mismas limitaciones de cobertura que los establecimientos registrados.
+IND-SAN-004,es,limites_connues,El estatus «Mixto» no se cuenta como público.
+IND-SAN-004,es,unite,número
+IND-SAN-004,es,sens_interpretation,Numerador de la proporción de establecimientos públicos; se publica por separado para que esta tasa pueda recalcularse a cualquier nivel.
+IND-SAN-005,ht,nom,Etablisman sante ki jeyokode
+IND-SAN-005,ht,definition,Kantite etablisman sante kote sous la bay kowòdone.
+IND-SAN-005,ht,methode_calcul,Konte etablisman ki gen latitid ak lonjitid ranpli.
+IND-SAN-005,ht,comparabilite,Menm limit kouvèti ak etablisman ki resanse yo.
+IND-SAN-005,ht,limites_connues,"Li mezire kalite sous la, se pa kalite sistèm sante a."
+IND-SAN-005,ht,unite,kantite
+IND-SAN-005,ht,sens_interpretation,Se numeratè konplè jeyokodaj la.
+IND-SAN-005,en,nom,Geocoded health facilities
+IND-SAN-005,en,definition,Number of health facilities for which the source provides coordinates.
+IND-SAN-005,en,methode_calcul,Count of facilities with latitude and longitude filled in.
+IND-SAN-005,en,comparabilite,Same coverage limitations as recorded facilities.
+IND-SAN-005,en,limites_connues,"Measures the quality of the source, not of the health system."
+IND-SAN-005,en,unite,count
+IND-SAN-005,en,sens_interpretation,Numerator of geocoding completeness.
+IND-SAN-005,es,nom,Establecimientos de salud geocodificados
+IND-SAN-005,es,definition,Número de establecimientos de salud para los que la fuente aporta coordenadas.
+IND-SAN-005,es,methode_calcul,Recuento de establecimientos con latitud y longitud informadas.
+IND-SAN-005,es,comparabilite,Mismas limitaciones de cobertura que los establecimientos registrados.
+IND-SAN-005,es,limites_connues,"Mide la calidad de la fuente, no la del sistema de salud."
+IND-SAN-005,es,unite,número
+IND-SAN-005,es,sens_interpretation,Numerador de la completitud de la geocodificación.
+IND-EDU-003,ht,nom,Lekòl leta
+IND-EDU-003,ht,definition,Kantite etablisman lekòl ki gen estati leta.
+IND-EDU-003,ht,methode_calcul,Konte apre nou fin mete libèle estati yo daplon.
+IND-EDU-003,ht,comparabilite,Menm limit kouvèti ak lekòl ki resanse yo.
+IND-EDU-003,ht,limites_connues,Li pote kouvèti pasyèl resansman lekòl la.
+IND-EDU-003,ht,unite,kantite
+IND-EDU-003,ht,sens_interpretation,Se numeratè pòsyon lekòl leta yo.
+IND-EDU-003,en,nom,Public schools
+IND-EDU-003,en,definition,Number of schools with public status.
+IND-EDU-003,en,methode_calcul,Count after harmonising the status labels.
+IND-EDU-003,en,comparabilite,Same coverage limitations as recorded schools.
+IND-EDU-003,en,limites_connues,Inherits the partial coverage of the school census.
+IND-EDU-003,en,unite,count
+IND-EDU-003,en,sens_interpretation,Numerator of the share of public schools.
+IND-EDU-003,es,nom,Escuelas públicas
+IND-EDU-003,es,definition,Número de centros escolares de estatus público.
+IND-EDU-003,es,methode_calcul,Recuento tras armonizar las etiquetas de estatus.
+IND-EDU-003,es,comparabilite,Mismas limitaciones de cobertura que las escuelas registradas.
+IND-EDU-003,es,limites_connues,Hereda la cobertura parcial del censo escolar.
+IND-EDU-003,es,unite,número
+IND-EDU-003,es,sens_interpretation,Numerador de la proporción de escuelas públicas.
+IND-EDU-001,ht,nom,Lekòl ki resanse
+IND-EDU-001,ht,definition,Kantite etablisman lekòl ki resanse.
+IND-EDU-001,ht,methode_calcul,"Konte nan baz referans òganizasyon yo, kategori Edikasyon."
+IND-EDU-001,ht,comparabilite,"PA konparab ant depatman : sous la kouvri sèlman Sid, Lwès, Nip ak Grandans."
+IND-EDU-001,ht,limites_connues,"KOUVÈTI PASYÈL — 4 depatman sou 10, 49 komin sou 140. Yon valè zewo vle di « pa resanse », li pa janm vle di « pa gen lekòl »."
+IND-EDU-001,ht,unite,kantite
+IND-EDU-001,ht,sens_interpretation,Li sèlman anndan zòn ki kouvri a.
+IND-EDU-001,en,nom,Recorded schools
+IND-EDU-001,en,definition,Number of schools recorded.
+IND-EDU-001,en,methode_calcul,"Count in the organisations referential, Education category."
+IND-EDU-001,en,comparabilite,"NOT comparable between departments: the source covers only Sud, Ouest, Nippes and Grande'Anse."
+IND-EDU-001,en,limites_connues,"PARTIAL COVERAGE — 4 departments out of 10, 49 communes out of 140. A zero value means “not recorded”, never “no schools”."
+IND-EDU-001,en,unite,count
+IND-EDU-001,en,sens_interpretation,To be read only within the covered area.
+IND-EDU-001,es,nom,Escuelas registradas
+IND-EDU-001,es,definition,Número de centros escolares registrados.
+IND-EDU-001,es,methode_calcul,"Recuento en el referencial de organizaciones, categoría Educación."
+IND-EDU-001,es,comparabilite,"NO comparable entre departamentos: la fuente solo cubre Sud, Ouest, Nippes y Grande'Anse."
+IND-EDU-001,es,limites_connues,"COBERTURA PARCIAL — 4 departamentos de 10, 49 comunas de 140. Un valor cero significa «no registrado», nunca «ninguna escuela»."
+IND-EDU-001,es,unite,número
+IND-EDU-001,es,sens_interpretation,Léase únicamente dentro de la zona cubierta.
+IND-EDU-002,ht,nom,Pòsyon lekòl leta
+IND-EDU-002,ht,definition,Pòsyon lekòl ki gen estati leta pami lekòl ki resanse yo.
+IND-EDU-002,ht,methode_calcul,"Lekòl « Public » ÷ total ki resanse × 100, apre nou mete libèle yo daplon (PUBLIQUE / Public → Public)."
+IND-EDU-002,ht,comparabilite,Sèlman anndan zòn ki kouvri a.
+IND-EDU-002,ht,limites_connues,Li pote kouvèti pasyèl IND-EDU-001 la.
+IND-EDU-002,ht,unite,%
+IND-EDU-002,ht,sens_interpretation,Yon pòsyon ki fèb montre pwa sektè ki pa leta a.
+IND-EDU-002,en,nom,Share of public schools
+IND-EDU-002,en,definition,Share of public schools among recorded schools.
+IND-EDU-002,en,methode_calcul,"“Public” schools ÷ total recorded × 100, after harmonising the labels (PUBLIQUE / Public → Public)."
+IND-EDU-002,en,comparabilite,Only within the covered area.
+IND-EDU-002,en,limites_connues,Inherits the partial coverage of IND-EDU-001.
+IND-EDU-002,en,unite,%
+IND-EDU-002,en,sens_interpretation,A low share reflects the weight of the non-public sector.
+IND-EDU-002,es,nom,Proporción de escuelas públicas
+IND-EDU-002,es,definition,Proporción de escuelas públicas entre las escuelas registradas.
+IND-EDU-002,es,methode_calcul,"Escuelas «Public» ÷ total registrado × 100, tras armonizar las etiquetas (PUBLIQUE / Public → Public)."
+IND-EDU-002,es,comparabilite,Únicamente dentro de la zona cubierta.
+IND-EDU-002,es,limites_connues,Hereda la cobertura parcial de IND-EDU-001.
+IND-EDU-002,es,unite,%
+IND-EDU-002,es,sens_interpretation,Una proporción baja refleja el peso del sector no público.
+IND-MAR-001,ht,nom,Mache yo swiv pou pri
+IND-MAR-001,ht,definition,Kantite mache ki nan dispozitif swivi pri a.
+IND-MAR-001,ht,methode_calcul,"Konte nan baz referans òganizasyon yo, kategori Mache."
+IND-MAR-001,ht,comparabilite,Konparab nan tan si dispozitif swivi a pa chanje.
+IND-MAR-001,ht,limites_connues,"Li pa resanse tout mache peyi a, sèlman sa yo swiv yo."
+IND-MAR-001,ht,unite,kantite
+IND-MAR-001,ht,sens_interpretation,"Li mezire kouvèti swivi a, se pa aktivite komès la."
+IND-MAR-001,en,nom,Markets monitored for prices
+IND-MAR-001,en,definition,Number of markets included in the price monitoring system.
+IND-MAR-001,en,methode_calcul,"Count in the organisations referential, Market category."
+IND-MAR-001,en,comparabilite,Comparable over time if the monitoring system does not change.
+IND-MAR-001,en,limites_connues,"Does not record every market in the country, only those monitored."
+IND-MAR-001,en,unite,count
+IND-MAR-001,en,sens_interpretation,"Measures the coverage of the monitoring system, not commercial activity."
+IND-MAR-001,es,nom,Mercados con seguimiento de precios
+IND-MAR-001,es,definition,Número de mercados incluidos en el dispositivo de seguimiento de precios.
+IND-MAR-001,es,methode_calcul,"Recuento en el referencial de organizaciones, categoría Mercado."
+IND-MAR-001,es,comparabilite,Comparable en el tiempo si el dispositivo de seguimiento no cambia.
+IND-MAR-001,es,limites_connues,"No registra todos los mercados del país, solo los que tienen seguimiento."
+IND-MAR-001,es,unite,número
+IND-MAR-001,es,sens_interpretation,"Mide la cobertura del seguimiento, no la actividad comercial."
+IND-QUA-001,ht,nom,Nòt konplè administratif
+IND-QUA-001,ht,definition,Pòsyon dimansyon backbone yo ki dokimante pou komin nan.
+IND-QUA-001,ht,methode_calcul,"Senk dimansyon teste : sipèfisi konnen, lokalite resanse, omwen yon etablisman sante resanse, omwen yon lekòl resanse, omwen yon mache swiv. Nòt = dimansyon ki ranpli ÷ 5 × 100."
+IND-QUA-001,ht,comparabilite,Konparab ant komin nan menm vèsyon backbone la.
+IND-QUA-001,ht,limites_connues,"Li mezire sa NOU konnen sou komin nan, se pa reyalite komin nan. Yon nòt ki fèb montre yon zòn nou pa dokimante."
+IND-QUA-001,ht,unite,%
+IND-QUA-001,ht,sens_interpretation,"Wo = komin nan byen dokimante. Ba = nenpòt analiz la ap frajil, e sa se yon enfòmasyon nan tèt li."
+IND-QUA-001,en,nom,Administrative completeness score
+IND-QUA-001,en,definition,Share of backbone dimensions documented for the commune.
+IND-QUA-001,en,methode_calcul,"Five dimensions tested: area known, localities recorded, at least one health facility recorded, at least one school recorded, at least one market monitored. Score = filled dimensions ÷ 5 × 100."
+IND-QUA-001,en,comparabilite,Comparable between communes of the same backbone version.
+IND-QUA-001,en,limites_connues,"Measures what WE know about the commune, not the reality of the commune. A low score marks a documentary blind spot."
+IND-QUA-001,en,unite,%
+IND-QUA-001,en,sens_interpretation,"High = well-documented commune. Low = any analysis there will be fragile, and that is information in itself."
+IND-QUA-001,es,nom,Índice de completitud administrativa
+IND-QUA-001,es,definition,Proporción de las dimensiones del backbone documentadas para la comuna.
+IND-QUA-001,es,methode_calcul,"Cinco dimensiones evaluadas: superficie conocida, localidades registradas, al menos un establecimiento de salud registrado, al menos una escuela registrada, al menos un mercado con seguimiento. Índice = dimensiones informadas ÷ 5 × 100."
+IND-QUA-001,es,comparabilite,Comparable entre comunas de la misma versión del backbone.
+IND-QUA-001,es,limites_connues,"Mide lo que NOSOTROS sabemos de la comuna, no la realidad de la comuna. Un índice bajo señala un punto ciego documental."
+IND-QUA-001,es,unite,%
+IND-QUA-001,es,sens_interpretation,"Alto = comuna bien documentada. Bajo = todo análisis será frágil allí, y eso ya es información."
+IND-SAN-010,ht,nom,Etablisman sante pou chak 10 000 moun
+IND-SAN-010,ht,definition,Kantite etablisman sante rapòte ak popilasyon an.
+IND-SAN-010,ht,methode_calcul,IND-SAN-001 ÷ popilasyon × 10 000.
+IND-SAN-010,ht,comparabilite,L ap konparab ant komin lè popilasyon an fin antre.
+IND-SAN-010,ht,limites_connues,Se denominatè a ki deside tout : yon popilasyon estime bay yon endikatè estime (estati E).
+IND-SAN-010,ht,unite,etablisman / 10 000 moun
+IND-SAN-010,ht,sens_interpretation,Wo = òf la dans parapò ak popilasyon an.
+IND-SAN-010,en,nom,"Health facilities per 10,000 inhabitants"
+IND-SAN-010,en,definition,Number of health facilities related to the population.
+IND-SAN-010,en,methode_calcul,"IND-SAN-001 ÷ population × 10,000."
+IND-SAN-010,en,comparabilite,Will be comparable between communes once population is integrated.
+IND-SAN-010,en,limites_connues,The denominator determines everything: an estimated population produces an estimated indicator (status E).
+IND-SAN-010,en,unite,"facilities / 10,000 inhab."
+IND-SAN-010,en,sens_interpretation,High = dense provision relative to the population.
+IND-SAN-010,es,nom,Establecimientos de salud por 10 000 habitantes
+IND-SAN-010,es,definition,Número de establecimientos de salud en relación con la población.
+IND-SAN-010,es,methode_calcul,IND-SAN-001 ÷ población × 10 000.
+IND-SAN-010,es,comparabilite,Será comparable entre comunas una vez integrada la población.
+IND-SAN-010,es,limites_connues,El denominador lo determina todo: una población estimada produce un indicador estimado (estado E).
+IND-SAN-010,es,unite,establecimientos / 10 000 hab.
+IND-SAN-010,es,sens_interpretation,Alto = oferta densa en relación con la población.
+IND-EDU-010,ht,nom,Lekòl pou chak 10 000 timoun
+IND-EDU-010,ht,definition,Kantite lekòl rapòte ak popilasyon ki nan laj lekòl la.
+IND-EDU-010,ht,methode_calcul,IND-EDU-001 ÷ popilasyon 5-18 an × 10 000.
+IND-EDU-010,ht,comparabilite,Pa konparab toutotan rejis lekòl la rete pasyèl.
+IND-EDU-010,ht,limites_connues,Li kimile kouvèti pasyèl lekòl yo ak absans popilasyon pa laj.
+IND-EDU-010,ht,unite,lekòl / 10 000 timoun
+IND-EDU-010,ht,sens_interpretation,Wo = òf lekòl la dans.
+IND-EDU-010,en,nom,"Schools per 10,000 children"
+IND-EDU-010,en,definition,Number of schools related to the school-age population.
+IND-EDU-010,en,methode_calcul,"IND-EDU-001 ÷ population aged 5-18 × 10,000."
+IND-EDU-010,en,comparabilite,Not comparable while the school register remains partial.
+IND-EDU-010,en,limites_connues,Compounds the partial coverage of schools and the absence of population by age.
+IND-EDU-010,en,unite,"schools / 10,000 children"
+IND-EDU-010,en,sens_interpretation,High = dense school provision.
+IND-EDU-010,es,nom,Escuelas por 10 000 niños
+IND-EDU-010,es,definition,Número de escuelas en relación con la población en edad escolar.
+IND-EDU-010,es,methode_calcul,IND-EDU-001 ÷ población de 5 a 18 años × 10 000.
+IND-EDU-010,es,comparabilite,No comparable mientras el registro escolar siga siendo parcial.
+IND-EDU-010,es,limites_connues,Acumula la cobertura parcial de las escuelas y la ausencia de población por edad.
+IND-EDU-010,es,unite,escuelas / 10 000 niños
+IND-EDU-010,es,sens_interpretation,Alto = oferta escolar densa.
+IND-BUD-001,ht,nom,Depans piblik pou chak moun
+IND-BUD-001,ht,definition,Depans piblik yo egzekite rapòte ak popilasyon an.
+IND-BUD-001,ht,methode_calcul,Depans egzekite nan ekzèsis la ÷ popilasyon. Se baz referans tan an ki bay ekzèsis fiskal la (1ye oktòb – 30 septanm) : pa janm rapòte l ak yon ane sivil.
+IND-BUD-001,ht,comparabilite,Fòk ou korije enflasyon an pou konpare de ekzèsis.
+IND-BUD-001,ht,limites_connues,Yon depans yo vote pa yon depans yo egzekite.
+IND-BUD-001,ht,unite,HTG / moun
+IND-BUD-001,ht,sens_interpretation,"Pou li l byen, gade tou ki jan depans lan òganize."
+IND-BUD-001,en,nom,Public expenditure per inhabitant
+IND-BUD-001,en,definition,Executed public expenditure related to the population.
+IND-BUD-001,en,methode_calcul,Executed expenditure for the fiscal year ÷ population. The fiscal year (1 October – 30 September) comes from the time referential: never relate it to a calendar year.
+IND-BUD-001,en,comparabilite,Requires correcting for inflation to compare two fiscal years.
+IND-BUD-001,en,limites_connues,A voted expenditure is not an executed expenditure.
+IND-BUD-001,en,unite,HTG / inhabitant
+IND-BUD-001,en,sens_interpretation,To be read together with the structure of the expenditure.
+IND-BUD-001,es,nom,Gasto público por habitante
+IND-BUD-001,es,definition,Gasto público ejecutado en relación con la población.
+IND-BUD-001,es,methode_calcul,Gasto ejecutado del ejercicio ÷ población. El ejercicio fiscal (1 de octubre – 30 de septiembre) lo aporta el referencial tiempo: nunca referirlo a un año civil.
+IND-BUD-001,es,comparabilite,Exige corregir la inflación para comparar dos ejercicios.
+IND-BUD-001,es,limites_connues,Un gasto aprobado no es un gasto ejecutado.
+IND-BUD-001,es,unite,HTG / habitante
+IND-BUD-001,es,sens_interpretation,Debe leerse junto con la estructura del gasto.
+IND-ACC-001,ht,nom,Tan pou rive nan sant sante ki pi pre a
+IND-ACC-001,ht,definition,Tan medyàn pou soti nan kote moun rete yo rive nan etablisman sante ki pi pre a.
+IND-ACC-001,ht,methode_calcul,"Kalkil izokwòn sou rezo wout la depi chak lokalite, apre sa medyàn pondere pa popilasyon an."
+IND-ACC-001,ht,comparabilite,Konparab si rezo a ak metòd la pa chanje.
+IND-ACC-001,ht,limites_connues,Rezo OSM la anba lisans ODbL : li pa konpatib ak yon lisans Atmart pwopriyetè san pataj alidantik.
+IND-ACC-001,ht,unite,minit
+IND-ACC-001,ht,sens_interpretation,"Ba = sèvis la aksesib. Se endikatè ki pi difisil pou repwodui, se poutèt sa li pi diferansyan."
+IND-ACC-001,en,nom,Travel time to the nearest health centre
+IND-ACC-001,en,definition,Median travel time from inhabited localities to the nearest health facility.
+IND-ACC-001,en,methode_calcul,"Isochrone computation on the road network from each locality, then a population-weighted median."
+IND-ACC-001,en,comparabilite,Comparable if the network and the method do not change.
+IND-ACC-001,en,limites_connues,The OSM network is under ODbL: incompatible with a proprietary Atmart licence without share-alike.
+IND-ACC-001,en,unite,minutes
+IND-ACC-001,en,sens_interpretation,"Low = accessible service. This is the hardest indicator to reproduce, hence the most differentiating."
+IND-ACC-001,es,nom,Tiempo de acceso al centro de salud más cercano
+IND-ACC-001,es,definition,Tiempo de trayecto mediano desde las localidades habitadas hasta el establecimiento de salud más cercano.
+IND-ACC-001,es,methode_calcul,"Cálculo de isócronas sobre la red viaria desde cada localidad, y después mediana ponderada por la población."
+IND-ACC-001,es,comparabilite,Comparable si la red y el método no cambian.
+IND-ACC-001,es,limites_connues,La red OSM está bajo ODbL: incompatible con una licencia Atmart propietaria sin compartir-igual.
+IND-ACC-001,es,unite,minutos
+IND-ACC-001,es,sens_interpretation,Bajo = servicio accesible. Es el indicador más difícil de reproducir y por tanto el más diferenciador.
+IND-PRX-001,ht,nom,Volatilite pri yo pa mache
+IND-PRX-001,ht,definition,Dispèsyon pri reyèl yon pwodui sou yon mache.
+IND-PRX-001,ht,methode_calcul,"Ekatip ÷ mwayèn pri reyèl mansyèl la sou 12 mwa k ap woule, apre korije enflasyon."
+IND-PRX-001,ht,comparabilite,Konparab ant mache si inite yo mete daplon.
+IND-PRX-001,ht,limites_connues,"Inite mezi lokal yo (mamit, gòdè) chanje de yon mache a yon lòt : san yo pa mete daplon, endikatè a fo."
+IND-PRX-001,ht,unite,koyefisyan varyasyon (%)
+IND-PRX-001,ht,sens_interpretation,"Wo = mache a pa estab, se yon siyal alèt sou manje."
+IND-PRX-001,en,nom,Price volatility by market
+IND-PRX-001,en,definition,Dispersion of the real price of a product on a given market.
+IND-PRX-001,en,methode_calcul,"Standard deviation ÷ mean of the monthly real price over a rolling 12 months, after correcting for inflation."
+IND-PRX-001,en,comparabilite,Comparable between markets if the units are harmonised.
+IND-PRX-001,en,limites_connues,"Local units of measure (marmite, gode) vary from one market to another: without harmonisation, the indicator is wrong."
+IND-PRX-001,en,unite,coefficient of variation (%)
+IND-PRX-001,en,sens_interpretation,"High = unstable market, a food-security warning signal."
+IND-PRX-001,es,nom,Volatilidad de precios por mercado
+IND-PRX-001,es,definition,Dispersión del precio real de un producto en un mercado dado.
+IND-PRX-001,es,methode_calcul,"Desviación típica ÷ media del precio real mensual sobre 12 meses móviles, tras corregir la inflación."
+IND-PRX-001,es,comparabilite,Comparable entre mercados si las unidades están armonizadas.
+IND-PRX-001,es,limites_connues,"Las unidades de medida locales (marmite, gode) varían de un mercado a otro: sin armonización, el indicador es falso."
+IND-PRX-001,es,unite,coeficiente de variación (%)
+IND-PRX-001,es,sens_interpretation,"Alto = mercado inestable, señal de alerta alimentaria."
+IND-POP-001,ht,nom,Popilasyon
+IND-POP-001,ht,definition,Popilasyon ki estime ap viv nan antite teritoryal la.
+IND-POP-001,ht,methode_calcul,"Nou pran estimasyon ofisyèl yo ; si pa genyen, yon pwojeksyon dokimante depi dènye resansman an."
+IND-POP-001,ht,comparabilite,Gen anpil chans metòd la kase ant resansman 2003 la ak dènye estimasyon yo — fòk nou make sa.
+IND-POP-001,ht,limites_connues,"Pa gen senkyèm resansman : nenpòt valè resan se yon estimasyon, estati E, li pa janm O."
+IND-POP-001,ht,unite,moun
+IND-POP-001,ht,sens_interpretation,Se denominatè pifò lòt endikatè yo : kalite pa l la deside kalite pa yo.
+IND-POP-001,en,nom,Population
+IND-POP-001,en,definition,Estimated resident population of the territorial entity.
+IND-POP-001,en,methode_calcul,"Official estimates are taken up; failing that, a documented projection from the last census."
+IND-POP-001,en,comparabilite,A methodological break is likely between the 2003 census and recent estimates — to be flagged.
+IND-POP-001,en,limites_connues,"No fifth census: any recent value is an estimate, status E, never O."
+IND-POP-001,en,unite,inhabitants
+IND-POP-001,en,sens_interpretation,Denominator of most other indicators: its quality conditions theirs.
+IND-POP-001,es,nom,Población
+IND-POP-001,es,definition,Población residente estimada de la entidad territorial.
+IND-POP-001,es,methode_calcul,"Se retoman las estimaciones oficiales; en su defecto, una proyección documentada desde el último censo."
+IND-POP-001,es,comparabilite,Es probable una ruptura metodológica entre el censo de 2003 y las estimaciones recientes — debe señalarse.
+IND-POP-001,es,limites_connues,"No hay quinto censo: todo valor reciente es una estimación, estado E, nunca O."
+IND-POP-001,es,unite,habitantes
+IND-POP-001,es,sens_interpretation,Denominador de la mayoría de los demás indicadores: su calidad condiciona la de ellos.

@@ -43,6 +43,7 @@ footer a,main a.lien{color:#1550b8}
 .btn{display:inline-block;margin-top:.6rem;padding:.7rem 1rem;background:#0e2240;color:#fff;
      border-radius:10px;text-decoration:none;min-height:48px;line-height:1.9}
 </style>
+
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-91DkGZR/4WuL2zzob8VkCEcMEuNPBeAC7T57XVeq5Cg='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -51,8 +52,24 @@ footer a,main a.lien{color:#1550b8}
 <body>
 
 <header>
-  <a href="/">Explorateur Haïti</a>
-  <p>Édition légère — texte seul, pour les connexions lentes</p>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">les données d'Atmart</small></a>
+    <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nv.expl_h">Explorateur Haïti</a></li>
+      <li><a href="couches.html" data-i18n="nv.couches_h">Couches</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Données</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">Comment ça marche <small>méthode, sources, système</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
@@ -72,14 +89,35 @@ footer a,main a.lien{color:#1550b8}
   <div id="fiche" hidden></div>
 
   <footer>
-    <p id="pied">
-      Cette page affiche les mêmes chiffres que l'Explorateur complet, sans carte ni
-      graphique. <a class="lien" href="/">Ouvrir la version complète</a> —
-      <a class="lien" href="datasets.html">télécharger les données</a>.
-    </p>
-    <p>Un produit <a href="https://atmart.ltd/">Atmart Data</a> — gratuit, sans compte,
-       sans traceur publicitaire.</p>
-  </footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">Un produit <a href="https://atmart.ltd/">Atmart Data</a> — des données sourcées, datées, vérifiables sur les 140 communes d'Haïti.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_donnees">Données</h4>
+        <ul>
+          <li><a href="couches.html" data-i18n="ft.couches">Couches</a></li>
+          <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
+          <li><a href="donnees.html" data-i18n="ft.comment">Comment ça marche</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
+          <li><a href="donnees-backbone.html" data-i18n="ft.def">Définitions &amp; méthodes</a></li>
+          <li><a href="donnees-systeme.html" data-i18n="ft.carte">La carte du système</a></li>
+          <li><a href="donnees-confiance.html" data-i18n="ft.conf">Confiance &amp; méthode</a></li>
+          <li><a href="archives.html" data-i18n="ft.arch">Archives &amp; citation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_contact">Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. L'Explorateur Haïti est gratuit, sans compte, sans traceur publicitaire — seule une mesure d'audience anonyme et agrégée existe, <a href="donnees-confiance.html#mesure">méthode publiée</a>.</div>
+  </div>
+</footer>
 </main>
 
 <script>

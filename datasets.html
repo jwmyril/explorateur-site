@@ -1114,17 +1114,49 @@
         <p class="why-note" data-i18n="ds.why_note">Le calcul est simple : nettoyer et documenter une de ces séries à la main prend deux à trois jours de travail. C'est ce que vous achetez — pas les chiffres, qui sont souvent publics, mais le temps.</p>
       </div>
       <div class="grid grid-3" id="data-grid-paid">
-
-        <div class="card" data-cat="geo">
-          <span class="tag amber" data-i18n="ds.t_prem">Premium</span>
-          <h3 data-i18n-html="ds.c4_h">Pack Géo Haïti — toutes les coordonnées GPS</h3>
-          <p data-i18n-html="ds.c4_p"><strong>570 sections communales</strong> + <strong>140 villes chefs-lieux</strong> + <strong>10 945 lieux habités</strong>, tous nommés en français <strong>et en kreyòl</strong>, avec les p-codes officiels OCHA, superficies et coordonnées WGS84. Chaque lieu habité est rattaché à sa section communale. GeoJSON des trois niveaux inclus pour Power BI et QGIS.</p>
-          <p class="price" data-i18n-html="ds.c4_pr">45 $ <small>3 CSV + 3 GeoJSON + documentation</small></p>
-          <p class="meta" data-i18n-html="ds.c4_meta">🗺 Géographie • v2 • Source : CNIGS via OCHA + GeoNames • <a href="donnees-pack-geo-haiti.html">fiche complète, provenance des noms et limites connues</a></p>
-          <a href="donnees-pack-geo-haiti.html" class="btn btn-primary" data-i18n="ds.c4_cta">Voir la fiche &amp; acheter</a>
-        </div>
-
-      </div>
+<!-- CARTES:payant — engendré par build_vitrine.py, ne pas éditer à la main -->
+<div class="card" data-cat="geo">
+  <span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
+  <h3 data-i18n-html="ds.c4_h">Pack Géo Haïti — toutes les coordonnées GPS</h3>
+  <p data-i18n-html="ds.c4_p"><strong>570 sections communales</strong> + <strong>140 villes chefs-lieux</strong> + <strong>10 945 lieux habités</strong>, tous nommés en français <strong>et en kreyòl</strong>, avec les p-codes officiels OCHA, superficies et coordonnées WGS84. Chaque lieu habité est rattaché à sa section communale. GeoJSON des trois niveaux inclus pour Power BI et QGIS.</p>
+  <p class="price" data-i18n-html="ds.c4_pr">45 $ <small>3 CSV + 3 GeoJSON + documentation</small></p>
+  <p class="meta" data-i18n-html="ds.c4_meta">🗺 Géographie • v2 • Source : CNIGS via OCHA + GeoNames • <a href="donnees-pack-geo-haiti.html">fiche complète, provenance des noms et limites connues</a></p>
+  <a href="donnees-pack-geo-haiti.html" class="btn btn-primary" data-i18n="ds.c4_cta">fiche complète, provenance des noms et limites connues</a>
+</div>
+<div class="card" data-cat="payant">
+  <span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
+  <h3 data-i18n-html="ds.prd104_h">Pack Géo — un département</h3>
+  <p data-i18n-html="ds.prd104_p">La part du Pack Géo qui concerne un seul département : sections, chefs-lieux, lieux habités et polygones. Pour qui ne travaille que sur un territoire.</p>
+  <p class="price" data-i18n-html="ds.prd104_pr">5 $</p>
+  <p class="meta" data-i18n-html="ds.prd104_meta">🗺 Géographie • Sources : CNIGS via OCHA ; GeoNames • niveau de confiance A • Licence Atmart — écrite</p>
+  <a href="donnees-pack-geo-haiti.html" class="btn btn-primary" data-i18n="ds.prd104_cta">Acheter — 5 $</a>
+</div>
+<div class="card" data-cat="transversal payant">
+  <span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
+  <h3 data-i18n-html="ds.c29_h">Classeur des 140 profils communaux</h3>
+  <p data-i18n-html="ds.c29_p">Un classeur Excel prêt à ouvrir : une fiche par commune choisie dans une liste, le tableau des <span data-mf="nombre_communes">140</span> communes, le détail avec le statut de chaque valeur, la pyramide des âges, le dictionnaire et les sources. <strong>Les données restent gratuites</strong> — ce qui se vend, c'est le montage, et ce qu'il préserve : une absence y reste vide, jamais remplie d'un zéro.</p>
+  <p class="price" data-i18n-html="ds.c29_pr">25 $ <small>XLSX • 7 feuilles • <span data-mf="nombre_absences_documentees">1 251</span> absences laissées vides</small></p>
+  <p class="meta" data-i18n-html="ds.c29_meta">📊 Transversal • assemblage des jeux publiés • licence CC BY 4.0 pour les données</p>
+  <a href="donnees-solutions.html?produit=classeur-communes#demande" class="btn btn-primary" data-i18n="ds.c29_cta">Commander le classeur — 25 $</a>
+</div>
+<div class="card" data-cat="transversal payant">
+  <span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
+  <h3 data-i18n-html="ds.c30_h">Modèle Power BI — Explorateur Haïti</h3>
+  <p data-i18n-html="ds.c30_p">Un projet Power BI (PBIP) prêt à ouvrir : 7 tables branchées sur les données publiées du site, relations posées sur les p-codes, mesures documentées avec leurs limites. <strong>Il se rafraîchit d'un clic</strong> — le jour où Atmart met à jour un fichier, vos rapports suivent. Construit et validé dans Power BI Desktop.</p>
+  <p class="price" data-i18n-html="ds.c30_pr">50 $ <small>PBIP • 7 tables • connexion requise au rafraîchissement</small></p>
+  <p class="meta" data-i18n-html="ds.c30_meta">📊 Transversal • assemblage des jeux publiés • les données restent sous leurs licences</p>
+  <a href="https://payhip.com/b/XSAdi" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.c30_cta">Acheter — 50 $</a>
+</div>
+<div class="card" data-cat="geographie payant">
+  <span class="tag tag-paid" data-i18n="ds.t_paid">Payant</span>
+  <h3 data-i18n-html="ds.c31_h">Modèle QGIS — Explorateur Haïti</h3>
+  <p data-i18n-html="ds.c31_p">Un projet QGIS prêt à ouvrir : communes et départements, bassins versants nommés, zones inondables, points d'eau fonctionnels et en panne, stations-service et finance — couches distantes stylées, chargées depuis le site. Construit et validé dans QGIS.</p>
+  <p class="price" data-i18n-html="ds.c31_pr">50 $ <small>QGZ + script • 7 couches • connexion requise</small></p>
+  <p class="meta" data-i18n-html="ds.c31_meta">🗺 Géographie • assemblage des jeux publiés • les données restent sous leurs licences</p>
+  <a href="https://payhip.com/b/DBirg" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.c31_cta">Acheter — 50 $</a>
+</div>
+<!-- /CARTES:payant -->
+</div>
     
 
 <div class="card" data-cat="geographie payant">
@@ -1169,41 +1201,193 @@
         <p data-i18n="ds.free_p">Téléchargement immédiat, sans compte et sans e-mail. Chaque fichier arrive avec sa documentation. Licence CC BY 4.0 : citez la source, et c'est à vous.</p>
       </div>
       <div class="grid grid-3" id="data-grid-free">
-
-        <div class="card" data-cat="economie gratuit">
-          <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-          <h3 data-i18n="ds.c2_h">Transferts de la diaspora vers Haïti (2000–2024)</h3>
-          <p data-i18n="ds.c2_p">Ce que la diaspora envoie chaque année, en dollars et en part du PIB. Le sommet est atteint en 2020 à 22,45 % du PIB ; en 2024, 4,1 milliards de dollars, soit 16,3 %. Source : Banque mondiale.</p>
-          <p class="price" data-i18n-html="ds.c2_pr">0 $ <small>CSV • 26 lignes • 25 années renseignées</small></p>
-          <p class="meta" data-i18n-html="ds.c2_meta">💰 Économie • Haïti • Niveau de confiance A • <a href="data/LISEZMOI_transferts_diaspora.md">documentation</a></p>
-          <a href="data/transferts_diaspora_haiti_2000_2025.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
-        </div>
-
-        <div class="card" data-cat="geo gratuit">
-          <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-          <h3 data-i18n="ds.c11_h">Échantillon — sections communales d'Haïti</h3>
-          <p data-i18n="ds.c11_p">Dix sections communales avec p-codes OCHA, superficie et coordonnées GPS : exactement la structure du Pack Géo, pour juger avant d'acheter.</p>
-          <p class="price" data-i18n-html="ds.c11_pr">0 $ <small>CSV • 10 lignes • 13 colonnes</small></p>
-          <p class="meta" data-i18n-html="ds.c11_meta">🗺 Géographie • Extrait du <a href="donnees-pack-geo-haiti.html">Pack Géo Haïti</a></p>
-          <a href="data/ECHANTILLON_haiti_sections_gps.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
-        </div>
-
-        
-
-        <div class="card" data-cat="guide gratuit">
-          <span class="tag" data-i18n="ds.t_free">Gratuit</span>
-          <h3 data-i18n="ds.c14_h">Registre des sources Atmart</h3>
-          <p data-i18n="ds.c14_p">Pour chaque source que nous exploitons : organisme, URL, licence, classe juridique, couverture, fréquence et date de dernière vérification. Ce que nous avons le droit de publier, et ce que nous n'avons pas le droit de publier.</p>
-          <p class="price" data-i18n-html="ds.c14_pr">0 $ <small>CSV • mis à jour en continu</small></p>
-          <p class="meta" data-i18n-html="ds.c14_meta">📘 Méthode • <a href="donnees-backbone.html#juridique">la matrice juridique A→E</a></p>
-          <a href="data/atmart_registre_sources.csv" download class="btn btn-primary" data-i18n="ds.dl">Télécharger gratuitement</a>
-        </div>
-
-        
-
-        
-
-      </div>
+<!-- CARTES:gratuit — engendré par build_vitrine.py, ne pas éditer à la main -->
+<div class="card" data-cat="economie gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.c2_h">Transferts de la diaspora vers Haïti</h3>
+  <p data-i18n-html="ds.c2_p">Ce que la diaspora envoie chaque année, en dollars et en part du PIB. Le sommet est atteint en 2020 à 22,45 % du PIB ; en 2024, 4,1 milliards de dollars, soit 16,3 %. Source : Banque mondiale.</p>
+  <p class="price" data-i18n-html="ds.c2_pr">Gratuit <small>CSV • 26 lignes • 25 années renseignées</small></p>
+  <p class="meta" data-i18n-html="ds.c2_meta">💰 Économie • Haïti • Niveau de confiance A • <a href="data/LISEZMOI_transferts_diaspora.md">documentation</a></p>
+  <a href="data/transferts_diaspora_haiti_2000_2025.csv" class="btn btn-primary" download data-i18n="ds.c2_cta">documentation</a>
+</div>
+<div class="card" data-cat="geo gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.c11_h">Échantillon — sections communales d'Haïti</h3>
+  <p data-i18n-html="ds.c11_p">Dix sections communales avec p-codes OCHA, superficie et coordonnées GPS : exactement la structure du Pack Géo, pour juger avant d'acheter.</p>
+  <p class="price" data-i18n-html="ds.c11_pr">Gratuit <small>CSV • 10 lignes • 13 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.c11_meta">🗺 Géographie • Extrait du <a href="donnees-pack-geo-haiti.html">Pack Géo Haïti</a></p>
+  <a href="data/ECHANTILLON_haiti_sections_gps.csv" class="btn btn-primary" download data-i18n="ds.c11_cta">Pack Géo Haïti</a>
+</div>
+<div class="card" data-cat="guide gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.c14_h">Registre des sources Atmart</h3>
+  <p data-i18n-html="ds.c14_p">Pour chaque source que nous exploitons : organisme, URL, licence, classe juridique, couverture, fréquence et date de dernière vérification. Ce que nous avons le droit de publier, et ce que nous n'avons pas le droit de publier.</p>
+  <p class="price" data-i18n-html="ds.c14_pr">Gratuit <small>CSV • mis à jour en continu</small></p>
+  <p class="meta" data-i18n-html="ds.c14_meta">📘 Méthode • <a href="donnees-backbone.html#juridique">la matrice juridique A→E</a></p>
+  <a href="data/atmart_registre_sources.csv" class="btn btn-primary" download data-i18n="ds.c14_cta">la matrice juridique A→E</a>
+</div>
+<div class="card" data-cat="social gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.c17_h">Pyramide des âges des 140 communes</h3>
+  <p data-i18n-html="ds.c17_p">La population de chaque commune par tranche de cinq ans et par sexe. C'est ce qui permet de dire combien d'enfants scolarisables ou de personnes âgées vivent sur un territoire — et non plus seulement combien d'habitants. <strong>Ce sont des projections, pas un recensement</strong> : le dernier recensement haïtien date de 2003.</p>
+  <p class="price" data-i18n-html="ds.c17_pr">Gratuit <small>CSV • <span data-mf="prd_007_lignes">7 140</span> lignes • <span data-mf="prd_007_colonnes">18</span> colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.c17_meta">👥 Population • <span data-mf="nombre_tranches_age">17</span> tranches × 2 sexes × <span data-mf="nombre_communes">140</span> communes • Source : projections UNFPA 2024</p>
+  <a href="data/atmart_pyramide_ages_HT.csv" class="btn btn-primary" download data-i18n="ds.c17_cta">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="economie gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.c18_h">Prix des marchés — réseau sentinelle</h3>
+  <p data-i18n-html="ds.c18_p">Relevés mensuels de prix, produit par produit et marché par marché : riz, haricots, maïs, huile, carburant. <strong>Le réseau ne couvre pas tout le pays</strong> — <span data-mf="nombre_communes_sentinelles">9</span> marchés sentinelles, un par département dans neuf départements sur dix. À lire comme un signal, jamais comme une moyenne nationale.</p>
+  <p class="price" data-i18n-html="ds.c18_pr">Gratuit <small>CSV • <span data-mf="nombre_releves_prix">14 140</span> relevés • <span data-mf="nombre_produits_suivis">32</span> produits suivis</small></p>
+  <p class="meta" data-i18n-html="ds.c18_meta">💰 Économie • Source : WFP — VAM Food Prices • la série se lit aussi dans <a href="/">l'Explorateur</a></p>
+  <a href="data/atmart_prix_marches_HT.csv" class="btn btn-primary" download data-i18n="ds.c18_cta">l'Explorateur</a>
+</div>
+<div class="card" data-cat="economie gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.c19_h">Registre des marchés d'Haïti</h3>
+  <p data-i18n-html="ds.c19_p">Les marchés recensés : identifiant stable, nom normalisé, rattachement à la section communale et coordonnées. <strong>C'est la famille dont la couverture tient</strong> — <span data-mf="communes_couvertes_marches">136</span> communes sur <span data-mf="nombre_communes">140</span>, et toutes les fiches sont géolocalisées.</p>
+  <p class="price" data-i18n-html="ds.c19_pr">Gratuit <small>CSV + GeoJSON • <span data-mf="nombre_marches">182</span> marchés</small></p>
+  <p class="meta" data-i18n-html="ds.c19_meta">🏪 Infrastructures • Sources : WFP, OCHA</p>
+  <a href="data/atmart_registre_marches_HT.csv" class="btn btn-primary" download data-i18n="ds.c19_cta">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="economie gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.c20_h">Repères budgétaires nationaux</h3>
+  <p data-i18n-html="ds.c20_p">La dépense publique exécutée au niveau national, sur l'exercice en cours, tirée de documents officiels citables. <strong>Deux repères seulement, et c'est volontaire</strong> : il n'y a pas de ventilation par département ni par commune, parce que la source n'en publie pas. Mieux vaut deux chiffres sourcés qu'une répartition inventée.</p>
+  <p class="price" data-i18n-html="ds.c20_pr">Gratuit <small>CSV • 2 indicateurs • cumul sur 9 mois</small></p>
+  <p class="meta" data-i18n-html="ds.c20_meta">🏛 Finances publiques • exercice 2025-2026 • Sources : MEF / Direction Générale du Budget, TOFE</p>
+  <a href="data/atmart_indicateurs_national_HT.csv" class="btn btn-primary" download data-i18n="ds.c20_cta">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="social gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.c21_h">Présence des organisations — qui travaille où</h3>
+  <p data-i18n-html="ds.c21_p">Quelles organisations interviennent dans quelle commune, et dans quel secteur. <strong>Ce sont des présences déclarées</strong> par les organisations elles-mêmes au 3W d'OCHA, pas un relevé de terrain : une absence dans ce fichier ne prouve pas une absence sur place.</p>
+  <p class="price" data-i18n-html="ds.c21_pr">Gratuit <small>CSV • <span data-mf="prd_011_lignes">1 457</span> lignes • <span data-mf="prd_011_colonnes">17</span> colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.c21_meta">🤝 Infrastructures • Source : OCHA — 3W Haïti</p>
+  <a href="data/atmart_presence_organisations_HT.csv" class="btn btn-primary" download data-i18n="ds.c21_cta">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="social gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.c22_h">Registre des ONG reconnues</h3>
+  <p data-i18n-html="ds.c22_p">Les organisations non gouvernementales reconnues par l'État : numéro d'inscription, date de reconnaissance, domaine d'intervention et zones déclarées. Les coordonnées sont institutionnelles — celles du siège, pas de personnes.</p>
+  <p class="price" data-i18n-html="ds.c22_pr">Gratuit <small>CSV • <span data-mf="prd_012_lignes">680</span> lignes • <span data-mf="prd_012_colonnes">22</span> colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.c22_meta">🤝 Infrastructures • Source : MPCE — registre officiel des ONG</p>
+  <a href="data/atmart_registre_ong_HT.csv" class="btn btn-primary" download data-i18n="ds.c22_cta">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="social gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.c23_h">Professions juridiques et foncières par commune</h3>
+  <p data-i18n-html="ds.c23_p">Combien de notaires et d'arpenteurs sont recensés dans chaque commune. <strong>Le dénombrement seul</strong> : aucun nom, aucune adresse, aucun téléphone. Un zéro veut dire « aucun dans nos sources », jamais « aucun sur le territoire » — <span data-mf="communes_avec_profession">55</span> communes sur <span data-mf="nombre_communes">140</span> sont couvertes.</p>
+  <p class="price" data-i18n-html="ds.c23_pr">Gratuit <small>CSV • <span data-mf="prd_013_lignes">280</span> lignes • <span data-mf="prd_013_colonnes">9</span> colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.c23_meta">⚖️ Infrastructures • Niveau de confiance C • sources compilées, hors registre officiel</p>
+  <a href="data/atmart_professions_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.c23_cta">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="social gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.c24_h">Infrastructures par commune</h3>
+  <p data-i18n-html="ds.c24_p">Ce que chaque commune compte en équipements, famille par famille. Une ligne par commune et par type, avec sa source et son millésime — de quoi comparer des territoires sans confondre ce qui est compté et ce qui est estimé.</p>
+  <p class="price" data-i18n-html="ds.c24_pr">Gratuit <small>CSV • <span data-mf="prd_014_lignes">1 899</span> lignes • <span data-mf="prd_014_colonnes">8</span> colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.c24_meta">🏗 Infrastructures • millésime et source déclarés ligne par ligne</p>
+  <a href="data/atmart_infrastructures_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.c24_cta">Télécharger gratuitement</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd015_h">Conflits — événements et décès par commune</h3>
+  <p data-i18n-html="ds.prd015_p">Événements de violence et décès recensés, par commune et par mois, de 2018 à aujourd'hui. Un relevé d'événements rapportés : ce qui n'est pas rapporté n'y figure pas.</p>
+  <p class="price" data-i18n-html="ds.prd015_pr">Gratuit <small>4 368 lignes • 8 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd015_meta">⚠ Sécurité • Sources : ACLED via HDX • niveau de confiance B • ACLED — attribution requise</p>
+  <a href="data/atmart_conflits_HT.csv" class="btn btn-primary" download data-i18n="ds.prd015_cta">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd016_h">Déplacements de population</h3>
+  <p data-i18n-html="ds.prd016_p">Personnes déplacées recensées par la Matrice de suivi des déplacements de l'OIM. Un relevé de terrain, daté, qui ne prétend pas couvrir ce que les équipes n'ont pas pu atteindre.</p>
+  <p class="price" data-i18n-html="ds.prd016_pr">Gratuit <small>150 lignes • 9 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd016_meta">👥 Social • Sources : OIM — Displacement Tracking Matrix • niveau de confiance B • OIM — DTM</p>
+  <a href="data/atmart_deplaces_HT.csv" class="btn btn-primary" download data-i18n="ds.prd016_cta">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd017_h">Insécurité alimentaire — phases IPC</h3>
+  <p data-i18n-html="ds.prd017_p">Les phases du Cadre intégré de classification de la sécurité alimentaire, par zone et par période. Une classification d'experts, pas une mesure directe.</p>
+  <p class="price" data-i18n-html="ds.prd017_pr">Gratuit <small>210 lignes • 12 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd017_meta">👥 Social • Sources : IPC — Cadre intégré de classification • niveau de confiance B • IPC</p>
+  <a href="data/atmart_ipc_HT.csv" class="btn btn-primary" download data-i18n="ds.prd017_cta">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd018_h">Points d'eau</h3>
+  <p data-i18n-html="ds.prd018_p">Points d'eau relevés et leur état de fonctionnement. La couverture est concentrée dans le Nord et le Centre : ailleurs, l'absence de point ne veut pas dire absence d'eau.</p>
+  <p class="price" data-i18n-html="ds.prd018_pr">Gratuit <small>6 276 lignes • 1 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd018_meta">🔌 Infrastructures • Sources : Water Point Data Exchange • niveau de confiance B • CC BY-SA</p>
+  <a href="data/atmart_couche_eau_HT.geojson" class="btn btn-primary" download data-i18n="ds.prd018_cta">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd019_h">Stations-service</h3>
+  <p data-i18n-html="ds.prd019_p">Stations-service cartographiées par les contributeurs OpenStreetMap. Cartographie contributive : complète nulle part, inégale d'une commune à l'autre.</p>
+  <p class="price" data-i18n-html="ds.prd019_pr">Gratuit <small>310 lignes</small></p>
+  <p class="meta" data-i18n-html="ds.prd019_meta">🔌 Infrastructures • Sources : OpenStreetMap via HOT • niveau de confiance C • ODbL</p>
+  <a href="data/atmart_couche_carburant_HT.geojson" class="btn btn-primary" download data-i18n="ds.prd019_cta">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd020_h">Banques, guichets et transferts</h3>
+  <p data-i18n-html="ds.prd020_p">Points de service financier cartographiés par les contributeurs OpenStreetMap. Même réserve : contributive, donc inégale.</p>
+  <p class="price" data-i18n-html="ds.prd020_pr">Gratuit <small>474 lignes • 1 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd020_meta">🔌 Infrastructures • Sources : OpenStreetMap via HOT • niveau de confiance C • ODbL</p>
+  <a href="data/atmart_couche_finance_HT.geojson" class="btn btn-primary" download data-i18n="ds.prd020_cta">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd021_h">Part de zone inondable par commune</h3>
+  <p data-i18n-html="ds.prd021_p">La part du territoire de chaque commune classée inondable. Attention à ce que cela mesure : une zone cartographiée comme inondable, pas un aléa probabiliste par période de retour. La méthode de la source n'est pas documentée.</p>
+  <p class="price" data-i18n-html="ds.prd021_pr">Gratuit <small>140 lignes • 7 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd021_meta">📄 Environnement • Sources : CNIGS via HaitiData • niveau de confiance C • Données publiques CNIGS — attribution</p>
+  <a href="data/atmart_alea_inondation_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.prd021_cta">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd022_h">Zones inondables</h3>
+  <p data-i18n-html="ds.prd022_p">Les emprises cartographiées comme inondables. Géométries simplifiées pour l'affichage — à ne pas utiliser pour un calcul de surface au mètre.</p>
+  <p class="price" data-i18n-html="ds.prd022_pr">Gratuit <small>134 lignes</small></p>
+  <p class="meta" data-i18n-html="ds.prd022_meta">📄 Environnement • Sources : CNIGS via HaitiData • niveau de confiance C • Données publiques CNIGS — attribution</p>
+  <a href="data/atmart_couche_inondable_HT.geojson" class="btn btn-primary" download data-i18n="ds.prd022_cta">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd023_h">Bassins versants</h3>
+  <p data-i18n-html="ds.prd023_p">Le découpage hydrologique de référence, issu du modèle SRTM de 2014. Géométries simplifiées pour l'affichage.</p>
+  <p class="price" data-i18n-html="ds.prd023_pr">Gratuit <small>31 lignes • 3 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd023_meta">📄 Environnement • Sources : CNIGS via HaitiData • niveau de confiance B • Données publiques CNIGS — attribution</p>
+  <a href="data/atmart_couche_bassins_HT.geojson" class="btn btn-primary" download data-i18n="ds.prd023_cta">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd024_h">Occupation du sol par commune</h3>
+  <p data-i18n-html="ds.prd024_p">La répartition du territoire de chaque commune par grande classe d'occupation du sol. La couche date de 1998 — un quart de siècle : elle sert à lire une tendance, pas un état des lieux. Et c'est une classification d'images, donc ce qu'un capteur a vu, pas un cadastre.</p>
+  <p class="price" data-i18n-html="ds.prd024_pr">Gratuit <small>1 042 lignes • 7 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd024_meta">📄 Environnement • Sources : CNIGS via HaitiData • niveau de confiance B • Données publiques CNIGS — attribution</p>
+  <a href="data/atmart_occupation_sol_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.prd024_cta">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd025_h">Équipements télécom par opérateur</h3>
+  <p data-i18n-html="ds.prd025_p">Pylônes et mâts de communication, boutiques mobiles, bureaux d'opérateur et accès internet public cartographiés dans OpenStreetMap, colorés par opérateur (Digicel, Natcom, Voilà, Access Haiti). Ce n'est PAS le parc des opérateurs : ni Digicel, ni Natcom, ni le CONATEL ne le publient. Une commune sans point n'est pas une commune sans couverture.</p>
+  <p class="price" data-i18n-html="ds.prd025_pr">Gratuit <small>498 lignes</small></p>
+  <p class="meta" data-i18n-html="ds.prd025_meta">🔌 Infrastructures • Sources : OpenStreetMap via Overpass • niveau de confiance C • ODbL</p>
+  <a href="data/atmart_couche_telecom_HT.geojson" class="btn btn-primary" download data-i18n="ds.prd025_cta">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd026_h">Télécom par commune — dénombrement</h3>
+  <p data-i18n-html="ds.prd026_p">Dénombrement des équipements télécom par commune, par opérateur et par genre — 498 équipements dans 81 communes sur 140. Comptage contributif : il mesure autant l'effort de cartographie que le parc réel.</p>
+  <p class="price" data-i18n-html="ds.prd026_pr">Gratuit <small>219 lignes • 9 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd026_meta">🔌 Infrastructures • Sources : OpenStreetMap via Overpass • niveau de confiance C • ODbL</p>
+  <a href="data/atmart_telecom_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.prd026_cta">Télécharger (CSV)</a>
+</div>
+<!-- /CARTES:gratuit -->
+</div>
     <div class="card" data-cat="social gratuit">
 <span class="tag" data-i18n="ds.t_free">Gratuit</span>
 <h3 data-i18n-html="ds.c17_h">Pyramide des âges des 140 communes <span class="badge-new">NOUVO</span></h3>
@@ -1283,53 +1467,49 @@
         </p>
       </div>
       <div class="grid grid-3" id="data-grid-soon">
-
-        <div class="card" data-cat="geo social economie">
-          <span class="d-pill spons" data-i18n="ds.pill_spons">Parrainable</span>
-          <h3 data-i18n-html="ds.s0_h">Profil des 140 communes d'Haïti <span class="badge-new">PRIORITÉ 1</span></h3>
-          <p data-i18n="ds.s0_p">Une fiche standardisée par commune : identité territoriale, population, superficie, localités, écoles, établissements sanitaires, marchés, routes, exposition aux risques, dix indicateurs socio-économiques — chacun avec sa source et son score de qualité. Le premier produit qui exploite le Backbone de bout en bout.</p>
-          <p class="price" data-i18n-html="ds.s0_pr">≈ 6 000 $ <small>coût de construction · Excel + GeoJSON + Power BI + fiches PDF</small></p>
-          <p class="meta" data-i18n-html="ds.s0_meta">🗺 Transversal • S'appuie sur le <a href="donnees-backbone.html">référentiel territoire</a> déjà publié</p>
-          <a href="donnees-parrainage.html#catalogue" class="btn btn-outline" data-i18n="ds.spons_cta">Parrainer ce jeu</a>
-        </div>
-
-        <div class="card" data-cat="economie">
-          <span class="d-pill spons" data-i18n="ds.pill_spons">Parrainable</span>
-          <h3 data-i18n="ds.s1_h">Prix des marchés — couverture nationale et mise à jour mensuelle</h3>
-          <p data-i18n="ds.s1_p">Un réseau sentinelle de <span data-mf="nombre_communes_sentinelles">9</span> marchés est <strong>déjà publié et téléchargeable</strong>, gratuitement. Ce parrainage financerait l'étape suivante : étendre la couverture à l'ensemble des marchés suivis par la CNSA et FEWS NET, et tenir la série à jour chaque mois.</p>
-          <p class="price" data-i18n-html="ds.s1_pr">≈ 2 500 $ <small>coût d'ouverture · + 1 200 $/an de mise à jour</small></p>
-          <p class="meta" data-i18n-html="ds.s1_meta">💰 Économie • Sources identifiées : CNSA, FEWS NET</p>
-          <a href="donnees-parrainage.html#catalogue" class="btn btn-outline" data-i18n="ds.spons_cta">Parrainer ce jeu</a>
-        </div>
-
-        <div class="card" data-cat="economie finance">
-          <span class="d-pill spons" data-i18n="ds.pill_spons">Parrainable</span>
-          <h3 data-i18n="ds.s2_h">Indicateurs économiques Haïti (2000–2025)</h3>
-          <p data-i18n="ds.s2_p">PIB, inflation, taux de change gourde/USD, importations et exportations sur 25 ans, harmonisés entre sources.</p>
-          <p class="price" data-i18n-html="ds.s2_pr">≈ 2 000 $ <small>coût d'ouverture</small></p>
-          <p class="meta" data-i18n-html="ds.s2_meta">💰 Économie • Sources identifiées : Banque mondiale, FMI, BRH</p>
-          <a href="donnees-parrainage.html#catalogue" class="btn btn-outline" data-i18n="ds.spons_cta">Parrainer ce jeu</a>
-        </div>
-
-        <div class="card" data-cat="social">
-          <span class="d-pill spons" data-i18n="ds.pill_spons">Parrainable</span>
-          <h3 data-i18n="ds.s3_h">Éducation en Haïti — indicateurs par département</h3>
-          <p data-i18n="ds.s3_p">Scolarisation, alphabétisation et dépenses publiques par département : le socle des mémoires en sciences de l'éducation.</p>
-          <p class="price" data-i18n-html="ds.s3_pr">≈ 2 500 $ <small>coût d'ouverture</small></p>
-          <p class="meta" data-i18n-html="ds.s3_meta">👥 Social • Sources identifiées : MENFP, UNESCO UIS, Banque mondiale</p>
-          <a href="donnees-parrainage.html#catalogue" class="btn btn-outline" data-i18n="ds.spons_cta">Parrainer ce jeu</a>
-        </div>
-
-        <div class="card" data-cat="social">
-          <span class="d-pill spons" data-i18n="ds.pill_spons">Parrainable</span>
-          <h3 data-i18n="ds.s4_h">Santé publique — indicateurs par département</h3>
-          <p data-i18n="ds.s4_p">Couverture, mortalité, personnel et infrastructures de santé, avec les dénominateurs de population correspondants.</p>
-          <p class="price" data-i18n-html="ds.s4_pr">≈ 3 000 $ <small>coût d'ouverture</small></p>
-          <p class="meta" data-i18n-html="ds.s4_meta">👥 Social • Sources identifiées : MSPP, OMS/OPS, EMMUS</p>
-          <a href="donnees-parrainage.html#catalogue" class="btn btn-outline" data-i18n="ds.spons_cta">Parrainer ce jeu</a>
-        </div>
-
-      </div>
+<!-- CARTES:parrainable — engendré par build_vitrine.py, ne pas éditer à la main -->
+<div class="card" data-cat="geo social economie">
+  <span class="tag amber" data-i18n="ds.t_soon">À financer</span>
+  <h3 data-i18n-html="ds.s0_h">Profil des 140 communes d'Haïti</h3>
+  <p data-i18n-html="ds.s0_p">Une fiche standardisée par commune : identité territoriale, population, superficie, localités, écoles, établissements sanitaires, marchés, routes, exposition aux risques, dix indicateurs socio-économiques — chacun avec sa source et son score de qualité. Le premier produit qui exploite le Backbone de bout en bout.</p>
+  <p class="price" data-i18n-html="ds.s0_pr">6000 $ <small>parrainage</small> <small>coût de construction · Excel + GeoJSON + Power BI + fiches PDF</small></p>
+  <p class="meta" data-i18n-html="ds.s0_meta">🗺 Transversal • S'appuie sur le <a href="donnees-backbone.html">référentiel territoire</a> déjà publié</p>
+  <a href="donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.s0_cta">référentiel territoire</a>
+</div>
+<div class="card" data-cat="economie">
+  <span class="tag amber" data-i18n="ds.t_soon">À financer</span>
+  <h3 data-i18n-html="ds.s1_h">Prix des marchés — couverture nationale et mise à jour mensuelle</h3>
+  <p data-i18n-html="ds.s1_p">Un réseau sentinelle de <span data-mf="nombre_communes_sentinelles">9</span> marchés est <strong>déjà publié et téléchargeable</strong>, gratuitement. Ce parrainage financerait l'étape suivante : étendre la couverture à l'ensemble des marchés suivis par la CNSA et FEWS NET, et tenir la série à jour chaque mois.</p>
+  <p class="price" data-i18n-html="ds.s1_pr">2500 $ <small>parrainage</small> <small>coût d'ouverture · + 1 200 $/an de mise à jour</small></p>
+  <p class="meta" data-i18n-html="ds.s1_meta">💰 Économie • Sources identifiées : CNSA, FEWS NET</p>
+  <a href="donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.s1_cta">Parrainer ce jeu</a>
+</div>
+<div class="card" data-cat="economie finance">
+  <span class="tag amber" data-i18n="ds.t_soon">À financer</span>
+  <h3 data-i18n-html="ds.s2_h">Indicateurs économiques Haïti</h3>
+  <p data-i18n-html="ds.s2_p">PIB, inflation, taux de change gourde/USD, importations et exportations sur 25 ans, harmonisés entre sources.</p>
+  <p class="price" data-i18n-html="ds.s2_pr">2000 $ <small>parrainage</small> <small>coût d'ouverture</small></p>
+  <p class="meta" data-i18n-html="ds.s2_meta">💰 Économie • Sources identifiées : Banque mondiale, FMI, BRH</p>
+  <a href="donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.s2_cta">Parrainer ce jeu</a>
+</div>
+<div class="card" data-cat="parrainable">
+  <span class="tag amber" data-i18n="ds.t_soon">À financer</span>
+  <h3 data-i18n-html="ds.prd204_h">Éducation en Haïti — par département</h3>
+  <p data-i18n-html="ds.prd204_p">Effectifs, établissements, résultats.</p>
+  <p class="price" data-i18n-html="ds.prd204_pr">2500 $ <small>parrainage</small></p>
+  <p class="meta" data-i18n-html="ds.prd204_meta">👥 Social • Sources : MENFP, UNESCO UIS, Banque mondiale</p>
+  <a href="donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.prd204_cta">Parrainer ce jeu</a>
+</div>
+<div class="card" data-cat="parrainable">
+  <span class="tag amber" data-i18n="ds.t_soon">À financer</span>
+  <h3 data-i18n-html="ds.prd205_h">Santé publique — par département</h3>
+  <p data-i18n-html="ds.prd205_p">Structures, personnels, couverture vaccinale.</p>
+  <p class="price" data-i18n-html="ds.prd205_pr">3000 $ <small>parrainage</small></p>
+  <p class="meta" data-i18n-html="ds.prd205_meta">👥 Social • Sources : MSPP, OMS/OPS, EMMUS</p>
+  <a href="donnees-parrainage.html#catalogue" class="btn btn-primary" data-i18n="ds.prd205_cta">Parrainer ce jeu</a>
+</div>
+<!-- /CARTES:parrainable -->
+</div>
     </div>
 
     <!-- COMMENT ÇA MARCHE -->

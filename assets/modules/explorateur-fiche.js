@@ -1700,6 +1700,63 @@ export default function (A) {
     return isNaN(x) ? v : x.toFixed(n).replace(/\.?0+$/, "").replace(".", ",");
   }
 
+  /* ---------------------------------------------------------- projets de la Banque mondiale citant ce territoire
+     Banque mondiale, API Projects, CC BY 4.0 (passeport PSP-034).
+
+     CE BLOC N'AFFICHE AUCUN MONTANT PAR COMMUNE, et c'est délibéré : la
+     Banque mondiale ne publie aucune ventilation géographique de ses
+     engagements. Répartir un montant national entre les communes qu'un
+     document mentionne serait inventer un chiffre — le genre exact
+     d'invention qui finit citée comme un fait.
+
+     Il ne s'affiche donc que pour les 15 communes que la source NOMME
+     explicitement dans ses documents. Ailleurs il ne dit rien, plutôt que
+     d'affirmer une absence de projet qu'il ne peut pas constater. */
+  function blocProjets(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-projets" class="x-pyr"><p class="x-note">' +
+        T("Projets — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerProjets() {
+    if (S.projetsPromesse) return S.projetsPromesse;
+    S.projetsPromesse = charger(DIR + "atmart_projets_national.json", 1)
+      .then(function (t) { S.projets = JSON.parse(t); return S.projets; })
+      .catch(function () { S.projets = null; return null; });
+    return S.projetsPromesse;
+  }
+
+  function remplirProjets(r) {
+    var el = $("#x-projets");
+    if (!el) return;
+    chargerProjets().then(function () {
+      var h = htmlProjets(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("") + "</p>");
+    });
+  }
+
+  function htmlProjets(r) {
+    var d = S.projets && S.projets.communes ? S.projets.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.projets.meta || {};
+    if (!d.projets_citant) return "";
+    var h = ["<h3>" + T("Projets citant ce territoire") + "</h3>"];
+    h.push('<p class="x-note">' + TF(
+      "{n} projets de la Banque mondiale nomment explicitement cette commune " +
+      "dans leurs documents.", { n: esc(d.projets_citant) }) + "</p>");
+    h.push('<p class="x-limite">' + T(
+      "Aucun montant n'est affiché ici, et ce n'est pas un oubli : la Banque " +
+      "mondiale ne publie pas de ventilation géographique de ses engagements. " +
+      "Répartir un montant national entre les communes citées reviendrait à " +
+      "inventer un chiffre.") + "</p>");
+    h.push('<p class="x-src"><small>' +
+      T("Ces chiffres décrivent le portefeuille de la Banque mondiale, pas " +
+        "l'aide au développement reçue par Haïti. Un territoire absent d'ici " +
+        "n'est pas un territoire sans projet.") + "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -1957,6 +2014,7 @@ export default function (A) {
              montrer("services") ? blocPluie(r) : "",
              montrer("services") ? blocSol(r) : "",
              montrer("services") ? blocPopMod(r) : "",
+             montrer("services") ? blocProjets(r) : "",
              montrer("services") ? blocUrbanisation(r) : "",
              montrer("services") ? blocBatiments(r) : "",
              montrer("services") ? blocSolaire(r) : "",
@@ -1989,6 +2047,7 @@ export default function (A) {
     remplirPluie(r);
     remplirSol(r);
     remplirPopMod(r);
+    remplirProjets(r);
     remplirUrbanisation(r);
     remplirBatiments(r);
     remplirSolaire(r);
@@ -2020,5 +2079,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

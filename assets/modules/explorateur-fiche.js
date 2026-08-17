@@ -739,8 +739,12 @@ export default function (A) {
       charger(DIR + "atmart_professions_communes_HT.csv", 1).catch(function () { return null; }),
       charger(DIR + "atmart_presence_organisations_HT.csv", 1).catch(function () { return null; }),
       charger(DIR + "atmart_registre_ong_HT.csv", 1).catch(function () { return null; }),
-      charger(DIR + "atmart_infrastructures_communes_HT.csv", 1).catch(function () { return null; })
+      charger(DIR + "atmart_infrastructures_communes_HT.csv", 1).catch(function () { return null; }),
+      /* 87 Ko : l'historique sismique des 140 communes, chargé dans la
+         même vague que les services pour ne pas ajouter d'aller-retour. */
+      charger(DIR + "atmart_seismes_communes.json", 1).catch(function () { return null; })
     ]).then(function (t) {
+      try { S.seismes = t[4] ? JSON.parse(t[4]) : null; } catch (e) { S.seismes = null; }
       if (!t[0] && !t[1] && !t[2] && !t[3]) { S.svcIdx = null; return null; }
       S.svcIdx = { pro: {}, orgs: {}, ong: {}, infra: {} };
       (t[3] ? parseCSV(t[3]) : []).forEach(function (l) {
@@ -1072,6 +1076,43 @@ export default function (A) {
     return h.join("");
   }
 
+  /* ------------------------------------------------ histoire sismique (v49)
+     Un historique, pas une carte d'aléa : ce qui s'est produit, quand, à
+     quelle distance. Source USGS ComCat, domaine public (passeport PSP-029).
+
+     Ce bloc n'écrit jamais qu'une commune a été « affectée » : la distance
+     à un épicentre ne dit rien des dégâts, qui dépendent du sol, du bâti et
+     de l'heure. Il dit « exposée », et il dit à quelle distance. */
+  function blocSeismes(r) {
+    var d = S.seismes && S.seismes.communes ? S.seismes.communes[r.pcode] : null;
+    if (!d) return "";
+    var meta = S.seismes.meta || {};
+    var h = ['<section class="x-sec" id="x-seismes"><h3>' +
+             T("Histoire sismique") + "</h3>"];
+    h.push('<p class="x-note">' +
+      TF("{n25} séisme(s) de magnitude 4 ou plus documenté(s) à moins de 25 km, " +
+         "{n50} à moins de 50 km, {n100} à moins de 100 km — catalogue {periode}.",
+         { n25: d.n25, n50: d.n50, n100: d.n100, periode: esc(meta.periode || "") }) +
+      "</p>");
+    if (d.ev && d.ev.length) {
+      h.push('<ul class="x-liste-seismes">');
+      d.ev.forEach(function (e) {
+        h.push("<li><b>M" + esc(e.m) + "</b> — " + esc(e.d) +
+          " · " + TF("à {km} km", { km: e.km }) +
+          (e.p !== "" && e.p != null ? " · " + TF("profondeur {p} km", { p: e.p }) : "") +
+          "<br><small>" + esc(e.q) + " · " + esc(e.l) +
+          (e.u ? ' · <a href="' + esc(e.u) + '" rel="noopener" target="_blank">' +
+                 T("fiche USGS") + "</a>" : "") +
+          "</small></li>");
+      });
+      h.push("</ul>");
+    }
+    h.push('<p class="x-src"><small>' +
+      T("Source : USGS ComCat (domaine public). Distance mesurée de l'épicentre au contour de la commune.") +
+      " " + esc(meta.avertissement || "") + "</small></p>");
+    return h.join("") + "</section>";
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -1325,6 +1366,7 @@ export default function (A) {
              montrer("pyramide") ? blocPyramide(r) : "",
              montrer("prix") ? blocPrix(r) : "",
              montrer("services") ? blocServices(r) : "",
+             montrer("services") ? blocSeismes(r) : "",
              montrer("comparer") ? blocComparer(r) : "",
              montrer("lacunes") ? blocLacunes(r) : "");
     } else if (r.niveau_admin === "0") {

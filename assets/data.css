@@ -749,3 +749,12 @@ html[lang="fr"] .x-partiel { display: none; }
 .x-vue.actif { background: var(--navy); border-color: var(--navy); color: #fff; }
 .x-vues small { color: var(--ink-dim); font-size: 0.8rem; margin-left: 0.3rem; }
 @media (max-width: 480px) { .x-vues small { width: 100%; margin: 0.2rem 0 0; } }
+
+/* ------------------------------------------------- histoire sismique
+   Une liste, pas un tableau : trois événements se lisent mieux en lignes
+   qu'en colonnes, et la lecture au pouce ne défile pas latéralement. */
+.x-liste-seismes { list-style: none; margin: 0.6rem 0; padding: 0; }
+.x-liste-seismes li { border-left: 3px solid var(--navy); padding: 0.5rem 0.8rem;
+                      margin-bottom: 0.5rem; background: #f6f9fd;
+                      border-radius: 0 8px 8px 0; }
+.x-liste-seismes small { color: var(--ink-dim); }

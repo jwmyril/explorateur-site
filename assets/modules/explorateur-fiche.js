@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=22";
+import { S } from "./etat.js?v=23";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, situation, valeurBrute } = A;
@@ -1905,6 +1905,77 @@ export default function (A) {
     return mot + "s";
   }
 
+  /* ---------------------------------------------------------- trois sources de population
+     IHSI 2024 (passeport PSP-044), projection UNFPA/OCHA, WorldPop 2020.
+
+     Ce bloc remplace « un second avis » par TROIS témoins. On ne les
+     moyenne pas et on n'en supprime aucun : un écart signale un endroit
+     où les méthodes ne s'accordent pas, ce qui mérite d'être su.
+
+     Sur les 140 communes, une SEULE est aberrante — Gressier, où la
+     projection donne 3 987 quand l'IHSI en compte 36 541 et le satellite
+     41 983. C'est le seul cas où la statistique officielle et le
+     satellite s'accordent CONTRE la projection. */
+  function blocPop3(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-pop3" class="x-pyr"><p class="x-note">' +
+        T("Population — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerPop3() {
+    if (S.pop3Promesse) return S.pop3Promesse;
+    S.pop3Promesse = charger(DIR + "atmart_population_trois_sources.json", 1)
+      .then(function (t) { S.pop3 = JSON.parse(t); return S.pop3; })
+      .catch(function () { S.pop3 = null; return null; });
+    return S.pop3Promesse;
+  }
+
+  function remplirPop3(r) {
+    var el = $("#x-pop3");
+    if (!el) return;
+    chargerPop3().then(function () {
+      var h = htmlPop3(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("Les trois sources de population n'ont pas pu être chargées — la fiche reste lisible sans elles.") + "</p>");
+    });
+  }
+
+  function htmlPop3(r) {
+    var d = S.pop3 && S.pop3.communes ? S.pop3.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.pop3.meta || {};
+    var h = ["<h3>" + T("Combien d'habitants ? Trois réponses") + "</h3>"];
+    h.push('<ul class="x-liste-sol">');
+    [["IHSI 2024 — statistique officielle", d.i],
+     ["Projection UNFPA/OCHA 2024", d.p],
+     ["WorldPop 2020 — estimation satellite", d.w]].forEach(function (p) {
+      if (p[1]) {
+        h.push("<li><b>" + esc(Number(p[1]).toLocaleString("fr-FR")) +
+               "</b> " + T(p[0]) + "</li>");
+      } else {
+        h.push('<li><span class="x-nd">' + T("non documenté") + "</span> " +
+               T(p[0]) + "</li>");
+      }
+    });
+    h.push("</ul>");
+    if (d.sig === "aberrant") {
+      h.push('<p class="x-limite">' + TF(
+        "Les trois sources divergent d'un facteur {r} sur cette commune — le " +
+        "seul cas du pays. L'estimation officielle de l'IHSI et la mesure " +
+        "satellite s'accordent ici contre la projection. Aucune n'est " +
+        "corrigée : c'est à qui décide de savoir laquelle il retient, et " +
+        "pourquoi.", { r: esc(d.r) }) + "</p>");
+    } else if (d.sig === "ecart_fort") {
+      h.push('<p class="x-limite">' + TF(
+        "Les sources divergent d'un facteur {r} ici. C'est fréquent sur les " +
+        "communes rurales dispersées, où le satellite place mal une " +
+        "population éparse.", { r: esc(d.r) }) + "</p>");
+    }
+    h.push('<p class="x-src"><small>' + esc(m.ihsi || "") + " · " +
+           esc(m.avertissement || "") + "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -2162,6 +2233,7 @@ export default function (A) {
              montrer("services") ? blocPluie(r) : "",
              montrer("services") ? blocSol(r) : "",
              montrer("services") ? blocPopMod(r) : "",
+             montrer("services") ? blocPop3(r) : "",
              montrer("services") ? blocEquipements(r) : "",
              montrer("services") ? blocBassins(r) : "",
              montrer("services") ? blocProjets(r) : "",
@@ -2197,6 +2269,7 @@ export default function (A) {
     remplirPluie(r);
     remplirSol(r);
     remplirPopMod(r);
+    remplirPop3(r);
     remplirEquipements(r);
     remplirBassins(r);
     remplirProjets(r);
@@ -2231,5 +2304,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocPop3, chargerPop3, remplirPop3, htmlPop3, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=25";
+import { S } from "./etat.js?v=26";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, situation, valeurBrute } = A;
@@ -1740,7 +1740,13 @@ export default function (A) {
     if (!el) return;
     chargerProjets().then(function () {
       var h = htmlProjets(r);
-      el.innerHTML = h || ('<p class="x-note">' + T("") + "</p>");
+      /* Sur les 125 communes que la Banque mondiale ne nomme pas, ce bloc n'a
+         rien à dire — et ne doit RIEN laisser. Il posait jusqu'ici un
+         paragraphe vide, invisible mais porteur de sa marge : un blanc au
+         milieu de la fiche que rien n'expliquait. On vide le conteneur au
+         lieu d'y écrire le néant. */
+      el.innerHTML = h;
+      if (!h) el.hidden = true;
     });
   }
 

@@ -17,8 +17,9 @@
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-campus.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-campus.html", "en": "https://explorateur.atmart.ltd/en/donnees-campus.html", "es": "https://explorateur.atmart.ltd/es/donnees-campus.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-MKa6cKJLNrT9ktsD/tetXTs0XRyfnjZtd00Uhe8n3vc=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-KxQtrDilZNXhY3m/jK90XvrW3L0CxSAxhHZqF861Ajc=' 'sha256-MKa6cKJLNrT9ktsD/tetXTs0XRyfnjZtd00Uhe8n3vc=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
   <link rel="canonical" href="https://explorateur.atmart.ltd/en/donnees-campus.html" />
@@ -59,8 +60,8 @@
     <h1 data-i18n-html="pg.campus.h1">Atmart <em>Campus</em></h1>
     <p class="lead" data-i18n-html="pg.campus.lead">Academic access to Atmart data, for final dissertations, theses and applied research on Haiti. Free, verified, supported.</p>
     <div class="cta-row" style="display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.4rem">
-      <a href="#demande" class="btn btn-primary">Demander un accès</a>
-      <a href="#universites" class="btn btn-outline">Je représente une université</a>
+      <a data-i18n="cmp.8da131" href="#demande" class="btn btn-primary">Request access</a>
+      <a data-i18n="cmp.aab0eb" href="#universites" class="btn btn-outline">I represent a university</a>
     </div>
   </div>
 </section>
@@ -72,10 +73,10 @@
     <h2 data-i18n-html="cmp.f57e9c" class="d-h">A dissertation should not stall for want of data</h2>
     <p data-i18n-html="cmp.6b0216" class="d-sub">Too many final-year projects rest on second-hand figures, undated, copied from an earlier dissertation. It is not a problem of effort: it is a problem of access. Atmart Campus opens that access — without destroying the value of what is sold elsewhere, because both have to last.</p>
     <div class="d-tiles" style="margin-top:1.3rem">
-      <div><span class="ico">📚</span><b>Pour l'étudiant</b><p data-i18n-html="cmp.249a65">Quotable data, with its source and its limits: a jury cannot brush it aside.</p></div>
-      <div><span class="ico">🔬</span><b>Pour le chercheur</b><p data-i18n-html="cmp.3730aa">A clean, versioned starting point that makes a piece of work reproducible.</p></div>
-      <div><span class="ico">🏫</span><b>Pour l'université</b><p data-i18n-html="cmp.fa40eb">A methodological level that rises across a whole cohort, with no new budget.</p></div>
-      <div><span class="ico">🇭🇹</span><b>Pour le pays</b><p data-i18n-html="cmp.1231db">Work that finally documents local realities instead of assuming them.</p></div>
+      <div><span class="ico">📚</span><b data-i18n="cmp.f7e6db">For the student</b><p data-i18n-html="cmp.249a65">Quotable data, with its source and its limits: a jury cannot brush it aside.</p></div>
+      <div><span class="ico">🔬</span><b data-i18n="cmp.5c98cd">For the researcher</b><p data-i18n-html="cmp.3730aa">A clean, versioned starting point that makes a piece of work reproducible.</p></div>
+      <div><span class="ico">🏫</span><b data-i18n="cmp.2ddd59">For the university</b><p data-i18n-html="cmp.fa40eb">A methodological level that rises across a whole cohort, with no new budget.</p></div>
+      <div><span class="ico">🇭🇹</span><b data-i18n="cmp.2b860f">For the country</b><p data-i18n-html="cmp.1231db">Work that finally documents local realities instead of assuming them.</p></div>
     </div>
   </div>
 </section>
@@ -116,14 +117,14 @@
       <div class="x-tableau" tabindex="0"><table class="d-tab">
         <thead><tr><th scope="col">Pack</th><th data-i18n-html="cmp.81b82b" scope="col">What it contains today</th><th scope="col">État</th></tr></thead>
         <tbody>
-          <tr><td data-i18n-html="cmp.eb9aed">Territories &amp; urban planning</td><td data-i18n-html="cmp.2bb6aa">Communal sections, towns, populated places, GeoJSON, OCHA p-codes</td><td><span class="d-pill live">Disponible</span></td></tr>
-          <tr><td data-i18n-html="cmp.ed5766">Economics &amp; finance</td><td data-i18n-html="cmp.c0b311">Diaspora remittances 2000–2025 (8 countries), comparative series</td><td><span class="d-pill live">Disponible</span></td></tr>
-          <tr><td data-i18n-html="cmp.f2d9e7">Agronomy &amp; food security</td><td data-i18n-html="cmp.fe7dd1">Prices of staple goods by market and by month</td><td><span class="d-pill spons">Parrainable</span></td></tr>
-          <tr><td data-i18n-html="cmp.f7fb27">Public health</td><td data-i18n-html="cmp.5e4916">Health indicators by department, population denominators</td><td><span class="d-pill spons">Parrainable</span></td></tr>
-          <tr><td>Éducation</td><td data-i18n-html="cmp.a83b77">Schooling, literacy, spending by department</td><td><span class="d-pill spons">Parrainable</span></td></tr>
-          <tr><td data-i18n-html="cmp.044883">Management &amp; entrepreneurship</td><td data-i18n-html="cmp.a7f18a">Economic series, territorial demography, markets</td><td><span class="d-pill soon">En préparation</span></td></tr>
-          <tr><td data-i18n-html="cmp.5e0309">Governance &amp; administration</td><td data-i18n-html="cmp.2714d5">Administrative divisions, public budget series</td><td><span class="d-pill soon">En préparation</span></td></tr>
-          <tr><td data-i18n-html="cmp.b4fe9f">Demography &amp; migration</td><td data-i18n-html="cmp.9e2df2">Population, urbanisation and internal migration in Haiti</td><td><span class="d-pill soon">En préparation</span></td></tr>
+          <tr><td data-i18n-html="cmp.eb9aed">Territories &amp; urban planning</td><td data-i18n-html="cmp.2bb6aa">Communal sections, towns, populated places, GeoJSON, OCHA p-codes</td><td><span data-i18n="cmp.f4e4f6" class="d-pill live">Available</span></td></tr>
+          <tr><td data-i18n-html="cmp.ed5766">Economics &amp; finance</td><td data-i18n-html="cmp.c0b311">Diaspora remittances 2000–2025 (8 countries), comparative series</td><td><span data-i18n="cmp.f4e4f6" class="d-pill live">Available</span></td></tr>
+          <tr><td data-i18n-html="cmp.f2d9e7">Agronomy &amp; food security</td><td data-i18n-html="cmp.fe7dd1">Prices of staple goods by market and by month</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Sponsorable</span></td></tr>
+          <tr><td data-i18n-html="cmp.f7fb27">Public health</td><td data-i18n-html="cmp.5e4916">Health indicators by department, population denominators</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Sponsorable</span></td></tr>
+          <tr><td>Éducation</td><td data-i18n-html="cmp.a83b77">Schooling, literacy, spending by department</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Sponsorable</span></td></tr>
+          <tr><td data-i18n-html="cmp.044883">Management &amp; entrepreneurship</td><td data-i18n-html="cmp.a7f18a">Economic series, territorial demography, markets</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">In preparation</span></td></tr>
+          <tr><td data-i18n-html="cmp.5e0309">Governance &amp; administration</td><td data-i18n-html="cmp.2714d5">Administrative divisions, public budget series</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">In preparation</span></td></tr>
+          <tr><td data-i18n-html="cmp.b4fe9f">Demography &amp; migration</td><td data-i18n-html="cmp.9e2df2">Population, urbanisation and internal migration in Haiti</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">In preparation</span></td></tr>
         </tbody>
       </table></div>
     </div>
@@ -168,7 +169,7 @@
         <thead><tr><th scope="col">Formule</th><th data-i18n-html="cmp.0f9905" scope="col">What it covers</th><th scope="col">Financement</th></tr></thead>
         <tbody>
           <tr><td data-i18n-html="cmp.28f543">Faculty agreement</td><td data-i18n-html="cmp.940dde">Access for every dissertation in a faculty over one academic year, hands-on workshop included</td><td data-i18n-html="cmp.44117d" class="p">institutional licence</td></tr>
-          <tr><td data-i18n-html="cmp.2cbcde">Sponsored cohort</td><td data-i18n-html="cmp.21c78f">One theme, one cohort, one dataset opened and financed by a third party</td><td class="p">un <a href="donnees-parrainage.html">parrain</a></td></tr>
+          <tr><td data-i18n-html="cmp.2cbcde">Sponsored cohort</td><td data-i18n-html="cmp.21c78f">One theme, one cohort, one dataset opened and financed by a third party</td><td class="p">un <a data-i18n="cmp.1a90a6" href="donnees-parrainage.html">sponsor</a></td></tr>
           <tr><td>Laboratoire</td><td data-i18n-html="cmp.579cae">Multi-year access with updates and methodological support for a research team</td><td data-i18n-html="cmp.3bba9a" class="p">on quotation</td></tr>
         </tbody>
       </table></div>
@@ -188,39 +189,39 @@
     <h2 data-i18n-html="cmp.7ee7ce" class="d-h">Your request in six fields</h2>
     <form class="d-form" id="cmp-form">
       <div class="two">
-        <div><label for="c-nom">Nom et prénom</label><input id="c-nom" name="nom" required /></div>
-        <div><label for="c-mail">E-mail (institutionnel si possible)</label><input id="c-mail" name="email" type="email" required /></div>
+        <div><label data-i18n="cmp.2a8415" for="c-nom">Full name</label><input id="c-nom" name="nom" required /></div>
+        <div><label data-i18n="cmp.b11610" for="c-mail">E-mail (institutional if possible)</label><input id="c-mail" name="email" type="email" required /></div>
       </div>
       <div class="two">
-        <div><label for="c-univ">Université / école</label><input id="c-univ" name="univ" required /></div>
-        <div><label for="c-niv">Niveau</label>
+        <div><label data-i18n="cmp.607905" for="c-univ">University / school</label><input id="c-univ" name="univ" required /></div>
+        <div><label data-i18n="cmp.2b5104" for="c-niv">Level</label>
           <select id="c-niv" name="niveau">
-            <option>Licence — mémoire de sortie</option>
-            <option>Master</option>
-            <option>Doctorat</option>
-            <option>Enseignant / encadrant</option>
-            <option>Chercheur / laboratoire</option>
+            <option data-i18n="cmp.b5a857">Bachelor's — final dissertation</option>
+            <option data-i18n="cmp.a2bb34">Master's</option>
+            <option data-i18n="cmp.899521">Doctorate</option>
+            <option data-i18n="cmp.52fa41">Teacher / supervisor</option>
+            <option data-i18n="cmp.da5868">Researcher / laboratory</option>
           </select>
         </div>
       </div>
       <div class="two">
-        <div><label for="c-disc">Discipline</label>
+        <div><label data-i18n="cmp.a1b14d" for="c-disc">Discipline</label>
           <select id="c-disc" name="discipline">
-            <option>Territoires &amp; urbanisme</option>
-            <option>Économie &amp; finance</option>
-            <option>Agronomie &amp; sécurité alimentaire</option>
-            <option>Santé publique</option>
-            <option>Éducation</option>
-            <option>Gestion &amp; entrepreneuriat</option>
-            <option>Gouvernance &amp; administration</option>
-            <option>Démographie &amp; migrations</option>
-            <option>Autre</option>
+            <option data-i18n="cmp.eb9aed">Territories &amp; urban planning</option>
+            <option data-i18n="cmp.ed5766">Economics &amp; finance</option>
+            <option data-i18n="cmp.f2d9e7">Agronomy &amp; food security</option>
+            <option data-i18n="cmp.f7fb27">Public health</option>
+            <option data-i18n="cmp.2ebc6f">Education</option>
+            <option data-i18n="cmp.044883">Management &amp; entrepreneurship</option>
+            <option data-i18n="cmp.5e0309">Governance &amp; administration</option>
+            <option data-i18n="cmp.b4fe9f">Demography &amp; migration</option>
+            <option data-i18n="cmp.eb72e1">Other</option>
           </select>
         </div>
-        <div><label for="c-date">Date de soutenance prévue</label><input id="c-date" name="date" placeholder="ex. juin 2027" /></div>
+        <div><label data-i18n="cmp.a47220" for="c-date">Planned defence date</label><input id="c-date" name="date" placeholder="ex. juin 2027" /></div>
       </div>
-      <div><label for="c-enc">Encadrant (nom et e-mail)</label><input id="c-enc" name="encadrant" /></div>
-      <div><label for="c-suj">Sujet et question de recherche</label><textarea id="c-suj" name="sujet" rows="4" placeholder="En deux ou trois phrases : ce que vous cherchez à démontrer et sur quel territoire."></textarea></div>
+      <div><label data-i18n="cmp.68c975" for="c-enc">Supervisor (name and e-mail)</label><input id="c-enc" name="encadrant" /></div>
+      <div><label data-i18n="cmp.6defe2" for="c-suj">Topic and research question</label><textarea id="c-suj" name="sujet" rows="4" placeholder="En deux ou trois phrases : ce que vous cherchez à démontrer et sur quel territoire."></textarea></div>
       <div><button data-i18n-html="cmp.1acb18" type="submit" class="btn btn-primary">Send my request</button></div>
       <p data-i18n-html="cmp.bdb946" class="d-note" style="margin-top:0.8rem">The form simply opens your mailbox — no data is stored on this site. Attach your proof of enrolment to the e-mail before sending it.</p>
     </form>

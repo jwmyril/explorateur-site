@@ -17,8 +17,9 @@
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-parrainage.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-parrainage.html", "en": "https://explorateur.atmart.ltd/en/donnees-parrainage.html", "es": "https://explorateur.atmart.ltd/es/donnees-parrainage.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-mLZOquJa7KezBYzvTo16U3p+HgwKUGLBKy2H2OqEF3E=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM=' 'sha256-zjNdYAamMolC+J2rAdMdpeCN5VNnWzYOx+r5yFMIdMw='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-56FLUh3UNwkmAVUKIXflhwbT/8mM/gsTKJYlS4MBvQg=' 'sha256-mLZOquJa7KezBYzvTo16U3p+HgwKUGLBKy2H2OqEF3E=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM=' 'sha256-zjNdYAamMolC+J2rAdMdpeCN5VNnWzYOx+r5yFMIdMw='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
   <link rel="canonical" href="https://explorateur.atmart.ltd/es/donnees-parrainage.html" />
@@ -59,8 +60,8 @@
     <h1 data-i18n-html="pg.parrainage.h1">Patrocinar un <em>conjunto de datos</em></h1>
     <p class="lead" data-i18n-html="pg.parrainage.lead">Un banco, una empresa, una ONG, un ministerio o una fundación financia la apertura, la documentación o la actualización de un conjunto de datos. Ese conjunto pasa a ser accesible gratuitamente para estudiantes e investigadores — y el país gana un ladrillo de conocimiento que no existía.</p>
     <div class="cta-row" style="display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.4rem">
-      <a href="#catalogue" class="btn btn-primary">Voir les jeux à parrainer</a>
-      <a href="#contact" class="btn btn-outline">Parler du programme</a>
+      <a data-i18n="par.94c588" href="#catalogue" class="btn btn-primary">Ver los conjuntos a patrocinar</a>
+      <a data-i18n="par.fc94c8" href="#contact" class="btn btn-outline">Hablar del programa</a>
     </div>
   </div>
 </section>
@@ -71,9 +72,9 @@
     <p class="d-lbl">Le principe</p>
     <h2 data-i18n-html="par.d860a7" class="d-h">Tres intereses que coinciden en el mismo punto</h2>
     <div class="d-tiles" style="margin-top:1.1rem">
-      <div><span class="ico">🎓</span><b>Les étudiants et chercheurs</b><p data-i18n-html="par.31c905">Tienen las preguntas y el tiempo, pero rara vez los medios para acceder a datos preparados.</p></div>
-      <div><span class="ico">🏦</span><b>Les entreprises et institutions</b><p data-i18n-html="par.edc303">Buscan una contribución social concreta, visible y verificable, no un logotipo en una pancarta.</p></div>
-      <div><span class="ico">🗂</span><b>Atmart Data</b><p data-i18n-html="par.d8fc0a">Pueden abrir más datos, pero no pueden financiar por sí solos la apertura de todo el catálogo.</p></div>
+      <div><span class="ico">🎓</span><b data-i18n="par.73eb2d">Los estudiantes e investigadores</b><p data-i18n-html="par.31c905">Tienen las preguntas y el tiempo, pero rara vez los medios para acceder a datos preparados.</p></div>
+      <div><span class="ico">🏦</span><b data-i18n="par.1ab00a">Las empresas e instituciones</b><p data-i18n-html="par.edc303">Buscan una contribución social concreta, visible y verificable, no un logotipo en una pancarta.</p></div>
+      <div><span class="ico">🗂</span><b data-i18n="par.0019a8">Atmart Data</b><p data-i18n-html="par.d8fc0a">Pueden abrir más datos, pero no pueden financiar por sí solos la apertura de todo el catálogo.</p></div>
     </div>
     <div class="d-box" style="margin-top:1.4rem">
       <h3 data-i18n-html="par.4a998b">Lo que financia exactamente el patrocinio</h3>
@@ -242,27 +243,27 @@
     <p data-i18n-html="par.1b85d0" class="d-sub">Díganos qué le interesa: un conjunto concreto, un sector, una universidad o simplemente la idea general. Volvemos con una propuesta cifrada y un convenio tipo.</p>
     <form class="d-form" id="spo-form">
       <div class="two">
-        <div><label for="s-org">Organisation</label><input id="s-org" name="org" required /></div>
-        <div><label for="s-nom">Nom du contact</label><input id="s-nom" name="nom" required /></div>
+        <div><label data-i18n="par.350be3" for="s-org">Organización</label><input id="s-org" name="org" required /></div>
+        <div><label data-i18n="par.67f8a5" for="s-nom">Nombre del contacto</label><input id="s-nom" name="nom" required /></div>
       </div>
       <div class="two">
-        <div><label for="s-mail">E-mail</label><input id="s-mail" name="email" type="email" required /></div>
-        <div><label for="s-form">Formule envisagée</label>
+        <div><label data-i18n="par.2550d9" for="s-mail">Correo electrónico</label><input id="s-mail" name="email" type="email" required /></div>
+        <div><label data-i18n="par.a2c1b1" for="s-form">Fórmula prevista</label>
           <select id="s-form" name="formule">
-            <option>Parrainage d'un jeu de données</option>
-            <option>Bourse data mémoire</option>
-            <option>Pack de recherche (faculté ou laboratoire)</option>
-            <option>Cohorte thématique annuelle</option>
-            <option>Fonds de recherche appliquée</option>
-            <option>À définir ensemble</option>
+            <option data-i18n="par.38ee8a">Patrocinio de un conjunto de datos</option>
+            <option data-i18n="par.99b4c9">Beca de datos para tesis</option>
+            <option data-i18n="par.aa893e">Pack de investigación (facultad o laboratorio)</option>
+            <option data-i18n="par.e0c39e">Cohorte temática anual</option>
+            <option data-i18n="par.f6041b">Fondo de investigación aplicada</option>
+            <option data-i18n="par.db4f23">Por definir conjuntamente</option>
           </select>
         </div>
       </div>
       <div class="two">
-        <div><label for="s-jeu">Jeu ou thème visé</label><input id="s-jeu" name="jeu" placeholder="ex. prix des marchés, éducation, santé…" /></div>
-        <div><label for="s-bud">Enveloppe envisagée (facultatif)</label><input id="s-bud" name="budget" placeholder="ex. 2 500 $" /></div>
+        <div><label data-i18n="par.59f3f6" for="s-jeu">Conjunto o tema previsto</label><input id="s-jeu" name="jeu" placeholder="ex. prix des marchés, éducation, santé…" /></div>
+        <div><label data-i18n="par.352c77" for="s-bud">Presupuesto previsto (opcional)</label><input id="s-bud" name="budget" placeholder="ex. 2 500 $" /></div>
       </div>
-      <div><label for="s-msg">Objectif du parrainage</label><textarea id="s-msg" name="msg" rows="4" placeholder="Ce que votre organisation cherche à soutenir, et pourquoi ce thème."></textarea></div>
+      <div><label data-i18n="par.32bc7a" for="s-msg">Objetivo del patrocinio</label><textarea id="s-msg" name="msg" rows="4" placeholder="Ce que votre organisation cherche à soutenir, et pourquoi ce thème."></textarea></div>
       <div><button type="submit" class="btn btn-primary">Envoyer</button></div>
       <p data-i18n-html="par.b0f3df" class="d-note" style="margin-top:0.8rem">O escriba a <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a>. Atmart LLC es una sociedad registrada en Estados Unidos; el convenio y la facturación se hacen en dólares.</p>
     </form>

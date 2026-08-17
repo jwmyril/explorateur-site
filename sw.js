@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v44";
+const CACHE = "explorateur-v45";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -23,7 +23,7 @@ const CORE = [
   "/assets/modules/explorateur-recherche.js",
   "/assets/modules/explorateur-comparaison.js",
   "/couches.html", "/fiche.html", "/assets/couches.js?v=4",
-  "/assets/pwa.js?v=1",
+  "/assets/pwa.js?v=2",
   "/assets/brand/favicon.ico", "/assets/brand/logo-32.png",
   "/assets/brand/logo-dark-96.png", "/assets/brand/apple-touch-icon.png",
   // Icones de l'application installee : Android et Chrome exigent 192 et 512,
@@ -48,10 +48,30 @@ const DATA = [
   "/data/haiti_contour_simplifie.geojson",
 ].map((u) => u + DV);
 
+/* A L'INSTALLATION, ON NE PREND QUE LE NOYAU.
+   Mesure du 16/08 sur une premiere visite : DOM pret a 8,0 s et chargement
+   complet a 12,5 s, alors que le fichier le plus lourd arrivait en 67 ms.
+   Le reseau n'y etait pour rien — le service worker telechargeait ses vingt
+   fichiers PENDANT que la page essayait de s'afficher, et le nouveau venu
+   payait comptant une avance faite pour ses visites suivantes. Le noyau
+   (pages, styles, moteur, icones, index leger) part donc seul ; les donnees
+   attendent que la page soit affichee, et c'est elle qui le dit. */
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) =>
-    Promise.all(CORE.concat(DATA).map((u) => c.add(u).catch(() => null)))
+    Promise.all(CORE.map((u) => c.add(u).catch(() => null)))
   ).then(() => self.skipWaiting()));
+});
+
+/* Les donnees, quand plus personne n'attend. Si le message n'arrive jamais
+   — onglet ferme trop tot, page sans script — rien n'est perdu : chaque
+   fichier entre au cache a sa premiere lecture, comme le reste. */
+let donneesFaites = false;
+self.addEventListener("message", (e) => {
+  if (!e.data || e.data.type !== "precharger" || donneesFaites) return;
+  donneesFaites = true;
+  e.waitUntil(caches.open(CACHE).then((c) =>
+    Promise.all(DATA.map((u) => c.add(u).catch(() => null)))
+  ));
 });
 
 self.addEventListener("activate", (e) => {

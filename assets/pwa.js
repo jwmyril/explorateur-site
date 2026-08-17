@@ -112,6 +112,18 @@
     setTimeout(function () { if (!propose) { proposer(); nettoyer(); } }, 30000);
   });
 
+  /* Le signal de fin de course : la page est affichée, plus personne
+     n'attend, le service worker peut prendre les données pour les visites
+     suivantes. Deux secondes de marge après `load` — sur un mobile bas de
+     gamme, le rendu n'est pas fini quand l'événement part. */
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+        navigator.serviceWorker.controller.postMessage({ type: "precharger" });
+      }
+    }, 2000);
+  });
+
   /* état de la connexion */
   function horsLigne() {
     var t = texteHorsLigne();

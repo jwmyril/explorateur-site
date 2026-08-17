@@ -1093,11 +1093,37 @@ export default function (A) {
     return r.niveau_admin === "3" ? '<div id="x-seismes" class="x-pyr"></div>' : "";
   }
 
+  /* Le bloc charge SA donnée lui-même au lieu de se greffer sur la promesse
+     des services. Cette greffe a coûté une soirée : le fichier partait bien,
+     le module était à jour, et `S.seismes` restait vide sans qu'aucune
+     erreur ne le dise. Un bloc qui dépend de l'ordre de résolution d'une
+     promesse partagée avec quatre autres jeux est un bloc dont la panne
+     n'est pas diagnosticable depuis la page.
+
+     Le coût est nul : la requête part en parallèle des autres, et la
+     promesse est gardée pour ne charger qu'une fois. */
+  function chargerSeismes() {
+    if (S.seismesPromesse) return S.seismesPromesse;
+    S.seismesPromesse = charger(DIR + "atmart_seismes_communes.json", 1)
+      .then(function (t) {
+        S.seismes = JSON.parse(t);
+        return S.seismes;
+      })
+      .catch(function () { S.seismes = null; return null; });
+    return S.seismesPromesse;
+  }
+
   function remplirSeismes(r) {
     var el = $("#x-seismes");
     if (!el) return;
-    chargerServices().then(function () {
-      el.innerHTML = htmlSeismes(r);
+    chargerSeismes().then(function () {
+      var h = htmlSeismes(r);
+      /* Si la donnée manque, on le DIT au lieu de laisser un vide : une
+         section blanche laisse croire à un bug d'affichage, ce qui est
+         moins utile qu'une phrase honnête. */
+      el.innerHTML = h || ('<p class="x-note">' +
+        T("L'historique sismique n'a pas pu être chargé — la fiche reste lisible sans lui.") +
+        "</p>");
     });
   }
 
@@ -1429,5 +1455,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, remplirSeismes, htmlSeismes, blocObjectif, blocAccueil, blocIndicateurs, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocObjectif, blocAccueil, blocIndicateurs, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

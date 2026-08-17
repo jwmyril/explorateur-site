@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v51";
+const CACHE = "explorateur-v52";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -15,13 +15,13 @@ const DV = "?d=2026-08-15a";   // doit suivre le DV de assets/modules/explorateu
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=33", "/assets/data.css?v=28", "/assets/modules/explorateur.js?v=8",
-  "/assets/modules/etat.js?v=7",
-  "/assets/modules/explorateur-i18n.js?v=7",
-  "/assets/modules/explorateur-carte.js?v=7",
-  "/assets/modules/explorateur-fiche.js?v=7",
-  "/assets/modules/explorateur-recherche.js?v=7",
-  "/assets/modules/explorateur-comparaison.js?v=7",
+  "/assets/style.css?v=33", "/assets/data.css?v=28", "/assets/modules/explorateur.js?v=9",
+  "/assets/modules/etat.js?v=8",
+  "/assets/modules/explorateur-i18n.js?v=8",
+  "/assets/modules/explorateur-carte.js?v=8",
+  "/assets/modules/explorateur-fiche.js?v=8",
+  "/assets/modules/explorateur-recherche.js?v=8",
+  "/assets/modules/explorateur-comparaison.js?v=8",
   "/couches.html", "/fiche.html", "/assets/couches.js?v=4",
   "/assets/pwa.js?v=2",
   "/assets/brand/favicon.ico", "/assets/brand/logo-32.png",

@@ -5,8 +5,8 @@
    Aucun compteur n'est écrit en dur : tout est compté depuis les fichiers. */
 /* SANS NUMÉRO DE VERSION, ET C'EST OBLIGATOIRE.
    Le navigateur identifie un module par son URL COMPLÈTE, requête comprise :
-   "./etat.js?v=23" et "./etat.js?v=23" sont deux modules distincts, chacun avec
-   son propre objet S. Les six sous-modules importent "./etat.js?v=23" ; tant que
+   "./etat.js?v=25" et "./etat.js?v=25" sont deux modules distincts, chacun avec
+   son propre objet S. Les six sous-modules importent "./etat.js?v=25" ; tant que
    cette ligne portait ?v=21, l'état était coupé en deux — le moteur
    remplissait S.terr et S.vals d'un côté, la fiche les lisait de l'autre et
    n'y trouvait rien. Symptôme observé en production le 17/08/2026 : toutes
@@ -14,7 +14,7 @@
    alors que les 4 200 valeurs étaient bel et bien chargées.
    Si etat.js doit un jour être versionné, il faut l'être dans les SEPT
    fichiers à la fois, et dans la liste CORE du service worker. */
-import { S } from "./etat.js?v=23";
+import { S } from "./etat.js?v=25";
 
 (async function () {
   "use strict";
@@ -775,7 +775,7 @@ import { S } from "./etat.js?v=23";
      mais l'ordre de cette liste doit continuer de se lire comme l'ordre des
      dépendances. */
   for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison", "rapport"]) {
-    (await import("./explorateur-" + m + ".js?v=23")).default(A);
+    (await import("./explorateur-" + m + ".js?v=25")).default(A);
   }
 
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);

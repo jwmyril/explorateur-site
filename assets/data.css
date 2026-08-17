@@ -1040,3 +1040,19 @@ html[lang="fr"] .x-partiel { display: none; }
   }
   .r-pied span:last-child { font-family: ui-monospace, "Consolas", monospace; text-align: right; }
 }
+
+/* ------------------------------------------------- temps d'accès routier
+   Quatre colonnes dont trois de chiffres : la lecture se fait en comparant
+   la ligne, donc les nombres sont alignés à droite et tabulaires — sans
+   quoi « 6 » et « 46 » ne se comparent pas d'un coup d'œil. Sur téléphone,
+   le tableau défile plutôt que de se comprimer : une colonne écrasée ment
+   sur ce qu'elle contient. */
+.x-acces { width: 100%; border-collapse: collapse; margin: 0.7rem 0;
+           font-size: 0.9rem; }
+.x-acces th, .x-acces td { padding: 0.45rem 0.6rem; text-align: right;
+                           border-bottom: 1px solid var(--border); }
+.x-acces th:first-child, .x-acces td:first-child { text-align: left; }
+.x-acces thead th { font-size: 0.78rem; color: var(--ink-dim);
+                    font-weight: 600; border-bottom-width: 2px; }
+.x-acces td { font-variant-numeric: tabular-nums; }
+.x-acces td small { color: var(--ink-dim); font-size: 0.76rem; }

@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=23";
+import { S } from "./etat.js?v=25";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, situation, valeurBrute } = A;
@@ -1976,6 +1976,194 @@ export default function (A) {
     return h.join("");
   }
 
+  /* ---------------------------------------------------------- temps d'accès par la route (OSM, calcul Atmart)
+     Réseau routier OpenStreetMap, ODbL (passeport PSP-024). Dijkstra sur
+     1,33 million de nœuds, calculé chez Atmart — aucune API commerciale
+     n'a été interrogée, et le barème de vitesses est publié parce que
+     c'est lui qui détermine tous les résultats.
+
+     DEUX MESURES, ET LEUR ÉCART EST L'INFORMATION. Depuis le bourg, tout
+     est proche — c'est mécanique, le bourg est là où sont les
+     établissements. Depuis les sections, pondéré par les habitants là où
+     ils vivent, Léogâne passe de 6 secondes à 46 minutes. Une commune où
+     le centre est à deux minutes et la section la plus lointaine à trois
+     heures n'est pas une commune desservie. */
+  function blocAcces(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-acces" class="x-pyr"><p class="x-note">' +
+        T("Temps d'accès — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerAcces() {
+    if (S.accesPromesse) return S.accesPromesse;
+    S.accesPromesse = charger(DIR + "atmart_acces_routier.json", 1)
+      .then(function (t) { S.acces = JSON.parse(t); return S.acces; })
+      .catch(function () { S.acces = null; return null; });
+    return S.accesPromesse;
+  }
+
+  function remplirAcces(r) {
+    var el = $("#x-acces");
+    if (!el) return;
+    chargerAcces().then(function () {
+      var h = htmlAcces(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("Les temps d'accès n'ont pas pu être chargés — la fiche reste lisible sans eux.") + "</p>");
+    });
+  }
+
+  function htmlAcces(r) {
+    var d = S.acces && S.acces.communes ? S.acces.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.acces.meta || {};
+    var b = d.b || {}, s = d.s || {}, n = d.n || [];
+    /* b = [minutes, km, nom, type] depuis le chef-lieu.
+       s = [médiane PONDÉRÉE par la population, médiane par section,
+            maximum, nom de la section la plus lointaine].
+       Le site affiche s[0] et non s[1] : la médiane par section compte
+       pour un une section de 300 habitants et une de 30 000, ce qui
+       décrit la géographie et non les gens. */
+    var mn = function (v) { return v === "" || v == null ? null : arr(v, 1); };
+    var cel = function (v, nom) {
+      var t = mn(v);
+      if (t === null) return "—";
+      return esc(t) + " min" + (nom ? "<br><small>" + esc(nom) + "</small>" : "");
+    };
+    var h = ["<h3>" + T("Combien de temps pour atteindre un service") + "</h3>"];
+    h.push('<p class="x-note" style="margin-top:0">' + T(
+      "Deux mesures, et c'est leur écart qui informe. Depuis le bourg, tout " +
+      "est proche : le bourg est l'endroit même où les services sont " +
+      "installés. Depuis les sections, en pesant chaque habitant là où il " +
+      "vit, la distance réelle apparaît.") + "</p>");
+    h.push('<div class="x-tabwrap"><table class="x-acces"><thead><tr><th scope="col">' +
+      T("Service") + '</th><th scope="col">' + T("depuis le bourg") +
+      '</th><th scope="col">' + T("pour la moitié des habitants") +
+      '</th><th scope="col">' + T("section la plus lointaine") +
+      "</th></tr></thead><tbody>");
+    [["sante", "un point de santé"], ["hopital", "un hôpital"],
+     ["ecole", "une école"], ["marche", "un marché"]].forEach(function (p) {
+      var vb = b[p[0]], vs = s[p[0]];
+      if (!vb && !vs) return;
+      h.push("<tr><td>" + T(p[1]) + "</td>" +
+        "<td>" + (vb ? cel(vb[0], vb[2]) : "—") + "</td>" +
+        "<td>" + (vs ? cel(vs[0]) : "—") + "</td>" +
+        "<td>" + (vs ? cel(vs[2], vs[3]) : "—") + "</td></tr>");
+    });
+    h.push("</tbody></table></div>");
+    if (n.length >= 5 && n[2]) {
+      var seuils = [T("plus de 30 minutes") + " : " + esc(n[2])];
+      if (n[3]) seuils.push(T("plus d'une heure") + " : " + esc(n[3]));
+      if (n[4]) seuils.push(T("plus de deux heures") + " : " + esc(n[4]));
+      h.push('<p class="x-note">' + TF(
+        "Sections éloignées d'un point de santé, sur {t} — {seuils}.",
+        { t: esc(n[0]), seuils: seuils.join(" · ") }) + "</p>");
+    }
+    if (n.length >= 6 && n[5]) {
+      h.push('<p class="x-limite">' + TF(
+        "{k} section(s) ne sont reliées à aucune route cartographiée : leur " +
+        "accès est INCONNU, pas mauvais. Elles ne sont comptées dans aucun " +
+        "seuil ci-dessus, faute de le savoir.", { k: esc(n[5]) }) + "</p>");
+    }
+    if (n.length >= 2 && n[1]) {
+      h.push('<p class="x-note">' + TF(
+        "Calcul pondéré sur {p} habitants, placés là où le satellite les voit " +
+        "vivre plutôt qu'au centre géométrique de leur section.",
+        { p: esc(Number(n[1]).toLocaleString("fr-FR")) }) + "</p>");
+    }
+    h.push('<p class="x-limite">' + T(
+      "Temps en conditions normales : l'état de la chaussée, la saison des " +
+      "pluies, les barrages et l'insécurité n'entrent pas dans le calcul. " +
+      "C'est un plancher optimiste, jamais une prévision de trajet. Et un " +
+      "établissement cartographié n'est pas un établissement ouvert.") + "</p>");
+    h.push('<p class="x-src"><small>' + esc(m.attribution || m.source || "") +
+           "</small></p>");
+    return h.join("");
+  }
+
+  /* ---------------------------------------------------------- écoles déclarées au ministère, confrontées aux écoles cartographiées
+     Registres MENFP/DPCE 2024-2025, dix PDF départementaux dépouillés page à
+     page (17 827 codes CIE distincts, 643 lignes matériellement répétées
+     écartées), face à l'extrait OSM du 6 août 2026 (7 251 écoles vues).
+
+     LES DEUX CHIFFRES SONT PUBLIÉS PARCE QU'AUCUN N'EST LA VÉRITÉ. Le
+     registre compte ce qui est DÉCLARÉ : une école fermée mais non radiée
+     y reste. La carte compte ce qui est VU : une commune sans cartographe
+     paraît vide. Leur écart ne mesure pas des écoles, il mesure l'état de
+     l'information sur ce territoire — et 41 % à l'échelle du pays veut
+     dire que la moitié des écoles d'Haïti n'apparaît sur aucune carte. */
+  function blocEcolesdec(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-ecolesdec" class="x-pyr"><p class="x-note">' +
+        T("Écoles — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerEcolesdec() {
+    if (S.ecolesdecPromesse) return S.ecolesdecPromesse;
+    S.ecolesdecPromesse = charger(DIR + "atmart_ecoles_declarees.json", 1)
+      .then(function (t) { S.ecolesdec = JSON.parse(t); return S.ecolesdec; })
+      .catch(function () { S.ecolesdec = null; return null; });
+    return S.ecolesdecPromesse;
+  }
+
+  function remplirEcolesdec(r) {
+    var el = $("#x-ecolesdec");
+    if (!el) return;
+    chargerEcolesdec().then(function () {
+      var h = htmlEcolesdec(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("Le registre des écoles n'a pas pu être chargé — la fiche reste lisible sans lui.") + "</p>");
+    });
+  }
+
+  function htmlEcolesdec(r) {
+    var d = S.ecolesdec && S.ecolesdec.communes ? S.ecolesdec.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.ecolesdec.meta || {};
+    var h = ["<h3>" + T("Les écoles : déclarées et vues") + "</h3>"];
+    h.push('<ul class="x-liste-sol">');
+    h.push("<li><b>" + esc(Number(d.t).toLocaleString("fr-FR")) + "</b> " +
+           T("écoles déclarées au ministère (2024-2025)") + "</li>");
+    if (d.pu != null && d.np != null) {
+      h.push("<li>" + TF("dont {a} du secteur public et {b} du secteur non public",
+        { a: "<b>" + esc(d.pu) + "</b>", b: "<b>" + esc(d.np) + "</b>" }) + "</li>");
+    }
+    if (d.v) {
+      h.push("<li><b>" + esc(Number(d.v).toLocaleString("fr-FR")) + "</b> " +
+             T("écoles visibles sur OpenStreetMap") + "</li>");
+    } else {
+      h.push('<li><span class="x-nd">' + T("non documenté") + "</span> " +
+             T("aucune école cartographiée ici") + "</li>");
+    }
+    h.push("</ul>");
+    if (d.v && d.t) {
+      var part = Math.round(d.v / d.t * 100);
+      if (part < 100) {
+        h.push('<p class="x-limite">' + TF(
+          "La carte ne montre que {p} % des écoles déclarées. Ce n'est pas " +
+          "que les autres n'existent pas : c'est que personne ne les a " +
+          "encore relevées. Sur ce territoire, une carte des écoles serait " +
+          "trompeuse — le registre, lui, ne dit pas si les portes sont " +
+          "ouvertes.", { p: esc(part) }) + "</p>");
+      } else {
+        h.push('<p class="x-limite">' + TF(
+          "La carte recense {p} % du déclaré — plus que le registre. Soit " +
+          "des établissements existent sans y figurer, soit OSM compte " +
+          "séparément des annexes qu'un seul code CIE regroupe. Les deux " +
+          "chiffres restent affichés tels quels.", { p: esc(part) }) + "</p>");
+      }
+    }
+    if (d.dbl) {
+      h.push('<p class="x-note">' + TF(
+        "{k} ligne(s) en double ont été écartées du registre de cette " +
+        "commune : des blocs de pages entières sont matériellement répétés " +
+        "dans les PDF du ministère. Le comptage porte sur des codes CIE " +
+        "distincts.", { k: esc(d.dbl) }) + "</p>");
+    }
+    h.push('<p class="x-src"><small>' + esc(m.attribution || "") +
+           "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -2233,6 +2421,8 @@ export default function (A) {
              montrer("services") ? blocPluie(r) : "",
              montrer("services") ? blocSol(r) : "",
              montrer("services") ? blocPopMod(r) : "",
+             montrer("services") ? blocEcolesdec(r) : "",
+             montrer("services") ? blocAcces(r) : "",
              montrer("services") ? blocPop3(r) : "",
              montrer("services") ? blocEquipements(r) : "",
              montrer("services") ? blocBassins(r) : "",
@@ -2269,6 +2459,8 @@ export default function (A) {
     remplirPluie(r);
     remplirSol(r);
     remplirPopMod(r);
+    remplirEcolesdec(r);
+    remplirAcces(r);
     remplirPop3(r);
     remplirEquipements(r);
     remplirBassins(r);
@@ -2304,5 +2496,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocPop3, chargerPop3, remplirPop3, htmlPop3, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocPop3, chargerPop3, remplirPop3, htmlPop3, blocAcces, chargerAcces, remplirAcces, htmlAcces, blocEcolesdec, chargerEcolesdec, remplirEcolesdec, htmlEcolesdec, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

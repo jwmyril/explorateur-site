@@ -1084,11 +1084,28 @@ export default function (A) {
      à un épicentre ne dit rien des dégâts, qui dépendent du sol, du bâti et
      de l'heure. Il dit « exposée », et il dit à quelle distance. */
   function blocSeismes(r) {
+    /* Un conteneur vide, rempli quand la section approche de l'écran — même
+       motif que les services et la pyramide. La première version rendait le
+       HTML directement et ne s'affichait jamais : au moment du rendu, le
+       JSON n'était pas encore arrivé, la fonction renvoyait une chaîne vide,
+       et la section n'existait pas. Rien dans la console, aucune erreur : la
+       fiche s'affichait simplement sans son histoire sismique. */
+    return r.niveau_admin === "3" ? '<div id="x-seismes" class="x-pyr"></div>' : "";
+  }
+
+  function remplirSeismes(r) {
+    var el = $("#x-seismes");
+    if (!el) return;
+    chargerServices().then(function () {
+      el.innerHTML = htmlSeismes(r);
+    });
+  }
+
+  function htmlSeismes(r) {
     var d = S.seismes && S.seismes.communes ? S.seismes.communes[r.pcode] : null;
     if (!d) return "";
     var meta = S.seismes.meta || {};
-    var h = ['<section class="x-sec" id="x-seismes"><h3>' +
-             T("Histoire sismique") + "</h3>"];
+    var h = ['<h3>' + T("Histoire sismique") + "</h3>"];
     h.push('<p class="x-note">' +
       TF("{n25} séisme(s) de magnitude 4 ou plus documenté(s) à moins de 25 km, " +
          "{n50} à moins de 50 km, {n100} à moins de 100 km — catalogue {periode}.",
@@ -1110,7 +1127,7 @@ export default function (A) {
     h.push('<p class="x-src"><small>' +
       T("Source : USGS ComCat (domaine public). Distance mesurée de l'épicentre au contour de la commune.") +
       " " + esc(meta.avertissement || "") + "</small></p>");
-    return h.join("") + "</section>";
+    return h.join("");
   }
 
   function blocLacunes(r) {
@@ -1386,6 +1403,7 @@ export default function (A) {
     aLApproche("#x-prix", remplirPrix, r);
     aLApproche("#x-nat", remplirNat, r);
     aLApproche("#x-services", remplirServices, r);
+    aLApproche("#x-seismes", remplirSeismes, r);
     var t = $("#x-titre-fiche");
     if (t) t.textContent = nomT(r);
     majURL();
@@ -1411,5 +1429,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocObjectif, blocAccueil, blocIndicateurs, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, remplirSeismes, htmlSeismes, blocObjectif, blocAccueil, blocIndicateurs, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

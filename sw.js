@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v49";
+const CACHE = "explorateur-v50";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -15,7 +15,7 @@ const DV = "?d=2026-08-15a";   // doit suivre le DV de assets/modules/explorateu
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=33", "/assets/data.css?v=28", "/assets/modules/explorateur.js?v=6",
+  "/assets/style.css?v=33", "/assets/data.css?v=28", "/assets/modules/explorateur.js?v=7",
   "/assets/modules/etat.js",
   "/assets/modules/explorateur-i18n.js",
   "/assets/modules/explorateur-carte.js",

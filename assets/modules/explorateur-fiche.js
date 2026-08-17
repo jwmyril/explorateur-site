@@ -1486,8 +1486,9 @@ export default function (A) {
     } else {
       h.push('<p class="x-note">' + TF(
         "{pp} % du territoire est en eau permanente et {ps} % en eau " +
-        "saisonnière, soit {km2} km² au total.",
-        { pp: esc(d.pp), ps: esc(d.ps), km2: esc(d.km2) }) + "</p>");
+        "saisonnière, soit {km2} km² d'eau au total.",
+        { pp: esc(d.pp), ps: esc(d.ps),
+          km2: esc(Math.round((d.kp + d.ks) * 100) / 100) }) + "</p>");
       h.push('<ul class="x-liste-sol">');
       [["eau permanente", d.pp], ["eau saisonnière", d.ps]].forEach(function (p) {
         if (p[1] > 0) {

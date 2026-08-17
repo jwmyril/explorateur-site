@@ -1757,6 +1757,71 @@ export default function (A) {
     return h.join("");
   }
 
+  /* ---------------------------------------------------------- bassins versants (HydroBASINS)
+     HydroBASINS niveau 8, HydroSHEDS v1c (passeport PSP-032). Ce que le
+     découpage CNIGS déjà publié ne donne pas : la surface AMONT, c'est-à-
+     dire tout le territoire dont l'eau finit par passer ici. Une commune
+     de l'Artibonite reçoit l'eau de 8 900 km² — ce qui s'y passe en amont
+     la concerne, même à cent kilomètres.
+
+     Découpage calculé sur un modèle numérique de terrain : fiable en
+     montagne, incertain en plaine alluviale. */
+  function blocBassins(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-bassins" class="x-pyr"><p class="x-note">' +
+        T("Bassins versants — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerBassins() {
+    if (S.bassinsPromesse) return S.bassinsPromesse;
+    S.bassinsPromesse = charger(DIR + "atmart_bassins_communes.json", 1)
+      .then(function (t) { S.bassins = JSON.parse(t); return S.bassins; })
+      .catch(function () { S.bassins = null; return null; });
+    return S.bassinsPromesse;
+  }
+
+  function remplirBassins(r) {
+    var el = $("#x-bassins");
+    if (!el) return;
+    chargerBassins().then(function () {
+      var h = htmlBassins(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("Les bassins versants n'ont pas pu être chargés — la fiche reste lisible sans eux.") + "</p>");
+    });
+  }
+
+  function htmlBassins(r) {
+    var d = S.bassins && S.bassins.communes ? S.bassins.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.bassins.meta || {};
+    var h = ["<h3>" + T("L'eau qui arrive ici") + "</h3>"];
+    if (d.amont) {
+      h.push('<p class="x-note">' + TF(
+        "Le bassin versant principal de cette commune draine {amont} km² en " +
+        "amont — toute cette surface envoie son eau vers ici.",
+        { amont: esc(arr(d.amont, 0)) }) + "</p>");
+    }
+    h.push('<p class="x-note">' + TF(
+      "Le territoire communal se partage entre {n} bassin(s) ; le principal en " +
+      "couvre {part} % et s'étend sur {km2} km².",
+      { n: esc(d.n), part: esc(arr(d.part, 0)), km2: esc(arr(d.km2, 0)) }) + "</p>");
+    if (d.cote === "oui") {
+      h.push('<p class="x-note">' + T("Ce bassin débouche directement sur la mer.") + "</p>");
+    } else if (d.mer) {
+      h.push('<p class="x-note">' + TF(
+        "L'exutoire du bassin est à {km} km de la mer.", { km: esc(arr(d.mer, 0)) }) +
+        "</p>");
+    }
+    h.push('<p class="x-limite">' + T(
+      "Ces limites sont calculées sur un modèle de terrain, pas relevées au " +
+      "sol : elles sont fiables en montagne et incertaines en plaine, où la " +
+      "pente est faible. Le découpage du CNIGS reste la référence nationale.") +
+      "</p>");
+    h.push('<p class="x-src"><small>' + esc(m.attribution || m.source || "") +
+           "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -2014,6 +2079,7 @@ export default function (A) {
              montrer("services") ? blocPluie(r) : "",
              montrer("services") ? blocSol(r) : "",
              montrer("services") ? blocPopMod(r) : "",
+             montrer("services") ? blocBassins(r) : "",
              montrer("services") ? blocProjets(r) : "",
              montrer("services") ? blocUrbanisation(r) : "",
              montrer("services") ? blocBatiments(r) : "",
@@ -2047,6 +2113,7 @@ export default function (A) {
     remplirPluie(r);
     remplirSol(r);
     remplirPopMod(r);
+    remplirBassins(r);
     remplirProjets(r);
     remplirUrbanisation(r);
     remplirBatiments(r);
@@ -2079,5 +2146,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

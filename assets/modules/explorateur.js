@@ -3,7 +3,7 @@
      publique      : référentiel de base + indicateurs, depuis data/
      administrateur: référentiels complets, depuis un dossier local non publié
    Aucun compteur n'est écrit en dur : tout est compté depuis les fichiers. */
-import { S } from "./etat.js?v=15";
+import { S } from "./etat.js?v=16";
 
 (async function () {
   "use strict";
@@ -740,7 +740,7 @@ import { S } from "./etat.js?v=15";
      chargement est ailleurs — atmart_indicateurs_communes_HT.csv pèse 1 Mo
      (57 Ko gzippés) et se charge en entier pour afficher une commune. */
   for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison"]) {
-    (await import("./explorateur-" + m + ".js?v=15")).default(A);
+    (await import("./explorateur-" + m + ".js?v=16")).default(A);
   }
 
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);

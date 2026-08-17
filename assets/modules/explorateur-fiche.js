@@ -1621,6 +1621,76 @@ export default function (A) {
     return h.join("");
   }
 
+  /* ---------------------------------------------------------- croissance du bâti (GHSL)
+     GHSL R2023A, Commission européenne / JRC, CC BY 4.0 (passeport
+     PSP-039). Quatre millésimes — 1990, 2000, 2010, 2020 — mesurés par
+     le MÊME instrument et le même algorithme : la croissance qu'ils
+     montrent est donc lisible, contrairement à l'écart WorldCover
+     2020/2021 qui mêle changement réel et changement de méthode.
+
+     Le producteur exige la citation de l'article de référence en plus du
+     site : il écrit qu'une citation du site seul est « insufficient and
+     considered inappropriate ». */
+  function blocUrbanisation(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-urbanisation" class="x-pyr"><p class="x-note">' +
+        T("Croissance du bâti — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerUrbanisation() {
+    if (S.urbanisationPromesse) return S.urbanisationPromesse;
+    S.urbanisationPromesse = charger(DIR + "atmart_urbanisation_communes.json", 1)
+      .then(function (t) { S.urbanisation = JSON.parse(t); return S.urbanisation; })
+      .catch(function () { S.urbanisation = null; return null; });
+    return S.urbanisationPromesse;
+  }
+
+  function remplirUrbanisation(r) {
+    var el = $("#x-urbanisation");
+    if (!el) return;
+    chargerUrbanisation().then(function () {
+      var h = htmlUrbanisation(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("Les données d'urbanisation n'ont pas pu être chargées — la fiche reste lisible sans elles.") + "</p>");
+    });
+  }
+
+  function htmlUrbanisation(r) {
+    var d = S.urbanisation && S.urbanisation.communes ? S.urbanisation.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.urbanisation.meta || {};
+    var h = ["<h3>" + T("Comment le bâti a grandi") + "</h3>"];
+    h.push('<p class="x-note">' + TF(
+      "La surface bâtie est passée de {b90} km² en 1990 à {b20} km² en 2020, " +
+      "soit {cr} km² de plus — une croissance de {crp} %. La commune est " +
+      "aujourd'hui bâtie à {p20} % de son territoire.",
+      { b90: esc(d.b90), b20: esc(d.b20), cr: esc(d.cr), crp: esc(d.crp),
+        p20: esc(d.p20) }) + "</p>");
+    h.push('<ul class="x-liste-sol">');
+    [["1990", d.b90], ["2000", d.b00], ["2010", d.b10], ["2020", d.b20]]
+      .forEach(function (p) {
+        h.push("<li><b>" + esc(p[1]) + " km²</b> " + esc(p[0]) +
+               '<span class="x-barre" style="width:' +
+               Math.min(100, (p[1] / (d.b20 || 1)) * 100) + '%"></span></li>');
+      });
+    h.push("</ul>");
+    if (d.sd) {
+      h.push('<p class="x-note">' + TF(
+        "Degré d'urbanisation dominant : {sd}. Part urbaine du territoire : " +
+        "{su} % en 2020, contre {su90} % en 1990.",
+        { sd: esc(d.sd), su: esc(d.su), su90: esc(d.su90) }) + "</p>");
+    }
+    h.push('<p class="x-limite">' + T(
+      "Le degré d'urbanisation est ici pondéré par la SURFACE, alors que la " +
+      "classification officielle se pondère par la population : une commune " +
+      "vaste avec un gros bourg ressort « rurale » ici. Et la grille du " +
+      "degré d'urbanisation fait 1 km — sur une petite commune, c'est un " +
+      "ordre de grandeur, pas une mesure.") + "</p>");
+    h.push('<p class="x-src"><small>' + esc(m.attribution || m.source || "") +
+           "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -1878,6 +1948,7 @@ export default function (A) {
              montrer("services") ? blocPluie(r) : "",
              montrer("services") ? blocSol(r) : "",
              montrer("services") ? blocPopMod(r) : "",
+             montrer("services") ? blocUrbanisation(r) : "",
              montrer("services") ? blocBatiments(r) : "",
              montrer("services") ? blocSolaire(r) : "",
              montrer("services") ? blocEau(r) : "",
@@ -1909,6 +1980,7 @@ export default function (A) {
     remplirPluie(r);
     remplirSol(r);
     remplirPopMod(r);
+    remplirUrbanisation(r);
     remplirBatiments(r);
     remplirSolaire(r);
     remplirEau(r);
@@ -1939,5 +2011,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

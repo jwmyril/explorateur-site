@@ -10,7 +10,7 @@
   <meta name="description" data-i18n-content="xp.desc" content="Search any commune in Haiti and read its territorial profile: essential services, available indicators, sources and reference years." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="manifest" href="/manifest.webmanifest" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=33" />
   <link rel="stylesheet" href="../assets/data.css?v=27" />
@@ -37,11 +37,11 @@
 
       
   
-  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/index.html", "ht": "https://explorateur.atmart.ltd/ht/index.html", "en": "https://explorateur.atmart.ltd/en/index.html", "es": "https://explorateur.atmart.ltd/es/index.html"};</script>
-<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+  <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-A3QFttpDhgL2NMJqkYQLsIKK0JCeZSk2zfuPXFLSd4s=' 'sha256-OT0Pd9oHGCpUCfYQVMWE4dYv4DF/Zm4gQW64ud2micI=' 'sha256-eXGHFBg0CK+yShc0Hd+P0zUOlvqclbsVwEpEaShTyoo=' 'sha256-h2GltGjbI4WnMPNJY+nGcg4wdD799XolPZ/CuiR5I+Q=' 'sha256-k/mngXq/pMo0Z7M1B/5mrJlr13h+3Ae2+VbIrud0SUw='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
+  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/index.html", "ht": "https://explorateur.atmart.ltd/ht/index.html", "en": "https://explorateur.atmart.ltd/en/index.html", "es": "https://explorateur.atmart.ltd/es/index.html"};</script>
   <link rel="canonical" href="https://explorateur.atmart.ltd/en/index.html" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/index.html" />
   <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/index.html" />
@@ -230,7 +230,7 @@
      Francais seul pendant la finalisation — le multilingue reviendra d'un bloc. */
   /* Les pages Donnees vivent ICI depuis le 13/08 : le moteur genere des
      liens locaux (site vide). atmart.ltd n'est plus que pour les produits. */
-  window.ATM_EXPLORATEUR = {};
+  window.ATM_EXPLORATEUR = Object.assign({ dir: "../data/" }, {});
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 <script src="../assets/i18n.js?v=15"></script>

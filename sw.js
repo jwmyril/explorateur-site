@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v42";
+const CACHE = "explorateur-v43";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -60,9 +60,47 @@ self.addEventListener("activate", (e) => {
   ).then(() => self.clients.claim()));
 });
 
+/* Hors connexion, une page inconnue ne renvoie pas une excuse seule :
+   l'edition legere est en cache avec l'index des 140 communes, donc le
+   lecteur peut CHERCHER et LIRE sa commune sans reseau. On la sert quand la
+   navigation visait une fiche ; la page d'excuse reste pour le reste, et
+   elle-meme pointe vers l'edition legere. */
+function filet(url, requete) {
+  const versUneFiche = /^\/(index\.html)?$/.test(url.pathname) ||
+                       url.pathname.startsWith("/fiche") ||
+                       url.searchParams.has("id") || url.searchParams.has("c");
+  return caches.match(requete)
+    .then((c) => c || (versUneFiche ? caches.match("/fiche.html") : null))
+    .then((c) => c || caches.match("/hors-connexion.html"));
+}
+
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET" || url.origin !== location.origin) return;
+
+  /* LES PAGES PASSENT PAR LE RESEAU D'ABORD, le cache n'est que le filet.
+     La regle inverse — le cache d'abord, partout — a fige des lecteurs sur
+     une version ancienne : un script porte son numero dans son adresse
+     (`?v=`), une page HTML n'en porte aucun, donc rien ne la distingue de
+     celle d'avant et la copie gardee gagnait indefiniment. Un aller-retour
+     de plus par page (quelques kilooctets compresses) contre la certitude
+     de lire la version publiee : le change est bon, et hors connexion le
+     filet reprend la main exactement comme avant. */
+  if (e.request.mode === "navigate") {
+    e.respondWith(
+      fetch(e.request).then((r) => {
+        if (r.ok) {
+          const copie = r.clone();
+          caches.open(CACHE).then((c) => c.put(e.request, copie));
+        }
+        return r;
+      }).catch(() => filet(url, e.request))
+    );
+    return;
+  }
+
+  /* Le reste — scripts, styles, donnees — porte un numero de version dans
+     son adresse : le cache d'abord est ici sans danger et sans reseau. */
   e.respondWith(
     caches.match(e.request).then((hit) => hit ||
       fetch(e.request).then((r) => {
@@ -71,19 +109,6 @@ self.addEventListener("fetch", (e) => {
           caches.open(CACHE).then((c) => c.put(e.request, copie));
         }
         return r;
-      }).catch(() => {
-        if (e.request.mode !== "navigate") return Response.error();
-        /* Hors connexion, une page inconnue ne renvoie plus une excuse seule :
-           l'edition legere est en cache avec l'index des 140 communes, donc le
-           lecteur peut CHERCHER et LIRE sa commune sans reseau. On la sert
-           quand la navigation visait une fiche ; la page d'excuse reste pour
-           le reste, et elle-meme pointe vers l'edition legere. */
-        const versUneFiche = /^\/(index\.html)?$/.test(url.pathname) ||
-                             url.pathname.startsWith("/fiche") ||
-                             url.searchParams.has("id") || url.searchParams.has("c");
-        return caches.match(e.request)
-          .then((c) => c || (versUneFiche ? caches.match("/fiche.html") : null))
-          .then((c) => c || caches.match("/hors-connexion.html"));
-      }))
+      }).catch(() => Response.error()))
   );
 });

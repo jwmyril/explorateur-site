@@ -1313,6 +1313,70 @@ export default function (A) {
     return h.join("");
   }
 
+  /* ---------------------------------------------------------- propriétés des sols (SoilGrids)
+     SoilGrids 2.0, ISRIC, CC BY 4.0 (passeport PSP-027). PRÉDICTION par
+     apprentissage automatique à 250 m, jamais une analyse de sol : elle ne
+     fonde aucune recommandation agronomique à la parcelle.
+
+     SoilGrids ne prédit rien sous l'eau ni sous le bâti dense. La couverture
+     est donc affichée, et le drapeau passe AVANT les valeurs quand elle est
+     faible — à Delmas, la moyenne repose sur 1,5 % du territoire. */
+  function blocSols(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-sols" class="x-pyr"><p class="x-note">' +
+        T("Propriétés des sols — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerSols() {
+    if (S.solsPromesse) return S.solsPromesse;
+    S.solsPromesse = charger(DIR + "atmart_sols_communes.json", 1)
+      .then(function (t) { S.sols = JSON.parse(t); return S.sols; })
+      .catch(function () { S.sols = null; return null; });
+    return S.solsPromesse;
+  }
+
+  function remplirSols(r) {
+    var el = $("#x-sols");
+    if (!el) return;
+    chargerSols().then(function () {
+      var h = htmlSols(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("Les données de sol n'ont pas pu être chargées — la fiche reste lisible sans elles.") + "</p>");
+    });
+  }
+
+  function htmlSols(r) {
+    var d = S.sols && S.sols.communes ? S.sols.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.sols.meta || {};
+    var h = ["<h3>" + T("Ce que dit le sol") + "</h3>"];
+    if (d.fiab === "faible") {
+      h.push('<p class="x-limite">' + TF(
+        "Attention : la prédiction ne couvre que {c} % de cette commune — le " +
+        "modèle ne décrit ni l'eau ni le bâti dense. Les valeurs ci-dessous " +
+        "portent sur les interstices non bâtis, pas sur l'ensemble du territoire.",
+        { c: esc(d.couv) }) + "</p>");
+    }
+    h.push('<p class="x-note">' + TF(
+      "pH {ph} — sol {reaction}. Carbone organique {soc} g/kg.",
+      { ph: esc(d.ph), reaction: esc(d.reaction), soc: esc(d.soc_g_kg) }) + "</p>");
+    h.push('<ul class="x-liste-sol">');
+    [["argile", d.argile], ["sable", d.sable], ["limon", d.limon]].forEach(function (p) {
+      h.push("<li><b>" + esc(p[1]) + " %</b> " + T(p[0]) +
+             '<span class="x-barre" style="width:' + Math.min(100, p[1]) + '%"></span></li>');
+    });
+    h.push("</ul>");
+    h.push('<p class="x-note">' + TF("Texture dominante : {t}.", { t: esc(d.texture) }) + "</p>");
+    if (d.fiab === "partielle") {
+      h.push('<p class="x-limite">' + TF(
+        "La prédiction couvre {c} % de la commune : l'eau et le bâti dense en " +
+        "sont exclus.", { c: esc(d.couv) }) + "</p>");
+    }
+    h.push('<p class="x-src"><small>' + esc(m.attribution || m.source || "") +
+           " · " + esc(m.avertissement || "") + "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -1570,6 +1634,7 @@ export default function (A) {
              montrer("services") ? blocPluie(r) : "",
              montrer("services") ? blocSol(r) : "",
              montrer("services") ? blocPopMod(r) : "",
+             montrer("services") ? blocSols(r) : "",
              montrer("comparer") ? blocComparer(r) : "",
              montrer("lacunes") ? blocLacunes(r) : "");
     } else if (r.niveau_admin === "0") {
@@ -1596,6 +1661,7 @@ export default function (A) {
     remplirPluie(r);
     remplirSol(r);
     remplirPopMod(r);
+    remplirSols(r);
     var t = $("#x-titre-fiche");
     if (t) t.textContent = nomT(r);
     majURL();
@@ -1621,5 +1687,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

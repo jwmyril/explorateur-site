@@ -768,3 +768,275 @@ html[lang="fr"] .x-partiel { display: none; }
 .x-liste-sol b { position: relative; z-index: 1; margin-right: 0.4rem; }
 .x-liste-sol .x-barre { position: absolute; left: 0; top: 0; bottom: 0;
                         background: rgba(46, 196, 182, 0.28); z-index: 0; }
+
+/* =====================================================================
+   RAPPORT DE TERRITOIRE — feuille d'impression
+   ---------------------------------------------------------------------
+   Un document qu'on pose sur une table de réunion, pas une page web dont
+   on aurait coupé les menus. Le moteur (explorateur-rapport.js) assemble
+   un document dédié dans #x-rapport ; cette feuille lui donne sa forme et
+   efface tout le reste de la page.
+
+   TROIS RÈGLES ONT DICTÉ CES CHOIX :
+
+   1. AUCUN APLAT DE COULEUR. Chrome et Firefox impriment sans les fonds
+      par défaut (« graphiques d'arrière-plan » décoché). Toute hiérarchie
+      portée par un fond disparaîtrait chez la majorité des lecteurs, et le
+      document arriverait plat. Ici la hiérarchie est portée par des FILETS
+      et des graisses — qui, eux, s'impriment toujours.
+
+   2. LE SÉRIF POUR LE CORPS. Sur écran, le sans-sérif du site gagne ; sur
+      papier à 10,5 pt, un sérif se lit plus vite sur un paragraphe long.
+      Les chiffres, les tableaux et les titres restent en sans : ils se
+      balaient du regard au lieu de se lire.
+
+   3. RIEN NE SE COUPE AU MILIEU D'UNE IDÉE. Chaque bloc de couche est
+      insécable, un titre ne reste jamais seul en bas de page, et la page
+      des sources commence sur une feuille neuve — c'est celle qu'on
+      détache pour vérifier.
+   ===================================================================== */
+
+/* Hors impression, le rapport n'existe ni à l'écran ni pour un lecteur
+   d'écran : le conteneur porte `hidden`. Cette règle ne fait que le dire
+   deux fois, au cas où une future feuille redéfinirait [hidden]. */
+#x-rapport { display: none; }
+
+@media print {
+  /* Tout ce qui n'est pas le rapport disparaît — y compris l'en-tête, la
+     recherche, les onglets et le pied du site. On ne masque pas classe par
+     classe : une classe oubliée réapparaîtrait au milieu du document. */
+  body.atm-rapport > * { display: none !important; }
+  body.atm-rapport #x-rapport,
+  body.atm-rapport #x-rapport[hidden] { display: block !important; }
+
+  body.atm-rapport {
+    background: #fff !important; color: #14181d !important;
+    font: 10.5pt/1.6 Georgia, "Times New Roman", serif;
+    margin: 0; padding: 0;
+  }
+  /* La marge basse loge le pied de page répété. */
+  @page { size: A4; margin: 16mm 15mm 20mm; }
+
+  /* Le site est en thème sombre : ses classes portent des gris CLAIRS, qui
+     sur du papier blanc s'impriment illisibles. On repart donc d'une encre
+     noire posée sur le conteneur, et `color: inherit` la fait descendre
+     partout — il bat les classes du thème (une classe simple) sans jamais
+     battre les gris que cette feuille pose explicitement en `!important`.
+     Un `color: … !important` sur `*` aurait, lui, écrasé tous ces gris :
+     à importance égale, l'identifiant du conteneur l'emporte sur eux. */
+  body.atm-rapport #x-rapport { color: #14181d !important; }
+  body.atm-rapport #x-rapport * { color: inherit; background: none !important; }
+  body.atm-rapport #x-rapport a { color: #14181d !important; text-decoration: none !important; }
+  body.atm-rapport #x-rapport a[href]::after { content: "" !important; }
+
+  /* ---------------------------------------------------------- en-tête */
+  .r-tete { border-bottom: 2.5pt solid #0e2240; padding-bottom: 5mm; margin-bottom: 6mm; }
+  .r-marque {
+    font: 600 7.5pt/1.3 "Segoe UI", system-ui, sans-serif;
+    letter-spacing: .18em; text-transform: uppercase;
+    color: #0e2240 !important; margin: 0 0 1mm;
+  }
+  .r-marque span { color: #8c9bad !important; }
+  .r-genre {
+    font: 400 8pt/1.3 "Segoe UI", system-ui, sans-serif;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: #6b7a8d !important; margin: 0 0 3mm;
+  }
+  .r-tete h1 {
+    font: 700 23pt/1.15 "Segoe UI", system-ui, sans-serif;
+    color: #0e2240 !important; margin: 0 0 1mm; letter-spacing: -.01em;
+  }
+  /* Le nom dans l'autre langue n'est pas un sous-titre : c'est le même
+     territoire sous son autre graphie, et il doit se lire comme tel. */
+  .r-tete h1 .r-nom2 { font-weight: 400; font-style: italic; color: #5d6b7d !important; }
+  .r-situe { font-style: italic; color: #4a5765 !important; margin: 0 0 5mm; font-size: 10pt; }
+
+  /* DEUX COLONNES d'identité : huit lignes empilées sur 180 mm mangeaient
+     un tiers de la première page pour des libellés de trois mots. Côte à
+     côte, l'en-tête tient en un bloc qu'on embrasse d'un regard. */
+  .r-id { width: 100%; border-collapse: collapse; font: 8.6pt/1.4 "Segoe UI", system-ui, sans-serif;
+          columns: 2; column-gap: 8mm; display: block; }
+  .r-id tbody { display: block; columns: 2; column-gap: 8mm; }
+  .r-id tr { display: block; break-inside: avoid; border-bottom: .4pt solid #d9e0e8; padding: 1mm 0; }
+  .r-id th, .r-id td { display: block; text-align: left; padding: 0; border: 0; }
+  .r-id th { width: auto; font-weight: 400; color: #6b7a8d !important; font-size: 7.6pt; }
+  .r-id td { font-weight: 600; }
+  .r-id small { display: block; font-weight: 400; color: #6b7a8d !important; font-size: 8pt; margin-top: .5mm; }
+  /* Une adresse doit pouvoir être RETAPÉE : chasse fixe, et elle se coupe
+     n'importe où plutôt que de déborder de la feuille. */
+  .r-url { font-family: ui-monospace, "Consolas", monospace; font-size: 8.2pt; word-break: break-all; }
+
+  .r-garde {
+    border: .6pt solid #0e2240; border-left: 2.5pt solid #0e2240;
+    padding: 3mm 4mm; margin: 5mm 0 0; font-size: 8.8pt; line-height: 1.55;
+    color: #2b3542 !important; break-inside: avoid;
+  }
+
+  /* ---------------------------------------------------------- sections */
+  .r-sec { break-inside: auto; margin: 0 0 6mm; }
+  .r-h2 {
+    font: 700 12.5pt/1.25 "Segoe UI", system-ui, sans-serif;
+    color: #0e2240 !important; border-top: 1.5pt solid #0e2240;
+    padding-top: 2.5mm; margin: 7mm 0 3.5mm;
+    display: flex; align-items: baseline; gap: 3mm;
+    break-after: avoid; break-inside: avoid;
+  }
+  /* Le numéro est cerclé d'un filet, jamais d'un aplat : c'est le seul
+     repère qui survit à une impression sans fonds. */
+  .r-chiffre {
+    display: inline-block; min-width: 6.5mm; text-align: center;
+    border: 1pt solid #0e2240; border-radius: 50%;
+    font-size: 9pt; line-height: 6.5mm; height: 6.5mm; flex: 0 0 auto;
+  }
+  .r-h3 {
+    font: 600 8pt/1.3 "Segoe UI", system-ui, sans-serif;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: #0e2240 !important; margin: 3.5mm 0 1.5mm; break-after: avoid;
+  }
+  .r-intro { font-size: 9.5pt; color: #3a4553 !important; margin: 0 0 3mm; }
+
+  /* DEUX COLONNES pour les sections de couches (territoire, risques,
+     équipements). À 180 mm de large, une ligne pleine fait plus de cent
+     caractères : l'œil perd le début de la ligne suivante. Deux colonnes de
+     86 mm la ramènent à quarante-cinq, la mesure d'un livre.
+     Les blocs restant insécables, chacun tombe entier dans une colonne ou
+     passe à la suivante — c'est le comportement voulu, pas un effet de bord. */
+  .r-sec-couches { columns: 2; column-gap: 8mm; column-rule: .4pt solid #e6ebf1; }
+  /* Le titre de section et la note d'absence appartiennent à la section
+     entière, pas à une colonne : ils la traversent. */
+  .r-sec-couches .r-h2, .r-sec-couches .r-absent { column-span: all; }
+  .r-sec-couches .r-bloc .x-note { font-size: 9.4pt; }
+  .r-sec-couches .r-bloc .x-liste-sol li,
+  .r-sec-couches .r-bloc .x-liste-seismes li { font-size: 8.8pt; }
+
+  /* Un bloc de couche est une unité de sens : il ne se coupe pas. */
+  .r-bloc { break-inside: avoid; margin: 0 0 4.5mm; }
+  .r-bloc h3 {
+    font: 600 11pt/1.3 "Segoe UI", system-ui, sans-serif;
+    color: #0e2240 !important; margin: 0 0 1.5mm; break-after: avoid;
+  }
+  .r-bloc p, .r-bloc li { orphans: 3; widows: 3; }
+  .r-bloc .x-note { font-size: 10pt; line-height: 1.55; margin: 0 0 1.8mm; color: #14181d !important; }
+
+  /* L'avertissement d'une couche n'est pas une note de bas de page : il est
+     la moitié de l'information. Il porte donc un filet qui le désigne. */
+  .r-bloc .x-limite, .r-limite {
+    border-left: 1.5pt solid #8c9bad; padding: .5mm 0 .5mm 3mm;
+    margin: 2mm 0; font-size: 8.8pt; line-height: 1.5;
+    font-style: italic; color: #3a4553 !important; break-inside: avoid;
+  }
+  .r-bloc .x-src, .r-src {
+    font: 8pt/1.45 "Segoe UI", system-ui, sans-serif;
+    color: #6b7a8d !important; margin: 1.5mm 0 0;
+    padding-top: 1mm; border-top: .4pt solid #e2e8ef;
+  }
+  .r-bloc .x-src small { font-size: inherit; }
+  .r-absent {
+    font-size: 8.8pt; font-style: italic; color: #6b7a8d !important;
+    border-top: .4pt dotted #c3cdd8; padding-top: 2mm; margin: 3mm 0 0;
+  }
+
+  /* ---------------------------------------------------------- tableaux */
+  .r-tab { width: 100%; border-collapse: collapse; font: 9pt/1.4 "Segoe UI", system-ui, sans-serif; }
+  .r-tab thead th {
+    text-align: left; font-weight: 600; font-size: 7.6pt; letter-spacing: .1em;
+    text-transform: uppercase; color: #6b7a8d !important;
+    border-bottom: 1pt solid #0e2240; padding: 0 2mm 1.5mm 0;
+  }
+  .r-tab tbody th, .r-tab tbody td {
+    text-align: left; vertical-align: baseline; padding: 1.6mm 2mm 1.6mm 0;
+    border-bottom: .4pt solid #dfe5ec;
+  }
+  .r-tab tbody th { font-weight: 600; width: 34%; }
+  /* Les chiffres s'alignent sur leur unité et gardent la même chasse d'une
+     ligne à l'autre : une colonne de nombres se compare du regard. */
+  .r-tab td.r-num { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .r-tab .r-nd { font-style: italic; font-weight: 400; color: #8c9bad !important; }
+  .r-tab tr { break-inside: avoid; }
+  /* Les tables de la page des sources se CONSULTENT (on y cherche une
+     licence, un millésime), elles ne se lisent pas : elles supportent une
+     graisse plus fine que le corps du rapport. */
+  .r-sources { font-size: 7.8pt; }
+  .r-sources tbody th, .r-sources tbody td { padding: 1.1mm 2mm 1.1mm 0; }
+  .r-sources tbody th { width: 22%; }
+  .r-sources small { font-size: 7.4pt; color: #6b7a8d !important; }
+  .r-tabwrap { overflow: visible !important; }
+
+  /* --------------------------------------------- listes des couches */
+  .r-bloc ul, .r-bloc ol { margin: 2mm 0; padding: 0; }
+  .r-bloc .x-liste-sol li {
+    position: relative; list-style: none; padding: .9mm 0 1.6mm;
+    margin: 0; border-radius: 0; overflow: visible; font-size: 9.2pt;
+    border-bottom: .3pt solid #eef2f6;
+  }
+  /* La barre proportionnelle est un FOND à l'écran : à l'impression elle
+     s'évapore. On la redessine en filet posé sous la ligne — la longueur
+     reste la même, donc la proportion se lit toujours. */
+  .r-bloc .x-liste-sol .x-barre {
+    top: auto !important; height: 0 !important; bottom: 0;
+    border-bottom: 2.2pt solid #9fb1c6 !important;
+  }
+  .r-bloc .x-liste-sol b { font-variant-numeric: tabular-nums; }
+  .r-bloc .x-liste-seismes { list-style: none; }
+  .r-bloc .x-liste-seismes li {
+    border-left: 1.5pt solid #0e2240; border-radius: 0;
+    padding: 1mm 0 1mm 3mm; margin: 0 0 1.8mm; font-size: 9.2pt;
+    break-inside: avoid;
+  }
+  .r-bloc .x-liste-seismes small { font-size: 8.2pt; color: #6b7a8d !important; }
+
+  /* ------------------------------------------- sources et limites */
+  /* La page qu'on détache pour vérifier commence sur une feuille neuve. */
+  .r-sec-sources { break-before: page; }
+  /* Ces trois listes sont un APPAREIL DE NOTES, pas le corps du rapport :
+     elles se consultent ligne à ligne au lieu de se lire d'un trait. Deux
+     colonnes en petits caractères est leur forme naturelle — et c'est ce
+     qui ramène cette page de deux feuilles et demie à un peu plus d'une. */
+  .r-limites, .r-lecture, .r-credits {
+    columns: 2; column-gap: 8mm; margin: 1.5mm 0 0; padding: 0;
+    font-size: 8pt; line-height: 1.38;
+  }
+  .r-limites dt {
+    font-weight: 700; font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 8pt; color: #0e2240 !important;
+  }
+  .r-limites dd { margin: 0 0 1.8mm; color: #3a4553 !important; }
+  /* Un intitulé et son avertissement ne se séparent jamais d'une colonne à
+     l'autre : le nom du jeu seul en bas de colonne ne dit rien. */
+  .r-limites dt { break-after: avoid; break-inside: avoid; }
+  .r-limites dd { break-inside: avoid; }
+  .r-limites-ici { columns: 1; list-style: none; font-size: 8.8pt; }
+  .r-limites-ici li {
+    border-left: 1.5pt solid #0e2240; padding: .5mm 0 .5mm 3mm;
+    margin: 0 0 2mm; break-inside: avoid;
+  }
+  .r-lecture { margin-left: 4mm; }
+  .r-lecture li { margin: 0 0 2mm; break-inside: avoid; }
+  .r-credits { list-style: none; font-size: 7.4pt; line-height: 1.4; color: #4a5765 !important; }
+  .r-credits li { margin: 0 0 2mm; break-inside: avoid; }
+  .r-credits b { font-family: "Segoe UI", system-ui, sans-serif; color: #0e2240 !important; }
+  .r-citer {
+    border: .6pt solid #b9c4d1; padding: 3mm 4mm; margin: 5mm 0 0;
+    font-size: 8.8pt; line-height: 1.5; break-inside: avoid;
+  }
+  /* Ce que le rapport laisse à l'écran : dernière ligne du document, parce
+     qu'elle répond à la question qu'on se pose en le refermant. */
+  .r-renvoi {
+    border-top: .4pt dotted #c3cdd8; padding-top: 2mm; margin: 4mm 0 0;
+    font-size: 8.4pt; font-style: italic; color: #6b7a8d !important;
+    break-inside: avoid;
+  }
+
+  /* -------------------------------------------------- pied répété
+     Un pied fixe se réimprime sur chaque feuille : une page détachée d'un
+     rapport agrafé dit encore de quelle commune elle parle. La marge basse
+     de @page lui réserve sa place, il ne recouvre donc aucun texte. */
+  .r-pied {
+    position: fixed; bottom: -12mm; left: 0; right: 0;
+    display: flex; justify-content: space-between; gap: 5mm;
+    border-top: .4pt solid #c3cdd8; padding-top: 1.5mm;
+    font: 7.2pt/1.3 "Segoe UI", system-ui, sans-serif;
+    color: #8c9bad !important;
+  }
+  .r-pied span:last-child { font-family: ui-monospace, "Consolas", monospace; text-align: right; }
+}

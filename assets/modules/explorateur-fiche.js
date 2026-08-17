@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js";
+import { S } from "./etat.js?v=22";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, situation, valeurBrute } = A;
@@ -187,7 +187,15 @@ export default function (A) {
              TF("Ce qui reste à documenter ({n})", { n: s.nManques }) + "</a>");
       h.push('<button class="btn btn-outline x-btn-comp" data-comparer="' + esc(r.atmart_geo_id) +
              '">' + T("Ajouter à la comparaison") + "</button>");
-      h.push('<button class="btn btn-outline x-btn-print">' + T("Imprimer / PDF") + "</button>");
+      /* Le bouton du rapport de territoire — commune uniquement, parce que
+         c'est le seul niveau où les treize couches ont une valeur propre :
+         un département n'a ni bassin versant ni occupation du sol à lui.
+         Il garde la classe `x-btn-print` (la mesure d'audience compte les
+         impressions par elle) et ajoute `x-btn-rapport`, que le moteur teste
+         EN PREMIER pour construire le document au lieu d'imprimer l'écran. */
+      h.push('<button class="btn btn-outline x-btn-print x-btn-rapport" title="' +
+             T("Un document de 4 à 5 pages, mis en page pour le papier : en-tête, chiffres avec leurs sources, et la page des sources et limites.") +
+             '">' + T("Rapport de la commune (PDF)") + "</button>");
       h.push("</div>");
       /* Ligne de confiance : chaque segment est une phrase autonome, assemblée
          par un séparateur neutre. Aucune langue n'hérite de l'ordre français. */

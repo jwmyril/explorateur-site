@@ -3,7 +3,18 @@
      publique      : référentiel de base + indicateurs, depuis data/
      administrateur: référentiels complets, depuis un dossier local non publié
    Aucun compteur n'est écrit en dur : tout est compté depuis les fichiers. */
-import { S } from "./etat.js?v=21";
+/* SANS NUMÉRO DE VERSION, ET C'EST OBLIGATOIRE.
+   Le navigateur identifie un module par son URL COMPLÈTE, requête comprise :
+   "./etat.js?v=22" et "./etat.js?v=22" sont deux modules distincts, chacun avec
+   son propre objet S. Les six sous-modules importent "./etat.js?v=22" ; tant que
+   cette ligne portait ?v=21, l'état était coupé en deux — le moteur
+   remplissait S.terr et S.vals d'un côté, la fiche les lisait de l'autre et
+   n'y trouvait rien. Symptôme observé en production le 17/08/2026 : toutes
+   les fiches affichaient « 0 source » et « 0 indicateurs documentés sur 0 »,
+   alors que les 4 200 valeurs étaient bel et bien chargées.
+   Si etat.js doit un jour être versionné, il faut l'être dans les SEPT
+   fichiers à la fois, et dans la liste CORE du service worker. */
+import { S } from "./etat.js?v=22";
 
 (async function () {
   "use strict";
@@ -557,6 +568,24 @@ import { S } from "./etat.js?v=21";
         if (anc) anc.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
+      /* LE RAPPORT DE TERRITOIRE passe avant l'impression générique — il
+         porte les deux classes pour que la mesure d'audience continue de le
+         compter comme une impression, donc l'ordre des deux tests EST la
+         règle de priorité. Il assemble un document dédié (en-tête, ordre de
+         lecture du papier, page des sources) au lieu d'imprimer la fiche
+         telle qu'elle défile : voir explorateur-rapport.js.
+         Le bouton dit ce qu'il fait pendant qu'il le fait — treize couches
+         se chargent avant que la boîte d'impression ne s'ouvre, et un
+         bouton muet pendant deux secondes passe pour un bouton mort. */
+      var brp = e.target.closest(".x-btn-rapport");
+      if (brp && A.rapport) {
+        var lib = brp.textContent;
+        brp.textContent = A.T("Préparation du rapport…");
+        brp.disabled = true;
+        A.rapport(S.courant)["catch"](function () {})
+          .then(function () { brp.textContent = lib; brp.disabled = false; });
+        return;
+      }
       /* Imprimer une fiche dont la pyramide n'a pas encore été atteinte à
          l'écran produirait un PDF amputé : on l'attend, puis on imprime. */
       if (e.target.closest(".x-btn-print")) {
@@ -739,8 +768,14 @@ import { S } from "./etat.js?v=21";
      chantiers qui ne se marchent plus dessus. Le vrai levier sur le premier
      chargement est ailleurs — atmart_indicateurs_communes_HT.csv pèse 1 Mo
      (57 Ko gzippés) et se charge en entier pour afficher une commune. */
-  for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison"]) {
-    (await import("./explorateur-" + m + ".js?v=21")).default(A);
+  /* « rapport » vient EN DERNIER, et volontairement : il n'appelle que des
+     fonctions posées sur A par les autres (les constructeurs de blocs de la
+     fiche, les libellés d'i18n). Le placer avant l'un d'eux ne casserait
+     rien à l'amorçage — il les résout au clic, pas à l'initialisation —
+     mais l'ordre de cette liste doit continuer de se lire comme l'ordre des
+     dépendances. */
+  for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison", "rapport"]) {
+    (await import("./explorateur-" + m + ".js?v=22")).default(A);
   }
 
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);

@@ -460,6 +460,15 @@ import { S } from "./etat.js";
         if (zone && S.courant) zone.outerHTML = A.blocCarte(S.courant);
         return;
       }
+      /* Longueur de la fiche : le choix du lecteur, mémorisé. On redessine
+         la fiche entière puisque c'est justement ce qui change. */
+      var vue = e.target.closest("[data-vue]");
+      if (vue) {
+        S.vue = vue.dataset.vue;
+        try { localStorage.setItem("atmart_vue", S.vue); } catch (err) {}
+        if (S.courant) A.fiche(S.courant.atmart_geo_id);
+        return;
+      }
       var b = e.target.closest("[data-id]");
       if (b) {
         /* Depuis l'onglet Comparer, un resultat de recherche s'AJOUTE a la

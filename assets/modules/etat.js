@@ -19,6 +19,7 @@ export const S = {
   normalisation: "total",
   objectif: "tout",
   ongletActif: "fiche",
+  vue: "",   // longueur de fiche choisie par le lecteur (court/moyen/complet)
   orgs: [],
   polyCom: null,
   polyDep: null,

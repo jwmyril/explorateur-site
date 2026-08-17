@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
+  <title data-i18n="pg.campus.title">Atmart Campus — acceso a los datos para estudiantes e investigadores | Atmart</title>
+  <meta name="description" data-i18n-content="pg.campus.desc" content="Atmart Campus: acceso académico verificado a los datos Atmart para memorias de fin de carrera, tesis e investigación aplicada. Packs por disciplina, guías metodológicas, reglas de citación, cohortes patrocinadas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="../assets/style.css?v=33" />
+  <link rel="stylesheet" href="../assets/data.css?v=27" />
+  <script>
+  window.ATM_LANGUES = ["fr", "ht", "en", "es"];
+</script>
+
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-MKa6cKJLNrT9ktsD/tetXTs0XRyfnjZtd00Uhe8n3vc=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+  <link rel="canonical" href="https://explorateur.atmart.ltd/es/donnees-campus.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-campus.html" />
+  <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-campus.html" />
+  <link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-campus.html" />
+  <link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-campus.html" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/donnees-campus.html" />
+  <script>window.ATM_LANG_FORCE = "es"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-campus.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-campus.html", "en": "https://explorateur.atmart.ltd/en/donnees-campus.html", "es": "https://explorateur.atmart.ltd/es/donnees-campus.html"};</script>
+</head>
+<body>
+<a class="lien-evitement" href="#contenu" data-i18n="nv.skip">Ir al contenido</a>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="../assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">los datos de Atmart</small></a>
+    <button class="nav-toggle" aria-label="Menú" data-i18n-aria="nv.menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nv.expl_h">Explorador de Haití</a></li>
+      <li><a href="/couches.html" data-i18n="nv.couches_h">Capas</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Datos</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catálogo <small>conjuntos de datos y guías</small></a></li>
+          <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Soluciones y licencias <small>empresas, ONG, administraciones</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>estudiantes e investigadores</small></a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Patrocinar un conjunto <small>instituciones y empresas</small></a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">Cómo funciona <small>método, fuentes, sistema</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="contenu" class="hero" style="padding:3.2rem 0 1.8rem">
+  <div class="container">
+    <p class="kreyol" lang="ht" data-i18n="pg.campus.accroche">Una memoria apoyada en datos reales pesa más.</p>
+    <h1 data-i18n-html="pg.campus.h1">Atmart <em>Campus</em></h1>
+    <p class="lead" data-i18n-html="pg.campus.lead">El acceso académico a los datos Atmart, para memorias de fin de carrera, tesis e investigación aplicada sobre Haití. Gratuito, verificado, acompañado.</p>
+    <div class="cta-row" style="display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.4rem">
+      <a href="#demande" class="btn btn-primary">Demander un accès</a>
+      <a href="#universites" class="btn btn-outline">Je représente une université</a>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="d-sec" style="padding-top:1rem">
+  <div class="container">
+    <p data-i18n-html="cmp.b75ffa" class="d-lbl">Por qué existe este programa</p>
+    <h2 data-i18n-html="cmp.f57e9c" class="d-h">Una tesis no debería detenerse por falta de datos</h2>
+    <p data-i18n-html="cmp.6b0216" class="d-sub">Demasiados trabajos de fin de estudios se apoyan en cifras de segunda mano, sin fecha, copiadas de una tesis anterior. No es un problema de esfuerzo: es un problema de acceso. Atmart Campus abre ese acceso, sin destruir el valor de lo que se vende por otro lado, porque ambos deben durar.</p>
+    <div class="d-tiles" style="margin-top:1.3rem">
+      <div><span class="ico">📚</span><b>Pour l'étudiant</b><p data-i18n-html="cmp.249a65">Datos citables, con su fuente y sus límites: un tribunal no puede descartarlos.</p></div>
+      <div><span class="ico">🔬</span><b>Pour le chercheur</b><p data-i18n-html="cmp.3730aa">Un punto de partida limpio y versionado, que hace reproducible un trabajo.</p></div>
+      <div><span class="ico">🏫</span><b>Pour l'université</b><p data-i18n-html="cmp.fa40eb">Un nivel metodológico que sube en toda una promoción, sin presupuesto nuevo.</p></div>
+      <div><span class="ico">🇭🇹</span><b>Pour le pays</b><p data-i18n-html="cmp.1231db">Trabajos que por fin documentan realidades locales en lugar de suponerlas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CE QU'ON OBTIENT -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n-html="cmp.99553f" class="d-lbl">Lo que da el acceso</p>
+    <h2 data-i18n-html="cmp.4b5a12" class="d-h">Cuatro cosas, no solo archivos</h2>
+    <div class="d-doors" style="margin-top:1.1rem">
+      <div class="d-door" style="cursor:default">
+        <h3 data-i18n-html="cmp.d70681">📦 Un pack de tesis por disciplina</h3>
+        <p data-i18n-html="cmp.558c2e">Los conjuntos útiles para su campo, reunidos y armonizados, con el diccionario de variables y la ficha de cada fuente.</p>
+      </div>
+      <div class="d-door" style="cursor:default">
+        <h3 data-i18n-html="cmp.114173">🧭 Una guía metodológica</h3>
+        <p data-i18n-html="cmp.2582fe">Lo que el dato permite demostrar, lo que no permite, las trampas de interpretación más frecuentes y las pruebas mínimas antes de concluir.</p>
+      </div>
+      <div class="d-door" style="cursor:default">
+        <h3 data-i18n-html="cmp.6ab093">💡 Una biblioteca de temas</h3>
+        <p data-i18n-html="cmp.180570">Preguntas de investigación realmente abordables con los datos disponibles — útil cuando el tema aún no está fijado.</p>
+      </div>
+      <div class="d-door" style="cursor:default">
+        <h3 data-i18n-html="cmp.f0799b">🔖 Un modelo de cita</h3>
+        <p data-i18n-html="cmp.3f8205">La referencia exacta para la bibliografía, entregada con cada conjunto, para que el tribunal pueda verificar su fuente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCIPLINES -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n-html="cmp.2467b7" class="d-lbl">Packs de tesis</p>
+    <h2 data-i18n-html="cmp.eca265" class="d-h">Ocho disciplinas contempladas</h2>
+    <p data-i18n-html="cmp.a2f760" class="d-sub" style="margin-bottom:1.1rem">Los packs se arman a partir del catálogo existente. Dos están listos hoy; los demás se abren a medida que los conjuntos correspondientes se construyen o encuentran <a href="donnees-parrainage.html">patrocinio</a>.</p>
+    <div class="d-tab-wrap">
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">Pack</th><th data-i18n-html="cmp.81b82b" scope="col">Lo que contiene hoy</th><th scope="col">État</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n-html="cmp.eb9aed">Territorios y urbanismo</td><td data-i18n-html="cmp.2bb6aa">Secciones comunales, ciudades, lugares habitados, GeoJSON, p-codes OCHA</td><td><span class="d-pill live">Disponible</span></td></tr>
+          <tr><td data-i18n-html="cmp.ed5766">Economía y finanzas</td><td data-i18n-html="cmp.c0b311">Remesas de la diáspora 2000–2025 (8 países), series comparativas</td><td><span class="d-pill live">Disponible</span></td></tr>
+          <tr><td data-i18n-html="cmp.f2d9e7">Agronomía y seguridad alimentaria</td><td data-i18n-html="cmp.fe7dd1">Precios de productos básicos por mercado y por mes</td><td><span class="d-pill spons">Parrainable</span></td></tr>
+          <tr><td data-i18n-html="cmp.f7fb27">Salud pública</td><td data-i18n-html="cmp.5e4916">Indicadores de salud por departamento, denominadores de población</td><td><span class="d-pill spons">Parrainable</span></td></tr>
+          <tr><td>Éducation</td><td data-i18n-html="cmp.a83b77">Escolarización, alfabetización, gasto por departamento</td><td><span class="d-pill spons">Parrainable</span></td></tr>
+          <tr><td data-i18n-html="cmp.044883">Gestión y emprendimiento</td><td data-i18n-html="cmp.a7f18a">Series económicas, demografía de los territorios, mercados</td><td><span class="d-pill soon">En préparation</span></td></tr>
+          <tr><td data-i18n-html="cmp.5e0309">Gobernanza y administración</td><td data-i18n-html="cmp.2714d5">División administrativa, series presupuestarias públicas</td><td><span class="d-pill soon">En préparation</span></td></tr>
+          <tr><td data-i18n-html="cmp.b4fe9f">Demografía y migraciones</td><td data-i18n-html="cmp.9e2df2">Población, urbanización y migraciones internas en Haití</td><td><span class="d-pill soon">En préparation</span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+<!-- RÈGLES -->
+<section class="d-sec">
+  <div class="container">
+    <p data-i18n-html="cmp.243699" class="d-lbl">Las reglas</p>
+    <h2 data-i18n-html="cmp.32f6f1" class="d-h">Gratis no significa sin condiciones</h2>
+    <p data-i18n-html="cmp.6cf6a9" class="d-sub">Estas reglas no son desconfianza: son lo que permite que el programa exista el año que viene.</p>
+    <ul class="d-list yes" style="margin-top:1rem">
+      <li data-i18n-html="cmp.d1b4ea"><b>Estatus verificado</b> — carné de estudiante, constancia de matrícula o correo institucional, más el nombre del tutor.</li>
+      <li data-i18n-html="cmp.94aa75"><b>Acceso nominativo y fechado</b> — 12 meses, renovable una vez con solicitud motivada.</li>
+      <li data-i18n-html="cmp.4f45ba"><b>Cupo</b> — hasta 3 conjuntos de datos por trabajo de investigación; más allá, lo conversamos.</li>
+      <li data-i18n-html="cmp.40dad5"><b>Cita obligatoria</b> — la referencia Atmart figura en la bibliografía, como cualquier otra fuente.</li>
+      <li data-i18n-html="cmp.6001dd"><b>Uso estrictamente no comercial</b> — tesis, docencia, artículo, comunicación científica.</li>
+      <li data-i18n-html="cmp.f063ad"><b>Depósito del resumen</b> — en la defensa, nos envía el resumen o el enlace del repositorio institucional.</li>
+    </ul>
+    <ul class="d-list no" style="margin-top:1.1rem">
+      <li data-i18n-html="cmp.55a943">No redistribuir los archivos a terceros ni subirlos a un drive público.</li>
+      <li data-i18n-html="cmp.916b3b">Ningún uso en una misión remunerada, un informe de cliente o una consultoría.</li>
+      <li data-i18n-html="cmp.534613">No suprimir las columnas de fuente ni las menciones de licencia.</li>
+    </ul>
+    <div class="d-box">
+      <h3 data-i18n-html="cmp.9f7064">Modelo de cita</h3>
+      <p data-i18n-html="cmp.381604" style="font-family:ui-monospace,Menlo,monospace;font-size:0.85rem;color:var(--ink)">Atmart LLC (2026). <em>Pack Géo Haïti — secciones comunales, ciudades y lugares habitados</em>, v1.2026.06 [conjunto de datos]. Atmart Data. https://atmart.ltd/donnees-pack-geo-haiti.html (consultado el DD/MM/AAAA). Fuentes primarias: UN OCHA COD-AB Haití; GeoNames.</p>
+      <p data-i18n-html="cmp.d17216">La cita de las <strong>fuentes primarias</strong> sigue siendo obligatoria: preparamos el dato, no lo sustituimos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- UNIVERSITÉS -->
+<section class="d-sec" id="universites">
+  <div class="container">
+    <p data-i18n-html="cmp.82133e" class="d-lbl">Para universidades y laboratorios</p>
+    <h2 data-i18n-html="cmp.15ded1" class="d-h">Pasar de un acceso individual a un convenio</h2>
+    <p data-i18n-html="cmp.2d610a" class="d-sub">Cuando varias promociones trabajan sobre las mismas fuentes, la solicitud individual pierde sentido. Existen tres fórmulas:</p>
+    <div class="d-tab-wrap" style="margin-top:1.1rem">
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">Formule</th><th data-i18n-html="cmp.0f9905" scope="col">Lo que cubre</th><th scope="col">Financement</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n-html="cmp.28f543">Convenio de facultad</td><td data-i18n-html="cmp.940dde">Acceso para todas las tesis de una facultad durante un año académico, taller de manejo incluido</td><td data-i18n-html="cmp.44117d" class="p">licencia institucional</td></tr>
+          <tr><td data-i18n-html="cmp.2cbcde">Cohorte patrocinada</td><td data-i18n-html="cmp.21c78f">Un tema, una promoción, un conjunto de datos abierto y financiado por un tercero</td><td class="p">un <a href="donnees-parrainage.html">parrain</a></td></tr>
+          <tr><td>Laboratoire</td><td data-i18n-html="cmp.579cae">Acceso plurianual con actualizaciones y apoyo metodológico para un equipo de investigación</td><td data-i18n-html="cmp.3bba9a" class="p">según presupuesto</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <p data-i18n-html="cmp.1a955c" class="d-note" style="margin-top:0.9rem">Un convenio incluye siempre un taller de manejo (lectura de las fichas, diccionario de variables, primeras manipulaciones): sin él, los datos se quedan en una carpeta sin abrirse.</p>
+  </div>
+</section>
+
+<!-- DEMANDE -->
+<section class="d-sec" id="demande" style="padding-bottom:3rem">
+  <div class="container">
+    <div class="d-box amber" style="margin-bottom:1.6rem">
+      <h3 data-i18n-html="cmp.308119">Programa piloto — primeras cohortes</h3>
+      <p data-i18n-html="cmp.421bed">Atmart Campus está comenzando. Las solicitudes se tramitan a mano, una por una, en 5 días hábiles. Es más lento que un formulario automático, pero cada expediente recibe una respuesta real, incluso cuando el dato solicitado aún no existe: en ese caso lo decimos.</p>
+    </div>
+    <p data-i18n-html="cmp.6e1e7c" class="d-lbl">Solicitud de acceso</p>
+    <h2 data-i18n-html="cmp.7ee7ce" class="d-h">Su solicitud en seis campos</h2>
+    <form class="d-form" id="cmp-form">
+      <div class="two">
+        <div><label for="c-nom">Nom et prénom</label><input id="c-nom" name="nom" required /></div>
+        <div><label for="c-mail">E-mail (institutionnel si possible)</label><input id="c-mail" name="email" type="email" required /></div>
+      </div>
+      <div class="two">
+        <div><label for="c-univ">Université / école</label><input id="c-univ" name="univ" required /></div>
+        <div><label for="c-niv">Niveau</label>
+          <select id="c-niv" name="niveau">
+            <option>Licence — mémoire de sortie</option>
+            <option>Master</option>
+            <option>Doctorat</option>
+            <option>Enseignant / encadrant</option>
+            <option>Chercheur / laboratoire</option>
+          </select>
+        </div>
+      </div>
+      <div class="two">
+        <div><label for="c-disc">Discipline</label>
+          <select id="c-disc" name="discipline">
+            <option>Territoires &amp; urbanisme</option>
+            <option>Économie &amp; finance</option>
+            <option>Agronomie &amp; sécurité alimentaire</option>
+            <option>Santé publique</option>
+            <option>Éducation</option>
+            <option>Gestion &amp; entrepreneuriat</option>
+            <option>Gouvernance &amp; administration</option>
+            <option>Démographie &amp; migrations</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div><label for="c-date">Date de soutenance prévue</label><input id="c-date" name="date" placeholder="ex. juin 2027" /></div>
+      </div>
+      <div><label for="c-enc">Encadrant (nom et e-mail)</label><input id="c-enc" name="encadrant" /></div>
+      <div><label for="c-suj">Sujet et question de recherche</label><textarea id="c-suj" name="sujet" rows="4" placeholder="En deux ou trois phrases : ce que vous cherchez à démontrer et sur quel territoire."></textarea></div>
+      <div><button data-i18n-html="cmp.1acb18" type="submit" class="btn btn-primary">Enviar mi solicitud</button></div>
+      <p data-i18n-html="cmp.bdb946" class="d-note" style="margin-top:0.8rem">El formulario solo abre su mensajería: no se almacena ningún dato en este sitio. Adjunte su constancia de matrícula al correo antes de enviarlo.</p>
+    </form>
+      <div class="d-envoi" id="cmp-envoi" hidden>
+        <p class="x-etat" tabindex="-1" role="status">
+          <span class="x-si-envoye" data-i18n="form.ok">Su solicitud ha sido enviada a Atmart.</span>
+          <span class="x-si-pret" data-i18n="form.pret">Su solicitud está lista. Cópiela y envíela a sales@atmart.ltd — no hace falta ninguna aplicación de correo.</span>
+          <span class="x-si-erreur" data-i18n="form.echec">El envío automático no funcionó. Su solicitud está intacta abajo: cópiela y envíela a sales@atmart.ltd.</span>
+        </p>
+        <textarea class="x-msg" rows="10" readonly data-i18n-aria="form.aria" aria-label="Su solicitud, lista para copiar"></textarea>
+        <div class="x-actions">
+          <button type="button" class="btn btn-outline x-copier" data-i18n="form.copier">Copiar la solicitud</button>
+          <a class="btn btn-outline x-mailto" href="mailto:sales@atmart.ltd" data-i18n="form.messagerie">Abrir mi correo</a>
+        </div>
+        <p class="x-fait" data-i18n="form.copie">Copiado. Solo falta pegarlo en un correo a sales@atmart.ltd.</p>
+      </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">Un producto de <a href="https://atmart.ltd/">Atmart Data</a> — datos con fuente, fechados, verificables sobre las 140 comunas de Haití.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_donnees">Datos</h4>
+        <ul>
+          <li><a href="/couches.html" data-i18n="ft.couches">Capas</a></li>
+          <li><a href="datasets.html" data-i18n="ft.cat">Catálogo</a></li>
+          <li><a href="donnees.html" data-i18n="ft.comment">Cómo funciona</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Soluciones y licencias</a></li>
+          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definiciones y métodos</a></li>
+          <li><a href="/donnees-systeme.html" data-i18n="ft.carte">El mapa del sistema</a></li>
+          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Confianza y método</a></li>
+          <li><a href="/archives.html" data-i18n="ft.arch">Archivos y citación</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_contact">Contacto</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. El Explorador de Haití es gratuito, sin cuenta y sin rastreador publicitario — sólo existe una medición de audiencia anónima y agregada, <a href="/donnees-confiance.html#mesure">método publicado</a>.</div>
+  </div>
+</footer>
+
+<script src="../assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+<script>
+  /* Les champs sont declares ici et non dans le composant : chaque page a les
+     siens, et le libelle envoye a Atmart doit rester lisible par un humain. */
+  window.ATM_FORM = {
+    form: "cmp-form", panneau: "cmp-envoi",
+    sujet: "Atmart Campus — demande d'accès ({univ})",
+    champs: [["Étudiant / chercheur", "nom"], ["Courriel", "email"], ["Université", "univ"], ["Niveau", "niveau"], ["Discipline", "discipline"], ["Soutenance prévue", "date"], ["Encadrant", "encadrant"], ["Sujet", "sujet"]],
+    pied: "(Pensez à joindre l'attestation d'inscription ou la carte d'étudiant.)"
+  };
+</script>
+<script src="../assets/formulaire.js?v=2"></script>
+<script src="../assets/mesure.js?v=2" defer></script>
+<script src="../assets/ux.js?v=1" defer></script>
+<script src="../assets/i18n.js?v=15"></script>
+</body>
+</html>

@@ -19,21 +19,37 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-campus.html</loc>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-campus.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-campus.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-campus.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-campus.html"/>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-confiance.html</loc>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-pack-geo-haiti.html</loc>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-pack-geo-haiti.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-pack-geo-haiti.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-pack-geo-haiti.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-pack-geo-haiti.html"/>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-parrainage.html</loc>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-parrainage.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-parrainage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-parrainage.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-parrainage.html"/>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-registres.html</loc>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-solutions.html</loc>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-solutions.html"/>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-systeme.html</loc>
@@ -63,6 +79,18 @@
     <loc>https://explorateur.atmart.ltd/ht/datasets.html</loc>
   </url>
   <url>
+    <loc>https://explorateur.atmart.ltd/ht/donnees-campus.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/ht/donnees-pack-geo-haiti.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/ht/donnees-parrainage.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/ht/donnees-solutions.html</loc>
+  </url>
+  <url>
     <loc>https://explorateur.atmart.ltd/ht/donnees.html</loc>
   </url>
   <url>
@@ -75,6 +103,18 @@
     <loc>https://explorateur.atmart.ltd/en/datasets.html</loc>
   </url>
   <url>
+    <loc>https://explorateur.atmart.ltd/en/donnees-campus.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/en/donnees-pack-geo-haiti.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/en/donnees-parrainage.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/en/donnees-solutions.html</loc>
+  </url>
+  <url>
     <loc>https://explorateur.atmart.ltd/en/donnees.html</loc>
   </url>
   <url>
@@ -85,6 +125,18 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/datasets.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/es/donnees-campus.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/es/donnees-pack-geo-haiti.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/es/donnees-parrainage.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/es/donnees-solutions.html</loc>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/donnees.html</loc>

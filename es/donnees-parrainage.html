@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
+  <title data-i18n="pg.parrainage.title">Patrocinar un conjunto de datos — financiar el acceso a los datos | Atmart Data</title>
+  <meta name="description" data-i18n-content="pg.parrainage.desc" content="Bancos, empresas, ONG, ministerios y fundaciones: financien la apertura, la documentación o la actualización de un conjunto de datos útil para los estudiantes e investigadores de Haití y de la región." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="../assets/style.css?v=33" />
+  <link rel="stylesheet" href="../assets/data.css?v=27" />
+  <script>
+  window.ATM_LANGUES = ["fr", "ht", "en", "es"];
+</script>
+
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-mLZOquJa7KezBYzvTo16U3p+HgwKUGLBKy2H2OqEF3E=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM=' 'sha256-zjNdYAamMolC+J2rAdMdpeCN5VNnWzYOx+r5yFMIdMw='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+  <link rel="canonical" href="https://explorateur.atmart.ltd/es/donnees-parrainage.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-parrainage.html" />
+  <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-parrainage.html" />
+  <link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-parrainage.html" />
+  <link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-parrainage.html" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/donnees-parrainage.html" />
+  <script>window.ATM_LANG_FORCE = "es"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-parrainage.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-parrainage.html", "en": "https://explorateur.atmart.ltd/en/donnees-parrainage.html", "es": "https://explorateur.atmart.ltd/es/donnees-parrainage.html"};</script>
+</head>
+<body>
+<a class="lien-evitement" href="#contenu" data-i18n="nv.skip">Ir al contenido</a>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="../assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">los datos de Atmart</small></a>
+    <button class="nav-toggle" aria-label="Menú" data-i18n-aria="nv.menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nv.expl_h">Explorador de Haití</a></li>
+      <li><a href="/couches.html" data-i18n="nv.couches_h">Capas</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Datos</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catálogo <small>conjuntos de datos y guías</small></a></li>
+          <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Soluciones y licencias <small>empresas, ONG, administraciones</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>estudiantes e investigadores</small></a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Patrocinar un conjunto <small>instituciones y empresas</small></a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">Cómo funciona <small>método, fuentes, sistema</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="contenu" class="hero" style="padding:3.2rem 0 1.8rem">
+  <div class="container">
+    <p class="kreyol" lang="ht" data-i18n="pg.parrainage.accroche">Financiar un dato abierto es servir a toda una promoción.</p>
+    <h1 data-i18n-html="pg.parrainage.h1">Patrocinar un <em>conjunto de datos</em></h1>
+    <p class="lead" data-i18n-html="pg.parrainage.lead">Un banco, una empresa, una ONG, un ministerio o una fundación financia la apertura, la documentación o la actualización de un conjunto de datos. Ese conjunto pasa a ser accesible gratuitamente para estudiantes e investigadores — y el país gana un ladrillo de conocimiento que no existía.</p>
+    <div class="cta-row" style="display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.4rem">
+      <a href="#catalogue" class="btn btn-primary">Voir les jeux à parrainer</a>
+      <a href="#contact" class="btn btn-outline">Parler du programme</a>
+    </div>
+  </div>
+</section>
+
+<!-- LOGIQUE -->
+<section class="d-sec" style="padding-top:1rem">
+  <div class="container">
+    <p class="d-lbl">Le principe</p>
+    <h2 data-i18n-html="par.d860a7" class="d-h">Tres intereses que coinciden en el mismo punto</h2>
+    <div class="d-tiles" style="margin-top:1.1rem">
+      <div><span class="ico">🎓</span><b>Les étudiants et chercheurs</b><p data-i18n-html="par.31c905">Tienen las preguntas y el tiempo, pero rara vez los medios para acceder a datos preparados.</p></div>
+      <div><span class="ico">🏦</span><b>Les entreprises et institutions</b><p data-i18n-html="par.edc303">Buscan una contribución social concreta, visible y verificable, no un logotipo en una pancarta.</p></div>
+      <div><span class="ico">🗂</span><b>Atmart Data</b><p data-i18n-html="par.d8fc0a">Pueden abrir más datos, pero no pueden financiar por sí solos la apertura de todo el catálogo.</p></div>
+    </div>
+    <div class="d-box" style="margin-top:1.4rem">
+      <h3 data-i18n-html="par.4a998b">Lo que financia exactamente el patrocinio</h3>
+      <p data-i18n-html="par.b0acd2">El trabajo de puesta a disposición: identificación y negociación de fuentes, extracción, depuración, armonización, diccionario de variables, ficha de datos en cuatro idiomas, alojamiento y acompañamiento de los usuarios durante el programa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MÉCANISMES -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">Formules</p>
+    <h2 data-i18n-html="par.496446" class="d-h">Cinco formas de patrocinar</h2>
+    <div class="d-tab-wrap">
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th scope="col">Formule</th><th data-i18n-html="par.1f4bc7" scope="col">Lo que se financia</th><th data-i18n-html="par.89337a" scope="col">Lo que gana el patrocinador</th><th data-i18n-html="par.31ac8d" scope="col">Orden de contribución</th></tr></thead>
+        <tbody>
+          <tr>
+            <td data-i18n-html="par.38ee8a">Patrocinio de un conjunto de datos</td>
+            <td data-i18n-html="par.8d4c2e">La apertura o actualización de un conjunto concreto</td>
+            <td data-i18n-html="par.fdf4d7">Mención permanente en la ficha del conjunto, visibilidad ante un público cualificado</td>
+            <td class="p">1 500 – 4 000 $</td>
+          </tr>
+          <tr>
+            <td data-i18n-html="par.99b4c9">Beca de datos para tesis</td>
+            <td data-i18n-html="par.edfb3a">Acceso completo para un grupo de estudiantes sobre un tema</td>
+            <td data-i18n-html="par.699de8">Apoyo a la formación, vigilancia indirecta del sector</td>
+            <td class="p">≈ 1 000 $ / 10 étudiants</td>
+          </tr>
+          <tr>
+            <td data-i18n-html="par.6e44a0">Pack de investigación</td>
+            <td data-i18n-html="par.becadb">Un lote de conjuntos para una facultad o un laboratorio, durante un año</td>
+            <td data-i18n-html="par.ad2032">Anclaje institucional duradero, impacto colectivo</td>
+            <td class="p">3 000 – 8 000 $</td>
+          </tr>
+          <tr>
+            <td data-i18n-html="par.459835">Cohorte temática</td>
+            <td data-i18n-html="par.5b95f3">Un año de trabajos sobre un sector: agricultura, finanzas, empleo, salud, territorios</td>
+            <td data-i18n-html="par.d3dc7d">Posicionamiento de experticia, producción de conocimiento sobre su mercado</td>
+            <td class="p">à partir de 10 000 $</td>
+          </tr>
+          <tr>
+            <td data-i18n-html="par.f6041b">Fondo de investigación aplicada</td>
+            <td data-i18n-html="par.302686">Una contribución mancomunada, asignada por un comité</td>
+            <td data-i18n-html="par.9d5a80">Impacto duradero, esfuerzo compartido con otros contribuyentes</td>
+            <td class="p">à partir de 500 $</td>
+          </tr>
+        </tbody>
+      </table></div>
+    </div>
+    <p data-i18n-html="par.cfa0d9" class="d-note" style="margin-top:0.9rem">Rangos indicativos: el importe real depende del volumen de fuentes a tratar, la frecuencia de actualización y la duración de apertura. Cada patrocinio tiene un presupuesto detallado y un convenio escrito.</p>
+  </div>
+</section>
+
+<!-- CATALOGUE PARRAINABLE -->
+<section class="d-sec" id="catalogue">
+  <div class="container">
+    <p class="d-lbl">Catalogue</p>
+    <h2 data-i18n-html="par.be9092" class="d-h">Los conjuntos que esperan un patrocinador</h2>
+    <p data-i18n-html="par.9cb0b8" class="d-sub" style="margin-bottom:1.2rem">Estos conjuntos no son ideas: las fuentes están identificadas, el método está escrito, falta financiar el trabajo de preparación. Cada uno sirve de inmediato a varias disciplinas.</p>
+    <p data-i18n-html="par.ead2fc" class="d-sub" style="margin-bottom:1.2rem"><strong>Si no se alcanza el importe</strong>, la contribución no se devuelve ni queda en espera: abre la versión reducida del conjunto, descrita abajo antes de cualquier pago. Esa versión es pública y gratuita como todo dato abierto por patrocinio, y el patrocinador se menciona igual. Una sola regla fija ese alcance: se baja un escalón territorial: un conjunto prometido a nivel de comuna se abre a nivel de departamento; una red que se quería ampliar se mantiene al día sin ampliación.</p>
+<div class="d-tab-wrap">
+      <div class="x-tableau" tabindex="0"><table class="d-tab">
+        <thead><tr><th data-i18n-html="par.1aea23" scope="col">Conjunto de datos</th><th data-i18n-html="par.2d8af8" scope="col">Fuentes identificadas</th><th data-i18n-html="par.4cf4b0" scope="col">A quién serviría</th><th scope="col">Ouverture</th><th data-i18n-html="par.dc27e8" scope="col">Si no se alcanza el importe</th></tr></thead>
+        <tbody>
+<tr>
+<td data-i18n-html="par.cf3b84">Perfil de las 140 comunas de Haití <strong>— prioridad 1</strong></td>
+<td data-i18n-html="par.8c7739">Referencial territorial ya publicado, completado con fuentes sectoriales</td>
+<td data-i18n-html="par.0b4530">Ordenamiento, ONG, donantes, entidades locales, periodismo de datos</td>
+<td class="p">≈ 6 000 $</td>
+<td data-i18n-html="par.c06733">El perfil de los 10 departamentos, sobre las mismas fuentes y el mismo diccionario. El descenso a las 140 comunas queda abierto a una financiación posterior.</td>
+</tr>
+          <tr>
+            <td data-i18n-html="par.9ea5cb">Precios de mercados — cobertura nacional y actualización mensual</td>
+            <td data-i18n-html="par.fff7b8">CNSA, FEWS NET</td>
+            <td data-i18n-html="par.99cde0">Agronomía, seguridad alimentaria, economía, ONG humanitarias, periodistas</td>
+            <td data-i18n-html="par.6d608b" class="p">≈ 2 500 $<br /><small>+ 1 200 $/año de actualización</small></td>
+          <td data-i18n-html="par.0678b5">La red centinela actual de 9 mercados, mantenida al día durante doce meses, sin extensión a nuevos mercados.</td>
+</tr>
+          <tr>
+            <td data-i18n-html="par.ccaf6f">Indicadores económicos de Haití (2000–2025)</td>
+            <td data-i18n-html="par.ef8cd7">Banco Mundial, FMI, BRH</td>
+            <td data-i18n-html="par.3cf26f">Economía, gestión, finanzas, planes de negocio, incidencia</td>
+            <td class="p">≈ 2 000 $</td>
+          <td data-i18n-html="par.931394">Las series nacionales anuales, sin desglose departamental ni serie mensual.</td>
+</tr>
+          <tr>
+            <td data-i18n-html="par.eedf09">Educación en Haití por departamento</td>
+            <td data-i18n-html="par.63021a">MENFP, UNESCO UIS, Banco Mundial</td>
+            <td data-i18n-html="par.a6ee85">Ciencias de la educación, políticas públicas, ONG de educación</td>
+            <td class="p">≈ 2 500 $</td>
+          <td data-i18n-html="par.6451f5">Los indicadores a nivel de los 10 departamentos, sin bajar a la comuna.</td>
+</tr>
+          <tr>
+            <td data-i18n-html="par.2040ab">Salud pública por departamento</td>
+            <td data-i18n-html="par.84be2e">MSPP, OMS/OPS, encuestas EMMUS</td>
+            <td data-i18n-html="par.16d160">Salud pública, epidemiología, planificación sanitaria</td>
+            <td class="p">≈ 3 000 $</td>
+          <td data-i18n-html="par.6451f5">Los indicadores a nivel de los 10 departamentos, sin bajar a la comuna.</td>
+</tr>
+        </tbody>
+      </table></div>
+    </div>
+    <p data-i18n-html="par.b4fae5" class="d-note" style="margin-top:0.9rem">¿Un tema que le interesa no figura aquí? Propóngalo: si las fuentes existen y el uso es real, lo estudiamos.</p>
+  </div>
+</section>
+
+<!-- CE QUE LE PARRAIN OBTIENT -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">Contreparties</p>
+    <h2 data-i18n-html="par.a5fbfc" class="d-h">Lo que recibe el patrocinador — y lo que no compra</h2>
+    <div class="grid grid-2" style="margin-top:1.1rem">
+      <div>
+        <p style="color:var(--teal);font-family:var(--font-head);margin-bottom:0.2rem">Il reçoit</p>
+        <ul class="d-list yes">
+          <li data-i18n-html="par.e14d62">Una mención permanente en la ficha del conjunto y en la página del programa.</li>
+          <li data-i18n-html="par.fe49ae">Un informe anual de uso: descargas, disciplinas, universidades, trabajos producidos.</li>
+          <li data-i18n-html="par.be9fba">La lista de tesis e investigaciones realizadas gracias al conjunto patrocinado.</li>
+          <li data-i18n-html="par.1e0414">Un acceso profesional al mismo conjunto para sus propios equipos.</li>
+          <li data-i18n-html="par.17a59e">La posibilidad de presentar el programa en un taller con los estudiantes.</li>
+          <li data-i18n-html="par.33d533">Un documento de comunicación listo para publicar, en francés, criollo e inglés.</li>
+        </ul>
+      </div>
+      <div>
+        <p data-i18n-html="par.9d1f38" style="color:var(--red);font-family:var(--font-head);margin-bottom:0.2rem">Lo que no compra</p>
+        <ul class="d-list no">
+          <li data-i18n-html="par.c8df7d">El contenido de las conclusiones: el investigador sigue libre, aunque el resultado incomode.</li>
+          <li data-i18n-html="par.b0df83">Un derecho de revisión o de veto sobre los trabajos producidos.</li>
+          <li data-i18n-html="par.e5b4c4">La exclusividad sobre el dato abierto: está abierto, por tanto abierto a todos.</li>
+          <li data-i18n-html="par.08b780">La elección de los beneficiarios individuales, que corresponde al comité de selección.</li>
+          <li data-i18n-html="par.dc0afc">Los datos personales de los estudiantes o investigadores.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="d-box amber">
+      <h3 data-i18n-html="par.811c0e">La regla que hace creíble el programa</h3>
+      <p data-i18n-html="par.470ae2"><strong>Un patrocinador financia una capacidad de investigación, no una conclusión.</strong> Esta separación está escrita en cada convenio. Sin ella, los trabajos del programa no valdrían nada, ni científica ni reputacionalmente, tampoco para el patrocinador.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MÉCANIQUE -->
+<section class="d-sec">
+  <div class="container">
+    <p class="d-lbl">Déroulé</p>
+    <h2 data-i18n-html="par.893f22" class="d-h">Del acuerdo a la publicación de los trabajos</h2>
+    <ol class="d-steps">
+      <li data-i18n-html="par.6adee7"><b>Elección del conjunto o del tema</b> — del catálogo anterior o a propuesta del patrocinador.</li>
+      <li data-i18n-html="par.97bb54"><b>Presupuesto y convenio</b> — alcance, duración de apertura, importe, contrapartidas, reglas de independencia.</li>
+      <li data-i18n-html="par.00c8af"><b>Preparación del conjunto</b> — extracción, depuración, documentación, ficha de datos, publicación.</li>
+      <li data-i18n-html="par.6337d7"><b>Convocatoria</b> — difundida por las universidades socias y en este sitio.</li>
+      <li data-i18n-html="par.ac72e7"><b>Selección</b> — por un comité, con criterios académicos: pertinencia del tema, viabilidad, capacidad de uso.</li>
+      <li data-i18n-html="par.ed2307"><b>Acceso y acompañamiento</b> — licencia patrocinada, taller de manejo, apoyo metodológico.</li>
+      <li data-i18n-html="par.9f0b83"><b>Seguimiento</b> — hitos, entregables, resúmenes depositados en la defensa.</li>
+      <li data-i18n-html="par.07f76b"><b>Valorización</b> — publicación de los trabajos, informe de uso entregado al patrocinador, mención pública de la cohorte.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="d-sec" id="contact" style="padding-bottom:3rem">
+  <div class="container">
+    <p class="d-lbl">Contact</p>
+    <h2 data-i18n-html="par.cd9a0f" class="d-h">Hablar de un patrocinio</h2>
+    <p data-i18n-html="par.1b85d0" class="d-sub">Díganos qué le interesa: un conjunto concreto, un sector, una universidad o simplemente la idea general. Volvemos con una propuesta cifrada y un convenio tipo.</p>
+    <form class="d-form" id="spo-form">
+      <div class="two">
+        <div><label for="s-org">Organisation</label><input id="s-org" name="org" required /></div>
+        <div><label for="s-nom">Nom du contact</label><input id="s-nom" name="nom" required /></div>
+      </div>
+      <div class="two">
+        <div><label for="s-mail">E-mail</label><input id="s-mail" name="email" type="email" required /></div>
+        <div><label for="s-form">Formule envisagée</label>
+          <select id="s-form" name="formule">
+            <option>Parrainage d'un jeu de données</option>
+            <option>Bourse data mémoire</option>
+            <option>Pack de recherche (faculté ou laboratoire)</option>
+            <option>Cohorte thématique annuelle</option>
+            <option>Fonds de recherche appliquée</option>
+            <option>À définir ensemble</option>
+          </select>
+        </div>
+      </div>
+      <div class="two">
+        <div><label for="s-jeu">Jeu ou thème visé</label><input id="s-jeu" name="jeu" placeholder="ex. prix des marchés, éducation, santé…" /></div>
+        <div><label for="s-bud">Enveloppe envisagée (facultatif)</label><input id="s-bud" name="budget" placeholder="ex. 2 500 $" /></div>
+      </div>
+      <div><label for="s-msg">Objectif du parrainage</label><textarea id="s-msg" name="msg" rows="4" placeholder="Ce que votre organisation cherche à soutenir, et pourquoi ce thème."></textarea></div>
+      <div><button type="submit" class="btn btn-primary">Envoyer</button></div>
+      <p data-i18n-html="par.b0f3df" class="d-note" style="margin-top:0.8rem">O escriba a <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a>. Atmart LLC es una sociedad registrada en Estados Unidos; el convenio y la facturación se hacen en dólares.</p>
+    </form>
+      <div class="d-envoi" id="spo-envoi" hidden>
+        <p class="x-etat" tabindex="-1" role="status">
+          <span class="x-si-envoye" data-i18n="form.ok">Su solicitud ha sido enviada a Atmart.</span>
+          <span class="x-si-pret" data-i18n="form.pret">Su solicitud está lista. Cópiela y envíela a sales@atmart.ltd — no hace falta ninguna aplicación de correo.</span>
+          <span class="x-si-erreur" data-i18n="form.echec">El envío automático no funcionó. Su solicitud está intacta abajo: cópiela y envíela a sales@atmart.ltd.</span>
+        </p>
+        <textarea class="x-msg" rows="10" readonly data-i18n-aria="form.aria" aria-label="Su solicitud, lista para copiar"></textarea>
+        <div class="x-actions">
+          <button type="button" class="btn btn-outline x-copier" data-i18n="form.copier">Copiar la solicitud</button>
+          <a class="btn btn-outline x-mailto" href="mailto:sales@atmart.ltd" data-i18n="form.messagerie">Abrir mi correo</a>
+        </div>
+        <p class="x-fait" data-i18n="form.copie">Copiado. Solo falta pegarlo en un correo a sales@atmart.ltd.</p>
+      </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">Un producto de <a href="https://atmart.ltd/">Atmart Data</a> — datos con fuente, fechados, verificables sobre las 140 comunas de Haití.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_donnees">Datos</h4>
+        <ul>
+          <li><a href="/couches.html" data-i18n="ft.couches">Capas</a></li>
+          <li><a href="datasets.html" data-i18n="ft.cat">Catálogo</a></li>
+          <li><a href="donnees.html" data-i18n="ft.comment">Cómo funciona</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Soluciones y licencias</a></li>
+          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definiciones y métodos</a></li>
+          <li><a href="/donnees-systeme.html" data-i18n="ft.carte">El mapa del sistema</a></li>
+          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Confianza y método</a></li>
+          <li><a href="/archives.html" data-i18n="ft.arch">Archivos y citación</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_contact">Contacto</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. El Explorador de Haití es gratuito, sin cuenta y sin rastreador publicitario — sólo existe una medición de audiencia anónima y agregada, <a href="/donnees-confiance.html#mesure">método publicado</a>.</div>
+  </div>
+</footer>
+
+<script src="../assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+<script>
+(function () {
+  "use strict";
+
+  /* Contexte apporté par l'Explorateur : l'indicateur manquant, le territoire
+     où il manque, et la source qui le débloquerait. Le visiteur arrive avec sa
+     demande déjà écrite au lieu de la retaper. Rien de personnel ne transite —
+     un nom d'indicateur et un nom de commune, dans l'URL, côté navigateur. */
+  var SAUT = String.fromCharCode(10);
+  var p = new URLSearchParams(location.search);
+  var jeu = p.get("jeu"), terr = p.get("terr"), src = p.get("src");
+  if (jeu || terr) {
+    var champJeu = document.getElementById("s-jeu");
+    if (champJeu && jeu) champJeu.value = jeu;
+    var msg = document.getElementById("s-msg");
+    if (msg && !msg.value) {
+      msg.value = (jeu ? "Ouvrir « " + jeu + " »" : "Ouvrir une donnée manquante") +
+        (terr ? ", constatée manquante sur " + terr : "") + "." +
+        (src ? SAUT + "Source à mobiliser : " + src : "") +
+        SAUT + SAUT + "Résultat public attendu : la donnée devient consultable et " +
+        "téléchargeable dans l'Explorateur, pour tous les territoires que la " +
+        "source couvre, avec mention du parrain.";
+    }
+    var enc = document.querySelector(".d-form");
+    if (enc) {
+      var note = document.createElement("p");
+      note.className = "d-note";
+      note.style.marginBottom = "0.8rem";
+      note.innerHTML = "Demande préremplie depuis l'Explorateur" +
+        (terr ? " — territoire : <b>" + terr.replace(/[<>&]/g, "") + "</b>" : "") +
+        (jeu ? ", indicateur : <b>" + jeu.replace(/[<>&]/g, "") + "</b>" : "") +
+        ". Vous pouvez la modifier avant l'envoi.";
+      enc.parentNode.insertBefore(note, enc);
+    }
+  }
+})();
+</script>
+<script>
+  /* Les champs sont declares ici et non dans le composant : chaque page a les
+     siens, et le libelle envoye a Atmart doit rester lisible par un humain. */
+  window.ATM_FORM = {
+    form: "spo-form", panneau: "spo-envoi",
+    sujet: "Parrainage de dataset — {org}",
+    champs: [["Organisation", "org"], ["Contact", "nom"], ["Courriel", "email"], ["Formule", "formule"], ["Jeu / thème visé", "jeu"], ["Enveloppe", "budget"], ["Objectif", "msg"]]
+  };
+</script>
+<script src="../assets/formulaire.js?v=2"></script>
+<script src="../assets/mesure.js?v=2" defer></script>
+<script src="../assets/ux.js?v=1" defer></script>
+<script src="../assets/i18n.js?v=15"></script>
+</body>
+</html>

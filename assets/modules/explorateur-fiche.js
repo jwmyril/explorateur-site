@@ -1865,7 +1865,7 @@ export default function (A) {
     var det = function (o) {
       var k = Object.keys(o || {});
       return k.length ? " — " + k.map(function (n) {
-        return o[n] + " " + T(n) + (o[n] > 1 ? "s" : ""); }).join(", ") : "";
+        return o[n] + " " + (o[n] > 1 ? pluriel(T(n)) : T(n)); }).join(", ") : "";
     };
     if (d.s) {
       h.push('<p class="x-note">' + TF("{n} établissements de santé recensés",
@@ -1884,6 +1884,17 @@ export default function (A) {
     h.push('<p class="x-src"><small>' + esc(m.attribution || "") + " · " +
            esc(m.source || "") + "</small></p>");
     return h.join("");
+  }
+
+  /* Les pluriels irréguliers du français, parce que « 26 hôpitals » coûte
+     plus de crédibilité que n'en rapporte le chiffre juste à côté : le
+     lecteur qui voit une faute d'écolier se demande ce qui d'autre a été
+     fait à la va-vite. */
+  function pluriel(mot) {
+    if (/(al)$/.test(mot)) return mot.replace(/al$/, "aux");
+    if (/(s|x|z)$/.test(mot)) return mot;
+    if (/(au|eu)$/.test(mot)) return mot + "x";
+    return mot + "s";
   }
 
   function blocLacunes(r) {

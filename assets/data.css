@@ -758,3 +758,13 @@ html[lang="fr"] .x-partiel { display: none; }
                       margin-bottom: 0.5rem; background: #f6f9fd;
                       border-radius: 0 8px 8px 0; }
 .x-liste-seismes small { color: var(--ink-dim); }
+
+/* ---------------------------------------------------- occupation du sol
+   Une barre PROPORTIONNELLE derrière chaque ligne : la part se lit d'un
+   coup d'œil sans qu'un graphique n'occupe un écran de téléphone. */
+.x-liste-sol { list-style: none; margin: 0.6rem 0; padding: 0; }
+.x-liste-sol li { position: relative; padding: 0.42rem 0.6rem; margin-bottom: 2px;
+                  background: #f6f9fd; border-radius: 6px; overflow: hidden; }
+.x-liste-sol b { position: relative; z-index: 1; margin-right: 0.4rem; }
+.x-liste-sol .x-barre { position: absolute; left: 0; top: 0; bottom: 0;
+                        background: rgba(46, 196, 182, 0.28); z-index: 0; }

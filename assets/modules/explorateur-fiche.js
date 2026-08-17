@@ -1215,6 +1215,58 @@ export default function (A) {
     return h.join("");
   }
 
+  /* ---------------------------------------------- occupation du sol (v55)
+     ESA WorldCover 2021, 10 m, CC BY 4.0 (passeport PSP-026). Classification
+     satellitaire : un pixel « bâti » n'est pas une maison habitée, un pixel
+     « cultures » ne dit ni ce qui pousse ni si la parcelle a produit. La
+     fiche l'écrit, parce que le mot « cultures » invite à le croire. */
+  function blocSol(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-sol" class="x-pyr"><p class="x-note">' +
+        T("Occupation du sol — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerSol() {
+    if (S.solPromesse) return S.solPromesse;
+    S.solPromesse = charger(DIR + "atmart_occupation_sol.json", 1)
+      .then(function (t) { S.sol = JSON.parse(t); return S.sol; })
+      .catch(function () { S.sol = null; return null; });
+    return S.solPromesse;
+  }
+
+  function remplirSol(r) {
+    var el = $("#x-sol");
+    if (!el) return;
+    chargerSol().then(function () {
+      var h = htmlSol(r);
+      el.innerHTML = h || ('<p class="x-note">' +
+        T("L'occupation du sol n'a pas pu être chargée — la fiche reste lisible sans elle.") +
+        "</p>");
+    });
+  }
+
+  function htmlSol(r) {
+    var d = S.sol && S.sol.communes ? S.sol.communes[r.pcode] : null;
+    if (!d || !d.p) return "";
+    var m = S.sol.meta || {}, noms = m.noms || {};
+    var cles = Object.keys(d.p).sort(function (a, b) { return d.p[b] - d.p[a]; });
+    var h = ["<h3>" + T("Occupation du sol") + "</h3>"];
+    h.push('<p class="x-note">' + TF(
+      "Sur les {km2} km² de la commune, mesurés au satellite en {an} :",
+      { km2: esc(d.km2), an: esc(m.millesime || "") }) + "</p>");
+    h.push('<ul class="x-liste-sol">');
+    cles.forEach(function (c) {
+      h.push("<li><b>" + esc(d.p[c]) + " %</b> " + esc(noms[c] || c) +
+             '<span class="x-barre" style="width:' + Math.min(100, d.p[c]) +
+             '%"></span></li>');
+    });
+    h.push("</ul>");
+    h.push('<p class="x-src"><small>' + esc(m.attribution || "") + " · " +
+           esc(m.avertissement || "") + "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -1470,6 +1522,7 @@ export default function (A) {
              montrer("services") ? blocServices(r) : "",
              montrer("services") ? blocSeismes(r) : "",
              montrer("services") ? blocPluie(r) : "",
+             montrer("services") ? blocSol(r) : "",
              montrer("comparer") ? blocComparer(r) : "",
              montrer("lacunes") ? blocLacunes(r) : "");
     } else if (r.niveau_admin === "0") {
@@ -1494,6 +1547,7 @@ export default function (A) {
        déclenchait jamais. Le bloc restait blanc indéfiniment. */
     remplirSeismes(r);
     remplirPluie(r);
+    remplirSol(r);
     var t = $("#x-titre-fiche");
     if (t) t.textContent = nomT(r);
     majURL();
@@ -1519,5 +1573,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocObjectif, blocAccueil, blocIndicateurs, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocObjectif, blocAccueil, blocIndicateurs, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

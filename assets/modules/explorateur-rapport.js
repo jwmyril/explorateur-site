@@ -44,7 +44,7 @@
    cela vient. La fiche à l'écran suit un autre ordre — celui de l'arrivée
    des couches dans le produit — qui n'a aucune raison d'être imposé au
    papier. */
-import { S } from "./etat.js?v=26";
+import { S } from "./etat.js?v=27";
 export default function (A) {
   /* Du noyau et d'i18n uniquement : ces deux-là sont chargés avant ce
      module. Tout ce qui vient de la fiche est appelé par `A.` au moment
@@ -77,7 +77,10 @@ export default function (A) {
     { cle: "pluie",        charger: "chargerPluie",        html: "htmlPluie",        titre: "Pluie et sécheresse" },
     { cle: "equipements",  charger: "chargerEquipements",  html: "htmlEquipements",  titre: "Santé et écoles cartographiées" },
     { cle: "projets",      charger: "chargerProjets",      html: "htmlProjets",      titre: "Projets citant le territoire" },
-    { cle: "popMod",       charger: "chargerPopMod",       html: "htmlPopMod",       titre: "Population modélisée" }
+    { cle: "popMod",       charger: "chargerPopMod",       html: "htmlPopMod",       titre: "Population modélisée" },
+    { cle: "acces",        charger: "chargerAcces",        html: "htmlAcces",        titre: "Temps d'accès par la route", large: true },
+    { cle: "ecolesdec",    charger: "chargerEcolesdec",    html: "htmlEcolesdec",    titre: "Écoles déclarées au ministère" },
+    { cle: "pop3",         charger: "chargerPop3",         html: "htmlPop3",         titre: "Population — trois sources" }
   ];
 
   /* Les sections du rapport, dans l'ordre du papier.
@@ -97,7 +100,13 @@ export default function (A) {
      seule chose qui empêche ce chiffre d'être cité de travers. */
   var TERRITOIRE = ["sol", "urbanisation", "eau", "bassins", "solaire"];
   var RISQUES = ["seismes", "cyclones", "pluie"];
-  var EQUIPEMENTS = ["equipements", "projets"];
+  /* Les temps d'accès OUVRENT la section des équipements, et ce n'est pas un
+     détail de mise en page : compter les établissements d'une commune répond
+     à « qu'y a-t-il ? », les temps d'accès répondent à « qui peut y aller ? ».
+     Sur une table de réunion, c'est la seconde question qui décide. Les
+     écoles déclarées suivent immédiatement, parce qu'elles disent ce que le
+     comptage cartographié ne peut pas dire. */
+  var EQUIPEMENTS = ["acces", "equipements", "ecolesdec", "projets"];
   var HORS_RAPPORT = ["batiments", "sols"];
 
   function couche(cle) {
@@ -198,7 +207,7 @@ export default function (A) {
      n'est pas une redondance, c'est le sujet. Les deux méthodes ne
      s'accordent pas partout, et le rapport publie le désaccord au lieu de
      choisir un chiffre en silence. */
-  function ceQuOnSait(r) {
+  function ceQuOnSait(r, rendues) {
     var pop = A.valeurBrute(r, "IND-POP-001");
     var dens = A.valeurBrute(r, "IND-POP-002");
     var pm = S.popMod && S.popMod.communes ? S.popMod.communes[r.pcode] : null;
@@ -214,10 +223,18 @@ export default function (A) {
       h.push("<tr><th scope=\"row\">" + esc(nom) + "</th><td class=\"r-num\">" + val +
         "</td><td>" + esc(an || "—") + "</td><td>" + esc(src || "—") + "</td></tr>");
     };
+    /* « Population projetée », pas « Population officielle ».
+       IND-POP-001 est la projection UNFPA/OCHA COD-PS 2024, statut E —
+       le référentiel le dit, et sa méthode aussi. La nommer « officielle »
+       sur du papier qui circule était un contresens, et le bloc des trois
+       sources ajouté ci-dessous le rendait visible : il appelle « statistique
+       officielle » le chiffre de l'IHSI, qui n'est pas celui-ci. Sur Gressier,
+       les deux lignes auraient annoncé 3 987 et 36 541 habitants sous le même
+       adjectif, dans le même document. */
     if (pop && pop.valeur !== null) {
-      l(T("Population officielle"), fmt(pop.valeur, pop.unite), pop.annee, pop.source);
+      l(T("Population projetée"), fmt(pop.valeur, pop.unite), pop.annee, pop.source);
     } else {
-      l(T("Population officielle"), '<span class="r-nd">' + T("non documenté") + "</span>", "", "");
+      l(T("Population projetée"), '<span class="r-nd">' + T("non documenté") + "</span>", "", "");
     }
     if (pm && pm.m) {
       /* Les couches JSON stockent leurs nombres en CHAÎNES ("251114") : la
@@ -252,6 +269,17 @@ export default function (A) {
     if (mpm.avertissement) {
       h.push('<p class="r-src">' + esc(mpm.avertissement) + "</p>");
     }
+    /* Les TROIS témoins, dans la section qui pose la question du nombre.
+       Ce bloc n'est pas une redite du tableau ci-dessus : le tableau oppose
+       deux méthodes, celui-ci en confronte trois — dont la statistique
+       officielle de l'IHSI, que la projection ne contient pas. Sur une
+       commune concordante il rassure en trois lignes ; sur Gressier, la
+       seule aberrante du pays, il montre que l'IHSI et le satellite
+       s'accordent CONTRE la projection. C'est exactement ce qu'un lecteur
+       doit savoir avant de citer un chiffre de population dans un document
+       qui l'engage. */
+    var p3 = A.htmlPop3 ? A.htmlPop3(r) : "";
+    if (p3) { h.push('<div class="r-bloc">' + p3 + "</div>"); rendues.push("pop3"); }
     h.push("</section>");
     return h.join("");
   }
@@ -285,7 +313,16 @@ export default function (A) {
       var f = c && A[c.html];
       var corps = "";
       try { corps = f ? f(r) : ""; } catch (e) { corps = ""; }
-      if (corps) { h.push('<div class="r-bloc">' + corps + "</div>"); rendues.push(cle); }
+      if (corps) {
+        /* `large` fait traverser les deux colonnes : le tableau des temps
+           d'accès a quatre colonnes, dont trois de chiffres à comparer d'un
+           coup d'œil. Serré sur 41 mm, il devient une bouillie de retours à
+           la ligne — et un tableau qu'on ne peut plus lire en travers ne
+           dit plus rien de ce qu'il a été construit pour montrer. */
+        h.push('<div class="r-bloc' + (c.large ? " r-bloc-large" : "") + '">' +
+               corps + "</div>");
+        rendues.push(cle);
+      }
       else vides.push(T(c ? c.titre : cle));
     });
     if (vides.length) {
@@ -351,7 +388,14 @@ export default function (A) {
         esc(millesime(m) || "—") + "</td><td>" +
         esc(m.licence || "—") + "</td><td>" +
         esc(m.passeport || m.passeport_id || "—") + "</td></tr>");
-      if (m.avertissement) limites.push([T(c.titre), m.avertissement]);
+      /* Les producteurs n'écrivent pas tous leur mise en garde au singulier :
+         certains jeux en portent une, d'autres une liste. Ne lire que la
+         forme singulière laissait la page des limites muette sur les couches
+         qui en ont le plus — précisément celles dont les réserves sont
+         nombreuses parce qu'elles sont nécessaires. On lit les deux formes. */
+      var av = m.avertissement ||
+               (Array.isArray(m.avertissements) ? m.avertissements.join(" ") : "");
+      if (av) limites.push([T(c.titre), av]);
       if (m.attribution || m.citation) {
         credits.push([T(c.titre),
           [m.attribution, m.citation].filter(Boolean).join(" · ")]);
@@ -480,11 +524,15 @@ export default function (A) {
     var s2 = sectionCouches(2, T("Le territoire"), TERRITOIRE, r, rendues);
     var s3 = sectionCouches(3, T("Les risques"), RISQUES, r, rendues);
     var s4 = sectionCouches(4, T("Les équipements"), EQUIPEMENTS, r, rendues);
-    /* La population modélisée est imprimée en section 1, hors sectionCouches :
-       sa source doit tout de même figurer au tableau. */
+    /* La section 1 est construite AVANT que la liste soit figée : elle
+       imprime deux couches hors sectionCouches — la population modélisée et
+       les trois sources — et leurs producteurs doivent atteindre le tableau
+       des sources. Figer `utilisees` en premier les en aurait exclus en
+       silence, ce qui aurait crédité moins que ce que la feuille contient. */
+    var s1 = ceQuOnSait(r, rendues);
     if (S.popMod && S.popMod.communes && S.popMod.communes[r.pcode]) rendues.push("popMod");
     var utilisees = COUCHES.filter(function (c) { return rendues.indexOf(c.cle) > -1; });
-    var h = [entete(r), ceQuOnSait(r), s2, s3, s4,
+    var h = [entete(r), s1, s2, s3, s4,
              sourcesEtLimites(r, utilisees), renvoiFiche(r)];
     /* Le pied revient sur chaque page imprimée (position fixe) : une feuille
        détachée d'un rapport agrafé doit encore dire de quelle commune elle

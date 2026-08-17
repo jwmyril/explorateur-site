@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=26";
+import { S } from "./etat.js?v=27";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, situation, valeurBrute } = A;
@@ -188,13 +188,21 @@ export default function (A) {
       h.push('<button class="btn btn-outline x-btn-comp" data-comparer="' + esc(r.atmart_geo_id) +
              '">' + T("Ajouter à la comparaison") + "</button>");
       /* Le bouton du rapport de territoire — commune uniquement, parce que
-         c'est le seul niveau où les treize couches ont une valeur propre :
-         un département n'a ni bassin versant ni occupation du sol à lui.
+         c'est le seul niveau où les couches ont une valeur propre : un
+         département n'a ni bassin versant ni occupation du sol à lui.
          Il garde la classe `x-btn-print` (la mesure d'audience compte les
          impressions par elle) et ajoute `x-btn-rapport`, que le moteur teste
-         EN PREMIER pour construire le document au lieu d'imprimer l'écran. */
+         EN PREMIER pour construire le document au lieu d'imprimer l'écran.
+
+         « SEPT PAGES » EST MESURÉ, PAS ESTIMÉ. L'infobulle annonçait 4 à 5
+         pages ; le document mis à la largeur utile d'un A4 en fait sept, dont
+         près de trois pour la page des sources — et il en faisait déjà six
+         avant qu'on y ajoute les temps d'accès. Un lecteur qui lance une
+         impression sur un stock de papier compté doit savoir ce qu'il
+         engage : mieux vaut corriger la promesse que raccourcir la page qui
+         porte les licences et les limites. */
       h.push('<button class="btn btn-outline x-btn-print x-btn-rapport" title="' +
-             T("Un document de 4 à 5 pages, mis en page pour le papier : en-tête, chiffres avec leurs sources, et la page des sources et limites.") +
+             T("Un document d'environ sept pages A4, mis en page pour le papier : en-tête, chiffres avec leurs sources, temps d'accès aux services, et trois pages de sources et de limites.") +
              '">' + T("Rapport de la commune (PDF)") + "</button>");
       h.push("</div>");
       /* Ligne de confiance : chaque segment est une phrase autonome, assemblée

@@ -572,7 +572,15 @@ select:focus-visible, input:focus-visible {
 
 /* ===== Impression / PDF ===== */
 @media print {
-  header, footer, .x-barre, .x-exemples, .x-preuve, .x-onglets, .x-adapter,
+  /* `body > header` et non `header` : le rapport de territoire construit SON
+     PROPRE en-tête, qui est un <header>, et la règle non qualifiée le faisait
+     disparaître à l'impression. La feuille sortait alors sans nom de commune,
+     sans p-code, sans date d'édition et sans l'avertissement qui dit ce que
+     ce document est — exactement le document anonyme que le rapport a été
+     écrit pour ne pas être. Trouvé le 17/08 en basculant les règles
+     d'impression en « screen » pour VOIR la mise en page au lieu de la
+     déduire de la feuille de style. */
+  body > header, body > footer, .x-barre, .x-exemples, .x-preuve, .x-onglets, .x-adapter,
   .x-actions, .atm-launch, .atm-share, .atm-drawer, #x-vue-classement,
   .x-couverture, #x-millesimes, .d-box, .x-compte, #x-resultats { display: none !important; }
   body { background: #fff !important; color: #111 !important; }
@@ -905,6 +913,21 @@ html[lang="fr"] .x-partiel { display: none; }
   /* Le titre de section et la note d'absence appartiennent à la section
      entière, pas à une colonne : ils la traversent. */
   .r-sec-couches .r-h2, .r-sec-couches .r-absent { column-span: all; }
+  /* Un bloc « large » traverse les deux colonnes — réservé aux tableaux dont
+     la lecture se fait en travers de la ligne. Il se détache aussi du flux
+     de colonne, donc on lui rend sa marge basse explicitement. */
+  .r-sec-couches .r-bloc-large { column-span: all; margin-bottom: 5mm; }
+  .r-bloc .x-acces { width: 100%; border-collapse: collapse; font-size: 9pt; }
+  .r-bloc .x-acces th, .r-bloc .x-acces td {
+    padding: 1mm 2mm; text-align: right; border-bottom: .4pt solid #e6ebf1;
+  }
+  .r-bloc .x-acces th:first-child, .r-bloc .x-acces td:first-child { text-align: left; }
+  .r-bloc .x-acces thead th { font-size: 8.2pt; color: #6b7a8d !important; font-weight: 600; }
+  .r-bloc .x-acces td { font-variant-numeric: tabular-nums; }
+  .r-bloc .x-acces td small { font-size: 7.8pt; color: #6b7a8d !important; }
+  /* Le conteneur de défilement de l'écran n'a aucun sens sur du papier : il
+     couperait le tableau au lieu de le laisser tenir sur la largeur. */
+  .r-bloc .x-tabwrap { overflow: visible !important; }
   .r-sec-couches .r-bloc .x-note { font-size: 9.4pt; }
   .r-sec-couches .r-bloc .x-liste-sol li,
   .r-sec-couches .r-bloc .x-liste-seismes li { font-size: 8.8pt; }

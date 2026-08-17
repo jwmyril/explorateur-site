@@ -104,6 +104,118 @@
       },
       source: "OpenStreetMap via HOT — ODbL",
       limite: "Kilomètres CARTOGRAPHIÉS : mesure aussi la densité de cartographie. Tronçon affecté à la commune de son point médian (~100 m de tolérance)." }
+  ,
+    { id: "acces_sante", nom: "Temps d'accès à un point de santé (calcul Atmart)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          /* Une cellule vide n'est PAS un zéro : la commune reste hors de la
+             table, donc grise, donc comptée dans « non documenté ». */
+          if (r.sante_min !== "") m[r.pcode_commune] = Math.round(+r.sante_min * 10) / 10;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "réseau OSM du 06/08/2026 — calcul Atmart du 17/08/2026",
+                 unite: "minutes de route (médiane des habitants)" };
+      },
+      source: "OpenStreetMap via HOT (ODbL) — trajets calculés par Atmart, aucune API de routage commerciale",
+      limite: "Médiane PONDÉRÉE par la population des sections, pas le temps depuis le bourg : depuis le chef-lieu tout est proche, puisque c'est là que les établissements sont installés. Conditions normales — ni l'état de la chaussée, ni les pluies, ni les barrages, ni l'insécurité n'entrent dans le calcul : c'est un plancher optimiste. Et un établissement cartographié n'est pas un établissement ouvert." },
+    { id: "acces_hopital", nom: "Temps d'accès à un hôpital (calcul Atmart)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          /* Une cellule vide n'est PAS un zéro : la commune reste hors de la
+             table, donc grise, donc comptée dans « non documenté ». */
+          if (r.hopital_min !== "") m[r.pcode_commune] = Math.round(+r.hopital_min * 10) / 10;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "réseau OSM du 06/08/2026 — calcul Atmart du 17/08/2026",
+                 unite: "minutes de route (médiane des habitants)" };
+      },
+      source: "OpenStreetMap via HOT (ODbL) — trajets calculés par Atmart",
+      limite: "Même méthode et mêmes réserves que l'accès à un point de santé, mais la destination change tout : un dispensaire n'opère pas. 38 sections communales ne sont reliées à aucune route cartographiée — leur accès est INCONNU, pas mauvais, et elles ne pèsent dans aucune médiane." },
+    { id: "ecoles_absentes", nom: "Part des écoles déclarées que la carte montre", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune",
+      rampe: "urbain",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          /* Une cellule vide n'est PAS un zéro : la commune reste hors de la
+             table, donc grise, donc comptée dans « non documenté ». */
+          if (r.ecoles_part_vue_pct !== "") m[r.pcode_commune] = Math.round(+r.ecoles_part_vue_pct * 10) / 10;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "registres MENFP 2024-2025 · extrait OSM du 06/08/2026", unite: "% du registre visible sur OpenStreetMap" };
+      },
+      source: "MENFP/DPCE (décret du 12/10/2005, art. 5) et OpenStreetMap via HOT (ODbL)",
+      limite: "Cette carte ne mesure PAS le nombre d'écoles : elle mesure ce que la carte en montre. PLUS LA TEINTE EST SOMBRE, MIEUX LA COMMUNE EST CARTOGRAPHIÉE — les communes pâles sont celles où le registre annonce des écoles que personne n'a relevées. Au-delà de 100 %, OSM voit plus d'établissements que le registre n'en déclare : soit ils existent sans y figurer, soit la carte compte séparément des annexes qu'un seul code CIE regroupe. 17 827 déclarées contre 7 251 vues à l'échelle du pays. Le registre garde une école fermée non radiée ; la carte ignore ce qu'aucun contributeur n'a saisi." },
+    { id: "pop_desaccord", nom: "Désaccord entre les trois sources de population", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          /* Une cellule vide n'est PAS un zéro : la commune reste hors de la
+             table, donc grise, donc comptée dans « non documenté ». */
+          if (r.pop_ecart_ratio !== "") m[r.pcode_commune] = Math.round(+r.pop_ecart_ratio * 100) / 100;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "IHSI 2024 · projection UNFPA/OCHA 2024 · WorldPop 2020", unite: "rapport entre le chiffre le plus haut et le plus bas" };
+      },
+      source: "IHSI/DSDS, UNFPA/OCHA COD-PS, WorldPop — passeport PSP-044",
+      limite: "Aucune des trois n'est corrigée et aucune n'est moyennée : la carte montre où elles ne s'accordent pas. Un rapport de 1,2 est ordinaire ; Gressier, seul cas aberrant du pays, atteint 10,5 — l'IHSI et le satellite s'y accordent CONTRE la projection." },
+    { id: "couvert_arbre", nom: "Couvert arboré (ESA WorldCover 2021, 10 m)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune",
+      rampe: "vegetal",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          /* Une cellule vide n'est PAS un zéro : la commune reste hors de la
+             table, donc grise, donc comptée dans « non documenté ». */
+          if (r.part_arbres_pct !== "") m[r.pcode_commune] = Math.round(+r.part_arbres_pct * 10) / 10;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "ESA WorldCover v200, millésime 2021 — parts calculées par Atmart", unite: "% de la surface communale" };
+      },
+      source: "ESA WorldCover v200 (CC BY 4.0) — passeport PSP-026",
+      limite: "Remplace enfin l'occupation du sol de 1998 pour la question du couvert : 10 m de résolution, millésime 2021. « Arbres » au sens de la classification WorldCover — couvert arboré, ce qui inclut des vergers et des plantations, et ne dit rien de l'état ni de la propriété du peuplement." },
+    { id: "solaire", nom: "Potentiel solaire (Global Solar Atlas)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune",
+      rampe: "soleil",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          /* Une cellule vide n'est PAS un zéro : la commune reste hors de la
+             table, donc grise, donc comptée dans « non documenté ». */
+          if (r.pvout_moyen !== "") m[r.pcode_commune] = Math.round(+r.pvout_moyen * 10) / 10;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "Global Solar Atlas 2.0 — période modélisée 1999-2018", unite: "kWh par kWc installé et par an" };
+      },
+      source: "Global Solar Atlas 2.0, ESMAP / Banque mondiale (CC BY 4.0) — passeport PSP-036",
+      limite: "Résultat d'un MODÈLE climatique moyenné sur vingt ans, pas une mesure au sol et pas une étude de faisabilité. Il ignore l'ombre portée du relief à l'échelle d'une parcelle, la poussière, la température des modules et l'état du réseau." },
+    { id: "croissance_bati", nom: "Croissance du bâti 1990 → 2020 (GHSL)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune",
+      rampe: "urbain",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          /* Une cellule vide n'est PAS un zéro : la commune reste hors de la
+             table, donc grise, donc comptée dans « non documenté ». */
+          if (r.croissance_bati_pct !== "") m[r.pcode_commune] = Math.round(+r.croissance_bati_pct * 10) / 10;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "GHSL R2023A — quatre millésimes du même instrument", unite: "% de surface bâtie gagnée depuis 1990" };
+      },
+      source: "Global Human Settlement Layer R2023A, Commission européenne (CC BY 4.0) — passeport PSP-039",
+      limite: "Quatre millésimes du MÊME instrument, donc comparables entre eux — ce qui est rare et ce qui fait la valeur de cette couche. Une croissance forte en pourcentage part souvent d'une base minuscule : lire avec la part bâtie en 2020, dans le produit détaillé." }
   ];
 
   /* Couches ANNONCÉES mais pas encore construites : jamais dans le
@@ -112,8 +224,7 @@
   var EN_PREPARATION = [
     { slug: "mobile_reel", nom: "Couverture mobile réelle (opérateurs)" },
     { slug: "sismique", nom: "Aléa sismique probabiliste (USGS)" },
-    { slug: "hydro", nom: "Réseau hydrographique et sous-bassins" },
-    { slug: "sol_recent", nom: "Occupation du sol récente (post-1998)" }
+    { slug: "hydro", nom: "Réseau hydrographique et sous-bassins" }
   ];
   var COUCHE_DEFAUT = "conflits";
 
@@ -206,30 +317,50 @@
     }).join("");
   }
 
-  function teinte(v, max) {
+  /* Les rampes. Le rouge n'est pas une couleur neutre : sur une carte il se
+     lit « attention », et l'employer pour une forêt dense ou un bon
+     ensoleillement ferait dire à la teinte le contraire de la donnée. Chaque
+     couche déclare donc la sienne, et une couche qui n'en déclare pas garde
+     la rampe historique — c'est la valeur par défaut, pas un oubli.
+     `depart` est la teinte du minimum, `arrivee` celle du maximum. */
+  var RAMPES = {
+    alerte:   { depart: [254, 232, 200], arrivee: [158,  27,  49] },
+    vegetal:  { depart: [240, 247, 238], arrivee: [ 27,  94,  56] },
+    soleil:   { depart: [255, 248, 225], arrivee: [201, 121,   0] },
+    urbain:   { depart: [240, 241, 245], arrivee: [ 60,  60,  75] }
+  };
+
+  function teinte(v, max, nom) {
     if (!v) return "#eef2f6";
+    var R = RAMPES[nom] || RAMPES.alerte;
     var t = Math.pow(v / max, 0.45);   /* les distributions sont très asymétriques */
-    var r = Math.round(254 - t * (254 - 158));
-    var g = Math.round(232 - t * (232 - 27));
-    var b = Math.round(200 - t * (200 - 49));
-    return "rgb(" + r + "," + g + "," + b + ")";
+    var m = function (i) { return Math.round(R.depart[i] - t * (R.depart[i] - R.arrivee[i])); };
+    return "rgb(" + m(0) + "," + m(1) + "," + m(2) + ")";
   }
 
   function rendreChoroplethe(couche, rows) {
     var agg = couche.agreger(rows);
     var vals = agg.valeurs;
-    var max = 0;
+    var max = 0, nonDoc = 0;
     Object.keys(vals).forEach(function (k) { if (vals[k] > max) max = vals[k]; });
     var svg = communes.features.map(function (f) {
       var p = f.properties, v = vals[p.pcode];
       var doc = v !== undefined;
+      if (!doc) nonDoc++;
       return '<path class="k-com" data-id="' + p.atmart_geo_id + '" fill="' +
-        (doc ? teinte(v, max) : "#eef2f6") + '" d="' + chemin(f.geometry) + '"><title>' + p.nom_fr +
+        (doc ? teinte(v, max, couche.rampe) : "#eef2f6") + '" d="' + chemin(f.geometry) + '"><title>' + p.nom_fr +
         (doc ? " — " + fmtN(v) + " " + agg.unite : " — non documenté") + "</title></path>";
     }).join("");
-    var leg = '<span class="k-grad"></span> 0 → ' + fmtN(max) + " " + agg.unite +
+    var leg = '<span class="k-grad k-grad-' + (couche.rampe || "alerte") + '"></span> ' +
+              (agg.min !== undefined ? fmtN(agg.min) : "0") + " → " + fmtN(max) + " " + agg.unite +
               " · " + agg.periode +
               (agg.couverture ? " · " + agg.couverture : "");
+    /* Le gris des communes sans valeur ne se distingue pas d'un minimum pâle
+       à l'œil : tant qu'il n'est pas COMPTÉ dans la légende, une carte
+       incomplète se lit comme une carte complète où tout va bien. */
+    if (nonDoc) {
+      leg += ' · <b class="k-manque">' + nonDoc + " commune(s) en gris : non documenté, jamais zéro</b>";
+    }
     dessiner(svg + nomsDepartements(), leg, couche);
   }
 
@@ -461,7 +592,36 @@
                         couvert. Les confondre serait la faute la plus facile
                         à commettre sur cette couche. */
                      ["Services et infrastructures",
-                      ["eau", "carburant", "finance", "telecom", "routes"]]];
+                      ["eau", "carburant", "finance", "telecom", "routes"]],
+                     /* L'ACCÈS EN PREMIER DANS SON GROUPE. Compter les
+                        établissements d'une commune répond à « qu'y a-t-il ? » ;
+                        les temps de trajet répondent à « qui peut y aller ? ».
+                        Sur une carte nationale, c'est la seconde question qui
+                        se voit — les communes sombres ne sont pas celles qui
+                        manquent d'établissements, ce sont celles dont les
+                        habitants vivent loin de ceux qui existent. */
+                     ["Accès aux services — calcul Atmart",
+                      ["acces_sante", "acces_hopital"]],
+                     /* Deux cartes qui ne parlent pas du territoire mais de
+                        ce qu'on SAIT de lui. Elles ont leur groupe parce que
+                        les confondre avec les précédentes serait la faute
+                        grave : « écoles absentes de la carte » ne dit rien
+                        du nombre d'écoles, et « désaccord des sources » ne
+                        dit rien du nombre d'habitants. */
+                     ["Ce que l'on sait — qualité de l'information",
+                      ["ecoles_absentes", "pop_desaccord"]],
+                     ["Observation satellite",
+                      ["couvert_arbre", "croissance_bati", "solaire"]]];
+      /* Une couche déclarée mais absente des groupes serait chargeable et
+         invisible — la panne la plus silencieuse possible sur cette page.
+         Sept l'ont été le 17/08, le temps d'un aller-retour. */
+      var orphelines = COUCHES.filter(function (x) {
+        return !GROUPES.some(function (g) { return g[1].indexOf(x.id) > -1; });
+      }).map(function (x) { return x.id; });
+      if (orphelines.length && window.console) {
+        console.warn("couches déclarées mais absentes du sélecteur : " +
+                     orphelines.join(", "));
+      }
       GROUPES.forEach(function (g) {
         var og = document.createElement("optgroup");
         og.label = g[0];

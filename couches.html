@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=33" />
-  <link rel="stylesheet" href="assets/data.css?v=31" />
+  <link rel="stylesheet" href="assets/data.css?v=32" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/couches.html" />
   <link rel="preload" href="data/haiti_communes_simplifie.geojson?d=2026-08-14b" as="fetch" crossorigin="anonymous" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/couches.html" />
@@ -28,6 +28,13 @@
     .k-p { display: inline-block; width: 0.85em; height: 0.85em; border-radius: 50%; margin-right: 0.25em; vertical-align: baseline; }
     .k-grad { display: inline-block; width: 5em; height: 0.8em; border-radius: 4px; vertical-align: baseline; margin-right: 0.3em;
               background: linear-gradient(to right, #eef2f6, #fee8c8, #9e1b31); }
+    /* Une pastille de légende qui ne montre pas la rampe employée sur la
+       carte fait mentir la légende : le lecteur y lit du rouge et voit du
+       vert. Chaque rampe déclarée dans couches.js a donc la sienne ici. */
+    .k-grad-vegetal { background: linear-gradient(to right, #eef2f6, #f0f7ee, #1b5e38); }
+    .k-grad-soleil  { background: linear-gradient(to right, #eef2f6, #fff8e1, #c97900); }
+    .k-grad-urbain  { background: linear-gradient(to right, #eef2f6, #f0f1f5, #3c3c4b); }
+    .k-manque { color: #8a5300; font-weight: 600; }
     #k-source, #k-limite { font-size: 0.82rem; color: var(--ink-dim, #5b6b7b); margin-top: 0.35rem; }
     #k-lecture { font-size: 0.95rem; font-weight: 600; min-height: 1.4em; margin-top: 0.5rem; }
     #k-carte .k-nom-dep { font: 600 11px/1 Inter, sans-serif; fill: #0e2240; paint-order: stroke;
@@ -155,7 +162,7 @@
   </div>
 </footer>
 
-<script src="assets/couches.js?v=4"></script>
+<script src="assets/couches.js?v=7"></script>
 <script>
   (function () {
     var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");

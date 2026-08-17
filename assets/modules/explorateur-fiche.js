@@ -1822,6 +1822,70 @@ export default function (A) {
     return h.join("");
   }
 
+  /* ---------------------------------------------------------- santé et écoles cartographiées (HOT/OSM)
+     OpenStreetMap via HOT, extrait du 6 août 2026, ODbL (passeport
+     PSP-024). Comble les deux plus grands trous de l'Explorateur : la
+     santé passe de 14 à 139 communes documentées, les écoles de 49 à 132.
+
+     MAIS c'est une base CONTRIBUTIVE : sa couverture suit les
+     cartographes, pas le terrain. Une commune peu cartographiée paraît
+     sous-équipée — défaut de la carte, pas du territoire. L'inverse exact
+     d'un registre administratif, qui liste ce qui est déclaré même quand
+     la porte est fermée depuis trois ans. Les deux se contredisent
+     parfois, et cette contradiction est une information. */
+  function blocEquipements(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-equipements" class="x-pyr"><p class="x-note">' +
+        T("Santé et écoles cartographiées — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerEquipements() {
+    if (S.equipementsPromesse) return S.equipementsPromesse;
+    S.equipementsPromesse = charger(DIR + "atmart_equipements_hot.json", 1)
+      .then(function (t) { S.equipements = JSON.parse(t); return S.equipements; })
+      .catch(function () { S.equipements = null; return null; });
+    return S.equipementsPromesse;
+  }
+
+  function remplirEquipements(r) {
+    var el = $("#x-equipements");
+    if (!el) return;
+    chargerEquipements().then(function () {
+      var h = htmlEquipements(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("Les équipements cartographiés n'ont pas pu être chargés — la fiche reste lisible sans eux.") + "</p>");
+    });
+  }
+
+  function htmlEquipements(r) {
+    var d = S.equipements && S.equipements.communes ? S.equipements.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.equipements.meta || {};
+    var h = ["<h3>" + T("Santé et écoles cartographiées") + "</h3>"];
+    var det = function (o) {
+      var k = Object.keys(o || {});
+      return k.length ? " — " + k.map(function (n) {
+        return o[n] + " " + T(n) + (o[n] > 1 ? "s" : ""); }).join(", ") : "";
+    };
+    if (d.s) {
+      h.push('<p class="x-note">' + TF("{n} établissements de santé recensés",
+        { n: esc(d.s) }) + esc(det(d.sd)) + ".</p>");
+    }
+    if (d.e) {
+      h.push('<p class="x-note">' + TF("{n} établissements scolaires recensés",
+        { n: esc(d.e) }) + esc(det(d.ed)) + ".</p>");
+    }
+    h.push('<p class="x-limite">' + T(
+      "Ces chiffres viennent d'OpenStreetMap, une carte faite par des " +
+      "volontaires. Ils disent ce qui a été cartographié, pas ce qui existe : " +
+      "une commune peu couverte paraîtra sous-équipée. Ils ne remplacent pas " +
+      "un registre du ministère — un registre liste ce qui est déclaré, même " +
+      "fermé ; la carte liste ce que quelqu'un a vu.") + "</p>");
+    h.push('<p class="x-src"><small>' + esc(m.attribution || "") + " · " +
+           esc(m.source || "") + "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -2079,6 +2143,7 @@ export default function (A) {
              montrer("services") ? blocPluie(r) : "",
              montrer("services") ? blocSol(r) : "",
              montrer("services") ? blocPopMod(r) : "",
+             montrer("services") ? blocEquipements(r) : "",
              montrer("services") ? blocBassins(r) : "",
              montrer("services") ? blocProjets(r) : "",
              montrer("services") ? blocUrbanisation(r) : "",
@@ -2113,6 +2178,7 @@ export default function (A) {
     remplirPluie(r);
     remplirSol(r);
     remplirPopMod(r);
+    remplirEquipements(r);
     remplirBassins(r);
     remplirProjets(r);
     remplirUrbanisation(r);
@@ -2146,5 +2212,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

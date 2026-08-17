@@ -1267,6 +1267,52 @@ export default function (A) {
     return h.join("");
   }
 
+  /* --------------------------------------- population modélisée (v56)
+     WorldPop 2020 ajusté ONU, CC BY 4.0 (passeport PSP-040). Ce bloc ne
+     remplace JAMAIS la population officielle affichée plus haut : il donne
+     un second avis, et publie l'écart entre les deux. Un écart important ne
+     désigne pas un coupable — il signale un endroit où deux méthodes ne
+     s'accordent pas, ce qui mérite d'être su. */
+  function blocPopMod(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-popmod" class="x-pyr"></div>' : "";
+  }
+
+  function chargerPopMod() {
+    if (S.popModPromesse) return S.popModPromesse;
+    S.popModPromesse = charger(DIR + "atmart_population_modelisee.json", 1)
+      .then(function (t) { S.popMod = JSON.parse(t); return S.popMod; })
+      .catch(function () { S.popMod = null; return null; });
+    return S.popModPromesse;
+  }
+
+  function remplirPopMod(r) {
+    var el = $("#x-popmod");
+    if (!el) return;
+    chargerPopMod().then(function () { el.innerHTML = htmlPopMod(r); });
+  }
+
+  function htmlPopMod(r) {
+    var d = S.popMod && S.popMod.communes ? S.popMod.communes[r.pcode] : null;
+    if (!d || !d.m) return "";
+    var m = S.popMod.meta || {}, ec = parseFloat(d.e);
+    var h = ["<h3>" + T("Un second avis sur la population") + "</h3>"];
+    h.push('<p class="x-note">' + TF(
+      "Le satellite estime {m} habitants en 2020 ; la source officielle en " +
+      "compte {o}. Écart : {e} %.",
+      { m: esc(d.m), o: esc(d.o || "—"), e: esc(ec > 0 ? "+" + d.e : d.e) }) +
+      "</p>");
+    if (Math.abs(ec) >= 25) {
+      h.push('<p class="x-limite">' + T(
+        "Les deux méthodes divergent nettement ici. Ni l'une ni l'autre n'est " +
+        "corrigée : l'écart est publié tel quel, pour que la décision se " +
+        "prenne en le sachant.") + "</p>");
+    }
+    h.push('<p class="x-src"><small>' + esc(m.source || "") + " · " +
+           esc(m.avertissement || "") + "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -1523,6 +1569,7 @@ export default function (A) {
              montrer("services") ? blocSeismes(r) : "",
              montrer("services") ? blocPluie(r) : "",
              montrer("services") ? blocSol(r) : "",
+             montrer("services") ? blocPopMod(r) : "",
              montrer("comparer") ? blocComparer(r) : "",
              montrer("lacunes") ? blocLacunes(r) : "");
     } else if (r.niveau_admin === "0") {
@@ -1548,6 +1595,7 @@ export default function (A) {
     remplirSeismes(r);
     remplirPluie(r);
     remplirSol(r);
+    remplirPopMod(r);
     var t = $("#x-titre-fiche");
     if (t) t.textContent = nomT(r);
     majURL();
@@ -1573,5 +1621,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocObjectif, blocAccueil, blocIndicateurs, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

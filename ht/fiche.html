@@ -41,10 +41,11 @@ footer a,main a.lien{color:#1550b8}
      border-radius:10px;text-decoration:none;min-height:48px;line-height:1.9}
 </style>
 
-      <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/fiche.html", "ht": "https://explorateur.atmart.ltd/ht/fiche.html", "en": "https://explorateur.atmart.ltd/en/fiche.html", "es": "https://explorateur.atmart.ltd/es/fiche.html"};</script>
-
+      
+  
+  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/fiche.html", "ht": "https://explorateur.atmart.ltd/ht/fiche.html", "en": "https://explorateur.atmart.ltd/en/fiche.html", "es": "https://explorateur.atmart.ltd/es/fiche.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-91DkGZR/4WuL2zzob8VkCEcMEuNPBeAC7T57XVeq5Cg=' 'sha256-9RT7XFx/kCLMl+U0mQRFMpEHjDQKb9eZ7cJ5rHf+Wyk='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-+OV/XMNJVwz+Zl6jfIgablyZ31Cgx0/d7OVvomnY4CU=' 'sha256-9RT7XFx/kCLMl+U0mQRFMpEHjDQKb9eZ7cJ5rHf+Wyk='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
   <link rel="canonical" href="https://explorateur.atmart.ltd/ht/fiche.html" />
@@ -90,6 +91,7 @@ footer a,main a.lien{color:#1550b8}
       Tapez les premières lettres — les noms en kreyòl fonctionnent aussi.
     </p>
     <ul id="res"></ul>
+    <div id="garder" hidden></div>
   </div>
 
   <div id="fiche" hidden></div>
@@ -232,6 +234,85 @@ footer a,main a.lien{color:#1550b8}
       });
   }
 
+  /* ---- Garder les 140 communes sur l'appareil ------------------------
+     Le service worker garde d'avance cette page et l'index des 140 noms :
+     hors connexion, on peut donc CHERCHER. Mais les fiches, elles, ne se
+     gardent qu'à mesure qu'on les ouvre — hors réseau, on ne relit que ce
+     qu'on avait déjà lu. Précacher les 140 d'office (environ 700 Ko)
+     rallongerait la première visite de tout le monde pour un besoin qui
+     n'est pas celui de tout le monde. On le PROPOSE donc, poids annoncé,
+     et c'est le lecteur qui décide. */
+  /* Cache dédié, distinct de celui du service worker : ce que le lecteur a
+     demandé à garder survit aux mises en ligne. Le service worker connaît ce
+     nom et ne le purge jamais ; la lecture passe par `caches.match`, qui
+     interroge tous les caches. */
+  function cacheDuSite() {
+    if (!window.caches) return Promise.resolve(null);
+    return caches.open("explorateur-communes").catch(function () { return null; });
+  }
+
+  function comptees(cache) {
+    var faits = 0;
+    return index.reduce(function (ch, c) {
+      return ch.then(function () {
+        return cache.match("data/leger/" + c.i + ".json")
+          .then(function (r) { if (r) faits++; });
+      });
+    }, Promise.resolve()).then(function () { return faits; });
+  }
+
+  function proposerGarder() {
+    var zone = $("#garder");
+    cacheDuSite().then(function (cache) {
+      if (!cache) return;               // navigateur sans cache : on se tait
+      return comptees(cache).then(function (deja) {
+        zone.hidden = false;
+        if (deja >= index.length) {
+          zone.innerHTML = '<p class="note">Les ' + index.length + ' communes sont ' +
+            "gardées sur cet appareil : vous pouvez les lire sans connexion.</p>";
+          return;
+        }
+        zone.innerHTML = '<p class="note">Hors connexion, vous pouvez chercher les ' +
+          index.length + " communes, mais ne lire que celles déjà ouvertes" +
+          (deja ? " (" + deja + " pour l'instant)" : "") + ".<br>" +
+          '<button type="button" id="gd" class="btn">Garder les ' + index.length +
+          " communes sur cet appareil</button> " +
+          '<small style="display:block;margin-top:.4rem">Environ 700 Ko, une seule fois. ' +
+          "Rien n'est envoyé : tout reste sur votre téléphone.</small></p>";
+        document.getElementById("gd").addEventListener("click", function () {
+          telecharger(cache, zone);
+        });
+      });
+    }).catch(function () { /* la proposition est un bonus, jamais un obstacle */ });
+  }
+
+  function telecharger(cache, zone) {
+    var reste = index.slice(), faits = 0, rates = 0, total = index.length;
+    zone.innerHTML = '<p class="note" id="prog">Enregistrement… 0 sur ' + total + "</p>";
+    var prog = document.getElementById("prog");
+    /* Quatre de front : assez pour ne pas traîner, assez peu pour ne pas
+       saturer une liaison lente ni faire chauffer un vieil appareil. */
+    function suivante() {
+      var c = reste.shift();
+      if (!c) return Promise.resolve();
+      return cache.add("data/leger/" + c.i + ".json")
+        .catch(function () { rates++; })
+        .then(function () {
+          faits++;
+          prog.textContent = "Enregistrement… " + faits + " sur " + total;
+          return suivante();
+        });
+    }
+    Promise.all([suivante(), suivante(), suivante(), suivante()]).then(function () {
+      prog.parentNode.innerHTML = rates
+        ? "<b>" + (total - rates) + " communes sur " + total + " enregistrées.</b><br>" +
+          "La connexion a coupé pour les autres — relancez plus tard, " +
+          "ce qui est déjà gardé ne sera pas retéléchargé."
+        : "<b>C'est fait.</b> Les " + total + " communes sont sur cet appareil : " +
+          "vous pouvez les consulter sans connexion.";
+    });
+  }
+
   function demarrer() {
     var id = (location.search.match(/[?&]c=([A-Za-z0-9\-]+)/) || [])[1];
     if (id) return ouvrir(id);
@@ -240,6 +321,7 @@ footer a,main a.lien{color:#1550b8}
       var q = $("#q");
       q.addEventListener("input", function () { afficherResultats(chercher(q.value)); });
       q.focus();
+      proposerGarder();
     }).catch(function () {
       echec($("#res"), "La liste des communes n'a pas pu être chargée.", demarrer);
     });

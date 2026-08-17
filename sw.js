@@ -3,7 +3,14 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v41";
+const CACHE = "explorateur-v42";
+/* Les fiches que le lecteur a explicitement demande a garder (bouton de
+   l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
+   purge au changement de version : sinon chaque mise en ligne effacerait
+   sans prevenir les 700 Ko qu'on avait choisi de telecharger, souvent au
+   prix d'un forfait compte a l'octet. La lecture, elle, passe par
+   `caches.match`, qui interroge tous les caches — rien d'autre a changer. */
+const GARDE = "explorateur-communes";
 const DV = "?d=2026-08-15a";   // doit suivre le DV de assets/modules/explorateur.js
 
 const CORE = [
@@ -49,7 +56,7 @@ self.addEventListener("install", (e) => {
 
 self.addEventListener("activate", (e) => {
   e.waitUntil(caches.keys().then((ks) =>
-    Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))
+    Promise.all(ks.filter((k) => k !== CACHE && k !== GARDE).map((k) => caches.delete(k)))
   ).then(() => self.clients.claim()));
 });
 

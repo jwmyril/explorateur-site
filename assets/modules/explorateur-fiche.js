@@ -1377,6 +1377,249 @@ export default function (A) {
     return h.join("");
   }
 
+  /* ---------------------------------------------------------- cyclones (IBTrACS)
+     NOAA IBTrACS v04r01, accès complet et ouvert (passeport PSP-028).
+     Un historique de TRAJECTOIRES, pas de dommages : le vent affiché est
+     celui mesuré au centre du système, jamais celui subi dans la commune.
+     Le statut reste « exposé » — Jeanne est passée à 78 km des Gonaïves en
+     2004 et y a fait des milliers de morts : la distance ne dit rien. */
+  function blocCyclones(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-cyclones" class="x-pyr"><p class="x-note">' +
+        T("Cyclones — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerCyclones() {
+    if (S.cyclonesPromesse) return S.cyclonesPromesse;
+    S.cyclonesPromesse = charger(DIR + "atmart_cyclones_communes.json", 1)
+      .then(function (t) { S.cyclones = JSON.parse(t); return S.cyclones; })
+      .catch(function () { S.cyclones = null; return null; });
+    return S.cyclonesPromesse;
+  }
+
+  function remplirCyclones(r) {
+    var el = $("#x-cyclones");
+    if (!el) return;
+    chargerCyclones().then(function () {
+      var h = htmlCyclones(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("L'historique des cyclones n'a pas pu être chargé — la fiche reste lisible sans lui.") + "</p>");
+    });
+  }
+
+  function htmlCyclones(r) {
+    var d = S.cyclones && S.cyclones.communes ? S.cyclones.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.cyclones.meta || {};
+    var h = ["<h3>" + T("Cyclones passés à proximité") + "</h3>"];
+    h.push('<p class="x-note">' + TF(
+      "{n25} systèmes sont passés à moins de 25 km, {n50} à moins de 50 km, " +
+      "{n100} à moins de 100 km depuis {periode}. Parmi eux, {our} ouragans " +
+      "dont {maj} majeurs.",
+      { n25: esc(d.n25), n50: esc(d.n50), n100: esc(d.n100),
+        periode: esc(m.periode || ""), our: esc(d.our), maj: esc(d.maj) }) + "</p>");
+    if (d.vmax) {
+      h.push('<p class="x-note">' + TF(
+        "Vent le plus fort mesuré au centre d'un système approchant : {v} nœuds " +
+        "({kmh} km/h) — {cat}.",
+        { v: esc(d.vmax), kmh: esc(d.vmaxkmh), cat: esc(d.cat || "") }) + "</p>");
+    }
+    if (d.ev && d.ev.length) {
+      h.push('<ul class="x-liste-seismes">');
+      d.ev.forEach(function (e) {
+        h.push("<li><b>" + esc(e.n || "sans nom") + "</b> — " + esc(e.d) +
+          " · " + TF("à {km} km", { km: e.km }) +
+          (e.v ? " · " + TF("{v} nœuds au centre", { v: e.v }) : "") +
+          (e.q ? "<br><small>" + esc(e.q) + "</small>" : "") + "</li>");
+      });
+      h.push("</ul>");
+    }
+    h.push('<p class="x-limite">' + T(
+      "Un cyclone passé près d'ici ne prouve aucun dommage, et un cyclone " +
+      "passé loin n'en exclut aucun : en 2004, Jeanne est restée à 78 km des " +
+      "Gonaïves et y a fait des milliers de morts.") + "</p>");
+    h.push('<p class="x-src"><small>' + esc(m.source || "") + " · " +
+           esc(m.citation || "") + "</small></p>");
+    return h.join("");
+  }
+
+  /* ---------------------------------------------------------- eau de surface (JRC)
+     JRC Global Surface Water, Copernicus, sans restriction d'usage
+     (passeport PSP-038). Trente-huit ans d'observation Landsat.
+
+     Le JRC cartographie aussi la mer : une commune littorale récupère une
+     frange de pixels marins. Sa part d'eau se lit donc comme un MAJORANT,
+     et la fiche le dit là où ça compte. */
+  function blocEau(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-eau" class="x-pyr"><p class="x-note">' +
+        T("Eau de surface — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerEau() {
+    if (S.eauPromesse) return S.eauPromesse;
+    S.eauPromesse = charger(DIR + "atmart_eau_surface.json", 1)
+      .then(function (t) { S.eau = JSON.parse(t); return S.eau; })
+      .catch(function () { S.eau = null; return null; });
+    return S.eauPromesse;
+  }
+
+  function remplirEau(r) {
+    var el = $("#x-eau");
+    if (!el) return;
+    chargerEau().then(function () {
+      var h = htmlEau(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("Les données d'eau de surface n'ont pas pu être chargées — la fiche reste lisible sans elles.") + "</p>");
+    });
+  }
+
+  function htmlEau(r) {
+    var d = S.eau && S.eau.communes ? S.eau.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.eau.meta || {};
+    var h = ["<h3>" + T("Eau de surface") + "</h3>"];
+    if (!d.pt) {
+      h.push('<p class="x-note">' + T(
+        "Aucune eau de surface détectée sur cette commune entre 1984 et 2021. " +
+        "C'est une mesure, pas une absence de donnée.") + "</p>");
+    } else {
+      h.push('<p class="x-note">' + TF(
+        "{pp} % du territoire est en eau permanente et {ps} % en eau " +
+        "saisonnière, soit {km2} km² au total.",
+        { pp: esc(d.pp), ps: esc(d.ps), km2: esc(d.km2) }) + "</p>");
+      h.push('<ul class="x-liste-sol">');
+      [["eau permanente", d.pp], ["eau saisonnière", d.ps]].forEach(function (p) {
+        if (p[1] > 0) {
+          h.push("<li><b>" + esc(p[1]) + " %</b> " + T(p[0]) +
+                 '<span class="x-barre" style="width:' + Math.min(100, p[1] * 3) +
+                 '%"></span></li>');
+        }
+      });
+      h.push("</ul>");
+    }
+    h.push('<p class="x-limite">' + T(
+      "Le satellite ne distingue pas la mer d'un lac : sur une commune " +
+      "littorale, une frange de pixels marins est comptée en eau permanente. " +
+      "La part affichée s'y lit comme un maximum.") + "</p>");
+    h.push('<p class="x-src"><small>' + esc(m.attribution || m.source || "") +
+           " · " + T("période") + " 1984-2021</small></p>");
+    return h.join("");
+  }
+
+  /* ---------------------------------------------------------- potentiel solaire (Global Solar Atlas)
+     Global Solar Atlas 2.0, Banque mondiale / ESMAP / Solargis, CC BY 4.0
+     (passeport PSP-036). RÉSULTAT DE MODÈLE, jamais une étude de
+     faisabilité : il ne dit rien du raccordement au réseau, du foncier,
+     ni de l'ombrage local. La fiche l'écrit sous les chiffres. */
+  function blocSolaire(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-solaire" class="x-pyr"><p class="x-note">' +
+        T("Potentiel solaire — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerSolaire() {
+    if (S.solairePromesse) return S.solairePromesse;
+    S.solairePromesse = charger(DIR + "atmart_solaire_communes.json", 1)
+      .then(function (t) { S.solaire = JSON.parse(t); return S.solaire; })
+      .catch(function () { S.solaire = null; return null; });
+    return S.solairePromesse;
+  }
+
+  function remplirSolaire(r) {
+    var el = $("#x-solaire");
+    if (!el) return;
+    chargerSolaire().then(function () {
+      var h = htmlSolaire(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("Les données solaires n'ont pas pu être chargées — la fiche reste lisible sans elles.") + "</p>");
+    });
+  }
+
+  function htmlSolaire(r) {
+    var d = S.solaire && S.solaire.communes ? S.solaire.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.solaire.meta || {};
+    var h = ["<h3>" + T("Potentiel solaire") + "</h3>"];
+    h.push('<p class="x-note">' + TF(
+      "Une installation photovoltaïque produirait en moyenne {pv} kWh par " +
+      "kilowatt-crête et par an sur cette commune, entre {min} et {max} selon " +
+      "l'endroit.",
+      { pv: esc(d.pvout_moyen), min: esc(d.pvout_min), max: esc(d.pvout_max) }) +
+      "</p>");
+    if (d.ghi_moyen) {
+      h.push('<p class="x-note">' + TF(
+        "Irradiation globale reçue : {ghi} kWh par m² et par an.",
+        { ghi: esc(d.ghi_moyen) }) + "</p>");
+    }
+    h.push('<p class="x-limite">' + T(
+      "Ce chiffre sort d'un modèle météorologique, pas d'une étude de " +
+      "faisabilité. Il ne dit rien du raccordement au réseau, du foncier " +
+      "disponible, ni de l'ombrage d'un site précis.") + "</p>");
+    h.push('<p class="x-src"><small>' + esc(m.source || "") +
+           (m.periode_modelisee ? " · " + esc(m.periode_modelisee) : "") +
+           "</small></p>");
+    return h.join("");
+  }
+
+  /* ---------------------------------------------------------- bâtiments (Google Open Buildings)
+     Google Open Buildings V3, CC BY 4.0 (passeport PSP-025). Un bâtiment
+     détecté n'est NI un ménage, NI un commerce, NI un logement habité :
+     c'est une empreinte vue du ciel, sur une imagerie d'âge inconnu.
+
+     Le seuil de confiance retenu est publié parce qu'il DÉTERMINE le
+     résultat : à 0,75 on garde 57 % des détections, à 0,90 il n'en
+     resterait que 1,6 %. Le même territoire, quinze fois moins bâti. */
+  function blocBatiments(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-batiments" class="x-pyr"><p class="x-note">' +
+        T("Bâtiments — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerBatiments() {
+    if (S.batimentsPromesse) return S.batimentsPromesse;
+    S.batimentsPromesse = charger(DIR + "atmart_batiments_communes.json", 1)
+      .then(function (t) { S.batiments = JSON.parse(t); return S.batiments; })
+      .catch(function () { S.batiments = null; return null; });
+    return S.batimentsPromesse;
+  }
+
+  function remplirBatiments(r) {
+    var el = $("#x-batiments");
+    if (!el) return;
+    chargerBatiments().then(function () {
+      var h = htmlBatiments(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("Les données de bâtiments n'ont pas pu être chargées — la fiche reste lisible sans elles.") + "</p>");
+    });
+  }
+
+  function htmlBatiments(r) {
+    var d = S.batiments && S.batiments.communes ? S.batiments.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.batiments.meta || {};
+    var h = ["<h3>" + T("Bâtiments détectés") + "</h3>"];
+    h.push('<p class="x-note">' + TF(
+      "{nb} empreintes de bâtiments sont détectées, soit {dens} par km² et " +
+      "{part} % du territoire couvert. Surface moyenne : {moy} m².",
+      { nb: esc(d.nb), dens: esc(d.dens), part: esc(d.part), moy: esc(d.moy) }) +
+      "</p>");
+    if (d.sous) {
+      h.push('<p class="x-note">' + TF(
+        "{sous} détections supplémentaires ont été écartées, sous le seuil de " +
+        "confiance de {seuil} retenu.",
+        { sous: esc(d.sous), seuil: esc(m.seuil_confiance || "0,75") }) + "</p>");
+    }
+    h.push('<p class="x-limite">' + T(
+      "Une empreinte n'est ni un ménage, ni un commerce, ni un logement " +
+      "habité. Le producteur signale des faux positifs sur les roches et la " +
+      "végétation, des bâtiments contigus mal séparés, et une imagerie dont " +
+      "l'âge n'est pas connu.") + "</p>");
+    h.push('<p class="x-src"><small>' + esc(m.attribution || m.source || "") +
+           "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -1634,6 +1877,10 @@ export default function (A) {
              montrer("services") ? blocPluie(r) : "",
              montrer("services") ? blocSol(r) : "",
              montrer("services") ? blocPopMod(r) : "",
+             montrer("services") ? blocBatiments(r) : "",
+             montrer("services") ? blocSolaire(r) : "",
+             montrer("services") ? blocEau(r) : "",
+             montrer("services") ? blocCyclones(r) : "",
              montrer("services") ? blocSols(r) : "",
              montrer("comparer") ? blocComparer(r) : "",
              montrer("lacunes") ? blocLacunes(r) : "");
@@ -1661,6 +1908,10 @@ export default function (A) {
     remplirPluie(r);
     remplirSol(r);
     remplirPopMod(r);
+    remplirBatiments(r);
+    remplirSolaire(r);
+    remplirEau(r);
+    remplirCyclones(r);
     remplirSols(r);
     var t = $("#x-titre-fiche");
     if (t) t.textContent = nomT(r);
@@ -1687,5 +1938,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

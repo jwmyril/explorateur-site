@@ -1159,6 +1159,62 @@ export default function (A) {
     return h.join("");
   }
 
+  /* ------------------------------------------------ pluie et sécheresse (v54)
+     CHIRPS 2.0, domaine public (passeport PSP-030). Estimation modélisée qui
+     combine satellite et stations au sol — pas un pluviomètre, et la fiche le
+     dit. La normale suit la période de référence de l'OMM, 1991-2020. */
+  function blocPluie(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-pluie" class="x-pyr"><p class="x-note">' +
+        T("Pluie et sécheresse — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerPluie() {
+    if (S.pluiePromesse) return S.pluiePromesse;
+    S.pluiePromesse = charger(DIR + "atmart_pluie_communes.json", 1)
+      .then(function (t) { S.pluie = JSON.parse(t); return S.pluie; })
+      .catch(function () { S.pluie = null; return null; });
+    return S.pluiePromesse;
+  }
+
+  function remplirPluie(r) {
+    var el = $("#x-pluie");
+    if (!el) return;
+    chargerPluie().then(function () {
+      var h = htmlPluie(r);
+      el.innerHTML = h || ('<p class="x-note">' +
+        T("Les données de pluie n'ont pas pu être chargées — la fiche reste lisible sans elles.") +
+        "</p>");
+    });
+  }
+
+  function htmlPluie(r) {
+    var d = S.pluie && S.pluie.communes ? S.pluie.communes[r.pcode] : null;
+    if (!d || !d.n) return "";
+    var m = S.pluie.meta || {};
+    var h = ["<h3>" + T("Pluie et sécheresse") + "</h3>"];
+    h.push('<p class="x-note">' + TF(
+      "Il tombe en moyenne {n} mm par an sur cette commune ({normale}). " +
+      "En {a}, il en est tombé {c} mm, soit {ec} % par rapport à la normale.",
+      { n: esc(d.n), normale: esc(m.normale || ""), a: esc(d.a),
+        c: esc(d.c), ec: esc(d.ec > 0 ? "+" + d.ec : d.ec) }) + "</p>");
+    h.push('<p class="x-note">' + TF(
+      "{ms} mois sur {mo} observés depuis 1981 ont été très secs, soit {ps} % — " +
+      "un mois est dit très sec quand il tombe sous le cinquième le plus sec " +
+      "des mois de son propre calendrier.",
+      { ms: esc(d.ms), mo: esc(d.mo), ps: esc(d.ps) }) + "</p>");
+    if (d.mode === "pixel_du_centroide") {
+      h.push('<p class="x-limite">' + T(
+        "Cette commune est plus petite que la maille de la mesure (environ " +
+        "5,5 km) : la valeur est celle du carré qui contient son centre, et " +
+        "non une moyenne sur son territoire.") + "</p>");
+    }
+    h.push('<p class="x-src"><small>' + esc(m.source || "") + " · " +
+           esc(m.avertissement || "") + "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -1413,6 +1469,7 @@ export default function (A) {
              montrer("prix") ? blocPrix(r) : "",
              montrer("services") ? blocServices(r) : "",
              montrer("services") ? blocSeismes(r) : "",
+             montrer("services") ? blocPluie(r) : "",
              montrer("comparer") ? blocComparer(r) : "",
              montrer("lacunes") ? blocLacunes(r) : "");
     } else if (r.niveau_admin === "0") {
@@ -1436,6 +1493,7 @@ export default function (A) {
        donc haut de zéro pixel, et l'observateur d'intersection ne se
        déclenchait jamais. Le bloc restait blanc indéfiniment. */
     remplirSeismes(r);
+    remplirPluie(r);
     var t = $("#x-titre-fiche");
     if (t) t.textContent = nomT(r);
     majURL();
@@ -1461,5 +1519,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocObjectif, blocAccueil, blocIndicateurs, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocObjectif, blocAccueil, blocIndicateurs, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

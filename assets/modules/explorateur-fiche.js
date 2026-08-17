@@ -1664,12 +1664,13 @@ export default function (A) {
       "La surface bâtie est passée de {b90} km² en 1990 à {b20} km² en 2020, " +
       "soit {cr} km² de plus — une croissance de {crp} %. La commune est " +
       "aujourd'hui bâtie à {p20} % de son territoire.",
-      { b90: esc(d.b90), b20: esc(d.b20), cr: esc(d.cr), crp: esc(d.crp),
-        p20: esc(d.p20) }) + "</p>");
+      { b90: esc(arr(d.b90, 2)), b20: esc(arr(d.b20, 2)),
+        cr: esc(arr(d.cr, 2)), crp: esc(arr(d.crp, 0)),
+        p20: esc(arr(d.p20, 1)) }) + "</p>");
     h.push('<ul class="x-liste-sol">');
     [["1990", d.b90], ["2000", d.b00], ["2010", d.b10], ["2020", d.b20]]
       .forEach(function (p) {
-        h.push("<li><b>" + esc(p[1]) + " km²</b> " + esc(p[0]) +
+        h.push("<li><b>" + esc(arr(p[1], 2)) + " km²</b> " + esc(p[0]) +
                '<span class="x-barre" style="width:' +
                Math.min(100, (p[1] / (d.b20 || 1)) * 100) + '%"></span></li>');
       });
@@ -1678,7 +1679,7 @@ export default function (A) {
       h.push('<p class="x-note">' + TF(
         "Degré d'urbanisation dominant : {sd}. Part urbaine du territoire : " +
         "{su} % en 2020, contre {su90} % en 1990.",
-        { sd: esc(d.sd), su: esc(d.su), su90: esc(d.su90) }) + "</p>");
+        { sd: esc(d.sd), su: esc(arr(d.su, 1)), su90: esc(arr(d.su90, 1)) }) + "</p>");
     }
     h.push('<p class="x-limite">' + T(
       "Le degré d'urbanisation est ici pondéré par la SURFACE, alors que la " +
@@ -1689,6 +1690,14 @@ export default function (A) {
     h.push('<p class="x-src"><small>' + esc(m.attribution || m.source || "") +
            "</small></p>");
     return h.join("");
+  }
+
+  /* Afficher une précision qu'on n'a pas est une façon discrète de mentir
+     sur la qualité de la donnée : une surface mesurée à 30 mètres de
+     résolution n'a pas quatre décimales de kilomètre carré. */
+  function arr(v, n) {
+    var x = parseFloat(v);
+    return isNaN(x) ? v : x.toFixed(n).replace(/\.?0+$/, "").replace(".", ",");
   }
 
   function blocLacunes(r) {

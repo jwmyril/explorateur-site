@@ -2,20 +2,36 @@
   "id": "/",
   "name": "Explorateur Haïti — Atmart Data",
   "short_name": "Explorateur Haïti",
-  "description": "Profils territoriaux des 140 communes d'Haïti : indicateurs sourcés et datés, comparaison, classement, exports.",
+  "description": "Profils territoriaux des 140 communes d'Haïti : indicateurs sourcés et datés, comparaison, classement, exports. Consultable sans connexion une fois installé.",
   "lang": "fr",
-  "start_url": "/",
+  "dir": "ltr",
+  "start_url": "/?source=app",
   "scope": "/",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "any",
   "background_color": "#0e2240",
   "theme_color": "#0e2240",
   "categories": ["education", "government", "utilities"],
   "icons": [
     { "src": "assets/brand/logo-32.png", "sizes": "32x32", "type": "image/png" },
-    { "src": "assets/brand/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+    { "src": "assets/brand/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/brand/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/brand/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/brand/icone-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/brand/icone-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "shortcuts": [
-    { "name": "Comparer des territoires", "url": "/?onglet=comparaison" },
-    { "name": "Classement des communes", "url": "/?onglet=classement" }
+    { "name": "Ma commune (édition légère)", "short_name": "Ma commune",
+      "description": "Chercher une commune et lire ses chiffres en quelques kilooctets",
+      "url": "/fiche.html",
+      "icons": [{ "src": "assets/brand/icone-192.png", "sizes": "192x192" }] },
+    { "name": "Les couches cartographiques", "short_name": "Couches",
+      "description": "Aléa d'inondation, bassins versants, services, conflits",
+      "url": "/couches.html" },
+    { "name": "Comparer des territoires", "short_name": "Comparer",
+      "url": "/?onglet=comparaison" },
+    { "name": "Classement des communes", "short_name": "Classement",
+      "url": "/?onglet=classement" }
   ]
 }

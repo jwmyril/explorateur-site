@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v40";
+const CACHE = "explorateur-v41";
 const DV = "?d=2026-08-15a";   // doit suivre le DV de assets/modules/explorateur.js
 
 const CORE = [
@@ -16,8 +16,18 @@ const CORE = [
   "/assets/modules/explorateur-recherche.js?v=1",
   "/assets/modules/explorateur-comparaison.js?v=1",
   "/couches.html", "/fiche.html", "/assets/couches.js?v=4",
+  "/assets/pwa.js?v=1",
   "/assets/brand/favicon.ico", "/assets/brand/logo-32.png",
   "/assets/brand/logo-dark-96.png", "/assets/brand/apple-touch-icon.png",
+  // Icones de l'application installee : Android et Chrome exigent 192 et 512,
+  // et les versions « maskable » evitent que le lanceur rogne le logo.
+  "/assets/brand/icone-192.png", "/assets/brand/icone-512.png",
+  "/assets/brand/icone-192-maskable.png", "/assets/brand/icone-512-maskable.png",
+  // L'index des 140 communes de l'edition legere : 10 Ko qui rendent la
+  // RECHERCHE possible sans reseau. Les fiches, elles, se mettent en cache a
+  // mesure qu'on les ouvre — precacher les 140 (700 Ko) rallongerait
+  // l'installation sur une liaison lente pour un benefice incertain.
+  "/data/leger/communes.json",
 ];
 const DATA = [
   "/data/atmart_referentiel_territoire_base_HT.csv",
@@ -54,10 +64,19 @@ self.addEventListener("fetch", (e) => {
           caches.open(CACHE).then((c) => c.put(e.request, copie));
         }
         return r;
-      }).catch(() =>
-        e.request.mode === "navigate"
-          ? caches.match("/hors-connexion.html")
-          : Response.error()
-      ))
+      }).catch(() => {
+        if (e.request.mode !== "navigate") return Response.error();
+        /* Hors connexion, une page inconnue ne renvoie plus une excuse seule :
+           l'edition legere est en cache avec l'index des 140 communes, donc le
+           lecteur peut CHERCHER et LIRE sa commune sans reseau. On la sert
+           quand la navigation visait une fiche ; la page d'excuse reste pour
+           le reste, et elle-meme pointe vers l'edition legere. */
+        const versUneFiche = /^\/(index\.html)?$/.test(url.pathname) ||
+                             url.pathname.startsWith("/fiche") ||
+                             url.searchParams.has("id") || url.searchParams.has("c");
+        return caches.match(e.request)
+          .then((c) => c || (versUneFiche ? caches.match("/fiche.html") : null))
+          .then((c) => c || caches.match("/hors-connexion.html"));
+      }))
   );
 });

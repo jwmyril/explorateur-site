@@ -44,7 +44,7 @@
    cela vient. La fiche à l'écran suit un autre ordre — celui de l'arrivée
    des couches dans le produit — qui n'a aucune raison d'être imposé au
    papier. */
-import { S } from "./etat.js?v=27";
+import { S } from "./etat.js?v=29";
 export default function (A) {
   /* Du noyau et d'i18n uniquement : ces deux-là sont chargés avant ce
      module. Tout ce qui vient de la fiche est appelé par `A.` au moment
@@ -80,7 +80,9 @@ export default function (A) {
     { cle: "popMod",       charger: "chargerPopMod",       html: "htmlPopMod",       titre: "Population modélisée" },
     { cle: "acces",        charger: "chargerAcces",        html: "htmlAcces",        titre: "Temps d'accès par la route", large: true },
     { cle: "ecolesdec",    charger: "chargerEcolesdec",    html: "htmlEcolesdec",    titre: "Écoles déclarées au ministère" },
-    { cle: "pop3",         charger: "chargerPop3",         html: "htmlPop3",         titre: "Population — trois sources" }
+    { cle: "pop3",         charger: "chargerPop3",         html: "htmlPop3",         titre: "Population — trois sources" },
+    { cle: "santedec",     charger: "chargerSantedec",     html: "htmlSantedec",     titre: "Établissements de santé déclarés" },
+    { cle: "credits",      charger: "chargerCredits",      html: "htmlCredits",      titre: "Crédits budgétaires votés (département)" }
   ];
 
   /* Les sections du rapport, dans l'ordre du papier.
@@ -106,7 +108,7 @@ export default function (A) {
      Sur une table de réunion, c'est la seconde question qui décide. Les
      écoles déclarées suivent immédiatement, parce qu'elles disent ce que le
      comptage cartographié ne peut pas dire. */
-  var EQUIPEMENTS = ["acces", "equipements", "ecolesdec", "projets"];
+  var EQUIPEMENTS = ["acces", "equipements", "santedec", "ecolesdec", "credits", "projets"];
   var HORS_RAPPORT = ["batiments", "sols"];
 
   function couche(cle) {

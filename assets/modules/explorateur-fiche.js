@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=27";
+import { S } from "./etat.js?v=29";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, situation, valeurBrute } = A;
@@ -2178,6 +2178,174 @@ export default function (A) {
     return h.join("");
   }
 
+  /* ---------------------------------------------------------- établissements de santé déclarés au ministère
+     Carte sanitaire du MSPP (passeport PSP-048) : 1 033 établissements
+     géolocalisés, relevés le 17/08/2026, face à l'extrait OSM.
+
+     MÊME GESTE QUE POUR LES ÉCOLES, RÉSULTAT INVERSE. Le registre garde
+     un établissement fermé mais non radié ; la carte ignore ce qu'aucun
+     contributeur n'a relevé. Sur les écoles, la carte montrait 41 % du
+     déclaré ; sur la santé elle en montre 144 % — elle voit des cabinets
+     et des cliniques que le registre n'enregistre pas. Aucun des deux
+     n'est la vérité, et c'est pourquoi les deux sont publiés. */
+  /* --------------------------------------------- crédits budgétaires votés
+
+     LA SEULE COUCHE DÉPARTEMENTALE DE LA FICHE, et c'est délibéré : le budget
+     de la République n'est pas ventilé par commune, il s'arrête au
+     département. Descendre le chiffre à la commune — au prorata de la
+     population ou autrement — fabriquerait une donnée que le Moniteur ne
+     publie pas. On montre donc le département AUQUEL LA COMMUNE APPARTIENT,
+     en le disant, ce qui est une information réelle : un habitant des Nippes
+     a le droit de savoir que son département reçoit 0,7 % des crédits votés.
+
+     Source : MEF/DGB, annexes du budget 2025-2026, page 73 (passeport
+     PSP-047), reconstruite par arithmétique depuis une couche OCR abîmée —
+     chaque valeur satisfait l'équation de sa ligne. CRÉDITS VOTÉS, jamais
+     dépense exécutée. */
+  function blocCredits(r) {
+    return (r.niveau_admin === "3" || r.niveau_admin === "1")
+      ? '<div id="x-credits" class="x-pyr"><p class="x-note">' +
+        T("Crédits budgétaires — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerCredits() {
+    if (S.creditsPromesse) return S.creditsPromesse;
+    S.creditsPromesse = charger(DIR + "atmart_credits_departements.json", 1)
+      .then(function (t) { S.credits = JSON.parse(t); return S.credits; })
+      .catch(function () { S.credits = null; return null; });
+    return S.creditsPromesse;
+  }
+
+  function remplirCredits(r) {
+    var el = $("#x-credits");
+    if (!el) return;
+    chargerCredits().then(function () {
+      var h = htmlCredits(r);
+      if (h) { el.innerHTML = h; } else { el.innerHTML = ""; el.hidden = true; }
+    });
+  }
+
+  function htmlCredits(r) {
+    if (!S.credits || !S.credits.departements) return "";
+    /* Le p-code d'un département tient dans les quatre premiers signes de
+       celui de ses communes : HT0121 → HT01. C'est une propriété du
+       référentiel OCHA, pas une convenance — les p-codes sont emboîtés. */
+    var dep = (r.pcode || "").slice(0, 4);
+    var d = S.credits.departements[dep];
+    if (!d) return "";
+    var m = S.credits;
+    /* L'unité suit la grandeur, et le pluriel suit l'unité. « 0,21 milliards
+       de gourdes » pour 208 millions est deux fautes en quatre mots : une
+       échelle qui écrase le chiffre, et un pluriel que 0,21 ne commande pas.
+       En dessous du milliard on compte en millions ; « milliard » reste au
+       singulier tant qu'on n'a pas atteint deux. */
+    var gourdes = function (v) {
+      if (v < 1e9) {
+        return arr(v / 1e6, 0) + " " + T("millions de gourdes");
+      }
+      var n = v / 1e9;
+      return arr(n, 2) + " " + (n < 2 ? T("milliard de gourdes")
+                                      : T("milliards de gourdes"));
+    };
+    var h = ["<h3>" + T("Ce que le budget de l'État inscrit ici") + "</h3>"];
+    if (r.niveau_admin === "3") {
+      h.push('<p class="x-note" style="margin-top:0">' + T(
+        "Le budget de la République s'arrête au département : aucune ligne " +
+        "n'est votée commune par commune. Les chiffres ci-dessous sont donc " +
+        "ceux du département auquel cette commune appartient, tels quels — " +
+        "les répartir entre ses communes fabriquerait une donnée que le " +
+        "Moniteur ne publie pas.") + "</p>");
+    }
+    h.push('<ul class="x-liste-sol">');
+    h.push("<li><b>" + esc(gourdes(d.t)) + "</b> " +
+           TF("de crédits votés pour l'exercice 2025-2026, soit {p} % du budget général",
+              { p: esc(String(d.p).replace(".", ",")) }) + "</li>");
+    h.push("<li>" + TF("dont {f} de fonctionnement et {i} d'investissement",
+      { f: "<b>" + esc(gourdes(d.f)) + "</b>",
+        i: "<b>" + esc(gourdes(d.i)) + "</b>" }) + "</li>");
+    h.push("</ul>");
+    /* Le fait marquant du tableau, et il ne se voit qu'à l'échelle du pays :
+       deux lignes sur onze emportent 90 % de l'enveloppe. Le taire sur une
+       fiche des Nippes reviendrait à montrer un petit chiffre sans dire à
+       quoi il se compare. */
+    h.push('<p class="x-limite">' + TF(
+      "À l'échelle du pays, l'Ouest concentre 64,8 % des crédits et {n} " +
+      "milliards ne sont ventilés sur aucun territoire — les ministères " +
+      "siègent à Port-au-Prince et leurs crédits y sont inscrits, quel que " +
+      "soit le lieu de la dépense. Les neuf autres départements se partagent " +
+      "9,9 %. Et ceci est du VOTÉ, pas du dépensé : un crédit ouvert peut " +
+      "n'être jamais décaissé.",
+      { n: esc((m.non_ventile_htg / 1e9).toFixed(1).replace(".", ",")) }) + "</p>");
+    h.push('<p class="x-src"><small>' + esc(m.source || "") + " · " +
+           esc(m.document || "") + "</small></p>");
+    return h.join("");
+  }
+
+  function blocSantedec(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-santedec" class="x-pyr"><p class="x-note">' +
+        T("Santé déclarée — chargement…") + "</p></div>"
+      : "";
+  }
+
+  function chargerSantedec() {
+    if (S.santedecPromesse) return S.santedecPromesse;
+    S.santedecPromesse = charger(DIR + "atmart_sante_declaree.json", 1)
+      .then(function (t) { S.santedec = JSON.parse(t); return S.santedec; })
+      .catch(function () { S.santedec = null; return null; });
+    return S.santedecPromesse;
+  }
+
+  function remplirSantedec(r) {
+    var el = $("#x-santedec");
+    if (!el) return;
+    chargerSantedec().then(function () {
+      var h = htmlSantedec(r);
+      el.innerHTML = h || ('<p class="x-note">' + T("Le registre du MSPP n'a pas pu être chargé — la fiche reste lisible sans lui.") + "</p>");
+    });
+  }
+
+  function htmlSantedec(r) {
+    var d = S.santedec && S.santedec.communes ? S.santedec.communes[r.pcode] : null;
+    if (!d) return "";
+    var m = S.santedec.meta || {};
+    var h = ["<h3>" + T("La santé : déclarée et vue") + "</h3>"];
+    h.push('<ul class="x-liste-sol">');
+    h.push("<li><b>" + esc(d.t) + "</b> " +
+           T("établissements enregistrés à la Carte sanitaire du MSPP") + "</li>");
+    /* TN et non une barre oblique : « 1 hôpital/hôpitaux » est le genre de
+       négligence qui décrédibilise une page entière de chiffres justes.
+       Même règle que pour « 26 hôpitals », corrigé le 17/08. */
+    if (d.h) {
+      h.push("<li>" + TF("dont {n}", { n: "<b>" + esc(d.h) + "</b> " +
+        TN({ one: "hôpital", other: "hôpitaux" }, d.h, {}) }) + "</li>");
+    }
+    h.push("<li>" + (d.pub
+      ? TF("dont {n} du secteur public", { n: "<b>" + esc(d.pub) + "</b>" })
+      : T("aucun du secteur public")) + "</li>");
+    if (d.v) {
+      h.push("<li><b>" + esc(d.v) + "</b> " +
+             T("points de santé visibles sur OpenStreetMap") + "</li>");
+    } else {
+      h.push('<li><span class="x-nd">' + T("non documenté") + "</span> " +
+             T("aucun point de santé cartographié ici") + "</li>");
+    }
+    h.push("</ul>");
+    if (d.v && d.t) {
+      var part = Math.round(d.v / d.t * 100);
+      h.push('<p class="x-limite">' + TF(
+        "La carte montre {p} % de ce que le registre déclare. Les deux ne " +
+        "comptent pas la même chose : le registre enregistre des " +
+        "établissements agréés, la carte relève ce qu'un contributeur a vu, " +
+        "cabinets privés compris. Et un établissement enregistré n'est pas " +
+        "un établissement ouvert — la Carte sanitaire s'appuie sur une " +
+        "évaluation conduite tous les cinq ans.", { p: esc(part) }) + "</p>");
+    }
+    h.push('<p class="x-src"><small>' + esc(m.attribution || "") + "</small></p>");
+    return h.join("");
+  }
+
   function blocLacunes(r) {
     var m = S.vals.filter(function (v) { return v.pcode_commune === r.pcode; });
     var absents = m.filter(function (v) { return v.statut_valeur === "N"; });
@@ -2435,6 +2603,8 @@ export default function (A) {
              montrer("services") ? blocPluie(r) : "",
              montrer("services") ? blocSol(r) : "",
              montrer("services") ? blocPopMod(r) : "",
+             montrer("services") ? blocSantedec(r) : "",
+             blocCredits(r),
              montrer("services") ? blocEcolesdec(r) : "",
              montrer("services") ? blocAcces(r) : "",
              montrer("services") ? blocPop3(r) : "",
@@ -2455,7 +2625,7 @@ export default function (A) {
          technique : l'entité est synthétique, ses métadonnées sont celles de
          ses sources, affichées repère par repère. */
       h.push(blocNat(), agregat(r), blocPyramide(r));
-    } else h.push(agregat(r), blocPyramide(r));
+    } else h.push(agregat(r), blocCredits(r), blocPyramide(r));   /* le budget est voté À CE NIVEAU */
     if (r.niveau_admin !== "0" && montrer("organisations")) h.push(blocOrganisations(r));
     if (montrer("enfants")) h.push(blocEnfants(r));
     if (montrer("verrou")) h.push(blocVerrou(r));
@@ -2473,6 +2643,8 @@ export default function (A) {
     remplirPluie(r);
     remplirSol(r);
     remplirPopMod(r);
+    remplirSantedec(r);
+    remplirCredits(r);
     remplirEcolesdec(r);
     remplirAcces(r);
     remplirPop3(r);
@@ -2510,5 +2682,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocPop3, chargerPop3, remplirPop3, htmlPop3, blocAcces, chargerAcces, remplirAcces, htmlAcces, blocEcolesdec, chargerEcolesdec, remplirEcolesdec, htmlEcolesdec, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocPop3, chargerPop3, remplirPop3, htmlPop3, blocAcces, chargerAcces, remplirAcces, htmlAcces, blocEcolesdec, chargerEcolesdec, remplirEcolesdec, htmlEcolesdec, blocSantedec, chargerSantedec, remplirSantedec, htmlSantedec, blocCredits, chargerCredits, remplirCredits, htmlCredits, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

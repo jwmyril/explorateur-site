@@ -1090,7 +1090,10 @@ export default function (A) {
        JSON n'était pas encore arrivé, la fonction renvoyait une chaîne vide,
        et la section n'existait pas. Rien dans la console, aucune erreur : la
        fiche s'affichait simplement sans son histoire sismique. */
-    return r.niveau_admin === "3" ? '<div id="x-seismes" class="x-pyr"></div>' : "";
+    return r.niveau_admin === "3"
+      ? '<div id="x-seismes" class="x-pyr"><p class="x-note">' +
+        T("Histoire sismique — chargement…") + "</p></div>"
+      : "";
   }
 
   /* Le bloc charge SA donnée lui-même au lieu de se greffer sur la promesse
@@ -1429,7 +1432,10 @@ export default function (A) {
     aLApproche("#x-prix", remplirPrix, r);
     aLApproche("#x-nat", remplirNat, r);
     aLApproche("#x-services", remplirServices, r);
-    aLApproche("#x-seismes", remplirSeismes, r);
+    /* Appel DIRECT et non « à l'approche » : le conteneur naissait vide,
+       donc haut de zéro pixel, et l'observateur d'intersection ne se
+       déclenchait jamais. Le bloc restait blanc indéfiniment. */
+    remplirSeismes(r);
     var t = $("#x-titre-fiche");
     if (t) t.textContent = nomT(r);
     majURL();

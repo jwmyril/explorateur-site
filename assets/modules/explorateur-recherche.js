@@ -2,21 +2,45 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=29";
+import { S } from "./etat.js?v=31";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { $, NIVEAU, T, TF, TN, annoncer, esc, liste, nomSecond, nomT, sansAccent } = A;
   /* ------------------------------------------------------------- recherche */
+
+  /* Les articles que l'usage met devant un nom de commune et que le
+     référentiel CNIGS n'écrit pas — ou écrit, selon la commune. « Les
+     Gonaïves » ne trouvait rien ; « Les Cayes » se cherche aussi bien sans
+     son article. On retire l'article des DEUX côtés, ce qui règle les deux
+     sens à la fois. */
+  var ARTICLES = /^(les|le|la|l|ls)[\s'-]+/;
+
+  /* La forme réduite d'un nom : sans accent, sans article, sans tiret,
+     sans apostrophe, sans espace. « Croix-Des-Bouquets », « croix des
+     bouquets » et « CroixDesBouquets » y deviennent la même chaîne — et
+     « Grand'Anse » rejoint « Grand Anse ». Ce n'est PAS un rapprochement
+     approximatif : deux chaînes réduites qui coïncident désignent le même
+     nom, tandis qu'une distance d'édition, elle, rapproche des noms
+     différents. Les p-codes passent par la même moulinette sans dommage :
+     ils n'ont ni article ni ponctuation. */
+  function reduit(s) {
+    return sansAccent(s).trim().replace(ARTICLES, "").replace(/[\s'’.-]/g, "");
+  }
+
   function chercher(q) {
-    var k = sansAccent(q).trim();
+    var brut = sansAccent(q).trim();
+    var k = reduit(q);
     if (!k) return [];
     var exact = [], debut = [], dedans = [];
     S.terr.forEach(function (r) {
-      var a = sansAccent(r.nom_fr), b = sansAccent(r.nom_ht),
-          c = sansAccent(r.pcode), d = sansAccent(r.atmart_geo_id);
+      var a = reduit(r.nom_fr), b = reduit(r.nom_ht),
+          c = reduit(r.pcode), d = reduit(r.atmart_geo_id);
       /* Les alias sont des mots entiers (« pays », « nasyonal ») : un match
          partiel ferait remonter la fiche nationale sur « pa »… */
-      if (r.alias && sansAccent(r.alias).split(" ").indexOf(k) > -1) { exact.push(r); return; }
+      /* Les alias restent comparés sur la forme non réduite : ce sont des
+         mots entiers (« pays », « nasyonal »), et les coller les uns aux
+         autres ferait remonter la fiche nationale sur des fragments. */
+      if (r.alias && sansAccent(r.alias).split(" ").indexOf(brut) > -1) { exact.push(r); return; }
       if (a === k || b === k || c === k || d === k) exact.push(r);
       else if (a.indexOf(k) === 0 || b.indexOf(k) === 0 || c.indexOf(k) === 0 || d.indexOf(k) === 0) debut.push(r);
       else if (a.indexOf(k) > 0 || b.indexOf(k) > 0 || c.indexOf(k) > -1 || d.indexOf(k) > -1) dedans.push(r);

@@ -13,7 +13,7 @@
   <link rel="manifest" href="/manifest.webmanifest" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=33" />
-  <link rel="stylesheet" href="../assets/data.css?v=32" />
+  <link rel="stylesheet" href="../assets/data.css?v=34" />
 <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
 {
@@ -39,6 +39,8 @@
   
   
     
+  
+  
   
   
   
@@ -86,17 +88,18 @@
 
 <section id="contenu" class="hero" style="padding:2.6rem 0 0.8rem">
   <div class="container">
-    <p class="kreyol" lang="ht" data-i18n="xp.kreyol">Chèche yon komin. Jwenn pwofil li.</p>
-    <h1 data-i18n-html="xp.h1">Eksplore teritwa <em>Ayiti</em> yo</h1>
-    <p class="lead" style="max-width:64ch" data-i18n-html="xp.lead">Chèche yon komin, yon awondisman oswa yon depatman, epi gade pwofil li : sèvis esansyèl, endikatè ki disponib, sous ak ane referans. <strong>Konpare teritwa yo, wè kote sèvis yo manke epi ekspòte rezilta yo</strong> pou rapò, pwojè ak desizyon ou.</p>
+    <p class="x-sur" data-i18n="xp.sur">Done teritoryal gratis, ak sous yo</p>
+    <h1 data-i18n-html="xp.h1">Jwenn enfòmasyon ki enpòtan yo sou yon teritwa an <em>Ayiti</em></h1>
+    <p class="lead" style="max-width:58ch" data-i18n="xp.lead">Chèche yon komin, yon awondisman oswa yon depatman. Gade chif li yo, risk li yo, sèvis li yo ak sous yo, epi konpare l ak lòt teritwa.</p>
 
     <div class="x-barre">
-      <label for="x-recherche" class="x-label" data-i18n="xp.label">Chèche yon komin, yon awondisman oswa yon depatman</label>
+      <label for="x-recherche" class="x-label" data-i18n="xp.label">Ki teritwa ou vle eksplore ?</label>
       <input id="x-recherche" type="search" autocomplete="off" spellcheck="false"
              role="combobox" aria-expanded="false" aria-controls="x-resultats"
              aria-describedby="x-aide-recherche"
-             placeholder="Leyogàn, Gonayiv, Pòtoprens, HT0121…" data-i18n-ph="xp.ph" />
+             placeholder="Gonayiv, Leyogàn, Pòtoprens, HT0121…" data-i18n-ph="xp.ph" />
       <div id="x-resultats" role="listbox" aria-label="Rezilta rechèch" data-i18n-aria="xp.res_aria" hidden></div>
+      <button type="button" class="btn btn-primary x-btn-explorer" id="x-explorer" data-i18n="xp.explorer">Eksplore</button>
     </div>
     <p id="x-aide-recherche" class="x-exemples">
       <span data-i18n="xp.ex">Egzanp :</span> <button class="x-lien" data-id="HTC-0111">Port-au-Prince</button> ·
@@ -243,8 +246,8 @@
   window.ATM_EXPLORATEUR = Object.assign({ dir: "../data/", base: "../" }, {});
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
-<script src="../assets/i18n.js?v=15"></script>
-<script type="module" src="../assets/modules/explorateur.js?v=29"></script>
+<script src="../assets/i18n.js?v=16"></script>
+<script type="module" src="../assets/modules/explorateur.js?v=31"></script>
 <script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
 if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>
 <script src="../assets/mesure.js?v=2" defer></script>

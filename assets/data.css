@@ -1079,3 +1079,85 @@ html[lang="fr"] .x-partiel { display: none; }
                     font-weight: 600; border-bottom-width: 2px; }
 .x-acces td { font-variant-numeric: tabular-nums; }
 .x-acces td small { color: var(--ink-dim); font-size: 0.76rem; }
+
+/* ============================================================== ÉTAT A
+   L'accueil de l'Explorateur — 17/08/2026.
+   Quatre éléments, une seule action évidente. Les tailles sont en clamp()
+   pour qu'un téléphone de 320 px et un écran de 1440 px reçoivent la même
+   hiérarchie sans point de rupture à maintenir. */
+.x-hero { max-width: 62ch; margin: 0 auto; padding: 1.4rem 0 0.4rem; text-align: center; }
+.x-hero-sur { font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase;
+              color: var(--ink-dim); margin: 0 0 0.5rem; font-weight: 600; }
+.x-hero-titre { font-family: var(--font-head, inherit);
+                font-size: clamp(1.45rem, 4.2vw, 2.15rem); line-height: 1.2;
+                margin: 0 0 0.7rem; color: var(--ink); }
+.x-hero-txt { font-size: clamp(0.98rem, 2.2vw, 1.08rem); line-height: 1.6;
+              color: var(--ink-dim); margin: 0 auto 1.2rem; max-width: 54ch; }
+.x-hero-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center;
+                  margin-bottom: 1.1rem; }
+/* 44 px : la cible tactile minimale, tenue même quand le texte est court. */
+.x-hero-btn { min-height: 44px; display: inline-flex; align-items: center;
+              justify-content: center; padding: 0.6rem 1.1rem; }
+.x-hero-ex { font-size: 0.9rem; color: var(--ink-dim); margin: 0 0 1rem;
+             line-height: 2.2; }
+.x-ex { min-height: 44px; padding: 0.35rem 0.8rem; margin: 0 0.15rem;
+        border: 1px solid var(--border); border-radius: 999px;
+        background: var(--surface-2, transparent); color: var(--ink);
+        font: inherit; font-size: 0.88rem; cursor: pointer; }
+.x-ex:hover { border-color: var(--accent, currentColor); }
+.x-hero-compte { font-size: 0.85rem; max-width: 52ch; margin: 0 auto; }
+.x-reprise { text-align: center; margin: 0.4rem 0 1.4rem; font-size: 0.9rem; }
+/* En état d'accueil, les vues qui n'ont pas encore de sujet se taisent. */
+.x-etat-accueil .x-couverture, .x-etat-accueil #x-millesimes { display: none; }
+
+/* ------------------------------------------------------- panne du socle
+   Ce que le lecteur voit quand les référentiels manquent. Il doit pouvoir
+   AGIR : réessayer, revenir, ou récupérer les fichiers autrement. Un
+   paragraphe sans issue laissait la seule sortie au bouton « précédent ». */
+.x-panne { max-width: 60ch; margin: 2rem auto; padding: 1.4rem 1.2rem;
+           border: 1px solid var(--border); border-left: 4px solid #c1121f;
+           border-radius: 10px; background: var(--surface-2, transparent); }
+.x-panne h2 { margin: 0 0 0.6rem; font-size: 1.15rem; color: var(--ink); }
+.x-panne p { margin: 0 0 0.8rem; color: var(--ink-dim); line-height: 1.6; }
+.x-panne-detail code { font-size: 0.82rem; word-break: break-all;
+                       color: var(--ink-dim); }
+.x-panne-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.x-panne-actions .btn { min-height: 44px; display: inline-flex; align-items: center; }
+
+/* Le surtitre de la page, et le bouton d'action principale à côté du champ.
+   Le bouton n'ajoute pas de fonction — la saisie suffit — mais il donne à
+   l'œil un point d'arrivée : sur un accueil, « où est-ce que je clique »
+   doit avoir une réponse visible, pas seulement une réponse logique. */
+.x-sur { font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase;
+         color: var(--ink-dim); margin: 0 0 0.4rem; font-weight: 600; }
+.x-btn-explorer { min-height: 44px; margin-top: 0.5rem; }
+@media (min-width: 640px) {
+  .x-barre { position: relative; }
+  .x-btn-explorer { margin-top: 0.6rem; }
+}
+
+/* -------------------------------------- l'accueil au format d'un téléphone
+   Mesure sur 320 x 568 : titre 192 px, chapeau 207 px, et le champ de
+   recherche tombait à 635 px — hors de vue. Le texte du cahier des charges
+   est bon, c'est son échelle qui ne l'était pas : on ne coupe pas le message,
+   on le met à la taille de l'écran. Le champ remonte à ~450 px, donc visible
+   sans défiler, et la promesse « la recherche d'abord » redevient vraie.
+   Au-dessus de 640 px, rien ne change : l'espace ne manque plus. */
+@media (max-width: 639px) {
+  #contenu.hero { padding-top: 1.2rem !important; }
+  #contenu.hero h1 { font-size: clamp(1.32rem, 6.4vw, 1.7rem); line-height: 1.22;
+                     margin-bottom: 0.45rem; }
+  #contenu.hero .lead { font-size: 0.94rem; line-height: 1.5; margin-bottom: 0.7rem; }
+  .x-sur { font-size: 0.72rem; margin-bottom: 0.3rem; }
+  .x-label { font-size: 0.92rem; }
+  /* Les exemples de la page doublonnent ceux du moteur juste en dessous :
+     sur un petit écran, l'un des deux suffit et c'est celui qui est vérifié
+     au démarrage qu'on garde. */
+  #x-aide-recherche.x-exemples { display: none; }
+  .x-preuve { font-size: 0.78rem; }
+}
+
+/* Les onglets faisaient 34 px de haut : suffisant pour une souris, sous la
+   cible tactile minimale de 44 px — et un portable tactile existe. On monte
+   la hauteur sans toucher à la typographie ni à la mise en page. */
+.filter-btn { min-height: 44px; display: inline-flex; align-items: center; }

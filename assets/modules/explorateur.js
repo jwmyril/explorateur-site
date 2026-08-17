@@ -5,8 +5,8 @@
    Aucun compteur n'est écrit en dur : tout est compté depuis les fichiers. */
 /* SANS NUMÉRO DE VERSION, ET C'EST OBLIGATOIRE.
    Le navigateur identifie un module par son URL COMPLÈTE, requête comprise :
-   "./etat.js?v=29" et "./etat.js?v=29" sont deux modules distincts, chacun avec
-   son propre objet S. Les six sous-modules importent "./etat.js?v=29" ; tant que
+   "./etat.js?v=31" et "./etat.js?v=31" sont deux modules distincts, chacun avec
+   son propre objet S. Les six sous-modules importent "./etat.js?v=31" ; tant que
    cette ligne portait ?v=21, l'état était coupé en deux — le moteur
    remplissait S.terr et S.vals d'un côté, la fiche les lisait de l'autre et
    n'y trouvait rien. Symptôme observé en production le 17/08/2026 : toutes
@@ -14,7 +14,7 @@
    alors que les 4 200 valeurs étaient bel et bien chargées.
    Si etat.js doit un jour être versionné, il faut l'être dans les SEPT
    fichiers à la fois, et dans la liste CORE du service worker. */
-import { S } from "./etat.js?v=29";
+import { S } from "./etat.js?v=31";
 
 (async function () {
   "use strict";
@@ -34,7 +34,7 @@ import { S } from "./etat.js?v=29";
   /* Version des donnees. A incrementer des qu'un fichier de data/ est
      regenere : sinon le cache du navigateur sert l'ancien fichier et
      l'interface affiche du perime sans le savoir. */
-  var DV = "?d=2026-08-15a";
+  var DV = "?d=2026-08-17a";
   var F = {
     terr: DIR + (ADMIN ? "atmart_referentiel_territoire_HT.csv"
                        : "atmart_referentiel_territoire_base_HT.csv"),
@@ -480,6 +480,35 @@ import { S } from "./etat.js?v=29";
         if (S.courant) A.fiche(S.courant.atmart_geo_id);
         return;
       }
+      /* Le bouton « Explorer » à côté du champ. S'il y a déjà un résultat, il
+         l'ouvre — c'est ce qu'attend quelqu'un qui a tapé puis cherché des
+         yeux le bouton de validation. Sinon il rend la main au champ plutôt
+         que de ne rien faire, ce qui serait un bouton mort. */
+      if (e.target.closest("#x-explorer")) {
+        var prem = document.querySelector("#x-resultats [data-id]");
+        if (prem) { prem.click(); return; }
+        var cf = $("#x-recherche");
+        if (cf) cf.focus();
+        return;
+      }
+      /* « Explorer un territoire » ne navigue nulle part : il met le curseur
+         dans le champ. La recherche EST le produit, et l'envoyer chercher
+         une autre page pour revenir ensuite serait un détour inutile. */
+      var vers = e.target.closest("[data-vers]");
+      if (vers) {
+        var cible = $("#x-recherche");
+        if (cible) {
+          cible.scrollIntoView({ block: "center" });
+          cible.focus();
+        }
+        return;
+      }
+      var ongv = e.target.closest("[data-onglet-vers]");
+      if (ongv) {
+        var bo2 = document.querySelector('[data-onglet="' + ongv.dataset.ongletVers + '"]');
+        if (bo2) bo2.click();
+        return;
+      }
       var b = e.target.closest("[data-id]");
       if (b) {
         /* Depuis l'onglet Comparer, un resultat de recherche s'AJOUTE a la
@@ -709,9 +738,16 @@ import { S } from "./etat.js?v=29";
     if (A.OBJECTIFS[ob]) { S.objectif = ob; if (selObj) selObj.value = ob; }
     S.ficheComplete = /[?&]complet=1/.test(location.search);
     var id = (location.search.match(/id=([A-Z0-9-]+)/) || [])[1];
-    /* Sans territoire demandé, la fiche ouverte est un exemple : on le dit. */
+    /* DEUX ÉTATS, ET LA RACINE EST LE PREMIER.
+       Ouvrir Port-au-Prince faute de demande faisait trois dégâts d'un coup :
+       le nouvel arrivant croyait avoir demandé cette commune, l'adresse de la
+       racine se réécrivait sous ses yeux — donc le lien qu'il partageait
+       n'était pas celui qu'il avait ouvert — et la question « par où je
+       commence ? » recevait pour réponse une fiche de deux cents blocs.
+       Un `?id=` explicite ouvre toujours directement le bon territoire : les
+       liens déjà partagés continuent de fonctionner à l'identique. */
     S.montrerAccueil = !parId[id];
-    A.fiche(parId[id] ? id : "HTC-0111");
+    if (parId[id]) A.fiche(id); else A.accueil();
 
     /* Changement de langue. L'etat de l'application — territoire courant,
        territoires compares, niveau, mode de lecture, onglet actif — vit dans
@@ -739,14 +775,84 @@ import { S } from "./etat.js?v=29";
      la ou un simple rechargement aurait suffi. */
   function charger(u, essais) {
     essais = essais === undefined ? 2 : essais;
-    return fetch(u + DV).then(function (r) {
-      if (!r.ok) throw new Error(u + " : " + r.status);
+    var adresse = u + DV;
+    return fetch(adresse).then(function (r) {
+      if (!r.ok) {
+        var err = new Error(adresse + " → HTTP " + r.status);
+        err.url = adresse; err.statut = r.status;
+        throw err;
+      }
       return r.text();
     }).catch(function (e) {
+      /* CHAQUE tentative laisse une trace, pas seulement la dernière. Une
+         ressource qui répond 404 deux fois puis 200 se réparait en silence,
+         et le jour où elle ne se réparait plus, la console ne disait pas
+         depuis quand. On journalise l'adresse ET le statut : « ça ne marche
+         pas » n'est pas un diagnostic. */
+      if (window.console) {
+        console.warn("Explorateur — échec de chargement : " + adresse +
+                     (e.statut ? " (HTTP " + e.statut + ")" : " (" + e.message + ")") +
+                     " — tentatives restantes : " + essais);
+      }
       if (essais <= 0) throw e;
       return new Promise(function (ok) { setTimeout(ok, 500); })
         .then(function () { return charger(u, essais - 1); });
     });
+  }
+
+  /* LE SOCLE EST-IL REELLEMENT LA ?
+
+     Une reponse 200 ne prouve pas qu'un referentiel est arrive : un CSV
+     tronque se lit sans erreur et rend une liste vide. Et le 17/08 au matin,
+     deux exemplaires du module d'etat coexistaient — chaque promesse tenait,
+     et les fiches annonçaient « 0 source · 0 indicateurs sur 0 ».
+
+     Ce controle est donc posé APRES le chargement et AVANT le premier rendu.
+     Il ne regarde pas les codes HTTP, il regarde le CONTENU : sans territoire,
+     sans valeur ou sans dictionnaire, il n'y a pas d'Explorateur, et afficher
+     une fiche vide serait présenter un échec comme un résultat. */
+  function socleManquant() {
+    var manque = [];
+    if (!S.terr || !S.terr.length) manque.push(F.terr);
+    if (!S.vals || !S.vals.length) manque.push(F.vals);
+    if (!Object.keys(dico).length) manque.push(F.dico);
+    return manque;
+  }
+
+  /* La sortie de secours. Deux boutons et rien d'autre : réessayer, parce
+     qu'une coupure réseau est la cause la plus fréquente et la plus vite
+     réparée ; revenir à l'accueil, parce qu'un lecteur bloqué sur une URL
+     qui échoue doit pouvoir repartir sans retaper l'adresse. Le catalogue
+     reste cité : les fichiers sont téléchargeables même quand le moteur ne
+     démarre pas. */
+  function panneSocle(details) {
+    var b = $("#x-chargement");
+    if (!b) return;
+    if (window.console) {
+      console.error("Explorateur — socle indisponible :", details);
+    }
+    b.hidden = false;
+    b.innerHTML =
+      '<div class="x-panne" role="alert">' +
+      "<h2>" + A.T("Les données principales n'ont pas pu être chargées") + "</h2>" +
+      "<p>" + A.T("L'Explorateur ne peut pas afficher de territoire sans son socle de données. Rien n'est affiché plutôt qu'un chiffre faux : un compteur à zéro serait un échec déguisé en résultat.") + "</p>" +
+      '<p class="x-panne-detail"><code>' + esc(details) + "</code></p>" +
+      '<p class="x-panne-actions">' +
+      '<button type="button" class="btn btn-primary" id="x-reessayer">' +
+      A.T("Réessayer") + "</button> " +
+      '<a class="btn btn-outline" href="./">' + A.T("Retour à l'accueil") + "</a> " +
+      '<a class="btn btn-outline" href="' + SITE + 'datasets.html">' +
+      A.T("Télécharger les fichiers") + "</a></p></div>";
+    var br = $("#x-reessayer");
+    if (br) {
+      br.addEventListener("click", function () {
+        br.disabled = true;
+        br.textContent = A.T("Nouvelle tentative…");
+        location.reload();
+      });
+    }
+    var app = $("#x-app");
+    if (app) app.hidden = true;
   }
 
   /* Le registre est calculé par l'outil de découpage : une liste écrite à
@@ -775,7 +881,7 @@ import { S } from "./etat.js?v=29";
      mais l'ordre de cette liste doit continuer de se lire comme l'ordre des
      dépendances. */
   for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison", "rapport"]) {
-    (await import("./explorateur-" + m + ".js?v=29")).default(A);
+    (await import("./explorateur-" + m + ".js?v=31")).default(A);
   }
 
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);
@@ -783,6 +889,15 @@ import { S } from "./etat.js?v=29";
     S.terr = parseCSV(t[0]); S.vals = parseCSV(t[1]);
     parseCSV(t[2]).forEach(function (d) { dico[d.indicateur_id] = d; });
     if (t[3]) S.orgs = parseCSV(t[3]);
+    /* Le contrôle est ici et pas plus loin : après l'analyse des trois
+       référentiels, avant que quoi que ce soit ne se dessine. Une fiche à
+       moitié rendue puis effacée aurait été pire que pas de fiche du tout. */
+    var manque = socleManquant();
+    if (manque.length) {
+      var err = new Error("socle vide après chargement : " + manque.join(", "));
+      err.socle = manque;
+      throw err;
+    }
     /* Le contour est un agrement : s'il manque, la fiche s'affiche sans carte. */
     return charger(CFG.contour || DIR + "haiti_contour_simplifie.geojson")
       .then(function (t) { return JSON.parse(t); })
@@ -822,12 +937,10 @@ import { S } from "./etat.js?v=29";
       })
       .then(pret);
   }).catch(function (e) {
-    /* Une panne silencieuse est pire qu'une panne visible : on trace la cause
-       reelle avant de composer un message, dont la traduction pourrait echouer. */
-    if (window.console) console.error("Explorateur :", e);
-    $("#x-chargement").innerHTML = '<p class="x-vide">' +
-      A.TF("Les données n'ont pas pu être chargées ({err}). Les fichiers restent téléchargeables depuis le {lien}.",
-        { err: esc(e.message),
-          lien: '<a href="' + SITE + 'datasets.html">' + A.T("catalogue") + "</a>" }) + "</p>";
+    /* Une panne silencieuse est pire qu'une panne visible. Le message porte
+       l'adresse et le statut réels — de quoi rouvrir le fichier en question
+       plutôt que de deviner — et il OFFRE UNE SORTIE : jusqu'ici il laissait
+       le lecteur devant un paragraphe, sans bouton et sans chemin de retour. */
+    panneSocle(e && e.message ? e.message : String(e));
   });
 })();

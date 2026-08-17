@@ -2,10 +2,10 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=29";
+import { S } from "./etat.js?v=31";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
-  const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, situation, valeurBrute } = A;
+  const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, sansAccent, situation, valeurBrute } = A;
   /* Six usages plutôt que sept profils : chacun réordonne les thèmes, choisit
      les indicateurs qu'il met en premier, change le résumé et propose des
      actions différentes.
@@ -976,17 +976,73 @@ export default function (A) {
 
   /* Première visite : l'Explorateur ouvre une fiche d'exemple. Sans un mot pour
      le dire, l'utilisateur croit lire son territoire. */
-  function blocAccueil(r) {
+  /* L'ACCUEIL — état A, aucun territoire choisi.
+     Il tient en quatre éléments et pas un de plus : ce qu'on obtient, où l'on
+     commence, un exemple de ce qu'on peut taper, et trois portes. Tout le
+     reste de ce qu'Atmart sait faire est à un clic, et le dire ici l'aurait
+     noyé. Les chiffres du sous-titre viennent du référentiel chargé : une
+     promesse comptée est plus crédible qu'une promesse écrite. */
+  /* L'ACCUEIL — état A, aucun territoire choisi.
+     Il ne REDIT PAS le titre ni le chapeau : ceux-là vivent dans le HTML de
+     la page, où les moteurs de recherche les lisent et où ils s'affichent
+     avant que le moteur ne démarre. Les répéter ici poussait le champ de
+     recherche à 652 px du haut sur un écran de 320 — donc hors de vue, pour
+     redire ce que le lecteur venait de lire.
+     Restent les trois portes, les exemples et ce que le référentiel permet
+     d'annoncer : des chiffres comptés valent mieux qu'une promesse écrite. */
+  function blocAccueil() {
     var n = {};
     S.terr.forEach(function (t) { n[t.niveau_admin] = (n[t.niveau_admin] || 0) + 1; });
-    return '<div class="x-accueil"><p class="x-accueil-vp">' +
-      T("Chaque territoire d'Haïti a ici sa fiche : les chiffres documentés avec leur source, leur millésime et leur méthode — et, à côté, ce qui n'est pas documenté, dit comme tel.") +
-      '</p><p class="x-note">' +
-      TF("Trois niveaux : {dep} départements, {arr} arrondissements, {com} communes. Comparez-en deux à quatre, ou classez-les toutes, par les onglets ci-dessus.",
-         { dep: n["1"] || 0, arr: n["2"] || 0, com: n["3"] || 0 }) +
-      '</p><p class="x-accueil-ex">' +
-      TF("Ci-dessous, {nom} en exemple — cherchez votre territoire dans la barre de recherche.",
-         { nom: esc(nomT(r)) }) + "</p></div>";
+    var h = ['<section class="x-hero" aria-label="' + esc(T("Par où commencer")) + '">'];
+    h.push('<div class="x-hero-actions">' +
+      '<button type="button" class="btn btn-primary x-hero-btn" data-vers="recherche">' +
+      T("Explorer un territoire") + "</button>" +
+      '<button type="button" class="btn btn-outline x-hero-btn" data-onglet-vers="comparaison">' +
+      T("Comparer des territoires") + "</button>" +
+      '<a class="btn btn-outline x-hero-btn" href="couches.html">' +
+      T("Voir les cartes thématiques") + "</a></div>");
+    h.push('<p class="x-hero-ex">' + T("Par exemple :") + " " +
+      EXEMPLES.map(function (e) {
+        return '<button type="button" class="x-ex" data-id="' + esc(e[1]) + '">' +
+               esc(e[0]) + "</button>";
+      }).join(" ") + "</p>");
+    h.push('<p class="x-note x-hero-compte">' + TF(
+      "{dep} départements, {arr} arrondissements, {com} communes — chacun avec " +
+      "ses chiffres sourcés et, à côté, ce qui n'est pas documenté, dit comme tel.",
+      { dep: n["1"] || 0, arr: n["2"] || 0, com: n["3"] || 0 }) + "</p>");
+    h.push("</section>");
+    return h.join("");
+  }
+
+  /* Les exemples cliquables portent un identifiant, PAS une chaîne à
+     rechercher : un exemple qui ne mène nulle part parce que la recherche a
+     changé est pire qu'aucun exemple. Ils sont vérifiés au démarrage — voir
+     `exemplesValides` — et ceux qui ne correspondent à aucun territoire du
+     référentiel sont retirés au lieu d'être affichés morts. */
+  var EXEMPLES = [
+    ["Gonaïves", "HTC-0511"], ["Léogâne", "HTC-0121"],
+    ["Cap-Haïtien", "HTC-0311"], ["Pòtoprens", "HTC-0111"]
+  ];
+
+  /* On ne vérifie pas seulement que l'identifiant EXISTE : on vérifie qu'il
+     désigne bien le territoire annoncé. HTC-0521 existe — c'est Gros Morne,
+     et l'exemple « Gonaïves » y menait sans que rien ne proteste. Un
+     identifiant faux mais valide est le pire des deux mondes : la page
+     s'ouvre, sur autre chose, et personne ne le remarque. */
+  function exemplesValides() {
+    EXEMPLES = EXEMPLES.filter(function (e) {
+      var r = parId[e[1]];
+      if (!r) return false;
+      var vu = sansAccent(r.nom_fr + " " + (r.nom_ht || ""));
+      if (vu.indexOf(sansAccent(e[0])) < 0) {
+        if (window.console) {
+          console.warn("Exemple d'accueil écarté : « " + e[0] + " » pointe sur " +
+                       r.nom_fr + " (" + e[1] + ")");
+        }
+        return false;
+      }
+      return true;
+    });
   }
 
   function blocIndicateurs(r) {
@@ -2588,11 +2644,43 @@ export default function (A) {
       }).join("") + "<small>" + T(VUES[a].d) + "</small></div>";
   }
 
+  /* ETAT A : rien n'est choisi, donc rien n'est ouvert.
+     La fiche d'exemple ne se déroule plus sous l'accueil — c'était deux cents
+     blocs offerts à qui n'avait rien demandé, et l'URL se réécrivait en
+     `?id=HTC-0111` comme si le lecteur avait choisi Port-au-Prince. */
+  function accueil() {
+    S.courant = null;
+    exemplesValides();
+    var h = [blocAccueil()];
+    /* Une sélection précédente se PROPOSE, elle ne s'impose pas : rouvrir
+       tout seul la fiche de la dernière visite, c'est décider à la place du
+       lecteur et lui cacher la page d'accueil qu'il vient de demander. */
+    var repris = null;
+    try { repris = localStorage.getItem("atmart_dernier"); } catch (e) {}
+    var rr = repris && parId[repris];
+    if (rr) {
+      h.push('<p class="x-reprise"><button type="button" class="x-lien" ' +
+             'data-id="' + esc(repris) + '">' +
+             TF("Reprendre la fiche de {nom}", { nom: esc(nomT(rr)) }) +
+             "</button></p>");
+    }
+    $("#x-fiche").innerHTML = h.join("");
+    $("#x-fiche").hidden = false;
+    document.body.classList.add("x-etat-accueil");
+    var t = $("#x-titre-fiche");
+    if (t) t.textContent = T("Explorateur Haïti");
+    majURL();
+    annoncer(T("Accueil de l'Explorateur. Recherchez un territoire."));
+  }
+
   function fiche(id) {
     var r = parId[id];
     if (!r) return;
     S.courant = r;
-    var h = [S.montrerAccueil ? blocAccueil(r) : "", blocResume(r), selecteurVue()];
+    document.body.classList.remove("x-etat-accueil");
+    /* Ce que le lecteur a réellement ouvert, pour le lui proposer au retour. */
+    try { localStorage.setItem("atmart_dernier", r.atmart_geo_id); } catch (e) {}
+    var h = [blocResume(r), selecteurVue()];
     if (montrer("carte")) h.push(blocCarte(r));
     if (r.niveau_admin === "3") {
       h.push(montrer("objectif") ? blocObjectif(r) : "", blocIndicateurs(r),
@@ -2664,7 +2752,21 @@ export default function (A) {
   }
 
   function majURL() {
-    if (!S.courant) return;
+    /* SUR L'ACCUEIL, ON N'ÉCRIT PAS D'IDENTIFIANT. `return` laissait l'ancien
+       `?id=` collé à l'adresse : le lecteur revenait à l'accueil et repartait
+       avec le lien d'une commune qu'il n'avait pas choisie. On nettoie, en
+       gardant la langue — c'est la seule part de l'état qui a du sens ici. */
+    if (!S.courant) {
+      var p = [];
+      if (S.comparees.length) p.push("comparer=" + S.comparees.join(","));
+      if (S.ongletActif !== "fiche") p.push("onglet=" + S.ongletActif);
+      if (S.niveauComp !== "3") p.push("niveau=" + S.niveauComp);
+      if (S.normalisation !== "total") p.push("norm=" + S.normalisation);
+      if (S.LANG !== "fr") p.push("lang=" + S.LANG);
+      var qa = p.length ? "?" + p.join("&") : location.pathname;
+      try { history.replaceState(null, "", qa); } catch (e) {}
+      return;
+    }
     var q = "?id=" + S.courant.atmart_geo_id +
             (S.objectif !== "tout" ? "&objectif=" + S.objectif : "") +
             (S.comparees.length ? "&comparer=" + S.comparees.join(",") : "") +
@@ -2682,5 +2784,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocPop3, chargerPop3, remplirPop3, htmlPop3, blocAcces, chargerAcces, remplirAcces, htmlAcces, blocEcolesdec, chargerEcolesdec, remplirEcolesdec, htmlEcolesdec, blocSantedec, chargerSantedec, remplirSantedec, htmlSantedec, blocCredits, chargerCredits, remplirCredits, htmlCredits, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, accueil, exemplesValides, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocPop3, chargerPop3, remplirPop3, htmlPop3, blocAcces, chargerAcces, remplirAcces, htmlAcces, blocEcolesdec, chargerEcolesdec, remplirEcolesdec, htmlEcolesdec, blocSantedec, chargerSantedec, remplirSantedec, htmlSantedec, blocCredits, chargerCredits, remplirCredits, htmlCredits, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

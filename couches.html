@@ -21,7 +21,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=35" />
-  <link rel="stylesheet" href="assets/data.css?v=38" />
+  <link rel="stylesheet" href="assets/data.css?v=39" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/couches.html" />
   <link rel="preload" href="data/haiti_communes_simplifie.geojson?d=2026-08-14b" as="fetch" crossorigin="anonymous" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/couches.html" />
@@ -64,6 +64,32 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        opposées — « zéro recensé » et « la source ne couvre pas ». La forme,
        elle, se lit partout, y compris en noir et blanc. */
     .k-vide { stroke: var(--ink-dim); stroke-width: 0.7; stroke-dasharray: 2 2; }
+    /* ------------------------------------------- « Comment lire cette carte »
+       Ouvert par défaut : quelqu'un qui ne sait pas lire une carte ne clique
+       pas sur « aide » — il ferme la page. L'explication doit être là avant
+       qu'on la cherche. */
+    .k-guide { margin: 0.8rem 0 0; border: 1px solid var(--border);
+               border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+               background: var(--surface-2); }
+    .k-guide > summary { cursor: pointer; padding: 0.7rem 1rem; font-weight: 600;
+                         color: var(--ink); min-height: 44px; display: flex;
+                         align-items: center; }
+    .k-guide > div { padding: 0 1rem 0.9rem; }
+    .k-guide p { margin: 0 0 0.6rem; font-size: 0.93rem; line-height: 1.6;
+                 color: var(--ink); }
+    .k-guide-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.2rem; }
+    @media (max-width: 560px) { .k-guide-cols { grid-template-columns: 1fr; } }
+    .k-guide-cols p { font-size: 0.8rem; text-transform: uppercase;
+                      letter-spacing: 0.04em; color: var(--ink-dim);
+                      margin-bottom: 0.3rem; font-weight: 600; }
+    .k-guide-cols ul { margin: 0 0 0.8rem; padding-left: 1.1rem; font-size: 0.9rem;
+                       line-height: 1.7; }
+    .k-guide-att { border-left: 3px solid var(--attention); padding-left: 0.7rem;
+                   font-size: 0.88rem !important; color: var(--ink-dim) !important; }
+    .k-guide-fr { display: block; margin-top: 0.3rem; font-size: 0.82rem;
+                  opacity: 0.85; }
+    .k-guide-sui { font-size: 0.85rem !important; color: var(--ink-dim) !important;
+                   font-style: italic; margin-bottom: 0 !important; }
     #k-couverture.k-creuse {
       color: var(--ink); background: var(--surface-2);
       border-left: 4px solid var(--attention);
@@ -141,6 +167,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <div class="container">
     <p id="k-couverture" aria-live="polite"></p>
     <div id="k-carte"><div class="k-squelette" role="status" aria-label="Chargement du fond de carte"></div></div>
+    <div id="k-lecture-guidee"></div>
     <p id="k-lecture" aria-live="polite">Survolez une commune pour lire son nom et sa valeur.</p>
     <p id="k-legende"></p>
     <p id="k-source"></p>
@@ -197,7 +224,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   </div>
 </footer>
 
-<script src="assets/couches.js?v=20"></script>
+<script src="assets/couches.js?v=26"></script>
 <script>
   (function () {
     var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
@@ -207,7 +234,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <script src="assets/mesure.js?v=2" defer></script>
 <script src="assets/ux.js?v=1" defer></script>
 <script src="assets/pwa.js?v=2" defer></script>
-<script src="assets/i18n.js?v=18"></script>
+<script src="assets/i18n.js?v=19"></script>
 <script src="assets/theme.js?v=3" defer></script>
 </body>
 </html>

@@ -346,6 +346,25 @@
      changement d'apparence ne les touche donc pas tout seul. On redessine la
      couche affichée quand `theme.js` annonce la bascule — sinon la carte
      garderait ses teintes claires au milieu d'une page devenue sombre. */
+  /* Les <option> sont construits une fois, avant que le dictionnaire d'i18n
+     ne soit chargé : ils restaient donc en français sur une page basculée.
+     On réétiquette à l'événement de langue — la VALEUR ne bouge jamais, seul
+     le texte change, sinon un lien partagé cesserait de fonctionner. */
+  document.addEventListener("atmart:lang", function () {
+    var sel = document.getElementById("k-choix");
+    if (!sel) return;
+    var opts = sel.querySelectorAll("option");
+    for (var i = 0; i < opts.length; i++) {
+      var c2 = COUCHES.filter(function (x) { return x.id === opts[i].value; })[0];
+      if (c2 && c2.nom) opts[i].textContent = T(c2.nom);
+    }
+    var grs = sel.querySelectorAll("optgroup");
+    for (var j = 0; j < grs.length; j++) {
+      if (grs[j].dataset.fr) grs[j].label = T(grs[j].dataset.fr);
+    }
+    if (sel.value) afficher(sel.value);
+  });
+
   document.addEventListener("atmart:apparence", function () {
     /* « k-choix », l'identifiant réel du sélecteur — j'avais écrit « k-couche »,
        qui n'existe nulle part : le listener se posait, ne trouvait rien et
@@ -486,6 +505,126 @@
     return "rgb(" + m(0) + "," + m(1) + "," + m(2) + ")";
   }
 
+  /* Cette page est indépendante du moteur : elle n'a ni `T` ni `TF`. On les
+     redéfinit ici, adossés au dictionnaire d'i18n quand il est chargé, et
+     repliés sur le français sinon. La lecture guidée est la seule chose de
+     cette page qui DOIT parler kreyòl : c'est elle qui décide si quelqu'un
+     comprend la carte ou ferme la page. */
+  function T(fr) {
+    return (window.ATM_I18N && window.ATM_I18N.texte)
+      ? window.ATM_I18N.texte(fr) : fr;
+  }
+
+  function TF(fr, vars) {
+    var s = T(fr);
+    Object.keys(vars || {}).forEach(function (k) {
+      s = s.split("{" + k + "}").join(vars[k]);
+    });
+    return s;
+  }
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (ch) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch];
+    });
+  }
+
+  /* Le nom d'une commune depuis son p-code — une carte qui dit « HT0121 »
+     n'explique rien à personne. */
+  function nomDe(pcode) {
+    var f = communes && communes.features.filter(function (x) {
+      return x.properties.pcode === pcode; })[0];
+    return f ? f.properties.nom_fr : pcode;
+  }
+
+  function mediane(liste) {
+    var t = liste.slice().sort(function (a, b) { return a - b; });
+    if (!t.length) return null;
+    var m = Math.floor(t.length / 2);
+    return t.length % 2 ? t[m] : (t[m - 1] + t[m]) / 2;
+  }
+
+  function lectureGuidee(couche, agg, nonDoc) {
+    var e = $("#k-lecture-guidee");
+    if (!e) return;
+    var vals = agg.valeurs, codes = Object.keys(vals);
+    if (!codes.length) { e.innerHTML = ""; return; }
+
+    var paires = codes.map(function (p) { return [p, vals[p]]; })
+                      .sort(function (a, b) { return b[1] - a[1]; });
+    var med = mediane(codes.map(function (p) { return vals[p]; }));
+    var uFr = agg.unite || "";
+    var u = T(uFr), nom = T(couche.nom || "");
+    /* L'unité COURTE pour les listes : « minutes de route (médiane des
+       habitants) » répété six fois noie les trois noms de communes, qui sont
+       la seule chose que l'œil doit retenir. La forme longue reste dans la
+       phrase d'introduction, où elle est utile une fois. */
+    var uc = u.split("(")[0].trim();
+    /* Le nom sans sa parenthèse méthodologique, et sans mise en minuscules
+       brutale : « calcul Atmart » y perdait sa majuscule. */
+    var nomCourt = nom.split("(")[0].trim();
+    nomCourt = nomCourt.charAt(0).toLowerCase() + nomCourt.slice(1);
+    /* Une échelle de TEMPS se lit à l'envers d'une échelle de quantité : le
+       « plus » de minutes est le plus MAL desservi. Sans cette phrase, la
+       carte se lit exactement de travers — et c'est la carte la plus utile
+       du site. */
+    /* Sur l'unité d'ORIGINE, jamais sur la traduite : « minutes de route »
+       contient « minute », « minit sou wout » ne le contient pas. Tester la
+       chaîne traduite faisait perdre l'inversion de sens — beaucoup de
+       minutes = mal desservi — précisément pour les lecteurs kreyòl. */
+    var temps = /minute/.test(uFr);
+
+    var h = ['<details class="k-guide" open><summary>' +
+             T("Comment lire cette carte") + "</summary><div>"];
+    h.push("<p>" + TF(
+      "Chaque commune est colorée selon {quoi}, mesuré en {unite}. Plus la " +
+      "couleur est foncée, plus la valeur est élevée.",
+      { quoi: "<b>" + esc(nomCourt) + "</b>", unite: "<b>" + esc(uc) + "</b>" }) +
+      (temps ? " " + T("Ici une couleur foncée signale un territoire ÉLOIGNÉ des services : c'est l'inverse d'une bonne nouvelle.") : "") +
+      "</p>");
+    h.push("<p>" + TF(
+      "La valeur la plus courante est d'environ {med} {unite} — c'est le repère " +
+      "auquel comparer une commune avant de la dire élevée ou basse.",
+      { med: "<b>" + fmtN(Math.round(med * 10) / 10) + "</b>", unite: esc(uc) }) + "</p>");
+
+    var liste = function (t) {
+      return t.map(function (x) {
+        return "<li><b>" + esc(nomDe(x[0])) + "</b> — " +
+               fmtN(Math.round(x[1] * 10) / 10) + " " + esc(uc) + "</li>";
+      }).join("");
+    };
+    h.push('<div class="k-guide-cols"><div><p>' +
+      (temps ? T("Les plus éloignées") : T("Les plus élevées")) + "</p><ul>" +
+      liste(paires.slice(0, 3)) + "</ul></div><div><p>" +
+      (temps ? T("Les mieux desservies") : T("Les plus basses")) + "</p><ul>" +
+      liste(paires.slice(-3).reverse()) + "</ul></div></div>");
+
+    if (nonDoc) {
+      h.push('<p class="k-guide-att">' + TF(
+        "{n} commune(s) restent en gris, avec un contour tireté. Elles ne " +
+        "valent PAS zéro : la source ne les couvre pas. Ne les lisez pas " +
+        "comme des communes où il n'y a rien.", { n: "<b>" + nonDoc + "</b>" }) + "</p>");
+    }
+    if (couche.limite) {
+      var lim = T(couche.limite);
+      /* Le paragraphe de limite porte l'essentiel de la prudence. Le masquer
+         faute de traduction reviendrait à publier une carte SANS son
+         avertissement — pire que de le publier en français. On l'affiche, et
+         on nomme la situation : le lecteur sait que c'est un chantier en
+         cours, pas une panne ni un oubli. */
+      h.push('<p class="k-guide-att"><b>' + T("Ce que cette carte ne dit pas") +
+             "</b> — " + esc(lim) +
+             (lim === couche.limite && T("Limite") !== "Limite"
+               ? ' <i class="k-guide-fr">' + T("Ce paragraphe n'est pas encore " +
+                 "traduit — il reste en français pour ne pas être perdu.") + "</i>"
+               : "") + "</p>");
+    }
+    h.push('<p class="k-guide-sui">' + T(
+      "Touchez une commune pour lire sa valeur ; touchez-la encore pour ouvrir sa fiche.") +
+      "</p></div></details>");
+    e.innerHTML = h.join("");
+  }
+
   function rendreChoroplethe(couche, rows) {
     var agg = couche.agreger(rows);
     var vals = agg.valeurs;
@@ -500,7 +639,7 @@
         (doc ? " — " + fmtN(v) + " " + agg.unite : " — non documenté") + "</title></path>";
     }).join("");
     var leg = '<span class="k-grad k-grad-' + (couche.rampe || "alerte") + '"></span> ' +
-              (agg.min !== undefined ? fmtN(agg.min) : "0") + " → " + fmtN(max) + " " + agg.unite +
+              (agg.min !== undefined ? fmtN(agg.min) : "0") + " → " + fmtN(max) + " " + T(agg.unite) +
               " · " + agg.periode +
               (agg.couverture ? " · " + agg.couverture : "");
     /* Le gris des communes sans valeur ne se distingue pas d'un minimum pâle
@@ -510,6 +649,7 @@
       leg += ' · <b class="k-manque">' + nonDoc + " commune(s) en gris : non documenté, jamais zéro</b>";
     }
     dessiner(svg + nomsDepartements(), leg, couche);
+    lectureGuidee(couche, agg, nonDoc);
   }
 
   function rendreIPC(couche, rows) {
@@ -690,8 +830,8 @@
       '<svg viewBox="0 0 ' + L + " " + H + '" role="img" preserveAspectRatio="xMidYMid meet">' +
       svgCorps + "</svg>";
     $("#k-legende").innerHTML = legende;
-    $("#k-source").textContent = "Source : " + meta.source;
-    $("#k-limite").textContent = "Limite : " + meta.limite;
+    $("#k-source").textContent = T("Source") + " : " + meta.source;
+    $("#k-limite").textContent = T("Limite") + " : " + T(meta.limite);
     couverture();
   }
 
@@ -829,12 +969,13 @@
       }
       GROUPES.forEach(function (g) {
         var og = document.createElement("optgroup");
-        og.label = g[0];
+        og.label = T(g[0]);
+        og.dataset.fr = g[0];
         g[1].forEach(function (id) {
           var c = COUCHES.filter(function (x) { return x.id === id; })[0];
           if (!c) return;
           var o = document.createElement("option");
-          o.value = c.id; o.textContent = c.nom;
+          o.value = c.id; o.textContent = T(c.nom);
           og.appendChild(o);
         });
         sel.appendChild(og);

@@ -1286,7 +1286,11 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
    place ; là où la place existe, il ne fait qu'ajouter un clic entre le
    lecteur et la donnée. Les titres restent, l'ancre du sommaire aussi. */
 @media (min-width: 861px) {
-  .x-cat-d > .x-cat-c { display: block !important; }
+  /* Plus de `display: block` ici : les navigateurs récents masquent le
+     contenu d'un <details> fermé par un mécanisme interne que cette règle ne
+     surchargeait pas. La section « Sources » portait ainsi 9 010 caractères
+     de HTML correct et n'affichait rien. C'est `replier()` qui pose l'état,
+     par l'attribut `open` — la seule chose que le navigateur écoute. */
   .x-cat-t { cursor: default; }
   .x-cat-t::before { content: ""; }
 }
@@ -1317,6 +1321,7 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
 /* À L'IMPRESSION, TOUT EST DÉPLIÉ. Un rapport où la moitié des sections
    manque parce qu'elles étaient repliées à l'écran serait un piège. */
 @media print {
-  .x-cat-d > .x-cat-c { display: block !important; }
+  /* Même remarque : on ne force plus l'affichage par CSS. `imprimer()` ouvre
+     les sections avant l'impression, ce qui fonctionne réellement. */
   .x-sommaire, .x-options, .x-cat-t::before { display: none !important; }
 }

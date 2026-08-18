@@ -175,6 +175,14 @@
    `orig` ne connaît pas ces éléments : on prend donc leur contenu écrit en
    dur comme repli, ce qui est exactement le français d'origine. */
   window.ATM_I18N = window.ATM_I18N || {};
+  /* Traduire une CHAÎNE construite en JavaScript. La clé est la phrase
+     française elle-même, comme dans le moteur : une chaîne sans traduction
+     s'affiche alors en français lisible, jamais en identifiant technique. */
+  window.ATM_I18N.texte = function (fr) {
+    if (langCourante === DEFAULT) return fr;
+    return dictCourant[fr] != null ? dictCourant[fr] : fr;
+  };
+
   window.ATM_I18N.traduire = function (racine) {
   racine = racine || document;
   if (langCourante === DEFAULT) return;

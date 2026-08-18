@@ -5,8 +5,8 @@
    Aucun compteur n'est écrit en dur : tout est compté depuis les fichiers. */
 /* SANS NUMÉRO DE VERSION, ET C'EST OBLIGATOIRE.
    Le navigateur identifie un module par son URL COMPLÈTE, requête comprise :
-   "./etat.js?v=33" et "./etat.js?v=33" sont deux modules distincts, chacun avec
-   son propre objet S. Les six sous-modules importent "./etat.js?v=33" ; tant que
+   "./etat.js?v=34" et "./etat.js?v=34" sont deux modules distincts, chacun avec
+   son propre objet S. Les six sous-modules importent "./etat.js?v=34" ; tant que
    cette ligne portait ?v=21, l'état était coupé en deux — le moteur
    remplissait S.terr et S.vals d'un côté, la fiche les lisait de l'autre et
    n'y trouvait rien. Symptôme observé en production le 17/08/2026 : toutes
@@ -14,7 +14,7 @@
    alors que les 4 200 valeurs étaient bel et bien chargées.
    Si etat.js doit un jour être versionné, il faut l'être dans les SEPT
    fichiers à la fois, et dans la liste CORE du service worker. */
-import { S } from "./etat.js?v=33";
+import { S } from "./etat.js?v=34";
 
 (async function () {
   "use strict";
@@ -876,6 +876,29 @@ import { S } from "./etat.js?v=33";
      la main serait fausse au premier ajout de fonction, et fausse en silence. */
   Object.assign(A, { $, ADMIN, CFG, DIR, DV, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, THEME, aggEntite, agreger, annoncer, charger, communesDe, couverture, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, lienParrainage, liste, nb, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, sansAccent, situation });
 
+  /* Un rapport où la moitié des sections manque parce qu'elles étaient
+     repliées à l'écran serait un piège : on ouvre tout avant de composer les
+     pages, et on rend ensuite au lecteur l'état qu'il avait choisi. */
+  window.addEventListener("beforeprint", function () {
+    document.querySelectorAll("#x-fiche .x-cat-d").forEach(function (d) {
+      if (!d.open) { d.dataset.replieAvant = "1"; d.open = true; }
+    });
+  });
+  window.addEventListener("afterprint", function () {
+    document.querySelectorAll('#x-fiche .x-cat-d[data-replie-avant="1"]').forEach(function (d) {
+      d.open = false;
+      delete d.dataset.replieAvant;
+    });
+  });
+
+  /* Le repli des catégories suit la largeur de l'écran : tourner un téléphone
+     ne doit pas laisser des sections repliées sur un écran devenu large. */
+  var minuteur;
+  window.addEventListener("resize", function () {
+    clearTimeout(minuteur);
+    minuteur = setTimeout(function () { if (A.replier) A.replier(); }, 200);
+  });
+
   /* Les modules, dans l'ordre de leurs dépendances : i18n est une feuille
      dont tout le monde dépend, et la fiche appelle la carte.
 
@@ -898,7 +921,7 @@ import { S } from "./etat.js?v=33";
      mais l'ordre de cette liste doit continuer de se lire comme l'ordre des
      dépendances. */
   for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison", "rapport"]) {
-    (await import("./explorateur-" + m + ".js?v=33")).default(A);
+    (await import("./explorateur-" + m + ".js?v=34")).default(A);
   }
 
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);

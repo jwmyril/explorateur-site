@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=33";
+import { S } from "./etat.js?v=34";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, sansAccent, situation, valeurBrute } = A;
@@ -2703,10 +2703,29 @@ export default function (A) {
        aria-expanded aurait perdu les trois.
        `open` sur écran large est posé par le CSS, pas par l'attribut : le
        pliage n'a de sens que là où la place manque. */
+    /* TOUJOURS `open` au rendu. Le repli est ensuite posé par `replier()`,
+       et seulement sur écran étroit : si ce script ne tournait pas, le
+       lecteur verrait tout — c'est la bonne façon d'échouer. */
     return '<section class="x-cat" id="' + cat.id + '">' +
-      "<details" + (cat.ouvert ? " open" : "") + ' class="x-cat-d">' +
+      '<details open class="x-cat-d"' +
+      (cat.ouvert ? ' data-toujours="1"' : "") + ">" +
       '<summary class="x-cat-t"><h2>' + T(cat.titre) + "</h2></summary>" +
       '<div class="x-cat-c">' + corps + "</div></details></section>";
+  }
+
+  /* Referme les sections secondaires sous 861 px, et les rouvre au-dessus.
+     Appelé après chaque rendu de fiche et à chaque redimensionnement : un
+     lecteur qui tourne son téléphone ne doit pas se retrouver avec des
+     sections repliées sur un écran devenu large. On ne touche jamais à une
+     section que le lecteur a ouverte lui-même — `data-touche` le mémorise. */
+  function replier() {
+    var etroit = window.matchMedia && window.matchMedia("(max-width: 860px)").matches;
+    var lus = document.querySelectorAll("#x-fiche .x-cat-d");
+    for (var i = 0; i < lus.length; i++) {
+      var d = lus[i];
+      if (d.dataset.touche === "1") continue;
+      d.open = !etroit || d.dataset.toujours === "1";
+    }
   }
 
   /* LE SOMMAIRE EST CONSTRUIT DES CATEGORIES REELLEMENT RENDUES.
@@ -2782,6 +2801,8 @@ export default function (A) {
     annoncer(T("Accueil de l'Explorateur. Recherchez un territoire."));
   }
 
+  var apresRendu = false;
+
   function fiche(id) {
     var r = parId[id];
     if (!r) return;
@@ -2804,6 +2825,7 @@ export default function (A) {
         return html;
       }).join("");
       h.push(sommaire(rendues), optionsAffichage(), corps);
+      apresRendu = true;
         } else if (r.niveau_admin === "0") {
       /* La fiche du pays : repères nationaux d'abord (ce qui n'existe qu'à ce
          niveau), puis le même agrégat que pour un département. Pas de bloc
@@ -2824,6 +2846,17 @@ export default function (A) {
     }
     $("#x-fiche").innerHTML = h.join("");
     $("#x-fiche").hidden = false;
+    if (apresRendu) {
+      replier();
+      /* Une section ouverte à la main ne doit plus être refermée par un
+         redimensionnement : c'est une décision du lecteur, pas un état par
+         défaut. */
+      $("#x-fiche").addEventListener("toggle", function (e) {
+        var d = e.target;
+        if (d && d.classList && d.classList.contains("x-cat-d")) d.dataset.touche = "1";
+      }, true);
+      apresRendu = false;
+    }
     observerPyramide(r);
     aLApproche("#x-prix", remplirPrix, r);
     aLApproche("#x-nat", remplirNat, r);
@@ -2888,5 +2921,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, accueil, exemplesValides, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocPop3, chargerPop3, remplirPop3, htmlPop3, blocAcces, chargerAcces, remplirAcces, htmlAcces, blocEcolesdec, chargerEcolesdec, remplirEcolesdec, htmlEcolesdec, blocSantedec, chargerSantedec, remplirSantedec, htmlSantedec, blocCredits, chargerCredits, remplirCredits, htmlCredits, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, accueil, exemplesValides, replier, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocPop3, chargerPop3, remplirPop3, htmlPop3, blocAcces, chargerAcces, remplirAcces, htmlAcces, blocEcolesdec, chargerEcolesdec, remplirEcolesdec, htmlEcolesdec, blocSantedec, chargerSantedec, remplirSantedec, htmlSantedec, blocCredits, chargerCredits, remplirCredits, htmlCredits, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

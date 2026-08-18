@@ -1325,3 +1325,38 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
      les sections avant l'impression, ce qui fonctionne réellement. */
   .x-sommaire, .x-options, .x-cat-t::before { display: none !important; }
 }
+
+/* ================================================== ASSISTANT INTERNE
+   Replié par défaut, contrairement à la lecture guidée : celle-ci répond à
+   « qu'est-ce que je regarde » et doit être lue sans être demandée ; celui-ci
+   répond à « et moi, ce que je cherche » — une démarche volontaire. */
+.as-boite { margin: 1.2rem 0; border: 1px solid var(--border);
+            border-radius: 10px; background: var(--surface); }
+.as-t { cursor: pointer; padding: 0.8rem 1rem; font-weight: 600; color: var(--ink);
+        min-height: 44px; display: flex; align-items: center; }
+.as-c { padding: 0 1rem 1rem; }
+.as-avis { font-size: 0.84rem; color: var(--ink-dim); line-height: 1.6;
+           border-left: 3px solid var(--border-fort); padding-left: 0.7rem;
+           margin: 0 0 0.8rem; }
+.as-fil { max-height: 22rem; overflow-y: auto; margin-bottom: 0.7rem; }
+.as-fil:empty { display: none; }
+.as-m { padding: 0.6rem 0.8rem; border-radius: 10px; margin-bottom: 0.5rem;
+        font-size: 0.93rem; line-height: 1.6; max-width: 92%; }
+.as-q { background: var(--surface-2); margin-left: auto; color: var(--ink); }
+.as-r { background: transparent; border: 1px solid var(--border); color: var(--ink); }
+/* Un refus n'est pas une panne : il porte la couleur de l'attention, jamais
+   celle de l'erreur — c'est la garantie qui fonctionne, pas le site qui casse. */
+.as-avert { border-left: 4px solid var(--attention); }
+.as-attente { color: var(--ink-dim); font-style: italic; }
+.as-saisie { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.as-saisie input { flex: 1 1 12rem; min-height: 44px; padding: 0.5rem 0.7rem;
+                   font: inherit; font-size: 0.93rem; color: var(--ink);
+                   background: var(--surface); border: 1px solid var(--border-fort);
+                   border-radius: 8px; }
+.as-saisie .btn { min-height: 44px; }
+.as-sug { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.7rem; }
+.as-sq { font: inherit; font-size: 0.84rem; padding: 0.4rem 0.7rem; min-height: 36px;
+         border: 1px solid var(--border); border-radius: 999px; cursor: pointer;
+         background: var(--surface-2); color: var(--ink-dim); text-align: left; }
+.as-sq:hover { border-color: var(--accent); color: var(--ink); }
+@media print { .as-boite { display: none !important; } }

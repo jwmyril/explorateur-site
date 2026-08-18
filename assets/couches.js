@@ -650,7 +650,54 @@
     }
     dessiner(svg + nomsDepartements(), leg, couche);
     lectureGuidee(couche, agg, nonDoc);
+    memoriserFaits(couche, agg, nonDoc);
   }
+
+  /* Ce que l'assistant a le droit de savoir sur cette page : la couche
+     affichée, sa source, sa limite, et TOUTES ses valeurs commune par
+     commune. Rien d'autre — ni les autres couches, ni le reste du site.
+
+     Les valeurs sont données en entier plutôt qu'en extrait : 140 lignes
+     tiennent largement dans le contexte, et un extrait obligerait à choisir
+     d'avance quelles communes méritent une réponse. */
+  var derniereCarte = null;
+
+  function memoriserFaits(couche, agg, nonDoc) {
+    var vals = agg.valeurs, codes = Object.keys(vals);
+    var paires = codes.map(function (p) { return [nomDe(p), vals[p]]; })
+                      .sort(function (a, b) { return b[1] - a[1]; });
+    var med = mediane(codes.map(function (p) { return vals[p]; }));
+    var l = [];
+    l.push("PAGE : cartes thématiques de l'Explorateur Haïti (140 communes).");
+    l.push("CARTE AFFICHÉE : " + couche.nom);
+    l.push("UNITÉ : " + (agg.unite || "—"));
+    l.push("PÉRIODE : " + (agg.periode || "—"));
+    l.push("SOURCE : " + (couche.source || "—"));
+    l.push("LIMITE DE CETTE CARTE : " + (couche.limite || "—"));
+    l.push("COUVERTURE : " + codes.length + " communes documentées sur 140 ; " +
+           nonDoc + " en gris, non documentées — une absence n'est jamais un zéro.");
+    if (med !== null) l.push("VALEUR MÉDIANE : " + (Math.round(med * 10) / 10));
+    if (paires.length) {
+      l.push("VALEUR LA PLUS HAUTE : " + paires[0][0] + " = " + (Math.round(paires[0][1] * 10) / 10));
+      l.push("VALEUR LA PLUS BASSE : " + paires[paires.length - 1][0] + " = " +
+             (Math.round(paires[paires.length - 1][1] * 10) / 10));
+    }
+    l.push("");
+    l.push("VALEURS PAR COMMUNE (nom = valeur) :");
+    paires.forEach(function (x) {
+      l.push(x[0] + " = " + (Math.round(x[1] * 10) / 10));
+    });
+    derniereCarte = l.join(String.fromCharCode(10));
+  }
+
+  /* Publié pour assistant.js, qui ne va jamais chercher les données lui-même :
+     une seule source de vérité par page. */
+  window.ATM_FAITS = function () { return derniereCarte || ""; };
+  window.ATM_FAITS_SUGGESTIONS = function () {
+    return ["Que montre cette carte, en clair ?",
+            "Quelles communes sont les plus concernées, et pourquoi ?",
+            "Qu'est-ce que cette carte ne permet PAS de conclure ?"];
+  };
 
   function rendreIPC(couche, rows) {
     /* L'analyse publiée ne contient pas toujours de période « current » —

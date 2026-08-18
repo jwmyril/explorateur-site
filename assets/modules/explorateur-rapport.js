@@ -44,7 +44,7 @@
    cela vient. La fiche à l'écran suit un autre ordre — celui de l'arrivée
    des couches dans le produit — qui n'a aucune raison d'être imposé au
    papier. */
-import { S } from "./etat.js?v=32";
+import { S } from "./etat.js?v=33";
 export default function (A) {
   /* Du noyau et d'i18n uniquement : ces deux-là sont chargés avant ce
      module. Tout ce qui vient de la fiche est appelé par `A.` au moment

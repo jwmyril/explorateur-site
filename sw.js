@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v84";
+const CACHE = "explorateur-v85";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -15,13 +15,13 @@ const DV = "?d=2026-08-17a";   // doit suivre le DV de assets/modules/explorateu
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=35", "/assets/data.css?v=37", "/assets/modules/explorateur.js?v=32",
-  "/assets/modules/etat.js?v=32",
-  "/assets/modules/explorateur-i18n.js?v=32",
-  "/assets/modules/explorateur-carte.js?v=32",
-  "/assets/modules/explorateur-fiche.js?v=32",
-  "/assets/modules/explorateur-recherche.js?v=32",
-  "/assets/modules/explorateur-comparaison.js?v=32",
+  "/assets/style.css?v=35", "/assets/data.css?v=38", "/assets/modules/explorateur.js?v=33",
+  "/assets/modules/etat.js?v=33",
+  "/assets/modules/explorateur-i18n.js?v=33",
+  "/assets/modules/explorateur-carte.js?v=33",
+  "/assets/modules/explorateur-fiche.js?v=33",
+  "/assets/modules/explorateur-recherche.js?v=33",
+  "/assets/modules/explorateur-comparaison.js?v=33",
   // Le rapport de territoire : sans lui au precache, le bouton « Rapport de
   // la commune » ne repondrait pas hors connexion, alors que les treize
   // couches qu'il assemble, elles, sont deja en cache.

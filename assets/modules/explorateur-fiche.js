@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=32";
+import { S } from "./etat.js?v=33";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, sansAccent, situation, valeurBrute } = A;
@@ -19,13 +19,13 @@ export default function (A) {
      La vue complète, elle, n'en a pas : elle montre tout, c'est son objet. */
   var OBJECTIFS = {
     tout: {
-      nom: T("Vue d'ensemble"), ordre: null,
+      nom: T("comprendre le territoire"), ordre: null,
       cles: ["IND-POP-001", "IND-GEO-001", "IND-POP-002", "IND-POP-010",
              "IND-GEO-002", "IND-EDU-001", "IND-SAN-001", "IND-MAR-001"],
       lecture: T("Les huit repères que l'on regarde en premier, quel que soit l'usage.")
     },
     planifier: {
-      nom: T("Planifier les services publics"),
+      nom: T("planifier des services publics"),
       ordre: ["Territoire", "Santé", "Éducation", "Marchés", "Qualité"],
       cles: ["IND-POP-001", "IND-POP-002", "IND-POP-007", "IND-POP-012",
              "IND-GEO-002", "IND-EDU-001", "IND-SAN-001"],
@@ -41,7 +41,7 @@ export default function (A) {
                 ["Licence institutionnelle", "donnees-solutions.html#licences"]]
     },
     projet: {
-      nom: T("Préparer un projet ou une intervention"),
+      nom: T("préparer un projet"),
       ordre: ["Santé", "Éducation", "Marchés", "Territoire", "Qualité"],
       cles: ["IND-POP-001", "IND-POP-003", "IND-POP-011", "IND-SAN-001",
              "IND-EDU-001", "IND-MAR-001", "IND-QUA-001"],
@@ -55,7 +55,7 @@ export default function (A) {
                 [T("Packs décisionnels"), "donnees-solutions.html#packs"]]
     },
     recherche: {
-      nom: T("Réaliser une recherche"),
+      nom: T("réaliser une recherche"),
       ordre: ["Qualité", "Territoire", "Santé", "Éducation", "Marchés"],
       cles: ["IND-QUA-001", "IND-POP-001", "IND-POP-012", "IND-POP-013",
              "IND-GEO-001", "IND-GEO-003", "IND-SAN-003"],
@@ -69,7 +69,7 @@ export default function (A) {
                 [T("Registre des sources"), "data/atmart_registre_sources.csv"]]
     },
     implantation: {
-      nom: T("Étudier une implantation économique"),
+      nom: T("étudier une implantation économique"),
       ordre: ["Marchés", "Territoire", "Santé", "Éducation", "Qualité"],
       cles: ["IND-POP-001", "IND-POP-002", "IND-POP-004", "IND-MAR-001",
              "IND-GEO-001", "IND-GEO-004"],
@@ -2613,20 +2613,129 @@ export default function (A) {
      Aucune donnée n'est cachée : ce qui n'est pas affiché est à un clic, et
      le sélecteur DIT ce que la longueur active montre. Masquer sans le dire
      serait une autre façon de mentir sur ce que le site sait. */
+  /* Les sept catégories du 17/08/2026. L'ordre est celui des questions d'un
+     lecteur, jamais celui de l'arrivée des couches dans le produit.
+     `id`      : ancre de la navigation « Sur cette page »
+     `titre`   : ce qui s'affiche, et ce qui se lit dans le sommaire
+     `ouvert`  : reste déplié sur téléphone — le résumé et les alertes
+     `blocs`   : [nom de la fonction, clé de `montrer`] */
+  var CATEGORIES = [
+    { id: "cat-resume", titre: "Résumé", ouvert: true,
+      blocs: [["blocObjectif", "objectif"]] },
+    { id: "cat-population", titre: "Population et territoire", ouvert: true,
+      blocs: [["blocCarte", "carte"], ["blocIndicateurs", null],
+              ["blocPop3", "services"], ["blocPopMod", "services"],
+              ["blocPyramide", "pyramide"]] },
+    { id: "cat-services", titre: "Services essentiels",
+      blocs: [["blocAcces", "services"], ["blocSantedec", "services"],
+              ["blocEquipements", "services"], ["blocEcolesdec", "services"],
+              ["blocServices", "services"], ["blocOrganisations", "organisations"]] },
+    { id: "cat-risques", titre: "Risques et climat",
+      blocs: [["blocSeismes", "services"], ["blocCyclones", "services"],
+              ["blocPluie", "services"], ["blocEau", "services"],
+              ["blocBassins", "services"]] },
+    { id: "cat-milieu", titre: "Agriculture, environnement et énergie",
+      blocs: [["blocSol", "services"], ["blocSols", "services"],
+              ["blocSolaire", "services"], ["blocUrbanisation", "services"],
+              ["blocBatiments", "services"]] },
+    { id: "cat-activite", titre: "Activité, projets et accessibilité",
+      blocs: [["blocProjets", "services"], ["blocCredits", null],
+              ["blocPrix", "prix"], ["blocComparer", "comparer"],
+              ["blocEnfants", "enfants"]] },
+    { id: "cat-sources", titre: "Sources, méthodes et limites",
+      blocs: [["blocLacunes", "lacunes"], ["blocVerrou", "verrou"],
+              ["blocTechnique", "technique"]] }
+  ];
+
   var VUES = {
-    court: { l: "Court", b: { resume: 1, indicateurs: 1, lacunes: 1 },
-             d: "l'essentiel : les chiffres et ce qui manque" },
-    moyen: { l: "Moyen", b: { resume: 1, carte: 1, objectif: 1, indicateurs: 1,
-                              services: 1, comparer: 1, lacunes: 1, enfants: 1 },
-             d: "avec la carte, les services et la comparaison" },
+    court: { l: "Court",
+             b: { resume: 1, carte: 1, objectif: 1, indicateurs: 1,
+                  services: 1, comparer: 1, lacunes: 1 },
+             d: "les sept sections, repliées : on déplie ce qu'on cherche" },
+    moyen: { l: "Moyen",
+             b: { resume: 1, carte: 1, objectif: 1, indicateurs: 1, services: 1,
+                  comparer: 1, lacunes: 1, enfants: 1, organisations: 1,
+                  pyramide: 1 },
+             d: "avec la pyramide des âges et les organisations présentes" },
     complet: { l: "Complet", b: null,
-               d: "tout, y compris pyramide, prix et informations techniques" }
+               d: "tout, y compris la série de prix et les informations techniques" }
   };
+
+  /* Le registre des constructeurs. Les déclarations de fonction sont
+     remontées, donc toutes existent ici quel que soit leur ordre dans le
+     fichier — et un nom faux devient une erreur visible au chargement. */
+  var BLOCS = {
+    blocObjectif: blocObjectif, blocCarte: blocCarte, blocIndicateurs: blocIndicateurs,
+    blocPop3: blocPop3, blocPopMod: blocPopMod, blocPyramide: blocPyramide,
+    blocAcces: blocAcces, blocSantedec: blocSantedec, blocEquipements: blocEquipements,
+    blocEcolesdec: blocEcolesdec, blocServices: blocServices,
+    blocOrganisations: blocOrganisations, blocSeismes: blocSeismes,
+    blocCyclones: blocCyclones, blocPluie: blocPluie, blocEau: blocEau,
+    blocBassins: blocBassins, blocSol: blocSol, blocSols: blocSols,
+    blocSolaire: blocSolaire, blocUrbanisation: blocUrbanisation,
+    blocBatiments: blocBatiments, blocProjets: blocProjets, blocCredits: blocCredits,
+    blocPrix: blocPrix, blocComparer: blocComparer, blocEnfants: blocEnfants,
+    blocLacunes: blocLacunes, blocVerrou: blocVerrou, blocTechnique: blocTechnique
+  };
+
+  /* Une catégorie ne s'affiche que si elle a QUELQUE CHOSE à montrer.
+     Un titre suivi du vide se lit comme une panne, et sur une fiche dont la
+     moitié des couches manque selon les communes, cela arriverait souvent. */
+  function rendreCategorie(cat, r) {
+    var corps = cat.blocs.map(function (b) {
+      var f = BLOCS[b[0]];
+      if (!f) return "";
+      if (b[1] && !montrer(b[1])) return "";
+      /* Un bloc qui échoue ne doit pas emporter la fiche entière : les
+         couches sont nombreuses et une seule donnée mal formée ne vaut pas
+         une page blanche. L'erreur est tracée, la fiche continue. */
+      try { return f(r) || ""; }
+      catch (e) {
+        if (window.console) console.error("bloc « " + b[0] + " » : ", e);
+        return "";
+      }
+    }).filter(Boolean).join("");
+    if (!corps.replace(/\s/g, "")) return "";
+
+    /* <details> plutôt qu'un pliage maison : le navigateur lui donne
+       gratuitement le clavier, le rôle d'accessibilité, et la recherche
+       dans la page qui déplie ce qu'elle trouve. Une réécriture en <div> et
+       aria-expanded aurait perdu les trois.
+       `open` sur écran large est posé par le CSS, pas par l'attribut : le
+       pliage n'a de sens que là où la place manque. */
+    return '<section class="x-cat" id="' + cat.id + '">' +
+      "<details" + (cat.ouvert ? " open" : "") + ' class="x-cat-d">' +
+      '<summary class="x-cat-t"><h2>' + T(cat.titre) + "</h2></summary>" +
+      '<div class="x-cat-c">' + corps + "</div></details></section>";
+  }
+
+  /* LE SOMMAIRE EST CONSTRUIT DES CATEGORIES REELLEMENT RENDUES.
+     Une entrée qui mène à une ancre absente est pire qu'une entrée manquante :
+     le lecteur clique, rien ne bouge, et il conclut que la page est cassée. */
+  function sommaire(rendues) {
+    if (rendues.length < 2) return "";
+    return '<nav class="x-sommaire" aria-label="' + esc(T("Sur cette page")) + '">' +
+      '<p class="x-sommaire-t">' + T("Sur cette page") + "</p><ul>" +
+      rendues.map(function (cat) {
+        return '<li><a href="#' + cat.id + '">' + T(cat.titre) + "</a></li>";
+      }).join("") + "</ul></nav>";
+  }
+
+  /* Les réglages d'affichage quittent le haut de la fiche pour un repli.
+     Ils servent une fois, au mieux : les laisser au-dessus du premier chiffre
+     faisait payer à chaque lecteur une décision que presque personne ne prend. */
+  function optionsAffichage() {
+    return '<details class="x-options"><summary>' + T("Options d'affichage") +
+      "</summary><div>" + selecteurVue() + "</div></details>";
+  }
 
   function vueCourante() {
     var v = S.vue;
     if (!v) { try { v = localStorage.getItem("atmart_vue"); } catch (e) {} }
-    return VUES[v] ? v : "moyen";
+    /* « Court » par défaut depuis le 17/08 : sept sections repliées valent
+       mieux que trente blocs déroulés, et rien n'est perdu — tout est à un
+       clic, dans une section qui porte son nom. */
+    return VUES[v] ? v : "court";
   }
 
   function montrer(bloc) {
@@ -2680,44 +2789,39 @@ export default function (A) {
     document.body.classList.remove("x-etat-accueil");
     /* Ce que le lecteur a réellement ouvert, pour le lui proposer au retour. */
     try { localStorage.setItem("atmart_dernier", r.atmart_geo_id); } catch (e) {}
-    var h = [blocResume(r), selecteurVue()];
-    if (montrer("carte")) h.push(blocCarte(r));
+    var h = [blocResume(r)];
     if (r.niveau_admin === "3") {
-      h.push(montrer("objectif") ? blocObjectif(r) : "", blocIndicateurs(r),
-             montrer("pyramide") ? blocPyramide(r) : "",
-             montrer("prix") ? blocPrix(r) : "",
-             montrer("services") ? blocServices(r) : "",
-             montrer("services") ? blocSeismes(r) : "",
-             montrer("services") ? blocPluie(r) : "",
-             montrer("services") ? blocSol(r) : "",
-             montrer("services") ? blocPopMod(r) : "",
-             montrer("services") ? blocSantedec(r) : "",
-             blocCredits(r),
-             montrer("services") ? blocEcolesdec(r) : "",
-             montrer("services") ? blocAcces(r) : "",
-             montrer("services") ? blocPop3(r) : "",
-             montrer("services") ? blocEquipements(r) : "",
-             montrer("services") ? blocBassins(r) : "",
-             montrer("services") ? blocProjets(r) : "",
-             montrer("services") ? blocUrbanisation(r) : "",
-             montrer("services") ? blocBatiments(r) : "",
-             montrer("services") ? blocSolaire(r) : "",
-             montrer("services") ? blocEau(r) : "",
-             montrer("services") ? blocCyclones(r) : "",
-             montrer("services") ? blocSols(r) : "",
-             montrer("comparer") ? blocComparer(r) : "",
-             montrer("lacunes") ? blocLacunes(r) : "");
-    } else if (r.niveau_admin === "0") {
+      /* LA FICHE COMMUNALE PASSE PAR LES SEPT CATÉGORIES.
+         Trente blocs à la file, c'était l'ordre de notre chantier imposé au
+         lecteur ; sur téléphone, plusieurs mètres de défilement sans un seul
+         repère. Les catégories vides disparaissent, le sommaire ne liste que
+         ce qui existe, et les réglages d'affichage descendent dans un repli
+         au lieu de s'interposer avant le premier chiffre. */
+      var rendues = [];
+      var corps = CATEGORIES.map(function (cat) {
+        var html = rendreCategorie(cat, r);
+        if (html) rendues.push(cat);
+        return html;
+      }).join("");
+      h.push(sommaire(rendues), optionsAffichage(), corps);
+        } else if (r.niveau_admin === "0") {
       /* La fiche du pays : repères nationaux d'abord (ce qui n'existe qu'à ce
          niveau), puis le même agrégat que pour un département. Pas de bloc
          technique : l'entité est synthétique, ses métadonnées sont celles de
          ses sources, affichées repère par repère. */
       h.push(blocNat(), agregat(r), blocPyramide(r));
     } else h.push(agregat(r), blocCredits(r), blocPyramide(r));   /* le budget est voté À CE NIVEAU */
-    if (r.niveau_admin !== "0" && montrer("organisations")) h.push(blocOrganisations(r));
-    if (montrer("enfants")) h.push(blocEnfants(r));
-    if (montrer("verrou")) h.push(blocVerrou(r));
-    if (r.niveau_admin !== "0" && montrer("technique")) h.push(blocTechnique(r));
+    /* Ces quatre-là sont DÉJÀ posés par les catégories sur une commune : on
+       ne les ajoute qu'aux autres niveaux, sans quoi ils paraîtraient deux
+       fois — et deux fois le même bloc, c'est deux fois la même source
+       citée, ce qui fait douter des deux. */
+    if (r.niveau_admin !== "3") {
+      if (r.niveau_admin !== "0" && montrer("organisations")) h.push(blocOrganisations(r));
+      if (montrer("enfants")) h.push(blocEnfants(r));
+      if (montrer("verrou")) h.push(blocVerrou(r));
+      if (r.niveau_admin !== "0" && montrer("technique")) h.push(blocTechnique(r));
+      h.push(selecteurVue());
+    }
     $("#x-fiche").innerHTML = h.join("");
     $("#x-fiche").hidden = false;
     observerPyramide(r);

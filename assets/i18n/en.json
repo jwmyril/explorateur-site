@@ -1236,7 +1236,7 @@
  "xp.mil_p5": "We do not pick a number in silence: the explorer counts what the reference set it loads actually contains, and names it. Communes created after 2018 will be added with their validity dates as soon as an official reference set publishes them with their codes, without rewriting history. <a href=\"donnees-backbone.html#territoire\">How the territory reference set is built →</a>",
  "xp.mil_sum": "Why does the number of communes vary from one source to another&nbsp;?",
  "xp.niv_label": "Rank the",
- "xp.obj_label": "Adapt this profile to my use",
+ "xp.obj_label": "Show first the information useful for…",
  "xp.ong_aria": "Explorer views",
  "xp.ong_class_c": "Ranking",
  "xp.ong_class_l": "Ranking of communes",

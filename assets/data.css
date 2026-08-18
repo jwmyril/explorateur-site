@@ -1263,3 +1263,60 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
   }
   .nav { padding-left: 0.9rem; padding-right: 0.9rem; }
 }
+
+/* ================================================ LES SEPT CATÉGORIES
+   La fiche communale, 17/08/2026. */
+.x-cat { margin: 1.6rem 0; border-top: 1px solid var(--border); }
+.x-cat-t { list-style: none; cursor: pointer; padding: 0.9rem 0 0.5rem;
+           display: flex; align-items: center; gap: 0.5rem; min-height: 44px; }
+.x-cat-t::-webkit-details-marker { display: none; }
+.x-cat-t h2 { font-size: 1.12rem; margin: 0; color: var(--ink);
+              font-family: var(--font-head, inherit); }
+/* Le chevron dit l'état SANS la couleur : une flèche qui tourne se lit en
+   noir et blanc et par un lecteur daltonien. */
+.x-cat-t::before {
+  content: "▸"; color: var(--ink-dim); font-size: 0.9rem;
+  transition: transform .15s ease; flex-shrink: 0;
+}
+.x-cat-d[open] > .x-cat-t::before { transform: rotate(90deg); }
+.x-cat-t:hover h2 { color: var(--accent); }
+.x-cat-c { padding-bottom: 0.4rem; }
+
+/* AU-DESSUS DE 860 px, RIEN N'EST REPLIÉ. Le pliage résout un problème de
+   place ; là où la place existe, il ne fait qu'ajouter un clic entre le
+   lecteur et la donnée. Les titres restent, l'ancre du sommaire aussi. */
+@media (min-width: 861px) {
+  .x-cat-d > .x-cat-c { display: block !important; }
+  .x-cat-t { cursor: default; }
+  .x-cat-t::before { content: ""; }
+}
+
+/* ---------------------------------------------------------- le sommaire
+   Il ne liste que les sections réellement rendues — une ancre morte ferait
+   croire à une page cassée. */
+.x-sommaire { margin: 1rem 0 1.2rem; padding: 0.8rem 1rem;
+              background: var(--surface-2); border-radius: 10px;
+              border: 1px solid var(--border); }
+.x-sommaire-t { font-size: 0.78rem; letter-spacing: 0.05em; font-weight: 600;
+                text-transform: uppercase; color: var(--ink-dim); margin: 0 0 0.5rem; }
+.x-sommaire ul { list-style: none; margin: 0; padding: 0;
+                 display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; }
+.x-sommaire a { font-size: 0.9rem; color: var(--accent);
+                display: inline-flex; align-items: center; min-height: 32px; }
+.x-sommaire a:hover { color: var(--accent-fort); text-decoration: underline; }
+/* L'ancre ne doit pas glisser sous l'en-tête collant. */
+.x-cat { scroll-margin-top: 5rem; }
+
+/* ------------------------------------------------- options d'affichage */
+.x-options { margin: 0 0 1rem; font-size: 0.9rem; }
+.x-options > summary { cursor: pointer; color: var(--ink-dim);
+                       min-height: 44px; display: flex; align-items: center; }
+.x-options > summary:hover { color: var(--ink); }
+.x-options > div { padding: 0.6rem 0; }
+
+/* À L'IMPRESSION, TOUT EST DÉPLIÉ. Un rapport où la moitié des sections
+   manque parce qu'elles étaient repliées à l'écran serait un piège. */
+@media print {
+  .x-cat-d > .x-cat-c { display: block !important; }
+  .x-sommaire, .x-options, .x-cat-t::before { display: none !important; }
+}

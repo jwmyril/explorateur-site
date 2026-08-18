@@ -218,6 +218,60 @@
       limite: "Quatre millésimes du MÊME instrument, donc comparables entre eux — ce qui est rare et ce qui fait la valeur de cette couche. Une croissance forte en pourcentage part souvent d'une base minuscule : lire avec la part bâtie en 2020, dans le produit détaillé." }
   ];
 
+  /* ------------------------------------------------ ajoutées le 17/08/2026
+     Neuf sources produites, publiées, et qu'aucune carte ne lisait — dont la
+     santé déclarée au MSPP, qui couvre 139 communes quand la couche OCHA du
+     socle n'en couvre que 14. Un lecteur tombé sur la seconde en concluait
+     que le site n'était pas à jour. Règle posée ce jour : toute source captée
+     et produite devient une carte quand la donnée est communale. */
+  var COUCHES_17 = [
+    { id: "sante_declaree", nom: "Établissements de santé déclarés (MSPP)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "sante_declaree",
+      unite: "établissements déclarés", periode: "registre MSPP 2024",
+      source: "MSPP — registre des institutions sanitaires (décret du 12/10/2005, art. 5)",
+      limite: "DÉCLARÉ au ministère, pas constaté sur le terrain : une institution fermée mais non radiée y figure encore. À lire avec la couche « santé vue sur OpenStreetMap », qui a le défaut inverse." },
+    { id: "sante_publique", nom: "Dont établissements publics (MSPP)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "sante_publique_declaree",
+      unite: "établissements publics déclarés", periode: "registre MSPP 2024",
+      source: "MSPP — registre des institutions sanitaires",
+      limite: "Le secteur vient du registre. Une commune à zéro établissement PUBLIC peut compter des institutions privées ou mixtes : c'est une observation, pas une absence de soins." },
+    { id: "sante_vue", nom: "Établissements de santé cartographiés (OSM)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "sante_vue_osm",
+      unite: "établissements cartographiés", periode: "extrait HOT du 06/08/2026",
+      source: "OpenStreetMap via HOT — ODbL 1.0 (passeport PSP-024)",
+      limite: "OpenStreetMap est CONTRIBUTIF : sa couverture suit les cartographes, pas le terrain. Une commune peu cartographiée paraît sous-équipée — c'est un défaut de la carte, pas du territoire." },
+    { id: "seismes", nom: "Séismes ressentis à moins de 100 km depuis 1911", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "seismes_100km",
+      unite: "séismes depuis 1911", periode: "USGS ComCat, 1911-2026",
+      source: "USGS ComCat — domaine public (passeport PSP-029)",
+      limite: "Un COMPTAGE, pas un aléa : dix secousses faibles ne valent pas une forte. La magnitude maximale est dans le produit détaillé, et la détection s'améliore avec le temps — les décennies récentes comptent plus d'événements parce qu'on mesure mieux." },
+    { id: "cyclones", nom: "Cyclones passés à moins de 100 km depuis 1851", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "cyclones_100km",
+      unite: "systèmes depuis 1851", periode: "NOAA IBTrACS, 1851-2026",
+      source: "NOAA NCEI IBTrACS v04r01 — accès ouvert (passeport PSP-028)",
+      limite: "PASSÉS À PROXIMITÉ, ce qui ne dit rien des dégâts : un système intense qui longe la côte peut épargner l'intérieur. Avant l'ère satellitaire, beaucoup de trajectoires sont reconstituées." },
+    { id: "pluie", nom: "Pluie annuelle normale (1991-2020)", type: "choroplethe", rampe: "vegetal",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "pluie_normale_mm",
+      unite: "mm par an", periode: "normale CHIRPS 1991-2020",
+      source: "CHIRPS 2.0, Climate Hazards Center — domaine public (passeport PSP-030)",
+      limite: "Une NORMALE sur trente ans, donc ni l'année en cours ni la saisonnalité. Beaucoup de pluie ne veut pas dire assez d'eau : la répartition dans l'année et la capacité de stockage décident, pas le total." },
+    { id: "eau_surface", nom: "Eau de surface permanente", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "eau_permanente_km2",
+      unite: "km² d'eau permanente", periode: "JRC 1984-2021",
+      source: "JRC Global Surface Water v1.4, Copernicus (passeport PSP-038)",
+      limite: "Eau VISIBLE DU CIEL : lacs, étangs, larges rivières. Ni les nappes, ni les sources, ni les petits cours d'eau sous couvert. Zéro n'est pas une commune sans eau." },
+    { id: "batiments", nom: "Bâtiments détectés (Open Buildings)", type: "choroplethe", rampe: "urbain",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "batiments_nb",
+      unite: "empreintes détectées", periode: "Open Buildings V3",
+      source: "Google Open Buildings V3 — CC BY 4.0",
+      limite: "Détections d'un modèle au seuil de confiance 0,75, qui retient 57 % des empreintes ; à 0,90 il n'en resterait que 1,6 %. Le même pays, quinze fois moins bâti — le seuil est un choix, publié dans le produit." },
+    { id: "cyclone_vent", nom: "Vent maximal d'un cyclone passé à proximité", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "cyclone_vent_max_kmh",
+      unite: "km/h au plus fort", periode: "NOAA IBTrACS, 1851-2026",
+      source: "NOAA NCEI IBTrACS v04r01 — accès ouvert",
+      limite: "Le vent MESURÉ AU CENTRE du système, pas au sol dans la commune : le relief, la distance et la durée changent tout. Un maximum historique ne prédit pas la prochaine saison." }
+  ];
+
   /* Couches ANNONCÉES mais pas encore construites : jamais dans le
      sélecteur actif — une section grisée les liste, avec le parrainage
      comme chemin. Le registre des sources dit pourquoi chacune attend. */
@@ -226,6 +280,66 @@
     { slug: "sismique", nom: "Aléa sismique probabiliste (USGS)" },
     { slug: "hydro", nom: "Réseau hydrographique et sous-bassins" }
   ];
+  COUCHES_17.push(
+    { id: "acces_ecole", nom: "Temps d'accès à une école (calcul Atmart)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "ecole_min",
+      unite: "minutes de route (médiane des habitants)",
+      periode: "réseau OSM du 06/08/2026 — calcul Atmart",
+      source: "OpenStreetMap via HOT — ODbL 1.0 ; calcul Dijkstra chez Atmart",
+      limite: "Temps en CONDITIONS NORMALES : ni l'état de la chaussée, ni la saison des pluies, ni les barrages n'entrent dans le calcul. Un plancher optimiste, jamais une prévision de trajet — et une école cartographiée n'est pas une école ouverte." },
+    { id: "acces_marche", nom: "Temps d'accès à un marché (calcul Atmart)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "marche_min",
+      unite: "minutes de route (médiane des habitants)",
+      periode: "marchés PAM via OCHA, relevé du 13/08/2026",
+      source: "PAM via OCHA HDX (marchés) ; OpenStreetMap via HOT (routes) — calcul Atmart",
+      limite: "Seuls les marchés SUIVIS par le PAM sont pris en compte : un marché local non suivi n'entre pas dans le calcul, et la commune paraît plus éloignée qu'elle ne l'est." },
+    { id: "ecoles_nb", nom: "Écoles déclarées au ministère (MENFP)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "ecoles_declarees",
+      unite: "écoles déclarées", periode: "registres MENFP 2024-2025",
+      source: "MENFP/DPCE — registres 2024-2025 (décret du 12/10/2005, art. 5)",
+      limite: "DÉCLARÉ au ministère : une école fermée mais non radiée y figure encore, une école jamais recensée n'y figure pas. 643 lignes matériellement répétées dans les PDF ont été écartées ; le comptage porte sur des codes CIE distincts." },
+    { id: "ecoles_vues_nb", nom: "Écoles cartographiées (OSM)", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "ecoles_vues",
+      unite: "écoles cartographiées", periode: "extrait HOT du 06/08/2026",
+      source: "OpenStreetMap via HOT — ODbL 1.0 (passeport PSP-024)",
+      limite: "Contributif : la couverture suit les cartographes, pas le terrain. À l'échelle du pays, la carte ne montre que 41 % des écoles déclarées — l'écart mesure l'état de la cartographie, pas le nombre d'écoles." },
+    { id: "cultures", nom: "Part du territoire en cultures (WorldCover 2021)", type: "choroplethe", rampe: "vegetal",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "part_cultures_pct",
+      unite: "% de la surface communale", periode: "ESA WorldCover v200, 2021",
+      source: "ESA WorldCover 2021 à 10 m — CC BY 4.0 (passeport PSP-026)",
+      limite: "Classification satellite : « cultures » désigne un couvert détecté, pas une exploitation active ni un rendement. Une jachère et un champ productif s'y ressemblent." },
+    { id: "part_bati", nom: "Part du territoire bâti en 2020 (GHSL)", type: "choroplethe", rampe: "urbain",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "part_bati_2020_pct",
+      unite: "% de la surface communale", periode: "GHSL R2023A, millésime 2020",
+      source: "Global Human Settlement Layer R2023A, Commission européenne — CC BY 4.0",
+      limite: "Surface BÂTIE, pas population : une commune très bâtie peut être peu peuplée, et l'inverse. À lire avec la croissance du bâti, qui dit le mouvement plutôt que l'état." },
+    { id: "seisme_max", nom: "Séisme le plus fort ressenti à moins de 100 km", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "seisme_max_mag",
+      unite: "magnitude maximale", periode: "USGS ComCat, 1911-2026",
+      source: "USGS ComCat — domaine public (passeport PSP-029)",
+      limite: "La magnitude est celle du SÉISME, pas de sa secousse ici : la distance, la profondeur et le sol décident de ce qui a été ressenti. Un maximum historique ne prédit pas le prochain." });
+
+  /* Les neuf couches déclarées par colonne rejoignent les autres, chacune
+     dotée du même agrégateur : une seule boucle, donc un seul endroit où le
+     test « une cellule vide n'est pas un zéro » peut être juste ou faux. */
+  COUCHES_17.forEach(function (d) {
+    d.agreger = function (rows) {
+      var m = {};
+      rows.forEach(function (r) {
+        var v = r[d.colonne];
+        /* Vide = la source ne couvre pas cette commune. On la laisse hors de
+           la table : elle sera grise, tiretée, et comptée comme non
+           documentée. Un « 0 » écrit, lui, entre normalement — c'est une
+           observation. */
+        if (v === undefined || v === "") return;
+        var n = +String(v).replace(",", ".");
+        if (!isNaN(n)) m[r.pcode_commune] = Math.round(n * 10) / 10;
+      });
+      return { valeurs: m, periode: d.periode, unite: d.unite };
+    };
+    COUCHES.push(d);
+  });
+
   var COUCHE_DEFAUT = "conflits";
 
   /* Les aplats de la carte sont peints dans le SVG, pas en CSS : un
@@ -611,9 +725,14 @@
     /* Sous la moitié du pays, ce n'est plus une précision : c'est ce qu'il
        faut savoir avant de regarder la carte. */
     e.className = part < 50 ? "k-creuse" : "";
-    e.textContent = doc + " commune(s) documentée(s) sur " + tous.length +
-      " (" + part + " %). Les " + gris + " communes en gris ne sont pas " +
-      "des communes à zéro : la source ne les couvre pas." +
+    /* L'accord se fait, y compris au singulier : « Les 1 communes en gris »
+       sur une carte qui se veut soignée décrédibilise tout ce qui l'entoure. */
+    var un = gris === 1;
+    e.textContent = doc + (doc > 1 ? " communes documentées" : " commune documentée") +
+      " sur " + tous.length + " (" + part + " %). " +
+      (un ? "La commune en gris n'est pas une commune à zéro : la source ne la couvre pas."
+          : "Les " + gris + " communes en gris ne sont pas des communes à zéro : " +
+            "la source ne les couvre pas.") +
       (part < 50 ? " Cette carte montre l'étendue d'une source, pas celle du phénomène."
                  : "");
   }
@@ -655,7 +774,9 @@
       departements = JSON.parse(t[1]);
       proj = projeter(communes.features);
       var sel = $("#k-choix");
-      var GROUPES = [["Aléas, eau et territoire", ["inondation", "inondable", "bassins", "sol"]],
+      var GROUPES = [["Aléas, eau et territoire",
+                      ["inondation", "inondable", "seismes", "seisme_max", "cyclones",
+                       "cyclone_vent", "pluie", "eau_surface", "bassins", "sol"]],
                      ["Conjoncturel", ["conflits", "deplaces", "ipc"]],
                      /* « telecom » compte les équipements cartographiés dans OSM ;
                         « Couverture mobile réelle » reste en préparation juste
@@ -663,6 +784,17 @@
                         ce qui est cartographié, l'autre dirait ce qui est
                         couvert. Les confondre serait la faute la plus facile
                         à commettre sur cette couche. */
+                     /* Le DÉCLARÉ et le VU, côte à côte et jamais séparés :
+                        deux comptages du même objet par deux méthodes qui ne
+                        peuvent pas se tromper de la même façon. Le registre
+                        garde une porte fermée mais non radiée ; la carte
+                        ignore ce qu'aucun contributeur n'a relevé. Les
+                        éloigner l'un de l'autre aurait laissé croire que
+                        l'un remplace l'autre. */
+                     ["Santé — déclaré au ministère et vu sur la carte",
+                      ["sante_declaree", "sante_publique", "sante_vue"]],
+                     ["Écoles — déclaré au ministère et vu sur la carte",
+                      ["ecoles_nb", "ecoles_vues_nb"]],
                      ["Services et infrastructures",
                       ["eau", "carburant", "finance", "telecom", "routes"]],
                      /* L'ACCÈS EN PREMIER DANS SON GROUPE. Compter les
@@ -673,7 +805,7 @@
                         manquent d'établissements, ce sont celles dont les
                         habitants vivent loin de ceux qui existent. */
                      ["Accès aux services — calcul Atmart",
-                      ["acces_sante", "acces_hopital"]],
+                      ["acces_sante", "acces_hopital", "acces_ecole", "acces_marche"]],
                      /* Deux cartes qui ne parlent pas du territoire mais de
                         ce qu'on SAIT de lui. Elles ont leur groupe parce que
                         les confondre avec les précédentes serait la faute
@@ -683,7 +815,8 @@
                      ["Ce que l'on sait — qualité de l'information",
                       ["ecoles_absentes", "pop_desaccord"]],
                      ["Observation satellite",
-                      ["couvert_arbre", "croissance_bati", "solaire"]]];
+                      ["couvert_arbre", "cultures", "part_bati", "croissance_bati",
+                       "batiments", "solaire"]]];
       /* Une couche déclarée mais absente des groupes serait chargeable et
          invisible — la panne la plus silencieuse possible sur cette page.
          Sept l'ont été le 17/08, le temps d'un aller-retour. */

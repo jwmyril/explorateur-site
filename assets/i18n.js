@@ -28,6 +28,10 @@
     document.querySelectorAll("[data-i18n-content]").forEach((el) => orig.set(el, el.getAttribute("content")));
   }
 
+  /* Dernier dictionnaire appliqué, gardé pour les fragments qui
+     arrivent après coup — voir window.ATM_I18N.traduire(). */
+  let dictCourant = {}, langCourante = DEFAULT;
+
   async function apply(lang) {
     const demande = lang;
     if (!LANGS[lang]) lang = DEFAULT;
@@ -36,6 +40,7 @@
       try { dict = await fetch(base + "assets/i18n/" + lang + ".json", { cache: "no-cache" }).then((r) => r.json()); }
       catch (e) { dict = {}; }
     }
+    dictCourant = dict; langCourante = lang;
     const val = (key, fb) => (lang === DEFAULT ? fb : (dict[key] != null ? dict[key] : fb));
     document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = val(el.dataset.i18n, orig.get(el)); });
     document.querySelectorAll("[data-i18n-html]").forEach((el) => { el.innerHTML = val(el.dataset.i18nHtml, orig.get(el)); });
@@ -165,4 +170,26 @@
     document.documentElement.classList.remove("i18n-wait");
     maybeHint(start);
   });
+
+  /* Traduire un morceau de page construit APRÈS le premier passage.
+   `orig` ne connaît pas ces éléments : on prend donc leur contenu écrit en
+   dur comme repli, ce qui est exactement le français d'origine. */
+  window.ATM_I18N = window.ATM_I18N || {};
+  window.ATM_I18N.traduire = function (racine) {
+  racine = racine || document;
+  if (langCourante === DEFAULT) return;
+  var v = function (cle, repli) {
+    return dictCourant[cle] != null ? dictCourant[cle] : repli;
+  };
+  racine.querySelectorAll("[data-i18n]").forEach(function (el) {
+    el.textContent = v(el.dataset.i18n, el.textContent);
+  });
+  racine.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+    el.setAttribute("aria-label", v(el.dataset.i18nAria, el.getAttribute("aria-label")));
+  });
+  racine.querySelectorAll("[data-i18n-title]").forEach(function (el) {
+    el.setAttribute("title", v(el.dataset.i18nTitle, el.getAttribute("title")));
+  });
+  };
+
 })();

@@ -228,6 +228,18 @@
   ];
   var COUCHE_DEFAUT = "conflits";
 
+  /* Les aplats de la carte sont peints dans le SVG, pas en CSS : un
+     changement d'apparence ne les touche donc pas tout seul. On redessine la
+     couche affichée quand `theme.js` annonce la bascule — sinon la carte
+     garderait ses teintes claires au milieu d'une page devenue sombre. */
+  document.addEventListener("atmart:apparence", function () {
+    /* « k-choix », l'identifiant réel du sélecteur — j'avais écrit « k-couche »,
+       qui n'existe nulle part : le listener se posait, ne trouvait rien et
+       échouait en silence. Un getElementById qui rend null ne lève pas. */
+    var sel = document.getElementById("k-choix");
+    if (sel && sel.value) afficher(sel.value);
+  });
+
   var IPC_COULEURS = { "1": "#cdfacd", "2": "#fae61e", "3": "#e67800", "4": "#c80000", "5": "#640000" };
 
   function plage12(dernierMois) {
@@ -330,11 +342,30 @@
     urbain:   { depart: [240, 241, 245], arrivee: [ 60,  60,  75] }
   };
 
+  /* Le point de départ des rampes, et la teinte du « non documenté ».
+     Relu à chaque rendu plutôt que figé au chargement : un changement
+     d'apparence sans rechargement doit redessiner juste. */
+  function departTheme(R) {
+    var f = getComputedStyle(document.documentElement)
+              .getPropertyValue("--fond").trim().toLowerCase();
+    /* Sur fond sombre, on part de la surface secondaire au lieu du blanc
+       cassé : la rampe monte alors de l'ombre vers la couleur, dans le sens
+       où l'œil lit « peu » puis « beaucoup ». */
+    return f === "#080c12" ? [22, 34, 52] : R.depart;
+  }
+
+  function nonDocumente() {
+    var f = getComputedStyle(document.documentElement)
+              .getPropertyValue("--fond").trim().toLowerCase();
+    return f === "#080c12" ? "#111827" : "#eef2f6";
+  }
+
   function teinte(v, max, nom) {
-    if (!v) return "#eef2f6";
+    if (!v) return nonDocumente();
     var R = RAMPES[nom] || RAMPES.alerte;
+    var d = departTheme(R);
     var t = Math.pow(v / max, 0.45);   /* les distributions sont très asymétriques */
-    var m = function (i) { return Math.round(R.depart[i] - t * (R.depart[i] - R.arrivee[i])); };
+    var m = function (i) { return Math.round(d[i] - t * (d[i] - R.arrivee[i])); };
     return "rgb(" + m(0) + "," + m(1) + "," + m(2) + ")";
   }
 
@@ -348,7 +379,7 @@
       var doc = v !== undefined;
       if (!doc) nonDoc++;
       return '<path class="k-com" data-id="' + p.atmart_geo_id + '" fill="' +
-        (doc ? teinte(v, max, couche.rampe) : "#eef2f6") + '" d="' + chemin(f.geometry) + '"><title>' + p.nom_fr +
+        (doc ? teinte(v, max, couche.rampe) : nonDocumente()) + '" d="' + chemin(f.geometry) + '"><title>' + p.nom_fr +
         (doc ? " — " + fmtN(v) + " " + agg.unite : " — non documenté") + "</title></path>";
     }).join("");
     var leg = '<span class="k-grad k-grad-' + (couche.rampe || "alerte") + '"></span> ' +
@@ -431,7 +462,7 @@
           if (d.phases[ph] > maxPop) { maxPop = d.phases[ph]; phase = ph; }
         });
       }
-      var c = IPC_COULEURS[phase] || "#eef2f6";
+      var c = IPC_COULEURS[phase] || nonDocumente();
       return '<path class="k-dep" fill="' + c + '" d="' + chemin(f.geometry) +
         '"><title>' + p.nom_fr + (phase ? " — phase majoritaire " + phase : " — hors zones publiées") +
         "</title></path>";
@@ -491,7 +522,7 @@
     var svg = communes.features.map(function (f) {
       var p = f.properties, m = meilleur[p.pcode];
       return '<path class="k-com" data-id="' + p.atmart_geo_id + '" fill="' +
-        (m ? couleur[m.cl] : "#eef2f6") + '" d="' + chemin(f.geometry) + '"><title>' +
+        (m ? couleur[m.cl] : nonDocumente()) + '" d="' + chemin(f.geometry) + '"><title>' +
         p.nom_fr + (m ? " — " + m.cl + " (" + m.v + " %)" : " — non couvert") +
         "</title></path>";
     }).join("");

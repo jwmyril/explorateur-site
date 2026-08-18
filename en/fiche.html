@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+/* Thème avant le premier rendu — sans lui, éclair blanc puis bascule.
+   Ne pas déplacer plus bas ni différer : il doit précéder les styles. */
+(function(){try{var v=localStorage.getItem("atmart_apparence"),
+d=v==="sombre"||(v!=="clair"&&window.matchMedia&&
+window.matchMedia("(prefers-color-scheme: dark)").matches);
+if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"light");
+}catch(e){}})();
+</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Ma commune — édition légère | Explorateur Haïti</title>
@@ -54,6 +63,13 @@ footer a,main a.lien{color:#1550b8}
   
   
   
+  
+  
+  
+  
+  
+  
+  
   <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/fiche.html", "ht": "https://explorateur.atmart.ltd/ht/fiche.html", "en": "https://explorateur.atmart.ltd/en/fiche.html", "es": "https://explorateur.atmart.ltd/es/fiche.html"};</script>
 
   <link rel="canonical" href="https://explorateur.atmart.ltd/en/fiche.html" />
@@ -64,7 +80,7 @@ footer a,main a.lien{color:#1550b8}
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/fiche.html" />
   <script>window.ATM_LANG_FORCE = "en"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/fiche.html", "ht": "https://explorateur.atmart.ltd/ht/fiche.html", "en": "https://explorateur.atmart.ltd/en/fiche.html", "es": "https://explorateur.atmart.ltd/es/fiche.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-+OV/XMNJVwz+Zl6jfIgablyZ31Cgx0/d7OVvomnY4CU=' 'sha256-9RT7XFx/kCLMl+U0mQRFMpEHjDQKb9eZ7cJ5rHf+Wyk=' 'sha256-qI63wxzjoqX8SrXkiSgyeGQBwcVIM9wmaG1scUqyW3k='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-+OV/XMNJVwz+Zl6jfIgablyZ31Cgx0/d7OVvomnY4CU=' 'sha256-9RT7XFx/kCLMl+U0mQRFMpEHjDQKb9eZ7cJ5rHf+Wyk=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-qI63wxzjoqX8SrXkiSgyeGQBwcVIM9wmaG1scUqyW3k='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -351,5 +367,6 @@ footer a,main a.lien{color:#1550b8}
   } catch (e) {}
 })();
 </script>
+<script src="../assets/theme.js?v=3" defer></script>
 </body>
 </html>

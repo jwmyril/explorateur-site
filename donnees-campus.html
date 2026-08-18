@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<script>
+/* Thème avant le premier rendu — sans lui, éclair blanc puis bascule.
+   Ne pas déplacer plus bas ni différer : il doit précéder les styles. */
+(function(){try{var v=localStorage.getItem("atmart_apparence"),
+d=v==="sombre"||(v!=="clair"&&window.matchMedia&&
+window.matchMedia("(prefers-color-scheme: dark)").matches);
+if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"light");
+}catch(e){}})();
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
@@ -11,13 +20,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
-  <link rel="stylesheet" href="assets/style.css?v=33" />
-  <link rel="stylesheet" href="assets/data.css?v=34" />
+  <link rel="stylesheet" href="assets/style.css?v=35" />
+  <link rel="stylesheet" href="assets/data.css?v=35" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-campus.html" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -34,7 +50,7 @@
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/donnees-campus.html" />
   <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-campus.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-campus.html", "en": "https://explorateur.atmart.ltd/en/donnees-campus.html", "es": "https://explorateur.atmart.ltd/es/donnees-campus.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-KxQtrDilZNXhY3m/jK90XvrW3L0CxSAxhHZqF861Ajc=' 'sha256-MKa6cKJLNrT9ktsD/tetXTs0XRyfnjZtd00Uhe8n3vc=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-KxQtrDilZNXhY3m/jK90XvrW3L0CxSAxhHZqF861Ajc=' 'sha256-MKa6cKJLNrT9ktsD/tetXTs0XRyfnjZtd00Uhe8n3vc=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -335,6 +351,7 @@
 <script src="assets/formulaire.js?v=2"></script>
 <script src="assets/mesure.js?v=2" defer></script>
 <script src="assets/ux.js?v=1" defer></script>
-<script src="assets/i18n.js?v=16"></script>
+<script src="assets/i18n.js?v=18"></script>
+<script src="assets/theme.js?v=3" defer></script>
 </body>
 </html>

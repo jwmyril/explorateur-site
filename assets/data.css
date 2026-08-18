@@ -509,17 +509,17 @@ select:focus-visible, input:focus-visible {
   background: rgba(46,196,182,.04); border: 1px solid var(--border); border-radius: var(--radius);
 }
 .x-terre { fill: rgba(46,196,182,.09); stroke: rgba(46,196,182,.45); stroke-width: 1.1; }
-.x-pt { fill: #7d92a8; opacity: 0.55; cursor: pointer; }
+.x-pt { fill: var(--ink-dim); opacity: 0.55; cursor: pointer; }
 .x-pt:hover { fill: var(--amber); opacity: 1; }
 .x-pt-pro { fill: var(--teal); opacity: 0.75; }
-.x-pt-sel { fill: var(--amber); opacity: 1; stroke: #0a1a2f; stroke-width: 1.6; }
+.x-pt-sel { fill: var(--attention); opacity: 1; stroke: var(--fond); stroke-width: 1.6; }
 .x-pt-halo { fill: none; stroke: var(--amber); stroke-width: 1.4; opacity: 0.55; }
 .x-pt:focus-visible { outline: 2px solid var(--teal); }
 .x-legende { color: var(--ink-dim); font-size: 0.78rem; margin: 0.6rem 0 0; line-height: 1.8; }
 .x-legende span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 0.15rem; vertical-align: middle; }
 .x-l-sel { background: var(--amber); }
 .x-l-pro { background: var(--teal); }
-.x-l-autre { background: #7d92a8; opacity: 0.55; }
+.x-l-autre { background: var(--ink-dim); opacity: 0.55; }
 @media (max-width: 640px) { .x-carte svg { max-height: 38vh; } }
 
 /* ===== Pyramide des âges =====
@@ -622,7 +622,7 @@ select:focus-visible, input:focus-visible {
   background: rgba(46,196,182,.12); border: 1px solid rgba(46,196,182,.4); color: var(--teal);
   border-radius: 8px; width: 32px; height: 32px; cursor: pointer; font-size: 1rem; line-height: 1;
 }
-.x-mini:hover { background: var(--teal); color: #0a1a2f; }
+.x-mini:hover { background: var(--accent); color: var(--sur-accent); }
 .x-outils label { color: var(--ink-dim); font-size: 0.86rem; }
 .x-classement th small { display: block; color: var(--ink-dim); font-weight: 400; font-size: 0.72rem; }
 @media (max-width: 1024px) { .x-mini { width: 44px; height: 44px; } }
@@ -732,7 +732,7 @@ a[download] { display: inline-block; padding: 0.3rem 0; min-height: 24px; }
   background: transparent; color: var(--ink-dim); border-radius: 999px;
   cursor: pointer; font: inherit; font-size: .84rem;
 }
-.x-carte-btn.actif { background: var(--teal); color: #04121f; border-color: var(--teal); font-weight: 600; }
+.x-carte-btn.actif { background: var(--accent); color: var(--sur-accent); border-color: var(--accent); font-weight: 600; }
 
 /* ===== Traduction en cours =====
    La bannière ne s'affiche que dans les langues où le corps de la page est
@@ -751,10 +751,10 @@ html[lang="fr"] .x-partiel { display: none; }
    active dit ce qu'elle montre. */
 .x-vues { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; margin: 0 0 1.2rem; }
 .x-vue { font: inherit; font-size: 0.86rem; min-height: 44px; padding: 0.4rem 0.9rem;
-         border: 1px solid var(--border); background: #fff; color: var(--ink-dim);
+         border: 1px solid var(--border-fort); background: var(--surface); color: var(--ink-dim);
          border-radius: 999px; cursor: pointer; }
 .x-vue:hover { border-color: var(--navy); color: var(--navy); }
-.x-vue.actif { background: var(--navy); border-color: var(--navy); color: #fff; }
+.x-vue.actif { background: var(--ink); border-color: var(--ink); color: var(--fond); }
 .x-vues small { color: var(--ink-dim); font-size: 0.8rem; margin-left: 0.3rem; }
 @media (max-width: 480px) { .x-vues small { width: 100%; margin: 0.2rem 0 0; } }
 
@@ -763,7 +763,7 @@ html[lang="fr"] .x-partiel { display: none; }
    qu'en colonnes, et la lecture au pouce ne défile pas latéralement. */
 .x-liste-seismes { list-style: none; margin: 0.6rem 0; padding: 0; }
 .x-liste-seismes li { border-left: 3px solid var(--navy); padding: 0.5rem 0.8rem;
-                      margin-bottom: 0.5rem; background: #f6f9fd;
+                      margin-bottom: 0.5rem; background: var(--surface-2);
                       border-radius: 0 8px 8px 0; }
 .x-liste-seismes small { color: var(--ink-dim); }
 
@@ -772,7 +772,7 @@ html[lang="fr"] .x-partiel { display: none; }
    coup d'œil sans qu'un graphique n'occupe un écran de téléphone. */
 .x-liste-sol { list-style: none; margin: 0.6rem 0; padding: 0; }
 .x-liste-sol li { position: relative; padding: 0.42rem 0.6rem; margin-bottom: 2px;
-                  background: #f6f9fd; border-radius: 6px; overflow: hidden; }
+                  background: var(--surface-2); border-radius: 6px; overflow: hidden; }
 .x-liste-sol b { position: relative; z-index: 1; margin-right: 0.4rem; }
 .x-liste-sol .x-barre { position: absolute; left: 0; top: 0; bottom: 0;
                         background: rgba(46, 196, 182, 0.28); z-index: 0; }
@@ -1115,7 +1115,7 @@ html[lang="fr"] .x-partiel { display: none; }
    AGIR : réessayer, revenir, ou récupérer les fichiers autrement. Un
    paragraphe sans issue laissait la seule sortie au bouton « précédent ». */
 .x-panne { max-width: 60ch; margin: 2rem auto; padding: 1.4rem 1.2rem;
-           border: 1px solid var(--border); border-left: 4px solid #c1121f;
+           border: 1px solid var(--border); border-left: 4px solid var(--danger);
            border-radius: 10px; background: var(--surface-2, transparent); }
 .x-panne h2 { margin: 0 0 0.6rem; font-size: 1.15rem; color: var(--ink); }
 .x-panne p { margin: 0 0 0.8rem; color: var(--ink-dim); line-height: 1.6; }
@@ -1161,3 +1161,68 @@ html[lang="fr"] .x-partiel { display: none; }
    cible tactile minimale de 44 px — et un portable tactile existe. On monte
    la hauteur sans toucher à la typographie ni à la mise en page. */
 .filter-btn { min-height: 44px; display: inline-flex; align-items: center; }
+
+/* ====================================================== APPARENCE
+   Le sélecteur de thème, dans l'en-tête. */
+.x-apparence { display: flex; align-items: center; }
+.x-apparence select {
+  min-height: 44px; padding: 0.35rem 0.6rem; font: inherit; font-size: 0.85rem;
+  color: var(--ink); background: var(--surface);
+  border: 1px solid var(--border-fort); border-radius: 8px; cursor: pointer;
+}
+.x-apparence select:hover { border-color: var(--accent); }
+
+/* FOCUS VISIBLE DANS LES DEUX THÈMES.
+   Un anneau d'une seule couleur disparaît dans l'un ou l'autre fond. Celui-ci
+   est bâti sur `--focus`, qui change avec le thème, et doublé d'un liseré du
+   fond de page : sur un bouton déjà teinté, un anneau seul se confondrait
+   avec l'aplat. */
+:where(a, button, select, input, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px var(--fond);
+  border-radius: 4px;
+}
+
+/* JAMAIS UNE INFORMATION PAR LA SEULE COULEUR.
+   Les états qui comptent portent aussi une forme : un point, un trait, un
+   signe. Un lecteur daltonien, un écran en plein soleil ou une impression en
+   noir et blanc doivent lire la même chose que nous. */
+.x-alerte::before { content: "▲ "; }
+.x-nd::before { content: "— "; }
+.x-vue.actif::after { content: " ✓"; }
+.filter-btn.active::after,
+.km-tab.on::after { content: " •"; }
+
+/* Les aplats de carte gardent un contour : une teinte seule, sur un écran mal
+   réglé, ne distingue plus deux communes voisines. */
+.k-com, .x-zone { stroke: var(--grille); stroke-width: 0.5; }
+
+/* Le mouvement est un agrément, jamais un support d'information : qui l'a
+   désactivé au niveau du système ne doit rien perdre. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* IMPRESSION : toujours clair, quel que soit le thème à l'écran.
+   Une page sombre imprimée, c'est une cartouche vidée pour un texte gris sur
+   fond gris. On repose donc les jetons en clair pour le papier — une seule
+   fois, ici, plutôt que règle par règle. */
+@media print {
+  :root, :root[data-theme="dark"], :root[data-theme="light"] {
+    --fond: #FFFFFF; --surface: #FFFFFF; --surface-2: #F7F8FA;
+    --ink: #14181d; --ink-dim: #4a5561;
+    --border: #c9d2dc; --border-fort: #8b98a9;
+    --accent: #12796f; --accent-fort: #0f6a61;
+    --danger: #c1121f; --attention: #8a4f08; --sur-accent: #FFFFFF;
+    --grille: rgba(20, 24, 29, 0.18);
+    color-scheme: light;
+  }
+  body { background: #FFFFFF !important; color: #14181d !important; }
+  .x-apparence { display: none !important; }
+}

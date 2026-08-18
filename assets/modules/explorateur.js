@@ -5,8 +5,8 @@
    Aucun compteur n'est écrit en dur : tout est compté depuis les fichiers. */
 /* SANS NUMÉRO DE VERSION, ET C'EST OBLIGATOIRE.
    Le navigateur identifie un module par son URL COMPLÈTE, requête comprise :
-   "./etat.js?v=31" et "./etat.js?v=31" sont deux modules distincts, chacun avec
-   son propre objet S. Les six sous-modules importent "./etat.js?v=31" ; tant que
+   "./etat.js?v=32" et "./etat.js?v=32" sont deux modules distincts, chacun avec
+   son propre objet S. Les six sous-modules importent "./etat.js?v=32" ; tant que
    cette ligne portait ?v=21, l'état était coupé en deux — le moteur
    remplissait S.terr et S.vals d'un côté, la fiche les lisait de l'autre et
    n'y trouvait rien. Symptôme observé en production le 17/08/2026 : toutes
@@ -14,7 +14,7 @@
    alors que les 4 200 valeurs étaient bel et bien chargées.
    Si etat.js doit un jour être versionné, il faut l'être dans les SEPT
    fichiers à la fois, et dans la liste CORE du service worker. */
-import { S } from "./etat.js?v=31";
+import { S } from "./etat.js?v=32";
 
 (async function () {
   "use strict";
@@ -449,6 +449,23 @@ import { S } from "./etat.js?v=31";
 
     var champ = $("#x-recherche");
     champ.addEventListener("input", function () { A.afficherResultats(A.chercher(champ.value), champ.value); });
+    /* L'ANNONCE SUIT L'AFFICHAGE, TOUJOURS.
+       `aria-expanded` était écrit « false » dans le HTML et n'en bougeait
+       jamais : un lecteur d'écran annonçait « liste repliée » quand deux
+       résultats s'affichaient. Corriger les huit endroits qui montrent ou
+       cachent la boîte aurait marché jusqu'au neuvième — on observe donc
+       l'attribut `hidden` et on synchronise, ce qui ne peut pas diverger. */
+    (function () {
+      var boite = $("#x-resultats");
+      if (!boite || !window.MutationObserver) return;
+      var dire = function () {
+        champ.setAttribute("aria-expanded", boite.hidden ? "false" : "true");
+      };
+      new MutationObserver(dire).observe(boite, { attributes: true,
+                                                  attributeFilter: ["hidden"] });
+      dire();
+    })();
+
     champ.addEventListener("keydown", function (e) {
       var res = [].slice.call(document.querySelectorAll(".x-res"));
       if (e.key === "ArrowDown" && res.length) { e.preventDefault(); res[0].focus(); }
@@ -881,7 +898,7 @@ import { S } from "./etat.js?v=31";
      mais l'ordre de cette liste doit continuer de se lire comme l'ordre des
      dépendances. */
   for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison", "rapport"]) {
-    (await import("./explorateur-" + m + ".js?v=31")).default(A);
+    (await import("./explorateur-" + m + ".js?v=32")).default(A);
   }
 
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);

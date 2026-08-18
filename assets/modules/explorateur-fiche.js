@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=31";
+import { S } from "./etat.js?v=32";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, sansAccent, situation, valeurBrute } = A;

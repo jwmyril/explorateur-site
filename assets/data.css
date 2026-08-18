@@ -1226,3 +1226,40 @@ html[lang="fr"] .x-partiel { display: none; }
   body { background: #FFFFFF !important; color: #14181d !important; }
   .x-apparence { display: none !important; }
 }
+
+/* --------------------------------------------- cibles tactiles (WCAG 2.5.5)
+   Mesuré le 17/08 sur la fiche : sélecteur de langue 32 px, boutons de carte
+   33 px, puces de comparaison 28 px. On les monte à 44 sans changer la taille
+   du texte — c'est le remplissage qui porte la hauteur.
+   Les liens EN LIGNE dans une phrase restent hors de cette règle : la norme
+   les exempte, et les agrandir casserait l'interlignage du paragraphe pour
+   un gain nul. */
+.lang-current,
+.x-carte-btn,
+.x-puce,
+.x-mini,
+.x-vue {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn { min-height: 44px; }
+/* Un bouton inséré dans une ligne de texte garde sa hauteur de texte : le
+   forcer à 44 px décalerait la ligne de base de tout le paragraphe. */
+p .btn, li .btn, .x-note .btn { min-height: 0; }
+
+/* ------------------------------------- l'apparence tient sur un téléphone
+   Mesuré à 390 px : la barre ne se repliait pas et ce contrôle la faisait
+   déborder de 90 px, donc défilement horizontal de toute la page. */
+.nav { flex-wrap: wrap; row-gap: 0.4rem; }
+.x-apparence { flex-shrink: 1; min-width: 0; }
+.x-apparence select { max-width: 100%; }
+@media (max-width: 560px) {
+  /* Le libellé des options suffit à comprendre ; on rend au sélecteur la
+     largeur de son contenu au lieu d'une largeur fixe. */
+  .x-apparence select {
+    font-size: 0.8rem; padding: 0.3rem 0.4rem; max-width: 8.5rem;
+  }
+  .nav { padding-left: 0.9rem; padding-right: 0.9rem; }
+}

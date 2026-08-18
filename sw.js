@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v88";
+const CACHE = "explorateur-v89";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -26,7 +26,7 @@ const CORE = [
   // la commune » ne repondrait pas hors connexion, alors que les treize
   // couches qu'il assemble, elles, sont deja en cache.
   "/assets/modules/explorateur-rapport.js?v=21",
-  "/couches.html", "/fiche.html", "/assets/couches.js?v=26",
+  "/couches.html", "/fiche.html", "/assets/couches.js?v=27",
   "/assets/pwa.js?v=2",
   "/assets/brand/favicon.ico", "/assets/brand/logo-32.png",
   "/assets/brand/logo-dark-96.png", "/assets/brand/apple-touch-icon.png",

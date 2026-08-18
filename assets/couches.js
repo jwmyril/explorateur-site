@@ -361,7 +361,10 @@
   }
 
   function teinte(v, max, nom) {
-    if (!v) return nonDocumente();
+    /* `v == null` et non `!v` : un zéro documenté est une observation, pas un
+       trou. Il prend le bas de la rampe ; seul l'inconnu prend la teinte du
+       « non documenté ». */
+    if (v == null) return nonDocumente();
     var R = RAMPES[nom] || RAMPES.alerte;
     var d = departTheme(R);
     var t = Math.pow(v / max, 0.45);   /* les distributions sont très asymétriques */
@@ -378,7 +381,7 @@
       var p = f.properties, v = vals[p.pcode];
       var doc = v !== undefined;
       if (!doc) nonDoc++;
-      return '<path class="k-com" data-id="' + p.atmart_geo_id + '" fill="' +
+      return '<path class="k-com' + (doc ? "" : " k-vide") + '" data-id="' + p.atmart_geo_id + '" fill="' +
         (doc ? teinte(v, max, couche.rampe) : nonDocumente()) + '" d="' + chemin(f.geometry) + '"><title>' + p.nom_fr +
         (doc ? " — " + fmtN(v) + " " + agg.unite : " — non documenté") + "</title></path>";
     }).join("");
@@ -575,6 +578,44 @@
     $("#k-legende").innerHTML = legende;
     $("#k-source").textContent = "Source : " + meta.source;
     $("#k-limite").textContent = "Limite : " + meta.limite;
+    couverture();
+  }
+
+  /* LA COUVERTURE SE LIT AVANT LA CARTE.
+     Signalé le 17/08 par un lecteur : la couche des établissements de santé
+     publics colore 14 communes et en laisse 126 en gris. La légende le disait
+     exactement — mais sous une carte de 520 px, donc hors de l'écran. Le
+     lecteur voyait un pays presque entièrement gris et en concluait que la
+     donnée n'était pas à jour. Il avait raison de s'interroger ; c'est la
+     mise en page qui l'a induit en erreur.
+
+     On COMPTE ce que le rendu a réellement laissé sans valeur, au lieu de
+     recopier ce que la couche annonce : une couche qui se tromperait sur sa
+     propre couverture serait ainsi prise en défaut. */
+  function couverture() {
+    var e = $("#k-couverture");
+    if (!e) return;
+    var tous = document.querySelectorAll("#k-carte .k-com");
+    if (!tous.length) { e.textContent = ""; e.className = ""; return; }
+    /* On compte la CLASSE, pas la teinte. Comparer des couleurs est ce qui
+       avait fait annoncer 13 communes documentées au lieu de 14 : un zéro
+       documenté partageait la teinte du non-documenté. */
+    var gris = document.querySelectorAll("#k-carte .k-com.k-vide").length;
+    var doc = tous.length - gris;
+    var part = Math.round(doc / tous.length * 100);
+    if (!gris) {
+      e.className = "";
+      e.textContent = "Les " + tous.length + " communes sont documentées.";
+      return;
+    }
+    /* Sous la moitié du pays, ce n'est plus une précision : c'est ce qu'il
+       faut savoir avant de regarder la carte. */
+    e.className = part < 50 ? "k-creuse" : "";
+    e.textContent = doc + " commune(s) documentée(s) sur " + tous.length +
+      " (" + part + " %). Les " + gris + " communes en gris ne sont pas " +
+      "des communes à zéro : la source ne les couvre pas." +
+      (part < 50 ? " Cette carte montre l'étendue d'une source, pas celle du phénomène."
+                 : "");
   }
 
   /* ------------------------------------------------------------ démarrage */
@@ -725,7 +766,12 @@
           });
           var og = document.createElement("optgroup");
           og.label = "Indicateurs Atmart (par commune)";
-          Object.keys(parInd).sort().forEach(function (indId) {
+          /* De la mieux documentée à la moins : une liste alphabétique met
+             au même rang une couche complète et une couche à 10 %, et laisse
+             le lecteur les découvrir au hasard. */
+          Object.keys(parInd).sort(function (a, b) {
+            return parInd[b].length - parInd[a].length || a.localeCompare(b);
+          }).forEach(function (indId) {
             var d = dico[indId] || {};
             if ((d.categorie || "") === "Qualité") return;
             var lignes = parInd[indId];
@@ -748,7 +794,11 @@
             });
             var o = document.createElement("option");
             o.value = "ind_" + indId;
-            o.textContent = (d.nom || indId);
+            /* La couverture DANS l'étiquette : c'est la seule information qui
+               permette de choisir sans avoir déjà tracé la carte. */
+            var part = Math.round(lignes.length / 140 * 100);
+            o.textContent = (d.nom || indId) + " — " + lignes.length + "/140 communes" +
+                            (part < 50 ? " ⚠" : "");
             og.appendChild(o);
           });
           sel.appendChild(og);

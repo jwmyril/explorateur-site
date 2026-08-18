@@ -53,6 +53,22 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     .k-grad-soleil  { background: linear-gradient(to right, var(--rampe-depart), #fff8e1, #c97900); }
     .k-grad-urbain  { background: linear-gradient(to right, var(--rampe-depart), #f0f1f5, #3c3c4b); }
     .k-manque { color: var(--attention); font-weight: 600; }
+    /* La couverture, au-dessus de la carte. Discrète quand elle est bonne,
+       impossible à manquer quand elle ne l'est pas : sous 50 % de communes
+       documentées, une carte se lit de travers si l'on n'a pas lu ceci. */
+    #k-couverture { font-size: 0.9rem; margin: 0 0 0.5rem; color: var(--ink-dim); }
+    #k-couverture:empty { display: none; }
+    /* Une commune non documentée porte un contour tireté. En thème sombre,
+       le bas de rampe et la teinte du « non documenté » ne diffèrent que de
+       trois points de luminance : la nuance seule ne sépare pas deux choses
+       opposées — « zéro recensé » et « la source ne couvre pas ». La forme,
+       elle, se lit partout, y compris en noir et blanc. */
+    .k-vide { stroke: var(--ink-dim); stroke-width: 0.7; stroke-dasharray: 2 2; }
+    #k-couverture.k-creuse {
+      color: var(--ink); background: var(--surface-2);
+      border-left: 4px solid var(--attention);
+      border-radius: 0 8px 8px 0; padding: 0.6rem 0.8rem; font-weight: 500;
+    }
     #k-source, #k-limite { font-size: 0.82rem; color: var(--ink-dim, #5b6b7b); margin-top: 0.35rem; }
     #k-lecture { font-size: 0.95rem; font-weight: 600; min-height: 1.4em; margin-top: 0.5rem; }
     #k-carte .k-nom-dep { font: 600 11px/1 Inter, sans-serif; fill: #0e2240; paint-order: stroke;
@@ -123,6 +139,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 
 <section style="padding-top:0.2rem;padding-bottom:2.2rem">
   <div class="container">
+    <p id="k-couverture" aria-live="polite"></p>
     <div id="k-carte"><div class="k-squelette" role="status" aria-label="Chargement du fond de carte"></div></div>
     <p id="k-lecture" aria-live="polite">Survolez une commune pour lire son nom et sa valeur.</p>
     <p id="k-legende"></p>
@@ -180,7 +197,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   </div>
 </footer>
 
-<script src="assets/couches.js?v=13"></script>
+<script src="assets/couches.js?v=16"></script>
 <script>
   (function () {
     var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");

@@ -319,6 +319,28 @@
       source: "USGS ComCat — domaine public (passeport PSP-029)",
       limite: "La magnitude est celle du SÉISME, pas de sa secousse ici : la distance, la profondeur et le sol décident de ce qui a été ressenti. Un maximum historique ne prédit pas le prochain." });
 
+  COUCHES_17.push(
+    { id: "a_verifier", nom: "Où notre information est la plus faible", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "familles_a_verifier",
+      unite: "familles à vérifier sur 3", periode: "calcul Atmart du 18/08/2026",
+      source: "Atmart Data — concordance entre MSPP/OSM (santé), MENFP/OSM (écoles), IHSI/UNFPA/WorldPop (population)",
+      limite: "CETTE CARTE NE NOTE PAS LES TERRITOIRES. Une commune foncée n'est pas une commune mal équipée : c'est une commune sur laquelle nos sources se contredisent, ou sur laquelle une seule source existe. Elle mesure l'état de NOTRE information, jamais celui du terrain — et c'est ce qui la rend utile : elle désigne où envoyer des cartographes ou demander un registre." },
+    { id: "ecart_sante", nom: "Santé — écart entre le déclaré et le vu", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "ecart_sante",
+      unite: "rapport entre le plus haut et le plus bas", periode: "MSPP 2024 contre OSM du 06/08/2026",
+      source: "Atmart Data — rapport entre le registre MSPP et l'extrait OpenStreetMap",
+      limite: "Un rapport de 3 dit que l'une des deux sources se trompe lourdement — il ne dit PAS laquelle. Le registre garde une institution fermée non radiée ; la carte ignore ce qu'aucun contributeur n'a relevé. Les deux erreurs sont possibles et vont en sens inverse." },
+    { id: "ecart_ecoles", nom: "Écoles — écart entre le déclaré et le vu", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "ecart_ecoles",
+      unite: "rapport entre le plus haut et le plus bas", periode: "MENFP 2024-2025 contre OSM du 06/08/2026",
+      source: "Atmart Data — rapport entre les registres MENFP et l'extrait OpenStreetMap",
+      limite: "C'est la famille la plus discordante du pays : 80 communes sur 140 dépassent un facteur trois. L'écart mesure surtout l'état de la cartographie scolaire, pas le nombre d'écoles — à l'échelle nationale la carte ne montre que 41 % du registre." },
+    { id: "ecart_population", nom: "Population — désaccord entre les trois sources", type: "choroplethe",
+      csv: "data/atmart_couches_carte_HT.csv", pcode: "pcode_commune", colonne: "ecart_population",
+      unite: "rapport entre le plus haut et le plus bas", periode: "IHSI 2024, projection UNFPA 2024, WorldPop 2020",
+      source: "Atmart Data — rapport entre les trois estimations de population",
+      limite: "La famille la plus solide : seules quatre communes dépassent un facteur trois. Un désaccord ne désigne pas la source fautive — sur Gressier, c'est la projection officielle qui est aberrante et le satellite qui s'accorde avec l'IHSI, l'inverse de ce qu'on supposerait." });
+
   /* Les neuf couches déclarées par colonne rejoignent les autres, chacune
      dotée du même agrégateur : une seule boucle, donc un seul endroit où le
      test « une cellule vide n'est pas un zéro » peut être juste ou faux. */
@@ -999,8 +1021,14 @@
                         grave : « écoles absentes de la carte » ne dit rien
                         du nombre d'écoles, et « désaccord des sources » ne
                         dit rien du nombre d'habitants. */
+                     /* Ce groupe existait déjà pour deux cartes ; il en
+                        accueille quatre de plus. Les mettre ailleurs aurait
+                        été la faute la plus grave que ce site puisse
+                        commettre : confondre « où l'école manque » et « où
+                        notre information sur l'école est faible ». */
                      ["Ce que l'on sait — qualité de l'information",
-                      ["ecoles_absentes", "pop_desaccord"]],
+                      ["a_verifier", "ecart_sante", "ecart_ecoles",
+                       "ecart_population", "ecoles_absentes", "pop_desaccord"]],
                      ["Observation satellite",
                       ["couvert_arbre", "cultures", "part_bati", "croissance_bati",
                        "batiments", "solaire"]]];

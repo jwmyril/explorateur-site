@@ -1,0 +1,141 @@
+﻿pcode_commune,commune,departement,familles_a_verifier,sante_declare_mspp,sante_vu_osm,sante_rapport,sante_classe,ecoles_declare_menfp,ecoles_vu_osm,ecoles_rapport,ecoles_classe,pop_ihsi,pop_projection,pop_satellite,pop_rapport,pop_classe
+HT0111,Port-au-Prince,Ouest,0,64,164,2.562,ecart_modere,502,369,1.36,concordant,989447,926906,889037,1.113,concordant
+HT0112,Delmas,Ouest,1,44,165,3.75,desaccord,679,463,1.467,concordant,396122,435779,394759,1.104,concordant
+HT0113,Carrefour,Ouest,0,37,65,1.757,ecart_modere,679,279,2.434,ecart_modere,512467,460506,502904,1.113,concordant
+HT0114,Pétion-Ville,Ouest,1,26,63,2.423,ecart_modere,714,144,4.958,desaccord,377688,394895,412780,1.093,concordant
+HT0115,Kenscoff,Ouest,1,11,4,2.75,ecart_modere,78,13,6.0,desaccord,57573,63006,69205,1.202,concordant
+HT0116,Gressier,Ouest,2,13,12,1.083,concordant,152,29,5.241,desaccord,36541,3987,41983,10.53,desaccord
+HT0117,Cité Soleil,Ouest,0,14,37,2.643,ecart_modere,298,234,1.274,concordant,265687,287439,259558,1.107,concordant
+HT0118,Tabarre,Ouest,1,19,61,3.211,desaccord,312,264,1.182,concordant,130564,141693,161038,1.233,concordant
+HT0121,Léogâne,Ouest,0,29,39,1.345,concordant,393,164,2.396,ecart_modere,200287,233614,248200,1.239,concordant
+HT0122,Petit-Goâve,Ouest,1,10,22,2.2,ecart_modere,285,68,4.191,desaccord,173389,194867,291984,1.684,ecart_modere
+HT0123,Grand-Goâve,Ouest,0,5,12,2.4,ecart_modere,132,45,2.933,ecart_modere,136799,157549,148108,1.152,concordant
+HT0131,Croix-Des-Bouquets,Ouest,1,42,185,4.405,desaccord,876,985,1.124,concordant,250205,129879,293400,2.259,ecart_modere
+HT0132,Thomazeau,Ouest,1,2,11,5.5,desaccord,22,35,1.591,ecart_modere,53093,54753,58486,1.102,concordant
+HT0133,Ganthier,Ouest,1,9,9,1.0,concordant,133,6,22.167,desaccord,62683,65036,63818,1.038,concordant
+HT0134,Cornillon / Grand Bois,Ouest,1,3,6,2.0,ecart_modere,38,7,5.429,desaccord,59811,66185,53508,1.237,concordant
+HT0135,Fonds-Verrettes,Ouest,1,4,6,1.5,concordant,90,15,6.0,desaccord,50146,54717,43885,1.247,concordant
+HT0141,Arcahaie,Ouest,0,16,34,2.125,ecart_modere,261,178,1.466,concordant,130620,142752,149636,1.146,concordant
+HT0142,Cabaret,Ouest,1,12,9,1.333,concordant,224,65,3.446,desaccord,68406,65302,113498,1.738,ecart_modere
+HT0151,Anse à Galets,Ouest,2,13,6,2.167,ecart_modere,157,10,15.7,desaccord,62709,70156,243486,3.883,desaccord
+HT0152,Pointe à Raquette,Ouest,1,7,7,1.0,concordant,93,1,93.0,desaccord,24579,26818,22637,1.185,concordant
+HT0211,Jacmel,Sud-Est,0,21,46,2.19,ecart_modere,389,166,2.343,ecart_modere,221965,258099,198080,1.303,concordant
+HT0212,Marigot,Sud-Est,0,4,12,3.0,ecart_modere,119,54,2.204,ecart_modere,88579,92869,71081,1.307,concordant
+HT0213,Cayes-Jacmel,Sud-Est,1,6,10,1.667,ecart_modere,105,25,4.2,desaccord,47835,49845,37502,1.329,concordant
+HT0214,La Vallée,Sud-Est,2,1,4,4.0,desaccord,66,12,5.5,desaccord,43154,47372,24537,1.931,ecart_modere
+HT0221,Bainet,Sud-Est,1,12,12,1.0,concordant,188,21,8.952,desaccord,102806,113034,58788,1.923,ecart_modere
+HT0222,Côtes de Fer,Sud-Est,1,9,5,1.8,ecart_modere,129,,,invérifiable,58089,63370,46137,1.374,concordant
+HT0231,Belle-Anse,Sud-Est,1,5,9,1.8,ecart_modere,151,11,13.727,desaccord,90035,95781,69102,1.386,concordant
+HT0232,Grand Gosier,Sud-Est,1,3,1,3.0,ecart_modere,44,8,5.5,desaccord,20220,25416,16083,1.58,ecart_modere
+HT0233,Thiotte,Sud-Est,1,6,7,1.167,concordant,72,9,8.0,desaccord,41394,46178,32616,1.416,concordant
+HT0234,Anse-à-Pître,Sud-Est,2,3,2,1.5,concordant,113,3,37.667,desaccord,35726,43459,9528,4.561,desaccord
+HT0311,Cap-Haïtien,Nord,1,23,82,3.565,desaccord,554,287,1.93,ecart_modere,301506,303590,255243,1.189,concordant
+HT0312,Quartier Morin,Nord,1,8,31,3.875,desaccord,62,103,1.661,ecart_modere,30057,29881,26671,1.127,concordant
+HT0313,Limonade,Nord,0,7,11,1.571,ecart_modere,59,100,1.695,ecart_modere,60583,61261,52776,1.161,concordant
+HT0321,Acul du Nord,Nord,1,8,11,1.375,concordant,90,9,10.0,desaccord,61421,59632,41003,1.498,concordant
+HT0322,Plaine du Nord,Nord,0,16,14,1.143,concordant,120,43,2.791,ecart_modere,45326,43982,40357,1.123,concordant
+HT0323,Milot,Nord,1,5,6,1.2,concordant,73,9,8.111,desaccord,35147,34193,31160,1.128,concordant
+HT0331,Grande Rivière Du Nord,Nord,1,4,6,1.5,concordant,58,4,14.5,desaccord,45443,43816,39956,1.137,concordant
+HT0332,Bahon,Nord,0,2,2,1.0,concordant,31,21,1.476,concordant,25544,24534,22693,1.126,concordant
+HT0341,Saint-Raphaël,Nord,0,2,5,2.5,ecart_modere,86,30,2.867,ecart_modere,59057,56607,49992,1.181,concordant
+HT0342,Dondon,Nord,1,2,2,1.0,concordant,45,4,11.25,desaccord,38016,36398,34534,1.101,concordant
+HT0343,Ranquitte,Nord,1,2,8,4.0,desaccord,24,19,1.263,concordant,30435,29256,26247,1.16,concordant
+HT0344,Pignon,Nord,0,2,6,3.0,ecart_modere,75,33,2.273,ecart_modere,47530,46806,42937,1.107,concordant
+HT0345,La Victoire,Nord,0,2,2,1.0,concordant,21,13,1.615,ecart_modere,11582,11101,11324,1.043,concordant
+HT0351,Borgne,Nord,1,3,7,2.333,ecart_modere,96,30,3.2,desaccord,73523,70765,40890,1.798,ecart_modere
+HT0352,Port-Margot,Nord,1,7,11,1.571,ecart_modere,63,7,9.0,desaccord,54799,52745,44947,1.219,concordant
+HT0361,Limbé,Nord,1,6,5,1.2,concordant,76,13,5.846,desaccord,93717,90050,110814,1.231,concordant
+HT0362,Bas Limbé,Nord,1,2,2,1.0,concordant,32,2,16.0,desaccord,22961,22052,20189,1.137,concordant
+HT0371,Plaisance,Nord,1,7,8,1.143,concordant,73,,,invérifiable,76447,76929,52584,1.463,concordant
+HT0372,Pilate,Nord,1,2,2,1.0,concordant,63,3,21.0,desaccord,59382,60535,42875,1.412,concordant
+HT0411,Fort-Liberté,Nord-Est,1,4,16,4.0,desaccord,79,59,1.339,concordant,37665,40129,26311,1.525,ecart_modere
+HT0412,Ferrier,Nord-Est,0,3,4,1.333,concordant,20,40,2.0,ecart_modere,16015,17054,11237,1.518,ecart_modere
+HT0413,Perches,Nord-Est,1,2,2,1.0,concordant,14,,,invérifiable,12640,13700,10829,1.265,concordant
+HT0421,Ouanaminthe,Nord-Est,1,8,51,6.375,desaccord,140,94,1.489,concordant,116086,123320,89157,1.383,concordant
+HT0422,Capotille,Nord-Est,0,2,3,1.5,concordant,15,11,1.364,concordant,21201,22559,10153,2.222,ecart_modere
+HT0423,Mont-Organisé,Nord-Est,1,1,3,3.0,ecart_modere,22,,,invérifiable,22941,24682,19074,1.294,concordant
+HT0431,Trou du Nord,Nord-Est,1,4,29,7.25,desaccord,78,63,1.238,concordant,53524,57212,45626,1.254,concordant
+HT0432,Sainte Suzanne,Nord-Est,1,2,6,3.0,ecart_modere,25,7,3.571,desaccord,30658,32812,17544,1.87,ecart_modere
+HT0433,Terrier Rouge,Nord-Est,0,6,4,1.5,concordant,49,25,1.96,ecart_modere,33168,35373,28555,1.239,concordant
+HT0434,Caracol,Nord-Est,1,2,9,4.5,desaccord,24,30,1.25,concordant,,9005,7204,1.25,concordant
+HT0441,Vallières,Nord-Est,1,2,4,2.0,ecart_modere,23,,,invérifiable,25743,27514,10253,2.684,ecart_modere
+HT0442,Carice,Nord-Est,1,3,4,1.333,concordant,24,,,invérifiable,14892,15825,12413,1.275,concordant
+HT0443,Mombin Crochu,Nord-Est,1,2,1,2.0,ecart_modere,41,2,20.5,desaccord,37956,40343,31333,1.288,concordant
+HT0511,Gonaïves,Artibonite,1,16,83,5.188,desaccord,533,255,2.09,ecart_modere,391173,366051,376461,1.069,concordant
+HT0512,Ennery,Artibonite,1,7,5,1.4,concordant,68,2,34.0,desaccord,56226,52529,49511,1.136,concordant
+HT0513,L'Estère,Artibonite,1,4,7,1.75,ecart_modere,58,18,3.222,desaccord,49572,44802,45071,1.106,concordant
+HT0521,Gros Morne,Artibonite,1,15,15,1.0,concordant,163,25,6.52,desaccord,170905,162808,153710,1.112,concordant
+HT0522,Terre Neuve,Artibonite,1,2,1,2.0,ecart_modere,40,1,40.0,desaccord,34305,32784,29843,1.15,concordant
+HT0523,Anse Rouge,Artibonite,2,7,24,3.429,desaccord,110,27,4.074,desaccord,47636,47668,86195,1.809,ecart_modere
+HT0531,Saint-Marc,Artibonite,1,19,100,5.263,desaccord,409,439,1.073,concordant,292716,281577,260111,1.125,concordant
+HT0532,Verrettes,Artibonite,1,9,18,2.0,ecart_modere,160,15,10.667,desaccord,158965,146485,140857,1.129,concordant
+HT0533,La Chapelle,Artibonite,0,1,2,2.0,ecart_modere,41,19,2.158,ecart_modere,34635,32609,31100,1.114,concordant
+HT0541,Dessalines,Artibonite,1,21,17,1.235,concordant,137,21,6.524,desaccord,199677,185387,157732,1.266,concordant
+HT0542,Petite Rivière de l'Artibonite,Artibonite,1,9,14,1.556,ecart_modere,163,12,13.583,desaccord,187423,165494,168002,1.133,concordant
+HT0543,Grande Saline,Artibonite,0,2,4,2.0,ecart_modere,23,10,2.3,ecart_modere,25504,23598,22219,1.148,concordant
+HT0544,Desdunes,Artibonite,1,3,7,2.333,ecart_modere,38,6,6.333,desaccord,40645,37602,36854,1.103,concordant
+HT0551,Saint-Michel de l'Attalaye,Artibonite,0,8,16,2.0,ecart_modere,154,55,2.8,ecart_modere,165223,154615,137371,1.203,concordant
+HT0552,Marmelade,Artibonite,1,1,2,2.0,ecart_modere,51,,,invérifiable,41775,39659,25896,1.613,ecart_modere
+HT0611,Hinche,Centre,1,12,16,1.333,concordant,275,27,10.185,desaccord,138051,163137,113809,1.433,concordant
+HT0612,Maïssade,Centre,1,6,8,1.333,concordant,92,1,92.0,desaccord,67315,78577,54946,1.43,concordant
+HT0613,Thomonde,Centre,1,3,8,2.667,ecart_modere,100,14,7.143,desaccord,70662,85152,54305,1.568,ecart_modere
+HT0614,Cerca Carvajal,Centre,0,3,4,1.333,concordant,36,42,1.167,concordant,26561,31774,21628,1.469,concordant
+HT0621,Mirebalais,Centre,1,9,30,3.333,desaccord,217,120,1.808,ecart_modere,111654,129573,131512,1.178,concordant
+HT0622,Saut d'Eau,Centre,0,2,3,1.5,concordant,72,45,1.6,ecart_modere,44616,52389,30465,1.72,ecart_modere
+HT0623,Boucan Carré,Centre,1,4,1,4.0,desaccord,80,27,2.963,ecart_modere,63982,79705,53843,1.48,concordant
+HT0631,Lascahobas,Centre,1,4,6,1.5,concordant,139,8,17.375,desaccord,52396,65198,42700,1.527,ecart_modere
+HT0632,Belladère,Centre,1,5,6,1.2,concordant,96,7,13.714,desaccord,98916,123067,75628,1.627,ecart_modere
+HT0633,Savanette,Centre,1,3,3,1.0,concordant,62,,,invérifiable,41346,46902,33481,1.401,concordant
+HT0641,Cerca La Source,Centre,1,2,8,4.0,desaccord,107,85,1.259,concordant,64567,73041,44094,1.656,ecart_modere
+HT0642,Thomassique,Centre,1,2,2,1.0,concordant,97,7,13.857,desaccord,72214,85148,59372,1.434,concordant
+HT0711,Les Cayes,Sud,1,20,115,5.75,desaccord,360,211,1.706,ecart_modere,187242,207439,137490,1.509,ecart_modere
+HT0712,Torbeck,Sud,1,6,8,1.333,concordant,161,27,5.963,desaccord,93788,93827,65800,1.426,concordant
+HT0713,Chantal,Sud,1,2,4,2.0,ecart_modere,65,17,3.824,desaccord,42059,41237,31363,1.341,concordant
+HT0714,Camp-Perrin,Sud,0,5,8,1.6,ecart_modere,124,68,1.824,ecart_modere,55523,51550,39775,1.396,concordant
+HT0715,Maniche,Sud,0,3,4,1.333,concordant,56,40,1.4,concordant,29493,27507,21129,1.396,concordant
+HT0716,Île à Vache,Sud,0,2,4,2.0,ecart_modere,25,54,2.16,ecart_modere,18973,17491,13012,1.458,concordant
+HT0721,Port-Salut,Sud,1,5,5,1.0,concordant,80,12,6.667,desaccord,23540,25431,15875,1.602,ecart_modere
+HT0722,Saint Jean du Sud,Sud,0,2,4,2.0,ecart_modere,53,18,2.944,ecart_modere,31494,35362,22301,1.586,ecart_modere
+HT0723,Arniquet,Sud,1,2,3,1.5,concordant,26,7,3.714,desaccord,35951,35838,23550,1.527,ecart_modere
+HT0731,Aquin,Sud,0,9,27,3.0,ecart_modere,164,133,1.233,concordant,128543,123719,93457,1.375,concordant
+HT0732,Saint Louis du Sud,Sud,0,5,7,1.4,concordant,124,47,2.638,ecart_modere,80083,80295,56713,1.416,concordant
+HT0733,Cavaillon,Sud,0,11,13,1.182,concordant,131,58,2.259,ecart_modere,60012,63397,40115,1.58,ecart_modere
+HT0741,Côteaux,Sud,0,2,4,2.0,ecart_modere,40,14,2.857,ecart_modere,26261,25395,18237,1.44,concordant
+HT0742,Port-à-Piment,Sud,1,1,1,1.0,concordant,27,7,3.857,desaccord,23336,26647,15487,1.721,ecart_modere
+HT0743,Roche à Bâteau,Sud,1,1,1,1.0,concordant,40,6,6.667,desaccord,22675,28335,13691,2.07,ecart_modere
+HT0751,Chardonnières,Sud,1,2,4,2.0,ecart_modere,46,12,3.833,desaccord,31100,32835,21050,1.56,ecart_modere
+HT0752,Les Anglais,Sud,1,1,2,2.0,ecart_modere,49,12,4.083,desaccord,36843,39577,26362,1.501,ecart_modere
+HT0753,Tiburon,Sud,1,1,,,invérifiable,38,13,2.923,ecart_modere,28691,28474,19646,1.46,concordant
+HT0811,Jérémie,Grande'Anse,1,13,29,2.231,ecart_modere,308,84,3.667,desaccord,163731,155299,125145,1.308,concordant
+HT0812,Abricots,Grande'Anse,0,2,6,3.0,ecart_modere,71,30,2.367,ecart_modere,45904,47470,25811,1.839,ecart_modere
+HT0813,Bonbon,Grande'Anse,0,1,2,2.0,ecart_modere,15,12,1.25,concordant,10487,10653,6799,1.567,ecart_modere
+HT0814,Moron,Grande'Anse,1,3,4,1.333,concordant,50,8,6.25,desaccord,37966,36686,29105,1.304,concordant
+HT0815,Chambellan,Grande'Anse,1,3,3,1.0,concordant,51,5,10.2,desaccord,32251,35368,24617,1.437,concordant
+HT0821,Anse d'Hainault,Grande'Anse,1,4,4,1.0,concordant,64,6,10.667,desaccord,44354,49099,24567,1.999,ecart_modere
+HT0822,Dame Marie,Grande'Anse,1,5,5,1.0,concordant,73,14,5.214,desaccord,47226,41207,21038,2.245,ecart_modere
+HT0823,Les Irois,Grande'Anse,1,2,2,1.0,concordant,45,7,6.429,desaccord,28470,24756,19078,1.492,concordant
+HT0831,Corail,Grande'Anse,1,4,6,1.5,concordant,41,10,4.1,desaccord,23841,28292,11091,2.551,ecart_modere
+HT0832,Roseaux,Grande'Anse,1,4,5,1.25,concordant,65,9,7.222,desaccord,43563,41589,32696,1.332,concordant
+HT0833,Beaumont,Grande'Anse,0,2,3,1.5,concordant,59,29,2.034,ecart_modere,38487,35380,18336,2.099,ecart_modere
+HT0834,Pestel,Grande'Anse,1,10,8,1.25,concordant,115,20,5.75,desaccord,54407,48575,45383,1.199,concordant
+HT0911,Port-de-Paix,Nord-Ouest,1,20,21,1.05,concordant,332,84,3.952,desaccord,223073,210942,212624,1.058,concordant
+HT0912,La Tortue,Nord-Ouest,1,8,6,1.333,concordant,77,8,9.625,desaccord,42504,40156,33678,1.262,concordant
+HT0913,Bassin Bleu,Nord-Ouest,1,4,11,2.75,ecart_modere,46,7,6.571,desaccord,69383,65669,74054,1.128,concordant
+HT0914,Chamsolme,Nord-Ouest,1,1,1,1.0,concordant,38,2,19.0,desaccord,33205,31537,31334,1.06,concordant
+HT0921,Saint-Louis du Nord,Nord-Ouest,1,12,16,1.333,concordant,190,4,47.5,desaccord,127244,120555,117743,1.081,concordant
+HT0922,Anse-à-Foleur,Nord-Ouest,0,4,5,1.25,concordant,31,14,2.214,ecart_modere,33045,31659,16880,1.958,ecart_modere
+HT0931,Môle Saint Nicolas,Nord-Ouest,1,7,8,1.143,concordant,64,10,6.4,desaccord,37029,36005,32522,1.139,concordant
+HT0932,Baie de Henne,Nord-Ouest,1,6,7,1.167,concordant,49,11,4.455,desaccord,29834,28588,27609,1.081,concordant
+HT0933,Bombardopolis,Nord-Ouest,1,6,6,1.0,concordant,57,7,8.143,desaccord,39397,37868,34678,1.136,concordant
+HT0934,Jean Rabel,Nord-Ouest,1,19,22,1.158,concordant,236,12,19.667,desaccord,162299,156750,151602,1.071,concordant
+HT1011,Miragoâne,Nippes,1,7,8,1.143,concordant,237,5,47.4,desaccord,73607,70617,99229,1.405,concordant
+HT1012,Petite Rivière de Nippes,Nippes,1,3,6,2.0,ecart_modere,57,14,4.071,desaccord,33595,34943,23908,1.462,concordant
+HT1013,Fonds des Nègres,Nippes,1,4,5,1.25,concordant,129,7,18.429,desaccord,39339,38319,23352,1.685,ecart_modere
+HT1014,Paillant,Nippes,2,4,2,2.0,ecart_modere,50,2,25.0,desaccord,20403,19644,5702,3.578,desaccord
+HT1021,Anse-à-Veau,Nippes,1,4,4,1.0,concordant,77,7,11.0,desaccord,40724,37907,34480,1.181,concordant
+HT1022,Petit Trou de Nippes,Nippes,2,1,5,5.0,desaccord,68,2,34.0,desaccord,35270,33793,26452,1.333,concordant
+HT1023,L'Asile,Nippes,1,5,11,2.2,ecart_modere,73,8,9.125,desaccord,48332,45890,37908,1.275,concordant
+HT1024,Arnaud,Nippes,1,1,1,1.0,concordant,45,2,22.5,desaccord,24376,23479,15690,1.554,ecart_modere
+HT1025,Plaisance du Sud,Nippes,2,,1,,invérifiable,49,12,4.083,desaccord,32044,32168,35505,1.108,concordant
+HT1031,Baradères,Nippes,1,3,3,1.0,concordant,70,9,7.778,desaccord,48510,45622,38948,1.246,concordant
+HT1032,Grand-Boucan,Nippes,1,1,2,2.0,ecart_modere,16,2,8.0,desaccord,6845,6460,4942,1.385,concordant

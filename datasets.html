@@ -807,6 +807,40 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     },
     {
      "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-027",
+     "identifier": "PRD-027",
+     "name": "Séries nationales d'Haïti",
+     "description": "Trente-quatre séries nationales depuis 2000 — économie, travail, santé, éducation, énergie, terres, sécurité alimentaire. Elles ne descendent PAS à la commune et ne doivent pas y descendre : elles servent d'échelle pour lire un chiffre local. Les années sans valeur restent vides.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Économie",
+      "Haïti"
+     ],
+     "temporalCoverage": "2000/2025",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_series_nationales_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "241345"
+      }
+     ],
+     "isBasedOn": "Banque mondiale — WDI ; FAO — FAOSTAT"
+    },
+    {
+     "@type": "Dataset",
      "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-101",
      "identifier": "PRD-101",
      "name": "Pack Géo Haïti — toutes les coordonnées GPS",
@@ -1022,6 +1056,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   
   
   
+  
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/datasets.html" />
   <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/datasets.html" />
   <link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/datasets.html" />
@@ -1029,7 +1064,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/datasets.html" />
   <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-TYpURCP+75Yzs0b0gGRkaj3HUWzgfObvUOHqiDeRrVw=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-MiGVip0FjjswcfBoNs+jSrT5cNpC4BM84VWBbdZpE+U=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -1390,6 +1425,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p class="price" data-i18n-html="ds.prd026_pr">Gratuit <small>219 lignes • 9 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd026_meta">🔌 Infrastructures • Sources : OpenStreetMap via Overpass • niveau de confiance C • ODbL</p>
   <a href="data/atmart_telecom_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd027_h">Séries nationales d'Haïti</h3>
+  <p data-i18n-html="ds.prd027_p">Trente-quatre séries nationales depuis 2000 — économie, travail, santé, éducation, énergie, terres, sécurité alimentaire. Elles ne descendent PAS à la commune et ne doivent pas y descendre : elles servent d'échelle pour lire un chiffre local. Les années sans valeur restent vides.</p>
+  <p class="price" data-i18n-html="ds.prd027_pr">Gratuit <small>907 lignes • 12 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd027_meta">📈 Économie • Sources : Banque mondiale — WDI ; FAO — FAOSTAT • niveau de confiance A • CC BY 4.0</p>
+  <a href="data/atmart_series_nationales_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <!-- /CARTES:gratuit -->
 </div>

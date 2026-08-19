@@ -26,7 +26,7 @@ atmart_couches_carte_HT.csv,2026-08-17,archives/atmart_couches_carte_HT/2026-08-
 atmart_couches_carte_HT.csv,2026-08-18,archives/atmart_couches_carte_HT/2026-08-18.csv,58c7d2af5bf422439cece2f43de89c19f18464ed07711c1b1011729b750dbc64,20311,141,2026-08-18,site,23a805027f,oui
 atmart_credits_departements.json,2026-08-17,archives/atmart_credits_departements/2026-08-17.json,9b4e5e1d350a8a1b8437a1dfd6d3e8a0cf9192d7d5351e02d36fcadcccf1c9f6,2892,0,2026-08-17,site,0d423eef1a,oui
 atmart_cyclones_communes.json,2026-08-17,archives/atmart_cyclones_communes/2026-08-17.json,dd21091fc08e6cd69eca5eb30e695210e51b6340a52c085da4090f571bed3c73,86035,0,2026-08-17,site,4edd662664,oui
-atmart_deplaces_HT.csv,2026-08-14,archives/atmart_deplaces_HT/2026-08-14.csv,e7b7d870fabd3ef06c3d27e2d6ed22b11bd1f18ac24f35033cde3b3c897bdcd8,36732,151,2026-08-14,vitrine,c736bd8eac,non
+atmart_deplaces_HT.csv,2026-08-14,archives/atmart_deplaces_HT/2026-08-14.csv,e7b7d870fabd3ef06c3d27e2d6ed22b11bd1f18ac24f35033cde3b3c897bdcd8,36732,151,2026-08-14,vitrine,c736bd8eac,oui
 atmart_eau_surface.json,2026-08-17,archives/atmart_eau_surface/2026-08-17.json,55e6be908dfdea666addb9afc228f4346823b94681c2a435672517c1d3f50abf,15418,0,2026-08-17,site,4edd662664,oui
 atmart_ecoles_declarees.json,2026-08-17,archives/atmart_ecoles_declarees/2026-08-17.json,e00b5486075248e97f4fcbe67d12fb193fe148ce444d3fe6bd1b8b435d292352,8971,0,2026-08-17,site,d86772fd49,non
 atmart_ecoles_declarees.json,2026-08-17,archives/atmart_ecoles_declarees/2026-08-17-2.json,a05792d61e4a1d102a4f5dcf585c2546a618b3dbf6a40c65d26cd36fc8169de5,9387,0,2026-08-17,site,46a5774fdd,oui
@@ -98,7 +98,8 @@ atmart_registre_sources.csv,2026-08-14,archives/atmart_registre_sources/2026-08-
 atmart_registre_sources.csv,2026-08-14,archives/atmart_registre_sources/2026-08-14-5.csv,12c05a0eabbc2a46a82806df39aadea6bae68d676af0c878ca3bb55af40f747b,27449,35,2026-08-14,vitrine,c736bd8eac,non
 atmart_registre_sources.csv,2026-08-14,archives/atmart_registre_sources/2026-08-14-6.csv,f856d7f29a44add484525531c44dcb256d7e1265243b237ccf21344d68d056b2,28392,36,2026-08-14,vitrine,28521783fa,non
 atmart_registre_sources.csv,2026-08-15,archives/atmart_registre_sources/2026-08-15.csv,6257387a2bbfc56f76fc8abfec3014b24dba951b5123a9b18ba2257af6598fbe,29540,37,2026-08-15,vitrine,72b261b108,non
-atmart_registre_sources.csv,2026-08-18,archives/atmart_registre_sources/2026-08-18.csv,aabbf93319782a57704d075e6877e77c52b8fab5abea75616948b4d124de8313,29768,37,2026-08-18,vitrine,cb6bd6cc39,oui
+atmart_registre_sources.csv,2026-08-18,archives/atmart_registre_sources/2026-08-18.csv,aabbf93319782a57704d075e6877e77c52b8fab5abea75616948b4d124de8313,29768,37,2026-08-18,vitrine,cb6bd6cc39,non
+atmart_registre_sources.csv,2026-08-19,archives/atmart_registre_sources/2026-08-19.csv,2542c0b53778834b88bb8620223ffb639c2b04bf6e5374f75eb190326c658a17,29816,37,2026-08-19,vitrine,1eb352e48d,oui
 atmart_sante_declaree.json,2026-08-17,archives/atmart_sante_declaree/2026-08-17.json,61772925927af03db189b7b941549305417dc4ce5d0ed78ea12fd26217cf39d0,6930,0,2026-08-17,site,0d423eef1a,oui
 atmart_seismes_communes.json,2026-08-17,archives/atmart_seismes_communes/2026-08-17.json,a20ea2d311e627a3426e44b6ecfdaff628767aeee5214628403f2603864d5c67,88921,0,2026-08-17,site,b82dbcfef2,oui
 atmart_series_nationales.json,2026-08-18,archives/atmart_series_nationales/2026-08-18.json,1afbc8593eff217e950c8d974f611febd7de0eb983dc08f06d383f6853db9f93,18917,0,2026-08-18,vitrine,202933929e,oui

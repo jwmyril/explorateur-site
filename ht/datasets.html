@@ -842,7 +842,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
      "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-027",
      "identifier": "PRD-027",
      "name": "Séries nationales d'Haïti",
-     "description": "Trente-quatre séries nationales depuis 2000 — économie, travail, santé, éducation, énergie, terres, sécurité alimentaire. Elles ne descendent PAS à la commune et ne doivent pas y descendre : elles servent d'échelle pour lire un chiffre local. Les années sans valeur restent vides.",
+     "description": "Soixante-trois séries nationales depuis 2000 — économie, travail, santé, éducation, énergie, terres, sécurité alimentaire, commerce. Elles ne descendent PAS à la commune et ne doivent pas y descendre : elles servent d'échelle pour lire un chiffre local. Deux avertissements portés par chaque ligne : les séries d'emploi sont des estimations modélisées du BIT, et le commerce de marchandises est une donnée miroir — Haïti ne le déclare plus depuis 2017.",
      "url": "https://explorateur.atmart.ltd/datasets.html",
      "creator": {
       "@id": "https://explorateur.atmart.ltd/#organisation"
@@ -860,16 +860,16 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       "Économie",
       "Haïti"
      ],
-     "temporalCoverage": "2000/2025",
+     "temporalCoverage": "2000/2027",
      "distribution": [
       {
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_series_nationales_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "241345"
+       "contentSize": "443671"
       }
      ],
-     "isBasedOn": "Banque mondiale — WDI ; FAO — FAOSTAT"
+     "isBasedOn": "Banque mondiale — WDI ; OIT — ILOSTAT ; FAO — FAOSTAT ; UN Comtrade"
     },
     {
      "@type": "Dataset",
@@ -1090,6 +1090,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   
   
   
+  
   <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
 
   <link rel="canonical" href="https://explorateur.atmart.ltd/ht/datasets.html" />
@@ -1100,7 +1101,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/datasets.html" />
   <script>window.ATM_LANG_FORCE = "ht"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-4AFx8stTRPThpontu2kNh8OhJ3TVR/hM2p44oT9Q/ec=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-fixrKEyRASv52mG7cJnr0cxMUo/8UUodX8d0vHqhvpI=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-fixrKEyRASv52mG7cJnr0cxMUo/8UUodX8d0vHqhvpI=' 'sha256-q2qhH09A8d7RHTIb9m/6K1DHHcXNjOKCxuyr6FJjn8E=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -1463,9 +1464,9 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <div class="card" data-cat="gratuit">
   <span class="tag" data-i18n="ds.t_free">Gratis</span>
   <h3 data-i18n-html="ds.prd027_h">Seri nasyonal Ayiti yo</h3>
-  <p data-i18n-html="ds.prd027_p">Trannkat seri nasyonal depi lan 2000 — ekonomi, travay, sante, edikasyon, enèji, tè, manje. Yo PA desann nan nivo komin nan, epi yo pa dwe desann : yo la kòm yon règ pou w ka mezire yon chif lokal. Ane ki pa gen valè rete vid.</p>
-  <p class="price" data-i18n-html="ds.prd027_pr">Gratis <small>907 liy • 12 kolòn</small></p>
-  <p class="meta" data-i18n-html="ds.prd027_meta">📈 Ekonomi • Sous : Bank Mondyal — WDI ; FAO — FAOSTAT • nivo konfyans A • CC BY 4.0</p>
+  <p data-i18n-html="ds.prd027_p">Swasanntwa seri nasyonal depi lan 2000 — ekonomi, travay, sante, edikasyon, enèji, tè, manje, komès. Yo PA desann nan nivo komin nan, epi yo pa dwe desann : yo la kòm yon règ pou w ka mezire yon chif lokal. De avètisman chak liy pote : seri travay yo se estimasyon yon modèl BIT fè, epi komès machandiz la se done miwa — Ayiti pa deklare l ankò depi 2017.</p>
+  <p class="price" data-i18n-html="ds.prd027_pr">Gratis <small>1 419 liy • 12 kolòn</small></p>
+  <p class="meta" data-i18n-html="ds.prd027_meta">📈 Ekonomi • Sous : Bank Mondyal — WDI ; BIT — ILOSTAT ; FAO — FAOSTAT ; UN Comtrade • nivo konfyans A • CC BY 4.0 ak kondisyon UNSD</p>
   <a href="../data/atmart_series_nationales_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Telechaje (CSV)</a>
 </div>
 <!-- /CARTES:gratuit -->

@@ -1360,3 +1360,56 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
          background: var(--surface-2); color: var(--ink-dim); text-align: left; }
 .as-sq:hover { border-color: var(--accent); color: var(--ink); }
 @media print { .as-boite { display: none !important; } }
+
+/* ============================================== PAGE SERVICES ET PARTENARIATS
+   Deux piliers, et une règle affichée avant eux : aucune prestation ne rend
+   une donnée publique moins accessible. C'est la première chose à lire, parce
+   que c'est celle qui décide si le reste est crédible. */
+.sv-promesse { margin: 1.2rem 0 0; padding: 0.9rem 1.1rem;
+               border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+               background: var(--surface-2); max-width: 62ch; }
+.sv-promesse p { margin: 0; font-size: 0.95rem; line-height: 1.65; color: var(--ink); }
+.sv-pilier { font-size: 0.78rem; letter-spacing: 0.09em; text-transform: uppercase;
+             font-weight: 700; color: var(--accent); margin: 0 0 0.3rem; }
+.sv-obj { color: var(--ink-dim); max-width: 62ch; line-height: 1.65;
+          margin: 0 0 1.6rem; }
+.sv-fond { background: var(--surface-2); }
+
+.sv-grille { display: grid; gap: 1rem;
+             grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); }
+.sv-c { border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.2rem;
+        background: var(--surface); display: flex; flex-direction: column; }
+.sv-c h3 { font-size: 1.05rem; margin: 0 0 0.5rem; color: var(--ink); }
+.sv-c p { font-size: 0.93rem; line-height: 1.6; color: var(--ink-dim);
+          margin: 0 0 0.7rem; }
+/* La carte phare se distingue par sa BORDURE, pas par un fond coloré : un
+   aplat d'accent derrière du texte long fatigue, et ferait passer l'offre la
+   plus argumentée pour la plus tapageuse. */
+.sv-phare { border-color: var(--accent); border-width: 2px; }
+/* « Ce qui rend ceci mesurable » : le paragraphe qui donne un chiffre ou une
+   méthode plutôt qu'une promesse. C'est lui qui différencie cette page d'une
+   plaquette, il porte donc un repère visuel. */
+.sv-quoi { border-left: 3px solid var(--border-fort); padding-left: 0.7rem;
+           font-size: 0.89rem !important; color: var(--ink) !important; }
+.sv-c .btn { align-self: flex-start; margin-top: auto; min-height: 44px;
+             display: inline-flex; align-items: center; }
+
+.sv-etapes { list-style: none; counter-reset: sv; margin: 0; padding: 0;
+             display: grid; gap: 1rem;
+             grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr)); }
+.sv-etapes > li { counter-increment: sv; position: relative;
+                  padding: 0.2rem 0 0 2.6rem; }
+.sv-etapes > li::before { content: counter(sv); position: absolute; left: 0; top: 0;
+  width: 1.9rem; height: 1.9rem; border-radius: 50%;
+  background: var(--accent); color: var(--sur-accent);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem; }
+.sv-etapes h3 { font-size: 1rem; margin: 0 0 0.35rem; color: var(--ink); }
+.sv-etapes p { font-size: 0.92rem; line-height: 1.6; color: var(--ink-dim); margin: 0; }
+
+.sv-jamais { border: 1px solid var(--border); border-left: 4px solid var(--attention);
+             border-radius: 0 12px 12px 0; padding: 1rem 1.2rem;
+             background: var(--surface); max-width: 68ch; }
+.sv-jamais ul { margin: 0; padding-left: 1.1rem; }
+.sv-jamais li { font-size: 0.93rem; line-height: 1.7; color: var(--ink);
+                margin-bottom: 0.4rem; }

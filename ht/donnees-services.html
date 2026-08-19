@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<script>
+/* Thème avant le premier rendu — sans lui, éclair blanc puis bascule.
+   Ne pas déplacer plus bas ni différer : il doit précéder les styles. */
+(function(){try{var v=localStorage.getItem("atmart_apparence"),
+d=v==="sombre"||(v!=="clair"&&window.matchMedia&&
+window.matchMedia("(prefers-color-scheme: dark)").matches);
+if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"light");
+}catch(e){}})();
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
+  <title data-i18n="pg.services.title">Sèvis ak patenarya — peye pou yon byen piblik, pa fèmen done | Atmart Data</title>
+  <meta name="description" data-i18n-content="pg.services.desc" content="Atmart Vérifié, diagnostics territoriaux, parrainages, consortium des Gardiens de l'Explorateur : comment Atmart finance la continuité d'un bien public sans transformer les données en produit fermé." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="../assets/style.css?v=35" />
+  <link rel="stylesheet" href="../assets/data.css?v=41" />
+  <script>
+  window.ATM_LANGUES = ["fr", "ht", "en", "es"];
+</script>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-solutions.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-solutions.html", "en": "https://explorateur.atmart.ltd/en/donnees-solutions.html", "es": "https://explorateur.atmart.ltd/es/donnees-solutions.html"};</script>
+
+  <link rel="canonical" href="https://explorateur.atmart.ltd/ht/donnees-services.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-services.html" />
+  <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-services.html" />
+  <link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-services.html" />
+  <link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-services.html" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/donnees-services.html" />
+  <script>window.ATM_LANG_FORCE = "ht"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-services.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-services.html", "en": "https://explorateur.atmart.ltd/en/donnees-services.html", "es": "https://explorateur.atmart.ltd/es/donnees-services.html"};</script>
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-BK3FZ/TIzzg29r+VSfb96lnTPTErgqSd+tu0iPZ9u6U=' 'sha256-HvtJYhL0QqZK/8Q2fad04gUY4yZ3ivj4iKwtBiEFZtc=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-NDtJj80B1jg40mEpySlWSJz9mx16mlgJImsRlPk2N+I=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+</head>
+<body>
+<a class="lien-evitement" href="#contenu" data-i18n="nv.skip">Ale nan kontni an</a>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="../assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">done Atmart yo</small></a>
+    <button class="nav-toggle" aria-label="Meni" data-i18n-aria="nv.menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nv.expl_h">Eksploratè Ayiti</a></li>
+      <li><a href="/couches.html" data-i18n="nv.couches_h">Kouch yo</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Done</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Katalòg <small>seri done ak gid</small></a></li>
+          <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solisyon ak lisans <small>antrepriz, ONG, administrasyon</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>etidyan ak chèchè</small></a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parennen yon seri done <small>enstitisyon ak antrepriz</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Sèvis ak patenarya</a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">Kijan sa mache <small>metòd, sous, sistèm</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="contenu" class="hero" style="padding:2.2rem 0 0.8rem">
+  <div class="container">
+    <p class="x-sur" data-i18n="sv.sur">Peye pou sa ka kontinye, pa pou fèmen done yo</p>
+    <h1 data-i18n-html="sv.h1">Sèvis ak <em>patenarya</em></h1>
+    <p class="lead" style="max-width:60ch" data-i18n="sv.lead">Eksploratè Ayiti gratis, san kont, san tras, epi l ap rete konsa. Sa nou fè peye a se pa aksè a done a : se travay ki fè done a serye, dokimante epi itilizab — ak garanti l ap la ankò lanne pwochèn.</p>
+
+    <div class="sv-promesse">
+      <p data-i18n="sv.promesse"><b>Yon règ ki pa negosyab.</b> Okenn sèvis pa fè yon done piblik vin pi difisil pou jwenn. Sa yon kliyan peye a sèvi tout moun : yon twou yo bouche pou li bouche pou tout moun, epi li pibliye menm jou a.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PILIER 1 -->
+<section>
+  <div class="container">
+    <p class="sv-pilier" data-i18n="sv.p1_num">Pilye 1</p>
+    <h2 data-i18n="sv.p1_h">Finansman ki ka dire ak sèvis</h2>
+    <p class="sv-obj" data-i18n="sv.p1_obj">Peye pou byen piblik la ka kontinye, san fè done yo tounen yon pwodwi fèmen.</p>
+
+    <div class="sv-grille">
+
+      <article class="sv-c">
+        <h3 data-i18n="sv.parr_h">Parennaj</h3>
+        <p data-i18n="sv.parr_p">Louvri yon seri done, adopte yon milezim, bouche yon twou, kenbe yon kouch. Non parenn nan parèt sou fich la ak dat la — men li pa jwenn okenn dwa eksklizif : done a piblik depi jou yo pibliye l.</p>
+        <p class="sv-quoi" data-i18n="sv.parr_q"><b>Sa ki fè sa mezirab :</b> kat « Kote enfòmasyon nou an pi fèb » la montre komin kote yon parennaj chanje yon bagay tout bon. Jodi a, 8 komin gen de fanmi done sou twa ki an dezakò oswa ki pa ka verifye.</p>
+        <a class="btn btn-outline" href="donnees-parrainage.html" data-i18n="sv.parr_a">Gade seri done ou ka parennen</a>
+      </article>
+
+      <article class="sv-c">
+        <h3 data-i18n="sv.presta_h">Prestasyon</h3>
+        <p data-i18n="sv.presta_p">Dyagnostik teritoryal, kontwòl kalite, amonizasyon referansyèl, aksesibilite, analiz risk, etid enstalasyon, tablo bò.</p>
+        <p class="sv-quoi" data-i18n="sv.presta_q"><b>Sa ki fè travay sa a diferan :</b> chak liv rezilta di sa li pa pèmèt ou konkli. Yon rapò ki pa gen yon seksyon « limit » se pa yon rapò kout, se yon rapò ki pa konplè.</p>
+      </article>
+
+      <article class="sv-c sv-phare">
+        <h3 data-i18n="sv.verif_h">Atmart Verifye</h3>
+        <p data-i18n="sv.verif_p">Odit yon seri done : ki kote li soti, kalite l, jewokodaj, koyerans, konsantman, lisans ak dokimantasyon. Rezilta a se yon fich sou modèl « Datasheets for Datasets » (Gebru et al.), vèsyon Aether, adapte pou done teritoryal.</p>
+        <p class="sv-quoi" data-i18n="sv.verif_q"><b>Sa ki pa egziste lòt kote :</b> konplè a <em>rekonte sou fichye a</em> chak fwa yo jenere fich la, yo pa janm kopye l nan yon nòt. Epi kat seksyon an plis parapò ak modèl orijinal la — konplè mezire, konkòdans ant sous yo, paspò jiridik, ak « sa seri done sa a pa pèmèt ou konkli », sa okenn pwodiktè pa ranpli poukont li.</p>
+        <a class="btn btn-primary" href="mailto:sales@atmart.ltd?subject=Atmart%20V%C3%A9rifi%C3%A9" data-i18n="sv.verif_a">Fè odite yon seri done</a>
+      </article>
+
+      <article class="sv-c">
+        <h3 data-i18n="sv.abo_h">Abònman sèvis</h3>
+        <p data-i18n="sv.abo_p">Èdtan analis, fòmasyon, kat sou mezi, kontwòl fichye, alèt ak akonpayman. Yon kantite chak mwa, se pa yon aksè privilejye a done yo.</p>
+      </article>
+
+      <article class="sv-c">
+        <h3 data-i18n="sv.inst_h">Enstans enstitisyonèl</h3>
+        <p data-i18n="sv.inst_p">Yon enstans Eksploratè a pou done entèn ou yo : idantite vizyèl, wòl prive, deplwaman ak sipò. Done ou yo rete pou ou ; motè a se menm ak sa piblik la.</p>
+      </article>
+
+      <article class="sv-c">
+        <h3 data-i18n="sv.acti_h">Aktivasyon rapid</h3>
+        <p data-i18n="sv.acti_p">Preparasyon chak ane anvan sezon siklòn, ak repons apre katastwòf. Chak aktivasyon bay yon <b>rapò piblik pou enterè tout moun</b> : sa yon aktè peye nan ijans rete lizib pou tout moun.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PILIER 2 -->
+<section class="sv-fond">
+  <div class="container">
+    <p class="sv-pilier" data-i18n="sv.p2_num">Pilye 2</p>
+    <h2 data-i18n="sv.p2_h">Patenarya, kapasite ak rekonesans</h2>
+    <p class="sv-obj" data-i18n="sv.p2_obj">Bati yon ekosistèm pwodiktè, itilizatè, moun k ap antretni ak moun k ap peye, pou nou pa depann de Atmart sèlman. Yon byen piblik ki kenbe sou yon sèl konpayi se pa yon byen piblik : se yon sèvis ak yon pwen kase.</p>
+
+    <ol class="sv-etapes">
+      <li>
+        <h3 data-i18n="sv.g_h">Konsòsyòm anyèl Gadyen Eksploratè a</h3>
+        <p data-i18n="sv.g_p">Manm ki peye pou baz la epi ki chita nan gouvènans li. Yo pa deside chif yo — metòd yo rete piblik epi moun ka konteste yo — yo deside ki twou pou bouche an premye.</p>
+      </li>
+      <li>
+        <h3 data-i18n="sv.conv_h">Konvansyon ak pwodiktè yo</h3>
+        <p data-i18n="sv.conv_p">Pwodiktè piblik, inivèsite, bibliyotèk, rezo dyaspora, òganizasyon sektoryèl. Objè yon konvansyon se pa jwenn yon fichye : se fè yon dezakò ka repare, de kote yo.</p>
+      </li>
+      <li>
+        <h3 data-i18n="sv.labo_h">Laboratwa inivèsitè</h3>
+        <p data-i18n="sv.labo_p">Estaj, repwodiksyon endikatè, validasyon, tradiksyon ak dokimantasyon. Yon endikatè yon etidyan pa ka repwodwi se pa yon endikatè, se yon afimasyon.</p>
+      </li>
+      <li>
+        <h3 data-i18n="sv.dpg_h">Kandidati Digital Public Good</h3>
+        <p data-i18n="sv.dpg_p">Apati yon analiz sa ki manke, epi bidjete revi anyèl la. Nou kòmanse pa mezire sa ki manke nan nèf kritè yo — nou pa kòmanse pa depoze yon dosye.</p>
+      </li>
+      <li>
+        <h3 data-i18n="sv.infra_h">Pwogram enfrastrikti</h3>
+        <p data-i18n="sv.infra_p">Poze kandidati <b>sèlman apre yo konfime nou elijib</b>, ak yon plan pou kite founisè a ekri davans. Yon depandans ou pran san yon pòt sòti se yon depandans pou tout tan.</p>
+      </li>
+      <li>
+        <h3 data-i18n="sv.carib_h">Replikasyon nan Karayib la</h3>
+        <p data-i18n="sv.carib_p">Pou evalye <b>apre</b> nou fin pwouve nwayo ayisyen an ka dire. Elaji anvan ou solid, se miltipliye yon feblès.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ====================================================== CE QUI NE CHANGE PAS -->
+<section>
+  <div class="container">
+    <h2 data-i18n="sv.jamais_h">Sa nou pa vann, e nou p ap vann</h2>
+    <div class="sv-jamais">
+      <ul>
+        <li data-i18n="sv.j1">Aksè a done piblik Eksploratè a — gratis, san kont, san tras piblisitè.</li>
+        <li data-i18n="sv.j2">Eksklizivite sou yon seri done : yon parennaj peye pou yon piblikasyon, li pa janm rezève itilizasyon l.</li>
+        <li data-i18n="sv.j3">Yon done ki gen yon lisans ki entèdi itilizasyon komèsyal — de sous nan rejis la nan ka sa a epi nou refize yo nan prestasyon.</li>
+        <li data-i18n="sv.j4">Yon chif san sous li, san milezim li, san limit li.</li>
+        <li data-i18n="sv.j5">Yon obsèvasyon sou yon moun : tout bagay agreje pa komin, pa gen okenn moun ou ka idantifye.</li>
+      </ul>
+    </div>
+    <p class="x-note" data-i18n-html="sv.contact">Pou pale sou yon bezwen : <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a>. Fich dokimantasyon nou deja fè yo piblik epi ou ka gade yo anvan ou angaje w.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">Yon pwodwi <a href="https://atmart.ltd/">Atmart Data</a> — done ki gen sous, ki gen dat, ou ka verifye, sou 140 komin Ayiti yo.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_donnees">Done</h4>
+        <ul>
+          <li><a href="/couches.html" data-i18n="ft.couches">Kouch yo</a></li>
+          <li><a href="datasets.html" data-i18n="ft.cat">Katalòg</a></li>
+          <li><a href="donnees.html" data-i18n="ft.comment">Kijan sa mache</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solisyon ak lisans</a></li>
+          <li><a href="donnees-services.html" data-i18n="ft.serv">Sèvis ak patenarya</a></li>
+          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definisyon ak metòd</a></li>
+          <li><a href="/donnees-systeme.html" data-i18n="ft.carte">Kat sistèm nan</a></li>
+          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Konfyans ak metòd</a></li>
+          <li><a href="/archives.html" data-i18n="ft.arch">Achiv ak sitasyon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_contact">Kontak</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. Eksploratè Ayiti a gratis, san kont, san tracker piblisite — se sèlman yon mezi odyans anonim epi agrege ki egziste, <a href="/donnees-confiance.html#mesure">metòd la pibliye</a>.</div>
+  </div>
+</footer>
+
+<script src="../assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+<script>
+  /* Les champs sont declares ici et non dans le composant : chaque page a les
+     siens, et le libelle envoye a Atmart doit rester lisible par un humain. */
+  window.ATM_FORM = {
+    form: "sol-form", panneau: "sol-envoi",
+    sujet: "Atmart Data — demande ({org})",
+    champs: [["Organisation", "org"], ["Type d'organisation", "type"], ["Contact", "nom"], ["Courriel", "email"], ["Besoin", "besoin"], ["Territoire", "zone"], ["Échéance", "delai"], ["Budget", "budget"], ["Décision à prendre", "msg"]]
+  };
+</script>
+<script src="../assets/formulaire.js?v=2"></script>
+<script src="../assets/mesure.js?v=2" defer></script>
+<script src="../assets/ux.js?v=1" defer></script>
+<script src="../assets/i18n.js?v=19"></script>
+<script src="../assets/theme.js?v=3" defer></script>
+</body>
+</html>

@@ -21,11 +21,12 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=39" />
+  <link rel="stylesheet" href="../assets/data.css?v=41" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
   
   
   
@@ -56,7 +57,6 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-parrainage.html" />
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/donnees-parrainage.html" />
   <script>window.ATM_LANG_FORCE = "en"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-parrainage.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-parrainage.html", "en": "https://explorateur.atmart.ltd/en/donnees-parrainage.html", "es": "https://explorateur.atmart.ltd/es/donnees-parrainage.html"};</script>
-
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-56FLUh3UNwkmAVUKIXflhwbT/8mM/gsTKJYlS4MBvQg=' 'sha256-5wygB8EcNhQggHbrrEAVsSkslgonUXCyLebBSgxePbE=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-mLZOquJa7KezBYzvTo16U3p+HgwKUGLBKy2H2OqEF3E=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM=' 'sha256-zjNdYAamMolC+J2rAdMdpeCN5VNnWzYOx+r5yFMIdMw='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -78,6 +78,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>companies, NGOs, administrations</small></a></li>
           <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>students &amp; researchers</small></a></li>
           <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Sponsor a dataset <small>institutions &amp; companies</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Services & partnerships</a></li>
           <li><a href="donnees.html" data-i18n-html="nv.comment">How it works <small>method, sources, system</small></a></li>
         </ul>
       </li>
@@ -92,8 +93,8 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <h1 data-i18n-html="pg.parrainage.h1">Sponsor a <em>dataset</em></h1>
     <p class="lead" data-i18n-html="pg.parrainage.lead">A bank, a company, an NGO, a ministry or a foundation funds the opening, the documentation or the updating of a dataset. That dataset becomes freely available to students and researchers — and the country gains a piece of knowledge that did not exist.</p>
     <div class="cta-row" style="display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.4rem">
-      <a data-i18n="par.94c588" href="#catalogue" class="btn btn-primary">Voir les jeux à parrainer</a>
-      <a data-i18n="par.fc94c8" href="#contact" class="btn btn-outline">Parler du programme</a>
+      <a data-i18n="par.94c588" href="#catalogue" class="btn btn-primary">See the datasets to sponsor</a>
+      <a data-i18n="par.fc94c8" href="#contact" class="btn btn-outline">Talk about the programme</a>
     </div>
   </div>
 </section>
@@ -101,20 +102,16 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <!-- LOGIQUE -->
 <section class="d-sec" style="padding-top:1rem">
   <div class="container">
-    <p data-i18n-html="par.c55251" class="d-lbl">Le principe</p>
-    <h2 data-i18n-html="par.d860a7" class="d-h">Trois intérêts qui se rejoignent au même endroit</h2>
+    <p data-i18n-html="par.c55251" class="d-lbl">The principle</p>
+    <h2 data-i18n-html="par.d860a7" class="d-h">Three interests that meet in the same place</h2>
     <div class="d-tiles" style="margin-top:1.1rem">
-      <div><span class="ico">🎓</span><b data-i18n="par.73eb2d">Les étudiants et chercheurs</b><p data-i18n-html="par.31c905">Ont les questions et le temps, mais rarement les moyens d'accéder à des données préparées.</p></div>
-      <div><span class="ico">🏦</span><b data-i18n="par.1ab00a">Les entreprises et institutions</b><p data-i18n-html="par.edc303">Cherchent une contribution sociétale concrète, visible et vérifiable — pas un logo sur une bannière.</p></div>
-      <div><span class="ico">🗂</span><b data-i18n="par.0019a8">Atmart Data</b><p data-i18n-html="par.d8fc0a">Peut ouvrir davantage de données, mais ne peut pas financer seul l'ouverture de tout le catalogue.</p></div>
+      <div><span class="ico">🎓</span><b data-i18n="par.73eb2d">Students and researchers</b><p data-i18n-html="par.31c905">They have the questions and the time, but rarely the means to reach prepared data.</p></div>
+      <div><span class="ico">🏦</span><b data-i18n="par.1ab00a">Businesses and institutions</b><p data-i18n-html="par.edc303">They are looking for a concrete societal contribution, visible and verifiable — not a logo on a banner.</p></div>
+      <div><span class="ico">🗂</span><b data-i18n="par.0019a8">Atmart Data</b><p data-i18n-html="par.d8fc0a">They can open more data, but cannot finance the opening of the whole catalogue alone.</p></div>
     </div>
     <div class="d-box" style="margin-top:1.4rem">
-      <h3 data-i18n-html="par.4a998b">Ce que le parrainage finance exactement</h3>
-      <p data-i18n-html="par.b0acd2">
-        Le travail de mise à disposition : identification et négociation des sources, extraction, nettoyage,
-        harmonisation, dictionnaire de variables, fiche de données en quatre langues, hébergement,
-        et l'accompagnement des utilisateurs pendant la durée du programme.
-      </p>
+      <h3 data-i18n-html="par.4a998b">What sponsorship finances exactly</h3>
+      <p data-i18n-html="par.b0acd2">The work of making the data available: identifying and negotiating sources, extraction, cleaning, harmonisation, variable dictionary, data sheet in four languages, hosting, and user support for the duration of the programme.</p>
     </div>
   </div>
 </section>
@@ -122,50 +119,46 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <!-- MÉCANISMES -->
 <section class="d-sec">
   <div class="container">
-    <p data-i18n-html="par.99c292" class="d-lbl">Formules</p>
-    <h2 data-i18n-html="par.496446" class="d-h">Cinq façons de parrainer</h2>
+    <p data-i18n-html="par.99c292" class="d-lbl">Arrangements</p>
+    <h2 data-i18n-html="par.496446" class="d-h">Five ways to sponsor</h2>
     <div class="d-tab-wrap">
       <div class="x-tableau" tabindex="0"><table class="d-tab">
-        <thead><tr><th data-i18n-html="par.e7c955" scope="col">Formule</th><th data-i18n-html="par.1f4bc7" scope="col">Ce qui est financé</th><th data-i18n-html="par.89337a" scope="col">Ce que le parrain y gagne</th><th data-i18n-html="par.31ac8d" scope="col">Ordre de contribution</th></tr></thead>
+        <thead><tr><th data-i18n-html="par.e7c955" scope="col">Arrangement</th><th data-i18n-html="par.1f4bc7" scope="col">What is financed</th><th data-i18n-html="par.89337a" scope="col">What the sponsor gains</th><th data-i18n-html="par.31ac8d" scope="col">Contribution range</th></tr></thead>
         <tbody>
           <tr>
-            <td data-i18n-html="par.38ee8a">Parrainage d'un jeu de données</td>
-            <td data-i18n-html="par.8d4c2e">L'ouverture ou la mise à jour d'un jeu précis</td>
-            <td data-i18n-html="par.fdf4d7">Mention permanente sur la fiche du jeu, visibilité auprès d'un public qualifié</td>
+            <td data-i18n-html="par.38ee8a">Sponsoring a dataset</td>
+            <td data-i18n-html="par.8d4c2e">Opening or updating one specific dataset</td>
+            <td data-i18n-html="par.fdf4d7">Permanent mention on the dataset sheet, visibility before a qualified audience</td>
             <td class="p">1 500 – 4 000 $</td>
           </tr>
           <tr>
-            <td data-i18n-html="par.99b4c9">Bourse data mémoire</td>
-            <td data-i18n-html="par.edfb3a">L'accès complet pour un groupe d'étudiants sur un thème</td>
-            <td data-i18n-html="par.699de8">Image d'appui à la formation, veille indirecte sur le secteur</td>
-            <td data-i18n-html="par.618247" class="p">≈ 1 000 $ / 10 étudiants</td>
+            <td data-i18n-html="par.99b4c9">Dissertation data grant</td>
+            <td data-i18n-html="par.edfb3a">Full access for a group of students on one theme</td>
+            <td data-i18n-html="par.699de8">Support for training, indirect watch on the sector</td>
+            <td data-i18n-html="par.618247" class="p">≈ $1,000 / 10 students</td>
           </tr>
           <tr>
-            <td data-i18n-html="par.6e44a0">Pack de recherche</td>
-            <td data-i18n-html="par.becadb">Un lot de jeux pour une faculté ou un laboratoire, sur une année</td>
-            <td data-i18n-html="par.ad2032">Ancrage institutionnel durable, impact collectif</td>
+            <td data-i18n-html="par.6e44a0">Research pack</td>
+            <td data-i18n-html="par.becadb">A batch of datasets for a faculty or a laboratory, over one year</td>
+            <td data-i18n-html="par.ad2032">Lasting institutional anchoring, collective impact</td>
             <td class="p">3 000 – 8 000 $</td>
           </tr>
           <tr>
-            <td data-i18n-html="par.459835">Cohorte thématique</td>
-            <td data-i18n-html="par.5b95f3">Un an de travaux sur un secteur : agriculture, finance, emploi, santé, territoires</td>
-            <td data-i18n-html="par.d3dc7d">Positionnement d'expertise, production de connaissance sur son marché</td>
-            <td data-i18n-html="par.91d39f" class="p">à partir de 10 000 $</td>
+            <td data-i18n-html="par.459835">Thematic cohort</td>
+            <td data-i18n-html="par.5b95f3">One year of work on a sector: agriculture, finance, employment, health, territories</td>
+            <td data-i18n-html="par.d3dc7d">Expertise positioning, knowledge production on its own market</td>
+            <td data-i18n-html="par.91d39f" class="p">from $10,000</td>
           </tr>
           <tr>
-            <td data-i18n-html="par.f6041b">Fonds de recherche appliquée</td>
-            <td data-i18n-html="par.302686">Une contribution mutualisée, affectée par un comité</td>
-            <td data-i18n-html="par.9d5a80">Impact pérenne, effort partagé avec d'autres contributeurs</td>
-            <td data-i18n-html="par.f791b7" class="p">à partir de 500 $</td>
+            <td data-i18n-html="par.f6041b">Applied research fund</td>
+            <td data-i18n-html="par.302686">A pooled contribution, allocated by a committee</td>
+            <td data-i18n-html="par.9d5a80">Lasting impact, effort shared with other contributors</td>
+            <td data-i18n-html="par.f791b7" class="p">from $500</td>
           </tr>
         </tbody>
       </table></div>
     </div>
-    <p data-i18n-html="par.cfa0d9" class="d-note" style="margin-top:0.9rem">
-      Fourchettes indicatives : le montant réel dépend du volume de sources à traiter, de la fréquence de
-      mise à jour et de la durée d'ouverture. Chaque parrainage fait l'objet d'un devis détaillé et d'une
-      convention écrite.
-    </p>
+    <p data-i18n-html="par.cfa0d9" class="d-note" style="margin-top:0.9rem">Indicative ranges: the real amount depends on the volume of sources to process, the update frequency and the duration of opening. Every sponsorship gets a detailed quotation and a written agreement.</p>
   </div>
 </section>
 
@@ -173,98 +166,86 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <section class="d-sec" id="catalogue">
   <div class="container">
     <p data-i18n-html="par.103451" class="d-lbl">Catalogue</p>
-    <h2 data-i18n-html="par.be9092" class="d-h">Les jeux de données qui attendent un parrain</h2>
-    <p data-i18n-html="par.9cb0b8" class="d-sub" style="margin-bottom:1.2rem">
-      Ces jeux ne sont pas des idées : les sources sont identifiées, la méthode est écrite, il manque le
-      financement du travail de préparation. Chacun sert immédiatement plusieurs disciplines.
-    </p>
-    <p data-i18n-html="par.ead2fc" class="d-sub" style="margin-bottom:1.2rem">
-<strong>Si le montant n'est pas atteint</strong>, la contribution n'est ni rendue ni gardée en attente : elle ouvre la version réduite du jeu, décrite ci-dessous avant tout versement. Cette version est publique et gratuite comme toute donnée ouverte par parrainage, et le parrain y est mentionné de la même façon. Une seule règle détermine ce périmètre — on descend d'un cran territorial : un jeu promis à la commune s'ouvre au département, un réseau qu'on voulait étendre est tenu à jour sans extension.
-</p>
+    <h2 data-i18n-html="par.be9092" class="d-h">The datasets waiting for a sponsor</h2>
+    <p data-i18n-html="par.9cb0b8" class="d-sub" style="margin-bottom:1.2rem">These datasets are not ideas: the sources are identified, the method is written, what is missing is the funding of the preparation work. Each one immediately serves several disciplines.</p>
+    <p data-i18n-html="par.ead2fc" class="d-sub" style="margin-bottom:1.2rem"><strong>If the amount is not reached</strong>, the contribution is neither returned nor held in waiting: it opens the reduced version of the dataset, described below before any payment. That version is public and free like any sponsored open data, and the sponsor is credited in the same way. One single rule sets this scope — we go down one territorial notch: a dataset promised at commune level opens at department level, a network we wanted to extend is kept up to date without extension.</p>
 <div class="d-tab-wrap">
       <div class="x-tableau" tabindex="0"><table class="d-tab">
-        <thead><tr><th data-i18n-html="par.1aea23" scope="col">Jeu de données</th><th data-i18n-html="par.2d8af8" scope="col">Sources identifiées</th><th data-i18n-html="par.4cf4b0" scope="col">À qui il servirait</th><th data-i18n-html="par.3bf302" scope="col">Ouverture</th><th data-i18n-html="par.dc27e8" scope="col">Si le montant n'est pas atteint</th></tr></thead>
+        <thead><tr><th data-i18n-html="par.1aea23" scope="col">Dataset</th><th data-i18n-html="par.2d8af8" scope="col">Sources identified</th><th data-i18n-html="par.4cf4b0" scope="col">Whom it would serve</th><th data-i18n-html="par.3bf302" scope="col">Opening</th><th data-i18n-html="par.dc27e8" scope="col">If the amount is not reached</th></tr></thead>
         <tbody>
 <tr>
-<td data-i18n-html="par.cf3b84">Profil des 140 communes d'Haïti <strong>— priorité 1</strong></td>
-<td data-i18n-html="par.8c7739">Référentiel territoire déjà publié, complété par les sources sectorielles</td>
-<td data-i18n-html="par.0b4530">Aménagement, ONG, bailleurs, collectivités, journalisme de données</td>
+<td data-i18n-html="par.cf3b84">Profile of Haiti's 140 communes <strong>— priority 1</strong></td>
+<td data-i18n-html="par.8c7739">Territorial reference already published, completed by sector sources</td>
+<td data-i18n-html="par.0b4530">Planning, NGOs, donors, local authorities, data journalism</td>
 <td class="p">≈ 6 000 $</td>
-<td data-i18n-html="par.c06733">Le profil des 10 départements, sur les mêmes sources et le même dictionnaire. La descente aux 140 communes reste ouverte à un financement ultérieur.</td>
+<td data-i18n-html="par.c06733">The profile of the 10 departments, on the same sources and the same dictionary. Going down to the 140 communes remains open to later funding.</td>
 </tr>
           <tr>
-            <td data-i18n-html="par.9ea5cb">Prix des marchés — couverture nationale et mise à jour mensuelle</td>
+            <td data-i18n-html="par.9ea5cb">Market prices — national coverage and monthly updates</td>
             <td data-i18n-html="par.fff7b8">CNSA, FEWS NET</td>
-            <td data-i18n-html="par.99cde0">Agronomie, sécurité alimentaire, économie, ONG humanitaires, journalistes</td>
-            <td data-i18n-html="par.6d608b" class="p">≈ 2 500 $<br /><small>+ 1 200 $/an de mise à jour</small></td>
-          <td data-i18n-html="par.0678b5">Le réseau sentinelle actuel de 9 marchés, tenu à jour pendant douze mois, sans extension à de nouveaux marchés.</td>
+            <td data-i18n-html="par.99cde0">Agronomy, food security, economics, humanitarian NGOs, journalists</td>
+            <td data-i18n-html="par.6d608b" class="p">≈ $2,500<br /><small>+ $1,200/year for updates</small></td>
+          <td data-i18n-html="par.0678b5">The current sentinel network of 9 markets, kept up to date for twelve months, without extension to new markets.</td>
 </tr>
           <tr>
-            <td data-i18n-html="par.ccaf6f">Indicateurs économiques Haïti (2000–2025)</td>
-            <td data-i18n-html="par.ef8cd7">Banque mondiale, FMI, BRH</td>
-            <td data-i18n-html="par.3cf26f">Économie, gestion, finance, business plans, plaidoyer</td>
+            <td data-i18n-html="par.ccaf6f">Haiti economic indicators (2000–2025)</td>
+            <td data-i18n-html="par.ef8cd7">World Bank, IMF, BRH</td>
+            <td data-i18n-html="par.3cf26f">Economics, management, finance, business plans, advocacy</td>
             <td class="p">≈ 2 000 $</td>
-          <td data-i18n-html="par.931394">Les séries nationales annuelles, sans ventilation départementale ni série mensuelle.</td>
+          <td data-i18n-html="par.931394">The annual national series, without departmental breakdown or monthly series.</td>
 </tr>
           <tr>
-            <td data-i18n-html="par.eedf09">Éducation en Haïti par département</td>
-            <td data-i18n-html="par.63021a">MENFP, UNESCO UIS, Banque mondiale</td>
-            <td data-i18n-html="par.a6ee85">Sciences de l'éducation, politiques publiques, ONG éducation</td>
+            <td data-i18n-html="par.eedf09">Education in Haiti by department</td>
+            <td data-i18n-html="par.63021a">MENFP, UNESCO UIS, World Bank</td>
+            <td data-i18n-html="par.a6ee85">Education sciences, public policy, education NGOs</td>
             <td class="p">≈ 2 500 $</td>
-          <td data-i18n-html="par.6451f5">Les indicateurs au niveau des 10 départements, sans descente à la commune.</td>
+          <td data-i18n-html="par.6451f5">The indicators at the level of the 10 departments, without going down to the commune.</td>
 </tr>
           <tr>
-            <td data-i18n-html="par.2040ab">Santé publique par département</td>
-            <td data-i18n-html="par.84be2e">MSPP, OMS/OPS, enquêtes EMMUS</td>
-            <td data-i18n-html="par.16d160">Santé publique, épidémiologie, planification sanitaire</td>
+            <td data-i18n-html="par.2040ab">Public health by department</td>
+            <td data-i18n-html="par.84be2e">MSPP, WHO/PAHO, EMMUS surveys</td>
+            <td data-i18n-html="par.16d160">Public health, epidemiology, health planning</td>
             <td class="p">≈ 3 000 $</td>
-          <td data-i18n-html="par.6451f5">Les indicateurs au niveau des 10 départements, sans descente à la commune.</td>
+          <td data-i18n-html="par.6451f5">The indicators at the level of the 10 departments, without going down to the commune.</td>
 </tr>
         </tbody>
       </table></div>
     </div>
-    <p data-i18n-html="par.b4fae5" class="d-note" style="margin-top:0.9rem">
-      Un thème qui vous intéresse ne figure pas ici ? Proposez-le : si les sources existent et que l'usage
-      est réel, nous l'étudions.
-    </p>
+    <p data-i18n-html="par.b4fae5" class="d-note" style="margin-top:0.9rem">A theme that interests you is not listed? Propose it: if the sources exist and the use is real, we will look into it.</p>
   </div>
 </section>
 
 <!-- CE QUE LE PARRAIN OBTIENT -->
 <section class="d-sec">
   <div class="container">
-    <p data-i18n-html="par.5879fb" class="d-lbl">Contreparties</p>
-    <h2 data-i18n-html="par.a5fbfc" class="d-h">Ce que le parrain reçoit — et ce qu'il n'achète pas</h2>
+    <p data-i18n-html="par.5879fb" class="d-lbl">Benefits</p>
+    <h2 data-i18n-html="par.a5fbfc" class="d-h">What the sponsor receives — and what it does not buy</h2>
     <div class="grid grid-2" style="margin-top:1.1rem">
       <div>
-        <p data-i18n-html="par.be8f9c" style="color:var(--teal);font-family:var(--font-head);margin-bottom:0.2rem">Il reçoit</p>
+        <p data-i18n-html="par.be8f9c" style="color:var(--teal);font-family:var(--font-head);margin-bottom:0.2rem">It receives</p>
         <ul class="d-list yes">
-          <li data-i18n-html="par.e14d62">Une mention permanente sur la fiche du jeu de données et sur la page du programme.</li>
-          <li data-i18n-html="par.fe49ae">Un rapport annuel d'usage : téléchargements, disciplines, universités, travaux produits.</li>
-          <li data-i18n-html="par.be9fba">La liste des mémoires et recherches soutenus grâce au jeu parrainé.</li>
-          <li data-i18n-html="par.1e0414">Un accès professionnel au même jeu pour ses propres équipes.</li>
-          <li data-i18n-html="par.17a59e">La possibilité de présenter le programme lors d'un atelier avec les étudiants.</li>
-          <li data-i18n-html="par.33d533">Un document de communication prêt à publier, en français, créole et anglais.</li>
+          <li data-i18n-html="par.e14d62">A permanent mention on the dataset sheet and on the programme page.</li>
+          <li data-i18n-html="par.fe49ae">An annual usage report: downloads, disciplines, universities, work produced.</li>
+          <li data-i18n-html="par.be9fba">The list of dissertations and research supported thanks to the sponsored dataset.</li>
+          <li data-i18n-html="par.1e0414">Professional access to the same dataset for its own teams.</li>
+          <li data-i18n-html="par.17a59e">The opportunity to present the programme at a workshop with the students.</li>
+          <li data-i18n-html="par.33d533">A ready-to-publish communication document, in French, Creole and English.</li>
         </ul>
       </div>
       <div>
-        <p data-i18n-html="par.9d1f38" style="color:var(--red);font-family:var(--font-head);margin-bottom:0.2rem">Il n'achète pas</p>
+        <p data-i18n-html="par.9d1f38" style="color:var(--red);font-family:var(--font-head);margin-bottom:0.2rem">What it does not buy</p>
         <ul class="d-list no">
-          <li data-i18n-html="par.c8df7d">Le contenu des conclusions : le chercheur reste libre, même si le résultat dérange.</li>
-          <li data-i18n-html="par.b0df83">Un droit de relecture ou de veto sur les travaux produits.</li>
-          <li data-i18n-html="par.e5b4c4">L'exclusivité sur la donnée ouverte : elle est ouverte, donc ouverte à tous.</li>
-          <li data-i18n-html="par.08b780">Le choix des bénéficiaires individuels, qui relève du comité de sélection.</li>
-          <li data-i18n-html="par.dc0afc">Les données personnelles des étudiants ou des chercheurs.</li>
+          <li data-i18n-html="par.c8df7d">The content of the conclusions: the researcher stays free, even if the result is inconvenient.</li>
+          <li data-i18n-html="par.b0df83">Any right of review or veto over the work produced.</li>
+          <li data-i18n-html="par.e5b4c4">Exclusivity on the opened data: it is open, therefore open to everyone.</li>
+          <li data-i18n-html="par.08b780">The choice of individual beneficiaries, which belongs to the selection committee.</li>
+          <li data-i18n-html="par.dc0afc">The personal data of students or researchers.</li>
         </ul>
       </div>
     </div>
     <div class="d-box amber">
-      <h3 data-i18n-html="par.811c0e">La règle qui rend le programme crédible</h3>
-      <p data-i18n-html="par.470ae2">
-        <strong>Un parrain finance une capacité de recherche, pas une conclusion.</strong>
-        Cette séparation est écrite dans chaque convention. Sans elle, les travaux issus du programme
-        n'auraient aucune valeur — ni scientifique, ni réputationnelle, y compris pour le parrain.
-      </p>
+      <h3 data-i18n-html="par.811c0e">The rule that makes the programme credible</h3>
+      <p data-i18n-html="par.470ae2"><strong>A sponsor finances a research capacity, not a conclusion.</strong> This separation is written into every agreement. Without it, the work coming out of the programme would be worth nothing — neither scientifically nor reputationally, sponsor included.</p>
     </div>
   </div>
 </section>
@@ -272,17 +253,17 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <!-- MÉCANIQUE -->
 <section class="d-sec">
   <div class="container">
-    <p data-i18n-html="par.0c25fd" class="d-lbl">Déroulé</p>
-    <h2 data-i18n-html="par.893f22" class="d-h">De l'accord à la publication des travaux</h2>
+    <p data-i18n-html="par.0c25fd" class="d-lbl">Sequence</p>
+    <h2 data-i18n-html="par.893f22" class="d-h">From agreement to publication of the work</h2>
     <ol class="d-steps">
-      <li data-i18n-html="par.6adee7"><b>Choix du jeu ou du thème</b> — dans le catalogue ci-dessus, ou sur proposition du parrain.</li>
-      <li data-i18n-html="par.97bb54"><b>Devis et convention</b> — périmètre, durée d'ouverture, montant, contreparties, règles d'indépendance.</li>
-      <li data-i18n-html="par.00c8af"><b>Préparation du jeu</b> — extraction, nettoyage, documentation, fiche de données, mise en ligne.</li>
-      <li data-i18n-html="par.6337d7"><b>Appel à candidatures</b> — diffusé par les universités partenaires et sur ce site.</li>
-      <li data-i18n-html="par.ac72e7"><b>Sélection</b> — par un comité, sur des critères académiques : pertinence du sujet, faisabilité, capacité d'usage.</li>
-      <li data-i18n-html="par.ed2307"><b>Accès et accompagnement</b> — licence sponsorisée, atelier de prise en main, appui méthodologique.</li>
-      <li data-i18n-html="par.9f0b83"><b>Suivi</b> — points d'étape, livrables, résumés déposés à la soutenance.</li>
-      <li data-i18n-html="par.07f76b"><b>Valorisation</b> — publication des travaux, rapport d'usage remis au parrain, mention publique de la cohorte.</li>
+      <li data-i18n-html="par.6adee7"><b>Choosing the dataset or theme</b> — from the catalogue above, or on the sponsor's proposal.</li>
+      <li data-i18n-html="par.97bb54"><b>Quotation and agreement</b> — scope, duration of opening, amount, benefits, independence rules.</li>
+      <li data-i18n-html="par.00c8af"><b>Preparing the dataset</b> — extraction, cleaning, documentation, data sheet, publication.</li>
+      <li data-i18n-html="par.6337d7"><b>Call for applications</b> — circulated by the partner universities and on this site.</li>
+      <li data-i18n-html="par.ac72e7"><b>Selection</b> — by a committee, on academic criteria: relevance of the topic, feasibility, capacity to use the data.</li>
+      <li data-i18n-html="par.ed2307"><b>Access and support</b> — sponsored licence, hands-on workshop, methodological support.</li>
+      <li data-i18n-html="par.9f0b83"><b>Follow-up</b> — milestones, deliverables, abstracts filed at the defence.</li>
+      <li data-i18n-html="par.07f76b"><b>Recognition</b> — publication of the work, usage report given to the sponsor, public mention of the cohort.</li>
     </ol>
   </div>
 </section>
@@ -291,39 +272,33 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <section class="d-sec" id="contact" style="padding-bottom:3rem">
   <div class="container">
     <p data-i18n-html="par.2b5c3d" class="d-lbl">Contact</p>
-    <h2 data-i18n-html="par.cd9a0f" class="d-h">Discuter d'un parrainage</h2>
-    <p data-i18n-html="par.1b85d0" class="d-sub">
-      Dites-nous ce qui vous intéresse : un jeu précis, un secteur, une université, ou simplement l'idée
-      générale. Nous revenons avec une proposition chiffrée et une convention type.
-    </p>
+    <h2 data-i18n-html="par.cd9a0f" class="d-h">Discuss a sponsorship</h2>
+    <p data-i18n-html="par.1b85d0" class="d-sub">Tell us what interests you: a specific dataset, a sector, a university, or simply the general idea. We come back with a costed proposal and a model agreement.</p>
     <form class="d-form" id="spo-form">
       <div class="two">
         <div><label data-i18n="par.350be3" for="s-org">Organisation</label><input id="s-org" name="org" required /></div>
-        <div><label data-i18n="par.67f8a5" for="s-nom">Nom du contact</label><input id="s-nom" name="nom" required /></div>
+        <div><label data-i18n="par.67f8a5" for="s-nom">Contact name</label><input id="s-nom" name="nom" required /></div>
       </div>
       <div class="two">
         <div><label data-i18n="par.2550d9" for="s-mail">E-mail</label><input id="s-mail" name="email" type="email" required /></div>
-        <div><label data-i18n="par.a2c1b1" for="s-form">Formule envisagée</label>
+        <div><label data-i18n="par.a2c1b1" for="s-form">Arrangement envisaged</label>
           <select id="s-form" name="formule">
-            <option data-i18n="par.38ee8a">Parrainage d'un jeu de données</option>
-            <option data-i18n="par.99b4c9">Bourse data mémoire</option>
-            <option data-i18n="par.aa893e">Pack de recherche (faculté ou laboratoire)</option>
-            <option data-i18n="par.e0c39e">Cohorte thématique annuelle</option>
-            <option data-i18n="par.f6041b">Fonds de recherche appliquée</option>
-            <option data-i18n="par.db4f23">À définir ensemble</option>
+            <option data-i18n="par.38ee8a">Sponsoring a dataset</option>
+            <option data-i18n="par.99b4c9">Dissertation data grant</option>
+            <option data-i18n="par.aa893e">Research pack (faculty or laboratory)</option>
+            <option data-i18n="par.e0c39e">Annual thematic cohort</option>
+            <option data-i18n="par.f6041b">Applied research fund</option>
+            <option data-i18n="par.db4f23">To be defined together</option>
           </select>
         </div>
       </div>
       <div class="two">
-        <div><label data-i18n="par.59f3f6" for="s-jeu">Jeu ou thème visé</label><input id="s-jeu" name="jeu" placeholder="ex. prix des marchés, éducation, santé…" /></div>
-        <div><label data-i18n="par.352c77" for="s-bud">Enveloppe envisagée (facultatif)</label><input id="s-bud" name="budget" placeholder="ex. 2 500 $" /></div>
+        <div><label data-i18n="par.59f3f6" for="s-jeu">Dataset or theme targeted</label><input id="s-jeu" name="jeu" placeholder="ex. prix des marchés, éducation, santé…" /></div>
+        <div><label data-i18n="par.352c77" for="s-bud">Envisaged budget (optional)</label><input id="s-bud" name="budget" placeholder="ex. 2 500 $" /></div>
       </div>
-      <div><label data-i18n="par.32bc7a" for="s-msg">Objectif du parrainage</label><textarea id="s-msg" name="msg" rows="4" placeholder="Ce que votre organisation cherche à soutenir, et pourquoi ce thème."></textarea></div>
-      <div><button data-i18n-html="par.790752" type="submit" class="btn btn-primary">Envoyer</button></div>
-      <p data-i18n-html="par.b0f3df" class="d-note" style="margin-top:0.8rem">
-        Ou écrivez à <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a>. Atmart LLC est une société
-        immatriculée aux États-Unis ; la convention et la facturation se font en dollars.
-      </p>
+      <div><label data-i18n="par.32bc7a" for="s-msg">Purpose of the sponsorship</label><textarea id="s-msg" name="msg" rows="4" placeholder="Ce que votre organisation cherche à soutenir, et pourquoi ce thème."></textarea></div>
+      <div><button data-i18n-html="par.790752" type="submit" class="btn btn-primary">Send</button></div>
+      <p data-i18n-html="par.b0f3df" class="d-note" style="margin-top:0.8rem">Or write to <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a>. Atmart LLC is a company registered in the United States; the agreement and the invoicing are in dollars.</p>
     </form>
       <div class="d-envoi" id="spo-envoi" hidden>
         <p class="x-etat" tabindex="-1" role="status">
@@ -355,6 +330,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
           <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
           <li><a href="donnees.html" data-i18n="ft.comment">How it works</a></li>
           <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
+          <li><a href="donnees-services.html" data-i18n="ft.serv">Services & partnerships</a></li>
           <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definitions &amp; methods</a></li>
           <li><a href="/donnees-systeme.html" data-i18n="ft.carte">The system map</a></li>
           <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Trust &amp; method</a></li>

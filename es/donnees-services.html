@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script>
+/* Thème avant le premier rendu — sans lui, éclair blanc puis bascule.
+   Ne pas déplacer plus bas ni différer : il doit précéder les styles. */
+(function(){try{var v=localStorage.getItem("atmart_apparence"),
+d=v==="sombre"||(v!=="clair"&&window.matchMedia&&
+window.matchMedia("(prefers-color-scheme: dark)").matches);
+if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"light");
+}catch(e){}})();
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
+  <title data-i18n="pg.services.title">Servicios y alianzas — financiar un bien público, no cerrar datos | Atmart Data</title>
+  <meta name="description" data-i18n-content="pg.services.desc" content="Atmart Vérifié, diagnostics territoriaux, parrainages, consortium des Gardiens de l'Explorateur : comment Atmart finance la continuité d'un bien public sans transformer les données en produit fermé." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="../assets/style.css?v=35" />
+  <link rel="stylesheet" href="../assets/data.css?v=41" />
+  <script>
+  window.ATM_LANGUES = ["fr", "ht", "en", "es"];
+</script>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-solutions.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-solutions.html", "en": "https://explorateur.atmart.ltd/en/donnees-solutions.html", "es": "https://explorateur.atmart.ltd/es/donnees-solutions.html"};</script>
+
+  <link rel="canonical" href="https://explorateur.atmart.ltd/es/donnees-services.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-services.html" />
+  <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-services.html" />
+  <link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-services.html" />
+  <link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-services.html" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/donnees-services.html" />
+  <script>window.ATM_LANG_FORCE = "es"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-services.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-services.html", "en": "https://explorateur.atmart.ltd/en/donnees-services.html", "es": "https://explorateur.atmart.ltd/es/donnees-services.html"};</script>
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-BK3FZ/TIzzg29r+VSfb96lnTPTErgqSd+tu0iPZ9u6U=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-NDtJj80B1jg40mEpySlWSJz9mx16mlgJImsRlPk2N+I=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM=' 'sha256-yNi8nMeIMIvrwSe98RT/rI/VdlRKM2BTn/5KLAzoaCo='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+</head>
+<body>
+<a class="lien-evitement" href="#contenu" data-i18n="nv.skip">Ir al contenido</a>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="../assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">los datos de Atmart</small></a>
+    <button class="nav-toggle" aria-label="Menú" data-i18n-aria="nv.menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nv.expl_h">Explorador de Haití</a></li>
+      <li><a href="/couches.html" data-i18n="nv.couches_h">Capas</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Datos</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catálogo <small>conjuntos de datos y guías</small></a></li>
+          <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Soluciones y licencias <small>empresas, ONG, administraciones</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>estudiantes e investigadores</small></a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Patrocinar un conjunto <small>instituciones y empresas</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Servicios y alianzas</a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">Cómo funciona <small>método, fuentes, sistema</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="contenu" class="hero" style="padding:2.2rem 0 0.8rem">
+  <div class="container">
+    <p class="x-sur" data-i18n="sv.sur">Financiar la continuidad, no cerrar los datos</p>
+    <h1 data-i18n-html="sv.h1">Servicios y <em>alianzas</em></h1>
+    <p class="lead" style="max-width:60ch" data-i18n="sv.lead">El Explorador Haití es gratuito, sin cuenta y sin rastreadores, y así seguirá. Lo que se cobra aquí no es el acceso al dato: es el trabajo que lo hace fiable, documentado y utilizable — y la garantía de que seguirá existiendo el año que viene.</p>
+
+    <div class="sv-promesse">
+      <p data-i18n="sv.promesse"><b>Una regla que no se negocia.</b> Ningún servicio hace que un dato público sea menos accesible. Lo que un cliente financia beneficia a todos: una laguna cubierta para él queda cubierta para todos, y se publica el mismo día.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PILIER 1 -->
+<section>
+  <div class="container">
+    <p class="sv-pilier" data-i18n="sv.p1_num">Pilar 1</p>
+    <h2 data-i18n="sv.p1_h">Financiación sostenible y servicios</h2>
+    <p class="sv-obj" data-i18n="sv.p1_obj">Financiar la continuidad del bien público sin convertir los datos en un producto cerrado.</p>
+
+    <div class="sv-grille">
+
+      <article class="sv-c">
+        <h3 data-i18n="sv.parr_h">Padrinazgos</h3>
+        <p data-i18n="sv.parr_p">Abrir un conjunto, adoptar una edición, cubrir una laguna, mantener una capa. El padrino aparece en la ficha con la fecha — y no obtiene exclusividad: el dato es público desde su publicación.</p>
+        <p class="sv-quoi" data-i18n="sv.parr_q"><b>Lo que hace esto medible:</b> el mapa « Dónde nuestra información es más débil » señala las comunas donde un padrinazgo cambia algo real. Hoy, 8 comunas tienen dos familias de datos de tres en desacuerdo o no verificables.</p>
+        <a class="btn btn-outline" href="donnees-parrainage.html" data-i18n="sv.parr_a">Ver los conjuntos patrocinables</a>
+      </article>
+
+      <article class="sv-c">
+        <h3 data-i18n="sv.presta_h">Servicios</h3>
+        <p data-i18n="sv.presta_p">Diagnóstico territorial, aseguramiento de calidad, armonización de referenciales, accesibilidad, análisis de riesgos, estudio de implantación, cuadros de mando.</p>
+        <p class="sv-quoi" data-i18n="sv.presta_q"><b>Lo que distingue este trabajo:</b> cada entregable dice lo que no permite concluir. Un informe sin sección de « límites » no es un informe corto, es un informe incompleto.</p>
+      </article>
+
+      <article class="sv-c sv-phare">
+        <h3 data-i18n="sv.verif_h">Atmart Verificado</h3>
+        <p data-i18n="sv.verif_p">Auditoría de un conjunto de datos: procedencia, calidad, geocodificación, coherencia interna, consentimiento, licencia y documentación. El entregable es una ficha según « Datasheets for Datasets » (Gebru et al.), versión Aether, adaptada a datos territoriales.</p>
+        <p class="sv-quoi" data-i18n="sv.verif_q"><b>Lo que no existe en ningún otro sitio:</b> la completitud se <em>recuenta sobre el archivo</em> en cada generación, nunca se copia de una nota. Y se añaden cuatro secciones al modelo original — completitud medida, concordancia entre fuentes, pasaporte jurídico, y « lo que este conjunto no permite concluir », la que ningún productor rellena espontáneamente.</p>
+        <a class="btn btn-primary" href="mailto:sales@atmart.ltd?subject=Atmart%20V%C3%A9rifi%C3%A9" data-i18n="sv.verif_a">Auditar un conjunto</a>
+      </article>
+
+      <article class="sv-c">
+        <h3 data-i18n="sv.abo_h">Suscripción de servicios</h3>
+        <p data-i18n="sv.abo_p">Horas de analista, formación, mapas a medida, controles de archivos, alertas y acompañamiento. Un volumen mensual, no un acceso privilegiado.</p>
+      </article>
+
+      <article class="sv-c">
+        <h3 data-i18n="sv.inst_h">Instancias institucionales</h3>
+        <p data-i18n="sv.inst_p">Una instancia del Explorador para sus datos internos: identidad visual, roles privados, despliegue y soporte. Sus datos siguen siendo suyos; el motor es el mismo que el público.</p>
+      </article>
+
+      <article class="sv-c">
+        <h3 data-i18n="sv.acti_h">Activación rápida</h3>
+        <p data-i18n="sv.acti_p">Preparación anual antes de la temporada de ciclones, y respuesta tras catástrofe. Cada activación produce un <b>informe público de interés general</b>: lo que un actor financia en emergencia sigue siendo legible para todos.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PILIER 2 -->
+<section class="sv-fond">
+  <div class="container">
+    <p class="sv-pilier" data-i18n="sv.p2_num">Pilar 2</p>
+    <h2 data-i18n="sv.p2_h">Alianzas, capacidades y reconocimiento</h2>
+    <p class="sv-obj" data-i18n="sv.p2_obj">Construir un ecosistema de productores, usuarios, mantenedores y financiadores que reduzca la dependencia de Atmart. Un bien público que depende de una sola empresa no es un bien público: es un servicio con un punto de ruptura.</p>
+
+    <ol class="sv-etapes">
+      <li>
+        <h3 data-i18n="sv.g_h">El consorcio anual de Guardianes del Explorador</h3>
+        <p data-i18n="sv.g_p">Miembros que financian la base y participan en su gobernanza. No deciden las cifras — los métodos siguen siendo públicos y discutibles — deciden las prioridades de completitud.</p>
+      </li>
+      <li>
+        <h3 data-i18n="sv.conv_h">Convenios con los productores</h3>
+        <p data-i18n="sv.conv_p">Productores públicos, universidades, bibliotecas, redes de la diáspora, organizaciones sectoriales. El objeto de un convenio no es obtener un archivo: es hacer que una divergencia sea reparable, por ambas partes.</p>
+      </li>
+      <li>
+        <h3 data-i18n="sv.labo_h">Laboratorios universitarios</h3>
+        <p data-i18n="sv.labo_p">Prácticas, reproducción de indicadores, validación, traducción y documentación. Un indicador que un estudiante no puede reproducir no es un indicador, es una afirmación.</p>
+      </li>
+      <li>
+        <h3 data-i18n="sv.dpg_h">Candidatura Digital Public Good</h3>
+        <p data-i18n="sv.dpg_p">A partir de un análisis de brechas, y luego presupuestar la revisión anual. Empezamos midiendo lo que falta frente a los nueve criterios — no presentando un expediente.</p>
+      </li>
+      <li>
+        <h3 data-i18n="sv.infra_h">Programas de infraestructura</h3>
+        <p data-i18n="sv.infra_p">Presentarse <b>solo tras confirmar la elegibilidad</b>, y con un plan de salida del proveedor escrito de antemano. Una dependencia contraída sin salida es una dependencia permanente.</p>
+      </li>
+      <li>
+        <h3 data-i18n="sv.carib_h">Réplica caribeña</h3>
+        <p data-i18n="sv.carib_p">A evaluar <b>después</b> de probar la sostenibilidad del núcleo haitiano. Expandirse antes de ser sostenible es multiplicar una fragilidad.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ====================================================== CE QUI NE CHANGE PAS -->
+<section>
+  <div class="container">
+    <h2 data-i18n="sv.jamais_h">Lo que no se vende, y no se venderá</h2>
+    <div class="sv-jamais">
+      <ul>
+        <li data-i18n="sv.j1">El acceso a los datos públicos del Explorador — gratis, sin cuenta, sin rastreador publicitario.</li>
+        <li data-i18n="sv.j2">La exclusividad sobre un conjunto: un padrinazgo financia una publicación, nunca reserva su uso.</li>
+        <li data-i18n="sv.j3">Un dato cuya licencia prohíbe el uso comercial — dos fuentes del registro están en este caso y se rechazan en los servicios.</li>
+        <li data-i18n="sv.j4">Una cifra sin su fuente, su edición y su límite.</li>
+        <li data-i18n="sv.j5">Una observación individual: todo se agrega por comuna, ninguna persona es identificable.</li>
+      </ul>
+    </div>
+    <p class="x-note" data-i18n-html="sv.contact">Para hablar de una necesidad: <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a>. Las fichas de documentación ya producidas son públicas y pueden consultarse antes de cualquier compromiso.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">Un producto de <a href="https://atmart.ltd/">Atmart Data</a> — datos con fuente, fechados, verificables sobre las 140 comunas de Haití.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_donnees">Datos</h4>
+        <ul>
+          <li><a href="/couches.html" data-i18n="ft.couches">Capas</a></li>
+          <li><a href="datasets.html" data-i18n="ft.cat">Catálogo</a></li>
+          <li><a href="donnees.html" data-i18n="ft.comment">Cómo funciona</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Soluciones y licencias</a></li>
+          <li><a href="donnees-services.html" data-i18n="ft.serv">Servicios y alianzas</a></li>
+          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definiciones y métodos</a></li>
+          <li><a href="/donnees-systeme.html" data-i18n="ft.carte">El mapa del sistema</a></li>
+          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Confianza y método</a></li>
+          <li><a href="/archives.html" data-i18n="ft.arch">Archivos y citación</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_contact">Contacto</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. El Explorador de Haití es gratuito, sin cuenta y sin rastreador publicitario — sólo existe una medición de audiencia anónima y agregada, <a href="/donnees-confiance.html#mesure">método publicado</a>.</div>
+  </div>
+</footer>
+
+<script src="../assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+<script>
+  /* Les champs sont declares ici et non dans le composant : chaque page a les
+     siens, et le libelle envoye a Atmart doit rester lisible par un humain. */
+  window.ATM_FORM = {
+    form: "sol-form", panneau: "sol-envoi",
+    sujet: "Atmart Data — demande ({org})",
+    champs: [["Organisation", "org"], ["Type d'organisation", "type"], ["Contact", "nom"], ["Courriel", "email"], ["Besoin", "besoin"], ["Territoire", "zone"], ["Échéance", "delai"], ["Budget", "budget"], ["Décision à prendre", "msg"]]
+  };
+</script>
+<script src="../assets/formulaire.js?v=2"></script>
+<script src="../assets/mesure.js?v=2" defer></script>
+<script src="../assets/ux.js?v=1" defer></script>
+<script src="../assets/i18n.js?v=19"></script>
+<script src="../assets/theme.js?v=3" defer></script>
+</body>
+</html>

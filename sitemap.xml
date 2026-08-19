@@ -45,6 +45,13 @@
     <loc>https://explorateur.atmart.ltd/donnees-registres.html</loc>
   </url>
   <url>
+    <loc>https://explorateur.atmart.ltd/donnees-services.html</loc>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-services.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-services.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-services.html"/>
+  </url>
+  <url>
     <loc>https://explorateur.atmart.ltd/donnees-solutions.html</loc>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-solutions.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-solutions.html"/>
@@ -88,6 +95,9 @@
     <loc>https://explorateur.atmart.ltd/ht/donnees-parrainage.html</loc>
   </url>
   <url>
+    <loc>https://explorateur.atmart.ltd/ht/donnees-services.html</loc>
+  </url>
+  <url>
     <loc>https://explorateur.atmart.ltd/ht/donnees-solutions.html</loc>
   </url>
   <url>
@@ -112,6 +122,9 @@
     <loc>https://explorateur.atmart.ltd/en/donnees-parrainage.html</loc>
   </url>
   <url>
+    <loc>https://explorateur.atmart.ltd/en/donnees-services.html</loc>
+  </url>
+  <url>
     <loc>https://explorateur.atmart.ltd/en/donnees-solutions.html</loc>
   </url>
   <url>
@@ -134,6 +147,9 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/donnees-parrainage.html</loc>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/es/donnees-services.html</loc>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/donnees-solutions.html</loc>

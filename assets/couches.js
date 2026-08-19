@@ -30,25 +30,43 @@
       },
       source: "ACLED via HDX — attribution acleddata.com obligatoire",
       limite: "Événements RAPPORTÉS : la couverture médiatique varie selon les zones — un faible chiffre peut refléter un faible signalement." },
-    /* LA DONNÉE EXISTE. NOUS N'AVONS PAS LE DROIT DE LA REPUBLIER.
-       Retirée le 18/08/2026 (passeport PSP-056). Les conditions de l'OIM
-       autorisent la consultation, le téléchargement et l'impression, et
-       excluent nommément « any right to sell, resell, redistribute or create
-       derivative works therefrom ». Une carte communale tirée du DTM est les
-       deux choses interdites à la fois.
+    /* PORTÉE DE LA REDISTRIBUTION : CLARIFICATION DEMANDÉE À L'OIM (18/08/2026).
+       Cette couche a été retirée le matin du 18/08, puis rétablie le soir même
+       sur décision d'Atmart. Le motif du retrait — « create derivative works
+       therefrom » — ne résiste pas à l'examen aussi bien qu'il en avait l'air :
 
-       POURQUOI LA COUCHE RESTE DANS LA LISTE au lieu de disparaître : un
-       lecteur qui cherche les déplacés et ne trouve rien conclut que nous
-       n'avons pas la donnée, ou que le site est en panne. Il doit apprendre
-       qu'elle existe, qu'elle est tenue à jour, et où la lire. Une absence
-       expliquée est une information ; une absence muette est une avarie. */
-    { id: "deplaces", nom: "Personnes déplacées présentes (OIM DTM)",
-      type: "manque_juridique",
-      source: "OIM — Displacement Tracking Matrix (via HDX)",
-      motif: "Les conditions d'utilisation de l'OIM permettent de consulter, télécharger et imprimer ces données, mais excluent expressément leur redistribution et toute œuvre dérivée. Une carte communale produite à partir du DTM serait les deux à la fois. L'Explorateur ne la publie donc pas.",
-      lire: [["Matrice de suivi des déplacements — OIM Haïti", "https://dtm.iom.int/haiti"],
-             ["Le jeu de données sur HDX", "https://data.humdata.org/dataset/hti-iom-dtm-from-api"]],
-      limite: "Cette absence est juridique, pas statistique : le chiffre existe et il est mis à jour régulièrement. Ne pas la lire comme une absence de personnes déplacées." },
+       · une œuvre DÉRIVÉE reprend l'EXPRESSION d'une œuvre. Un décompte de
+         personnes déplacées dans une commune est un FAIT, et un fait n'a pas
+         d'auteur (décret haïtien du 12/10/2005, art. 5) ;
+       · l'OIM écrit elle-même, sur la page HDX de ce jeu, que son API existe
+         pour que « the humanitarian community, academia, media, government,
+         and non-governmental organizations » puissent UTILISER ces données ;
+       · la mention de droits qui l'accompagne date de 2018 et se retrouve,
+         identique, sur les huit jeux DTM d'Haïti — c'est un texte par défaut,
+         pas une décision prise pour celui-ci.
+
+       Ce qui joue en sens inverse, et qu'il faut garder en tête : la clause
+       dit « without, INTER ALIA, any right to… » — la liste n'est pas
+       limitative, elle s'élargit.
+
+       Nous publions donc un agrégat recalculé, avec attribution complète, sans
+       fichier brut et sans usage commercial — et nous avons écrit à l'OIM pour
+       faire trancher. Si la réponse est négative, `rendreManqueJuridique` est
+       prêt : il suffit de repasser `type` à "manque_juridique". */
+    { id: "deplaces", nom: "Personnes déplacées présentes (OIM DTM)", type: "choroplethe",
+      csv: "data/atmart_deplaces_HT.csv", pcode: "pcode",
+      agreger: function (rows) {
+        var m = {}, dates = [];
+        rows.forEach(function (r) {
+          if (r.niveau_admin !== "2") return;
+          m[r.pcode] = +r.personnes_deplacees_presentes || 0;
+          dates.push(String(r.date_rapport).slice(0, 10));
+        });
+        return { valeurs: m, periode: "dernière ronde (" + dates.sort().pop() + ")",
+                 unite: "personnes déplacées présentes" };
+      },
+      source: "International Organization for Migration (IOM), Displacement Tracking Matrix (DTM) — via HDX",
+      limite: "Recensement des sites accessibles à l'OIM — pas un registre exhaustif des déplacés. Agrégat recalculé par Atmart ; la portée exacte de la redistribution autorisée fait l'objet d'une demande de clarification auprès de l'OIM depuis le 18/08/2026." },
     { id: "ipc", nom: "Insécurité alimentaire — phase IPC", type: "aplat_dep",
       csv: "data/atmart_ipc_HT.csv",
       source: "IPC — analyse de mars 2026 (CC0)",

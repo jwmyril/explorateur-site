@@ -1413,3 +1413,35 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
 .sv-jamais ul { margin: 0; padding-left: 1.1rem; }
 .sv-jamais li { font-size: 0.93rem; line-height: 1.7; color: var(--ink);
                 margin-bottom: 0.4rem; }
+
+/* ====================================== FICHES DE DOCUMENTATION (publiques)
+   Six fiches sur une page : repliées par défaut, parce qu'une seule intéresse
+   le lecteur à la fois et que six déroulées font quinze mètres. */
+.fd-f { border: 1px solid var(--border); border-radius: 12px; margin: 0 0 0.9rem;
+        background: var(--surface); }
+.fd-s { cursor: pointer; padding: 0.9rem 1.1rem; min-height: 44px;
+        display: flex; align-items: center; gap: 0.5rem; list-style: none; }
+.fd-s::-webkit-details-marker { display: none; }
+.fd-s::before { content: "▸"; color: var(--ink-dim); transition: transform .15s ease; }
+.fd-f[open] > .fd-s::before { transform: rotate(90deg); }
+.fd-s h2 { font-size: 1.02rem; margin: 0; color: var(--ink);
+           font-family: var(--font-head, inherit); }
+.fd-s:hover h2 { color: var(--accent); }
+.fd-c { padding: 0 1.1rem 1.1rem; }
+.fd-c h3 { font-size: 0.98rem; margin: 1.2rem 0 0.4rem; color: var(--ink); }
+.fd-c p, .fd-c li { font-size: 0.92rem; line-height: 1.65; color: var(--ink-dim); }
+.fd-c ul { padding-left: 1.2rem; }
+.fd-t { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 0.4rem 0 0.8rem; }
+.fd-t td { padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border);
+           vertical-align: top; color: var(--ink); }
+.fd-t td:first-child { color: var(--ink-dim); width: 34%; }
+/* L'encadré qui dit comment la fiche est produite : c'est lui qui distingue
+   cette documentation d'une plaquette, il ne doit pas se lire comme du corps. */
+.fd-avis { border-left: 4px solid var(--accent); padding: 0.6rem 0.9rem;
+           background: var(--surface-2); border-radius: 0 8px 8px 0;
+           color: var(--ink) !important; font-size: 0.9rem !important;
+           margin: 0.6rem 0 1rem; }
+.fd-it { font-style: italic; font-size: 0.86rem !important; }
+.fd-dl { margin-top: 1.2rem; }
+.fd-dl .btn { min-height: 44px; display: inline-flex; align-items: center; }
+@media print { .fd-f > .fd-c { display: block !important; } .fd-dl { display: none; } }

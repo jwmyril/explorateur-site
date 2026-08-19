@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<script>
+/* Thème avant le premier rendu — sans lui, éclair blanc puis bascule.
+   Ne pas déplacer plus bas ni différer : il doit précéder les styles. */
+(function(){try{var v=localStorage.getItem("atmart_apparence"),
+d=v==="sombre"||(v!=="clair"&&window.matchMedia&&
+window.matchMedia("(prefers-color-scheme: dark)").matches);
+if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"light");
+}catch(e){}})();
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
+  <title data-i18n="pg.fiches.title">Fich dokimantasyon seri done yo | Atmart Data</title>
+  <meta name="description" data-i18n-content="pg.fiches.desc" content="Les fiches de documentation des jeux de données d'Atmart, sur le modèle Datasheets for Datasets : complétude mesurée, concordance entre sources, passeport juridique et limites d'usage." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="../assets/style.css?v=35" />
+  <link rel="stylesheet" href="../assets/data.css?v=42" />
+  <script>
+  window.ATM_LANGUES = ["fr", "ht", "en", "es"];
+</script>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-solutions.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-solutions.html", "en": "https://explorateur.atmart.ltd/en/donnees-solutions.html", "es": "https://explorateur.atmart.ltd/es/donnees-solutions.html"};</script>
+
+  <link rel="canonical" href="https://explorateur.atmart.ltd/ht/donnees-fiches.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-fiches.html" />
+  <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-fiches.html" />
+  <link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-fiches.html" />
+  <link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-fiches.html" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/donnees-fiches.html" />
+  <script>window.ATM_LANG_FORCE = "ht"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-fiches.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-fiches.html", "en": "https://explorateur.atmart.ltd/en/donnees-fiches.html", "es": "https://explorateur.atmart.ltd/es/donnees-fiches.html"};</script>
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-5J0lbfNlAoYhsooHTa4h4hJk9ncm2ijwLigxrO//qiY=' 'sha256-BK3FZ/TIzzg29r+VSfb96lnTPTErgqSd+tu0iPZ9u6U=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-NDtJj80B1jg40mEpySlWSJz9mx16mlgJImsRlPk2N+I=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+</head>
+<body>
+<a class="lien-evitement" href="#contenu" data-i18n="nv.skip">Ale nan kontni an</a>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="../assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">done Atmart yo</small></a>
+    <button class="nav-toggle" aria-label="Meni" data-i18n-aria="nv.menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nv.expl_h">Eksploratè Ayiti</a></li>
+      <li><a href="/couches.html" data-i18n="nv.couches_h">Kouch yo</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Done</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Katalòg <small>seri done ak gid</small></a></li>
+          <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solisyon ak lisans <small>antrepriz, ONG, administrasyon</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>etidyan ak chèchè</small></a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parennen yon seri done <small>enstitisyon ak antrepriz</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Sèvis ak patenarya</a></li>
+          <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fich dokimantasyon</a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">Kijan sa mache <small>metòd, sous, sistèm</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="contenu" class="hero" style="padding:2.2rem 0 0.8rem">
+<div class="container">
+<p class="x-sur" data-i18n="fd.sur">Dokimantasyon piblik</p>
+<h1 data-i18n-html="fd.h1">Fich <em>dokimantasyon</em></h1>
+<p class="lead" style="max-width:60ch" data-i18n="fd.lead">Chak seri done Atmart pibliye gen fich pa l : sa l genyen ladan l, sa l kouvri tout bon, sa lisans li pèmèt, ak sa li pa pèmèt ou konkli. Ou ka li yo isit la, anvan ou angaje w.</p>
+<p class="fd-avis" data-i18n="fd.avis">Fich sa yo se MACHIN ki fè yo apati fichye ki pibliye yo : chif konplè yo rekonte chak fwa, yo pa janm kopye nan yon nòt. Se sa ki fè yo pa yon depliyan — epi se kè prestasyon « Atmart Verifye » a.</p>
+</div></section>
+<section><div class="container">
+<details class="fd-f"><summary class="fd-s"><h2>Écoles déclarées au MENFP, confrontées à OpenStreetMap</h2></summary><div class="fd-c">
+<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
+<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
+<h3>1. Bases : contact, diffusion, accès</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Nom du jeu</td><td>Écoles déclarées au ministère, confrontées aux écoles cartographiées</td></tr>
+<tr><td>Fichier</td><td><code>atmart_ecoles_declarees.json</code></td></tr>
+<tr><td>Millésime</td><td>2024-2025</td></tr>
+<tr><td>Responsable</td><td>Atmart Data — myriljeanwisner@gmail.com</td></tr>
+<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
+<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_ecoles_declarees.json">https://explorateur.atmart.ltd/data/atmart_ecoles_declarees.json</a></td></tr>
+</tbody></table></div>
+<h3>2. Contenu</h3>
+<ul>
+<li><b>Ce que représente chaque entrée</b> : une commune.</li>
+<li><b>Nombre d'entrées</b> : 140.</li>
+<li><b>Source d'origine</b> : MENFP — Direction de la planification et de la coopération externe (DPCE) (registres déclarés) ; OpenStreetMap — extrait HOT du 6 août 2026 (écoles vues)</li>
+</ul>
+<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Entrées portant une mesure</td><td><b>140 sur 140</b> (100 %)</td></tr>
+<tr><td>Critère de comptage</td><td>champ « t » non vide</td></tr>
+</tbody></table></div>
+<p>Toutes les entrées portent une mesure. <b>Cela ne veut pas dire que les valeurs sont justes</b> : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.</p>
+<h3>4. Concordance avec d'autres sources</h3>
+<p>Ce jeu est <b>confrontable</b> : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :</p>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>État</td><td>Communes</td></tr>
+<tr><td>concordant</td><td>19</td></tr>
+<tr><td>ecart_modere</td><td>33</td></tr>
+<tr><td>desaccord</td><td>80</td></tr>
+<tr><td>invérifiable</td><td>8</td></tr>
+</tbody></table></div>
+<p><b>Plus de trois entrées sur dix sont en fort désaccord avec l'autre source.</b> Ce jeu ne doit pas être employé seul pour une décision : la confrontation fait partie de la lecture.</p>
+<h3>5. Usages prévus, et usages inappropriés</h3>
+<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
+<p><b>Inapproprié</b> :</p>
+<ul>
+<li>traiter une absence comme un zéro ;</li>
+<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
+<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+</ul>
+<h3>6. Qualité des données — ce que le producteur signale</h3>
+<ul>
+<li>Registre = ce qui est DÉCLARÉ au ministère, pas ce qui est vu sur le terrain. Une école fermée mais non radiée y figure ; une école jamais recensée n'y figure pas.</li>
+<li>Comptage = codes CIE DISTINCTS. Des blocs de pages entières sont matériellement répétés dans certains registres ; 643 lignes d'établissement en double ont été écartées. Les deux cas les plus lourds : Artibonite pages 52 à 70 du PDF (257 lignes reprises des pages 47 à 52) et Nord pages 106 à 110 (66 lignes de Cap-Haïtien et de Limonade réimprimées au milieu de Ranquitte). La colonne controle porte le décompte commune par commune.</li>
+<li>Conséquence du point précédent : le nombre publié pour Ranquitte (Nord) ne repose que sur les lignes qui portent réellement son code. Si sa liste a été partiellement écrasée à l'impression, le registre ne permet pas de le savoir — on ne comble pas ce trou.</li>
+<li>Le secteur vient du 7e chiffre du CIE, porté par chaque ligne, et non de l'en-tête « SECTEUR PUBLIC / NON PUBLIC », absent ou erroné par endroits (132 lignes en divergence).</li>
+<li>page_pdf_debut est le numéro de page du PDF, qui ne coïncide pas avec le numéro imprimé en pied de page.</li>
+<li>Aucune donnée personnelle (téléphone, fondateur) n'est publiée.</li>
+<li>Aucune valeur départementale n'a été redescendue à la commune ; une commune absente du registre a un champ vide, jamais zéro.</li>
+<li>6 entités du registre n'ont pas de correspondant dans le référentiel territorial (communes récentes ou non reprises par la couche CNIGS) : elles sont publiées sans atmart_geo_id plutôt qu'écartées.</li>
+<li>Déclaré et vu ne mesurent pas la même chose : le registre compte ce qui est inscrit au ministère, la carte compte ce qui a été relevé par un contributeur. Leur écart décrit l'état de l'information, pas le nombre réel d'écoles.</li>
+<li>Le comptage cartographié additionne école, collège et préscolaire ; il écarte l'université, absente du registre.</li>
+<li>Une commune sans chiffre déclaré n'est pas une commune sans école : elle est absente du registre extrait.</li>
+</ul>
+<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
+<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<ul>
+<li>Le nombre d'écoles ne dit rien du <b>nombre d'élèves</b>, de la qualité, ni du niveau enseigné.</li>
+<li>L'écart entre déclaré et cartographié mesure l'état de la <b>cartographie</b>, pas le nombre réel d'écoles.</li>
+</ul>
+<h3>8. Vie privée</h3>
+<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
+<h3>9. Passeport juridique</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Passeport</td><td>PSP-043</td></tr>
+<tr><td>Producteur</td><td>MENFP / SIGEEE — Ministère de l'Éducation nationale</td></tr>
+<tr><td>Licence</td><td>Décret du 12 octobre 2005 sur le droit d'auteur, art. 5 : les textes officiels administratifs et les « simples données » sont exclus de la protection</td></tr>
+<tr><td>Statut juridique</td><td>OUVERTE_AVEC_ATTRIBUTION</td></tr>
+<tr><td>Redistribution</td><td>Oui pour les données ; NON pour la mise en forme des rapports</td></tr>
+<tr><td>Usage commercial</td><td>Oui — les faits ne sont pas appropriables</td></tr>
+<tr><td>Publiable librement</td><td>OUI</td></tr>
+<tr><td>Utilisable en prestation payante</td><td>OUI — les données ; pas la mise en forme</td></tr>
+<tr><td>Vérifié par / le</td><td>Décret haïtien du 12/10/2005 (WIPO Lex), art. 5 — analysé le 17/08/2026 — 2026-08-17</td></tr>
+</tbody></table></div>
+<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
+<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
+<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
+<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+</tbody></table></div>
+<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/ecoles_declarees.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
+</div></details>
+<details class="fd-f"><summary class="fd-s"><h2>Établissements de santé déclarés au MSPP</h2></summary><div class="fd-c">
+<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
+<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
+<h3>1. Bases : contact, diffusion, accès</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Nom du jeu</td><td>Établissements de santé déclarés au ministère, confrontés à ceux que la carte montre</td></tr>
+<tr><td>Fichier</td><td><code>atmart_sante_declaree.json</code></td></tr>
+<tr><td>Millésime</td><td>relevé du 17/08/2026</td></tr>
+<tr><td>Responsable</td><td>Atmart Data — myriljeanwisner@gmail.com</td></tr>
+<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
+<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_sante_declaree.json">https://explorateur.atmart.ltd/data/atmart_sante_declaree.json</a></td></tr>
+</tbody></table></div>
+<h3>2. Contenu</h3>
+<ul>
+<li><b>Ce que représente chaque entrée</b> : une commune.</li>
+<li><b>Nombre d'entrées</b> : 139.</li>
+<li><b>Source d'origine</b> : MSPP — Carte sanitaire (cartesanitaire.sisnu.net, point d'entrée public de l'outil officiel) ; OpenStreetMap — extrait Humanitarian OpenStreetMap Team du 6 août 2026</li>
+</ul>
+<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Entrées portant une mesure</td><td><b>139 sur 139</b> (100 %)</td></tr>
+<tr><td>Critère de comptage</td><td>champ « t » non vide</td></tr>
+</tbody></table></div>
+<p>Toutes les entrées portent une mesure. <b>Cela ne veut pas dire que les valeurs sont justes</b> : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.</p>
+<h3>4. Concordance avec d'autres sources</h3>
+<p>Ce jeu est <b>confrontable</b> : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :</p>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>État</td><td>Communes</td></tr>
+<tr><td>concordant</td><td>67</td></tr>
+<tr><td>ecart_modere</td><td>51</td></tr>
+<tr><td>desaccord</td><td>20</td></tr>
+<tr><td>invérifiable</td><td>2</td></tr>
+</tbody></table></div>
+<h3>5. Usages prévus, et usages inappropriés</h3>
+<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
+<p><b>Inapproprié</b> :</p>
+<ul>
+<li>traiter une absence comme un zéro ;</li>
+<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
+<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+</ul>
+<h3>6. Qualité des données — ce que le producteur signale</h3>
+<ul>
+<li>Registre = ce qui est DÉCLARÉ et enregistré au ministère, pas ce qui fonctionne. Un établissement fermé mais non radié y figure ; un dispensaire jamais enregistré n'y figure pas.</li>
+<li>La Carte sanitaire s'appuie sur l'évaluation de la prestation des services (EPSSS), conduite tous les cinq ans : entre deux campagnes, ouvertures et fermetures n'y entrent pas.</li>
+<li>Déclaré et vu ne mesurent pas la même chose. Leur écart décrit l'état de l'information sur un territoire, jamais le nombre réel d'établissements qui s'y trouvent.</li>
+<li>Le comptage cartographié additionne hôpital, clinique, centre de santé et dispensaire ; il écarte la pharmacie et le cabinet dentaire, que le registre ne recense pas de la même façon.</li>
+<li>Une commune absente du registre n'est pas une commune sans établissement : elle est absente du registre extrait.</li>
+<li>Aucun nom d'établissement n'est publié ici : le comptage suffit à la fiche, la liste nominative reste chez son producteur.</li>
+</ul>
+<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
+<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<ul>
+<li>Le nombre d'établissements ne dit rien de leur <b>capacité</b>, de leur personnel, ni de leurs heures d'ouverture.</li>
+<li>Un établissement <b>déclaré</b> peut être fermé ; un établissement <b>cartographié</b> peut être un cabinet privé fermé depuis des années.</li>
+<li>Aucune conclusion sur l'accès : deux communes à cinq établissements n'ont pas le même accès si l'une est montagneuse.</li>
+</ul>
+<h3>8. Vie privée</h3>
+<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
+<h3>9. Passeport juridique</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Passeport</td><td>PSP-048</td></tr>
+<tr><td>Producteur</td><td>Ministère de la Santé publique et de la Population (MSPP)</td></tr>
+<tr><td>Licence</td><td>Données publiques haïtiennes — décret du 12/10/2005, art. 5 (textes administratifs et simples données hors protection)</td></tr>
+<tr><td>Statut juridique</td><td>OUVERTE_VALIDEE</td></tr>
+<tr><td>Redistribution</td><td>Oui — hors protection</td></tr>
+<tr><td>Usage commercial</td><td>Oui — hors protection</td></tr>
+<tr><td>Publiable librement</td><td>OUI — registre public d'établissements de santé, publié par le ministère pour consultation</td></tr>
+<tr><td>Utilisable en prestation payante</td><td>OUI — aucune restriction commerciale sur un registre administratif</td></tr>
+<tr><td>Vérifié par / le</td><td>Atmart Data — 17/08/2026, décret du 12/10/2005 art. 5 — 2026-08-17</td></tr>
+</tbody></table></div>
+<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
+<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
+<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
+<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+</tbody></table></div>
+<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/sante_declaree.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
+</div></details>
+<details class="fd-f"><summary class="fd-s"><h2>Concordance des sources par commune</h2></summary><div class="fd-c">
+<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
+<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
+<h3>1. Bases : contact, diffusion, accès</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Nom du jeu</td><td>Concordance des sources, commune par commune</td></tr>
+<tr><td>Fichier</td><td><code>atmart_concordance.json</code></td></tr>
+<tr><td>Millésime</td><td>voir « source »</td></tr>
+<tr><td>Responsable</td><td>Atmart Data — myriljeanwisner@gmail.com</td></tr>
+<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
+<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_concordance.json">https://explorateur.atmart.ltd/data/atmart_concordance.json</a></td></tr>
+</tbody></table></div>
+<h3>2. Contenu</h3>
+<ul>
+<li><b>Ce que représente chaque entrée</b> : une commune.</li>
+<li><b>Nombre d'entrées</b> : 140.</li>
+<li><b>Source d'origine</b> : MSPP et OpenStreetMap (santé) ; MENFP et OpenStreetMap (écoles) ; IHSI, UNFPA/OCHA et WorldPop (population)</li>
+</ul>
+<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Entrées portant une mesure</td><td><b>140 sur 140</b> (100 %)</td></tr>
+<tr><td>Critère de comptage</td><td>champ « n » non vide</td></tr>
+</tbody></table></div>
+<p>Toutes les entrées portent une mesure. <b>Cela ne veut pas dire que les valeurs sont justes</b> : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.</p>
+<h3>4. Concordance avec d'autres sources</h3>
+<p><b>Aucune autre source ne mesure le même objet</b> dans le périmètre d'Atmart. Ce jeu est donc INVÉRIFIABLE en l'état — ce qui n'est pas un défaut de qualité, mais une limite de ce qu'on peut affirmer. Une seconde source serait la première amélioration à chercher.</p>
+<h3>5. Usages prévus, et usages inappropriés</h3>
+<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
+<p><b>Inapproprié</b> :</p>
+<ul>
+<li>traiter une absence comme un zéro ;</li>
+<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
+<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+</ul>
+<h3>6. Qualité des données — ce que le producteur signale</h3>
+<ul>
+<li>CET INDICE NE NOTE PAS LES TERRITOIRES. Une commune en « fort désaccord » n'est pas une commune mal équipée : c'est une commune sur laquelle nos sources se contredisent. Il mesure l'état de l'information, jamais celui du terrain.</li>
+<li>Un désaccord ne dit pas QUELLE source se trompe. Sur Gressier, c'est la projection officielle qui est aberrante et le satellite qui s'accorde avec l'IHSI — l'inverse de ce qu'on supposerait.</li>
+<li>« Invérifiable » n'est pas « fiable » : c'est une famille où une seule source existe, donc où rien ne peut être confronté. C'est souvent plus inquiétant qu'un désaccord visible.</li>
+<li>Les seuils 1,5 et 3 sont un choix d'Atmart, publié pour être discuté : le produit détaillé permet de recalculer autrement.</li>
+<li>Aucune source n'est corrigée, aucune moyenne n'est faite : la moyenne d'un chiffre vrai et d'un chiffre faux est un troisième chiffre faux, avec l'autorité d'un calcul.</li>
+</ul>
+<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
+<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<ul>
+<li>Les valeurs décrivent un <b>état mesuré</b>, jamais une prévision.</li>
+<li>Aucune causalité ne se lit ici : deux grandeurs corrélées sur 140 communes ne se commandent pas l'une l'autre.</li>
+</ul>
+<h3>8. Vie privée</h3>
+<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
+<h3>9. Passeport juridique</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Passeport</td><td>PSP-049</td></tr>
+<tr><td>Producteur</td><td>Atmart Data</td></tr>
+<tr><td>Licence</td><td>CC BY 4.0 — attribution « Atmart Data, Explorateur Haïti » ; les sources confrontées gardent chacune leur propre licence</td></tr>
+<tr><td>Statut juridique</td><td>OUVERTE_AVEC_ATTRIBUTION</td></tr>
+<tr><td>Redistribution</td><td>Oui</td></tr>
+<tr><td>Usage commercial</td><td>Oui</td></tr>
+<tr><td>Publiable librement</td><td>OUI — production Atmart sur des sources ouvertes, aucune restriction héritée</td></tr>
+<tr><td>Utilisable en prestation payante</td><td>OUI — c'est le socle de la prestation « Atmart Vérifié »</td></tr>
+<tr><td>Vérifié par / le</td><td>Atmart Data — 18/08/2026, production propre sur sources ouvertes (MSPP décret 12/10/2005 art. 5, MENFP idem, OSM ODbL, IHSI, UNFPA CC BY-IGO, WorldPop CC BY 4.0) — 2026-08-18</td></tr>
+</tbody></table></div>
+<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
+<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
+<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
+<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+</tbody></table></div>
+<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/concordance.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
+</div></details>
+<details class="fd-f"><summary class="fd-s"><h2>Temps d'accès aux services par la route</h2></summary><div class="fd-c">
+<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
+<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
+<h3>1. Bases : contact, diffusion, accès</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Nom du jeu</td><td>Temps d'accès par la route, par commune</td></tr>
+<tr><td>Fichier</td><td><code>atmart_acces_routier.json</code></td></tr>
+<tr><td>Millésime</td><td>voir « source »</td></tr>
+<tr><td>Responsable</td><td>Atmart Data — myriljeanwisner@gmail.com</td></tr>
+<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
+<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_acces_routier.json">https://explorateur.atmart.ltd/data/atmart_acces_routier.json</a></td></tr>
+</tbody></table></div>
+<h3>2. Contenu</h3>
+<ul>
+<li><b>Ce que représente chaque entrée</b> : une commune.</li>
+<li><b>Nombre d'entrées</b> : 140.</li>
+<li><b>Source d'origine</b> : OpenStreetMap — extrait Humanitarian OpenStreetMap Team du 6 août 2026 (routes, santé, écoles, points d'intérêt) ; marchés suivis : PAM via OCHA HDX, relevé du 13 août 2026</li>
+</ul>
+<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Entrées portant une mesure</td><td><b>140 sur 140</b> (100 %)</td></tr>
+<tr><td>Critère de comptage</td><td>toutes les entrées portent une mesure</td></tr>
+</tbody></table></div>
+<p>Toutes les entrées portent une mesure. <b>Cela ne veut pas dire que les valeurs sont justes</b> : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.</p>
+<h3>4. Concordance avec d'autres sources</h3>
+<p><b>Aucune autre source ne mesure le même objet</b> dans le périmètre d'Atmart. Ce jeu est donc INVÉRIFIABLE en l'état — ce qui n'est pas un défaut de qualité, mais une limite de ce qu'on peut affirmer. Une seconde source serait la première amélioration à chercher.</p>
+<h3>5. Usages prévus, et usages inappropriés</h3>
+<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
+<p><b>Inapproprié</b> :</p>
+<ul>
+<li>traiter une absence comme un zéro ;</li>
+<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
+<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+</ul>
+<h3>6. Qualité des données — ce que le producteur signale</h3>
+<ul>
+<li>Temps en CONDITIONS NORMALES. L'état de la chaussée, la saison des pluies, les barrages routiers, les embouteillages et l'insécurité n'entrent PAS dans le calcul. Le chiffre est un plancher optimiste, jamais une prévision de trajet.</li>
+<li>Un établissement cartographié n'est pas un établissement fonctionnel : OSM enregistre un bâtiment vu, pas un service rendu. « L'hôpital est à 22 minutes » ne dit rien du personnel, des médicaments ni des horaires.</li>
+<li>OpenStreetMap est contributif : une commune peu cartographiée a peu de routes ET peu de destinations, ce qui allonge ses temps ou les rend incalculables. C'est un défaut de la carte, pas du territoire.</li>
+<li>Aucune liaison maritime n'entre dans le calcul. Les communes insulaires (La Tortue, Île à Vache, La Gonâve) n'ont pas de temps vers le continent — et ne doivent pas en avoir.</li>
+<li>Les sens uniques sont ignorés et le dernier tronçon jusqu'à la porte n'est pas compté : deux biais supplémentaires, tous deux dans le sens de l'optimisme.</li>
+<li>La famille « hôpital » suit l'étiquetage OSM, qui en Haïti range sous ce mot beaucoup de dispensaires et de centres de santé. Elle est plus large que le mot ne le suggère.</li>
+<li>Les coordonnées des marchés suivis par le PAM sont publiées au centième de degré, soit environ un kilomètre de précision.</li>
+<li>Le barème liste des classes rapides (autoroute, voie express) qui n'existent nulle part en Haïti : la vitesse la plus élevée réellement appliquée est celle des routes primaires.</li>
+</ul>
+<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
+<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<ul>
+<li>Les valeurs décrivent un <b>état mesuré</b>, jamais une prévision.</li>
+<li>Aucune causalité ne se lit ici : deux grandeurs corrélées sur 140 communes ne se commandent pas l'une l'autre.</li>
+</ul>
+<h3>8. Vie privée</h3>
+<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
+<h3>9. Passeport juridique</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Passeport</td><td>PSP-024</td></tr>
+<tr><td>Producteur</td><td>OpenStreetMap Contributors</td></tr>
+<tr><td>Licence</td><td>ODbL 1.0</td></tr>
+<tr><td>Statut juridique</td><td>OUVERTE_AVEC_PARTAGE_IDENTIQUE</td></tr>
+<tr><td>Redistribution</td><td>Oui</td></tr>
+<tr><td>Usage commercial</td><td>Oui</td></tr>
+<tr><td>Publiable librement</td><td>OUI</td></tr>
+<tr><td>Utilisable en prestation payante</td><td>OUI — sous ODbL</td></tr>
+<tr><td>Vérifié par / le</td><td>WebFetch page Geofabrik 17/08/2026 — 2026-08-17</td></tr>
+</tbody></table></div>
+<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
+<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
+<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
+<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+</tbody></table></div>
+<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/acces_routier.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
+</div></details>
+<details class="fd-f"><summary class="fd-s"><h2>Population — trois sources confrontées</h2></summary><div class="fd-c">
+<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
+<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
+<h3>1. Bases : contact, diffusion, accès</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Nom du jeu</td><td>Population — trois sources confrontées</td></tr>
+<tr><td>Fichier</td><td><code>atmart_population_trois_sources.json</code></td></tr>
+<tr><td>Millésime</td><td>voir « source »</td></tr>
+<tr><td>Responsable</td><td>Atmart Data — myriljeanwisner@gmail.com</td></tr>
+<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
+<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_population_trois_sources.json">https://explorateur.atmart.ltd/data/atmart_population_trois_sources.json</a></td></tr>
+</tbody></table></div>
+<h3>2. Contenu</h3>
+<ul>
+<li><b>Ce que représente chaque entrée</b> : une commune.</li>
+<li><b>Nombre d'entrées</b> : 140.</li>
+<li><b>Source d'origine</b> : IHSI 2024 · UNFPA/OCHA COD-PS 2024 · WorldPop 2020</li>
+</ul>
+<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Entrées portant une mesure</td><td><b>139 sur 140</b> (99 %)</td></tr>
+<tr><td>Critère de comptage</td><td>champ « i » non vide</td></tr>
+</tbody></table></div>
+<p><b>1 entrée(s) sans mesure.</b> Ce ne sont pas des zéros : la source ne les couvre pas. Toute lecture qui les traiterait comme des zéros serait fausse — et c'est l'erreur la plus fréquente sur ce genre de jeu.</p>
+<h3>4. Concordance avec d'autres sources</h3>
+<p>Ce jeu est <b>confrontable</b> : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :</p>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>État</td><td>Communes</td></tr>
+<tr><td>concordant</td><td>99</td></tr>
+<tr><td>ecart_modere</td><td>37</td></tr>
+<tr><td>desaccord</td><td>4</td></tr>
+</tbody></table></div>
+<h3>5. Usages prévus, et usages inappropriés</h3>
+<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
+<p><b>Inapproprié</b> :</p>
+<ul>
+<li>traiter une absence comme un zéro ;</li>
+<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
+<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+</ul>
+<h3>6. Qualité des données — ce que le producteur signale</h3>
+<ul>
+<li>Trois méthodes, trois chiffres. On ne les moyenne pas et on n'en supprime aucun : un écart important signale un endroit où les méthodes ne s'accordent pas, ce qui mérite d'être su.</li>
+</ul>
+<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
+<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<ul>
+<li>Trois estimations ne font pas un recensement. Haïti n'en a pas conduit depuis 2003 ; toute valeur récente est une estimation.</li>
+<li>Un désaccord entre sources ne désigne pas la source fautive.</li>
+</ul>
+<h3>8. Vie privée</h3>
+<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
+<h3>9. Passeport juridique</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Passeport</td><td>PSP-044</td></tr>
+<tr><td>Producteur</td><td>IHSI — Institut haïtien de statistique et d'informatique</td></tr>
+<tr><td>Licence</td><td>Décret du 12 octobre 2005 sur le droit d'auteur, art. 5 : les textes officiels administratifs et les « simples données » sont exclus de la protection</td></tr>
+<tr><td>Statut juridique</td><td>OUVERTE_AVEC_ATTRIBUTION</td></tr>
+<tr><td>Redistribution</td><td>Oui pour les données ; NON pour la mise en forme des rapports</td></tr>
+<tr><td>Usage commercial</td><td>Oui — les faits ne sont pas appropriables</td></tr>
+<tr><td>Publiable librement</td><td>OUI</td></tr>
+<tr><td>Utilisable en prestation payante</td><td>OUI — les données ; pas la mise en forme</td></tr>
+<tr><td>Vérifié par / le</td><td>Décret haïtien du 12/10/2005 (WIPO Lex), art. 5 — analysé le 17/08/2026 — 2026-08-17</td></tr>
+</tbody></table></div>
+<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
+<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
+<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
+<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+</tbody></table></div>
+<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/population_trois_sources.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
+</div></details>
+<details class="fd-f"><summary class="fd-s"><h2>Équipements santé et écoles cartographiés (OpenStreetMap)</h2></summary><div class="fd-c">
+<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
+<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
+<h3>1. Bases : contact, diffusion, accès</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Nom du jeu</td><td>Équipements santé et écoles cartographiés (OpenStreetMap)</td></tr>
+<tr><td>Fichier</td><td><code>atmart_equipements_hot.json</code></td></tr>
+<tr><td>Millésime</td><td>voir « source »</td></tr>
+<tr><td>Responsable</td><td>Atmart Data — myriljeanwisner@gmail.com</td></tr>
+<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
+<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_equipements_hot.json">https://explorateur.atmart.ltd/data/atmart_equipements_hot.json</a></td></tr>
+</tbody></table></div>
+<h3>2. Contenu</h3>
+<ul>
+<li><b>Ce que représente chaque entrée</b> : une commune.</li>
+<li><b>Nombre d'entrées</b> : 140.</li>
+<li><b>Source d'origine</b> : OpenStreetMap, extrait Humanitarian OpenStreetMap Team du 6 août 2026</li>
+</ul>
+<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Entrées portant une mesure</td><td><b>139 sur 140</b> (99 %)</td></tr>
+<tr><td>Critère de comptage</td><td>champ « s » non vide</td></tr>
+</tbody></table></div>
+<p><b>1 entrée(s) sans mesure.</b> Ce ne sont pas des zéros : la source ne les couvre pas. Toute lecture qui les traiterait comme des zéros serait fausse — et c'est l'erreur la plus fréquente sur ce genre de jeu.</p>
+<h3>4. Concordance avec d'autres sources</h3>
+<p>Ce jeu est <b>confrontable</b> : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :</p>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>État</td><td>Communes</td></tr>
+<tr><td>concordant</td><td>67</td></tr>
+<tr><td>ecart_modere</td><td>51</td></tr>
+<tr><td>desaccord</td><td>20</td></tr>
+<tr><td>invérifiable</td><td>2</td></tr>
+</tbody></table></div>
+<h3>5. Usages prévus, et usages inappropriés</h3>
+<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
+<p><b>Inapproprié</b> :</p>
+<ul>
+<li>traiter une absence comme un zéro ;</li>
+<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
+<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+</ul>
+<h3>6. Qualité des données — ce que le producteur signale</h3>
+<ul>
+<li>OpenStreetMap est une base contributive : sa couverture suit les cartographes, pas le terrain. Une commune peu cartographiée paraît sous-équipée — c'est un défaut de la carte, pas du territoire.</li>
+</ul>
+<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
+<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<ul>
+<li>Le nombre d'établissements ne dit rien de leur <b>capacité</b>, de leur personnel, ni de leurs heures d'ouverture.</li>
+<li>Un établissement <b>déclaré</b> peut être fermé ; un établissement <b>cartographié</b> peut être un cabinet privé fermé depuis des années.</li>
+<li>Aucune conclusion sur l'accès : deux communes à cinq établissements n'ont pas le même accès si l'une est montagneuse.</li>
+</ul>
+<h3>8. Vie privée</h3>
+<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
+<h3>9. Passeport juridique</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Passeport</td><td>PSP-024</td></tr>
+<tr><td>Producteur</td><td>OpenStreetMap Contributors</td></tr>
+<tr><td>Licence</td><td>ODbL 1.0</td></tr>
+<tr><td>Statut juridique</td><td>OUVERTE_AVEC_PARTAGE_IDENTIQUE</td></tr>
+<tr><td>Redistribution</td><td>Oui</td></tr>
+<tr><td>Usage commercial</td><td>Oui</td></tr>
+<tr><td>Publiable librement</td><td>OUI</td></tr>
+<tr><td>Utilisable en prestation payante</td><td>OUI — sous ODbL</td></tr>
+<tr><td>Vérifié par / le</td><td>WebFetch page Geofabrik 17/08/2026 — 2026-08-17</td></tr>
+</tbody></table></div>
+<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<div class="x-tabwrap"><table class="fd-t"><tbody>
+<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
+<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
+<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
+<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+</tbody></table></div>
+<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/equipements_hot.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
+</div></details>
+<p class="x-note" data-i18n-html="fd.contact">Pou fè odite yon seri done : <a href="donnees-services.html">Atmart Verifye</a> oswa <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a>.</p>
+</div></section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">Yon pwodwi <a href="https://atmart.ltd/">Atmart Data</a> — done ki gen sous, ki gen dat, ou ka verifye, sou 140 komin Ayiti yo.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_donnees">Done</h4>
+        <ul>
+          <li><a href="/couches.html" data-i18n="ft.couches">Kouch yo</a></li>
+          <li><a href="datasets.html" data-i18n="ft.cat">Katalòg</a></li>
+          <li><a href="donnees.html" data-i18n="ft.comment">Kijan sa mache</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solisyon ak lisans</a></li>
+          <li><a href="donnees-services.html" data-i18n="ft.serv">Sèvis ak patenarya</a></li>
+          <li><a href="donnees-fiches.html" data-i18n="ft.fiches">Fich dokimantasyon</a></li>
+          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definisyon ak metòd</a></li>
+          <li><a href="/donnees-systeme.html" data-i18n="ft.carte">Kat sistèm nan</a></li>
+          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Konfyans ak metòd</a></li>
+          <li><a href="/archives.html" data-i18n="ft.arch">Achiv ak sitasyon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_contact">Kontak</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. Eksploratè Ayiti a gratis, san kont, san tracker piblisite — se sèlman yon mezi odyans anonim epi agrege ki egziste, <a href="/donnees-confiance.html#mesure">metòd la pibliye</a>.</div>
+  </div>
+</footer>
+
+<script src="../assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+<script>
+  /* Les champs sont declares ici et non dans le composant : chaque page a les
+     siens, et le libelle envoye a Atmart doit rester lisible par un humain. */
+  window.ATM_FORM = {
+    form: "sol-form", panneau: "sol-envoi",
+    sujet: "Atmart Data — demande ({org})",
+    champs: [["Organisation", "org"], ["Type d'organisation", "type"], ["Contact", "nom"], ["Courriel", "email"], ["Besoin", "besoin"], ["Territoire", "zone"], ["Échéance", "delai"], ["Budget", "budget"], ["Décision à prendre", "msg"]]
+  };
+</script>
+<script src="../assets/formulaire.js?v=2"></script>
+<script src="../assets/mesure.js?v=2" defer></script>
+<script src="../assets/ux.js?v=1" defer></script>
+<script src="../assets/i18n.js?v=19"></script>
+<script src="../assets/theme.js?v=3" defer></script>
+</body>
+</html>

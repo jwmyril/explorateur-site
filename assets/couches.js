@@ -30,20 +30,25 @@
       },
       source: "ACLED via HDX — attribution acleddata.com obligatoire",
       limite: "Événements RAPPORTÉS : la couverture médiatique varie selon les zones — un faible chiffre peut refléter un faible signalement." },
-    { id: "deplaces", nom: "Personnes déplacées présentes (OIM DTM)", type: "choroplethe",
-      csv: "data/atmart_deplaces_HT.csv", pcode: "pcode",
-      agreger: function (rows) {
-        var m = {}, dates = [];
-        rows.forEach(function (r) {
-          if (r.niveau_admin !== "2") return;
-          m[r.pcode] = +r.personnes_deplacees_presentes || 0;
-          dates.push(String(r.date_rapport).slice(0, 10));
-        });
-        return { valeurs: m, periode: "dernière ronde (" + dates.sort().pop() + ")",
-                 unite: "personnes déplacées présentes" };
-      },
+    /* LA DONNÉE EXISTE. NOUS N'AVONS PAS LE DROIT DE LA REPUBLIER.
+       Retirée le 18/08/2026 (passeport PSP-056). Les conditions de l'OIM
+       autorisent la consultation, le téléchargement et l'impression, et
+       excluent nommément « any right to sell, resell, redistribute or create
+       derivative works therefrom ». Une carte communale tirée du DTM est les
+       deux choses interdites à la fois.
+
+       POURQUOI LA COUCHE RESTE DANS LA LISTE au lieu de disparaître : un
+       lecteur qui cherche les déplacés et ne trouve rien conclut que nous
+       n'avons pas la donnée, ou que le site est en panne. Il doit apprendre
+       qu'elle existe, qu'elle est tenue à jour, et où la lire. Une absence
+       expliquée est une information ; une absence muette est une avarie. */
+    { id: "deplaces", nom: "Personnes déplacées présentes (OIM DTM)",
+      type: "manque_juridique",
       source: "OIM — Displacement Tracking Matrix (via HDX)",
-      limite: "Recensement des sites accessibles à l'OIM — pas un registre exhaustif des déplacés." },
+      motif: "Les conditions d'utilisation de l'OIM permettent de consulter, télécharger et imprimer ces données, mais excluent expressément leur redistribution et toute œuvre dérivée. Une carte communale produite à partir du DTM serait les deux à la fois. L'Explorateur ne la publie donc pas.",
+      lire: [["Matrice de suivi des déplacements — OIM Haïti", "https://dtm.iom.int/haiti"],
+             ["Le jeu de données sur HDX", "https://data.humdata.org/dataset/hti-iom-dtm-from-api"]],
+      limite: "Cette absence est juridique, pas statistique : le chiffre existe et il est mis à jour régulièrement. Ne pas la lire comme une absence de personnes déplacées." },
     { id: "ipc", nom: "Insécurité alimentaire — phase IPC", type: "aplat_dep",
       csv: "data/atmart_ipc_HT.csv",
       source: "IPC — analyse de mars 2026 (CC0)",
@@ -894,6 +899,45 @@
              { source: doc.source + " — " + doc.licence, limite: doc.limite || couche.limite });
   }
 
+  /* RENDU D'UN MANQUE JURIDIQUE.
+     Ce n'est ni une carte vide, ni une erreur : c'est une page qui dit ce
+     qu'on sait, pourquoi on ne le montre pas, et où le lire. On n'y écrit
+     AUCUN chiffre — pas même un ordre de grandeur « pour situer » : citer
+     une valeur qu'on s'interdit de publier serait publier quand même, en
+     plus petit. */
+  function rendreManqueJuridique(couche) {
+    var liens = (couche.lire || []).map(function (x) {
+      return '<li><a href="' + esc(x[1]) + '" rel="noopener noreferrer" ' +
+             'target="_blank">' + esc(T(x[0])) + "</a></li>";
+    }).join("");
+    $("#k-carte").innerHTML =
+      '<div class="k-interdit" role="note">' +
+      "<h3>" + esc(T("Donnée non republiable")) + "</h3>" +
+      "<p>" + esc(T(couche.motif || "")) + "</p>" +
+      (liens ? "<p>" + esc(T("Où la consulter directement")) +
+               " :</p><ul>" + liens + "</ul>" : "") +
+      "<p>" + esc(T("Si l'Organisation internationale pour les migrations " +
+                    "autorise un jour cette republication par écrit, la couche " +
+                    "reviendra telle quelle.")) + "</p></div>";
+    $("#k-legende").innerHTML = "";
+    $("#k-source").textContent = T("Source") + " : " + couche.source;
+    $("#k-limite").textContent = T("Limite") + " : " + T(couche.limite);
+    /* L'assistant doit savoir qu'il n'a AUCUNE valeur ici. Sans cette
+       publication il garderait les faits de la carte précédente et
+       répondrait sur des déplacés avec les chiffres d'une autre couche —
+       la pire forme d'hallucination, celle qui est arithmétiquement juste. */
+    derniereCarte = [
+      "PAGE : cartes thématiques de l'Explorateur Haïti (140 communes).",
+      "CARTE AFFICHÉE : " + couche.nom,
+      "AUCUNE VALEUR N'EST DISPONIBLE SUR CETTE PAGE.",
+      "MOTIF : " + (couche.motif || ""),
+      "SOURCE : " + (couche.source || "—"),
+      "LIMITE DE CETTE CARTE : " + (couche.limite || "—"),
+      "CONSIGNE : ne citer aucun nombre de personnes déplacées ; renvoyer le " +
+      "lecteur vers dtm.iom.int."
+    ].join(String.fromCharCode(10));
+  }
+
   function dessiner(svgCorps, legende, meta) {
     $("#k-carte").innerHTML =
       '<svg viewBox="0 0 ' + L + " " + H + '" role="img" preserveAspectRatio="xMidYMid meet">' +
@@ -954,6 +998,15 @@
     $("#k-attente").hidden = false;
     var fini = function () { $("#k-attente").hidden = true; };
     try { history.replaceState(null, "", "?couche=" + id); } catch (e) {}
+    /* Le manque juridique se rend AVANT tout chargement : il n'y a pas de
+       fichier à charger, et il ne doit pas y en avoir. Placer ce test après
+       aurait appelé charger(undefined) et affiché « le fichier n'a pas pu
+       être chargé » — c'est-à-dire une panne, là où il y a une décision. */
+    if (couche.type === "manque_juridique") {
+      rendreManqueJuridique(couche);
+      fini();
+      return;
+    }
     var u = couche.geojson || couche.csv;
     (cache[u] ? Promise.resolve(cache[u]) : charger(u).then(function (t) {
       cache[u] = couche.geojson ? JSON.parse(t) : parseCSV(t);

@@ -1445,3 +1445,67 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
 .fd-dl { margin-top: 1.2rem; }
 .fd-dl .btn { min-height: 44px; display: inline-flex; align-items: center; }
 @media print { .fd-f > .fd-c { display: block !important; } .fd-dl { display: none; } }
+
+/* ============================================================ PRESTATIONS
+   Les fiches de diagnostic, sur la page Services, et l'étiquette qui les
+   distingue dans le catalogue.
+
+   POURQUOI « ce que ce diagnostic ne fait PAS » EST MIS EN VALEUR au lieu
+   d'être relégué en petit. C'est la section que personne n'écrit, et c'est
+   celle qui évite de vendre une prestation qui ne répondra pas à la question
+   du client. La cacher visuellement reviendrait à l'écrire pour se couvrir,
+   pas pour être lu — exactement ce qu'on reproche aux mentions légales. */
+.tag-serv { background: var(--accent); color: var(--sur-accent); }
+
+.sv-fiche { border: 1px solid var(--border); border-left: 4px solid var(--accent);
+  border-radius: 0 12px 12px 0; padding: 1.3rem 1.4rem; margin: 1.2rem 0;
+  background: var(--surface); }
+.sv-fiche > h3 { margin: 0 0 0.9rem; font-size: 1.15rem; }
+
+.sv-grille { display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem 1.4rem; margin-bottom: 1rem; padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border); }
+@media (max-width: 640px) { .sv-grille { grid-template-columns: 1fr; } }
+.sv-grille p { margin: 0 0 0.2rem; font-size: 0.92rem; line-height: 1.5; }
+
+.sv-lab { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--ink-dim); font-weight: 600; margin: 1rem 0 0.35rem !important; }
+.sv-lab-non { color: var(--attention); }
+
+.sv-fiche ul { margin: 0 0 0.4rem; padding-left: 1.15rem; font-size: 0.94rem;
+  line-height: 1.65; }
+.sv-fiche li { margin-bottom: 0.3rem; }
+.sv-non { border-left: 3px solid var(--attention); padding-left: 1.1rem !important;
+  margin-left: 0.1rem; }
+.sv-ex { font-size: 0.94rem; line-height: 1.6; }
+.sv-preuve { margin: 0.5rem 0 0; font-size: 0.9rem; }
+.sv-cta { margin: 1.1rem 0 0; }
+.sv-cta .btn { min-height: 44px; display: inline-flex; align-items: center; }
+@media print { .sv-cta { display: none; } }
+
+/* ====================================================== LECTURE PAR VUES
+   La barre d'onglets de « Solutions & licences ». Voir assets/vues.js.
+
+   `.vue-barre:empty { display: none }` : sans JavaScript, la barre reste
+   vide et disparaît — le lecteur voit la page entière, sans un cadre creux
+   qui lui promettrait un tri qui n'aura pas lieu. */
+.vue-barre { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.4rem 0 0.5rem; }
+.vue-barre:empty { display: none; }
+.vue-barre:empty + .vue-note { display: none; }
+.vue-btn { font: inherit; font-size: 0.94rem; padding: 0.55rem 1rem;
+  min-height: 44px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--ink); cursor: pointer; }
+.vue-btn:hover { border-color: var(--border-fort); }
+.vue-btn.actif { background: var(--accent); color: var(--sur-accent);
+  border-color: var(--accent); font-weight: 600; }
+.vue-btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.vue-tout { margin-left: auto; font-style: italic; }
+@media (max-width: 560px) { .vue-tout { margin-left: 0; } }
+.vue-note { margin: 0 0 0.6rem; }
+
+/* L'IMPRESSION IGNORE LES VUES. Une page imprimée doit être complète : on
+   n'imprime pas un tiers d'un contrat sans s'en apercevoir. */
+@media print {
+  .vue-barre, .vue-note { display: none !important; }
+  [data-vue][hidden] { display: block !important; }
+}

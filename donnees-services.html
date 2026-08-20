@@ -21,12 +21,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=35" />
-  <link rel="stylesheet" href="assets/data.css?v=42" />
+  <link rel="stylesheet" href="assets/data.css?v=44" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-services.html" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
+  
   
   
   
@@ -78,16 +80,20 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Explorateur Haïti</a></li>
-      <li><a href="couches.html" data-i18n="nv.couches_h">Couches</a></li>
-      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Données</span></span>
+      <li><a href="couches.html" data-i18n="nv.cartes_h">Cartes thématiques</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services &amp; partenariats</span></span>
         <ul class="nav-sub">
-          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnostics &amp; prestations <small>prix sur demande</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
-          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
-          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
-          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Services &amp; partenariats <small>audit, diagnostic, parrainage</small></a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parrainer un jeu de données <small>institutions &amp; entreprises</small></a></li>
+        </ul>
+      </li>
+      <li class="nav-grp"><span><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Ressources</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue des jeux de données <small>données &amp; guides</small></a></li>
           <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fiches de documentation <small>complétude, sources, limites</small></a></li>
           <li><a href="donnees.html" data-i18n-html="nv.comment">Comment ça marche <small>méthode, sources, système</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
@@ -211,6 +217,147 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- ============================================================ PILIER 2 -->
+<section id="fiches-diagnostic">
+  <div class="container">
+    <h2 data-i18n="sv.fiches_h">Les fiches de diagnostic</h2>
+    <p class="lead" data-i18n="sv.fiches_lead">Une fiche par prestation : à qui elle s'adresse, les questions qu'elle tranche, ce que vous recevez, en combien de temps — et ce qu'elle ne fait pas. Cette dernière section est celle qu'on ne trouve nulle part ; c'est la même règle que pour nos données, un livrable qui tait ses limites n'est pas court, il est incomplet.</p>
+<!-- SERVICES:fiches — engendré par build_services.py, ne pas éditer à la main -->
+<article class="sv-fiche" id="srv-verifie">
+  <h3 data-i18n-html="sv.verifie_h">🔍 Atmart Vérifié — audit d'un jeu de données</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Pour qui</p><p data-i18n="sv.verifie_qui">Producteurs de données, ONG, ministères, projets qui s'apprêtent à publier ou à financer une collecte.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Délai</p><p data-i18n="sv.verifie_delai">Deux à trois semaines par jeu de données.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Prix</p><p data-i18n="sv.prix_dem">Sur demande — le périmètre décide du coût</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Les questions que ce diagnostic tranche</p>
+  <ul class="sv-q"><li data-i18n="sv.verifie_q0">Ce jeu couvre-t-il vraiment le territoire qu'il annonce ?</li><li data-i18n="sv.verifie_q1">Ses chiffres s'accordent-ils avec les autres sources publiques ?</li><li data-i18n="sv.verifie_q2">Avons-nous le droit de le publier, et de le facturer ?</li><li data-i18n="sv.verifie_q3">Que ne permet-il PAS de conclure ?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Ce que vous recevez</p>
+  <p data-i18n="sv.verifie_livre">Une fiche de documentation sur le modèle « Datasheets for Datasets » (Gebru et al., version Aether), augmentée de quatre sections propres à Atmart : complétude mesurée sur le fichier, concordance entre sources, passeport juridique à deux verdicts, et limites d'interprétation.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Exemple déjà produit, et public</p>
+  <p class="sv-ex" data-i18n="sv.verifie_ex">Six fiches déjà produites et publiques — écoles déclarées, santé déclarée, concordance, accès routier, population à trois sources, équipements OpenStreetMap.</p>
+  <p class="sv-preuve"><a href="donnees-fiches.html" data-i18n="sv.verifie_lien">Voir la preuve publiée</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Ce que ce diagnostic ne fait PAS</p>
+  <ul class="sv-non"><li data-i18n="sv.verifie_n0">Il ne CORRIGE pas le jeu : il le décrit. La correction est une autre prestation.</li><li data-i18n="sv.verifie_n1">Il ne juge pas le TERRITOIRE, seulement l'information qu'on en a.</li><li data-i18n="sv.verifie_n2">Il ne remplace pas un avis juridique : il établit ce que les conditions du producteur disent, et archive la preuve.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Atmart%20Vérifié" class="btn btn-primary" data-i18n="sv.cta">Demander un devis</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-diagnostic">
+  <h3 data-i18n-html="sv.diagnostic_h">🧭 Diagnostic territorial</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Pour qui</p><p data-i18n="sv.diagnostic_qui">Collectivités, bailleurs, ONG qui doivent choisir OÙ intervenir et justifier ce choix.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Délai</p><p data-i18n="sv.diagnostic_delai">Trois à six semaines selon le nombre de dimensions.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Prix</p><p data-i18n="sv.prix_dem">Sur demande — le périmètre décide du coût</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Les questions que ce diagnostic tranche</p>
+  <ul class="sv-q"><li data-i18n="sv.diagnostic_q0">Quelles communes cumulent les fragilités ?</li><li data-i18n="sv.diagnostic_q1">Où l'information est-elle si faible qu'aucune décision n'est défendable sans collecte préalable ?</li><li data-i18n="sv.diagnostic_q2">Quelles communes se ressemblent assez pour qu'un dispositif y soit répliqué ?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Ce que vous recevez</p>
+  <p data-i18n="sv.diagnostic_livre">Un rapport avec cartes, tableau de classement reproductible, et la méthode écrite pour que quiconque refasse le calcul. Les fichiers intermédiaires sont livrés, pas seulement les conclusions.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Exemple déjà produit, et public</p>
+  <p class="sv-ex" data-i18n="sv.diagnostic_ex">La carte « Où notre information est la plus faible » publiée sur l'Explorateur : 8 communes ont deux familles de données sur trois en désaccord ou invérifiables.</p>
+  <p class="sv-preuve"><a href="couches.html?couche=verifier" data-i18n="sv.diagnostic_lien">Voir la preuve publiée</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Ce que ce diagnostic ne fait PAS</p>
+  <ul class="sv-non"><li data-i18n="sv.diagnostic_n0">Il ne produit pas de données de terrain : il exploite l'existant et dit où l'existant ne suffit pas.</li><li data-i18n="sv.diagnostic_n1">Il ne classe pas les communes par « mérite » — un classement mesure l'état de l'INFORMATION autant que celui du territoire.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Diagnostic%20territorial" class="btn btn-primary" data-i18n="sv.cta">Demander un devis</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-carto">
+  <h3 data-i18n-html="sv.carto_h">🗺 Cartographie sur mesure</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Pour qui</p><p data-i18n="sv.carto_qui">Toute organisation qui doit montrer une réalité territoriale dans un rapport, une demande de financement ou une présentation publique.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Délai</p><p data-i18n="sv.carto_delai">Une à trois semaines.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Prix</p><p data-i18n="sv.prix_dem">Sur demande — le périmètre décide du coût</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Les questions que ce diagnostic tranche</p>
+  <ul class="sv-q"><li data-i18n="sv.carto_q0">Comment montrer ce phénomène sans le déformer ?</li><li data-i18n="sv.carto_q1">Quelle échelle est honnête pour ces données ?</li><li data-i18n="sv.carto_q2">Comment distinguer un zéro d'une absence de relevé ?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Ce que vous recevez</p>
+  <p data-i18n="sv.carto_livre">Cartes en fichiers ouverts — SVG, PNG haute définition, GeoJSON — avec leur légende, leur source, leur millésime et leurs limites. Réutilisables sans nous.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Exemple déjà produit, et public</p>
+  <p class="sv-ex" data-i18n="sv.carto_ex">Les 35 cartes thématiques de l'Explorateur, dont chacune porte sa source, sa licence et ce qu'elle ne dit pas.</p>
+  <p class="sv-preuve"><a href="couches.html" data-i18n="sv.carto_lien">Voir la preuve publiée</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Ce que ce diagnostic ne fait PAS</p>
+  <ul class="sv-non"><li data-i18n="sv.carto_n0">Nous ne produisons pas de carte dont les données ne supportent pas l'échelle demandée. Une carte communale à partir d'un chiffre national fabrique 140 valeurs fausses : nous la refusons.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Cartographie%20sur%20mesure" class="btn btn-primary" data-i18n="sv.cta">Demander un devis</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-harmonisation">
+  <h3 data-i18n-html="sv.harmonisation_h">🔗 Harmonisation de référentiels</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Pour qui</p><p data-i18n="sv.harmonisation_qui">Organisations dont plusieurs bases parlent des mêmes territoires sans s'accorder : noms différents, codes absents, découpages divergents.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Délai</p><p data-i18n="sv.harmonisation_delai">Deux à quatre semaines selon le volume.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Prix</p><p data-i18n="sv.prix_dem">Sur demande — le périmètre décide du coût</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Les questions que ce diagnostic tranche</p>
+  <ul class="sv-q"><li data-i18n="sv.harmonisation_q0">Combien de nos enregistrements se rattachent réellement à une commune identifiée ?</li><li data-i18n="sv.harmonisation_q1">Où nos bases se contredisent-elles ?</li><li data-i18n="sv.harmonisation_q2">Comment garder l'alignement quand les sources bougeront ?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Ce que vous recevez</p>
+  <p data-i18n="sv.harmonisation_livre">Une table de correspondance vers les p-codes officiels, le compte exact de ce qui n'a pas pu être rattaché — et pourquoi — et un script reproductible que vos équipes relancent seules.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Exemple déjà produit, et public</p>
+  <p class="sv-ex" data-i18n="sv.harmonisation_ex">Le référentiel territorial de l'Explorateur : 140 communes, 570 sections, identifiants stables, rattachement par arbre parent.</p>
+  <p class="sv-preuve"><a href="donnees-backbone.html" data-i18n="sv.harmonisation_lien">Voir la preuve publiée</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Ce que ce diagnostic ne fait PAS</p>
+  <ul class="sv-non"><li data-i18n="sv.harmonisation_n0">Nous ne rattachons jamais « au plus proche » un enregistrement ambigu. Ce qui ne se rattache pas reste NON RATTACHÉ, compté et listé — une correspondance inventée est indétectable ensuite.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Harmonisation%20de%20référentiels" class="btn btn-primary" data-i18n="sv.cta">Demander un devis</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-tableau">
+  <h3 data-i18n-html="sv.tableau_h">📊 Tableaux de bord et instances</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Pour qui</p><p data-i18n="sv.tableau_qui">Institutions qui veulent le moteur de l'Explorateur sur leurs propres données, ou un tableau de bord qui se rafraîchit seul.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Délai</p><p data-i18n="sv.tableau_delai">Quatre à huit semaines pour une instance ; deux semaines pour un modèle.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Prix</p><p data-i18n="sv.prix_dem">Sur demande — le périmètre décide du coût</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Les questions que ce diagnostic tranche</p>
+  <ul class="sv-q"><li data-i18n="sv.tableau_q0">Comment suivre ces indicateurs sans refaire le travail chaque mois ?</li><li data-i18n="sv.tableau_q1">Comment ouvrir nos données à nos équipes sans les exposer au public ?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Ce que vous recevez</p>
+  <p data-i18n="sv.tableau_livre">Une instance privée — identité visuelle, rôles, déploiement, support — ou un modèle Power BI/QGIS branché sur des sources qui se mettent à jour. Vos données restent les vôtres.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Exemple déjà produit, et public</p>
+  <p class="sv-ex" data-i18n="sv.tableau_ex">Les modèles Power BI et QGIS de l'Explorateur, en vente et déjà utilisés, se rafraîchissent d'un clic quand un fichier change.</p>
+  <p class="sv-preuve"><a href="datasets.html" data-i18n="sv.tableau_lien">Voir la preuve publiée</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Ce que ce diagnostic ne fait PAS</p>
+  <ul class="sv-non"><li data-i18n="sv.tableau_n0">Une instance privée ne donne aucun accès privilégié aux données publiques : le public et le privé lisent les mêmes chiffres.</li><li data-i18n="sv.tableau_n1">Nous n'hébergeons pas de données personnelles sans base légitime écrite.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Tableaux%20de%20bord%20et%20instances" class="btn btn-primary" data-i18n="sv.cta">Demander un devis</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-formation">
+  <h3 data-i18n-html="sv.formation_h">🎓 Formation et accompagnement</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Pour qui</p><p data-i18n="sv.formation_qui">Équipes qui doivent lire, produire ou contester des données territoriales — et le faire en kreyòl, en français ou en anglais.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Délai</p><p data-i18n="sv.formation_delai">Une à trois journées, selon le programme.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Prix</p><p data-i18n="sv.prix_dem">Sur demande — le périmètre décide du coût</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Les questions que ce diagnostic tranche</p>
+  <ul class="sv-q"><li data-i18n="sv.formation_q0">Comment lire une carte sans se tromper ?</li><li data-i18n="sv.formation_q1">Comment reconnaître une donnée qu'on ne devrait pas utiliser ?</li><li data-i18n="sv.formation_q2">Comment documenter nos propres jeux ?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Ce que vous recevez</p>
+  <p data-i18n="sv.formation_livre">Sessions en présentiel ou à distance, supports réutilisables, exercices sur les données réelles d'Haïti — pas sur des exemples inventés.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Exemple déjà produit, et public</p>
+  <p class="sv-ex" data-i18n="sv.formation_ex">Les tutoriels de pensée critique d'Atmart et les fiches de documentation, tous publics et réutilisables.</p>
+  <p class="sv-preuve"><a href="donnees-campus.html" data-i18n="sv.formation_lien">Voir la preuve publiée</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Ce que ce diagnostic ne fait PAS</p>
+  <ul class="sv-non"><li data-i18n="sv.formation_n0">Nous ne certifions personne : nous formons. Une attestation de présence est remise, jamais un diplôme.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Formation%20et%20accompagnement" class="btn btn-primary" data-i18n="sv.cta">Demander un devis</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-activation">
+  <h3 data-i18n-html="sv.activation_h">⚡ Activation rapide — cyclones et post-catastrophe</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Pour qui</p><p data-i18n="sv.activation_qui">Acteurs de la réponse humanitaire et collectivités exposées, avant et après un événement.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Délai</p><p data-i18n="sv.activation_delai">Préparation : quatre semaines. Activation : quelques jours.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Prix</p><p data-i18n="sv.prix_dem">Sur demande — le périmètre décide du coût</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Les questions que ce diagnostic tranche</p>
+  <ul class="sv-q"><li data-i18n="sv.activation_q0">Quelles communes sont exposées, et avec quelles capacités ?</li><li data-i18n="sv.activation_q1">Que sait-on déjà, avant d'envoyer une équipe ?</li><li data-i18n="sv.activation_q2">Qu'est-ce qui a changé depuis l'événement ?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Ce que vous recevez</p>
+  <p data-i18n="sv.activation_livre">Préparation annuelle avant la saison cyclonique, puis production accélérée après l'événement. Chaque activation produit AUSSI un rapport public d'intérêt général.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Exemple déjà produit, et public</p>
+  <p class="sv-ex" data-i18n="sv.activation_ex">Les couches cyclones et séismes de l'Explorateur, construites sur IBTrACS et ComCat, avec leurs limites écrites.</p>
+  <p class="sv-preuve"><a href="couches.html" data-i18n="sv.activation_lien">Voir la preuve publiée</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Ce que ce diagnostic ne fait PAS</p>
+  <ul class="sv-non"><li data-i18n="sv.activation_n0">Nous ne remplaçons ni la protection civile ni les systèmes d'alerte. Nous documentons ce qui est connu, nous ne prévoyons rien.</li><li data-i18n="sv.activation_n1">Ce qui est financé en urgence par un acteur reste lisible par tous : c'est une condition, pas une option.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Activation%20rapide" class="btn btn-primary" data-i18n="sv.cta">Demander un devis</a></p>
+</article>
+<!-- /SERVICES:fiches -->
+  </div>
+</section>
+
 <section class="sv-fond">
   <div class="container">
     <p class="sv-pilier" data-i18n="sv.p2_num">Pilier 2</p>
@@ -305,12 +452,11 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div>
         <h4 data-i18n="ft.h_donnees">Données</h4>
         <ul>
-          <li><a href="couches.html" data-i18n="ft.couches">Couches</a></li>
+          <li><a href="couches.html" data-i18n="ft.cartes">Cartes thématiques</a></li>
           <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
           <li><a href="donnees.html" data-i18n="ft.comment">Comment ça marche</a></li>
-          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
           <li><a href="donnees-services.html" data-i18n="ft.serv">Services &amp; partenariats</a></li>
-          <li><a href="donnees-fiches.html" data-i18n="ft.fiches">Fiches de documentation</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
           <li><a href="donnees-backbone.html" data-i18n="ft.def">Définitions &amp; méthodes</a></li>
           <li><a href="donnees-systeme.html" data-i18n="ft.carte">La carte du système</a></li>
           <li><a href="donnees-confiance.html" data-i18n="ft.conf">Confiance &amp; méthode</a></li>

@@ -21,11 +21,13 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=42" />
+  <link rel="stylesheet" href="../assets/data.css?v=44" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
+  
   
   
   
@@ -79,16 +81,20 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Haiti Explorer</a></li>
-      <li><a href="/couches.html" data-i18n="nv.couches_h">Layers</a></li>
-      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Data</span></span>
+      <li><a href="/couches.html" data-i18n="nv.cartes_h">Thematic maps</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services & partnerships</span></span>
         <ul class="nav-sub">
-          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue <small>datasets &amp; guides</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnostics &amp; engagements <small>price on request</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>companies, NGOs, administrations</small></a></li>
-          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>students &amp; researchers</small></a></li>
           <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Sponsor a dataset <small>institutions &amp; companies</small></a></li>
-          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Services & partnerships</a></li>
+        </ul>
+      </li>
+      <li class="nav-grp"><span><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Resources</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Dataset catalogue <small>data &amp; guides</small></a></li>
           <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Documentation sheets</a></li>
           <li><a href="donnees.html" data-i18n-html="nv.comment">How it works <small>method, sources, system</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>students &amp; researchers</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
@@ -108,8 +114,13 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   </div>
 </section>
 
+<div class="container">
+  <div class="vue-barre" data-vues role="group" aria-label="Choose a section of the page" data-i18n-aria="sol.vues_aria"></div>
+  <p class="vue-note x-note" data-i18n="sol.vues_note">The page is long: choose the part that concerns you, or show everything. Your choice is remembered, and each part has its own shareable address.</p>
+</div>
+
 <!-- CE POUR QUOI ON PAIE -->
-<section class="d-sec" style="padding-top:1rem">
+<section class="d-sec" style="padding-top:1rem" data-vue="qui" data-vue-nom="Pour qui">
   <div class="container">
     <p data-i18n-html="sol.eaaa56" class="d-lbl">What you are really buying</p>
     <h2 data-i18n-html="sol.0cd7dc" class="d-h">Five benefits, not one file</h2>
@@ -124,7 +135,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- SEGMENTS -->
-<section class="d-sec" id="entreprises">
+<section class="d-sec" id="entreprises" data-vue="qui" data-vue-nom="Pour qui">
   <div class="container">
     <p data-i18n-html="sol.990695" class="d-lbl">Businesses</p>
     <h2 data-i18n-html="sol.71e636" class="d-h">Deciding where to set up, whom to target, at what price</h2>
@@ -137,7 +148,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   </div>
 </section>
 
-<section class="d-sec" id="ong">
+<section class="d-sec" id="ong" data-vue="qui" data-vue-nom="Pour qui">
   <div class="container">
     <p data-i18n-html="sol.6900a9" class="d-lbl">NGOs &amp; donors</p>
     <h2 data-i18n-html="sol.546445" class="d-h">Target, prioritise, justify, evaluate</h2>
@@ -151,7 +162,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   </div>
 </section>
 
-<section class="d-sec" id="administrations">
+<section class="d-sec" id="administrations" data-vue="qui" data-vue-nom="Pour qui">
   <div class="container">
     <p data-i18n-html="sol.d12506" class="d-lbl">Government &amp; public bodies</p>
     <h2 data-i18n-html="sol.bba85b" class="d-h">A shared base, traceable and quotable</h2>
@@ -165,7 +176,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- PACKS -->
-<section class="d-sec" id="packs">
+<section class="d-sec" id="packs" data-vue="prestations" data-vue-nom="Prestations">
   <div class="container">
     <p data-i18n-html="sol.9b7efe" class="d-lbl">Decision packs</p>
     <h2 data-i18n-html="sol.31d2b3" class="d-h">A pack is one business question, not a folder of files</h2>
@@ -178,43 +189,43 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
             <td data-i18n-html="sol.cfc980"><b>Bespoke extraction</b> — the entry level</td>
             <td data-i18n-html="sol.aea67b">“I need ONE precise, clean cross-tabulation, this week” — one territory, one theme, one format</td>
             <td data-i18n-html="sol.24ebf5">A harmonised CSV or Excel file (p-codes, vintages, sources) with its Fèy Done, delivered within 5 working days</td>
-            <td data-i18n-html="sol.c82351" class="p">$150 flat</td>
+            <td class="p" data-i18n="sol.prix_dem">Price on request</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.61dec0">Siting</td>
             <td data-i18n-html="sol.c2b3ad">Where to open, in what order, with what catchment area?</td>
             <td data-i18n-html="sol.6b3826">Geographic base + population + distances, Power BI map, reading note</td>
-            <td class="p">250 – 900 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Price on request</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.93abea">Territorial targeting</td>
             <td data-i18n-html="sol.19f33e">Which communes or sections should come first?</td>
             <td data-i18n-html="sol.2fb6d0">P-code reference, prioritisation indicators, scoring grid</td>
-            <td class="p">250 – 900 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Price on request</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.5f0c2c">Territorial diagnosis</td>
             <td data-i18n-html="sol.8dfa0e">What do we really know about this territory?</td>
             <td data-i18n-html="sol.81e2b9">Multi-source territory profile, available series, identified data gaps</td>
-            <td class="p">400 – 1 200 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Price on request</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.3c03eb">Market study</td>
             <td data-i18n-html="sol.61071d">Does the market exist, and how big is it?</td>
             <td data-i18n-html="sol.b487ed">Economic series, regional comparisons, sizing assumptions</td>
-            <td class="p">600 – 1 500 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Price on request</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.0a93c9">Programme monitoring</td>
             <td data-i18n-html="sol.2efcdc">On what basis do we measure, year after year?</td>
             <td data-i18n-html="sol.ce38ec">Stable denominators, geographic reference, dashboard template</td>
-            <td class="p">600 – 1 500 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Price on request</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.245d8a">Comparison between territories</td>
             <td data-i18n-html="sol.5e9249">Where does this commune stand compared with the others?</td>
             <td data-i18n-html="sol.5c35f3">Series comparable across the 140 communes, identical method, ready-made visuals</td>
-            <td class="p">400 – 1 200 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Price on request</td>
           </tr>
         </tbody>
       </table></div>
@@ -224,7 +235,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- LICENCES -->
-<section class="d-sec" id="licences">
+<section class="d-sec" id="licences" data-vue="licences" data-vue-nom="Licences">
   <div class="container">
     <p data-i18n-html="sol.c00fc4" class="d-lbl">Licences</p>
     <h2 data-i18n-html="sol.b31273" class="d-h">Six licences, rights written in black and white</h2>
@@ -233,12 +244,12 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div class="x-tableau" tabindex="0"><table class="d-tab">
         <thead><tr><th data-i18n-html="sol.f3ec8e" scope="col">Licence</th><th data-i18n-html="sol.e770ad" scope="col">Who</th><th data-i18n-html="sol.cb3ecb" scope="col">Rights</th><th data-i18n-html="sol.54c324" scope="col">Price</th></tr></thead>
         <tbody>
-          <tr><td data-i18n-html="sol.1498d7">Discovery</td><td data-i18n-html="sol.579a85">Everyone</td><td data-i18n-html="sol.7387d7">Previews, samples, visualisations, teaching use and citation</td><td class="p">0 $</td></tr>
-          <tr><td data-i18n-html="sol.c03d95">Academic non-commercial</td><td data-i18n-html="sol.c8d1b1">Verified students, teachers, laboratories</td><td data-i18n-html="sol.41f2e1">Dissertation, teaching, research — citation required, resale and commercial use excluded</td><td data-i18n-html="sol.cb7475" class="p">$0 (via <a href="donnees-campus.html">Campus</a>)</td></tr>
-          <tr><td data-i18n-html="sol.a0be20">Professional single-user</td><td data-i18n-html="sol.24aa34">Consultant, independent analyst</td><td data-i18n-html="sol.eb7d17">Internal analysis and client deliverable, a single named user</td><td data-i18n-html="sol.754574" class="p">price of the dataset</td></tr>
-          <tr><td data-i18n-html="sol.2119a5">Team / institutional</td><td data-i18n-html="sol.e9258e">Businesses, NGOs, government, universities</td><td data-i18n-html="sol.473c74">Multi-user, framed internal sharing, updates included, support</td><td class="p">1 200 – 6 000 $/an</td></tr>
+          <tr><td data-i18n-html="sol.1498d7">Discovery</td><td data-i18n-html="sol.579a85">Everyone</td><td data-i18n-html="sol.7387d7">Previews, samples, visualisations, teaching use and citation</td><td class="p" data-i18n="sol.prix_dem">Price on request</td></tr>
+          <tr><td data-i18n-html="sol.c03d95">Academic non-commercial</td><td data-i18n-html="sol.c8d1b1">Verified students, teachers, laboratories</td><td data-i18n-html="sol.41f2e1">Dissertation, teaching, research — citation required, resale and commercial use excluded</td><td data-i18n-html="sol.cb7475" class="p">Free (via <a href="donnees-campus.html">Campus</a>)</td></tr>
+          <tr><td data-i18n-html="sol.a0be20">Professional single-user</td><td data-i18n-html="sol.24aa34">Consultant, independent analyst</td><td data-i18n-html="sol.eb7d17">Internal analysis and client deliverable, a single named user</td><td class="p" data-i18n="sol.prix_dem">Price on request</td></tr>
+          <tr><td data-i18n-html="sol.2119a5">Team / institutional</td><td data-i18n-html="sol.e9258e">Businesses, NGOs, government, universities</td><td data-i18n-html="sol.473c74">Multi-user, framed internal sharing, updates included, support</td><td class="p" data-i18n="sol.prix_dem">Price on request</td></tr>
           <tr><td data-i18n-html="sol.e20196">Sponsored</td><td data-i18n-html="sol.d75361">Cohort financed by a third party</td><td data-i18n-html="sol.eaaa4e">Full access for a defined theme and period</td><td data-i18n-html="sol.91363f" class="p">paid by the <a href="donnees-parrainage.html">sponsor</a></td></tr>
-          <tr><td data-i18n-html="sol.825175">Premium options</td><td data-i18n-html="sol.979c47">On request</td><td data-i18n-html="sol.44e53d">Customisation, integration, specific updates, training, enhanced support</td><td data-i18n-html="sol.3bba9a" class="p">on quotation</td></tr>
+          <tr><td data-i18n-html="sol.825175">Premium options</td><td data-i18n-html="sol.979c47">On request</td><td data-i18n-html="sol.44e53d">Customisation, integration, specific updates, training, enhanced support</td><td class="p" data-i18n="sol.prix_dem">Price on request</td></tr>
         </tbody>
       </table></div>
     </div>
@@ -250,7 +261,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- TARIFICATION -->
-<section class="d-sec">
+<section class="d-sec" data-vue="prestations" data-vue-nom="Prestations">
   <div class="container">
     <p data-i18n-html="sol.c0da21" class="d-lbl">Pricing principle</p>
     <h2 data-i18n-html="sol.3e0cb4" class="d-h">We do not charge for rows, we charge for a transformation</h2>
@@ -267,7 +278,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- SERVICES -->
-<section class="d-sec">
+<section class="d-sec" data-vue="prestations" data-vue-nom="Prestations">
   <div class="container">
     <p data-i18n-html="sol.f622ed" class="d-lbl">Related services</p>
     <h2 data-i18n-html="sol.00b80d" class="d-h">When data alone is not enough</h2>
@@ -283,7 +294,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- PROCESSUS -->
-<section class="d-sec">
+<section class="d-sec" data-vue="methode" data-vue-nom="Méthode">
   <div class="container">
     <p data-i18n-html="sol.e15142" class="d-lbl">How we work</p>
     <h2 data-i18n-html="sol.527a85" class="d-h">From the question to the deliverable</h2>
@@ -299,7 +310,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- CONTACT -->
-<section class="d-sec" id="contact" style="padding-bottom:3rem">
+<section class="d-sec" id="contact" style="padding-bottom:3rem" data-vue="contact" data-vue-nom="Nous écrire">
   <div class="container">
     <p data-i18n-html="sol.2b5c3d" class="d-lbl">Contact</p>
     <h2 data-i18n-html="sol.760a31" class="d-h">Describe your need</h2>
@@ -340,7 +351,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       </div>
       <div class="two">
         <div><label data-i18n="sol.394c96" for="f-delai">Deadline</label><input id="f-delai" name="delai" placeholder="ex. mi-septembre" /></div>
-        <div><label data-i18n="sol.8a374c" for="f-budget">Envisaged budget (optional)</label><input id="f-budget" name="budget" placeholder="ex. 500 – 1 500 $" /></div>
+        <div><label data-i18n="sol.8a374c" for="f-budget">Envisaged budget (optional)</label><input id="f-budget" name="budget" placeholder="e.g. a ballpark figure, or leave blank" data-i18n-ph="sol.budget_ph" /></div>
       </div>
       <div><label data-i18n="sol.6e01f5" for="f-msg">The decision to be made</label><textarea id="f-msg" name="msg" rows="4" placeholder="Ex. : choisir 3 communes où ouvrir un point de collecte d'ici décembre."></textarea></div>
       <div><button data-i18n-html="sol.642583" type="submit" class="btn btn-primary">Send the request</button></div>
@@ -372,15 +383,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div>
         <h4 data-i18n="ft.h_donnees">Data</h4>
         <ul>
-          <li><a href="/couches.html" data-i18n="ft.couches">Layers</a></li>
+          <li><a href="/couches.html" data-i18n="ft.cartes">Thematic maps</a></li>
           <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
           <li><a href="donnees.html" data-i18n="ft.comment">How it works</a></li>
-          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
           <li><a href="donnees-services.html" data-i18n="ft.serv">Services & partnerships</a></li>
-          <li><a href="donnees-fiches.html" data-i18n="ft.fiches">Documentation sheets</a></li>
-          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definitions &amp; methods</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions & licences</a></li>
+          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definitions & methods</a></li>
           <li><a href="/donnees-systeme.html" data-i18n="ft.carte">The system map</a></li>
-          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Trust &amp; method</a></li>
+          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Trust & method</a></li>
           <li><a href="/archives.html" data-i18n="ft.arch">Archives & citation</a></li>
         </ul>
       </div>
@@ -416,5 +426,6 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <script src="../assets/ux.js?v=1" defer></script>
 <script src="../assets/i18n.js?v=19"></script>
 <script src="../assets/theme.js?v=3" defer></script>
+<script src="../assets/vues.js?v=1"></script>
 </body>
 </html>

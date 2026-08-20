@@ -21,11 +21,13 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=42" />
+  <link rel="stylesheet" href="../assets/data.css?v=44" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
+  
   
   
   
@@ -79,16 +81,20 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <button class="nav-toggle" aria-label="Menú" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Explorador de Haití</a></li>
-      <li><a href="/couches.html" data-i18n="nv.couches_h">Capas</a></li>
-      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Datos</span></span>
+      <li><a href="/couches.html" data-i18n="nv.cartes_h">Mapas temáticos</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Servicios y alianzas</span></span>
         <ul class="nav-sub">
-          <li><a href="datasets.html" data-i18n-html="nv.cat">Catálogo <small>conjuntos de datos y guías</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnósticos y servicios <small>precio bajo petición</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Soluciones y licencias <small>empresas, ONG, administraciones</small></a></li>
-          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>estudiantes e investigadores</small></a></li>
-          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Patrocinar un conjunto <small>instituciones y empresas</small></a></li>
-          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Servicios y alianzas</a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Patrocinar un conjunto de datos <small>instituciones y empresas</small></a></li>
+        </ul>
+      </li>
+      <li class="nav-grp"><span><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Recursos</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catálogo de conjuntos de datos <small>datos y guías</small></a></li>
           <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fichas de documentación</a></li>
           <li><a href="donnees.html" data-i18n-html="nv.comment">Cómo funciona <small>método, fuentes, sistema</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>estudiantes e investigadores</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
@@ -157,6 +163,147 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- ============================================================ PILIER 2 -->
+<section id="fiches-diagnostic">
+  <div class="container">
+    <h2 data-i18n="sv.fiches_h">Las fichas de diagnóstico</h2>
+    <p class="lead" data-i18n="sv.fiches_lead">Una ficha por servicio: a quién se dirige, las preguntas que zanja, lo que recibe, en cuánto tiempo — y lo que no hace. Esta última sección es la que no se encuentra en ninguna parte; es la misma regla que para nuestros datos: un entregable que calla sus límites no es un informe corto, es un informe incompleto.</p>
+<!-- SERVICES:fiches — engendré par build_services.py, ne pas éditer à la main -->
+<article class="sv-fiche" id="srv-verifie">
+  <h3 data-i18n-html="sv.verifie_h">🔍 Atmart Verificado — auditoría de un conjunto de datos</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Para quién</p><p data-i18n="sv.verifie_qui">Productores de datos, ONG, ministerios, proyectos a punto de publicar o de financiar una recolección.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Plazo</p><p data-i18n="sv.verifie_delai">De dos a tres semanas por conjunto de datos.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Precio</p><p data-i18n="sv.prix_dem">Bajo petición — el alcance decide el coste</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Las preguntas que zanja este diagnóstico</p>
+  <ul class="sv-q"><li data-i18n="sv.verifie_q0">¿Cubre realmente este conjunto el territorio que anuncia?</li><li data-i18n="sv.verifie_q1">¿Concuerdan sus cifras con las demás fuentes públicas?</li><li data-i18n="sv.verifie_q2">¿Tenemos derecho a publicarlo y a facturarlo?</li><li data-i18n="sv.verifie_q3">¿Qué NO permite concluir?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Lo que recibe</p>
+  <p data-i18n="sv.verifie_livre">Una ficha de documentación según el modelo « Datasheets for Datasets » (Gebru et al., versión Aether), ampliada con cuatro secciones propias de Atmart: completitud medida sobre el archivo, concordancia entre fuentes, pasaporte jurídico con dos veredictos y límites de interpretación.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Ejemplo ya producido, y público</p>
+  <p class="sv-ex" data-i18n="sv.verifie_ex">Ejemplo ya entregado: Seis fichas ya producidas y públicas — escuelas declaradas, salud declarada, concordancia, acceso vial, población con tres fuentes, equipamientos de OpenStreetMap.</p>
+  <p class="sv-preuve"><a href="donnees-fiches.html" data-i18n="sv.verifie_lien">Ver la prueba publicada</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Lo que este diagnóstico NO hace</p>
+  <ul class="sv-non"><li data-i18n="sv.verifie_n0">NO corrige el conjunto: lo describe. La corrección es otro servicio.</li><li data-i18n="sv.verifie_n1">No juzga el TERRITORIO, solo la información que se tiene de él.</li><li data-i18n="sv.verifie_n2">No sustituye a un dictamen jurídico: establece lo que dicen las condiciones del productor y archiva la prueba.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Atmart%20Vérifié" class="btn btn-primary" data-i18n="sv.cta">Solicitar un presupuesto</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-diagnostic">
+  <h3 data-i18n-html="sv.diagnostic_h">🧭 Diagnóstico territorial</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Para quién</p><p data-i18n="sv.diagnostic_qui">Colectividades, financiadores, ONG que deben elegir DÓNDE intervenir y justificar esa elección.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Plazo</p><p data-i18n="sv.diagnostic_delai">De tres a seis semanas según el número de dimensiones.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Precio</p><p data-i18n="sv.prix_dem">Bajo petición — el alcance decide el coste</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Las preguntas que zanja este diagnóstico</p>
+  <ul class="sv-q"><li data-i18n="sv.diagnostic_q0">¿Qué comunas acumulan fragilidades?</li><li data-i18n="sv.diagnostic_q1">¿Dónde es la información tan débil que ninguna decisión es defendible sin una recolección previa?</li><li data-i18n="sv.diagnostic_q2">¿Qué comunas se parecen lo suficiente para replicar en ellas un mismo dispositivo?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Lo que recibe</p>
+  <p data-i18n="sv.diagnostic_livre">Un informe con mapas, una tabla de clasificación reproducible y el método escrito para que cualquiera rehaga el cálculo. Se entregan los archivos intermedios, no solo las conclusiones.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Ejemplo ya producido, y público</p>
+  <p class="sv-ex" data-i18n="sv.diagnostic_ex">Ejemplo ya entregado: El mapa « Dónde nuestra información es más débil » publicado en el Explorador: 8 comunas tienen dos familias de datos de tres en desacuerdo o no verificables.</p>
+  <p class="sv-preuve"><a href="/couches.html?couche=verifier" data-i18n="sv.diagnostic_lien">Ver la prueba publicada</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Lo que este diagnóstico NO hace</p>
+  <ul class="sv-non"><li data-i18n="sv.diagnostic_n0">No produce datos de terreno: aprovecha lo existente y dice dónde lo existente no basta.</li><li data-i18n="sv.diagnostic_n1">No clasifica las comunas por « mérito » — una clasificación mide el estado de la INFORMACIÓN tanto como el del territorio.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Diagnostic%20territorial" class="btn btn-primary" data-i18n="sv.cta">Solicitar un presupuesto</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-carto">
+  <h3 data-i18n-html="sv.carto_h">🗺 Cartografía a medida</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Para quién</p><p data-i18n="sv.carto_qui">Cualquier organización que deba mostrar una realidad territorial en un informe, una solicitud de financiación o una presentación pública.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Plazo</p><p data-i18n="sv.carto_delai">De una a tres semanas.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Precio</p><p data-i18n="sv.prix_dem">Bajo petición — el alcance decide el coste</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Las preguntas que zanja este diagnóstico</p>
+  <ul class="sv-q"><li data-i18n="sv.carto_q0">¿Cómo mostrar este fenómeno sin deformarlo?</li><li data-i18n="sv.carto_q1">¿Qué escala es honesta para estos datos?</li><li data-i18n="sv.carto_q2">¿Cómo distinguir un cero de una ausencia de registro?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Lo que recibe</p>
+  <p data-i18n="sv.carto_livre">Mapas en archivos abiertos — SVG, PNG de alta definición, GeoJSON — con su leyenda, su fuente, su edición y sus límites. Reutilizables sin nosotros.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Ejemplo ya producido, y público</p>
+  <p class="sv-ex" data-i18n="sv.carto_ex">Ejemplo ya entregado: Los 35 mapas temáticos del Explorador, cada uno con su fuente, su licencia y lo que no dice.</p>
+  <p class="sv-preuve"><a href="/couches.html" data-i18n="sv.carto_lien">Ver la prueba publicada</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Lo que este diagnóstico NO hace</p>
+  <ul class="sv-non"><li data-i18n="sv.carto_n0">No producimos un mapa cuyos datos no soporten la escala solicitada. Un mapa por comuna a partir de una cifra nacional fabrica 140 valores falsos: lo rechazamos.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Cartographie%20sur%20mesure" class="btn btn-primary" data-i18n="sv.cta">Solicitar un presupuesto</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-harmonisation">
+  <h3 data-i18n-html="sv.harmonisation_h">🔗 Armonización de referenciales</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Para quién</p><p data-i18n="sv.harmonisation_qui">Organizaciones cuyas bases hablan de los mismos territorios sin coincidir: nombres distintos, códigos ausentes, divisiones divergentes.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Plazo</p><p data-i18n="sv.harmonisation_delai">De dos a cuatro semanas según el volumen.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Precio</p><p data-i18n="sv.prix_dem">Bajo petición — el alcance decide el coste</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Las preguntas que zanja este diagnóstico</p>
+  <ul class="sv-q"><li data-i18n="sv.harmonisation_q0">¿Cuántos de nuestros registros se vinculan realmente a una comuna identificada?</li><li data-i18n="sv.harmonisation_q1">¿Dónde se contradicen nuestras bases?</li><li data-i18n="sv.harmonisation_q2">¿Cómo mantener la alineación cuando las fuentes cambien?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Lo que recibe</p>
+  <p data-i18n="sv.harmonisation_livre">Una tabla de correspondencia hacia los p-codes oficiales, el recuento exacto de lo que no pudo vincularse — y por qué — y un script reproducible que sus equipos relanzan solos.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Ejemplo ya producido, y público</p>
+  <p class="sv-ex" data-i18n="sv.harmonisation_ex">Ejemplo ya entregado: El referencial territorial del Explorador: 140 comunas, 570 secciones, identificadores estables, vinculación por árbol padre.</p>
+  <p class="sv-preuve"><a href="/donnees-backbone.html" data-i18n="sv.harmonisation_lien">Ver la prueba publicada</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Lo que este diagnóstico NO hace</p>
+  <ul class="sv-non"><li data-i18n="sv.harmonisation_n0">Nunca vinculamos un registro ambiguo « al más cercano ». Lo que no se vincula queda SIN VINCULAR, contado y listado — una correspondencia inventada es indetectable después.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Harmonisation%20de%20référentiels" class="btn btn-primary" data-i18n="sv.cta">Solicitar un presupuesto</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-tableau">
+  <h3 data-i18n-html="sv.tableau_h">📊 Cuadros de mando e instancias</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Para quién</p><p data-i18n="sv.tableau_qui">Instituciones que quieren el motor del Explorador sobre sus propios datos, o un cuadro de mando que se actualiza solo.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Plazo</p><p data-i18n="sv.tableau_delai">De cuatro a ocho semanas para una instancia; dos semanas para un modelo.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Precio</p><p data-i18n="sv.prix_dem">Bajo petición — el alcance decide el coste</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Las preguntas que zanja este diagnóstico</p>
+  <ul class="sv-q"><li data-i18n="sv.tableau_q0">¿Cómo seguir estos indicadores sin rehacer el trabajo cada mes?</li><li data-i18n="sv.tableau_q1">¿Cómo abrir nuestros datos a nuestros equipos sin exponerlos al público?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Lo que recibe</p>
+  <p data-i18n="sv.tableau_livre">Una instancia privada — identidad visual, roles, despliegue, soporte — o un modelo Power BI/QGIS conectado a fuentes que se actualizan. Sus datos siguen siendo suyos.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Ejemplo ya producido, y público</p>
+  <p class="sv-ex" data-i18n="sv.tableau_ex">Ejemplo ya entregado: Los modelos Power BI y QGIS del Explorador, a la venta y ya en uso, se actualizan con un clic cuando cambia un archivo.</p>
+  <p class="sv-preuve"><a href="datasets.html" data-i18n="sv.tableau_lien">Ver la prueba publicada</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Lo que este diagnóstico NO hace</p>
+  <ul class="sv-non"><li data-i18n="sv.tableau_n0">Una instancia privada no da ningún acceso privilegiado a los datos públicos: lo público y lo privado leen las mismas cifras.</li><li data-i18n="sv.tableau_n1">No alojamos datos personales sin una base legítima escrita.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Tableaux%20de%20bord%20et%20instances" class="btn btn-primary" data-i18n="sv.cta">Solicitar un presupuesto</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-formation">
+  <h3 data-i18n-html="sv.formation_h">🎓 Formación y acompañamiento</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Para quién</p><p data-i18n="sv.formation_qui">Equipos que deben leer, producir o cuestionar datos territoriales — y hacerlo en kreyòl, francés o inglés.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Plazo</p><p data-i18n="sv.formation_delai">De uno a tres días, según el programa.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Precio</p><p data-i18n="sv.prix_dem">Bajo petición — el alcance decide el coste</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Las preguntas que zanja este diagnóstico</p>
+  <ul class="sv-q"><li data-i18n="sv.formation_q0">¿Cómo leer un mapa sin equivocarse?</li><li data-i18n="sv.formation_q1">¿Cómo reconocer un dato que no deberíamos usar?</li><li data-i18n="sv.formation_q2">¿Cómo documentar nuestros propios conjuntos?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Lo que recibe</p>
+  <p data-i18n="sv.formation_livre">Sesiones presenciales o a distancia, materiales reutilizables, ejercicios sobre los datos reales de Haití — no sobre ejemplos inventados.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Ejemplo ya producido, y público</p>
+  <p class="sv-ex" data-i18n="sv.formation_ex">Ejemplo ya entregado: Los tutoriales de pensamiento crítico de Atmart y las fichas de documentación, todos públicos y reutilizables.</p>
+  <p class="sv-preuve"><a href="donnees-campus.html" data-i18n="sv.formation_lien">Ver la prueba publicada</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Lo que este diagnóstico NO hace</p>
+  <ul class="sv-non"><li data-i18n="sv.formation_n0">No certificamos a nadie: formamos. Se entrega un certificado de asistencia, nunca un diploma.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Formation%20et%20accompagnement" class="btn btn-primary" data-i18n="sv.cta">Solicitar un presupuesto</a></p>
+</article>
+
+<article class="sv-fiche" id="srv-activation">
+  <h3 data-i18n-html="sv.activation_h">⚡ Activación rápida — ciclones y poscatástrofe</h3>
+  <div class="sv-grille">
+    <div><p class="sv-lab" data-i18n="sv.lab_qui">Para quién</p><p data-i18n="sv.activation_qui">Actores de la respuesta humanitaria y colectividades expuestas, antes y después de un evento.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_delai">Plazo</p><p data-i18n="sv.activation_delai">Preparación: cuatro semanas. Activación: unos días.</p></div>
+    <div><p class="sv-lab" data-i18n="sv.lab_prix">Precio</p><p data-i18n="sv.prix_dem">Bajo petición — el alcance decide el coste</p></div>
+  </div>
+  <p class="sv-lab" data-i18n="sv.lab_quest">Las preguntas que zanja este diagnóstico</p>
+  <ul class="sv-q"><li data-i18n="sv.activation_q0">¿Qué comunas están expuestas, y con qué capacidades?</li><li data-i18n="sv.activation_q1">¿Qué se sabe ya, antes de enviar un equipo?</li><li data-i18n="sv.activation_q2">¿Qué ha cambiado desde el evento?</li></ul>
+  <p class="sv-lab" data-i18n="sv.lab_livre">Lo que recibe</p>
+  <p data-i18n="sv.activation_livre">Preparación anual antes de la temporada de ciclones, y luego producción acelerada tras el evento. Cada activación produce TAMBIÉN un informe público de interés general.</p>
+  <p class="sv-lab" data-i18n="sv.lab_ex">Ejemplo ya producido, y público</p>
+  <p class="sv-ex" data-i18n="sv.activation_ex">Ejemplo ya entregado: Las capas de ciclones y sismos del Explorador, construidas sobre IBTrACS y ComCat, con sus límites escritos.</p>
+  <p class="sv-preuve"><a href="/couches.html" data-i18n="sv.activation_lien">Ver la prueba publicada</a></p>
+  <p class="sv-lab sv-lab-non" data-i18n="sv.lab_non">Lo que este diagnóstico NO hace</p>
+  <ul class="sv-non"><li data-i18n="sv.activation_n0">No sustituimos ni a la protección civil ni a los sistemas de alerta. Documentamos lo que se sabe, no pronosticamos nada.</li><li data-i18n="sv.activation_n1">Lo que un actor financia en emergencia sigue siendo legible para todos: es una condición, no una opción.</li></ul>
+  <p class="sv-cta"><a href="mailto:sales@atmart.ltd?subject=Activation%20rapide" class="btn btn-primary" data-i18n="sv.cta">Solicitar un presupuesto</a></p>
+</article>
+<!-- /SERVICES:fiches -->
+  </div>
+</section>
+
 <section class="sv-fond">
   <div class="container">
     <p class="sv-pilier" data-i18n="sv.p2_num">Pilar 2</p>
@@ -219,12 +366,11 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div>
         <h4 data-i18n="ft.h_donnees">Datos</h4>
         <ul>
-          <li><a href="/couches.html" data-i18n="ft.couches">Capas</a></li>
+          <li><a href="/couches.html" data-i18n="ft.cartes">Mapas temáticos</a></li>
           <li><a href="datasets.html" data-i18n="ft.cat">Catálogo</a></li>
           <li><a href="donnees.html" data-i18n="ft.comment">Cómo funciona</a></li>
-          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Soluciones y licencias</a></li>
           <li><a href="donnees-services.html" data-i18n="ft.serv">Servicios y alianzas</a></li>
-          <li><a href="donnees-fiches.html" data-i18n="ft.fiches">Fichas de documentación</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Soluciones y licencias</a></li>
           <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definiciones y métodos</a></li>
           <li><a href="/donnees-systeme.html" data-i18n="ft.carte">El mapa del sistema</a></li>
           <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Confianza y método</a></li>

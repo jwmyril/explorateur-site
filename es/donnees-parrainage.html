@@ -21,11 +21,13 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=42" />
+  <link rel="stylesheet" href="../assets/data.css?v=44" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
+  
   
   
   
@@ -79,16 +81,20 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <button class="nav-toggle" aria-label="Menú" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Explorador de Haití</a></li>
-      <li><a href="/couches.html" data-i18n="nv.couches_h">Capas</a></li>
-      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Datos</span></span>
+      <li><a href="/couches.html" data-i18n="nv.cartes_h">Mapas temáticos</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Servicios y alianzas</span></span>
         <ul class="nav-sub">
-          <li><a href="datasets.html" data-i18n-html="nv.cat">Catálogo <small>conjuntos de datos y guías</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnósticos y servicios <small>precio bajo petición</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Soluciones y licencias <small>empresas, ONG, administraciones</small></a></li>
-          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>estudiantes e investigadores</small></a></li>
-          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Patrocinar un conjunto <small>instituciones y empresas</small></a></li>
-          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Servicios y alianzas</a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Patrocinar un conjunto de datos <small>instituciones y empresas</small></a></li>
+        </ul>
+      </li>
+      <li class="nav-grp"><span><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Recursos</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catálogo de conjuntos de datos <small>datos y guías</small></a></li>
           <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fichas de documentación</a></li>
           <li><a href="donnees.html" data-i18n-html="nv.comment">Cómo funciona <small>método, fuentes, sistema</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>estudiantes e investigadores</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
@@ -138,31 +144,31 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
             <td data-i18n-html="par.38ee8a">Patrocinio de un conjunto de datos</td>
             <td data-i18n-html="par.8d4c2e">La apertura o actualización de un conjunto concreto</td>
             <td data-i18n-html="par.fdf4d7">Mención permanente en la ficha del conjunto, visibilidad ante un público cualificado</td>
-            <td class="p">1 500 – 4 000 $</td>
+            <td class="p" data-i18n="par.a_discuter">A convenir</td>
           </tr>
           <tr>
             <td data-i18n-html="par.99b4c9">Beca de datos para tesis</td>
             <td data-i18n-html="par.edfb3a">Acceso completo para un grupo de estudiantes sobre un tema</td>
             <td data-i18n-html="par.699de8">Apoyo a la formación, vigilancia indirecta del sector</td>
-            <td data-i18n-html="par.618247" class="p">≈ 1 000 $ / 10 estudiantes</td>
+            <td class="p" data-i18n="par.a_discuter">A convenir</td>
           </tr>
           <tr>
             <td data-i18n-html="par.6e44a0">Pack de investigación</td>
             <td data-i18n-html="par.becadb">Un lote de conjuntos para una facultad o un laboratorio, durante un año</td>
             <td data-i18n-html="par.ad2032">Anclaje institucional duradero, impacto colectivo</td>
-            <td class="p">3 000 – 8 000 $</td>
+            <td class="p" data-i18n="par.a_discuter">A convenir</td>
           </tr>
           <tr>
             <td data-i18n-html="par.459835">Cohorte temática</td>
             <td data-i18n-html="par.5b95f3">Un año de trabajos sobre un sector: agricultura, finanzas, empleo, salud, territorios</td>
             <td data-i18n-html="par.d3dc7d">Posicionamiento de experticia, producción de conocimiento sobre su mercado</td>
-            <td data-i18n-html="par.91d39f" class="p">desde 10 000 $</td>
+            <td class="p" data-i18n="par.a_discuter">A convenir</td>
           </tr>
           <tr>
             <td data-i18n-html="par.f6041b">Fondo de investigación aplicada</td>
             <td data-i18n-html="par.302686">Una contribución mancomunada, asignada por un comité</td>
             <td data-i18n-html="par.9d5a80">Impacto duradero, esfuerzo compartido con otros contribuyentes</td>
-            <td data-i18n-html="par.f791b7" class="p">desde 500 $</td>
+            <td class="p" data-i18n="par.a_discuter">A convenir</td>
           </tr>
         </tbody>
       </table></div>
@@ -186,35 +192,35 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <td data-i18n-html="par.cf3b84">Perfil de las 140 comunas de Haití <strong>— prioridad 1</strong></td>
 <td data-i18n-html="par.8c7739">Referencial territorial ya publicado, completado con fuentes sectoriales</td>
 <td data-i18n-html="par.0b4530">Ordenamiento, ONG, donantes, entidades locales, periodismo de datos</td>
-<td class="p">≈ 6 000 $</td>
+<td class="p" data-i18n="par.a_discuter">A convenir</td>
 <td data-i18n-html="par.c06733">El perfil de los 10 departamentos, sobre las mismas fuentes y el mismo diccionario. El descenso a las 140 comunas queda abierto a una financiación posterior.</td>
 </tr>
           <tr>
             <td data-i18n-html="par.9ea5cb">Precios de mercados — cobertura nacional y actualización mensual</td>
             <td data-i18n-html="par.fff7b8">CNSA, FEWS NET</td>
             <td data-i18n-html="par.99cde0">Agronomía, seguridad alimentaria, economía, ONG humanitarias, periodistas</td>
-            <td data-i18n-html="par.6d608b" class="p">≈ 2 500 $<br /><small>+ 1 200 $/año de actualización</small></td>
+            <td class="p" data-i18n="par.a_discuter">A convenir</td>
           <td data-i18n-html="par.0678b5">La red centinela actual de 9 mercados, mantenida al día durante doce meses, sin extensión a nuevos mercados.</td>
 </tr>
           <tr>
             <td data-i18n-html="par.ccaf6f">Indicadores económicos de Haití (2000–2025)</td>
             <td data-i18n-html="par.ef8cd7">Banco Mundial, FMI, BRH</td>
             <td data-i18n-html="par.3cf26f">Economía, gestión, finanzas, planes de negocio, incidencia</td>
-            <td class="p">≈ 2 000 $</td>
+            <td class="p" data-i18n="par.a_discuter">A convenir</td>
           <td data-i18n-html="par.931394">Las series nacionales anuales, sin desglose departamental ni serie mensual.</td>
 </tr>
           <tr>
             <td data-i18n-html="par.eedf09">Educación en Haití por departamento</td>
             <td data-i18n-html="par.63021a">MENFP, UNESCO UIS, Banco Mundial</td>
             <td data-i18n-html="par.a6ee85">Ciencias de la educación, políticas públicas, ONG de educación</td>
-            <td class="p">≈ 2 500 $</td>
+            <td class="p" data-i18n="par.a_discuter">A convenir</td>
           <td data-i18n-html="par.6451f5">Los indicadores a nivel de los 10 departamentos, sin bajar a la comuna.</td>
 </tr>
           <tr>
             <td data-i18n-html="par.2040ab">Salud pública por departamento</td>
             <td data-i18n-html="par.84be2e">MSPP, OMS/OPS, encuestas EMMUS</td>
             <td data-i18n-html="par.16d160">Salud pública, epidemiología, planificación sanitaria</td>
-            <td class="p">≈ 3 000 $</td>
+            <td class="p" data-i18n="par.a_discuter">A convenir</td>
           <td data-i18n-html="par.6451f5">Los indicadores a nivel de los 10 departamentos, sin bajar a la comuna.</td>
 </tr>
         </tbody>
@@ -303,7 +309,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       </div>
       <div class="two">
         <div><label data-i18n="par.59f3f6" for="s-jeu">Conjunto o tema previsto</label><input id="s-jeu" name="jeu" placeholder="ex. prix des marchés, éducation, santé…" /></div>
-        <div><label data-i18n="par.352c77" for="s-bud">Presupuesto previsto (opcional)</label><input id="s-bud" name="budget" placeholder="ex. 2 500 $" /></div>
+        <div><label data-i18n="par.352c77" for="s-bud">Presupuesto previsto (opcional)</label><input id="s-bud" name="budget" placeholder="p. ej. un orden de magnitud, o déjelo en blanco" data-i18n-ph="par.budget_ph" /></div>
       </div>
       <div><label data-i18n="par.32bc7a" for="s-msg">Objetivo del patrocinio</label><textarea id="s-msg" name="msg" rows="4" placeholder="Ce que votre organisation cherche à soutenir, et pourquoi ce thème."></textarea></div>
       <div><button data-i18n-html="par.790752" type="submit" class="btn btn-primary">Enviar</button></div>
@@ -335,12 +341,11 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div>
         <h4 data-i18n="ft.h_donnees">Datos</h4>
         <ul>
-          <li><a href="/couches.html" data-i18n="ft.couches">Capas</a></li>
+          <li><a href="/couches.html" data-i18n="ft.cartes">Mapas temáticos</a></li>
           <li><a href="datasets.html" data-i18n="ft.cat">Catálogo</a></li>
           <li><a href="donnees.html" data-i18n="ft.comment">Cómo funciona</a></li>
-          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Soluciones y licencias</a></li>
           <li><a href="donnees-services.html" data-i18n="ft.serv">Servicios y alianzas</a></li>
-          <li><a href="donnees-fiches.html" data-i18n="ft.fiches">Fichas de documentación</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Soluciones y licencias</a></li>
           <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definiciones y métodos</a></li>
           <li><a href="/donnees-systeme.html" data-i18n="ft.carte">El mapa del sistema</a></li>
           <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Confianza y método</a></li>

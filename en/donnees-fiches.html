@@ -21,11 +21,13 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=42" />
+  <link rel="stylesheet" href="../assets/data.css?v=44" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
+  
   
   
   
@@ -79,16 +81,20 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Haiti Explorer</a></li>
-      <li><a href="/couches.html" data-i18n="nv.couches_h">Layers</a></li>
-      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Data</span></span>
+      <li><a href="/couches.html" data-i18n="nv.cartes_h">Thematic maps</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services & partnerships</span></span>
         <ul class="nav-sub">
-          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue <small>datasets &amp; guides</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnostics &amp; engagements <small>price on request</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>companies, NGOs, administrations</small></a></li>
-          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>students &amp; researchers</small></a></li>
           <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Sponsor a dataset <small>institutions &amp; companies</small></a></li>
-          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Services & partnerships</a></li>
+        </ul>
+      </li>
+      <li class="nav-grp"><span><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Resources</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Dataset catalogue <small>data &amp; guides</small></a></li>
           <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Documentation sheets</a></li>
           <li><a href="donnees.html" data-i18n-html="nv.comment">How it works <small>method, sources, system</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>students &amp; researchers</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
@@ -581,15 +587,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div>
         <h4 data-i18n="ft.h_donnees">Data</h4>
         <ul>
-          <li><a href="/couches.html" data-i18n="ft.couches">Layers</a></li>
+          <li><a href="/couches.html" data-i18n="ft.cartes">Thematic maps</a></li>
           <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
           <li><a href="donnees.html" data-i18n="ft.comment">How it works</a></li>
-          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
           <li><a href="donnees-services.html" data-i18n="ft.serv">Services & partnerships</a></li>
-          <li><a href="donnees-fiches.html" data-i18n="ft.fiches">Documentation sheets</a></li>
-          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definitions &amp; methods</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions & licences</a></li>
+          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definitions & methods</a></li>
           <li><a href="/donnees-systeme.html" data-i18n="ft.carte">The system map</a></li>
-          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Trust &amp; method</a></li>
+          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Trust & method</a></li>
           <li><a href="/archives.html" data-i18n="ft.arch">Archives & citation</a></li>
         </ul>
       </div>

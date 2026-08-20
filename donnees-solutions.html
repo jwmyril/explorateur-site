@@ -21,12 +21,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=35" />
-  <link rel="stylesheet" href="assets/data.css?v=42" />
+  <link rel="stylesheet" href="assets/data.css?v=44" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-solutions.html" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
+  
   
   
   
@@ -78,16 +80,20 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Explorateur Haïti</a></li>
-      <li><a href="couches.html" data-i18n="nv.couches_h">Couches</a></li>
-      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Données</span></span>
+      <li><a href="couches.html" data-i18n="nv.cartes_h">Cartes thématiques</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services &amp; partenariats</span></span>
         <ul class="nav-sub">
-          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnostics &amp; prestations <small>prix sur demande</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
-          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
-          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
-          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Services &amp; partenariats <small>audit, diagnostic, parrainage</small></a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parrainer un jeu de données <small>institutions &amp; entreprises</small></a></li>
+        </ul>
+      </li>
+      <li class="nav-grp"><span><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Ressources</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue des jeux de données <small>données &amp; guides</small></a></li>
           <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fiches de documentation <small>complétude, sources, limites</small></a></li>
           <li><a href="donnees.html" data-i18n-html="nv.comment">Comment ça marche <small>méthode, sources, système</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
@@ -110,8 +116,13 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   </div>
 </section>
 
+<div class="container">
+  <div class="vue-barre" data-vues role="group" aria-label="Choisir une partie de la page" data-i18n-aria="sol.vues_aria"></div>
+  <p class="vue-note x-note" data-i18n="sol.vues_note">La page est longue : choisissez la partie qui vous concerne, ou affichez tout. Votre choix est retenu, et chaque partie a son adresse partageable.</p>
+</div>
+
 <!-- CE POUR QUOI ON PAIE -->
-<section class="d-sec" style="padding-top:1rem">
+<section class="d-sec" style="padding-top:1rem" data-vue="qui" data-vue-nom="Pour qui">
   <div class="container">
     <p data-i18n-html="sol.eaaa56" class="d-lbl">Ce que vous achetez réellement</p>
     <h2 data-i18n-html="sol.0cd7dc" class="d-h">Cinq bénéfices, aucun fichier</h2>
@@ -126,7 +137,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- SEGMENTS -->
-<section class="d-sec" id="entreprises">
+<section class="d-sec" id="entreprises" data-vue="qui" data-vue-nom="Pour qui">
   <div class="container">
     <p data-i18n-html="sol.990695" class="d-lbl">Entreprises</p>
     <h2 data-i18n-html="sol.71e636" class="d-h">Décider où s'implanter, qui cibler, à quel prix</h2>
@@ -139,7 +150,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   </div>
 </section>
 
-<section class="d-sec" id="ong">
+<section class="d-sec" id="ong" data-vue="qui" data-vue-nom="Pour qui">
   <div class="container">
     <p data-i18n-html="sol.6900a9" class="d-lbl">ONG &amp; bailleurs</p>
     <h2 data-i18n-html="sol.546445" class="d-h">Cibler, prioriser, justifier, évaluer</h2>
@@ -156,7 +167,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   </div>
 </section>
 
-<section class="d-sec" id="administrations">
+<section class="d-sec" id="administrations" data-vue="qui" data-vue-nom="Pour qui">
   <div class="container">
     <p data-i18n-html="sol.d12506" class="d-lbl">Administrations &amp; organismes publics</p>
     <h2 data-i18n-html="sol.bba85b" class="d-h">Une base commune, traçable, citable</h2>
@@ -170,7 +181,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- PACKS -->
-<section class="d-sec" id="packs">
+<section class="d-sec" id="packs" data-vue="prestations" data-vue-nom="Prestations">
   <div class="container">
     <p data-i18n-html="sol.9b7efe" class="d-lbl">Packs décisionnels</p>
     <h2 data-i18n-html="sol.31d2b3" class="d-h">Un pack = une question métier, pas un dossier de fichiers</h2>
@@ -187,43 +198,43 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
             <td data-i18n-html="sol.cfc980"><b>Extraction sur mesure</b> — l'entrée de gamme</td>
             <td data-i18n-html="sol.aea67b">« J'ai besoin d'UN croisement précis, propre, cette semaine » — un territoire, un thème, un format</td>
             <td data-i18n-html="sol.24ebf5">Un fichier CSV ou Excel harmonisé (p-codes, millésimes, sources), sa Fèy Done, livré sous 5 jours ouvrés</td>
-            <td data-i18n-html="sol.c82351" class="p">150 $ fixe</td>
+            <td class="p" data-i18n="sol.prix_dem">Prix sur demande</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.61dec0">Implantation</td>
             <td data-i18n-html="sol.c2b3ad">Où ouvrir, dans quel ordre, avec quelle zone de chalandise ?</td>
             <td data-i18n-html="sol.6b3826">Base géo + population + distances, carte Power BI, note de lecture</td>
-            <td class="p">250 – 900 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Prix sur demande</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.93abea">Ciblage territorial</td>
             <td data-i18n-html="sol.19f33e">Quelles communes ou sections prioriser ?</td>
             <td data-i18n-html="sol.2fb6d0">Référentiel p-codes, indicateurs de priorisation, grille de score</td>
-            <td class="p">250 – 900 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Prix sur demande</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.5f0c2c">Diagnostic territorial</td>
             <td data-i18n-html="sol.8dfa0e">Que sait-on vraiment de ce territoire ?</td>
             <td data-i18n-html="sol.81e2b9">Fiche territoire multi-sources, séries disponibles, trous de données identifiés</td>
-            <td class="p">400 – 1 200 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Prix sur demande</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.3c03eb">Étude de marché</td>
             <td data-i18n-html="sol.61071d">Le marché existe-t-il, et de quelle taille ?</td>
             <td data-i18n-html="sol.b487ed">Séries économiques, comparaisons régionales, hypothèses de dimensionnement</td>
-            <td class="p">600 – 1 500 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Prix sur demande</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.0a93c9">Suivi de programme</td>
             <td data-i18n-html="sol.2efcdc">Sur quelles bases mesurer, année après année ?</td>
             <td data-i18n-html="sol.ce38ec">Dénominateurs stables, référentiel géographique, modèle de tableau de bord</td>
-            <td class="p">600 – 1 500 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Prix sur demande</td>
           </tr>
           <tr>
             <td data-i18n-html="sol.245d8a">Comparaison entre territoires</td>
             <td data-i18n-html="sol.5e9249">Où se situe cette commune par rapport aux autres ?</td>
             <td data-i18n-html="sol.5c35f3">Séries comparables entre les 140 communes, méthode identique, visuels prêts</td>
-            <td class="p">400 – 1 200 $</td>
+            <td class="p" data-i18n="sol.prix_dem">Prix sur demande</td>
           </tr>
         </tbody>
       </table></div>
@@ -236,7 +247,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- LICENCES -->
-<section class="d-sec" id="licences">
+<section class="d-sec" id="licences" data-vue="licences" data-vue-nom="Licences">
   <div class="container">
     <p data-i18n-html="sol.c00fc4" class="d-lbl">Licences</p>
     <h2 data-i18n-html="sol.b31273" class="d-h">Six licences, des droits écrits noir sur blanc</h2>
@@ -248,12 +259,12 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div class="x-tableau" tabindex="0"><table class="d-tab">
         <thead><tr><th data-i18n-html="sol.f3ec8e" scope="col">Licence</th><th data-i18n-html="sol.e770ad" scope="col">Qui</th><th data-i18n-html="sol.cb3ecb" scope="col">Droits</th><th data-i18n-html="sol.54c324" scope="col">Prix</th></tr></thead>
         <tbody>
-          <tr><td data-i18n-html="sol.1498d7">Découverte</td><td data-i18n-html="sol.579a85">Tout le monde</td><td data-i18n-html="sol.7387d7">Aperçus, échantillons, visualisations, usage pédagogique et citation</td><td class="p">0 $</td></tr>
-          <tr><td data-i18n-html="sol.c03d95">Académique non commerciale</td><td data-i18n-html="sol.c8d1b1">Étudiants, enseignants, laboratoires vérifiés</td><td data-i18n-html="sol.41f2e1">Mémoire, cours, recherche — citation obligatoire, revente et usage commercial exclus</td><td data-i18n-html="sol.cb7475" class="p">0 $ (via <a href="donnees-campus.html">Campus</a>)</td></tr>
-          <tr><td data-i18n-html="sol.a0be20">Professionnelle mono-utilisateur</td><td data-i18n-html="sol.24aa34">Consultant, analyste indépendant</td><td data-i18n-html="sol.eb7d17">Analyse interne et livrable client, un seul utilisateur nommé</td><td data-i18n-html="sol.754574" class="p">prix du jeu</td></tr>
-          <tr><td data-i18n-html="sol.2119a5">Équipe / institutionnelle</td><td data-i18n-html="sol.e9258e">Entreprises, ONG, administrations, universités</td><td data-i18n-html="sol.473c74">Multi-utilisateurs, partage interne encadré, mises à jour incluses, support</td><td class="p">1 200 – 6 000 $/an</td></tr>
+          <tr><td data-i18n-html="sol.1498d7">Découverte</td><td data-i18n-html="sol.579a85">Tout le monde</td><td data-i18n-html="sol.7387d7">Aperçus, échantillons, visualisations, usage pédagogique et citation</td><td class="p" data-i18n="sol.prix_dem">Prix sur demande</td></tr>
+          <tr><td data-i18n-html="sol.c03d95">Académique non commerciale</td><td data-i18n-html="sol.c8d1b1">Étudiants, enseignants, laboratoires vérifiés</td><td data-i18n-html="sol.41f2e1">Mémoire, cours, recherche — citation obligatoire, revente et usage commercial exclus</td><td data-i18n-html="sol.cb7475" class="p">Gratuit (via <a href="donnees-campus.html">Campus</a>)</td></tr>
+          <tr><td data-i18n-html="sol.a0be20">Professionnelle mono-utilisateur</td><td data-i18n-html="sol.24aa34">Consultant, analyste indépendant</td><td data-i18n-html="sol.eb7d17">Analyse interne et livrable client, un seul utilisateur nommé</td><td class="p" data-i18n="sol.prix_dem">Prix sur demande</td></tr>
+          <tr><td data-i18n-html="sol.2119a5">Équipe / institutionnelle</td><td data-i18n-html="sol.e9258e">Entreprises, ONG, administrations, universités</td><td data-i18n-html="sol.473c74">Multi-utilisateurs, partage interne encadré, mises à jour incluses, support</td><td class="p" data-i18n="sol.prix_dem">Prix sur demande</td></tr>
           <tr><td data-i18n-html="sol.e20196">Sponsorisée</td><td data-i18n-html="sol.d75361">Cohorte financée par un tiers</td><td data-i18n-html="sol.eaaa4e">Accès complet pour un thème et une durée définis</td><td data-i18n-html="sol.91363f" class="p">payée par le <a href="donnees-parrainage.html">parrain</a></td></tr>
-          <tr><td data-i18n-html="sol.825175">Options premium</td><td data-i18n-html="sol.979c47">Sur demande</td><td data-i18n-html="sol.44e53d">Personnalisation, intégration, mises à jour spécifiques, formation, support renforcé</td><td data-i18n-html="sol.3bba9a" class="p">sur devis</td></tr>
+          <tr><td data-i18n-html="sol.825175">Options premium</td><td data-i18n-html="sol.979c47">Sur demande</td><td data-i18n-html="sol.44e53d">Personnalisation, intégration, mises à jour spécifiques, formation, support renforcé</td><td class="p" data-i18n="sol.prix_dem">Prix sur demande</td></tr>
         </tbody>
       </table></div>
     </div>
@@ -269,7 +280,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- TARIFICATION -->
-<section class="d-sec">
+<section class="d-sec" data-vue="prestations" data-vue-nom="Prestations">
   <div class="container">
     <p data-i18n-html="sol.c0da21" class="d-lbl">Principe tarifaire</p>
     <h2 data-i18n-html="sol.3e0cb4" class="d-h">On ne facture pas des lignes, on facture une transformation</h2>
@@ -289,7 +300,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- SERVICES -->
-<section class="d-sec">
+<section class="d-sec" data-vue="prestations" data-vue-nom="Prestations">
   <div class="container">
     <p data-i18n-html="sol.f622ed" class="d-lbl">Services associés</p>
     <h2 data-i18n-html="sol.00b80d" class="d-h">Quand la donnée seule ne suffit pas</h2>
@@ -305,7 +316,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- PROCESSUS -->
-<section class="d-sec">
+<section class="d-sec" data-vue="methode" data-vue-nom="Méthode">
   <div class="container">
     <p data-i18n-html="sol.e15142" class="d-lbl">Comment on travaille</p>
     <h2 data-i18n-html="sol.527a85" class="d-h">De la question au livrable</h2>
@@ -321,7 +332,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </section>
 
 <!-- CONTACT -->
-<section class="d-sec" id="contact" style="padding-bottom:3rem">
+<section class="d-sec" id="contact" style="padding-bottom:3rem" data-vue="contact" data-vue-nom="Nous écrire">
   <div class="container">
     <p data-i18n-html="sol.2b5c3d" class="d-lbl">Contact</p>
     <h2 data-i18n-html="sol.760a31" class="d-h">Décrivez votre besoin</h2>
@@ -365,7 +376,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       </div>
       <div class="two">
         <div><label data-i18n="sol.394c96" for="f-delai">Échéance</label><input id="f-delai" name="delai" placeholder="ex. mi-septembre" /></div>
-        <div><label data-i18n="sol.8a374c" for="f-budget">Budget envisagé (facultatif)</label><input id="f-budget" name="budget" placeholder="ex. 500 – 1 500 $" /></div>
+        <div><label data-i18n="sol.8a374c" for="f-budget">Budget envisagé (facultatif)</label><input id="f-budget" name="budget" placeholder="ex. un ordre de grandeur, ou laissez vide" data-i18n-ph="sol.budget_ph" /></div>
       </div>
       <div><label data-i18n="sol.6e01f5" for="f-msg">La décision à prendre</label><textarea id="f-msg" name="msg" rows="4" placeholder="Ex. : choisir 3 communes où ouvrir un point de collecte d'ici décembre."></textarea></div>
       <div><button data-i18n-html="sol.642583" type="submit" class="btn btn-primary">Envoyer la demande</button></div>
@@ -400,12 +411,11 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div>
         <h4 data-i18n="ft.h_donnees">Données</h4>
         <ul>
-          <li><a href="couches.html" data-i18n="ft.couches">Couches</a></li>
+          <li><a href="couches.html" data-i18n="ft.cartes">Cartes thématiques</a></li>
           <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
           <li><a href="donnees.html" data-i18n="ft.comment">Comment ça marche</a></li>
-          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
           <li><a href="donnees-services.html" data-i18n="ft.serv">Services &amp; partenariats</a></li>
-          <li><a href="donnees-fiches.html" data-i18n="ft.fiches">Fiches de documentation</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
           <li><a href="donnees-backbone.html" data-i18n="ft.def">Définitions &amp; méthodes</a></li>
           <li><a href="donnees-systeme.html" data-i18n="ft.carte">La carte du système</a></li>
           <li><a href="donnees-confiance.html" data-i18n="ft.conf">Confiance &amp; méthode</a></li>
@@ -444,5 +454,6 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <script src="assets/ux.js?v=1" defer></script>
 <script src="assets/i18n.js?v=19"></script>
 <script src="assets/theme.js?v=3" defer></script>
+<script src="assets/vues.js?v=1"></script>
 </body>
 </html>

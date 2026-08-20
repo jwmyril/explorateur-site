@@ -21,7 +21,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=35" />
-  <link rel="stylesheet" href="assets/data.css?v=42" />
+  <link rel="stylesheet" href="assets/data.css?v=44" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-registres.html" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-registres.html" />
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/donnees-registres.html" />
@@ -44,16 +44,20 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Explorateur Haïti</a></li>
-      <li><a href="couches.html" data-i18n="nv.couches_h">Couches</a></li>
-      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Données</span></span>
+      <li><a href="couches.html" data-i18n="nv.cartes_h">Cartes thématiques</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services &amp; partenariats</span></span>
         <ul class="nav-sub">
-          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue <small>jeux de données &amp; guides</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnostics &amp; prestations <small>prix sur demande</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
-          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
-          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parrainer un dataset <small>institutions &amp; entreprises</small></a></li>
-          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Services &amp; partenariats <small>audit, diagnostic, parrainage</small></a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parrainer un jeu de données <small>institutions &amp; entreprises</small></a></li>
+        </ul>
+      </li>
+      <li class="nav-grp"><span><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Ressources</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue des jeux de données <small>données &amp; guides</small></a></li>
           <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fiches de documentation <small>complétude, sources, limites</small></a></li>
           <li><a href="donnees.html" data-i18n-html="nv.comment">Comment ça marche <small>méthode, sources, système</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
@@ -181,12 +185,11 @@ complet, et moins que les 34 $ des deux pris séparément.
       <div>
         <h4 data-i18n="ft.h_donnees">Données</h4>
         <ul>
-          <li><a href="couches.html" data-i18n="ft.couches">Couches</a></li>
+          <li><a href="couches.html" data-i18n="ft.cartes">Cartes thématiques</a></li>
           <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
           <li><a href="donnees.html" data-i18n="ft.comment">Comment ça marche</a></li>
-          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
           <li><a href="donnees-services.html" data-i18n="ft.serv">Services &amp; partenariats</a></li>
-          <li><a href="donnees-fiches.html" data-i18n="ft.fiches">Fiches de documentation</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions &amp; licences</a></li>
           <li><a href="donnees-backbone.html" data-i18n="ft.def">Définitions &amp; méthodes</a></li>
           <li><a href="donnees-systeme.html" data-i18n="ft.carte">La carte du système</a></li>
           <li><a href="donnees-confiance.html" data-i18n="ft.conf">Confiance &amp; méthode</a></li>

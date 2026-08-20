@@ -21,11 +21,13 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=42" />
+  <link rel="stylesheet" href="../assets/data.css?v=44" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
+  
   
   
   
@@ -79,16 +81,20 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <button class="nav-toggle" aria-label="Meni" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Eksploratè Ayiti</a></li>
-      <li><a href="/couches.html" data-i18n="nv.couches_h">Kouch yo</a></li>
-      <li class="nav-grp"><span><span aria-hidden="true">🗂 </span><span data-i18n="nv.grp">Done</span></span>
+      <li><a href="/couches.html" data-i18n="nv.cartes_h">Kat tematik</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Sèvis ak patenarya</span></span>
         <ul class="nav-sub">
-          <li><a href="datasets.html" data-i18n-html="nv.cat">Katalòg <small>seri done ak gid</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Dyagnostik ak prestasyon <small>pri sou demann</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solisyon ak lisans <small>antrepriz, ONG, administrasyon</small></a></li>
-          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>etidyan ak chèchè</small></a></li>
           <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parennen yon seri done <small>enstitisyon ak antrepriz</small></a></li>
-          <li><a href="donnees-services.html" data-i18n-html="nv.serv">Sèvis ak patenarya</a></li>
+        </ul>
+      </li>
+      <li class="nav-grp"><span><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Resous</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Katalòg seri done yo <small>done ak gid</small></a></li>
           <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fich dokimantasyon</a></li>
           <li><a href="donnees.html" data-i18n-html="nv.comment">Kijan sa mache <small>metòd, sous, sistèm</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>etidyan ak chèchè</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
@@ -138,31 +144,31 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
             <td data-i18n-html="par.38ee8a">Vin paren yon jeu done</td>
             <td data-i18n-html="par.8d4c2e">Louvri oswa mete ajou yon jeu presi</td>
             <td data-i18n-html="par.fdf4d7">Mansyon ki rete sou fich jeu a, vizibilite devan yon piblik ki kalifye</td>
-            <td class="p">1 500 – 4 000 $</td>
+            <td class="p" data-i18n="par.a_discuter">Pou nou pale sou li</td>
           </tr>
           <tr>
             <td data-i18n-html="par.99b4c9">Bous done pou memwa</td>
             <td data-i18n-html="par.edfb3a">Aksè konplè pou yon gwoup etidyan sou yon tèm</td>
             <td data-i18n-html="par.699de8">Imaj ki sipòte fòmasyon, yon je sou sektè a san fòse</td>
-            <td data-i18n-html="par.618247" class="p">≈ 1 000 $ / 10 etidyan</td>
+            <td class="p" data-i18n="par.a_discuter">Pou nou pale sou li</td>
           </tr>
           <tr>
             <td data-i18n-html="par.6e44a0">Pak rechèch</td>
             <td data-i18n-html="par.becadb">Yon lo jeu pou yon fakilte oswa yon laboratwa, sou yon ane</td>
             <td data-i18n-html="par.ad2032">Yon ankraj enstitisyonèl ki dire, yon enpak kolektif</td>
-            <td class="p">3 000 – 8 000 $</td>
+            <td class="p" data-i18n="par.a_discuter">Pou nou pale sou li</td>
           </tr>
           <tr>
             <td data-i18n-html="par.459835">Kòwòt tematik</td>
             <td data-i18n-html="par.5b95f3">Yon ane travay sou yon sektè : agrikilti, finans, travay, sante, teritwa</td>
             <td data-i18n-html="par.d3dc7d">Yon plas kòm ekspè, pwodiksyon konesans sou pwòp mache l</td>
-            <td data-i18n-html="par.91d39f" class="p">apati 10 000 $</td>
+            <td class="p" data-i18n="par.a_discuter">Pou nou pale sou li</td>
           </tr>
           <tr>
             <td data-i18n-html="par.f6041b">Fon rechèch aplike</td>
             <td data-i18n-html="par.302686">Yon kontribisyon tout moun mete ansanm, yon komite deside kote li ale</td>
             <td data-i18n-html="par.9d5a80">Yon enpak ki dire, yon efò pataje ak lòt kontribitè</td>
-            <td data-i18n-html="par.f791b7" class="p">apati 500 $</td>
+            <td class="p" data-i18n="par.a_discuter">Pou nou pale sou li</td>
           </tr>
         </tbody>
       </table></div>
@@ -186,35 +192,35 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <td data-i18n-html="par.cf3b84">Pwofil 140 komin Ayiti yo <strong>— priyorite 1</strong></td>
 <td data-i18n-html="par.8c7739">Referans teritwa ki deja pibliye, konplete ak sous sektoryèl yo</td>
 <td data-i18n-html="par.0b4530">Amenajman, ONG, bayè, kolektivite, jounalis done</td>
-<td class="p">≈ 6 000 $</td>
+<td class="p" data-i18n="par.a_discuter">Pou nou pale sou li</td>
 <td data-i18n-html="par.c06733">Pwofil 10 depatman yo, sou menm sous yo ak menm diksyonè a. Desann nan 140 komin yo rete louvri pou yon finansman pita.</td>
 </tr>
           <tr>
             <td data-i18n-html="par.9ea5cb">Pri mache yo — kouvèti nasyonal ak mizajou chak mwa</td>
             <td data-i18n-html="par.fff7b8">CNSA, FEWS NET</td>
             <td data-i18n-html="par.99cde0">Agwonomi, sekirite alimantè, ekonomi, ONG imanitè, jounalis</td>
-            <td data-i18n-html="par.6d608b" class="p">≈ 2 500 $<br /><small>+ 1 200 $ chak ane pou mizajou</small></td>
+            <td class="p" data-i18n="par.a_discuter">Pou nou pale sou li</td>
           <td data-i18n-html="par.0678b5">Rezo santinèl 9 mache ki la kounye a, kenbe ajou pandan douz mwa, san ajoute nouvo mache.</td>
 </tr>
           <tr>
             <td data-i18n-html="par.ccaf6f">Endikatè ekonomik Ayiti (2000–2025)</td>
             <td data-i18n-html="par.ef8cd7">Bank mondyal, FMI, BRH</td>
             <td data-i18n-html="par.3cf26f">Ekonomi, jesyon, finans, plan biznis, plede kòz</td>
-            <td class="p">≈ 2 000 $</td>
+            <td class="p" data-i18n="par.a_discuter">Pou nou pale sou li</td>
           <td data-i18n-html="par.931394">Seri nasyonal chak ane yo, san separe pa depatman ni seri chak mwa.</td>
 </tr>
           <tr>
             <td data-i18n-html="par.eedf09">Edikasyon an Ayiti pa depatman</td>
             <td data-i18n-html="par.63021a">MENFP, UNESCO UIS, Bank mondyal</td>
             <td data-i18n-html="par.a6ee85">Syans edikasyon, politik piblik, ONG edikasyon</td>
-            <td class="p">≈ 2 500 $</td>
+            <td class="p" data-i18n="par.a_discuter">Pou nou pale sou li</td>
           <td data-i18n-html="par.6451f5">Endikatè yo nan nivo 10 depatman yo, san desann nan komin.</td>
 </tr>
           <tr>
             <td data-i18n-html="par.2040ab">Sante piblik pa depatman</td>
             <td data-i18n-html="par.84be2e">MSPP, OMS/OPS, ankèt EMMUS</td>
             <td data-i18n-html="par.16d160">Sante piblik, epidemyoloji, planifikasyon sanitè</td>
-            <td class="p">≈ 3 000 $</td>
+            <td class="p" data-i18n="par.a_discuter">Pou nou pale sou li</td>
           <td data-i18n-html="par.6451f5">Endikatè yo nan nivo 10 depatman yo, san desann nan komin.</td>
 </tr>
         </tbody>
@@ -303,7 +309,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       </div>
       <div class="two">
         <div><label data-i18n="par.59f3f6" for="s-jeu">Jeu oswa tèm ou vize</label><input id="s-jeu" name="jeu" placeholder="ex. prix des marchés, éducation, santé…" /></div>
-        <div><label data-i18n="par.352c77" for="s-bud">Anvlòp ou anvizaje (si ou vle)</label><input id="s-bud" name="budget" placeholder="ex. 2 500 $" /></div>
+        <div><label data-i18n="par.352c77" for="s-bud">Anvlòp ou anvizaje (si ou vle)</label><input id="s-bud" name="budget" placeholder="pa egzanp, yon lide sou konbyen — ou ka kite l vid" data-i18n-ph="par.budget_ph" /></div>
       </div>
       <div><label data-i18n="par.32bc7a" for="s-msg">Objektif parennaj la</label><textarea id="s-msg" name="msg" rows="4" placeholder="Ce que votre organisation cherche à soutenir, et pourquoi ce thème."></textarea></div>
       <div><button data-i18n-html="par.790752" type="submit" class="btn btn-primary">Voye</button></div>
@@ -335,12 +341,11 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div>
         <h4 data-i18n="ft.h_donnees">Done</h4>
         <ul>
-          <li><a href="/couches.html" data-i18n="ft.couches">Kouch yo</a></li>
+          <li><a href="/couches.html" data-i18n="ft.cartes">Kat tematik</a></li>
           <li><a href="datasets.html" data-i18n="ft.cat">Katalòg</a></li>
           <li><a href="donnees.html" data-i18n="ft.comment">Kijan sa mache</a></li>
-          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solisyon ak lisans</a></li>
           <li><a href="donnees-services.html" data-i18n="ft.serv">Sèvis ak patenarya</a></li>
-          <li><a href="donnees-fiches.html" data-i18n="ft.fiches">Fich dokimantasyon</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solisyon ak lisans</a></li>
           <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definisyon ak metòd</a></li>
           <li><a href="/donnees-systeme.html" data-i18n="ft.carte">Kat sistèm nan</a></li>
           <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Konfyans ak metòd</a></li>

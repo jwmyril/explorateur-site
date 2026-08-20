@@ -1,7 +1,7 @@
 {
  "version": "v1.2026.08",
  "date_generation": "2026-08-13",
- "date_mise_a_jour": "2026-08-13",
+ "date_mise_a_jour": "2026-08-19",
  "genere_par": "build_manifest.py — aucune valeur saisie à la main",
  "nombre_territoires": 192,
  "nombre_departements": 10,
@@ -10,11 +10,11 @@
  "nombre_entites_territoriales": 11707,
  "nombre_sections_communales": 570,
  "nombre_localites": 10945,
- "nombre_indicateurs_definis": 32,
- "nombre_indicateurs_publics": 30,
- "nombre_indicateurs_avec_valeur": 30,
- "nombre_observations": 4200,
- "nombre_valeurs_sourcees": 2949,
+ "nombre_indicateurs_definis": 41,
+ "nombre_indicateurs_publics": 40,
+ "nombre_indicateurs_avec_valeur": 40,
+ "nombre_observations": 5598,
+ "nombre_valeurs_sourcees": 4347,
  "nombre_absences_documentees": 1251,
  "nombre_sources": 36,
  "nombre_sources_integrees": 6,
@@ -90,5 +90,5 @@
  "prd_026_colonnes": 9,
  "prd_027_lignes": 1419,
  "prd_027_colonnes": 12,
- "empreinte": "dfdcb962e89d2c6e"
+ "empreinte": "57d40cef0928d99a"
 }

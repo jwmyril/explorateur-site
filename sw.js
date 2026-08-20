@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v99";
+const CACHE = "explorateur-v101";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -11,11 +11,11 @@ const CACHE = "explorateur-v99";
    prix d'un forfait compte a l'octet. La lecture, elle, passe par
    `caches.match`, qui interroge tous les caches — rien d'autre a changer. */
 const GARDE = "explorateur-communes";
-const DV = "?d=2026-08-17a";   // doit suivre le DV de assets/modules/explorateur.js
+const DV = "?d=2026-08-19a";   // doit suivre le DV de assets/modules/explorateur.js
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=35", "/assets/data.css?v=46", "/assets/modules/explorateur.js?v=34",
+  "/assets/style.css?v=35", "/assets/data.css?v=46", "/assets/modules/explorateur.js?v=35",
   "/assets/modules/etat.js?v=34",
   "/assets/modules/explorateur-i18n.js?v=34",
   "/assets/modules/explorateur-carte.js?v=34",

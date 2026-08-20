@@ -21,14 +21,16 @@ export default function (A) {
     tout: {
       nom: T("comprendre le territoire"), ordre: null,
       cles: ["IND-POP-001", "IND-GEO-001", "IND-POP-002", "IND-POP-010",
-             "IND-GEO-002", "IND-EDU-001", "IND-SAN-001", "IND-MAR-001"],
+             "IND-GEO-002", "IND-EDU-001", "IND-SAN-001", "IND-MAR-001",
+             "IND-ACC-001", "IND-ENV-001"],
       lecture: T("Les huit repères que l'on regarde en premier, quel que soit l'usage.")
     },
     planifier: {
       nom: T("planifier des services publics"),
       ordre: ["Territoire", "Santé", "Éducation", "Marchés", "Qualité"],
       cles: ["IND-POP-001", "IND-POP-002", "IND-POP-007", "IND-POP-012",
-             "IND-GEO-002", "IND-EDU-001", "IND-SAN-001"],
+             "IND-GEO-002", "IND-EDU-001", "IND-SAN-001",
+             "IND-ACC-001", "IND-ACC-003"],
       lecture: T("Combien de personnes à servir, où elles vivent, et quels équipements sont recensés en face."),
       resume: function (r, s) {
         return TF(s.nAbsents > 1
@@ -44,7 +46,8 @@ export default function (A) {
       nom: T("préparer un projet"),
       ordre: ["Santé", "Éducation", "Marchés", "Territoire", "Qualité"],
       cles: ["IND-POP-001", "IND-POP-003", "IND-POP-011", "IND-SAN-001",
-             "IND-EDU-001", "IND-MAR-001", "IND-QUA-001"],
+             "IND-EDU-001", "IND-MAR-001", "IND-QUA-001",
+             "IND-ACC-001", "IND-QUA-002"],
       lecture: T("Les publics, les services recensés, et l'état de la documentation sur laquelle reposera le diagnostic."),
       resume: function (r, s) {
         return TF("Avant d'intervenir sur {n} : {phrase} Le score de complétude vous dit d'avance sur quoi votre diagnostic reposera — et sur quoi il ne reposera pas.",
@@ -58,7 +61,8 @@ export default function (A) {
       nom: T("réaliser une recherche"),
       ordre: ["Qualité", "Territoire", "Santé", "Éducation", "Marchés"],
       cles: ["IND-QUA-001", "IND-POP-001", "IND-POP-012", "IND-POP-013",
-             "IND-GEO-001", "IND-GEO-003", "IND-SAN-003"],
+             "IND-GEO-001", "IND-GEO-003", "IND-SAN-003",
+             "IND-QUA-002", "IND-ENV-003"],
       lecture: T("Les mesures dont la méthode et les limites sont écrites, et les indicateurs de qualité qui disent ce qu'elles valent."),
       resume: function (r, s) {
         return TF("Chaque valeur affichée pour {n} porte son année de référence, sa source et sa méthode de calcul — de quoi les reprendre dans une méthodologie. {phrase}",
@@ -72,7 +76,8 @@ export default function (A) {
       nom: T("étudier une implantation économique"),
       ordre: ["Marchés", "Territoire", "Santé", "Éducation", "Qualité"],
       cles: ["IND-POP-001", "IND-POP-002", "IND-POP-004", "IND-MAR-001",
-             "IND-GEO-001", "IND-GEO-004"],
+             "IND-GEO-001", "IND-GEO-004",
+             "IND-ACC-004", "IND-ENV-002", "IND-RIS-001"],
       lecture: T("La taille du bassin, sa concentration, la population en âge de travailler et les marchés suivis."),
       resume: function (r, s) {
         return TF("Ce que la donnée publique dit du bassin de {n} : {phrase} Elle décrit une population et des équipements recensés — elle ne mesure ni la demande, ni le pouvoir d'achat, ni la concurrence.",
@@ -86,8 +91,9 @@ export default function (A) {
       nom: "Explorer ma commune",
       ordre: ["Territoire", "Éducation", "Santé", "Marchés", "Qualité"],
       cles: ["IND-POP-001", "IND-POP-002", "IND-GEO-002", "IND-GEO-003",
-             "IND-EDU-001", "IND-SAN-001", "IND-MAR-001"],
-      lecture: T("Ce qui se voit depuis la commune : combien on est, sur quelle étendue, et quels services sont recensés."),
+             "IND-EDU-001", "IND-SAN-001", "IND-MAR-001",
+             "IND-ACC-001", "IND-ACC-003"],
+      lecture: T("Ce qui se voit depuis la commune : combien on est, sur quelle étendue, quels services sont recensés, et combien de temps il faut pour les atteindre."),
       resume: function (r, s) {
         return TF("Ce que l'on sait publiquement de {n} : {phrase} Tout ceci est libre et téléchargeable.",
           { n: esc(nomT(r)), phrase: s.phrase });

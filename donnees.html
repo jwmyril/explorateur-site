@@ -21,7 +21,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=35" />
-  <link rel="stylesheet" href="assets/data.css?v=45" />
+  <link rel="stylesheet" href="assets/data.css?v=46" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees.html" />
   <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
@@ -62,6 +62,8 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   
   
     
+  
+  
   
   
   
@@ -147,12 +149,36 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <p class="kreyol" lang="ht" data-i18n="pg.accueil.accroche">Des données prêtes à décider.</p>
     <h1 data-i18n-html="pg.accueil.h1">Atmart <em>Data</em></h1>
     <p class="lead" data-i18n-html="pg.accueil.lead">
-      La plateforme de <strong>données reconstituées sur Haïti</strong>. Nous ne republions pas des
-      fichiers publics : nous fabriquons des jeux de données qui n'existent pas encore, en reliant des
-      sources dispersées à des identifiants communs, à un historique et à une documentation qui tiennent
-      devant un comité. <strong>Pendant sa première année, Atmart Data ne publie que des données sur
-      Haïti</strong> — un seul pays, traité en profondeur, plutôt que dix survolés.
+      <strong>Atmart Data fabrique des données ; l'Explorateur Haïti les donne.</strong>
+      Nous ne republions pas des fichiers publics : nous construisons des jeux qui n'existent
+      pas encore, en reliant des sources dispersées à des identifiants communs, à un historique
+      et à une documentation qui tiennent devant un comité. Ce travail est publié gratuitement,
+      sans compte et sans traceur. Ce qui se facture, ce n'est jamais la donnée —
+      <a href="donnees-services.html">c'est le travail fait dessus</a>.
     </p>
+
+    <!-- LA DISTINCTION QUE PERSONNE N'AVAIT ÉCRITE.
+         Deux noms circulaient sans qu'on dise lequel désigne quoi : un lecteur
+         ne pouvait pas savoir s'il avait affaire à deux produits, deux
+         entreprises, ou un doublon. Le dire en deux phrases coûte moins cher
+         que de laisser la question ouverte sur chaque page. -->
+    <div class="qui-quoi">
+      <div>
+        <p class="qq-nom" data-i18n="pg.qq_1n">Atmart Data</p>
+        <p data-i18n-html="pg.qq_1p"><strong>Ce que nous faisons.</strong> L'activité
+        d'Atmart LLC : construire, auditer et documenter des données territoriales,
+        puis vendre le <em>travail</em> — diagnostics, audits, cartographie sur mesure,
+        formation. C'est ce qui finance le reste.</p>
+      </div>
+      <div>
+        <p class="qq-nom" data-i18n="pg.qq_2n">Explorateur Haïti</p>
+        <p data-i18n-html="pg.qq_2p"><strong>Où cela se voit.</strong> La plateforme
+        publique et gratuite où ce travail est déposé : 140 communes, cartes thématiques,
+        fiches, séries nationales. Aucun compte, aucune donnée personnelle, aucun
+        traceur publicitaire — et <a href="conditions.html#conditions">le droit écrit</a>
+        de tout réutiliser.</p>
+      </div>
+    </div>
     <div class="cta-row" style="display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.5rem">
       <a data-i18n="cm.cta_expl" href="https://explorateur.atmart.ltd/" class="btn btn-primary">Ouvrir l’Explorateur</a>
       <a data-i18n="cm.cta_cat" href="datasets.html" class="btn btn-outline">Le catalogue</a>

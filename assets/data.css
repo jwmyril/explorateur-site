@@ -1515,3 +1515,30 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
    discrète est un oubli qui s'installe. */
 .jur-todo { background: var(--attention); color: var(--fond); padding: 0.1em 0.45em;
   border-radius: 4px; font-size: 0.86em; font-weight: 600; }
+
+/* ============================================== ATMART DATA / EXPLORATEUR
+   Le bloc qui distingue les deux noms. Deux colonnes côte à côte, parce que
+   la distinction se lit dans la COMPARAISON : l'un fabrique et facture le
+   travail, l'autre publie et ne facture rien. Empilés, ils se liraient comme
+   une suite, pas comme un partage. */
+.qui-quoi { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.6rem;
+  margin: 1.6rem 0 0; }
+@media (max-width: 640px) { .qui-quoi { grid-template-columns: 1fr; } }
+.qui-quoi > div { border-left: 3px solid var(--accent); padding-left: 1rem; }
+.qui-quoi p { margin: 0 0 0.3rem; font-size: 0.95rem; line-height: 1.6; }
+.qq-nom { font-weight: 700; font-size: 1.02rem; color: var(--ink); }
+
+/* ================================================ RAYONS DU CATALOGUE
+   Les quatre étagères deviennent quatre vues : vingt-quatre jeux gratuits
+   empilés sous trois produits payants faisaient huit rangées de défilement
+   avant d'atteindre les parrainages. Même mécanique que « Solutions » —
+   `vues.js` — donc rien de neuf à apprendre, et « Tout afficher » rend la
+   page longue à qui la préférait. */
+.vue-barre.rayons { margin-top: 0.6rem; }
+
+/* La ligne « ce que l'Explorateur apporte », sur les cartes et les fiches.
+   Discrète mais lisible : c'est un argument, pas une mention légale. */
+.sv-val { font-size: 0.9rem; line-height: 1.6; color: var(--ink);
+  background: var(--surface-2); border-left: 3px solid var(--accent);
+  padding: 0.6rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.7rem 0; }
+.card .sv-val { font-size: 0.86rem; }

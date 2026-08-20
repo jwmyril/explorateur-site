@@ -21,7 +21,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=45" />
+  <link rel="stylesheet" href="../assets/data.css?v=46" />
   <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
 {
@@ -1032,6 +1032,8 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   
   
   
+  
+  
   <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
 
   <link rel="canonical" href="https://explorateur.atmart.ltd/ht/datasets.html" />
@@ -1100,7 +1102,9 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 
     <!-- ===== GRATUITS ===== -->
     <div class="rayons-cote-a-cote">
-<div class="shelf" id="shelf-services">
+<div class="vue-barre rayons" data-vues role="group" aria-label="Chwazi yon reyon" data-i18n-aria="ds.vues_aria"></div>
+  <p class="vue-note x-note" data-i18n="ds.vues_note">Katalòg la gen trannde antre : chwazi yon reyon, oswa afiche tout.</p>
+    <div class="shelf" id="shelf-services" data-vue="prestations" data-vue-nom="🤝 Prestations">
       <div class="shelf-head">
         <h2 data-i18n="ds.serv_h">🤝 Prestasyon — travay la, se pa fichye a</h2>
         <p data-i18n="ds.serv_p">Done Eksploratè a gratis epi y ap rete konsa. Sa nou fè peye a se travay nou fè sou yo : odite yon seri done, fè dyagnostik yon teritwa, amonize referansyèl, bay yon ekip fòmasyon. Chak fich di ki kesyon prestasyon an tranche — epi sa li pa fè.</p>
@@ -1114,6 +1118,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.verifie_p">Yon fich dokimantasyon sou modèl « Datasheets for Datasets » (Gebru et al., vèsyon Aether), ak kat seksyon an plis ki apa pou Atmart : konplè a mezire sou fichye a, konkòdans ant sous yo, paspò jiridik ak de vèdik, epi limit lekti yo.</p>
   <p class="price" data-i18n-html="sv.verifie_pr">Pri sou demann <small>De a twa semèn pou chak seri done.</small></p>
   <p class="meta" data-i18n-html="sv.verifie_ex">Egzanp nou deja livre : Sis fich nou deja fè epi ki piblik — lekòl deklare, sante deklare, konkòdans, aksè wout, popilasyon ak twa sous, enstalasyon OpenStreetMap.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Sa Eksploratè a pote isit la :</b> <span data-i18n="sv.verifie_val">38 paspò jiridik yo ak sis fich ki deja pibliye yo sèvi kòm modèl epi kòm referans — odit la pa kòmanse sou yon paj blanch, li kòmanse sou yon metòd ki deja pase tès piblik la, epi kliyan an ka gade l anvan l siyen.</span></p>
   <a href="donnees-services.html#srv-verifie" class="btn btn-primary" data-i18n="ds.b_serv">Gade fich dyagnostik la</a>
 </div>
 <div class="card" data-cat="service">
@@ -1122,6 +1127,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.diagnostic_p">Yon rapò ak kat, yon tablo klasman ou ka repwodwi, epi metòd la ekri pou nenpòt moun refè kalkil la. Nou livre fichye entèmedyè yo tou, se pa sèlman konklizyon yo.</p>
   <p class="price" data-i18n-html="sv.diagnostic_pr">Pri sou demann <small>Twa a sis semèn dapre konbyen dimansyon ki genyen.</small></p>
   <p class="meta" data-i18n-html="sv.diagnostic_ex">Egzanp nou deja livre : Kat « Kote enfòmasyon nou an pi fèb » la ki pibliye sou Eksploratè a : 8 komin gen de fanmi done sou twa ki an dezakò oswa ki pa ka verifye.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Sa Eksploratè a pote isit la :</b> <span data-i18n="sv.diagnostic_val">140 komin yo deja dekri, kwaze ak date : dyagnostik la kòmanse kote yon prestatè pou kont li t ap fèk fini ranmase done. Epi endis konkòdans lan di davans ki kote enfòmasyon an twò fèb pou pran yon desizyon.</span></p>
   <a href="donnees-services.html#srv-diagnostic" class="btn btn-primary" data-i18n="ds.b_serv">Gade fich dyagnostik la</a>
 </div>
 <div class="card" data-cat="service">
@@ -1130,6 +1136,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.carto_p">Kat nan fichye ouvè — SVG, PNG gwo definisyon, GeoJSON — ak lejand yo, sous yo, milezim yo ak limit yo. Ou ka sèvi ak yo ankò san nou.</p>
   <p class="price" data-i18n-html="sv.carto_pr">Pri sou demann <small>Yon semèn a twa semèn.</small></p>
   <p class="meta" data-i18n-html="sv.carto_ex">Egzanp nou deja livre : 35 kat tematik Eksploratè a, kote chak grenn pote sous li, lisans li ak sa li pa di.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Sa Eksploratè a pote isit la :</b> <span data-i18n="sv.carto_val">trannsenk kat piblik montre metòd la anvan ou achte, epi fon kat la, p-kòd yo ak ane yo deja la — ou peye kat la, ou pa peye fondasyon l.</span></p>
   <a href="donnees-services.html#srv-carto" class="btn btn-primary" data-i18n="ds.b_serv">Gade fich dyagnostik la</a>
 </div>
 <div class="card" data-cat="service">
@@ -1138,6 +1145,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.harmonisation_p">Yon tab korespondans ki mennen nan p-kòd ofisyèl yo, kantite egzak sa ki pa t ka mare — ak poukisa — epi yon script ekip pa ou yo ka relanse pou kont yo.</p>
   <p class="price" data-i18n-html="sv.harmonisation_pr">Pri sou demann <small>De a kat semèn dapre konbyen done ki genyen.</small></p>
   <p class="meta" data-i18n-html="sv.harmonisation_ex">Egzanp nou deja livre : Referansyèl teritoryal Eksploratè a : 140 komin, 570 seksyon, idantifyan ki pa chanje, chak nivo mare ak nivo pi wo a.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Sa Eksploratè a pote isit la :</b> <span data-i18n="sv.harmonisation_val">referansyèl 11 707 antite a ak pyebwa ratachman li deja egziste, piblik epi ak vèsyon : tab korespondans ou an vize yon sib ki estab, se pa yon fichye k ap bouje san avèti.</span></p>
   <a href="donnees-services.html#srv-harmonisation" class="btn btn-primary" data-i18n="ds.b_serv">Gade fich dyagnostik la</a>
 </div>
 <div class="card" data-cat="service">
@@ -1146,6 +1154,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.tableau_p">Yon enstans prive — idantite vizyèl, wòl, deplwaman, sipò — oswa yon modèl Power BI/QGIS ki branche sou sous k ap mete ajou. Done ou yo rete pou ou.</p>
   <p class="price" data-i18n-html="sv.tableau_pr">Pri sou demann <small>Kat a wit semèn pou yon enstans ; de semèn pou yon modèl.</small></p>
   <p class="meta" data-i18n-html="sv.tableau_ex">Egzanp nou deja livre : Modèl Power BI ak QGIS Eksploratè a, ki an vant epi moun ap deja sèvi ak yo, mete ajou ak yon sèl klik lè yon fichye chanje.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Sa Eksploratè a pote isit la :</b> <span data-i18n="sv.tableau_val">fichye ki pibliye yo gen adrès fiks ak yon jounal vèsyon : yon tablo bò ki branche sou yo mete tèt li ajou pou kont li, tandiske yon livrab klasik mouri depi premye mizajou a.</span></p>
   <a href="donnees-services.html#srv-tableau" class="btn btn-primary" data-i18n="ds.b_serv">Gade fich dyagnostik la</a>
 </div>
 <div class="card" data-cat="service">
@@ -1154,6 +1163,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.formation_p">Seyans an prezans oswa adistans, sipò ou ka sèvi ak yo ankò, egzèsis sou vrè done Ayiti yo — se pa sou egzanp yo envante.</p>
   <p class="price" data-i18n-html="sv.formation_pr">Pri sou demann <small>Yon jou a twa jou, dapre pwogram nan.</small></p>
   <p class="meta" data-i18n-html="sv.formation_ex">Egzanp nou deja livre : Leson panse kritik Atmart yo ak fich dokimantasyon yo, tout piblik epi ou ka sèvi ak yo ankò.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Sa Eksploratè a pote isit la :</b> <span data-i18n="sv.formation_val">moun yo pratike sou VRÈ done Ayiti yo, ki piblik epi ki ka telechaje — patisipan yo pati ak yon aksè ki pa etenn lè seyans lan fini.</span></p>
   <a href="donnees-services.html#srv-formation" class="btn btn-primary" data-i18n="ds.b_serv">Gade fich dyagnostik la</a>
 </div>
 <div class="card" data-cat="service">
@@ -1162,13 +1172,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.activation_p">Preparasyon chak ane anvan sezon siklòn nan, epi yon pwodiksyon rapid apre evènman an. Chak aktivasyon bay TOU yon rapò piblik pou enterè tout moun.</p>
   <p class="price" data-i18n-html="sv.activation_pr">Pri sou demann <small>Preparasyon : kat semèn. Aktivasyon : kèk jou.</small></p>
   <p class="meta" data-i18n-html="sv.activation_ex">Egzanp nou deja livre : Kouch siklòn ak tranblemanntè Eksploratè a, ki bati sou IBTrACS ak ComCat, ak limit yo ekri.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Sa Eksploratè a pote isit la :</b> <span data-i18n="sv.activation_val">sòl la pare AVAN evènman an : siklòn, tranblemanntè, zòn ki ka inonde ak aksè sou wout yo deja kalkile. Aktivasyon an kòmanse nan kèk jou, se pa nan kèk semèn.</span></p>
   <a href="donnees-services.html#srv-activation" class="btn btn-primary" data-i18n="ds.b_serv">Gade fich dyagnostik la</a>
 </div>
 <!-- /SERVICES:cartes -->
       </div>
     </div>
 
-    <div class="shelf" id="shelf-paid">
+    <div class="shelf" id="shelf-paid" data-vue="vente" data-vue-nom="🛒 En vente">
       <div class="shelf-head">
         <h2 data-i18n="ds.paid_h">🛒 An vant — sa nou ka livre jodi a</h2>
         <p data-i18n="ds.paid_p">Ranmase, netwaye epi dokimante alamen. Yon sèl peman, telechajman touswit ak kat oswa PayPal, yon lisans ki ekri.</p>
@@ -1209,6 +1220,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <h3 data-i18n-html="ds.c4_h">Pakè Jeyo Ayiti — tout kowòdone GPS yo</h3>
   <p data-i18n-html="ds.c4_p"><strong>570 seksyon kominal</strong> + <strong>140 vil chèflye</strong> + <strong>10 945 kote moun rete</strong>, tout non yo an français <strong>ak an kreyòl</strong>, ak p-kòd ofisyèl OCHA yo, sipèfisi ak kowòdone WGS84. Chak kote moun rete rattache ak seksyon kominal li. GeoJSON tou twa nivo yo ladan l pou Power BI ak QGIS.</p>
   <p class="price" data-i18n-html="ds.c4_pr">45 $</p>
+  <p class="sv-val"><b data-i18n="sv.val_court2">Sa Eksploratè a pote :</b> <span data-i18n="ds.c4_val">menm p-kòd yo ak 140 fich piblik yo : sa w achte a mare ak tout sa Eksploratè a pibliye gratis, san ou pa bezwen fè travay rapwochman.</span></p>
   <p class="meta" data-i18n-html="ds.c4_meta">🗺 Jeyografi • Sous : CNIGS via OCHA ; GeoNames • nivo konfyans A • Licence Atmart — écrite</p>
   <a href="donnees-pack-geo-haiti.html" class="btn btn-primary" data-i18n="ds.c4_cta">Gade fich la epi achte</a>
 </div>
@@ -1217,6 +1229,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <h3 data-i18n-html="ds.c30_h">Modèl Power BI — Eksploratè Ayiti</h3>
   <p data-i18n-html="ds.c30_p">Yon pwojè Power BI (PBIP) ki pare pou w louvri : 7 tab ki branche sou done sit la pibliye yo, relasyon ki poze sou p-kòd yo, mezi ki dokimante ak limit yo. Li rafrechi ak yon sèl klik — jou Atmart mete yon fichye ajou, rapò w yo swiv. Nou bati l epi nou valide l nan Power BI Desktop.</p>
   <p class="price" data-i18n-html="ds.c30_pr">50 $</p>
+  <p class="sv-val"><b data-i18n="sv.val_court2">Sa Eksploratè a pote :</b> <span data-i18n="ds.c30_val">tab yo pwente sou fichye ki PIBLIYE sou sit la, se pa sou yon kopi : jou Atmart mete yon seri done ajou, rapò ou yo swiv ak yon sèl klik.</span></p>
   <p class="meta" data-i18n-html="ds.c30_meta">📦 Transvèsal • Sous : Atmart Data — assemblage des jeux publiés • nivo konfyans A • Licence Atmart — écrite</p>
   <a href="https://payhip.com/b/XSAdi" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.c30_cta">Achte — 50 $</a>
 </div>
@@ -1225,6 +1238,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <h3 data-i18n-html="ds.c31_h">Modèl QGIS — Eksploratè Ayiti</h3>
   <p data-i18n-html="ds.c31_p">Yon pwojè QGIS ki pare pou w louvri : komin ak depatman, basen vèsan ak non yo, zòn inondab, pwen dlo k ap mache ak sa ki an pann, estasyon gazolin ak finans — kouch distan ki gen estil, sit la chaje yo. Nou bati l epi nou valide l nan QGIS.</p>
   <p class="price" data-i18n-html="ds.c31_pr">50 $</p>
+  <p class="sv-val"><b data-i18n="sv.val_court2">Sa Eksploratè a pote :</b> <span data-i18n="ds.c31_val">kouch yo aloven epi yo gen estil : yo mete tèt yo ajou depi sou sit la, epi chak youn deja pote sous li, lisans li ak limit li.</span></p>
   <p class="meta" data-i18n-html="ds.c31_meta">🗺 Jeyografi • Sous : Atmart Data — assemblage des jeux publiés • nivo konfyans A • Licence Atmart — écrite</p>
   <a href="https://payhip.com/b/DBirg" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.c31_cta">Achte — 50 $</a>
 </div>
@@ -1233,7 +1247,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     </div>
 
 <!-- ===== EN PRÉPARATION ===== -->
-    <div class="shelf" id="shelf-free">
+    <div class="shelf" id="shelf-free" data-vue="gratuit" data-vue-nom="🎁 Gratuits">
       <div class="shelf-head">
         <h2 data-i18n="ds.free_h">🎁 Gratis — sèvi ou</h2>
         <p data-i18n="ds.free_p">Telechaje touswit, san kont, san imèl. Chak fichye vini ak dokimantasyon l. Lisans CC BY 4.0 : site sous la, epi li pou ou.</p>
@@ -1503,7 +1517,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 
     <!-- ===== EN VENTE ===== -->
     </div>
-<div class="shelf" id="shelf-soon">
+<div class="shelf" id="shelf-soon" data-vue="parrainable" data-vue-nom="🧭 À parrainer">
       <div class="shelf-head">
         <h2 data-i18n="ds.soon_h">🧭 N ap prepare yo — yon patnè ka peye pou yo louvri</h2>
         <p data-i18n-html="ds.soon_p">Sous yo idantifye, metòd la ekri : sa ki manke se lajan pou fè travay preparasyon an. Yon enstitisyon ka <a href="donnees-parrainage.html">peye pou youn nan seri sa yo louvri</a> — konsa tout yon pwomosyon etidyan ak chèrchè jwenn li gratis.</p>
@@ -1620,5 +1634,6 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <script src="../assets/ux.js?v=1" defer></script>
 <script src="../assets/i18n.js?v=19"></script>
 <script src="../assets/theme.js?v=3" defer></script>
+<script src="../assets/vues.js?v=1"></script>
 </body>
 </html>

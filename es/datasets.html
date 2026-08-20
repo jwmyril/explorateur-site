@@ -21,7 +21,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=45" />
+  <link rel="stylesheet" href="../assets/data.css?v=46" />
   <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
 {
@@ -1032,6 +1032,8 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   
   
   
+  
+  
   <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
 
   <link rel="canonical" href="https://explorateur.atmart.ltd/es/datasets.html" />
@@ -1100,7 +1102,9 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 
     <!-- ===== GRATUITS ===== -->
     <div class="rayons-cote-a-cote">
-<div class="shelf" id="shelf-services">
+<div class="vue-barre rayons" data-vues role="group" aria-label="Elegir una sección" data-i18n-aria="ds.vues_aria"></div>
+  <p class="vue-note x-note" data-i18n="ds.vues_note">El catálogo tiene treinta y dos entradas: elija una sección o muéstrelo todo.</p>
+    <div class="shelf" id="shelf-services" data-vue="prestations" data-vue-nom="🤝 Prestations">
       <div class="shelf-head">
         <h2 data-i18n="ds.serv_h">🤝 Servicios — el trabajo, no el archivo</h2>
         <p data-i18n="ds.serv_p">Los datos del Explorador son gratuitos y lo seguirán siendo. Lo que se factura es el trabajo hecho sobre ellos: auditar un conjunto, diagnosticar un territorio, armonizar referenciales, formar a un equipo. Cada ficha dice lo que el servicio zanja — y lo que no hace.</p>
@@ -1114,6 +1118,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.verifie_p">Una ficha de documentación según el modelo « Datasheets for Datasets » (Gebru et al., versión Aether), ampliada con cuatro secciones propias de Atmart: completitud medida sobre el archivo, concordancia entre fuentes, pasaporte jurídico con dos veredictos y límites de interpretación.</p>
   <p class="price" data-i18n-html="sv.verifie_pr">Precio bajo petición <small>De dos a tres semanas por conjunto de datos.</small></p>
   <p class="meta" data-i18n-html="sv.verifie_ex">Ejemplo ya entregado: Seis fichas ya producidas y públicas — escuelas declaradas, salud declarada, concordancia, acceso vial, población con tres fuentes, equipamientos de OpenStreetMap.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Lo que aporta aquí el Explorador:</b> <span data-i18n="sv.verifie_val">los 38 pasaportes jurídicos y las seis fichas ya publicadas sirven de modelo y de referencia — la auditoría no parte de una página en blanco, parte de un método ya probado en público, que el cliente puede inspeccionar antes de firmar.</span></p>
   <a href="donnees-services.html#srv-verifie" class="btn btn-primary" data-i18n="ds.b_serv">Ver la ficha de diagnóstico</a>
 </div>
 <div class="card" data-cat="service">
@@ -1122,6 +1127,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.diagnostic_p">Un informe con mapas, una tabla de clasificación reproducible y el método escrito para que cualquiera rehaga el cálculo. Se entregan los archivos intermedios, no solo las conclusiones.</p>
   <p class="price" data-i18n-html="sv.diagnostic_pr">Precio bajo petición <small>De tres a seis semanas según el número de dimensiones.</small></p>
   <p class="meta" data-i18n-html="sv.diagnostic_ex">Ejemplo ya entregado: El mapa « Dónde nuestra información es más débil » publicado en el Explorador: 8 comunas tienen dos familias de datos de tres en desacuerdo o no verificables.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Lo que aporta aquí el Explorador:</b> <span data-i18n="sv.diagnostic_val">las 140 comunas ya están descritas, cotejadas y fechadas: el diagnóstico empieza donde un proveedor por su cuenta apenas terminaría su recolección. Y el índice de concordancia dice de antemano dónde la información es demasiado débil para decidir.</span></p>
   <a href="donnees-services.html#srv-diagnostic" class="btn btn-primary" data-i18n="ds.b_serv">Ver la ficha de diagnóstico</a>
 </div>
 <div class="card" data-cat="service">
@@ -1130,6 +1136,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.carto_p">Mapas en archivos abiertos — SVG, PNG de alta definición, GeoJSON — con su leyenda, su fuente, su edición y sus límites. Reutilizables sin nosotros.</p>
   <p class="price" data-i18n-html="sv.carto_pr">Precio bajo petición <small>De una a tres semanas.</small></p>
   <p class="meta" data-i18n-html="sv.carto_ex">Ejemplo ya entregado: Los 35 mapas temáticos del Explorador, cada uno con su fuente, su licencia y lo que no dice.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Lo que aporta aquí el Explorador:</b> <span data-i18n="sv.carto_val">treinta y cinco mapas públicos muestran el método antes de la compra, y el mapa base, los p-codes y las ediciones ya están puestos — usted paga el mapa, no su cimiento.</span></p>
   <a href="donnees-services.html#srv-carto" class="btn btn-primary" data-i18n="ds.b_serv">Ver la ficha de diagnóstico</a>
 </div>
 <div class="card" data-cat="service">
@@ -1138,6 +1145,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.harmonisation_p">Una tabla de correspondencia hacia los p-codes oficiales, el recuento exacto de lo que no pudo vincularse — y por qué — y un script reproducible que sus equipos relanzan solos.</p>
   <p class="price" data-i18n-html="sv.harmonisation_pr">Precio bajo petición <small>De dos a cuatro semanas según el volumen.</small></p>
   <p class="meta" data-i18n-html="sv.harmonisation_ex">Ejemplo ya entregado: El referencial territorial del Explorador: 140 comunas, 570 secciones, identificadores estables, vinculación por árbol padre.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Lo que aporta aquí el Explorador:</b> <span data-i18n="sv.harmonisation_val">el referencial de 11 707 entidades y su árbol de vinculación ya existen, públicos y versionados: su tabla de correspondencia apunta a un objetivo estable, no a un archivo que se moverá sin avisar.</span></p>
   <a href="donnees-services.html#srv-harmonisation" class="btn btn-primary" data-i18n="ds.b_serv">Ver la ficha de diagnóstico</a>
 </div>
 <div class="card" data-cat="service">
@@ -1146,6 +1154,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.tableau_p">Una instancia privada — identidad visual, roles, despliegue, soporte — o un modelo Power BI/QGIS conectado a fuentes que se actualizan. Sus datos siguen siendo suyos.</p>
   <p class="price" data-i18n-html="sv.tableau_pr">Precio bajo petición <small>De cuatro a ocho semanas para una instancia; dos semanas para un modelo.</small></p>
   <p class="meta" data-i18n-html="sv.tableau_ex">Ejemplo ya entregado: Los modelos Power BI y QGIS del Explorador, a la venta y ya en uso, se actualizan con un clic cuando cambia un archivo.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Lo que aporta aquí el Explorador:</b> <span data-i18n="sv.tableau_val">los archivos publicados llevan direcciones fijas y un registro de versiones: un cuadro de mando conectado a ellos se actualiza solo, mientras que un entregable clásico muere en la primera actualización.</span></p>
   <a href="donnees-services.html#srv-tableau" class="btn btn-primary" data-i18n="ds.b_serv">Ver la ficha de diagnóstico</a>
 </div>
 <div class="card" data-cat="service">
@@ -1154,6 +1163,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.formation_p">Sesiones presenciales o a distancia, materiales reutilizables, ejercicios sobre los datos reales de Haití — no sobre ejemplos inventados.</p>
   <p class="price" data-i18n-html="sv.formation_pr">Precio bajo petición <small>De uno a tres días, según el programa.</small></p>
   <p class="meta" data-i18n-html="sv.formation_ex">Ejemplo ya entregado: Los tutoriales de pensamiento crítico de Atmart y las fichas de documentación, todos públicos y reutilizables.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Lo que aporta aquí el Explorador:</b> <span data-i18n="sv.formation_val">se practica con los DATOS REALES de Haití, públicos y descargables — los participantes se van con un acceso que no se apaga al terminar la sesión.</span></p>
   <a href="donnees-services.html#srv-formation" class="btn btn-primary" data-i18n="ds.b_serv">Ver la ficha de diagnóstico</a>
 </div>
 <div class="card" data-cat="service">
@@ -1162,13 +1172,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p data-i18n-html="sv.activation_p">Preparación anual antes de la temporada de ciclones, y luego producción acelerada tras el evento. Cada activación produce TAMBIÉN un informe público de interés general.</p>
   <p class="price" data-i18n-html="sv.activation_pr">Precio bajo petición <small>Preparación: cuatro semanas. Activación: unos días.</small></p>
   <p class="meta" data-i18n-html="sv.activation_ex">Ejemplo ya entregado: Las capas de ciclones y sismos del Explorador, construidas sobre IBTrACS y ComCat, con sus límites escritos.</p>
+  <p class="sv-val"><b data-i18n="sv.val_court">Lo que aporta aquí el Explorador:</b> <span data-i18n="sv.activation_val">la base está lista ANTES del evento: ciclones, terremotos, zonas inundables y acceso por carretera ya están calculados. La activación arranca en días, no en semanas.</span></p>
   <a href="donnees-services.html#srv-activation" class="btn btn-primary" data-i18n="ds.b_serv">Ver la ficha de diagnóstico</a>
 </div>
 <!-- /SERVICES:cartes -->
       </div>
     </div>
 
-    <div class="shelf" id="shelf-paid">
+    <div class="shelf" id="shelf-paid" data-vue="vente" data-vue-nom="🛒 En vente">
       <div class="shelf-head">
         <h2 data-i18n="ds.paid_h">🛒 En venta — entregable hoy</h2>
         <p data-i18n="ds.paid_p">Recopilados, limpiados y documentados a mano. Pago único, descarga inmediata con tarjeta o PayPal, licencia por escrito.</p>
@@ -1209,6 +1220,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <h3 data-i18n-html="ds.c4_h">Pack Geo Haití — todas las coordenadas GPS</h3>
   <p data-i18n-html="ds.c4_p"><strong>570 secciones comunales</strong> + <strong>140 ciudades cabecera</strong> + <strong>10 945 lugares habitados</strong>, todos nombrados en francés <strong>y en criollo haitiano</strong>, con los p-codes oficiales de OCHA, superficies y coordenadas WGS84. Cada lugar habitado está vinculado a su sección comunal. GeoJSON de los tres niveles incluidos para Power BI y QGIS.</p>
   <p class="price" data-i18n-html="ds.c4_pr">45 $</p>
+  <p class="sv-val"><b data-i18n="sv.val_court2">Lo que aporta el Explorador:</b> <span data-i18n="ds.c4_val">los mismos p-codes que las 140 fichas públicas: lo que compra encaja con todo lo que el Explorador publica gratis, sin trabajo de emparejamiento.</span></p>
   <p class="meta" data-i18n-html="ds.c4_meta">🗺 Geografía • Fuentes : CNIGS via OCHA ; GeoNames • nivel de confianza A • Licence Atmart — écrite</p>
   <a href="donnees-pack-geo-haiti.html" class="btn btn-primary" data-i18n="ds.c4_cta">Ver la ficha y comprar</a>
 </div>
@@ -1217,6 +1229,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <h3 data-i18n-html="ds.c30_h">Plantilla Power BI — Explorador Haití</h3>
   <p data-i18n-html="ds.c30_p">Un proyecto Power BI (PBIP) listo para abrir: 7 tablas conectadas a los datos publicados del sitio, relaciones establecidas sobre los p-codes, medidas documentadas con sus límites. Se actualiza con un clic — el día en que Atmart actualiza un archivo, sus informes lo siguen. Construido y validado en Power BI Desktop.</p>
   <p class="price" data-i18n-html="ds.c30_pr">50 $</p>
+  <p class="sv-val"><b data-i18n="sv.val_court2">Lo que aporta el Explorador:</b> <span data-i18n="ds.c30_val">las tablas apuntan a los archivos PUBLICADOS del sitio, no a una copia: el día en que Atmart actualiza un conjunto, sus informes lo siguen con un clic.</span></p>
   <p class="meta" data-i18n-html="ds.c30_meta">📦 Transversal • Fuentes : Atmart Data — assemblage des jeux publiés • nivel de confianza A • Licence Atmart — écrite</p>
   <a href="https://payhip.com/b/XSAdi" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.c30_cta">Comprar — 50 $</a>
 </div>
@@ -1225,6 +1238,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <h3 data-i18n-html="ds.c31_h">Plantilla QGIS — Explorador Haití</h3>
   <p data-i18n-html="ds.c31_p">Un proyecto QGIS listo para abrir: comunas y departamentos, cuencas hidrográficas con nombre, zonas inundables, puntos de agua en funcionamiento y averiados, gasolineras y finanzas — capas remotas con estilo, cargadas desde el sitio. Construido y validado en QGIS.</p>
   <p class="price" data-i18n-html="ds.c31_pr">50 $</p>
+  <p class="sv-val"><b data-i18n="sv.val_court2">Lo que aporta el Explorador:</b> <span data-i18n="ds.c31_val">las capas son remotas y con estilo: se actualizan desde el sitio, y cada una ya lleva su fuente, su licencia y sus límites.</span></p>
   <p class="meta" data-i18n-html="ds.c31_meta">🗺 Geografía • Fuentes : Atmart Data — assemblage des jeux publiés • nivel de confianza A • Licence Atmart — écrite</p>
   <a href="https://payhip.com/b/DBirg" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="ds.c31_cta">Comprar — 50 $</a>
 </div>
@@ -1233,7 +1247,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     </div>
 
 <!-- ===== EN PRÉPARATION ===== -->
-    <div class="shelf" id="shelf-free">
+    <div class="shelf" id="shelf-free" data-vue="gratuit" data-vue-nom="🎁 Gratuits">
       <div class="shelf-head">
         <h2 data-i18n="ds.free_h">🎁 Gratis — sírvase</h2>
         <p data-i18n="ds.free_p">Descarga inmediata, sin cuenta y sin correo. Cada archivo llega con su documentación. Licencia CC BY 4.0: cite la fuente y es suyo.</p>
@@ -1503,7 +1517,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 
     <!-- ===== EN VENTE ===== -->
     </div>
-<div class="shelf" id="shelf-soon">
+<div class="shelf" id="shelf-soon" data-vue="parrainable" data-vue-nom="🧭 À parrainer">
       <div class="shelf-head">
         <h2 data-i18n="ds.soon_h">🧭 En preparación — y apadrinables</h2>
         <p data-i18n-html="ds.soon_p">Fuentes identificadas, método escrito: falta la financiación del trabajo de preparación. Una institución puede <a href="donnees-parrainage.html">apadrinar la apertura</a> de uno de estos conjuntos — y pasa a ser gratuito para toda una promoción de estudiantes e investigadores.</p>
@@ -1620,5 +1634,6 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <script src="../assets/ux.js?v=1" defer></script>
 <script src="../assets/i18n.js?v=19"></script>
 <script src="../assets/theme.js?v=3" defer></script>
+<script src="../assets/vues.js?v=1"></script>
 </body>
 </html>

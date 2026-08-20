@@ -21,7 +21,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=45" />
+  <link rel="stylesheet" href="../assets/data.css?v=46" />
   <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
 {
@@ -61,6 +61,8 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   
   
     
+  
+  
   
   
   
@@ -148,6 +150,22 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <p class="kreyol" lang="ht" data-i18n="pg.accueil.accroche">Datos listos para decidir.</p>
     <h1 data-i18n-html="pg.accueil.h1">Atmart <em>Data</em></h1>
     <p class="lead" data-i18n-html="pg.accueil.lead">La plataforma de <strong>datos reconstituidos sobre Haití</strong>. No republicamos archivos públicos: fabricamos conjuntos de datos que aún no existen, vinculando fuentes dispersas a identificadores comunes, a un historial y a una documentación que resisten ante un comité. <strong>Durante su primer año, Atmart Data sólo publica datos sobre Haití</strong> — un solo país, tratado en profundidad, en vez de diez sobrevolados.</p>
+
+    <!-- LA DISTINCTION QUE PERSONNE N'AVAIT ÉCRITE.
+         Deux noms circulaient sans qu'on dise lequel désigne quoi : un lecteur
+         ne pouvait pas savoir s'il avait affaire à deux produits, deux
+         entreprises, ou un doublon. Le dire en deux phrases coûte moins cher
+         que de laisser la question ouverte sur chaque page. -->
+    <div class="qui-quoi">
+      <div>
+        <p class="qq-nom" data-i18n="pg.qq_1n">Atmart Data</p>
+        <p data-i18n-html="pg.qq_1p"><strong>Lo que hacemos.</strong> La actividad de Atmart LLC: construir, auditar y documentar datos territoriales, y luego vender el <em>trabajo</em> — diagnósticos, auditorías, cartografía a medida, formación. Eso es lo que financia el resto.</p>
+      </div>
+      <div>
+        <p class="qq-nom" data-i18n="pg.qq_2n">Explorador de Haití</p>
+        <p data-i18n-html="pg.qq_2p"><strong>Dónde se ve.</strong> La plataforma pública y gratuita donde se deposita ese trabajo: 140 comunas, mapas temáticos, fichas, series nacionales. Sin cuenta, sin datos personales, sin rastreador publicitario — y <a href="conditions.html#conditions">el derecho escrito</a> de reutilizarlo todo.</p>
+      </div>
+    </div>
     <div class="cta-row" style="display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.5rem">
       <a data-i18n="cm.cta_expl" href="https://explorateur.atmart.ltd/" class="btn btn-primary">Abrir el Explorador</a>
       <a data-i18n="cm.cta_cat" href="datasets.html" class="btn btn-outline">El catálogo</a>

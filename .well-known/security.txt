@@ -1,0 +1,26 @@
+# Politique de divulgation des vulnérabilités — Atmart Data
+# Format RFC 9116. Ce fichier existe pour qu'une personne qui trouve une
+# faille sache où l'écrire, tout de suite, sans chercher.
+#
+# Explorateur Haïti est un site STATIQUE : pas de compte, pas de base de
+# données, pas de contenu déposé par les visiteurs. La surface d'attaque
+# tient dans trois choses, et nous les nommons plutôt que de les taire :
+#   1. le point d'accès des formulaires et de l'assistant
+#      (atmart-chat.atmartllc.workers.dev) ;
+#   2. les dépôts publics qui servent le site ;
+#   3. les comptes qui les administrent.
+
+Contact: mailto:security@atmart.ltd
+Contact: mailto:jeanmyril@atmart.ltd
+Expires: 2027-08-19T00:00:00.000Z
+Preferred-Languages: fr, ht, en, es
+Canonical: https://explorateur.atmart.ltd/.well-known/security.txt
+Policy: https://explorateur.atmart.ltd/conditions.html#securite
+
+# Ce que nous demandons : n'accédez à aucune donnée qui ne soit pas déjà
+# publique, ne dégradez pas le service, laissez-nous 90 jours avant toute
+# publication. Ce que nous promettons : un accusé de réception sous 5 jours
+# ouvrés, et votre nom cité si vous le souhaitez.
+#
+# Nous n'avons pas de programme de prime. Nous le disons plutôt que de le
+# laisser espérer.

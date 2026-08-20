@@ -21,12 +21,15 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=35" />
-  <link rel="stylesheet" href="assets/data.css?v=44" />
+  <link rel="stylesheet" href="assets/data.css?v=45" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/donnees-campus.html" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
+  
+  
   
   
   
@@ -171,25 +174,95 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <section class="d-sec">
   <div class="container">
     <p data-i18n-html="cmp.2467b7" class="d-lbl">Packs mémoire</p>
-    <h2 data-i18n-html="cmp.eca265" class="d-h">Huit disciplines visées</h2>
+    <h2 data-i18n-html="cmp.eca265" class="d-h">Les disciplines visées</h2>
     <p data-i18n-html="cmp.a2f760" class="d-sub" style="margin-bottom:1.1rem">
-      Les packs sont assemblés à partir du catalogue existant. Deux sont prêts aujourd'hui ; les autres
-      s'ouvrent au fur et à mesure que les jeux de données correspondants sont construits ou
-      <a href="donnees-parrainage.html">parrainés</a>.
+      Les packs sont assemblés à partir du catalogue existant, et leur état est
+      <strong>mesuré sur les fichiers publiés</strong> — un pack ne peut pas s'annoncer prêt
+      si ses fichiers n'existent pas. « Disponible » veut dire que les données sont là,
+      documentées et téléchargeables ; cela ne veut pas dire que la discipline est bien
+      couverte : l'éducation au niveau national tient en trois observations, et c'est en
+      soi un résultat de mémoire. Les lacunes se comblent par
+      <a href="donnees-parrainage.html">parrainage</a>.
     </p>
     <div class="d-tab-wrap">
       <div class="x-tableau" tabindex="0"><table class="d-tab">
         <thead><tr><th data-i18n-html="cmp.80dc21" scope="col">Pack</th><th data-i18n-html="cmp.81b82b" scope="col">Ce qu'il contient aujourd'hui</th><th data-i18n-html="cmp.de4dd0" scope="col">État</th></tr></thead>
         <tbody>
-          <tr><td data-i18n-html="cmp.eb9aed">Territoires &amp; urbanisme</td><td data-i18n-html="cmp.2bb6aa">Sections communales, villes, lieux habités, GeoJSON, p-codes OCHA</td><td><span data-i18n="cmp.f4e4f6" class="d-pill live">Disponible</span></td></tr>
-          <tr><td data-i18n-html="cmp.ed5766">Économie &amp; finance</td><td data-i18n-html="cmp.c0b311">Transferts de la diaspora 2000–2025 (8 pays), séries comparatives</td><td><span data-i18n="cmp.f4e4f6" class="d-pill live">Disponible</span></td></tr>
-          <tr><td data-i18n-html="cmp.f2d9e7">Agronomie &amp; sécurité alimentaire</td><td data-i18n-html="cmp.fe7dd1">Prix des produits de base par marché et par mois</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Parrainable</span></td></tr>
-          <tr><td data-i18n-html="cmp.f7fb27">Santé publique</td><td data-i18n-html="cmp.5e4916">Indicateurs de santé par département, dénominateurs de population</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Parrainable</span></td></tr>
-          <tr><td data-i18n-html="cmp.2ebc6f">Éducation</td><td data-i18n-html="cmp.a83b77">Scolarisation, alphabétisation, dépenses par département</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Parrainable</span></td></tr>
-          <tr><td data-i18n-html="cmp.044883">Gestion &amp; entrepreneuriat</td><td data-i18n-html="cmp.a7f18a">Séries économiques, démographie des territoires, marchés</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">En préparation</span></td></tr>
-          <tr><td data-i18n-html="cmp.5e0309">Gouvernance &amp; administration</td><td data-i18n-html="cmp.2714d5">Découpage administratif, séries budgétaires publiques</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">En préparation</span></td></tr>
-          <tr><td data-i18n-html="cmp.b4fe9f">Démographie &amp; migrations</td><td data-i18n-html="cmp.9e2df2">Population, urbanisation et migrations internes en Haïti</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">En préparation</span></td></tr>
-        </tbody>
+<!-- CAMPUS:disciplines — engendré par build_campus_disciplines.py, ne pas éditer à la main -->
+<tr>
+  <td data-i18n-html="cmp.pk_terr_n"><strong>Territoires &amp; urbanisme</strong></td>
+  <td data-i18n-html="cmp.pk_terr_c">Communes, sections communales, chefs-lieux et lieux habités avec leurs p-codes OCHA ; bâti et croissance urbaine mesurés au même instrument sur quatre millésimes.</td>
+  <td data-i18n="cmp.pk_terr_v">2 fichier(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_eco_n"><strong>Économie &amp; finance</strong></td>
+  <td data-i18n-html="cmp.pk_eco_c">Transferts de la diaspora depuis 2000, PIB, inflation, commerce extérieur. Le commerce de marchandises est une donnée MIROIR : Haïti ne le déclare plus depuis 2017, et chaque ligne le dit.</td>
+  <td data-i18n="cmp.pk_eco_v">2 fichier(s) · 263 observations nationales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_trav_n"><strong>Travail &amp; emploi</strong></td>
+  <td data-i18n-html="cmp.pk_trav_c">Chômage, activité et emploi par secteur, ventilés par sexe et par âge. L'EMPLOI INFORMEL y figure — 91,6 % de l'emploi en 2012, seule et unique année mesurée, par l'enquête ECVMAS. Le reste sont des estimations modélisées du BIT, dites comme telles.</td>
+  <td data-i18n="cmp.pk_trav_v">1 fichier(s) · 508 observations nationales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_agro_n"><strong>Agronomie &amp; sécurité alimentaire</strong></td>
+  <td data-i18n-html="cmp.pk_agro_c">Prix des marchés relevés mois par mois, phases IPC, prévalence de la sous-alimentation et usage des terres agricoles.</td>
+  <td data-i18n="cmp.pk_agro_v">3 fichier(s) · 423 observations nationales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_sante_n"><strong>Santé publique</strong></td>
+  <td data-i18n-html="cmp.pk_sante_c">Registre des établissements déclarés au MSPP confronté à ce que la carte montre, temps d'accès à un point de santé et à un hôpital, espérance de vie et mortalité au niveau national.</td>
+  <td data-i18n="cmp.pk_sante_v">3 fichier(s) · 74 observations nationales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_educ_n"><strong>Éducation</strong></td>
+  <td data-i18n-html="cmp.pk_educ_c">Registres MENFP 2024-2025 confrontés à OpenStreetMap, écoles par commune et par statut, temps d'accès à une école. Au national, l'alphabétisation tient en TROIS observations : la couverture y est mince, et c'est en soi un résultat de mémoire.</td>
+  <td data-i18n="cmp.pk_educ_v">2 fichier(s) · 3 observations nationales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_demo_n"><strong>Démographie &amp; migrations</strong></td>
+  <td data-i18n-html="cmp.pk_demo_c">Population par commune selon TROIS sources qui divergent — IHSI, projection UNFPA, WorldPop — sans qu'aucune ne soit arbitrée, plus la pyramide des âges des 140 communes.</td>
+  <td data-i18n="cmp.pk_demo_v">3 fichier(s) · 26 observations nationales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_gouv_n"><strong>Gouvernance &amp; administration</strong></td>
+  <td data-i18n-html="cmp.pk_gouv_c">Découpage administratif, crédits budgétaires votés par département, registre des ONG reconnues et présence déclarée des organisations.</td>
+  <td data-i18n="cmp.pk_gouv_v">3 fichier(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_env_n"><strong>Environnement &amp; climat</strong></td>
+  <td data-i18n-html="cmp.pk_env_c">Couvert arboré, occupation du sol, précipitations normales sur trente ans, eau de surface permanente, sols et bassins versants.</td>
+  <td data-i18n="cmp.pk_env_v">4 fichier(s) · 24 observations nationales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_risq_n"><strong>Risques &amp; catastrophes</strong></td>
+  <td data-i18n-html="cmp.pk_risq_c">Séismes ressentis depuis 1911, cyclones passés à proximité depuis 1851, zones inondables cartographiées et insécurité alimentaire.</td>
+  <td data-i18n="cmp.pk_risq_v">3 fichier(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_infra_n"><strong>Infrastructures &amp; services</strong></td>
+  <td data-i18n-html="cmp.pk_infra_c">Points d'eau et leur état de fonctionnement, stations-service, banques et transferts, équipements télécom par opérateur, accès à l'électricité et usage d'Internet au national.</td>
+  <td data-i18n="cmp.pk_infra_v">3 fichier(s) · 98 observations nationales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_gest_n"><strong>Gestion &amp; entrepreneuriat</strong></td>
+  <td data-i18n-html="cmp.pk_gest_c">Registre des marchés, présence des organisations, séries économiques et démographie des territoires — de quoi étudier un bassin d'activité plutôt qu'une entreprise isolée.</td>
+  <td data-i18n="cmp.pk_gest_v">3 fichier(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<!-- /CAMPUS:disciplines -->
+</tbody>
       </table></div>
     </div>
   </div>
@@ -343,6 +416,16 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
           <li><a href="donnees-systeme.html" data-i18n="ft.carte">La carte du système</a></li>
           <li><a href="donnees-confiance.html" data-i18n="ft.conf">Confiance &amp; méthode</a></li>
           <li><a href="archives.html" data-i18n="ft.arch">Archives &amp; citation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_legal">Informations légales</h4>
+        <ul>
+          <li><a href="conditions.html#conditions" data-i18n="ft.cgu">Conditions d'utilisation</a></li>
+          <li><a href="conditions.html#confidentialite" data-i18n="ft.vie">Confidentialité</a></li>
+          <li><a href="conditions.html#securite" data-i18n="ft.sec">Sécurité</a></li>
+          <li><a href="conditions.html#mentions" data-i18n="ft.men">Mentions légales</a></li>
+          <li><a href="conditions.html#contact" data-i18n="ft.con">Contact</a></li>
         </ul>
       </div>
       <div>

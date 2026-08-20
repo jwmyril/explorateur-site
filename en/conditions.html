@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+/* Thème avant le premier rendu — sans lui, éclair blanc puis bascule.
+   Ne pas déplacer plus bas ni différer : il doit précéder les styles. */
+(function(){try{var v=localStorage.getItem("atmart_apparence"),
+d=v==="sombre"||(v!=="clair"&&window.matchMedia&&
+window.matchMedia("(prefers-color-scheme: dark)").matches);
+if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"light");
+}catch(e){}})();
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/brand/logo-32.png" />
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
+  <title data-i18n="pg.cond.title">Terms, privacy and legal notice | Haiti Explorer</title>
+  <meta name="description" data-i18n-content="pg.cond.desc" content="Terms of use, privacy policy, security measures, legal notice and contacts for Atmart Data and the Haiti Explorer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0e2240" />
+  <link rel="stylesheet" href="../assets/style.css?v=35" />
+  <link rel="stylesheet" href="../assets/data.css?v=45" />
+  <script>
+  window.ATM_LANGUES = ["fr", "ht", "en", "es"];
+</script>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/conditions.html", "ht": "https://explorateur.atmart.ltd/ht/conditions.html", "en": "https://explorateur.atmart.ltd/en/conditions.html", "es": "https://explorateur.atmart.ltd/es/conditions.html"};</script>
+
+  <link rel="canonical" href="https://explorateur.atmart.ltd/en/conditions.html" />
+  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/conditions.html" />
+  <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/conditions.html" />
+  <link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/conditions.html" />
+  <link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/conditions.html" />
+  <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/conditions.html" />
+  <script>window.ATM_LANG_FORCE = "en"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/conditions.html", "ht": "https://explorateur.atmart.ltd/ht/conditions.html", "en": "https://explorateur.atmart.ltd/en/conditions.html", "es": "https://explorateur.atmart.ltd/es/conditions.html"};</script>
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-BK3FZ/TIzzg29r+VSfb96lnTPTErgqSd+tu0iPZ9u6U=' 'sha256-JrlQldNtsD+dMksVV0uBIShr25edR1EGHJ2DmQ0jESY=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-qKv7pSPKMMjxG/nIbzkgqtPGg108L77RGkewortB5u4=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+</head>
+<body>
+<a class="lien-evitement" href="#contenu" data-i18n="nv.skip">Skip to content</a>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><img src="../assets/brand/logo-dark-96.png" alt="" class="logo-img" />Explorateur <span>Haïti</span><small data-i18n="nv.logo_sub">Atmart's data</small></a>
+    <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nv.expl_h">Haiti Explorer</a></li>
+      <li><a href="/couches.html" data-i18n="nv.cartes_h">Thematic maps</a></li>
+      <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services & partnerships</span></span>
+        <ul class="nav-sub">
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnostics &amp; engagements <small>price on request</small></a></li>
+          <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>companies, NGOs, administrations</small></a></li>
+          <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Sponsor a dataset <small>institutions &amp; companies</small></a></li>
+        </ul>
+      </li>
+      <li class="nav-grp"><span><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Resources</span></span>
+        <ul class="nav-sub">
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Dataset catalogue <small>data &amp; guides</small></a></li>
+          <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Documentation sheets</a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">How it works <small>method, sources, system</small></a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>students &amp; researchers</small></a></li>
+        </ul>
+      </li>
+      <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="contenu" class="hero" style="padding:2.8rem 0 1.2rem">
+  <div class="container">
+    <p class="x-sur" data-i18n="jur.sur">Legal information</p>
+    <h1 data-i18n-html="jur.h1">Terms, privacy and <em>legal notice</em></h1>
+    <p class="lead" style="max-width:62ch" data-i18n="jur.lead">Everything that binds Atmart to you, and you to Atmart. Written to be read: no pointing you to a document you cannot find, no clause whose meaning slips away. Where we do not have the information yet, we write that down rather than fill the gap.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="vue-barre" data-vues role="group" aria-label="Choose a part of the page" data-i18n-aria="jur.vues_aria"></div>
+  <p class="vue-note x-note" data-i18n="jur.vues_note">Choose the part that concerns you, or show everything. Each part has its own shareable address.</p>
+</div>
+
+<section class="d-sec" id="conditions" data-vue="cgu" data-vue-nom="Conditions d'utilisation">
+  <div class="container">
+    <h2 data-i18n="jur.cgu_h">Terms of use</h2>
+
+    <h3 data-i18n="jur.cgu_1h">What you may do, without asking anyone</h3>
+    <p data-i18n-html="jur.cgu_1p">Browse the Explorer, download the published files, reuse them in a dissertation, a report, an article, a map or a product — a commercial one included. No account, no e-mail, no need to warn us. <strong>The only obligation is to cite the source</strong>, and it comes from the licences, not from us.</p>
+
+    <h3 data-i18n="jur.cgu_2h">The licences are not all the same</h3>
+    <p data-i18n-html="jur.cgu_2p">What Atmart produces — commune-level aggregates, recomputed indicators, comparisons between sources — is published under <strong>CC BY 4.0</strong>. But each source keeps its own, and some require more: share-alike for OpenStreetMap and OpenCelliD, no commercial use for ACLED. The <a href="/donnees-registres.html">register of sources</a> gives, for each dataset, its licence and its two usage verdicts. That is where to look before reusing, not here.</p>
+
+    <h3 data-i18n="jur.cgu_3h">What we ask you not to do</h3>
+    <ul>
+      <li data-i18n="jur.cgu_l1">Presenting a piece of data without its source, or without its vintage. A figure dated 2012 presented as current is no longer data, it is an assertion.</li>
+      <li data-i18n="jur.cgu_l2">Replacing a missing value with a zero. Our files distinguish the two; confusing them changes the conclusions.</li>
+      <li data-i18n="jur.cgu_l3">Pushing a national figure back down to the commune. Splitting a GDP across 140 communes manufactures 140 false values that carry the authority of a calculation.</li>
+      <li data-i18n="jur.cgu_l4">Implying that Atmart approves your work, or is a co-author of it, merely because you use its data.</li>
+      <li data-i18n="jur.cgu_l5">Querying our automated services at a rate that degrades the service for everyone else.</li>
+    </ul>
+
+    <h3 data-i18n="jur.cgu_4h">What we do not guarantee</h3>
+    <p data-i18n-html="jur.cgu_4p">The data is supplied <strong>as is</strong>. We check it, we publish our controls and we write down its limits on every dataset — but we guarantee neither its accuracy, nor its completeness, nor its fitness for your use. A decision that commits people or funds should never rest on a single source, ours included. This is not a boilerplate clause: it is the very opposite of what we sell, which is the honest measure of what is not known.</p>
+
+    <h3 data-i18n="jur.cgu_5h">The service may be interrupted</h3>
+    <p data-i18n="jur.cgu_5p">The Explorer is free and will stay free. It carries no availability commitment. The published files are archived with their fingerprint, and the archives remain downloadable: that is our answer to an interruption, rather than a promise we could not keep.</p>
+  </div>
+</section>
+
+<section class="d-sec" id="confidentialite" data-vue="vie" data-vue-nom="Confidentialité">
+  <div class="container">
+    <h2 data-i18n="jur.vie_h">Privacy</h2>
+
+    <p class="d-sub" data-i18n-html="jur.vie_lead"><strong>There is no account, no cookie, no advertising tracker.</strong> You can browse the Explorer and download every file without ever telling us anything about yourself.</p>
+
+    <h3 data-i18n="jur.vie_1h">What we count</h3>
+    <p data-i18n-html="jur.vie_1p">Thirteen aggregated counters, whose full list is published on the <a href="/donnees-confiance.html#mesure">Trust &amp; method</a> page — we do not copy it out here, because two texts describing the same practice always end up diverging. Never collected: stored IP address, cookie, persistent identifier, browser fingerprint, and the text you type into the search box, which never leaves your browser.</p>
+
+    <h3 data-i18n="jur.vie_2h">What you entrust to us voluntarily</h3>
+    <p data-i18n-html="jur.vie_2p">If you fill in a request form, the fields you type reach us by e-mail and are kept for one year to follow up your request. If you write to one of our addresses, your message is kept for as long as the relationship lasts. None of this is sold, rented, or passed to a third party for its own purposes.</p>
+
+    <h3 data-i18n="jur.vie_3h">Who processes what for us</h3>
+    <div class="x-tableau" tabindex="0"><table class="d-tab">
+      <thead><tr>
+        <th scope="col" data-i18n="jur.vie_t1">Provider</th>
+        <th scope="col" data-i18n="jur.vie_t2">What it does</th>
+        <th scope="col" data-i18n="jur.vie_t3">What passes through</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>GitHub Pages</td>
+          <td data-i18n="jur.vie_r1b">Serves the pages and the files</td>
+          <td data-i18n="jur.vie_r1c">Ordinary web requests, logged by the host</td></tr>
+        <tr><td>Cloudflare Workers</td>
+          <td data-i18n="jur.vie_r2b">Forms, assistant, aggregated counters</td>
+          <td data-i18n="jur.vie_r2c">The content of the form; the IP serves the anti-abuse cap, it is not stored in the clear</td></tr>
+        <tr><td>Resend</td>
+          <td data-i18n="jur.vie_r3b">Routes the request e-mails</td>
+          <td data-i18n="jur.vie_r3c">The content of the form and your reply address</td></tr>
+        <tr><td>Payhip</td>
+          <td data-i18n="jur.vie_r4b">Collects payment for the paid products</td>
+          <td data-i18n="jur.vie_r4c">Your payment details, which never pass through us</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 data-i18n="jur.vie_4h">Your rights</h3>
+    <p data-i18n-html="jur.vie_4p">You can ask us what we hold about you, have it corrected, or have it erased: <a href="mailto:jeanmyril@atmart.ltd">jeanmyril@atmart.ltd</a>. We answer within thirty days. Since we keep almost nothing, the most frequent answer is “nothing, except the message you sent us” — and that is the point.</p>
+
+    <h3 data-i18n="jur.vie_5h">The published data contains no personal data</h3>
+    <p data-i18n-html="jur.vie_5p">Everything the Explorer publishes is <strong>aggregated to the territory</strong>: a commune, a section, a department. No file names a person. The NGO register names organisations, not their members. This is a design rule, not a precaution: personal data does not enter the chain, and <a href="/donnees-registres.html">the control that verifies it</a> blocks publication if it were to enter.</p>
+  </div>
+</section>
+
+<section class="d-sec" id="securite" data-vue="sec" data-vue-nom="Sécurité">
+  <div class="container">
+    <h2 data-i18n="jur.sec_h">Security</h2>
+
+    <p class="d-sub" data-i18n-html="jur.sec_lead">We would rather describe our attack surface than pretend we have none. <strong>The Explorer is a static site</strong>: no account, no database, no content submitted by visitors. The risk therefore does not come from the page — it comes from the three things below.</p>
+
+    <h3 data-i18n="jur.sec_1h">What protects the pages</h3>
+    <ul>
+      <li data-i18n-html="jur.sec_l1">A strict <strong>content security policy</strong>: no third-party script, every inline script authorised by its fingerprint, frames and objects forbidden, forms confined to the domain.</li>
+      <li data-i18n="jur.sec_l2">Everything is served over HTTPS, and cleartext requests are rewritten to HTTPS.</li>
+      <li data-i18n="jur.sec_l3">The referrer policy never passes the full page address to a third-party site.</li>
+      <li data-i18n="jur.sec_l4">No address contains personal data: what you search for does not go into the address.</li>
+    </ul>
+
+    <h3 data-i18n="jur.sec_2h">What protects the services</h3>
+    <ul>
+      <li data-i18n="jur.sec_l5">The authorised origins are listed: a third-party page cannot query our services on a visitor's behalf.</li>
+      <li data-i18n="jur.sec_l6">Form submissions are capped at five per address per day, the fields are truncated and their number is bounded.</li>
+      <li data-i18n="jur.sec_l7">The access keys for third-party services stay server-side; none of them appears in the code sent to the browser.</li>
+      <li data-i18n-html="jur.sec_l8">The assistant refuses to serve an answer containing a number absent from the page's data — the check is done <strong>server-side</strong>, after generation.</li>
+    </ul>
+
+    <h3 data-i18n="jur.sec_3h">What we cannot do, and why</h3>
+    <p data-i18n-html="jur.sec_3p">Two protections are missing, and they come down to the hosting: <code>frame-ancestors</code>, which prevents our pages from being embedded in a foreign frame, and <code>HSTS</code> on this subdomain. Both exist only as an HTTP header, and GitHub Pages does not let us customise them. We write it down rather than keep quiet about it: closing them would require a proxy in front of the site, which remains open to us.</p>
+
+    <h3 data-i18n="jur.sec_4h">Reporting a vulnerability</h3>
+    <p data-i18n-html="jur.sec_4p">Write to <a href="mailto:security@atmart.ltd">security@atmart.ltd</a>. Our policy is published in RFC 9116 format: <a href="/.well-known/security.txt">/.well-known/security.txt</a>. We acknowledge receipt within five working days and we credit you if you wish. We have no bounty programme — we say so rather than let anyone hope for one.</p>
+  </div>
+</section>
+
+<section class="d-sec" id="mentions" data-vue="mentions" data-vue-nom="Mentions légales">
+  <div class="container">
+    <h2 data-i18n="jur.men_h">Legal notice</h2>
+    <div class="x-tableau" tabindex="0"><table class="d-tab">
+      <tbody>
+        <tr><td data-i18n="jur.men_1"><strong>Publisher</strong></td>
+            <td>Atmart LLC</td></tr>
+        <tr><td data-i18n="jur.men_2"><strong>Legal form and registration</strong></td>
+            <td><mark class="jur-todo" data-i18n="jur.todo">to be completed by Atmart</mark></td></tr>
+        <tr><td data-i18n="jur.men_3"><strong>Registered office</strong></td>
+            <td><mark class="jur-todo" data-i18n="jur.todo">to be completed by Atmart</mark></td></tr>
+        <tr><td data-i18n="jur.men_4"><strong>Publication director</strong></td>
+            <td>Jean Wisner Myril</td></tr>
+        <tr><td data-i18n="jur.men_5"><strong>Contact</strong></td>
+            <td><a href="mailto:jeanmyril@atmart.ltd">jeanmyril@atmart.ltd</a></td></tr>
+        <tr><td data-i18n="jur.men_6"><strong>Page hosting</strong></td>
+            <td>GitHub Pages — GitHub, Inc.</td></tr>
+        <tr><td data-i18n="jur.men_7"><strong>Service hosting</strong></td>
+            <td>Cloudflare Workers — Cloudflare, Inc.</td></tr>
+        <tr><td data-i18n="jur.men_8"><strong>Governing law</strong></td>
+            <td><mark class="jur-todo" data-i18n="jur.todo">to be completed by Atmart</mark></td></tr>
+      </tbody>
+    </table></div>
+    <p class="x-note" data-i18n-html="jur.men_note">The three lines marked <mark class="jur-todo">to be completed</mark> legally bind Atmart: they will be filled in by Atmart, not guessed. An invented legal notice is worse than a missing one — an absence is seen, an invention is believed.</p>
+
+    <h3 data-i18n="jur.men_pi_h">Intellectual property</h3>
+    <p data-i18n-html="jur.men_pi_p">The Explorer's code, its layout, its methodological texts and its maps are the property of Atmart LLC. The <strong>data</strong>, on the other hand, is not: the aggregates produced by Atmart are under CC BY 4.0, and the original data stays under its producer's licence. In Haitian law, article 5 of the decree of 12 October 2005 excludes official administrative texts and “mere data” from protection — a fact belongs to no one, and we do not claim otherwise.</p>
+  </div>
+</section>
+
+<section class="d-sec" id="contact" data-vue="contact" data-vue-nom="Contact">
+  <div class="container">
+    <h2 data-i18n="jur.con_h">Contact</h2>
+    <div class="x-tableau" tabindex="0"><table class="d-tab">
+      <thead><tr>
+        <th scope="col" data-i18n="jur.con_t1">What for</th>
+        <th scope="col" data-i18n="jur.con_t2">Address</th>
+      </tr></thead>
+      <tbody>
+        <tr><td data-i18n="jur.con_r1">Services, quotations, licences, sponsorships</td>
+            <td><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></td></tr>
+        <tr><td data-i18n="jur.con_r2">Personal data, correction, erasure</td>
+            <td><a href="mailto:jeanmyril@atmart.ltd">jeanmyril@atmart.ltd</a></td></tr>
+        <tr><td data-i18n="jur.con_r3">Report a security vulnerability</td>
+            <td><a href="mailto:security@atmart.ltd">security@atmart.ltd</a></td></tr>
+        <tr><td data-i18n="jur.con_r4">Report a wrong figure or a badly cited source</td>
+            <td><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></td></tr>
+      </tbody>
+    </table></div>
+    <p data-i18n-html="jur.con_p">We answer in French, Kreyòl, English and Spanish. <strong>Reporting an error is always welcome</strong>, including when it costs us: a false map corrected is worth more than a false map we are left free to publish.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="logo">Explorateur <span>Haïti</span></a>
+        <p style="margin-top:0.7rem" data-i18n-html="ft.intro">A product of <a href="https://atmart.ltd/">Atmart Data</a> — sourced, dated, verifiable data on the 140 communes of Haiti.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_donnees">Data</h4>
+        <ul>
+          <li><a href="/couches.html" data-i18n="ft.cartes">Thematic maps</a></li>
+          <li><a href="datasets.html" data-i18n="ft.cat">Catalogue</a></li>
+          <li><a href="donnees.html" data-i18n="ft.comment">How it works</a></li>
+          <li><a href="donnees-services.html" data-i18n="ft.serv">Services & partnerships</a></li>
+          <li><a href="donnees-solutions.html" data-i18n="ft.sol">Solutions & licences</a></li>
+          <li><a href="/donnees-backbone.html" data-i18n="ft.def">Definitions & methods</a></li>
+          <li><a href="/donnees-systeme.html" data-i18n="ft.carte">The system map</a></li>
+          <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Trust & method</a></li>
+          <li><a href="/archives.html" data-i18n="ft.arch">Archives & citation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_legal">Legal information</h4>
+        <ul>
+          <li><a href="conditions.html#conditions" data-i18n="ft.cgu">Terms of use</a></li>
+          <li><a href="conditions.html#confidentialite" data-i18n="ft.vie">Privacy</a></li>
+          <li><a href="conditions.html#securite" data-i18n="ft.sec">Security</a></li>
+          <li><a href="conditions.html#mentions" data-i18n="ft.men">Legal notice</a></li>
+          <li><a href="conditions.html#contact" data-i18n="ft.con">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_contact">Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n-html="ft.bas">© 2026 Atmart LLC. The Haiti Explorer is free, with no account and no advertising tracker — only an anonymous and aggregated audience measurement exists, <a href="/donnees-confiance.html#mesure">method published</a>.</div>
+  </div>
+</footer>
+
+<script src="../assets/script.js?v=2"></script>
+<script>
+  (function () {
+    var t = document.querySelector(".nav-toggle"), l = document.querySelector(".nav-links");
+    if (t && l) t.addEventListener("click", function () { l.classList.toggle("open"); });
+  })();
+</script>
+<script>
+  /* Les champs sont declares ici et non dans le composant : chaque page a les
+     siens, et le libelle envoye a Atmart doit rester lisible par un humain. */
+  window.ATM_FORM = {
+    form: "sol-form", panneau: "sol-envoi",
+    sujet: "Atmart Data — demande ({org})",
+    champs: [["Organisation", "org"], ["Type d'organisation", "type"], ["Contact", "nom"], ["Courriel", "email"], ["Besoin", "besoin"], ["Territoire", "zone"], ["Échéance", "delai"], ["Budget", "budget"], ["Décision à prendre", "msg"]]
+  };
+</script>
+<script src="../assets/formulaire.js?v=2"></script>
+<script src="../assets/mesure.js?v=2" defer></script>
+<script src="../assets/ux.js?v=1" defer></script>
+<script src="../assets/i18n.js?v=19"></script>
+<script src="../assets/theme.js?v=3" defer></script>
+<script src="../assets/vues.js?v=1"></script>
+</body>
+</html>

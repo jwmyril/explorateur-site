@@ -21,11 +21,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=44" />
+  <link rel="stylesheet" href="../assets/data.css?v=45" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
+  
+  
   
   
   
@@ -166,15 +169,81 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div class="x-tableau" tabindex="0"><table class="d-tab">
         <thead><tr><th data-i18n-html="cmp.80dc21" scope="col">Pack</th><th data-i18n-html="cmp.81b82b" scope="col">Lo que contiene hoy</th><th data-i18n-html="cmp.de4dd0" scope="col">Estado</th></tr></thead>
         <tbody>
-          <tr><td data-i18n-html="cmp.eb9aed">Territorios y urbanismo</td><td data-i18n-html="cmp.2bb6aa">Secciones comunales, ciudades, lugares habitados, GeoJSON, p-codes OCHA</td><td><span data-i18n="cmp.f4e4f6" class="d-pill live">Disponible</span></td></tr>
-          <tr><td data-i18n-html="cmp.ed5766">Economía y finanzas</td><td data-i18n-html="cmp.c0b311">Remesas de la diáspora 2000–2025 (8 países), series comparativas</td><td><span data-i18n="cmp.f4e4f6" class="d-pill live">Disponible</span></td></tr>
-          <tr><td data-i18n-html="cmp.f2d9e7">Agronomía y seguridad alimentaria</td><td data-i18n-html="cmp.fe7dd1">Precios de productos básicos por mercado y por mes</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Patrocinable</span></td></tr>
-          <tr><td data-i18n-html="cmp.f7fb27">Salud pública</td><td data-i18n-html="cmp.5e4916">Indicadores de salud por departamento, denominadores de población</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Patrocinable</span></td></tr>
-          <tr><td data-i18n-html="cmp.2ebc6f">Educación</td><td data-i18n-html="cmp.a83b77">Escolarización, alfabetización, gasto por departamento</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Patrocinable</span></td></tr>
-          <tr><td data-i18n-html="cmp.044883">Gestión y emprendimiento</td><td data-i18n-html="cmp.a7f18a">Series económicas, demografía de los territorios, mercados</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">En preparación</span></td></tr>
-          <tr><td data-i18n-html="cmp.5e0309">Gobernanza y administración</td><td data-i18n-html="cmp.2714d5">División administrativa, series presupuestarias públicas</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">En preparación</span></td></tr>
-          <tr><td data-i18n-html="cmp.b4fe9f">Demografía y migraciones</td><td data-i18n-html="cmp.9e2df2">Población, urbanización y migraciones internas en Haití</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">En preparación</span></td></tr>
-        </tbody>
+<!-- CAMPUS:disciplines — engendré par build_campus_disciplines.py, ne pas éditer à la main -->
+<tr>
+  <td data-i18n-html="cmp.pk_terr_n"><strong>Territorios y urbanismo</strong></td>
+  <td data-i18n-html="cmp.pk_terr_c">Comunas, secciones comunales, cabeceras y lugares habitados con sus p-codes OCHA; superficie construida y crecimiento urbano medidos con el mismo instrumento en cuatro ediciones.</td>
+  <td data-i18n="cmp.pk_terr_v">2 archivo(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_eco_n"><strong>Economía y finanzas</strong></td>
+  <td data-i18n-html="cmp.pk_eco_c">Remesas de la diáspora desde 2000, PIB, inflación, comercio exterior. El comercio de mercancías es un dato ESPEJO: Haití ya no lo declara desde 2017, y cada fila lo dice.</td>
+  <td data-i18n="cmp.pk_eco_v">2 archivo(s) · 263 observaciones nacionales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_trav_n"><strong>Trabajo y empleo</strong></td>
+  <td data-i18n-html="cmp.pk_trav_c">Desempleo, actividad y empleo por sector, desglosados por sexo y por edad. EL EMPLEO INFORMAL figura allí — 91,6 % del empleo en 2012, único y solo año medido, por la encuesta ECVMAS. El resto son estimaciones modelizadas del BIT, dichas como tales.</td>
+  <td data-i18n="cmp.pk_trav_v">1 archivo(s) · 508 observaciones nacionales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_agro_n"><strong>Agronomía y seguridad alimentaria</strong></td>
+  <td data-i18n-html="cmp.pk_agro_c">Precios de los mercados registrados mes a mes, fases IPC, prevalencia de la subalimentación y uso de las tierras agrícolas.</td>
+  <td data-i18n="cmp.pk_agro_v">3 archivo(s) · 423 observaciones nacionales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_sante_n"><strong>Salud pública</strong></td>
+  <td data-i18n-html="cmp.pk_sante_c">Registro de los establecimientos declarados al MSPP confrontado con lo que muestra el mapa, tiempo de acceso a un punto de salud y a un hospital, esperanza de vida y mortalidad a nivel nacional.</td>
+  <td data-i18n="cmp.pk_sante_v">3 archivo(s) · 74 observaciones nacionales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_educ_n"><strong>Educación</strong></td>
+  <td data-i18n-html="cmp.pk_educ_c">Registros MENFP 2024-2025 confrontados con OpenStreetMap, escuelas por comuna y por estatus, tiempo de acceso a una escuela. A nivel nacional, la alfabetización se reduce a TRES observaciones: la cobertura es escasa, y eso ya es en sí un resultado de tesis.</td>
+  <td data-i18n="cmp.pk_educ_v">2 archivo(s) · 3 observaciones nacionales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_demo_n"><strong>Demografía y migraciones</strong></td>
+  <td data-i18n-html="cmp.pk_demo_c">Población por comuna según TRES fuentes que divergen — IHSI, proyección UNFPA, WorldPop — sin que ninguna sea arbitrada, más la pirámide de edades de las 140 comunas.</td>
+  <td data-i18n="cmp.pk_demo_v">3 archivo(s) · 26 observaciones nacionales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_gouv_n"><strong>Gobernanza y administración</strong></td>
+  <td data-i18n-html="cmp.pk_gouv_c">División administrativa, créditos presupuestarios votados por departamento, registro de las ONG reconocidas y presencia declarada de las organizaciones.</td>
+  <td data-i18n="cmp.pk_gouv_v">3 archivo(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_env_n"><strong>Medio ambiente y clima</strong></td>
+  <td data-i18n-html="cmp.pk_env_c">Cobertura arbórea, ocupación del suelo, precipitaciones normales en treinta años, agua superficial permanente, suelos y cuencas hidrográficas.</td>
+  <td data-i18n="cmp.pk_env_v">4 archivo(s) · 24 observaciones nacionales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_risq_n"><strong>Riesgos y catástrofes</strong></td>
+  <td data-i18n-html="cmp.pk_risq_c">Sismos sentidos desde 1911, ciclones que pasaron cerca desde 1851, zonas inundables cartografiadas e inseguridad alimentaria.</td>
+  <td data-i18n="cmp.pk_risq_v">3 archivo(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_infra_n"><strong>Infraestructuras y servicios</strong></td>
+  <td data-i18n-html="cmp.pk_infra_c">Puntos de agua y su estado de funcionamiento, gasolineras, bancos y transferencias, equipamientos de telecomunicaciones por operador, acceso a la electricidad y uso de Internet a nivel nacional.</td>
+  <td data-i18n="cmp.pk_infra_v">3 archivo(s) · 98 observaciones nacionales</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_gest_n"><strong>Gestión y emprendimiento</strong></td>
+  <td data-i18n-html="cmp.pk_gest_c">Registro de mercados, presencia de las organizaciones, series económicas y demografía de los territorios — lo necesario para estudiar una zona de actividad y no una empresa aislada.</td>
+  <td data-i18n="cmp.pk_gest_v">3 archivo(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Disponible</span></td>
+</tr>
+<!-- /CAMPUS:disciplines -->
+</tbody>
       </table></div>
     </div>
   </div>
@@ -309,6 +378,16 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
           <li><a href="/donnees-systeme.html" data-i18n="ft.carte">El mapa del sistema</a></li>
           <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Confianza y método</a></li>
           <li><a href="/archives.html" data-i18n="ft.arch">Archivos y citación</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_legal">Información legal</h4>
+        <ul>
+          <li><a href="conditions.html#conditions" data-i18n="ft.cgu">Condiciones de uso</a></li>
+          <li><a href="conditions.html#confidentialite" data-i18n="ft.vie">Privacidad</a></li>
+          <li><a href="conditions.html#securite" data-i18n="ft.sec">Seguridad</a></li>
+          <li><a href="conditions.html#mentions" data-i18n="ft.men">Aviso legal</a></li>
+          <li><a href="conditions.html#contact" data-i18n="ft.con">Contacto</a></li>
         </ul>
       </div>
       <div>

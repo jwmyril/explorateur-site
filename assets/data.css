@@ -1509,3 +1509,9 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
   .vue-barre, .vue-note { display: none !important; }
   [data-vue][hidden] { display: block !important; }
 }
+
+/* La marque « à compléter » des mentions légales. Elle doit se VOIR : une
+   mention manquante signalée est une information ; une mention manquante
+   discrète est un oubli qui s'installe. */
+.jur-todo { background: var(--attention); color: var(--fond); padding: 0.1em 0.45em;
+  border-radius: 4px; font-size: 0.86em; font-weight: 600; }

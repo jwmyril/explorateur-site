@@ -21,11 +21,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=44" />
+  <link rel="stylesheet" href="../assets/data.css?v=45" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+  
+  
+  
   
   
   
@@ -166,15 +169,81 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div class="x-tableau" tabindex="0"><table class="d-tab">
         <thead><tr><th data-i18n-html="cmp.80dc21" scope="col">Pack</th><th data-i18n-html="cmp.81b82b" scope="col">What it contains today</th><th data-i18n-html="cmp.de4dd0" scope="col">Status</th></tr></thead>
         <tbody>
-          <tr><td data-i18n-html="cmp.eb9aed">Territories &amp; urban planning</td><td data-i18n-html="cmp.2bb6aa">Communal sections, towns, populated places, GeoJSON, OCHA p-codes</td><td><span data-i18n="cmp.f4e4f6" class="d-pill live">Available</span></td></tr>
-          <tr><td data-i18n-html="cmp.ed5766">Economics &amp; finance</td><td data-i18n-html="cmp.c0b311">Diaspora remittances 2000–2025 (8 countries), comparative series</td><td><span data-i18n="cmp.f4e4f6" class="d-pill live">Available</span></td></tr>
-          <tr><td data-i18n-html="cmp.f2d9e7">Agronomy &amp; food security</td><td data-i18n-html="cmp.fe7dd1">Prices of staple goods by market and by month</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Sponsorable</span></td></tr>
-          <tr><td data-i18n-html="cmp.f7fb27">Public health</td><td data-i18n-html="cmp.5e4916">Health indicators by department, population denominators</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Sponsorable</span></td></tr>
-          <tr><td data-i18n-html="cmp.2ebc6f">Education</td><td data-i18n-html="cmp.a83b77">Schooling, literacy, spending by department</td><td><span data-i18n="cmp.1755a7" class="d-pill spons">Sponsorable</span></td></tr>
-          <tr><td data-i18n-html="cmp.044883">Management &amp; entrepreneurship</td><td data-i18n-html="cmp.a7f18a">Economic series, territorial demography, markets</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">In preparation</span></td></tr>
-          <tr><td data-i18n-html="cmp.5e0309">Governance &amp; administration</td><td data-i18n-html="cmp.2714d5">Administrative divisions, public budget series</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">In preparation</span></td></tr>
-          <tr><td data-i18n-html="cmp.b4fe9f">Demography &amp; migration</td><td data-i18n-html="cmp.9e2df2">Population, urbanisation and internal migration in Haiti</td><td><span data-i18n="cmp.b8d43d" class="d-pill soon">In preparation</span></td></tr>
-        </tbody>
+<!-- CAMPUS:disciplines — engendré par build_campus_disciplines.py, ne pas éditer à la main -->
+<tr>
+  <td data-i18n-html="cmp.pk_terr_n"><strong>Territories &amp; urban planning</strong></td>
+  <td data-i18n-html="cmp.pk_terr_c">Communes, communal sections, chief towns and populated places with their OCHA p-codes; built-up area and urban growth measured with the same instrument over four vintages.</td>
+  <td data-i18n="cmp.pk_terr_v">2 file(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_eco_n"><strong>Economics &amp; finance</strong></td>
+  <td data-i18n-html="cmp.pk_eco_c">Diaspora remittances since 2000, GDP, inflation, foreign trade. Merchandise trade is MIRROR data: Haiti has not reported it since 2017, and every row says so.</td>
+  <td data-i18n="cmp.pk_eco_v">2 file(s) · 263 national observations</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_trav_n"><strong>Labour &amp; employment</strong></td>
+  <td data-i18n-html="cmp.pk_trav_c">Unemployment, activity and employment by sector, broken down by sex and by age. INFORMAL EMPLOYMENT is in there — 91.6 % of employment in 2012, the one and only year measured, by the ECVMAS survey. The rest are modelled BIT estimates, stated as such.</td>
+  <td data-i18n="cmp.pk_trav_v">1 file(s) · 508 national observations</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_agro_n"><strong>Agronomy &amp; food security</strong></td>
+  <td data-i18n-html="cmp.pk_agro_c">Market prices recorded month by month, IPC phases, prevalence of undernourishment and agricultural land use.</td>
+  <td data-i18n="cmp.pk_agro_v">3 file(s) · 423 national observations</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_sante_n"><strong>Public health</strong></td>
+  <td data-i18n-html="cmp.pk_sante_c">Register of facilities declared to the MSPP set against what the map shows, travel time to a health point and to a hospital, life expectancy and mortality at national level.</td>
+  <td data-i18n="cmp.pk_sante_v">3 file(s) · 74 national observations</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_educ_n"><strong>Education</strong></td>
+  <td data-i18n-html="cmp.pk_educ_c">MENFP registers 2024-2025 set against OpenStreetMap, schools by commune and by status, travel time to a school. Nationally, literacy comes down to THREE observations: coverage there is thin, and that in itself is a dissertation result.</td>
+  <td data-i18n="cmp.pk_educ_v">2 file(s) · 3 national observations</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_demo_n"><strong>Demography &amp; migration</strong></td>
+  <td data-i18n-html="cmp.pk_demo_c">Population by commune according to THREE sources that diverge — IHSI, UNFPA projection, WorldPop — with none of them arbitrated, plus the age pyramid of the 140 communes.</td>
+  <td data-i18n="cmp.pk_demo_v">3 file(s) · 26 national observations</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_gouv_n"><strong>Governance &amp; administration</strong></td>
+  <td data-i18n-html="cmp.pk_gouv_c">Administrative divisions, budget appropriations voted by department, register of recognised NGOs and declared presence of organisations.</td>
+  <td data-i18n="cmp.pk_gouv_v">3 file(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_env_n"><strong>Environment &amp; climate</strong></td>
+  <td data-i18n-html="cmp.pk_env_c">Tree cover, land cover, thirty-year normal rainfall, permanent surface water, soils and watersheds.</td>
+  <td data-i18n="cmp.pk_env_v">4 file(s) · 24 national observations</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_risq_n"><strong>Hazards &amp; disasters</strong></td>
+  <td data-i18n-html="cmp.pk_risq_c">Earthquakes felt since 1911, cyclones that have passed nearby since 1851, mapped flood zones and food insecurity.</td>
+  <td data-i18n="cmp.pk_risq_v">3 file(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_infra_n"><strong>Infrastructure &amp; services</strong></td>
+  <td data-i18n-html="cmp.pk_infra_c">Water points and whether they are working, petrol stations, banks and money-transfer offices, telecom facilities by operator, access to electricity and Internet use at national level.</td>
+  <td data-i18n="cmp.pk_infra_v">3 file(s) · 98 national observations</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<tr>
+  <td data-i18n-html="cmp.pk_gest_n"><strong>Management &amp; entrepreneurship</strong></td>
+  <td data-i18n-html="cmp.pk_gest_c">Register of markets, presence of organisations, economic series and territorial demography — enough to study a whole area of activity rather than one isolated firm.</td>
+  <td data-i18n="cmp.pk_gest_v">3 file(s)</td>
+  <td><span class="d-pill ok" data-i18n="cmp.etat_ok">Available</span></td>
+</tr>
+<!-- /CAMPUS:disciplines -->
+</tbody>
       </table></div>
     </div>
   </div>
@@ -309,6 +378,16 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
           <li><a href="/donnees-systeme.html" data-i18n="ft.carte">The system map</a></li>
           <li><a href="/donnees-confiance.html" data-i18n="ft.conf">Trust & method</a></li>
           <li><a href="/archives.html" data-i18n="ft.arch">Archives & citation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft.h_legal">Legal information</h4>
+        <ul>
+          <li><a href="conditions.html#conditions" data-i18n="ft.cgu">Terms of use</a></li>
+          <li><a href="conditions.html#confidentialite" data-i18n="ft.vie">Privacy</a></li>
+          <li><a href="conditions.html#securite" data-i18n="ft.sec">Security</a></li>
+          <li><a href="conditions.html#mentions" data-i18n="ft.men">Legal notice</a></li>
+          <li><a href="conditions.html#contact" data-i18n="ft.con">Contact</a></li>
         </ul>
       </div>
       <div>

@@ -180,28 +180,35 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <p id="k-couverture" aria-live="polite"></p>
     <div id="k-carte"><div class="k-squelette" role="status" aria-label="Chargement du fond de carte"></div></div>
     <div id="k-lecture-guidee"></div>
-    <p id="k-lecture" aria-live="polite">Survolez une commune pour lire son nom et sa valeur.</p>
+    <p id="k-lecture" aria-live="polite" data-i18n="kc.survol">Survolez une commune pour lire son nom et sa valeur.</p>
     <p id="k-legende"></p>
     <p id="k-source"></p>
     <p id="k-limite"></p>
     <div id="as-hote"></div>
     <p class="x-note" style="margin-top:1rem">
-      Fond de carte : polygones COD-AB simplifiés (CNIGS via OCHA, CC BY-IGO).
-      Les couches se téléchargent :
-      <a href="data/atmart_conflits_HT.csv" download>conflits (CSV)</a> ·
-      <a href="data/atmart_deplaces_HT.csv" download>déplacés (CSV)</a> ·
-      <a href="data/atmart_ipc_HT.csv" download>IPC (CSV)</a> ·
-      <a href="data/atmart_couche_eau_HT.geojson" download>points d'eau (GeoJSON)</a> ·
-      <a href="data/atmart_couche_carburant_HT.geojson" download>stations-service (GeoJSON)</a> ·
-      <a href="data/atmart_couche_finance_HT.geojson" download>banques et transferts (GeoJSON)</a> ·
-      <a href="data/atmart_couche_telecom_HT.geojson" download>équipements télécom (GeoJSON)</a> ·
-      <a href="data/atmart_telecom_communes_HT.csv" download>télécom par commune (CSV)</a> ·
-      <a href="data/atmart_infrastructures_communes_HT.csv" download>infrastructures (CSV)</a>.
-      Bassins versants, zones inondables et occupation du sol (1998) sont désormais des couches ;
-      restent au chantier l'aléa sismique, la <b>couverture mobile réelle</b> — que le comptage
-      télécom ne remplace pas, faute de parc publié par les opérateurs ou le CONATEL — et le
-      réseau hydrographique ; <a href="donnees-parrainage.html">parrainer une couche</a> accélère
-      sa construction.
+      <!-- CHAQUE MORCEAU PORTE SA CLÉ, y compris le texte de chaque lien.
+           La tentation était d'envelopper tout le bloc dans un seul
+           `data-i18n-html` : le traducteur aurait alors dû recopier neuf
+           balises <a> avec leurs href, et la première faute de frappe aurait
+           cassé un téléchargement dans une langue seulement — donc de façon
+           invisible depuis le français. Les clés sont nombreuses ; les liens
+           sont intouchables. -->
+      <span data-i18n="kc.fond">Fond de carte : polygones COD-AB simplifiés (CNIGS via OCHA, CC BY-IGO).</span>
+      <span data-i18n="kc.dl">Les couches se téléchargent :</span>
+      <a href="data/atmart_conflits_HT.csv" download data-i18n="kc.dl.conflits">conflits (CSV)</a> ·
+      <a href="data/atmart_deplaces_HT.csv" download data-i18n="kc.dl.deplaces">déplacés (CSV)</a> ·
+      <a href="data/atmart_ipc_HT.csv" download data-i18n="kc.dl.ipc">IPC (CSV)</a> ·
+      <a href="data/atmart_couche_eau_HT.geojson" download data-i18n="kc.dl.eau">points d'eau (GeoJSON)</a> ·
+      <a href="data/atmart_couche_carburant_HT.geojson" download data-i18n="kc.dl.carburant">stations-service (GeoJSON)</a> ·
+      <a href="data/atmart_couche_finance_HT.geojson" download data-i18n="kc.dl.finance">banques et transferts (GeoJSON)</a> ·
+      <a href="data/atmart_couche_telecom_HT.geojson" download data-i18n="kc.dl.telecom">équipements télécom (GeoJSON)</a> ·
+      <a href="data/atmart_telecom_communes_HT.csv" download data-i18n="kc.dl.telecom_com">télécom par commune (CSV)</a> ·
+      <a href="data/atmart_infrastructures_communes_HT.csv" download data-i18n="kc.dl.infra">infrastructures (CSV)</a>.
+      <span data-i18n="kc.chantier1">Bassins versants, zones inondables et occupation du sol (1998) sont désormais des couches ; restent au chantier l'aléa sismique, la</span>
+      <b data-i18n="kc.chantier_couv">couverture mobile réelle</b>
+      <span data-i18n="kc.chantier2">— que le comptage télécom ne remplace pas, faute de parc publié par les opérateurs ou le CONATEL — et le réseau hydrographique ;</span>
+      <a href="donnees-parrainage.html" data-i18n="kc.parrainer">parrainer une couche</a>
+      <span data-i18n="kc.accelere">accélère sa construction.</span>
     </p>
   </div>
 </section>
@@ -239,7 +246,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   </div>
 </footer>
 
-<script src="assets/couches.js?v=30"></script>
+<script src="assets/couches.js?v=32"></script>
 <script src="assets/assistant.js?v=1" defer></script>
 <script>
   (function () {

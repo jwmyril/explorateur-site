@@ -681,17 +681,20 @@
       if (!doc) nonDoc++;
       return '<path class="k-com' + (doc ? "" : " k-vide") + '" data-id="' + p.atmart_geo_id + '" fill="' +
         (doc ? teinte(v, max, couche.rampe) : nonDocumente()) + '" d="' + chemin(f.geometry) + '"><title>' + p.nom_fr +
-        (doc ? " — " + fmtN(v) + " " + agg.unite : " — non documenté") + "</title></path>";
+        (doc ? " — " + fmtN(v) + " " + T(agg.unite)
+             : " — " + T("non documenté")) + "</title></path>";
     }).join("");
     var leg = '<span class="k-grad k-grad-' + (couche.rampe || "alerte") + '"></span> ' +
               (agg.min !== undefined ? fmtN(agg.min) : "0") + " → " + fmtN(max) + " " + T(agg.unite) +
-              " · " + agg.periode +
+              " · " + T(agg.periode) +
               (agg.couverture ? " · " + agg.couverture : "");
     /* Le gris des communes sans valeur ne se distingue pas d'un minimum pâle
        à l'œil : tant qu'il n'est pas COMPTÉ dans la légende, une carte
        incomplète se lit comme une carte complète où tout va bien. */
     if (nonDoc) {
-      leg += ' · <b class="k-manque">' + nonDoc + " commune(s) en gris : non documenté, jamais zéro</b>";
+      leg += ' · <b class="k-manque">' +
+        TF("{n} commune(s) en gris : non documenté, jamais zéro", { n: nonDoc }) +
+        "</b>";
     }
     dessiner(svg + nomsDepartements(), leg, couche);
     lectureGuidee(couche, agg, nonDoc);
@@ -848,7 +851,7 @@
     }
     var leg = fmtN(doc.features.length) + " entités · " + (doc.millesime || "");
     dessiner(fond + formes + etiquettes + nomsDepartements(), leg,
-             { source: (doc.source || "") + " — " + (doc.licence || ""),
+             { source: T(doc.source || "") + " — " + T(doc.licence || ""),
                limite: doc.limite || couche.limite || "" });
   }
 
@@ -914,7 +917,8 @@
              couche.classes[k].l;
     }).join("  ") + " · " + fmtN(doc.features.length) + " points · " + (doc.millesime || "");
     dessiner(fond + pts + nomsDepartements(), leg,
-             { source: doc.source + " — " + doc.licence, limite: doc.limite || couche.limite });
+             { source: T(doc.source) + " — " + T(doc.licence),
+               limite: doc.limite || couche.limite });
   }
 
   /* RENDU D'UN MANQUE JURIDIQUE.
@@ -938,8 +942,8 @@
                     "autorise un jour cette republication par écrit, la couche " +
                     "reviendra telle quelle.")) + "</p></div>";
     $("#k-legende").innerHTML = "";
-    $("#k-source").textContent = T("Source") + " : " + couche.source;
-    $("#k-limite").textContent = T("Limite") + " : " + T(couche.limite);
+    $("#k-source").textContent = T("Source : ") + T(couche.source);
+    $("#k-limite").textContent = T("Limite : ") + T(couche.limite);
     /* L'assistant doit savoir qu'il n'a AUCUNE valeur ici. Sans cette
        publication il garderait les faits de la carte précédente et
        répondrait sur des déplacés avec les chiffres d'une autre couche —
@@ -961,8 +965,8 @@
       '<svg viewBox="0 0 ' + L + " " + H + '" role="img" preserveAspectRatio="xMidYMid meet">' +
       svgCorps + "</svg>";
     $("#k-legende").innerHTML = legende;
-    $("#k-source").textContent = T("Source") + " : " + meta.source;
-    $("#k-limite").textContent = T("Limite") + " : " + T(meta.limite);
+    $("#k-source").textContent = T("Source : ") + T(meta.source);
+    $("#k-limite").textContent = T("Limite : ") + T(meta.limite);
     couverture();
   }
 
@@ -988,24 +992,41 @@
     var gris = document.querySelectorAll("#k-carte .k-com.k-vide").length;
     var doc = tous.length - gris;
     var part = Math.round(doc / tous.length * 100);
+    /* CETTE PHRASE ÉTAIT ASSEMBLÉE PAR CONCATÉNATION, donc invisible au
+       moteur de traduction ET au contrôle qui cherche les appels à T(). Un
+       lecteur anglophone lisait « Les 140 communes sont documentées » sous
+       une carte par ailleurs traduite. Signalé le 19/08/2026.
+
+       Le morceau à retenir : ce n'est pas la traduction qui manquait, c'est
+       le POINT DE PASSAGE. Une chaîne qui ne traverse jamais T() ne manque à
+       personne — ni au traducteur, ni au contrôle. On assemble donc des
+       phrases entières avec des variables, jamais des fragments cousus. */
     if (!gris) {
       e.className = "";
-      e.textContent = "Les " + tous.length + " communes sont documentées.";
+      e.textContent = TF("Les {n} communes sont documentées.", { n: tous.length });
       return;
     }
     /* Sous la moitié du pays, ce n'est plus une précision : c'est ce qu'il
        faut savoir avant de regarder la carte. */
     e.className = part < 50 ? "k-creuse" : "";
     /* L'accord se fait, y compris au singulier : « Les 1 communes en gris »
-       sur une carte qui se veut soignée décrédibilise tout ce qui l'entoure. */
+       sur une carte qui se veut soignée décrédibilise tout ce qui l'entoure.
+       Chaque forme est une phrase COMPLÈTE dans le dictionnaire : une langue
+       qui accorde autrement — ou qui ne distingue pas le singulier, comme le
+       kreyòl — peut alors écrire ce qui lui convient au lieu de subir la
+       grammaire française par morceaux. */
     var un = gris === 1;
-    e.textContent = doc + (doc > 1 ? " communes documentées" : " commune documentée") +
-      " sur " + tous.length + " (" + part + " %). " +
-      (un ? "La commune en gris n'est pas une commune à zéro : la source ne la couvre pas."
-          : "Les " + gris + " communes en gris ne sont pas des communes à zéro : " +
-            "la source ne les couvre pas.") +
-      (part < 50 ? " Cette carte montre l'étendue d'une source, pas celle du phénomène."
-                 : "");
+    e.textContent =
+      (doc > 1 ? TF("{d} communes documentées sur {t} ({p} %).",
+                    { d: doc, t: tous.length, p: part })
+               : TF("{d} commune documentée sur {t} ({p} %).",
+                    { d: doc, t: tous.length, p: part })) + " " +
+      (un ? T("La commune en gris n'est pas une commune à zéro : la source ne la couvre pas.")
+          : TF("Les {g} communes en gris ne sont pas des communes à zéro : la source ne les couvre pas.",
+               { g: gris })) +
+      (part < 50
+        ? " " + T("Cette carte montre l'étendue d'une source, pas celle du phénomène.")
+        : "");
   }
 
   /* ------------------------------------------------------------ démarrage */

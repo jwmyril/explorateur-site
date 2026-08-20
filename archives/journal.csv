@@ -102,8 +102,10 @@ atmart_registre_sources.csv,2026-08-18,archives/atmart_registre_sources/2026-08-
 atmart_registre_sources.csv,2026-08-19,archives/atmart_registre_sources/2026-08-19.csv,2542c0b53778834b88bb8620223ffb639c2b04bf6e5374f75eb190326c658a17,29816,37,2026-08-19,vitrine,1eb352e48d,oui
 atmart_sante_declaree.json,2026-08-17,archives/atmart_sante_declaree/2026-08-17.json,61772925927af03db189b7b941549305417dc4ce5d0ed78ea12fd26217cf39d0,6930,0,2026-08-17,site,0d423eef1a,oui
 atmart_seismes_communes.json,2026-08-17,archives/atmart_seismes_communes/2026-08-17.json,a20ea2d311e627a3426e44b6ecfdaff628767aeee5214628403f2603864d5c67,88921,0,2026-08-17,site,b82dbcfef2,oui
-atmart_series_nationales.json,2026-08-18,archives/atmart_series_nationales/2026-08-18.json,1afbc8593eff217e950c8d974f611febd7de0eb983dc08f06d383f6853db9f93,18917,0,2026-08-18,vitrine,202933929e,oui
-atmart_series_nationales_HT.csv,2026-08-18,archives/atmart_series_nationales_HT/2026-08-18.csv,8ca7675a16dad1632aa1cc056a8ae8f73182b95ca7b16f0fe31da7deec657076,240437,908,2026-08-18,vitrine,202933929e,oui
+atmart_series_nationales.json,2026-08-18,archives/atmart_series_nationales/2026-08-18.json,1afbc8593eff217e950c8d974f611febd7de0eb983dc08f06d383f6853db9f93,18917,0,2026-08-18,vitrine,202933929e,non
+atmart_series_nationales.json,2026-08-19,archives/atmart_series_nationales/2026-08-19.json,f2d50cdeaa2b1cc26cf78beb5d2ee6c8e5f838d61be748cb8d7a835cd4a718aa,39290,0,2026-08-19,vitrine,a1e6608c6b,oui
+atmart_series_nationales_HT.csv,2026-08-18,archives/atmart_series_nationales_HT/2026-08-18.csv,8ca7675a16dad1632aa1cc056a8ae8f73182b95ca7b16f0fe31da7deec657076,240437,908,2026-08-18,vitrine,202933929e,non
+atmart_series_nationales_HT.csv,2026-08-19,archives/atmart_series_nationales_HT/2026-08-19.csv,707a1edd198130732e65eb2fa4ab87c3d28b4e05b22d57b421f9dcd5072dad67,442251,1420,2026-08-19,vitrine,a1e6608c6b,oui
 atmart_solaire_communes.json,2026-08-17,archives/atmart_solaire_communes/2026-08-17.json,ecdf68dea2716fee49da1d575aa032d4b73804992b95d5b404a4987125a6a074,190619,4396,2026-08-17,site,4edd662664,non
 atmart_solaire_communes.json,2026-08-17,archives/atmart_solaire_communes/2026-08-17-2.json,aac3de498d1d2a2cf59778c317aab618733b46b9555d5ba27de94a2354363085,169123,0,2026-08-17,site,df46d75237,oui
 atmart_sols_communes.json,2026-08-17,archives/atmart_sols_communes/2026-08-17.json,47daf7bae941c221ae2a690722fbc0dee1809c10402caebc25aa98d1620ec20f,28971,0,2026-08-17,site,2b76d06e4f,non

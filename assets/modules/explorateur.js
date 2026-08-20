@@ -729,6 +729,37 @@ import { S } from "./etat.js?v=34";
         $("#x-vue-comparaison").hidden = b.dataset.onglet !== "comparaison";
         $("#x-vue-classement").hidden = b.dataset.onglet !== "classement";
         A.majURL();
+
+        /* « J'AI CLIQUÉ SUR FICHE & INDICATEURS ET RIEN NE SE PASSE. »
+           Signalé le 20/08/2026, et le rapport était juste : l'onglet était
+           DÉJÀ actif, aucune commune n'était choisie, et le champ de recherche
+           qui l'alimente se trouvait à 375 px plus haut — hors de l'écran d'un
+           lecteur qui a fait défiler la page. Le clic ne changeait donc rien
+           de visible.
+
+           Rien n'était cassé, et c'est précisément ce qui rendait le défaut
+           coûteux : le code faisait exactement ce qu'on lui demandait, et le
+           lecteur concluait que le produit était en panne. Un bouton qui
+           promet des indicateurs doit conduire aux indicateurs, ou dire
+           comment y arriver — jamais rester muet.
+
+           On remonte donc le champ à l'écran et on y pose le curseur. C'est
+           le même geste que le bouton « Explorer un territoire », qui, lui,
+           le faisait déjà. */
+        if (A.majAdapter) A.majAdapter();
+        if (b.dataset.onglet === "fiche" && !S.courant) {
+          var q = $("#x-recherche");
+          if (q) {
+            /* Défilement IMMÉDIAT, pas animé. L'animation était plus jolie et
+               moins sûre : selon le navigateur et les réglages d'accessibilité,
+               « smooth » est ignoré ou interrompu, et le lecteur se retrouve
+               avec le curseur dans un champ qu'il ne voit pas — soit très
+               exactement le défaut qu'on corrige. Pour un geste de réparation,
+               arriver à destination vaut mieux qu'y glisser. */
+            q.scrollIntoView({ block: "center" });
+            q.focus();
+          }
+        }
       });
     });
 
@@ -765,6 +796,29 @@ import { S } from "./etat.js?v=34";
        liens déjà partagés continuent de fonctionner à l'identique. */
     S.montrerAccueil = !parId[id];
     if (parId[id]) A.fiche(id); else A.accueil();
+
+    /* Le sélecteur d'objectif hiérarchise les indicateurs D'UNE FICHE. Tant
+       qu'aucune commune n'est choisie, il ne commande rien — et il occupait la
+       première ligne sous l'onglet, exactement là où le lecteur cherche quoi
+       faire. Un réglage sans objet, placé avant l'action, se lit comme une
+       étape obligatoire. */
+    A.majAdapter = function () {
+      var ad = document.querySelector(".x-adapter");
+      if (ad) ad.hidden = !S.courant;
+    };
+    /* On ENVELOPPE fiche() et accueil() au lieu d'ajouter l'appel aux six
+       endroits qui les invoquent : le septième appelant, écrit dans six mois,
+       serait celui qu'on oublierait. */
+    ["fiche", "accueil"].forEach(function (n) {
+      var brut = A[n];
+      if (typeof brut !== "function") return;
+      A[n] = function () {
+        var r = brut.apply(this, arguments);
+        A.majAdapter();
+        return r;
+      };
+    });
+    A.majAdapter();
 
     /* Changement de langue. L'etat de l'application — territoire courant,
        territoires compares, niveau, mode de lecture, onglet actif — vit dans

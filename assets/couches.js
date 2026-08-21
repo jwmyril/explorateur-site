@@ -277,21 +277,21 @@
        caisse dont le siège est aux Gonaïves dessert des comptoirs ailleurs,
        et ces comptoirs ne sont pas rattachés ici : leur libellé nomme
        souvent une localité, pas une commune. */
-    { id: "caisses", nom: "Caisses populaires agréées, par commune de siège (BRH)", type: "choroplethe",
-      csv: "data/atmart_caisses_populaires_HT.csv", pcode: "pcode_commune",
+    { id: "caisses", nom: "Communes desservies par une caisse populaire (BRH)", type: "choroplethe",
+      csv: "data/atmart_caisses_communes_desservies_HT.csv", pcode: "pcode_commune",
       courbe: "lineaire",
       agreger: function (rows) {
         var m = {};
         rows.forEach(function (r) {
-          if (r.pcode_commune) m[r.pcode_commune] = (m[r.pcode_commune] || 0) + 1;
+          m[r.pcode_commune] = +r.caisses_desservant || 0;
         });
         var vs = Object.keys(m).map(function (k) { return m[k]; });
         return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
                  periode: "liste d'agrément de mars 2025",
-                 unite: "caisses populaires ayant leur siège ici" };
+                 unite: "caisses y ayant un siège ou un comptoir" };
       },
       source: "BRH — liste des caisses populaires agréées, passeport PSP-064",
-      limite: "LE SIÈGE, PAS LE SERVICE. Une caisse dont le siège est ici dessert des comptoirs ailleurs, et ces comptoirs ne sont pas rattachés : leur libellé nomme souvent une localité et non une commune. 57 des 58 caisses agréées ont un siège rattaché à une commune ; la dernière, dont l'adresse dit « Fermathe », reste hors socle — Fermathe est une localité de Kenscoff, et rattacher une localité à sa commune demande de connaître le pays plutôt que de lire le fichier. C'est la SEULE liste financière officielle qui descende au territoire : pour les banques et les maisons de transfert, la BRH ne publie que le siège social." },
+      limite: "UNE COMMUNE EST DESSERVIE si une caisse y a son siège OU y déclare un comptoir. Le compte est un PLANCHER : sur 70 libellés de comptoir, 37 ne désignent pas une commune mais une localité — Montrouis, Pont-Sondé, Liancourt — ou une adresse de rue, et ils ne sont pas rattachés. Une localité n'est pas une commune, et deviner son rattachement demande de connaître le pays plutôt que de lire le fichier. Pour comparaison, 47 communes seulement hébergent un SIÈGE : la différence entre 47 et 71 est ce que les comptoirs ajoutent. C'est la SEULE liste financière officielle qui descende au territoire — pour les banques et les maisons de transfert, la BRH ne publie que le siège social." },
     /* LA FINANCE COOPÉRATIVE, SORTIE DE LA MASSE. Ces points existaient
        déjà dans la couche « Banques et transferts », noyés parmi 474 objets
        où rien ne distinguait une caisse populaire d'une succursale de

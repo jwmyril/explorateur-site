@@ -13,8 +13,8 @@
  "nombre_indicateurs_definis": 54,
  "nombre_indicateurs_publics": 53,
  "nombre_indicateurs_avec_valeur": 53,
- "nombre_observations": 6304,
- "nombre_valeurs_sourcees": 5184,
+ "nombre_observations": 6306,
+ "nombre_valeurs_sourcees": 5186,
  "nombre_absences_documentees": 1120,
  "nombre_sources": 39,
  "nombre_sources_integrees": 6,
@@ -106,5 +106,5 @@
  "prd_030_colonnes": 12,
  "prd_027_lignes": 1663,
  "prd_027_colonnes": 12,
- "empreinte": "06a002c5e6942f18"
+ "empreinte": "e7954cdb9c687ef7"
 }

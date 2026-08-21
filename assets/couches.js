@@ -69,7 +69,11 @@
       limite: "Recensement des sites accessibles à l'OIM — pas un registre exhaustif des déplacés. Agrégat recalculé par Atmart ; la portée exacte de la redistribution autorisée fait l'objet d'une demande de clarification auprès de l'OIM depuis le 18/08/2026." },
     { id: "ipc", nom: "Insécurité alimentaire — phase IPC", type: "aplat_dep",
       csv: "data/atmart_ipc_HT.csv",
-      source: "IPC — analyse de mars 2026 (CC0)",
+      /* Le sigle est écrit en entier depuis le 21/08/2026 : « IPC » désigne
+         aussi l'Indice des Prix à la Consommation, qui entre sur le site le
+         même jour. Deux IPC sur une même page, c'est un lecteur qui croit
+         lire des prix sur une carte de faim. */
+      source: "IPC — Cadre intégré de classification de la sécurité alimentaire, analyse de mars 2026 (CC0)",
       limite: "Classification d'experts par zone d'analyse, pas un comptage direct ; la situation « courante » est affichée, les projections sont dans le CSV." },
     { id: "eau", nom: "Points d'eau (WPdx)", type: "points",
       geojson: "data/atmart_couche_eau_HT.geojson",
@@ -172,6 +176,95 @@
       },
       source: "Ministère du Tourisme et des Industries créatives (MTIC) — agrégat communal recalculé par Atmart, passeport PSP-062",
       limite: "Ce que le ministère a CLASSÉ, pas ce qui existe : un hôtel jamais inspecté n'y figure pas, et un hôtel classé en 2015 peut avoir fermé depuis. Aucune classification n'a été publiée après 2015. 39 communes sur 140 portent un établissement classé ; les autres sont grises, pas à zéro. 18 établissements situés dans des localités infra-communales — Labadee, Cormier, Furcy, Cyvadier, Kabic, Ti mouillage et sept autres — ne sont attribués à aucune commune et sont publiés à part : Kabic relève de Cayes-Jacmel et non de Jacmel, et c'est exactement le genre d'erreur qu'un rattachement de proximité aurait produit." },
+    /* PRIX DES DENRÉES. Neuf communes sur 140 portent un marché relevé :
+       cette carte est grise presque partout, et elle doit l'être. Le suivi
+       des prix alimentaires en Haïti ne couvre que neuf chefs-lieux, et une
+       carte qui le cacherait mentirait plus qu'elle n'informerait.
+
+       CE N'EST PAS UN INDICE DES PRIX À LA CONSOMMATION. Deux denrées
+       seulement tiennent sur la durée dans les neuf marchés ; ni le logement,
+       ni le transport, ni l'énergie n'entrent ici. C'est le prix d'une
+       marmite de maïs moulu, et rien d'autre. */
+    { id: "prix_mais", nom: "Prix de la marmite de maïs moulu (PAM, moyenne 2024)", type: "choroplethe",
+      csv: "data/atmart_prix_denrees_marches_HT.csv", pcode: "pcode_commune",
+      rampe: "urbain",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          if (r.denree === "Maïs moulu local" && r.annee === "2024")
+            m[r.pcode_commune] = Math.round(+r.prix_moyen_htg);
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "moyenne des mois relevés en 2024",
+                 unite: "gourdes la marmite" };
+      },
+      source: "PAM (WFP) via OCHA HDX — moyennes annuelles calculées par Atmart, passeport PSP-051",
+      limite: "CE N'EST PAS UN INDICE DES PRIX À LA CONSOMMATION : c'est le prix d'une seule denrée, dans une seule unité. Neuf communes sur 140 portent un marché relevé — les autres sont grises, jamais à zéro. L'écart entre marchés est réel et considérable : 291 gourdes la marmite à Jérémie contre 700 à Ouanaminthe en moyenne 2024, soit un rapport de 2,4 pour le même produit la même année. La collecte s'arrête fin 2024 ; 2025 ne compte qu'un mois, sur trois marchés." },
+    { id: "prix_hausse_usd", nom: "Hausse du maïs en dollars, 2005-2024 (hors dépréciation)", type: "choroplethe",
+      csv: "data/atmart_prix_denrees_marches_HT.csv", pcode: "pcode_commune",
+      agreger: function (rows) {
+        var d = {}, f = {};
+        rows.forEach(function (r) {
+          if (r.denree !== "Maïs moulu local") return;
+          if (r.annee === "2005") d[r.pcode_commune] = +r.prix_moyen_usd;
+          if (r.annee === "2024") f[r.pcode_commune] = +r.prix_moyen_usd;
+        });
+        var m = {};
+        Object.keys(f).forEach(function (k) {
+          /* Sans les DEUX bornes, aucun multiplicateur : une commune qui
+             n'a pas de relevé en 2005 reste grise plutôt que de recevoir un
+             rapport calculé sur une base absente. */
+          if (d[k]) m[k] = Math.round(f[k] / d[k] * 100) / 100;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "2005 à 2024, prix convertis en dollars",
+                 unite: "fois plus cher qu'en 2005" };
+      },
+      source: "PAM (WFP) via OCHA HDX — calcul Atmart sur les prix convertis en dollars",
+      limite: "LA HAUSSE EN GOURDES SERAIT TROIS FOIS PLUS FORTE : la marmite de maïs est multipliée par 10,8 en gourdes et par 3,5 en dollars entre 2005 et 2024. L'écart est la dépréciation de la monnaie ; ce qui reste sur cette carte est la hausse qui subsiste une fois la monnaie mise de côté. Le prix en dollars est une conversion appliquée par le PAM à un taux de référence mensuel, pas un taux obtenu au marché. Neuf communes documentées sur 140." },
+    /* L'IPC RÉGIONAL DE L'IHSI. Cinq valeurs pour 140 communes : la carte
+       montre cinq blocs, et elle le doit. C'est la seule ventilation
+       territoriale que l'indice des prix haïtien possède — aucune source
+       internationale ne descend sous le pays, et les indices départementaux,
+       que l'IHSI calcule, ne sont pas publiés.
+
+       NE PAS CONFONDRE AVEC L'AUTRE IPC de ce sélecteur : celui-ci mesure
+       des PRIX, l'autre — le Cadre intégré de classification — mesure la
+       FAIM. Les deux portent le même sigle et rien d'autre en commun. */
+    { id: "ipc_prix", nom: "Indice des prix à la consommation, par région (IHSI)", type: "choroplethe",
+      csv: "data/atmart_ipc_regions_communes_HT.csv", pcode: "pcode_commune",
+      agreger: function (rows) {
+        var m = {}, mois = "";
+        rows.forEach(function (r) {
+          m[r.pcode_commune] = +r.indice;
+          mois = r.mois_reference || mois;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: TF("bulletin de {m}, base 100 en 2017-2018",
+                             { m: moisT(mois) }),
+                 unite: "points d'indice" };
+      },
+      source: "IHSI — Indice des prix à la consommation ; rattachement des régions aux communes par Atmart, passeport PSP-063",
+      limite: "INDICE RÉGIONAL PORTÉ SUR LES COMMUNES, PAS UN INDICE COMMUNAL. Les 140 communes ne portent que CINQ valeurs, celles des cinq régions de l'IHSI : toutes les communes d'une même région affichent le même chiffre, et il serait faux d'en conclure qu'une commune est plus chère qu'une autre à l'intérieur d'une région. Les prix ne sont relevés QU'EN ZONE URBAINE alors que les pondérations couvrent villes et campagnes. Ces pondérations viennent de l'enquête ECVMAS de 2011-2012 et n'ont pas été actualisées depuis, pour un indice de base 2017-2018. Le découpage en régions ne recoupe pas les dix départements : « Reste Ouest » réunit l'Ouest hors métropole et le Sud-Est." },
+    { id: "ipc_hausse", nom: "Hausse des prix sur douze mois, par région (IHSI)", type: "choroplethe",
+      csv: "data/atmart_ipc_regions_communes_HT.csv", pcode: "pcode_commune",
+      agreger: function (rows) {
+        var m = {}, mois = "";
+        rows.forEach(function (r) {
+          m[r.pcode_commune] = +r.variation_annuelle_pct;
+          mois = r.mois_reference || mois;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: TF("glissement annuel au bulletin de {m}",
+                             { m: moisT(mois) }),
+                 unite: "% sur douze mois" };
+      },
+      source: "IHSI — Indice des prix à la consommation ; rattachement des régions aux communes par Atmart, passeport PSP-063",
+      limite: "LE NIVEAU ET LA HAUSSE NE SE LISENT PAS ENSEMBLE : le Reste Ouest porte l'indice le plus élevé mais l'Aire Métropolitaine la hausse la plus forte. Un territoire peut être durablement cher sans se renchérir vite. Comme pour l'indice lui-même, les 140 communes ne portent que cinq valeurs — celles des régions — et l'écart entre la région la plus touchée et la moins touchée n'est que de 2,9 points, ce qui est peu au regard d'une inflation de 17 à 20 % partout." },
     { id: "inondation", nom: "Part de la commune en zone inondable (CNIGS)", type: "choroplethe",
       csv: "data/atmart_alea_inondation_communes_HT.csv", pcode: "pcode_commune",
       agreger: function (rows) {
@@ -635,6 +728,15 @@
   function T(fr) {
     return (window.ATM_I18N && window.ATM_I18N.texte)
       ? window.ATM_I18N.texte(fr) : fr;
+  }
+
+  /* « Juin 26 » vient du tableau de l'IHSI : c'est une donnée, et une
+     donnée ne traverse aucun T(). On ne traduit pas la chaîne entière —
+     l'année change et il faudrait une clé neuve chaque mois — mais le seul
+     mot qui soit du français : le mois. Douze clés, stables pour toujours. */
+  function moisT(s) {
+    var p = String(s || "").trim().split(/\s+/);
+    return p.length === 2 ? T(p[0]) + " " + p[1] : T(s || "");
   }
 
   function TF(fr, vars) {
@@ -1169,6 +1271,17 @@
                       ["inondation", "inondable", "seismes", "seisme_max", "cyclones",
                        "cyclone_vent", "pluie", "eau_surface", "bassins", "sol"]],
                      ["Conjoncturel", ["conflits", "deplaces", "ipc"]],
+                     /* Les prix ont leur groupe et ne rejoignent pas
+                        « Conjoncturel » : la faim et le prix du maïs se
+                        ressemblent assez pour qu'on les confonde, et l'une
+                        est une classification d'experts quand l'autre est un
+                        relevé de marché. */
+                     /* L'indice officiel d'abord, le relevé de marché
+                        ensuite : le premier couvre les 140 communes par ses
+                        régions, le second neuf communes mais avec des prix
+                        réels. Ils ne se remplacent pas. */
+                     ["Prix — indice officiel et relevés de marché",
+                      ["ipc_prix", "ipc_hausse", "prix_mais", "prix_hausse_usd"]],
                      /* « telecom » compte les équipements cartographiés dans OSM ;
                         « Couverture mobile réelle » reste en préparation juste
                         en dessous, et les deux ne se remplacent pas — l'un dit

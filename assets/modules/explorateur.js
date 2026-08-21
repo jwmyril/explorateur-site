@@ -121,7 +121,7 @@ import { S } from "./etat.js?v=34";
                    par aucun T(). */
                 Accessibilité: "🛣 Accessibilité", Environnement: "🌳 Environnement",
                 Risques: "⚠ Risques", "Finances publiques": "🏛 Finances publiques",
-                Tourisme: "🧳 Tourisme" };
+                Tourisme: "🧳 Tourisme", Prix: "💰 Prix" };
   /* Les codes du modèle de qualité, en clair pour l'utilisateur.
      Les codes eux-mêmes restent dans les exports et le bloc technique. */
   var STATUT = { O: "Valeur observée", A: "Valeur agrégée par Atmart", H: "Valeur harmonisée",

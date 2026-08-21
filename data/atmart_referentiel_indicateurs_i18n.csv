@@ -503,27 +503,111 @@ IND-POP-013,ht,methode_calcul,IND-POP-009 ÷ IND-POP-008 × 100.
 IND-POP-013,ht,nom,Rapò gason pou 100 fi
 IND-POP-013,ht,sens_interpretation,Li rete bò 95-100 nan yon popilasyon ki pa gen gwo deplasman. Yon gwo eka vle di gen moun k ap deplase yon jan chwazi — oswa gen yon limit nan pwojeksyon an.
 IND-POP-013,ht,unite,gason / 100 fi
-IND-PRX-001,en,comparabilite,Comparable across the nine urban markets the WFP monitors — one major city per department — and among those only. Transposable neither to the rest of the department nor to rural areas.
-IND-PRX-001,en,definition,How much retail prices moved from month to month in the commune's markets during 2024.
-IND-PRX-001,en,limites_connues,"The WFP does not draw a sample of communes: it runs a sentinel network of one main urban market per department, in 9 departments out of 10 — Nippes has none. The nine monitored communes are all among the 28 most populated in the country and account for 22,8 % of the population. These are therefore urban retail prices: they do not transpose to rural communes, where supply, routes and margins differ. Prices are nominal, in gourdes, not deflated — part of the observed variation is inflation, not market instability. 2024 has eleven months, not twelve: September is missing from the source. The nine historic markets stop on 15 December 2024; the only 2025 reading covers three Jérémie markets opened in July, too recent to measure, and is excluded. A coefficient of variation does not say whether prices rose or fell: it says how much they moved."
-IND-PRX-001,en,methode_calcul,"Coefficient of variation of nominal retail prices in gourdes over 2024: for each (market, commodity) pair recorded at least 6 months, standard deviation ÷ mean × 100; the communal value is the median of those coefficients. Median, not mean: a single erratic commodity must not carry the commune."
-IND-PRX-001,en,nom,Price volatility in markets
-IND-PRX-001,en,sens_interpretation,"High = prices unstable from month to month on the department's urban market, which weighs on households even when the average level does not change. Read alongside the number of commodities monitored: volatility computed on three does not carry the weight of one computed on ten."
-IND-PRX-001,en,unite,coefficient of variation (%)
-IND-PRX-001,es,comparabilite,Comparable entre los nueve mercados urbanos que el PMA monitorea — una ciudad principal por departamento — y solo entre ellos. No transponible al resto del departamento ni al medio rural.
-IND-PRX-001,es,definition,Cuánto se movieron los precios minoristas de un mes a otro en los mercados de la comuna durante 2024.
-IND-PRX-001,es,limites_connues,"El PMA no extrae una muestra de comunas: mantiene una red centinela de un mercado urbano principal por departamento, en 9 departamentos de 10 — Nippes no tiene ninguno. Las nueve comunas monitoreadas figuran todas entre las 28 más pobladas del país y reúnen el 22,8 % de la población. Son por tanto precios urbanos minoristas: no se transponen a las comunas rurales, donde el abastecimiento, los circuitos y los márgenes difieren. Los precios son nominales, en gourdes, sin deflactar — parte de la variación observada es inflación, no inestabilidad del mercado. 2024 tiene once meses y no doce: septiembre falta en la fuente. La serie de los nueve mercados históricos se detiene el 15 de diciembre de 2024; el único registro de 2025 cubre tres mercados de Jérémie abiertos en julio, demasiado recientes para medirse, y queda excluido. Un coeficiente de variación no dice si los precios subieron o bajaron: dice cuánto se movieron."
-IND-PRX-001,es,methode_calcul,"Coeficiente de variación de los precios minoristas nominales en gourdes durante 2024: para cada par (mercado, producto) con al menos 6 meses registrados, desviación típica ÷ media × 100; el valor comunal es la mediana de esos coeficientes. Mediana y no media: un solo producto errático no debe arrastrar la comuna."
-IND-PRX-001,es,nom,Volatilidad de los precios en los mercados
-IND-PRX-001,es,sens_interpretation,"Alto = precios inestables de un mes a otro en el mercado urbano del departamento, lo que pesa sobre los hogares aunque el nivel medio no cambie. Léase junto con el número de productos seguidos: una volatilidad calculada sobre tres no tiene el peso de una calculada sobre diez."
-IND-PRX-001,es,unite,coeficiente de variación (%)
-IND-PRX-001,ht,comparabilite,"Konparab ant nèf gwo mache lavil PAM nan swiv yo — yon gwo vil pou chak depatman — epi sèlman ant yo menm. Ou pa ka pote sa nan rès depatman an, ni nan zòn andeyò."
-IND-PRX-001,ht,definition,Konbyen pri yo deplase yon mwa apre lòt nan mache komin nan pandan ane 2024.
-IND-PRX-001,ht,limites_connues,"PAM pa pran yon echantiyon komin osaza : li kenbe yon rezo sentinèl ki gen yon gwo mache lavil pou chak depatman, nan 9 depatman sou 10 — Nip yo pa gen okenn. Nèf komin sa yo tout ladan yo nan 28 ki gen plis moun nan peyi a, e yo reprezante 22,8 % popilasyon an. Se donk pri lavil : ou pa ka pote yo nan komin andeyò, kote jan machandiz rive, chemen yo ak maj yo pa menm. Pri yo an goud, yo pa korije pou enflasyon — yon pati nan varyasyon an se enflasyon, se pa dezòd mache. Ane 2024 gen onz mwa, pa douz : septanm manke nan sous la. Seri nèf mache istorik yo kanpe 15 desanm 2024 ; sèl releve 2025 la se twa mache Jeremie ki louvri an jiyè, yo twò nèf pou mezire, nou pa mete yo nan kalkil la. Yon koefisyan varyasyon pa di si pri yo monte ou desann : li di konbyen yo deplase."
-IND-PRX-001,ht,methode_calcul,"Koefisyan varyasyon pri detay yo an goud pou ane 2024 : pou chak koup (mache, pwodui) ki gen omwen 6 mwa releve, ekatip divize pa mwayèn fwa 100 ; valè komin nan se medyàn koefisyan sa yo. Medyàn, pa mwayèn : yon sèl pwodui ki fè dezòd pa dwe antrene tout komin nan."
-IND-PRX-001,ht,nom,Enstabilite pri nan mache yo
-IND-PRX-001,ht,sens_interpretation,"Wo = pri yo pa estab yon mwa apre lòt sou gwo mache lavil depatman an, sa peze sou fanmi yo menm lè nivo mwayèn nan pa chanje. Li li ansanm ak kantite pwodui yo swiv : yon enstabilite ki kalkile sou twa pwodui pa gen menm pwa ak youn ki kalkile sou dis."
-IND-PRX-001,ht,unite,koefisyan varyasyon (%)
+IND-PRX-001,en,comparabilite,Comparable between markets for the same year.
+IND-PRX-001,en,definition,"Average price of a marmite of local maize meal on the commune's market, in gourdes, mean of the months recorded in 2024. A marmite is a Haitian measure, about six pounds for cereals."
+IND-PRX-001,en,limites_connues,"THIS IS NOT A CONSUMER PRICE INDEX: one staple, one unit, no housing, no transport, no energy. Nine of 140 communes carry a monitored market — and a market serves a catchment wider than the commune hosting it. The gap between markets is large: 291 gourdes in Jérémie against 700 in Ouanaminthe the same year, for the same product. Collection stops at the end of 2024."
+IND-PRX-001,en,methode_calcul,"Mean of the monthly prices recorded in 2024, with no weighting: each recorded month counts the same, and a month without a reading is absent, never interpolated."
+IND-PRX-001,en,nom,Price of a marmite of maize meal
+IND-PRX-001,en,sens_interpretation,High = dearer staple.
+IND-PRX-001,en,unite,gourdes per marmite
+IND-PRX-001,es,comparabilite,Comparable entre mercados para el mismo año.
+IND-PRX-001,es,definition,"Precio medio de una marmite de maíz molido local en el mercado de la comuna, en gourdes, media de los meses registrados en 2024. La marmite es una medida haitiana, unas seis libras para los cereales."
+IND-PRX-001,es,limites_connues,"NO ES UN ÍNDICE DE PRECIOS AL CONSUMO: un solo alimento, una sola unidad, sin vivienda, transporte ni energía. Nueve de 140 comunas tienen un mercado seguido, y un mercado sirve a una zona más amplia que la comuna que lo alberga. La diferencia entre mercados es grande: 291 gourdes en Jérémie frente a 700 en Ouanaminthe el mismo año, por el mismo producto. La recogida se detiene a finales de 2024."
+IND-PRX-001,es,methode_calcul,"Media de los precios mensuales registrados en 2024, sin ponderación: cada mes cuenta igual, y un mes sin registro está ausente, nunca interpolado."
+IND-PRX-001,es,nom,Precio de una marmite de maíz molido
+IND-PRX-001,es,sens_interpretation,Alto = alimento más caro.
+IND-PRX-001,es,unite,gourdes por marmite
+IND-PRX-001,ht,comparabilite,Konparab ant mache yo pou menm ane a.
+IND-PRX-001,ht,definition,"Pri mwayen yon mamit mayi moulen lokal nan mache komin nan, an goud, mwayèn mwa yo reeleve an 2024."
+IND-PRX-001,ht,limites_connues,"SA SE PA YON ENDIS PRI : yon sèl manje, yon sèl inite, ni kay, ni transpò, ni enèji. Nèf komin sou 140 gen yon mache yo swiv — epi yon mache sèvi yon zòn ki pi laj pase komin kote li ye a. Diferans ant mache yo gwo : 291 goud nan Jeremi kont 700 nan Wanament menm ane a, pou menm bagay la. Kolèk la kanpe nan fen 2024."
+IND-PRX-001,ht,methode_calcul,"Mwayèn pri chak mwa yo reeleve an 2024, san okenn pondérasyon : chak mwa peze menm jan, epi yon mwa san relve pa la ditou — nou pa janm envante l."
+IND-PRX-001,ht,nom,Pri yon mamit mayi moulen
+IND-PRX-001,ht,sens_interpretation,Wo = manje a pi chè.
+IND-PRX-001,ht,unite,goud pou yon mamit
+IND-PRX-002,en,comparabilite,Comparable between markets.
+IND-PRX-002,en,definition,"Ratio of the 2024 average price to the 2005 average price for a marmite of local maize meal, in gourdes."
+IND-PRX-002,en,limites_connues,"THIS FIGURE MIXES TWO THINGS and must not be read alone: the real rise in price, and the depreciation of the gourde. IND-PRX-003 separates them — in dollars the same marmite is multiplied by 3.5 where it is by 10.8 in gourdes. The two are corrected by different policies."
+IND-PRX-002,en,methode_calcul,"The 2024 average divided by the 2005 average, on the same market. If either year has no reading, no ratio is given."
+IND-PRX-002,en,nom,Rise of maize in gourdes since 2005
+IND-PRX-002,en,sens_interpretation,High = steeper rise.
+IND-PRX-002,en,unite,times dearer than in 2005
+IND-PRX-002,es,comparabilite,Comparable entre mercados.
+IND-PRX-002,es,definition,"Relación entre el precio medio de 2024 y el de 2005 para una marmite de maíz molido local, en gourdes."
+IND-PRX-002,es,limites_connues,"ESTA CIFRA MEZCLA DOS FENÓMENOS y no debe leerse sola: la subida real del precio y la depreciación del gourde. IND-PRX-003 los separa: en dólares la misma marmite se multiplica por 3,5 cuando lo hace por 10,8 en gourdes. Ambos se corrigen con políticas distintas."
+IND-PRX-002,es,methode_calcul,"La media de 2024 dividida por la de 2005, en el mismo mercado. Si falta alguno de los dos años, no se da ninguna relación."
+IND-PRX-002,es,nom,Subida del maíz en gourdes desde 2005
+IND-PRX-002,es,sens_interpretation,Alto = subida más fuerte.
+IND-PRX-002,es,unite,veces más caro que en 2005
+IND-PRX-002,ht,comparabilite,Konparab ant mache yo.
+IND-PRX-002,ht,definition,"Rapò ant pri mwayen 2024 la ak pri mwayen 2005 la pou yon mamit mayi moulen lokal, an goud."
+IND-PRX-002,ht,limites_connues,"CHIF SA A MELANJE DE BAGAY epi nou pa dwe li l pou kont li : pri a ki monte toutbon, ak goud la ki pèdi valè. IND-PRX-003 separe yo — an dola, menm mamit la miltipliye pa 3,5 alòske li miltipliye pa 10,8 an goud. De bagay sa yo pa korije ak menm politik."
+IND-PRX-002,ht,methode_calcul,"Pri mwayen 2024 divize pa pri mwayen 2005, sou menm mache a. Si youn nan de ane yo pa gen relve, nou pa bay okenn rapò."
+IND-PRX-002,ht,nom,Konbyen fwa mayi a vin pi chè an goud depi 2005
+IND-PRX-002,ht,sens_interpretation,Wo = pri a monte plis.
+IND-PRX-002,ht,unite,fwa pi chè pase 2005
+IND-PRX-003,en,comparabilite,Comparable between markets.
+IND-PRX-003,en,definition,"Same ratio as IND-PRX-002, computed on the price converted to dollars: what remains of the rise once the currency's depreciation is set aside."
+IND-PRX-003,en,limites_connues,"THE DOLLAR PRICE IS A CONVERSION, NOT AN OBSERVATION: the implied rate is the same for every reading of a given month, to the rounding — 42 gourdes to the dollar in 2005, 130 in 2024. It is a reference rate applied by WFP, not what a buyer obtains on the street. The figure still speaks: even with the currency set aside, the marmite has more than tripled."
+IND-PRX-003,en,methode_calcul,"The same calculation, on the dollar price column supplied by WFP."
+IND-PRX-003,en,nom,Rise of maize in dollars since 2005
+IND-PRX-003,en,sens_interpretation,High = steeper real rise.
+IND-PRX-003,en,unite,times dearer than in 2005
+IND-PRX-003,es,comparabilite,Comparable entre mercados.
+IND-PRX-003,es,definition,"La misma relación que IND-PRX-002, calculada sobre el precio convertido a dólares: lo que queda de la subida una vez apartada la depreciación de la moneda."
+IND-PRX-003,es,limites_connues,"EL PRECIO EN DÓLARES ES UNA CONVERSIÓN, NO UNA OBSERVACIÓN: la tasa implícita es la misma para todos los registros de un mismo mes, salvo redondeo: 42 gourdes por dólar en 2005, 130 en 2024. Es una tasa de referencia aplicada por el PMA, no la que obtiene un comprador en la calle. La cifra sigue siendo elocuente: incluso apartando la moneda, la marmite se ha más que triplicado."
+IND-PRX-003,es,methode_calcul,"El mismo cálculo, sobre la columna de precio en dólares facilitada por el PMA."
+IND-PRX-003,es,nom,Subida del maíz en dólares desde 2005
+IND-PRX-003,es,sens_interpretation,Alto = subida real más fuerte.
+IND-PRX-003,es,unite,veces más caro que en 2005
+IND-PRX-003,ht,comparabilite,Konparab ant mache yo.
+IND-PRX-003,ht,definition,"Menm rapò ak IND-PRX-002, men sou pri a konvèti an dola : sa ki rete nan monte a lè nou mete valè goud la sou kote."
+IND-PRX-003,ht,limites_connues,"PRI AN DOLA A SE YON KONVÈSYON, SE PA YON BAGAY YO WÈ SOU MACHE A : to a menm pou tout relve yon menm mwa, apeprè — 42 goud pou yon dola an 2005, 130 an 2024. Se yon to referans PAM nan aplike, se pa sa yon achtè jwenn nan lari a. Chif la rete pale : menm lè nou mete monnen an sou kote, mamit la plis pase triple."
+IND-PRX-003,ht,methode_calcul,"Menm kalkil la, sou kolòn pri an dola PAM nan bay la."
+IND-PRX-003,ht,nom,Konbyen fwa mayi a vin pi chè an dola depi 2005
+IND-PRX-003,ht,sens_interpretation,Wo = monte reyèl la pi fò.
+IND-PRX-003,ht,unite,fwa pi chè pase 2005
+IND-PRX-004,en,comparabilite,Comparable between regions for the same month. The base changed in 2017-2018: earlier series do not stack onto these.
+IND-PRX-004,en,definition,"Value of the consumer price index published by IHSI for the region the commune belongs to, base 100 in 2017-2018."
+IND-PRX-004,en,limites_connues,"THIS IS NOT A COMMUNAL INDEX. The 140 communes carry only FIVE values, those of IHSI's five regions: it would be wrong to conclude that one commune is dearer than another within the same region. Prices are collected IN URBAN AREAS ONLY, while the weights cover towns and countryside. Those weights come from the 2011-2012 ECVMAS survey and have not been updated since. IHSI DOES compute departmental indices but does not publish them."
+IND-PRX-004,en,methode_calcul,"We do not compute the value: IHSI publishes it. Only the region-to-commune attachment is ours, following the list of communes IHSI names for the Metropolitan Area and the departments it names for the four other regions."
+IND-PRX-004,en,nom,Consumer price index of the region
+IND-PRX-004,en,sens_interpretation,High = higher price level.
+IND-PRX-004,en,unite,index points
+IND-PRX-004,es,comparabilite,Comparable entre regiones para el mismo mes. La base cambió en 2017-2018: las series anteriores no se apilan con estas.
+IND-PRX-004,es,definition,"Valor del índice de precios al consumo publicado por el IHSI para la región a la que pertenece la comuna, base 100 en 2017-2018."
+IND-PRX-004,es,limites_connues,"NO ES UN ÍNDICE COMUNAL. Las 140 comunas llevan solo CINCO valores, los de las cinco regiones del IHSI: sería falso concluir que una comuna es más cara que otra dentro de la misma región. Los precios se recogen SOLO EN ZONAS URBANAS, mientras que las ponderaciones cubren ciudad y campo. Esas ponderaciones proceden de la encuesta ECVMAS de 2011-2012 y no se han actualizado desde entonces. El IHSI SÍ calcula índices departamentales pero no los publica."
+IND-PRX-004,es,methode_calcul,"No calculamos el valor: lo publica el IHSI. Solo la asignación región-comuna es nuestra, según la lista de comunas que el IHSI nombra para el Área Metropolitana y los departamentos para las otras cuatro regiones."
+IND-PRX-004,es,nom,Índice de precios de la región
+IND-PRX-004,es,sens_interpretation,Alto = nivel de precios más alto.
+IND-PRX-004,es,unite,puntos de índice
+IND-PRX-004,ht,comparabilite,Konparab ant rejyon pou menm mwa a. Baz la chanje an 2017-2018 : seri anvan sa yo pa anpile ak sa yo.
+IND-PRX-004,ht,definition,"Valè endis pri IHSI a pibliye pou rejyon kote komin nan ye a, baz 100 an 2017-2018."
+IND-PRX-004,ht,limites_connues,"SE PA YON ENDIS KOMIN. 140 komin yo pote SENK valè sèlman, sa yo ki pou senk rejyon IHSI yo : li ta fo pou nou di yon komin pi chè pase yon lòt anndan menm rejyon an. Yo pran pri yo NAN VIL SÈLMAN, alòske pondérasyon yo kouvri vil ak andeyò. Pondérasyon sa yo soti nan ankèt ECVMAS 2011-2012, yo pa aktyalize depi lè sa a. IHSI KALKILE endis pa depatman men li pa pibliye yo."
+IND-PRX-004,ht,methode_calcul,"Nou pa kalkile valè a : IHSI pibliye l. Sèl bagay ki pou nou se rattachman rejyon an ak komin yo, dapre lis komin IHSI a bay pou Zòn Metwopolitèn nan ak dapre depatman yo pou lòt kat rejyon yo."
+IND-PRX-004,ht,nom,Endis pri rejyon an
+IND-PRX-004,ht,sens_interpretation,Wo = nivo pri pi wo.
+IND-PRX-004,ht,unite,pwen endis
+IND-PRX-005,en,comparabilite,Comparable between regions for the same month.
+IND-PRX-005,en,definition,"Twelve-month change in the consumer price index of the region the commune belongs to, as IHSI publishes it."
+IND-PRX-005,en,limites_connues,"THE GAP BETWEEN REGIONS IS SMALL, and that is information in itself: 2.9 points separate the hardest-hit region from the least, while all exceed 16 %. Haitian inflation is a national phenomenon before it is a territorial one. Do not read it with the index level: Reste Ouest carries the highest index but not the steepest rise."
+IND-PRX-005,en,methode_calcul,IHSI supplies the figure; we do not recompute it.
+IND-PRX-005,en,nom,Twelve-month price rise in the region
+IND-PRX-005,en,sens_interpretation,High = prices rising faster.
+IND-PRX-005,en,unite,% over twelve months
+IND-PRX-005,es,comparabilite,Comparable entre regiones para el mismo mes.
+IND-PRX-005,es,definition,"Variación interanual del índice de precios al consumo de la región a la que pertenece la comuna, tal como la publica el IHSI."
+IND-PRX-005,es,limites_connues,"LA DIFERENCIA ENTRE REGIONES ES PEQUEÑA, y eso es información en sí: 2,9 puntos separan la región más afectada de la menos, mientras todas superan el 16 %. La inflación haitiana es un fenómeno nacional antes que territorial. No leerlo junto al nivel del índice: Reste Ouest tiene el índice más alto pero no la subida más fuerte."
+IND-PRX-005,es,methode_calcul,El IHSI facilita la cifra; no la recalculamos.
+IND-PRX-005,es,nom,Subida de precios interanual en la región
+IND-PRX-005,es,sens_interpretation,Alto = precios que suben más rápido.
+IND-PRX-005,es,unite,% interanual
+IND-PRX-005,ht,comparabilite,Konparab ant rejyon pou menm mwa a.
+IND-PRX-005,ht,definition,"Chanjman sou douz mwa endis pri rejyon kote komin nan ye a, jan IHSI pibliye l."
+IND-PRX-005,ht,limites_connues,"DIFERANS ANT REJYON YO PICHIT, epi se yon enfòmasyon nan tèt li : 2,9 pwen separe rejyon ki pi frape a ak sa ki mwens frape a, alòske tout depase 16 %. Enflasyon an Ayiti se yon bagay nasyonal anvan li teritoryal. Pa li l ansanm ak nivo endis la : Rès Lwès la gen endis ki pi wo a men se pa li ki gen monte ki pi fò a."
+IND-PRX-005,ht,methode_calcul,IHSI bay chif la; nou pa rekalkile l.
+IND-PRX-005,ht,nom,Monte pri sou douz mwa nan rejyon an
+IND-PRX-005,ht,sens_interpretation,Wo = pri yo monte pi vit.
+IND-PRX-005,ht,unite,% sou douz mwa
 IND-QUA-001,en,comparabilite,Comparable between communes of the same backbone version.
 IND-QUA-001,en,definition,Share of backbone dimensions documented for the commune.
 IND-QUA-001,en,limites_connues,"Measures what WE know about the commune, not the reality of the commune. A low score marks a documentary blind spot."

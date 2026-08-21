@@ -113,8 +113,10 @@
                  information: { c: "#8338ec", l: "information touristique" },
                  restauration: { c: "#e63946", l: "restauration et sorties" },
                  patrimoine: { c: "#8d6e63", l: "patrimoine bâti" },
-                 culture: { c: "#00897b", l: "lieu de culture" } }, prop: "f",
-      limite: "Compte ce qui est CARTOGRAPHIÉ dans OpenStreetMap, pas ce qui existe, pas ce qui est ouvert, pas ce qui est agréé par le ministère. Un hôtel jamais cartographié n'apparait pas ; un hôtel fermé depuis 2019 apparait encore. La cartographie contributive suit les contributeurs, donc les villes : 107 communes sur 140 portent au moins un objet, les 33 autres sont VIDES et non à zéro. Aucun établissement ne déclare sa capacité en lits." },
+                 culture: { c: "#00897b", l: "lieu de culture" },
+                 littoral: { c: "#0091ea", l: "littoral et balnéaire" },
+                 nature: { c: "#558b2f", l: "curiosité naturelle" } }, prop: "f",
+      limite: "Compte ce qui est CARTOGRAPHIÉ dans OpenStreetMap, pas ce qui existe, pas ce qui est ouvert, pas ce qui est agréé par le ministère. Un hôtel jamais cartographié n'apparait pas ; un hôtel fermé depuis 2019 apparait encore. La cartographie contributive suit les contributeurs, donc les villes : 115 communes sur 140 portent au moins un objet, les 25 autres sont VIDES et non à zéro. Aucun établissement ne déclare sa capacité en lits. Les plages et les marinas, posées sur le sable ou sur l'eau, tombent du côté mer de la limite administrative : elles sont recollées au rivage le plus proche sous 100 mètres, et 21 objets plus lointains restent hors du socle communal." },
     { id: "hebergement_nb", nom: "Hébergements cartographiés par commune (OSM)", type: "choroplethe",
       csv: "data/atmart_tourisme_communes_HT.csv", pcode: "pcode_commune",
       rampe: "urbain",
@@ -998,7 +1000,12 @@
     var leg = Object.keys(couche.classes).map(function (k) {
       return '<span class="k-p" style="background:' + couche.classes[k].c + '"></span>' +
              T(couche.classes[k].l);
-    }).join("  ") + " · " + fmtN(doc.features.length) + " points · " + (doc.millesime || "");
+    /* « points » et le millésime restaient en français : le premier était
+       écrit en dur dans la concaténation, le second lu depuis le fichier de
+       données. Ni l'un ni l'autre ne traversait T(), et ni l'un ni l'autre
+       n'était visible dans le HTML — donc aucun contrôle ne les voyait. */
+    }).join("  ") + " · " + fmtN(doc.features.length) + " " + T("points") +
+      " · " + T(doc.millesime || "");
     dessiner(fond + pts + nomsDepartements(), leg,
              { source: T(doc.source) + " — " + T(doc.licence),
                limite: doc.limite || couche.limite });

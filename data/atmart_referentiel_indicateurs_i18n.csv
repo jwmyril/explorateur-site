@@ -736,21 +736,21 @@ IND-TOU-003,ht,sens_interpretation,Wo = plis objè yo relve.
 IND-TOU-003,ht,unite,etablisman
 IND-TOU-004,en,comparabilite,Comparable between communes within the same extract only.
 IND-TOU-004,en,definition,"Sum of tourism and catering objects recorded in the commune: accommodation, sites, outdoors, information, eating out."
-IND-TOU-004,en,limites_connues,"A total adds objects of different natures — a museum and a bar weigh the same. It serves to spot communes where something is recorded, not to rank them. 107 of 140 communes carry at least one."
+IND-TOU-004,en,limites_connues,"A total adds objects of different natures — a museum and a bar weigh the same. It serves to spot communes where something is recorded, not to rank them. 115 of 140 communes carry at least one."
 IND-TOU-004,en,methode_calcul,Sum of the five families.
 IND-TOU-004,en,nom,"Mapped tourism supply, all types"
 IND-TOU-004,en,sens_interpretation,High = more objects recorded.
 IND-TOU-004,en,unite,objects
 IND-TOU-004,es,comparabilite,Comparable entre comunas dentro de una misma extracción.
 IND-TOU-004,es,definition,"Suma de los objetos turísticos y de restauración registrados en la comuna: alojamiento, sitios, aire libre, información, restauración."
-IND-TOU-004,es,limites_connues,"Un total suma objetos de naturaleza distinta: un museo y un bar pesan igual. Sirve para detectar comunas donde algo está registrado, no para clasificarlas. 107 de 140 comunas tienen al menos uno."
+IND-TOU-004,es,limites_connues,"Un total suma objetos de naturaleza distinta: un museo y un bar pesan igual. Sirve para detectar comunas donde algo está registrado, no para clasificarlas. 115 de 140 comunas tienen al menos uno."
 IND-TOU-004,es,methode_calcul,Suma de las cinco familias.
 IND-TOU-004,es,nom,"Oferta turística cartografiada, todos los tipos"
 IND-TOU-004,es,sens_interpretation,Alto = más objetos registrados.
 IND-TOU-004,es,unite,objetos
 IND-TOU-004,ht,comparabilite,Konparab ant komin nan menm ekstraksyon an sèlman.
 IND-TOU-004,ht,definition,"Total objè touris ak restorasyon yo relve nan komin nan : kote pou desann, sit, deyò nan lanati, enfòmasyon, kote pou manje."
-IND-TOU-004,ht,limites_connues,"Yon total adisyone objè ki pa menm bagay — yon mize ak yon ba peze menm jan. Li sèvi pou wè ki komin gen yon bagay ki relve, li pa sèvi pou klase yo. 107 komin sou 140 gen omwen youn."
+IND-TOU-004,ht,limites_connues,"Yon total adisyone objè ki pa menm bagay — yon mize ak yon ba peze menm jan. Li sèvi pou wè ki komin gen yon bagay ki relve, li pa sèvi pou klase yo. 115 komin sou 140 gen omwen youn."
 IND-TOU-004,ht,methode_calcul,Sòm senk fanmi yo.
 IND-TOU-004,ht,nom,Tout sa yo katògrafye nan touris la
 IND-TOU-004,ht,sens_interpretation,Wo = plis objè yo relve.
@@ -839,3 +839,24 @@ IND-TOU-008,ht,methode_calcul,"Nou konte objè ki make sinema, sant atizana oswa
 IND-TOU-008,ht,nom,Kote pou kilti ki katògrafye
 IND-TOU-008,ht,sens_interpretation,Wo = plis objè yo relve.
 IND-TOU-008,ht,unite,etablisman
+IND-TOU-009,en,comparabilite,Comparable between communes within the same extract only.
+IND-TOU-009,en,definition,"Number of beaches, seaside resorts and marinas recorded in the commune by contributory mapping."
+IND-TOU-009,en,limites_connues,"THE TOLERANCE IS STATED. The COMPLETE commune outline does not catch these objects any better than the simplified one — verified, the same 87 are missing on both sides. Of those 87, fifty-one are within 50 metres of the shore and fifteen more within 100: at that distance it is not a commune being guessed, it is a coastline being reattached. Twenty-one more distant objects — islets, sandbanks — stay outside. 52 of 140 communes carry an object of this family."
+IND-TOU-009,en,methode_calcul,"Count of objects tagged beach, beach resort or marina. These almost always fall on the SEA side of the administrative line — they sit on sand or water — and are therefore attached to the nearest shore within 100 metres. Beyond that the object stays outside the communal base and is counted nowhere."
+IND-TOU-009,en,nom,Mapped coast and seaside
+IND-TOU-009,en,sens_interpretation,High = more objects recorded.
+IND-TOU-009,en,unite,objects
+IND-TOU-009,es,comparabilite,Comparable entre comunas dentro de una misma extracción.
+IND-TOU-009,es,definition,"Número de playas, estaciones balnearias y puertos deportivos registrados en la comuna por la cartografía colaborativa."
+IND-TOU-009,es,limites_connues,"LA TOLERANCIA SE DECLARA. El contorno COMPLETO de las comunas no recupera estos objetos mejor que el simplificado: verificado, faltan los mismos 87 en ambos casos. De esos 87, cincuenta y uno están a menos de 50 metros de la orilla y quince más a menos de 100: a esa distancia no se adivina una comuna, se recompone una línea de costa. Veintiún objetos más lejanos —islotes, bancos de arena— quedan fuera. 52 de 140 comunas tienen un objeto de esta familia."
+IND-TOU-009,es,methode_calcul,"Recuento de objetos etiquetados como playa, estación balnearia o puerto deportivo. Estos caen casi siempre del lado del MAR de la línea administrativa —se asientan sobre arena o agua— y se asignan por tanto a la orilla más cercana por debajo de 100 metros. Más allá, el objeto queda fuera y no se cuenta en ningún sitio."
+IND-TOU-009,es,nom,Litoral y playas cartografiados
+IND-TOU-009,es,sens_interpretation,Alto = más objetos registrados.
+IND-TOU-009,es,unite,objetos
+IND-TOU-009,ht,comparabilite,Konparab ant komin nan menm ekstraksyon an sèlman.
+IND-TOU-009,ht,definition,"Konbyen plaj, stasyon balneyè ak marina yo jwenn nan komin nan sou kat kontribitif la."
+IND-TOU-009,ht,limites_connues,"TOLERANS LAN DI SA L YE. Kontou KONPLÈ komin yo pa rattrape objè sa yo pi byen pase kontou senplifye a — nou verifye l, se menm 87 objè ki manke de bò yo. Sou 87 sa yo, senkanteyen se mwens pase 50 mèt ak kenz lòt mwens pase 100 : nan distans sa a, se pa yon komin nou devine, se yon rivaj nou rekole. Venteyen objè pi lwen — ti zile, bank sab — rete deyò. 52 komin sou 140 gen yon objè nan fanmi sa a."
+IND-TOU-009,ht,methode_calcul,"Nou konte objè ki make plaj, stasyon balneyè oswa marina. Objè sa yo prèske toujou tonbe bò lanmè a parapò ak limit komin nan — yo poze sou sab la oswa sou dlo a — donk nou mete yo nan komin ki gen rivaj ki pi pre a, lè se mwens pase 100 mèt. Pi lwen pase sa, objè a rete deyò, nou pa konte l okenn kote."
+IND-TOU-009,ht,nom,Bò lanmè ak plaj ki katògrafye
+IND-TOU-009,ht,sens_interpretation,Wo = plis objè yo relve.
+IND-TOU-009,ht,unite,objè

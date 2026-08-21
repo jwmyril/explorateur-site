@@ -19,9 +19,9 @@
  "nombre_sources": 38,
  "nombre_sources_integrees": 6,
  "nombre_sources_identifiees": 32,
- "nombre_sources_classe_a": 14,
+ "nombre_sources_classe_a": 15,
  "nombre_sources_classe_b": 11,
- "nombre_sources_classe_c": 12,
+ "nombre_sources_classe_c": 11,
  "nombre_sources_classe_d": 1,
  "nombre_periodes": 1201,
  "nombre_millesimes_territoriaux": 192,
@@ -100,5 +100,5 @@
  "prd_030_colonnes": 12,
  "prd_027_lignes": 1663,
  "prd_027_colonnes": 12,
- "empreinte": "00936bd365eda717"
+ "empreinte": "c90b2c32e0979e6d"
 }

@@ -1016,7 +1016,7 @@
  "ds.prd029_p": "Count of mapped tourism supply by commune and family — 643 places to stay, 146 sites, 1,430 eating and drinking places. NO CAPACITY: none of the 643 accommodations states its number of beds, only thirteen state their number of rooms. We count establishments, never beds.",
  "ds.prd029_pr": "Free <small>412 rows • 11 columns</small>",
  "ds.prd030_h": "Hibiscus-classified establishments — by commune",
- "ds.prd030_meta": "📄 Tourism • Sources : Ministère du Tourisme et des Industries créatives (MTIC) • confidence level B • Agrégat factuel recalculé par Atmart — le document du ministère n'est pas redistribué",
+ "ds.prd030_meta": "📄 Tourism • Sources : Ministère du Tourisme et des Industries créatives (MTIC) • confidence level B • Données publiques — décret du 12/10/2005, art. 5 (textes officiels et simples données). Agrégat communal recalculé par Atmart.",
  "ds.prd030_p": "The 190 accommodation establishments rated from 1 to 5 hibiscus by the Ministry of Tourism between 2013 and 2015, aggregated by commune: number of establishments, highest rating, average rating. 39 of 140 communes. What the ministry CLASSIFIED, not what exists — and nothing has succeeded this classification since 2015. The annex lists the 18 establishments in sub-communal localities that we refuse to assign to a commune by resemblance.",
  "ds.prd030_pr": "Free <small>39 rows • 12 columns</small>",
  "ds.prd031_h": "Consumer price index, by region and commune",

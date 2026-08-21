@@ -1016,7 +1016,7 @@
  "ds.prd029_p": "Recuento de la oferta turística cartografiada por comuna y familia: 643 alojamientos, 146 sitios, 1.430 lugares de comida y bebida. SIN CAPACIDAD: ninguno de los 643 alojamientos declara su número de camas, solo trece declaran sus habitaciones. Contamos establecimientos, nunca camas.",
  "ds.prd029_pr": "Gratis <small>412 filas • 11 columnas</small>",
  "ds.prd030_h": "Establecimientos clasificados Hibiscus — por comuna",
- "ds.prd030_meta": "📄 Turismo • Fuentes : Ministère du Tourisme et des Industries créatives (MTIC) • nivel de confianza B • Agrégat factuel recalculé par Atmart — le document du ministère n'est pas redistribué",
+ "ds.prd030_meta": "📄 Turismo • Fuentes : Ministère du Tourisme et des Industries créatives (MTIC) • nivel de confianza B • Données publiques — décret du 12/10/2005, art. 5 (textes officiels et simples données). Agrégat communal recalculé par Atmart.",
  "ds.prd030_p": "Los 190 establecimientos de alojamiento clasificados de 1 a 5 hibiscos por el Ministerio de Turismo entre 2013 y 2015, agregados por comuna: número de establecimientos, nota más alta, nota media. 39 de 140 comunas. Lo que el ministerio CLASIFICÓ, no lo que existe: nada ha sucedido a esta clasificación desde 2015. El anexo enumera los 18 establecimientos de localidades infracomunales que nos negamos a asignar a una comuna por parecido.",
  "ds.prd030_pr": "Gratis <small>39 filas • 12 columnas</small>",
  "ds.prd031_h": "Índice de precios al consumo, por región y comuna",

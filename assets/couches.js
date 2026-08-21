@@ -234,6 +234,7 @@
        des PRIX, l'autre — le Cadre intégré de classification — mesure la
        FAIM. Les deux portent le même sigle et rien d'autre en commun. */
     { id: "ipc_prix", nom: "Indice des prix à la consommation, par région (IHSI)", type: "choroplethe",
+      courbe: "lineaire",
       csv: "data/atmart_ipc_regions_communes_HT.csv", pcode: "pcode_commune",
       agreger: function (rows) {
         var m = {}, mois = "";
@@ -250,6 +251,7 @@
       source: "IHSI — Indice des prix à la consommation ; rattachement des régions aux communes par Atmart, passeport PSP-063",
       limite: "INDICE RÉGIONAL PORTÉ SUR LES COMMUNES, PAS UN INDICE COMMUNAL. Les 140 communes ne portent que CINQ valeurs, celles des cinq régions de l'IHSI : toutes les communes d'une même région affichent le même chiffre, et il serait faux d'en conclure qu'une commune est plus chère qu'une autre à l'intérieur d'une région. Les prix ne sont relevés QU'EN ZONE URBAINE alors que les pondérations couvrent villes et campagnes. Ces pondérations viennent de l'enquête ECVMAS de 2011-2012 et n'ont pas été actualisées depuis, pour un indice de base 2017-2018. Le découpage en régions ne recoupe pas les dix départements : « Reste Ouest » réunit l'Ouest hors métropole et le Sud-Est." },
     { id: "ipc_hausse", nom: "Hausse des prix sur douze mois, par région (IHSI)", type: "choroplethe",
+      courbe: "lineaire",
       csv: "data/atmart_ipc_regions_communes_HT.csv", pcode: "pcode_commune",
       agreger: function (rows) {
         var m = {}, mois = "";
@@ -708,14 +710,36 @@
     return f === "#080c12" ? "#111827" : "#eef2f6";
   }
 
-  function teinte(v, max, nom) {
+  /* Le bas de la rampe pour la valeur la plus faible. Zéro le rendrait
+     presque indistinct du fond — qui est la teinte du « non documenté ». Une
+     commune documentée ne doit jamais pouvoir se lire comme une commune sans
+     donnée. */
+  var PLANCHER = 0.18;
+
+  function teinte(v, bas, max, nom, courbe) {
     /* `v == null` et non `!v` : un zéro documenté est une observation, pas un
        trou. Il prend le bas de la rampe ; seul l'inconnu prend la teinte du
        « non documenté ». */
     if (v == null) return nonDocumente();
     var R = RAMPES[nom] || RAMPES.alerte;
     var d = departTheme(R);
-    var t = Math.pow(v / max, 0.45);   /* les distributions sont très asymétriques */
+    /* LA RAMPE PART DE LA BORNE QUE LA LÉGENDE ANNONCE, et non de zéro.
+       Elle partait de zéro jusqu'au 21/08/2026, ce qui écrasait toute carte
+       dont les valeurs ne commencent pas près de zéro : l'indice des prix,
+       entre 577 et 655, tenait dans les six derniers pour cent de la rampe
+       et sortait d'une seule couleur. La légende, elle, affichait déjà
+       « min → max » — les deux se contredisaient. */
+    var etendue = max - bas;
+    var p = etendue > 0 ? (v - bas) / etendue : 1;
+    p = p < 0 ? 0 : (p > 1 ? 1 : p);
+    /* L'exposant 0,45 comprime le haut de l'échelle, et c'est ce qu'il faut
+       pour un COMPTAGE : sans lui, une commune très peuplée écraserait
+       visuellement toutes les autres. Un INDICE, lui, a des valeurs presque
+       régulièrement espacées — la compression y rendrait indiscernables deux
+       régions que six points séparent. La couche choisit donc sa courbe ;
+       sans déclaration, la racine, comme depuis toujours. */
+    var t = PLANCHER + (1 - PLANCHER) *
+            (courbe === "lineaire" ? p : Math.pow(p, 0.45));
     var m = function (i) { return Math.round(d[i] - t * (d[i] - R.arrivee[i])); };
     return "rgb(" + m(0) + "," + m(1) + "," + m(2) + ")";
   }
@@ -854,12 +878,16 @@
     var vals = agg.valeurs;
     var max = 0, nonDoc = 0;
     Object.keys(vals).forEach(function (k) { if (vals[k] > max) max = vals[k]; });
+    /* La borne basse est celle que la couche déclare — la même que la légende
+       affiche. Sans déclaration, zéro : le comportement d'avant, pour les
+       couches dont le zéro est un vrai plancher. */
+    var bas = agg.min !== undefined ? agg.min : 0;
     var svg = communes.features.map(function (f) {
       var p = f.properties, v = vals[p.pcode];
       var doc = v !== undefined;
       if (!doc) nonDoc++;
       return '<path class="k-com' + (doc ? "" : " k-vide") + '" data-id="' + p.atmart_geo_id + '" fill="' +
-        (doc ? teinte(v, max, couche.rampe) : nonDocumente()) + '" d="' + chemin(f.geometry) + '"><title>' + p.nom_fr +
+        (doc ? teinte(v, bas, max, couche.rampe, couche.courbe) : nonDocumente()) + '" d="' + chemin(f.geometry) + '"><title>' + p.nom_fr +
         (doc ? " — " + fmtN(v) + " " + T(agg.unite)
              : " — " + T("non documenté")) + "</title></path>";
     }).join("");

@@ -1020,7 +1020,7 @@
  "ds.prd030_p": "Los 190 establecimientos de alojamiento clasificados de 1 a 5 hibiscos por el Ministerio de Turismo entre 2013 y 2015, agregados por comuna: número de establecimientos, nota más alta, nota media. 39 de 140 comunas. Lo que el ministerio CLASIFICÓ, no lo que existe: nada ha sucedido a esta clasificación desde 2015. El anexo enumera los 18 establecimientos de localidades infracomunales que nos negamos a asignar a una comuna por parecido.",
  "ds.prd030_pr": "Gratis <small>39 filas • 12 columnas</small>",
  "ds.prd031_h": "Índice de precios al consumo, por región y comuna",
- "ds.prd031_meta": "📄 Precios • Fuentes : IHSI — Institut Haïtien de Statistique et d'Informatique • nivel de confianza B • Agrégat factuel recalculé par Atmart — le bulletin de l'IHSI n'est pas redistribué",
+ "ds.prd031_meta": "📄 Precios • Fuentes : IHSI — Institut Haïtien de Statistique et d'Informatique • nivel de confianza B • Données publiques — décret du 12/10/2005, art. 5 (textes officiels et simples données). Agrégat régional rattaché aux communes par Atmart.",
  "ds.prd031_p": "El índice de precios al consumo del IHSI desglosado en cinco regiones y asignado a las 140 comunas: nivel del índice, variación mensual y variación interanual. Es la ÚNICA granularidad territorial que posee el índice de precios haitiano: ninguna fuente internacional baja del país. Atención: las 140 comunas solo llevan CINCO valores distintos, los de las regiones. No es un índice comunal, y sería falso concluir que una comuna es más cara que otra dentro de la misma región. El anexo da la serie de los meses publicados por región.",
  "ds.prd031_pr": "Gratis <small>140 filas • 14 columnas</small>",
  "ds.prd032_h": "Precios de alimentos básicos por mercado, 2005-2024",

@@ -1020,7 +1020,7 @@
  "ds.prd030_p": "The 190 accommodation establishments rated from 1 to 5 hibiscus by the Ministry of Tourism between 2013 and 2015, aggregated by commune: number of establishments, highest rating, average rating. 39 of 140 communes. What the ministry CLASSIFIED, not what exists — and nothing has succeeded this classification since 2015. The annex lists the 18 establishments in sub-communal localities that we refuse to assign to a commune by resemblance.",
  "ds.prd030_pr": "Free <small>39 rows • 12 columns</small>",
  "ds.prd031_h": "Consumer price index, by region and commune",
- "ds.prd031_meta": "📄 Prices • Sources : IHSI — Institut Haïtien de Statistique et d'Informatique • confidence level B • Agrégat factuel recalculé par Atmart — le bulletin de l'IHSI n'est pas redistribué",
+ "ds.prd031_meta": "📄 Prices • Sources : IHSI — Institut Haïtien de Statistique et d'Informatique • confidence level B • Données publiques — décret du 12/10/2005, art. 5 (textes officiels et simples données). Agrégat régional rattaché aux communes par Atmart.",
  "ds.prd031_p": "The IHSI consumer price index broken down into five regions and attached to the 140 communes: index level, monthly change and twelve-month change. This is the ONLY territorial granularity the Haitian price index has — no international source goes below the country. Warning: the 140 communes carry only FIVE distinct values, those of the regions. It is not a communal index, and it would be wrong to conclude that one commune is dearer than another within the same region. The annex gives the series of published months by region.",
  "ds.prd031_pr": "Free <small>140 rows • 14 columns</small>",
  "ds.prd032_h": "Staple food prices by market, 2005-2024",

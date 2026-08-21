@@ -267,6 +267,31 @@
       },
       source: "IHSI — Indice des prix à la consommation ; rattachement des régions aux communes par Atmart, passeport PSP-063",
       limite: "LE NIVEAU ET LA HAUSSE NE SE LISENT PAS ENSEMBLE : le Reste Ouest porte l'indice le plus élevé mais l'Aire Métropolitaine la hausse la plus forte. Un territoire peut être durablement cher sans se renchérir vite. Comme pour l'indice lui-même, les 140 communes ne portent que cinq valeurs — celles des régions — et l'écart entre la région la plus touchée et la moins touchée n'est que de 2,9 points, ce qui est peu au regard d'une inflation de 17 à 20 % partout." },
+    /* LES CAISSES POPULAIRES, seule liste financière officielle qui descende
+       au territoire. La BRH publie le siège de chaque institution agréée et
+       rien d'autre — sauf pour les caisses, dont elle donne l'adresse et les
+       comptoirs. C'est donc la seule carte financière de ce site qui repose
+       sur un acte administratif et non sur la cartographie contributive.
+
+       ELLE NE DIT PAS OÙ SONT LES SERVICES, mais où sont les SIÈGES. Une
+       caisse dont le siège est aux Gonaïves dessert des comptoirs ailleurs,
+       et ces comptoirs ne sont pas rattachés ici : leur libellé nomme
+       souvent une localité, pas une commune. */
+    { id: "caisses", nom: "Caisses populaires agréées, par commune de siège (BRH)", type: "choroplethe",
+      csv: "data/atmart_caisses_populaires_HT.csv", pcode: "pcode_commune",
+      courbe: "lineaire",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          if (r.pcode_commune) m[r.pcode_commune] = (m[r.pcode_commune] || 0) + 1;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "liste d'agrément de mars 2025",
+                 unite: "caisses populaires ayant leur siège ici" };
+      },
+      source: "BRH — liste des caisses populaires agréées, passeport PSP-064",
+      limite: "LE SIÈGE, PAS LE SERVICE. Une caisse dont le siège est ici dessert des comptoirs ailleurs, et ces comptoirs ne sont pas rattachés : leur libellé nomme souvent une localité et non une commune. 57 des 58 caisses agréées ont un siège rattaché à une commune ; la dernière, dont l'adresse dit « Fermathe », reste hors socle — Fermathe est une localité de Kenscoff, et rattacher une localité à sa commune demande de connaître le pays plutôt que de lire le fichier. C'est la SEULE liste financière officielle qui descende au territoire : pour les banques et les maisons de transfert, la BRH ne publie que le siège social." },
     { id: "inondation", nom: "Part de la commune en zone inondable (CNIGS)", type: "choroplethe",
       csv: "data/atmart_alea_inondation_communes_HT.csv", pcode: "pcode_commune",
       agreger: function (rows) {
@@ -1487,7 +1512,7 @@
                      ["Écoles — déclaré au ministère et vu sur la carte",
                       ["ecoles_nb", "ecoles_vues_nb"]],
                      ["Services et infrastructures",
-                      ["eau", "carburant", "finance", "telecom", "routes"]],
+                      ["eau", "carburant", "finance", "caisses", "telecom", "routes"]],
                      /* Le tourisme a son groupe et non une place dans
                         « Services » : ce n'est pas un service rendu aux
                         habitants, c'est une activité économique, et les deux

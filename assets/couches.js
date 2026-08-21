@@ -1158,8 +1158,17 @@
       var cl = couche.classes[couche.prop ? (f.properties[couche.prop] || "?") : ""] ||
                couche.classes["?"] || { c: "#8d99ae" };
       var c = f.geometry.coordinates;
+      /* LE NOM DE L'OBJET, QUAND LA SOURCE LE PORTE. Les couches financière
+         et touristique le portent depuis toujours ; la carte le jetait. Le
+         lecteur voyait qu'il y a une banque quelque part, jamais laquelle,
+         alors que la réponse était dans le fichier qu'il venait de
+         télécharger. Un nom d'enseigne ne se traduit pas — c'est un nom
+         propre — mais son TYPE, lui, passe par T(). */
+      var nom = f.properties.e || f.properties.n || "";
+      var titre = (nom ? esc(nom) + " — " : "") + esc(T(cl.l || ""));
       return '<circle r="2.6" fill="' + cl.c + '" fill-opacity="0.75" cx="' +
-        proj.x(c[0]).toFixed(1) + '" cy="' + proj.y(c[1]).toFixed(1) + '"/>';
+        proj.x(c[0]).toFixed(1) + '" cy="' + proj.y(c[1]).toFixed(1) + '">' +
+        (titre.trim() ? "<title>" + titre + "</title>" : "") + "</circle>";
     }).join("");
     /* LA LÉGENDE PASSE PAR T(), depuis le 20/08/2026. Elle ne le faisait
        pas : « fonctionnel », « banque », « agence de transfert » restaient
@@ -1182,11 +1191,28 @@
        a déclenché le signalement du 21/08 : le lecteur voyait la lecture
        guidée des conflits sous les points d'eau, et l'assistant répondait
        avec les chiffres des conflits. */
-    var parCl = {};
+    var parCl = {}, parNom = {}, sansNom = 0;
     doc.features.forEach(function (f) {
-      var k = (f.properties || {})[couche.prop] || "";
+      var p = f.properties || {};
+      var k = p[couche.prop] || "";
       parCl[k] = (parCl[k] || 0) + 1;
+      var nom = p.e || p.n || "";
+      if (nom) parNom[nom] = (parNom[nom] || 0) + 1;
+      else sansNom++;
     });
+    /* Les enseignes les plus fréquentes, jamais la liste entière : deux
+       cents lignes de faits noieraient la source, la limite et la consigne —
+       c'est-à-dire tout ce qui empêche une réponse fausse. */
+    var noms = Object.keys(parNom)
+      .sort(function (a, b) { return parNom[b] - parNom[a]; });
+    var faitsNoms = noms.length
+      ? ("ENSEIGNES RELEVÉES : " + noms.length + " distinctes sur " +
+         (doc.features.length - sansNom) + " objet(s) nommés ; " + sansNom +
+         " sans enseigne. Les plus fréquentes : " +
+         noms.slice(0, 12).map(function (n) { return n + " (" + parNom[n] + ")"; })
+             .join(", ") + ". Cette liste vient de la cartographie "
+       + "contributive : une enseigne absente ici n'est pas absente du pays.")
+      : "";
     dessiner(fond + pts + nomsDepartements(), leg,
              { source: T(doc.source) + " — " + T(doc.licence),
                limite: doc.limite || couche.limite },
@@ -1202,7 +1228,12 @@
                     }).join(", ") +
                     ". Ne pas répondre commune par commune, et ne compter "
                   + "aucun point pour une commune : ce décompte n'existe pas "
-                  + "sur cette carte." }]);
+                  + "sur cette carte." },
+               { visible: noms.length
+                   ? TF("{n} enseignes différentes sont relevées ; survolez un "
+                      + "point pour lire la sienne.", { n: noms.length })
+                   : "",
+                 fait: faitsNoms }]);
   }
 
   /* RENDU D'UN MANQUE JURIDIQUE.

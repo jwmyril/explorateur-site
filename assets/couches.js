@@ -292,6 +292,23 @@
       },
       source: "BRH — liste des caisses populaires agréées, passeport PSP-064",
       limite: "LE SIÈGE, PAS LE SERVICE. Une caisse dont le siège est ici dessert des comptoirs ailleurs, et ces comptoirs ne sont pas rattachés : leur libellé nomme souvent une localité et non une commune. 57 des 58 caisses agréées ont un siège rattaché à une commune ; la dernière, dont l'adresse dit « Fermathe », reste hors socle — Fermathe est une localité de Kenscoff, et rattacher une localité à sa commune demande de connaître le pays plutôt que de lire le fichier. C'est la SEULE liste financière officielle qui descende au territoire : pour les banques et les maisons de transfert, la BRH ne publie que le siège social." },
+    /* LA FINANCE COOPÉRATIVE, SORTIE DE LA MASSE. Ces points existaient
+       déjà dans la couche « Banques et transferts », noyés parmi 474 objets
+       où rien ne distinguait une caisse populaire d'une succursale de
+       banque. Les isoler répond à une question que l'autre carte ne pouvait
+       pas poser : où les gens s'organisent-ils entre sociétaires plutôt que
+       de dépendre d'une banque ?
+
+       ILS SONT SOUS-COMPTÉS, ET LA RÈGLE LE VEUT. Un objet est reconnu soit
+       parce que son nom se déclare, soit parce qu'il porte un sigle agréé
+       par la BRH ET qu'il est étiqueté financier. Un sigle nu ne suffit pas :
+       l'un des sigles agréés est le mot « succès », qui attrape sinon une
+       école et un centre de santé. */
+    { id: "coop_finance", nom: "Caisses populaires et microfinance cartographiées (OSM)", type: "points",
+      geojson: "data/atmart_couche_finance_cooperative_HT.geojson",
+      classes: { caisse: { c: "#2a9d8f", l: "caisse populaire ou coopérative" },
+                 microfinance: { c: "#e76f51", l: "microfinance" } }, prop: "f",
+      limite: "CE N'EST PAS UN RECENSEMENT. La BRH agrée 58 caisses populaires et compte 108 points de service ; la cartographie contributive en montre une trentaine. Un objet est reconnu soit parce que son NOM se déclare — « caisse populaire », « kès popilè », « CEC » —, soit parce qu'il porte un SIGLE agréé par la BRH ET qu'il est étiqueté comme financier. Un sigle nu ne suffit pas : l'un des sigles agréés est le mot « succès », qui attraperait sinon une école, une pharmacie et un point d'eau. La règle rate donc des caisses mal étiquetées, et c'est le sens dans lequel elle doit se tromper. LES MUTUELLES DE SOLIDARITÉ N'Y SONT PAS et ne peuvent pas y être : sans agrément, sans local et souvent sans nom stable, elles n'ont pas d'adresse à cartographier — un point les ferait nommer des personnes plutôt qu'une institution." },
     { id: "inondation", nom: "Part de la commune en zone inondable (CNIGS)", type: "choroplethe",
       csv: "data/atmart_alea_inondation_communes_HT.csv", pcode: "pcode_commune",
       agreger: function (rows) {
@@ -1512,7 +1529,8 @@
                      ["Écoles — déclaré au ministère et vu sur la carte",
                       ["ecoles_nb", "ecoles_vues_nb"]],
                      ["Services et infrastructures",
-                      ["eau", "carburant", "finance", "caisses", "telecom", "routes"]],
+                      ["eau", "carburant", "finance", "coop_finance", "caisses",
+                       "telecom", "routes"]],
                      /* Le tourisme a son groupe et non une place dans
                         « Services » : ce n'est pas un service rendu aux
                         habitants, c'est une activité économique, et les deux

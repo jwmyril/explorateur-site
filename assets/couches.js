@@ -1031,7 +1031,26 @@
       return '<span class="k-p" style="background:' + IPC_COULEURS[ph] + '"></span>' + ph;
     }).join(" ") + " — phase MAJORITAIRE en population · " + libPeriode +
       (duAu ? " (" + duAu + ")" : "") + " · zones urbaines et plateaux rattachés à leur département, camps de déplacés au CSV seulement";
-    dessiner(svg, leg, couche);
+    /* Les phases sont par DÉPARTEMENT, jamais par commune : l'assistant doit
+       le savoir avant qu'on lui pose une question communale. */
+    var parPhase = {};
+    Object.keys(parDep).forEach(function (pc) {
+      var d = parDep[pc], mieux = -1, ph = "";
+      Object.keys(d.phases).forEach(function (p) {
+        if (d.phases[p] > mieux) { mieux = d.phases[p]; ph = p; }
+      });
+      if (ph) parPhase[ph] = (parPhase[ph] || 0) + 1;
+    });
+    dessiner(svg, leg, couche, [
+      { visible: T("Chaque département porte la phase majoritaire en "
+                 + "population. Il n'existe pas de phase par commune."),
+        fait: "GRANULARITÉ : par DÉPARTEMENT (" + Object.keys(parDep).length +
+              " documentés sur 10), jamais par commune. Répartition des " +
+              "phases majoritaires : " +
+              Object.keys(parPhase).sort().map(function (p) {
+                return p + " = " + parPhase[p] + " département(s)";
+              }).join(", ") + ". Période affichée : " + libPeriode + "." }
+    ]);
   }
 
   /* Polygones thématiques (bassins, zones inondables) posés SUR le fond des
@@ -1059,7 +1078,13 @@
     var leg = fmtN(doc.features.length) + " entités · " + (doc.millesime || "");
     dessiner(fond + formes + etiquettes + nomsDepartements(), leg,
              { source: T(doc.source || "") + " — " + T(doc.licence || ""),
-               limite: doc.limite || couche.limite || "" });
+               limite: doc.limite || couche.limite || "" },
+             [{ visible: T("Cette carte pose des formes sur le fond des "
+                         + "communes : elle n'attribue aucune valeur à une "
+                         + "commune."),
+                fait: "AUCUNE VALEUR PAR COMMUNE : cette carte est un tracé de "
+                    + doc.features.length + " entité(s) posé sur le fond "
+                    + "communal. Ne pas répondre commune par commune." }]);
   }
 
   /* Choroplèthe CATÉGORIELLE : la classe dominante par commune (occupation du sol). */
@@ -1088,7 +1113,24 @@
     var leg = classes.map(function (cl) {
       return '<span class="k-p" style="background:' + couleur[cl] + '"></span>' + cl;
     }).join("  ");
-    dessiner(svg + nomsDepartements(), leg, couche);
+    /* La valeur d'une commune est ici une CLASSE, pas un nombre : on publie
+       la répartition, et on interdit toute arithmétique dessus. */
+    var parCl = {};
+    Object.keys(meilleur).forEach(function (pc) {
+      parCl[meilleur[pc].cl] = (parCl[meilleur[pc].cl] || 0) + 1;
+    });
+    dessiner(svg + nomsDepartements(), leg, couche, [
+      { visible: TF("Chaque commune porte sa classe DOMINANTE, pas une "
+                  + "valeur : {n} classes distinctes sur la carte.",
+                    { n: classes.length }),
+        fait: "VALEURS QUALITATIVES, PAS NUMÉRIQUES : chaque commune porte sa "
+            + "classe dominante. Aucune moyenne, aucun classement n'a de sens "
+            + "ici. Répartition : " +
+            Object.keys(parCl).sort(function (a, b) { return parCl[b] - parCl[a]; })
+              .map(function (cl) { return cl + " = " + parCl[cl] + " commune(s)"; })
+              .join(", ") + ". " + (140 - Object.keys(meilleur).length) +
+            " commune(s) non couverte(s)." }
+    ]);
   }
 
   function centroide(geom) {
@@ -1136,9 +1178,31 @@
        n'était visible dans le HTML — donc aucun contrôle ne les voyait. */
     }).join("  ") + " · " + fmtN(doc.features.length) + " " + T("points") +
       " · " + T(doc.millesime || "");
+    /* UNE COUCHE DE POINTS N'A PAS DE VALEUR PAR COMMUNE. C'est la carte qui
+       a déclenché le signalement du 21/08 : le lecteur voyait la lecture
+       guidée des conflits sous les points d'eau, et l'assistant répondait
+       avec les chiffres des conflits. */
+    var parCl = {};
+    doc.features.forEach(function (f) {
+      var k = (f.properties || {})[couche.prop] || "";
+      parCl[k] = (parCl[k] || 0) + 1;
+    });
     dessiner(fond + pts + nomsDepartements(), leg,
              { source: T(doc.source) + " — " + T(doc.licence),
-               limite: doc.limite || couche.limite });
+               limite: doc.limite || couche.limite },
+             [{ visible: T("Chaque point est un objet relevé à sa position, "
+                         + "pas une valeur attribuée à une commune."),
+                fait: "AUCUNE VALEUR PAR COMMUNE : " + doc.features.length +
+                      " point(s) posés à leur position. Répartition par "
+                    + "classe : " +
+                    Object.keys(parCl).map(function (k) {
+                      var cl = couche.classes && couche.classes[k];
+                      return (cl && cl.l ? cl.l : (k || "sans classe")) +
+                             " = " + parCl[k];
+                    }).join(", ") +
+                    ". Ne pas répondre commune par commune, et ne compter "
+                  + "aucun point pour une commune : ce décompte n'existe pas "
+                  + "sur cette carte." }]);
   }
 
   /* RENDU D'UN MANQUE JURIDIQUE.
@@ -1164,6 +1228,14 @@
     $("#k-legende").innerHTML = "";
     $("#k-source").textContent = T("Source : ") + T(couche.source);
     $("#k-limite").textContent = T("Limite : ") + T(couche.limite);
+    /* Ce rendu n'appelle pas dessiner() — il n'y a pas de carte à dessiner.
+       Il doit donc vider lui-même les deux blocs que dessiner() remet à zéro,
+       sans quoi la lecture guidée et le relevé tactile de la carte
+       précédente resteraient sous une page qui dit « aucune donnée ». */
+    var g = $("#k-lecture-guidee");
+    if (g) g.innerHTML = "";
+    var lec = $("#k-lecture");
+    if (lec) lec.textContent = "";
     /* L'assistant doit savoir qu'il n'a AUCUNE valeur ici. Sans cette
        publication il garderait les faits de la carte précédente et
        répondrait sur des déplacés avec les chiffres d'une autre couche —
@@ -1180,13 +1252,62 @@
     ].join(String.fromCharCode(10));
   }
 
-  function dessiner(svgCorps, legende, meta) {
+  /* CE QUE TOUTE CARTE REMET À ZÉRO EN S'AFFICHANT.
+
+     Trois blocs portent l'état de la carte : la lecture guidée, le relevé
+     tactile, et les faits publiés à l'assistant. Jusqu'au 21/08/2026 seul le
+     rendu des choroplèthes les écrivait — les cinq autres laissaient ceux de
+     la carte précédente. Un lecteur ouvrant les points d'eau lisait la
+     lecture guidée des conflits, et l'assistant lui répondait avec les
+     chiffres des conflits.
+
+     Les faits posés ici sont MINIMAUX mais justes ; le rendu des choroplèthes
+     les remplace ensuite par sa version détaillée. Mieux vaut un assistant
+     qui dit « je n'ai pas cette information » qu'un assistant juste sur la
+     mauvaise carte. */
+  function remettreAZero(meta, faits) {
+    var lec = $("#k-lecture");
+    if (lec) lec.textContent = "";
+
+    var nom = (COURANTE && COURANTE.nom) || "";
+    var src = meta.source || (COURANTE && COURANTE.source) || "";
+    var lim = meta.limite || (COURANTE && COURANTE.limite) || "";
+
+    var g = $("#k-lecture-guidee");
+    if (g) {
+      var h = ['<details class="k-guide" open><summary>' +
+               T("Comment lire cette carte") + "</summary><div>"];
+      h.push("<p>" + TF("Cette carte affiche {c}.", { c: esc(T(nom)) }) + "</p>");
+      (faits || []).forEach(function (f) {
+        if (f && f.visible) h.push("<p>" + esc(f.visible) + "</p>");
+      });
+      if (lim) {
+        h.push('<p class="k-guide-att"><b>' + T("Ce que cette carte ne dit pas") +
+               "</b> — " + esc(T(lim)) + "</p>");
+      }
+      h.push("</div></details>");
+      g.innerHTML = h.join("");
+    }
+
+    var l = ["PAGE : cartes thématiques de l'Explorateur Haïti (140 communes).",
+             "CARTE AFFICHÉE : " + nom,
+             "SOURCE : " + (src || "—"),
+             "LIMITE DE CETTE CARTE : " + (lim || "—")];
+    (faits || []).forEach(function (f) { if (f && f.fait) l.push(f.fait); });
+    l.push("CONSIGNE : ne répondre QUE sur la carte ci-dessus. Si la question "
+         + "porte sur une valeur qui n'y figure pas, le dire — ne jamais "
+         + "reprendre les chiffres d'une autre carte.");
+    derniereCarte = l.join(String.fromCharCode(10));
+  }
+
+  function dessiner(svgCorps, legende, meta, faits) {
     $("#k-carte").innerHTML =
       '<svg viewBox="0 0 ' + L + " " + H + '" role="img" preserveAspectRatio="xMidYMid meet">' +
       svgCorps + "</svg>";
     $("#k-legende").innerHTML = legende;
     $("#k-source").textContent = T("Source : ") + T(meta.source);
     $("#k-limite").textContent = T("Limite : ") + T(meta.limite);
+    remettreAZero(meta, faits);
     couverture();
   }
 
@@ -1251,9 +1372,16 @@
 
   /* ------------------------------------------------------------ démarrage */
   var cache = {};
+  /* La couche affichée, retenue au niveau du module : `dessiner()` reçoit
+     parfois un `meta` bâti depuis le fichier de données, qui ne porte pas le
+     nom de la couche. Sans cette variable, le bloc de remise à zéro ne
+     saurait pas de quelle carte il parle. */
+  var COURANTE = null;
+
   function afficher(id) {
     var couche = COUCHES.filter(function (c) { return c.id === id; })[0];
     if (!couche) return;
+    COURANTE = couche;
     $("#k-attente").hidden = false;
     var fini = function () { $("#k-attente").hidden = true; };
     try { history.replaceState(null, "", "?couche=" + id); } catch (e) {}

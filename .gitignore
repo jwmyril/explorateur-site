@@ -2,6 +2,11 @@
 # tout le depot, et les fixtures sont des territoires synthetiques marques
 # « ne pas publier ». Meme doctrine que le depot atmart-site.
 tests/
+
+# Configuration locale du serveur de développement : elle pointe vers
+# tests/, qui n'est pas dans le dépôt. La versionner publierait une
+# recette qui ne marche chez personne.
+.claude/
 __pycache__/
 Thumbs.db
 .DS_Store

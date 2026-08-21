@@ -114,7 +114,14 @@ import { S } from "./etat.js?v=34";
                  "4": "Section communale", "5": "Localité" };
   var THEME = { Territoire: "🗺 Territoire", Santé: "🏥 Santé", Éducation: "🎓 Éducation",
                 Marchés: "🛒 Marchés", Qualité: "📋 Qualité de la donnée",
-                Démographie: "👥 Démographie" };
+                Démographie: "👥 Démographie",
+                /* Ajoutées le 20/08/2026. Sans entrée ici, la catégorie
+                   s'affichait en français brut sous une interface
+                   traduite — le code retombe sur esc(cat), qui ne passe
+                   par aucun T(). */
+                Accessibilité: "🛣 Accessibilité", Environnement: "🌳 Environnement",
+                Risques: "⚠ Risques", "Finances publiques": "🏛 Finances publiques",
+                Tourisme: "🧳 Tourisme" };
   /* Les codes du modèle de qualité, en clair pour l'utilisateur.
      Les codes eux-mêmes restent dans les exports et le bloc technique. */
   var STATUT = { O: "Valeur observée", A: "Valeur agrégée par Atmart", H: "Valeur harmonisée",

@@ -1,673 +1,841 @@
 ﻿indicateur_id,langue,champ,valeur
-IND-ACC-001,ht,nom,Tan pou rive nan sant sante ki pi pre a
-IND-ACC-001,ht,definition,Tan medyàn pou soti nan kote moun rete yo rive nan etablisman sante ki pi pre a.
-IND-ACC-001,ht,methode_calcul,"Kalkil izokwòn sou rezo wout la depi chak lokalite, apre sa medyàn pondere pa popilasyon an."
-IND-ACC-001,ht,comparabilite,Konparab si rezo a ak metòd la pa chanje.
-IND-ACC-001,ht,limites_connues,Rezo OSM la anba lisans ODbL : li pa konpatib ak yon lisans Atmart pwopriyetè san pataj alidantik.
-IND-ACC-001,ht,unite,minit
-IND-ACC-001,ht,sens_interpretation,"Ba = sèvis la aksesib. Se endikatè ki pi difisil pou repwodui, se poutèt sa li pi diferansyan."
-IND-ACC-001,en,nom,Travel time to the nearest health centre
-IND-ACC-001,en,definition,Median travel time from inhabited localities to the nearest health facility.
-IND-ACC-001,en,methode_calcul,"Isochrone computation on the road network from each locality, then a population-weighted median."
 IND-ACC-001,en,comparabilite,Comparable if the network and the method do not change.
+IND-ACC-001,en,definition,Median travel time from inhabited localities to the nearest health facility.
 IND-ACC-001,en,limites_connues,The OSM network is under ODbL: incompatible with a proprietary Atmart licence without share-alike.
-IND-ACC-001,en,unite,minutes
+IND-ACC-001,en,methode_calcul,"Isochrone computation on the road network from each locality, then a population-weighted median."
+IND-ACC-001,en,nom,Travel time to the nearest health centre
 IND-ACC-001,en,sens_interpretation,"Low = accessible service. This is the hardest indicator to reproduce, hence the most differentiating."
-IND-ACC-001,es,nom,Tiempo de acceso al centro de salud más cercano
-IND-ACC-001,es,definition,Tiempo de trayecto mediano desde las localidades habitadas hasta el establecimiento de salud más cercano.
-IND-ACC-001,es,methode_calcul,"Cálculo de isócronas sobre la red viaria desde cada localidad, y después mediana ponderada por la población."
+IND-ACC-001,en,unite,minutes
 IND-ACC-001,es,comparabilite,Comparable si la red y el método no cambian.
+IND-ACC-001,es,definition,Tiempo de trayecto mediano desde las localidades habitadas hasta el establecimiento de salud más cercano.
 IND-ACC-001,es,limites_connues,La red OSM está bajo ODbL: incompatible con una licencia Atmart propietaria sin compartir-igual.
-IND-ACC-001,es,unite,minutos
+IND-ACC-001,es,methode_calcul,"Cálculo de isócronas sobre la red viaria desde cada localidad, y después mediana ponderada por la población."
+IND-ACC-001,es,nom,Tiempo de acceso al centro de salud más cercano
 IND-ACC-001,es,sens_interpretation,Bajo = servicio accesible. Es el indicador más difícil de reproducir y por tanto el más diferenciador.
-IND-BUD-001,ht,nom,Depans piblik pou chak moun
-IND-BUD-001,ht,definition,Depans piblik yo egzekite rapòte ak popilasyon an.
-IND-BUD-001,ht,methode_calcul,Depans egzekite nan ekzèsis la ÷ popilasyon. Se baz referans tan an ki bay ekzèsis fiskal la (1ye oktòb – 30 septanm) : pa janm rapòte l ak yon ane sivil.
-IND-BUD-001,ht,comparabilite,Fòk ou korije enflasyon an pou konpare de ekzèsis.
-IND-BUD-001,ht,limites_connues,Yon depans yo vote pa yon depans yo egzekite.
-IND-BUD-001,ht,unite,HTG / moun
-IND-BUD-001,ht,sens_interpretation,"Pou li l byen, gade tou ki jan depans lan òganize."
-IND-BUD-001,en,nom,Public expenditure per inhabitant
-IND-BUD-001,en,definition,Executed public expenditure related to the population.
-IND-BUD-001,en,methode_calcul,Executed expenditure for the fiscal year ÷ population. The fiscal year (1 October – 30 September) comes from the time referential: never relate it to a calendar year.
+IND-ACC-001,es,unite,minutos
+IND-ACC-001,ht,comparabilite,Konparab si rezo a ak metòd la pa chanje.
+IND-ACC-001,ht,definition,Tan medyàn pou soti nan kote moun rete yo rive nan etablisman sante ki pi pre a.
+IND-ACC-001,ht,limites_connues,Rezo OSM la anba lisans ODbL : li pa konpatib ak yon lisans Atmart pwopriyetè san pataj alidantik.
+IND-ACC-001,ht,methode_calcul,"Kalkil izokwòn sou rezo wout la depi chak lokalite, apre sa medyàn pondere pa popilasyon an."
+IND-ACC-001,ht,nom,Tan pou rive nan sant sante ki pi pre a
+IND-ACC-001,ht,sens_interpretation,"Ba = sèvis la aksesib. Se endikatè ki pi difisil pou repwodui, se poutèt sa li pi diferansyan."
+IND-ACC-001,ht,unite,minit
 IND-BUD-001,en,comparabilite,Requires correcting for inflation to compare two fiscal years.
+IND-BUD-001,en,definition,Executed public expenditure related to the population.
 IND-BUD-001,en,limites_connues,A voted expenditure is not an executed expenditure.
-IND-BUD-001,en,unite,HTG / inhabitant
+IND-BUD-001,en,methode_calcul,Executed expenditure for the fiscal year ÷ population. The fiscal year (1 October – 30 September) comes from the time referential: never relate it to a calendar year.
+IND-BUD-001,en,nom,Public expenditure per inhabitant
 IND-BUD-001,en,sens_interpretation,To be read together with the structure of the expenditure.
-IND-BUD-001,es,nom,Gasto público por habitante
-IND-BUD-001,es,definition,Gasto público ejecutado en relación con la población.
-IND-BUD-001,es,methode_calcul,Gasto ejecutado del ejercicio ÷ población. El ejercicio fiscal (1 de octubre – 30 de septiembre) lo aporta el referencial tiempo: nunca referirlo a un año civil.
+IND-BUD-001,en,unite,HTG / inhabitant
 IND-BUD-001,es,comparabilite,Exige corregir la inflación para comparar dos ejercicios.
+IND-BUD-001,es,definition,Gasto público ejecutado en relación con la población.
 IND-BUD-001,es,limites_connues,Un gasto aprobado no es un gasto ejecutado.
-IND-BUD-001,es,unite,HTG / habitante
+IND-BUD-001,es,methode_calcul,Gasto ejecutado del ejercicio ÷ población. El ejercicio fiscal (1 de octubre – 30 de septiembre) lo aporta el referencial tiempo: nunca referirlo a un año civil.
+IND-BUD-001,es,nom,Gasto público por habitante
 IND-BUD-001,es,sens_interpretation,Debe leerse junto con la estructura del gasto.
-IND-EDU-001,ht,nom,Lekòl ki resanse
-IND-EDU-001,ht,definition,Kantite etablisman lekòl ki resanse.
-IND-EDU-001,ht,methode_calcul,"Konte nan baz referans òganizasyon yo, kategori Edikasyon."
-IND-EDU-001,ht,comparabilite,"PA konparab ant depatman : sous la kouvri sèlman Sid, Lwès, Nip ak Grandans."
-IND-EDU-001,ht,limites_connues,"KOUVÈTI PASYÈL — 4 depatman sou 10, 49 komin sou 140. Yon valè zewo vle di « pa resanse », li pa janm vle di « pa gen lekòl »."
-IND-EDU-001,ht,unite,kantite
-IND-EDU-001,ht,sens_interpretation,Li sèlman anndan zòn ki kouvri a.
-IND-EDU-001,en,nom,Recorded schools
-IND-EDU-001,en,definition,Number of schools recorded.
-IND-EDU-001,en,methode_calcul,"Count in the organisations referential, Education category."
+IND-BUD-001,es,unite,HTG / habitante
+IND-BUD-001,ht,comparabilite,Fòk ou korije enflasyon an pou konpare de ekzèsis.
+IND-BUD-001,ht,definition,Depans piblik yo egzekite rapòte ak popilasyon an.
+IND-BUD-001,ht,limites_connues,Yon depans yo vote pa yon depans yo egzekite.
+IND-BUD-001,ht,methode_calcul,Depans egzekite nan ekzèsis la ÷ popilasyon. Se baz referans tan an ki bay ekzèsis fiskal la (1ye oktòb – 30 septanm) : pa janm rapòte l ak yon ane sivil.
+IND-BUD-001,ht,nom,Depans piblik pou chak moun
+IND-BUD-001,ht,sens_interpretation,"Pou li l byen, gade tou ki jan depans lan òganize."
+IND-BUD-001,ht,unite,HTG / moun
 IND-EDU-001,en,comparabilite,"NOT comparable between departments: the source covers only Sud, Ouest, Nippes and Grande'Anse."
+IND-EDU-001,en,definition,Number of schools recorded.
 IND-EDU-001,en,limites_connues,"PARTIAL COVERAGE — 4 departments out of 10, 49 communes out of 140. A zero value means “not recorded”, never “no schools”."
-IND-EDU-001,en,unite,count
+IND-EDU-001,en,methode_calcul,"Count in the organisations referential, Education category."
+IND-EDU-001,en,nom,Recorded schools
 IND-EDU-001,en,sens_interpretation,To be read only within the covered area.
-IND-EDU-001,es,nom,Escuelas registradas
-IND-EDU-001,es,definition,Número de centros escolares registrados.
-IND-EDU-001,es,methode_calcul,"Recuento en el referencial de organizaciones, categoría Educación."
+IND-EDU-001,en,unite,count
 IND-EDU-001,es,comparabilite,"NO comparable entre departamentos: la fuente solo cubre Sud, Ouest, Nippes y Grande'Anse."
+IND-EDU-001,es,definition,Número de centros escolares registrados.
 IND-EDU-001,es,limites_connues,"COBERTURA PARCIAL — 4 departamentos de 10, 49 comunas de 140. Un valor cero significa «no registrado», nunca «ninguna escuela»."
-IND-EDU-001,es,unite,número
+IND-EDU-001,es,methode_calcul,"Recuento en el referencial de organizaciones, categoría Educación."
+IND-EDU-001,es,nom,Escuelas registradas
 IND-EDU-001,es,sens_interpretation,Léase únicamente dentro de la zona cubierta.
-IND-EDU-002,ht,nom,Pòsyon lekòl leta
-IND-EDU-002,ht,definition,Pòsyon lekòl ki gen estati leta pami lekòl ki resanse yo.
-IND-EDU-002,ht,methode_calcul,"Lekòl « Public » ÷ total ki resanse × 100, apre nou mete libèle yo daplon (PUBLIQUE / Public → Public)."
-IND-EDU-002,ht,comparabilite,Sèlman anndan zòn ki kouvri a.
-IND-EDU-002,ht,limites_connues,Li pote kouvèti pasyèl IND-EDU-001 la.
-IND-EDU-002,ht,unite,%
-IND-EDU-002,ht,sens_interpretation,Yon pòsyon ki fèb montre pwa sektè ki pa leta a.
-IND-EDU-002,en,nom,Share of public schools
-IND-EDU-002,en,definition,Share of public schools among recorded schools.
-IND-EDU-002,en,methode_calcul,"“Public” schools ÷ total recorded × 100, after harmonising the labels (PUBLIQUE / Public → Public)."
+IND-EDU-001,es,unite,número
+IND-EDU-001,ht,comparabilite,"PA konparab ant depatman : sous la kouvri sèlman Sid, Lwès, Nip ak Grandans."
+IND-EDU-001,ht,definition,Kantite etablisman lekòl ki resanse.
+IND-EDU-001,ht,limites_connues,"KOUVÈTI PASYÈL — 4 depatman sou 10, 49 komin sou 140. Yon valè zewo vle di « pa resanse », li pa janm vle di « pa gen lekòl »."
+IND-EDU-001,ht,methode_calcul,"Konte nan baz referans òganizasyon yo, kategori Edikasyon."
+IND-EDU-001,ht,nom,Lekòl ki resanse
+IND-EDU-001,ht,sens_interpretation,Li sèlman anndan zòn ki kouvri a.
+IND-EDU-001,ht,unite,kantite
 IND-EDU-002,en,comparabilite,Only within the covered area.
+IND-EDU-002,en,definition,Share of public schools among recorded schools.
 IND-EDU-002,en,limites_connues,Inherits the partial coverage of IND-EDU-001.
-IND-EDU-002,en,unite,%
+IND-EDU-002,en,methode_calcul,"“Public” schools ÷ total recorded × 100, after harmonising the labels (PUBLIQUE / Public → Public)."
+IND-EDU-002,en,nom,Share of public schools
 IND-EDU-002,en,sens_interpretation,A low share reflects the weight of the non-public sector.
-IND-EDU-002,es,nom,Proporción de escuelas públicas
-IND-EDU-002,es,definition,Proporción de escuelas públicas entre las escuelas registradas.
-IND-EDU-002,es,methode_calcul,"Escuelas «Public» ÷ total registrado × 100, tras armonizar las etiquetas (PUBLIQUE / Public → Public)."
+IND-EDU-002,en,unite,%
 IND-EDU-002,es,comparabilite,Únicamente dentro de la zona cubierta.
+IND-EDU-002,es,definition,Proporción de escuelas públicas entre las escuelas registradas.
 IND-EDU-002,es,limites_connues,Hereda la cobertura parcial de IND-EDU-001.
-IND-EDU-002,es,unite,%
+IND-EDU-002,es,methode_calcul,"Escuelas «Public» ÷ total registrado × 100, tras armonizar las etiquetas (PUBLIQUE / Public → Public)."
+IND-EDU-002,es,nom,Proporción de escuelas públicas
 IND-EDU-002,es,sens_interpretation,Una proporción baja refleja el peso del sector no público.
-IND-EDU-003,ht,nom,Lekòl leta
-IND-EDU-003,ht,definition,Kantite etablisman lekòl ki gen estati leta.
-IND-EDU-003,ht,methode_calcul,Konte apre nou fin mete libèle estati yo daplon.
-IND-EDU-003,ht,comparabilite,Menm limit kouvèti ak lekòl ki resanse yo.
-IND-EDU-003,ht,limites_connues,Li pote kouvèti pasyèl resansman lekòl la.
-IND-EDU-003,ht,unite,kantite
-IND-EDU-003,ht,sens_interpretation,Se numeratè pòsyon lekòl leta yo.
-IND-EDU-003,en,nom,Public schools
-IND-EDU-003,en,definition,Number of schools with public status.
-IND-EDU-003,en,methode_calcul,Count after harmonising the status labels.
+IND-EDU-002,es,unite,%
+IND-EDU-002,ht,comparabilite,Sèlman anndan zòn ki kouvri a.
+IND-EDU-002,ht,definition,Pòsyon lekòl ki gen estati leta pami lekòl ki resanse yo.
+IND-EDU-002,ht,limites_connues,Li pote kouvèti pasyèl IND-EDU-001 la.
+IND-EDU-002,ht,methode_calcul,"Lekòl « Public » ÷ total ki resanse × 100, apre nou mete libèle yo daplon (PUBLIQUE / Public → Public)."
+IND-EDU-002,ht,nom,Pòsyon lekòl leta
+IND-EDU-002,ht,sens_interpretation,Yon pòsyon ki fèb montre pwa sektè ki pa leta a.
+IND-EDU-002,ht,unite,%
 IND-EDU-003,en,comparabilite,Same coverage limitations as recorded schools.
+IND-EDU-003,en,definition,Number of schools with public status.
 IND-EDU-003,en,limites_connues,Inherits the partial coverage of the school census.
-IND-EDU-003,en,unite,count
+IND-EDU-003,en,methode_calcul,Count after harmonising the status labels.
+IND-EDU-003,en,nom,Public schools
 IND-EDU-003,en,sens_interpretation,Numerator of the share of public schools.
-IND-EDU-003,es,nom,Escuelas públicas
-IND-EDU-003,es,definition,Número de centros escolares de estatus público.
-IND-EDU-003,es,methode_calcul,Recuento tras armonizar las etiquetas de estatus.
+IND-EDU-003,en,unite,count
 IND-EDU-003,es,comparabilite,Mismas limitaciones de cobertura que las escuelas registradas.
+IND-EDU-003,es,definition,Número de centros escolares de estatus público.
 IND-EDU-003,es,limites_connues,Hereda la cobertura parcial del censo escolar.
-IND-EDU-003,es,unite,número
+IND-EDU-003,es,methode_calcul,Recuento tras armonizar las etiquetas de estatus.
+IND-EDU-003,es,nom,Escuelas públicas
 IND-EDU-003,es,sens_interpretation,Numerador de la proporción de escuelas públicas.
-IND-EDU-010,ht,nom,Lekòl pou chak 10 000 jèn 5 a 19 an
-IND-EDU-010,ht,definition,Kantite lekòl ki anrejistre divize pa popilasyon jèn ki nan laj pou al lekòl nan komin nan.
-IND-EDU-010,ht,methode_calcul,"IND-EDU-001 ÷ IND-POP-007 × 10 000. Bòn anwo denominatè a se 19 an, se pa 18 : COD-PS bay laj yo pa gwoup senk ane, koupe tranch 15-19 la ta vle di envante yon chif."
-IND-EDU-010,ht,comparabilite,"Konparab ant 49 komin kat lekòl 2022 la kouvri yo, epi sèlman ant yo menm. Lòt 91 yo pa gen yon rapò ki ba : yo pa gen kontaj ditou."
-IND-EDU-010,ht,limites_connues,"Nimeratè a kouvri sèlman 49 komin sou 140 : rapò a dekri lekòl yo anrejistre yo, se pa lekòl ki egziste yo. Denominatè a se yon pwojeksyon (COD-PS 2024, estati E), e de milezim yo pa menm — 2022 pou lekòl, 2024 pou popilasyon. Yon lekòl ki anrejistre pa vle di yon lekòl ki louvri, ni yon plas ki disponib : endikatè a konte etablisman, li pa konte kapasite. Eka nou wè ant 49 komin ki kouvri yo ale depi 1,71 rive 154,28 : yon diferans konsa montre dabò ke resansman an pa t fèt menm jan toupatou, li pa montre òf la."
-IND-EDU-010,ht,unite,lekòl / 10 000 jèn
-IND-EDU-010,ht,sens_interpretation,"Wo = anpil etablisman anrejistre parapò ak jèn 5 a 19 an yo. Li pa di anyen sou gwosè lekòl yo, sou eta yo, ni sou distans pou rive."
-IND-EDU-010,en,nom,"Schools per 10,000 young people aged 5 to 19"
-IND-EDU-010,en,definition,Number of recorded schools per school-age population of the commune.
-IND-EDU-010,en,methode_calcul,"IND-EDU-001 ÷ IND-POP-007 × 10,000. The upper bound of the denominator is 19, not 18: the COD-PS is five-year banded, and splitting the 15-19 band would mean inventing a distribution."
+IND-EDU-003,es,unite,número
+IND-EDU-003,ht,comparabilite,Menm limit kouvèti ak lekòl ki resanse yo.
+IND-EDU-003,ht,definition,Kantite etablisman lekòl ki gen estati leta.
+IND-EDU-003,ht,limites_connues,Li pote kouvèti pasyèl resansman lekòl la.
+IND-EDU-003,ht,methode_calcul,Konte apre nou fin mete libèle estati yo daplon.
+IND-EDU-003,ht,nom,Lekòl leta
+IND-EDU-003,ht,sens_interpretation,Se numeratè pòsyon lekòl leta yo.
+IND-EDU-003,ht,unite,kantite
 IND-EDU-010,en,comparabilite,"Comparable across the 49 communes covered by the 2022 school mapping, and among those only. The other 91 do not have a low ratio: they have no count at all."
+IND-EDU-010,en,definition,Number of recorded schools per school-age population of the commune.
 IND-EDU-010,en,limites_connues,"The numerator covers only 49 of 140 communes: the ratio describes recorded schools, not existing ones. The denominator is a projection (COD-PS 2024, status E), and the reference years differ — 2022 for schools, 2024 for population. A recorded school is not an open school, nor an available seat: the indicator counts establishments, not capacity. Across the 49 covered communes the values range from 1.71 to 154.28: such a spread reflects the uneven completeness of the count first, not the actual provision."
-IND-EDU-010,en,unite,"schools / 10,000 young people"
+IND-EDU-010,en,methode_calcul,"IND-EDU-001 ÷ IND-POP-007 × 10,000. The upper bound of the denominator is 19, not 18: the COD-PS is five-year banded, and splitting the 15-19 band would mean inventing a distribution."
+IND-EDU-010,en,nom,"Schools per 10,000 young people aged 5 to 19"
 IND-EDU-010,en,sens_interpretation,"High = many recorded establishments relative to 5-19 year-olds. It says nothing about school size, condition, or travel distance."
-IND-EDU-010,es,nom,Escuelas por 10 000 jóvenes de 5 a 19 años
-IND-EDU-010,es,definition,Número de escuelas registradas por población en edad escolar de la comuna.
-IND-EDU-010,es,methode_calcul,"IND-EDU-001 ÷ IND-POP-007 × 10 000. El límite superior del denominador es 19 años y no 18: el COD-PS es quinquenal, y dividir el grupo 15-19 exigiría inventar un reparto."
+IND-EDU-010,en,unite,"schools / 10,000 young people"
 IND-EDU-010,es,comparabilite,"Comparable entre las 49 comunas cubiertas por el mapeo escolar de 2022, y solo entre ellas. Las otras 91 no tienen una razón baja: no tienen conteo alguno."
+IND-EDU-010,es,definition,Número de escuelas registradas por población en edad escolar de la comuna.
 IND-EDU-010,es,limites_connues,"El numerador cubre solo 49 de 140 comunas: la razón describe las escuelas registradas, no las existentes. El denominador es una proyección (COD-PS 2024, estado E), y los años difieren — 2022 para las escuelas, 2024 para la población. Una escuela registrada no es una escuela abierta ni una plaza disponible: el indicador cuenta establecimientos, no capacidad. Entre las 49 comunas cubiertas los valores van de 1,71 a 154,28: una diferencia así refleja ante todo la desigual exhaustividad del censo, no la oferta real."
-IND-EDU-010,es,unite,escuelas / 10 000 jóvenes
+IND-EDU-010,es,methode_calcul,"IND-EDU-001 ÷ IND-POP-007 × 10 000. El límite superior del denominador es 19 años y no 18: el COD-PS es quinquenal, y dividir el grupo 15-19 exigiría inventar un reparto."
+IND-EDU-010,es,nom,Escuelas por 10 000 jóvenes de 5 a 19 años
 IND-EDU-010,es,sens_interpretation,"Alto = muchos establecimientos registrados en relación con los jóvenes de 5 a 19 años. No dice nada del tamaño de las escuelas, de su estado ni de la distancia a recorrer."
-IND-GEO-001,ht,nom,Sipèfisi
-IND-GEO-001,ht,definition,Sipèfisi antite teritoryal la.
-IND-GEO-001,ht,methode_calcul,Total sipèfisi seksyon kominal yo (CNIGS).
-IND-GEO-001,ht,comparabilite,Konparab toutotan dekoupaj administratif la pa chanje.
-IND-GEO-001,ht,limites_connues,Total nasyonal seksyon yo (26 942 km²) diferan ak 27 750 km² yo abitye site a : se trase kòt polygòn yo.
-IND-GEO-001,ht,unite,km²
-IND-GEO-001,ht,sens_interpretation,Net
-IND-GEO-001,en,nom,Area
-IND-GEO-001,en,definition,Area of the territorial entity.
-IND-GEO-001,en,methode_calcul,Sum of the areas of the communal sections (CNIGS).
+IND-EDU-010,es,unite,escuelas / 10 000 jóvenes
+IND-EDU-010,ht,comparabilite,"Konparab ant 49 komin kat lekòl 2022 la kouvri yo, epi sèlman ant yo menm. Lòt 91 yo pa gen yon rapò ki ba : yo pa gen kontaj ditou."
+IND-EDU-010,ht,definition,Kantite lekòl ki anrejistre divize pa popilasyon jèn ki nan laj pou al lekòl nan komin nan.
+IND-EDU-010,ht,limites_connues,"Nimeratè a kouvri sèlman 49 komin sou 140 : rapò a dekri lekòl yo anrejistre yo, se pa lekòl ki egziste yo. Denominatè a se yon pwojeksyon (COD-PS 2024, estati E), e de milezim yo pa menm — 2022 pou lekòl, 2024 pou popilasyon. Yon lekòl ki anrejistre pa vle di yon lekòl ki louvri, ni yon plas ki disponib : endikatè a konte etablisman, li pa konte kapasite. Eka nou wè ant 49 komin ki kouvri yo ale depi 1,71 rive 154,28 : yon diferans konsa montre dabò ke resansman an pa t fèt menm jan toupatou, li pa montre òf la."
+IND-EDU-010,ht,methode_calcul,"IND-EDU-001 ÷ IND-POP-007 × 10 000. Bòn anwo denominatè a se 19 an, se pa 18 : COD-PS bay laj yo pa gwoup senk ane, koupe tranch 15-19 la ta vle di envante yon chif."
+IND-EDU-010,ht,nom,Lekòl pou chak 10 000 jèn 5 a 19 an
+IND-EDU-010,ht,sens_interpretation,"Wo = anpil etablisman anrejistre parapò ak jèn 5 a 19 an yo. Li pa di anyen sou gwosè lekòl yo, sou eta yo, ni sou distans pou rive."
+IND-EDU-010,ht,unite,lekòl / 10 000 jèn
 IND-GEO-001,en,comparabilite,Comparable as long as the administrative division does not change.
+IND-GEO-001,en,definition,Area of the territorial entity.
 IND-GEO-001,en,limites_connues,"The national total of the sections (26,942 km²) differs from the usual 27,750 km²: coastal tracing of the polygons."
-IND-GEO-001,en,unite,km²
+IND-GEO-001,en,methode_calcul,Sum of the areas of the communal sections (CNIGS).
+IND-GEO-001,en,nom,Area
 IND-GEO-001,en,sens_interpretation,Neutral
-IND-GEO-001,es,nom,Superficie
-IND-GEO-001,es,definition,Superficie de la entidad territorial.
-IND-GEO-001,es,methode_calcul,Suma de las superficies de las secciones comunales (CNIGS).
+IND-GEO-001,en,unite,km²
 IND-GEO-001,es,comparabilite,Comparable mientras la división administrativa no cambie.
+IND-GEO-001,es,definition,Superficie de la entidad territorial.
 IND-GEO-001,es,limites_connues,El total nacional de las secciones (26 942 km²) difiere de los 27 750 km² habituales: trazado costero de los polígonos.
-IND-GEO-001,es,unite,km²
+IND-GEO-001,es,methode_calcul,Suma de las superficies de las secciones comunales (CNIGS).
+IND-GEO-001,es,nom,Superficie
 IND-GEO-001,es,sens_interpretation,Neutro
-IND-GEO-002,ht,nom,Kantite seksyon kominal
-IND-GEO-002,ht,definition,Kantite seksyon kominal ki fòme komin nan.
-IND-GEO-002,ht,methode_calcul,Konte nan baz referans teritwa a.
-IND-GEO-002,ht,comparabilite,Konparab ant komin.
-IND-GEO-002,ht,limites_connues,Dekoupaj 2018 la.
-IND-GEO-002,ht,unite,kantite
-IND-GEO-002,ht,sens_interpretation,Net
-IND-GEO-002,en,nom,Number of communal sections
-IND-GEO-002,en,definition,Number of communal sections making up the commune.
-IND-GEO-002,en,methode_calcul,Count in the territory referential.
+IND-GEO-001,es,unite,km²
+IND-GEO-001,ht,comparabilite,Konparab toutotan dekoupaj administratif la pa chanje.
+IND-GEO-001,ht,definition,Sipèfisi antite teritoryal la.
+IND-GEO-001,ht,limites_connues,Total nasyonal seksyon yo (26 942 km²) diferan ak 27 750 km² yo abitye site a : se trase kòt polygòn yo.
+IND-GEO-001,ht,methode_calcul,Total sipèfisi seksyon kominal yo (CNIGS).
+IND-GEO-001,ht,nom,Sipèfisi
+IND-GEO-001,ht,sens_interpretation,Net
+IND-GEO-001,ht,unite,km²
 IND-GEO-002,en,comparabilite,Comparable between communes.
+IND-GEO-002,en,definition,Number of communal sections making up the commune.
 IND-GEO-002,en,limites_connues,2018 division.
-IND-GEO-002,en,unite,count
+IND-GEO-002,en,methode_calcul,Count in the territory referential.
+IND-GEO-002,en,nom,Number of communal sections
 IND-GEO-002,en,sens_interpretation,Neutral
-IND-GEO-002,es,nom,Número de secciones comunales
-IND-GEO-002,es,definition,Número de secciones comunales que componen la comuna.
-IND-GEO-002,es,methode_calcul,Recuento en el referencial territorio.
+IND-GEO-002,en,unite,count
 IND-GEO-002,es,comparabilite,Comparable entre comunas.
+IND-GEO-002,es,definition,Número de secciones comunales que componen la comuna.
 IND-GEO-002,es,limites_connues,División de 2018.
-IND-GEO-002,es,unite,número
+IND-GEO-002,es,methode_calcul,Recuento en el referencial territorio.
+IND-GEO-002,es,nom,Número de secciones comunales
 IND-GEO-002,es,sens_interpretation,Neutro
-IND-GEO-003,ht,nom,Kantite lokalite ki resanse
-IND-GEO-003,ht,definition,Kantite kote moun rete yo resanse nan komin nan.
-IND-GEO-003,ht,methode_calcul,Konte lokalite GeoNames yo rache ak komin nan pa metòd pwen-nan-polygòn.
-IND-GEO-003,ht,comparabilite,"Fè atansyon : li reflete efò resansman GeoNames la, se pa sèlman reyalite kote moun rete."
-IND-GEO-003,ht,limites_connues,"Ti lokalite ka manke ; 1,3 % nan pwen yo rache pa pwoksimite."
-IND-GEO-003,ht,unite,kantite
-IND-GEO-003,ht,sens_interpretation,Yon valè ki wo pa yon merit : li vle di tou dokimantasyon an pi konplè.
-IND-GEO-003,en,nom,Recorded localities
-IND-GEO-003,en,definition,Number of inhabited places recorded in the commune.
-IND-GEO-003,en,methode_calcul,Count of GeoNames localities attached to the commune by point-in-polygon.
+IND-GEO-002,es,unite,número
+IND-GEO-002,ht,comparabilite,Konparab ant komin.
+IND-GEO-002,ht,definition,Kantite seksyon kominal ki fòme komin nan.
+IND-GEO-002,ht,limites_connues,Dekoupaj 2018 la.
+IND-GEO-002,ht,methode_calcul,Konte nan baz referans teritwa a.
+IND-GEO-002,ht,nom,Kantite seksyon kominal
+IND-GEO-002,ht,sens_interpretation,Net
+IND-GEO-002,ht,unite,kantite
 IND-GEO-003,en,comparabilite,"Caution: reflects the recording effort of GeoNames, not settlement reality alone."
+IND-GEO-003,en,definition,Number of inhabited places recorded in the commune.
 IND-GEO-003,en,limites_connues,Small localities may be missing; 1.3 % of points are attached by proximity.
-IND-GEO-003,en,unite,count
+IND-GEO-003,en,methode_calcul,Count of GeoNames localities attached to the commune by point-in-polygon.
+IND-GEO-003,en,nom,Recorded localities
 IND-GEO-003,en,sens_interpretation,A high value is not a merit: it also reflects better documentary coverage.
-IND-GEO-003,es,nom,Localidades registradas
-IND-GEO-003,es,definition,Número de lugares habitados registrados en la comuna.
-IND-GEO-003,es,methode_calcul,Recuento de localidades GeoNames vinculadas a la comuna mediante punto-en-polígono.
+IND-GEO-003,en,unite,count
 IND-GEO-003,es,comparabilite,"Precaución: refleja el esfuerzo de registro de GeoNames, no solo la realidad del poblamiento."
+IND-GEO-003,es,definition,Número de lugares habitados registrados en la comuna.
 IND-GEO-003,es,limites_connues,"Pueden faltar pequeñas localidades; el 1,3 % de los puntos se vinculan por proximidad."
-IND-GEO-003,es,unite,número
+IND-GEO-003,es,methode_calcul,Recuento de localidades GeoNames vinculadas a la comuna mediante punto-en-polígono.
+IND-GEO-003,es,nom,Localidades registradas
 IND-GEO-003,es,sens_interpretation,Un valor alto no es un mérito: refleja también una mejor cobertura documental.
-IND-GEO-004,ht,nom,Dansite lokalite
-IND-GEO-004,ht,definition,Kantite lokalite ki resanse pou chak 100 km².
-IND-GEO-004,ht,methode_calcul,IND-GEO-003 ÷ IND-GEO-001 × 100.
-IND-GEO-004,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
-IND-GEO-004,ht,limites_connues,Li pote menm limit ak IND-GEO-003.
-IND-GEO-004,ht,unite,lokalite / 100 km²
-IND-GEO-004,ht,sens_interpretation,"Yon apwòch sou kote moun rete, se pa yon dansite popilasyon."
-IND-GEO-004,en,nom,Density of localities
-IND-GEO-004,en,definition,Number of recorded localities per 100 km².
-IND-GEO-004,en,methode_calcul,IND-GEO-003 ÷ IND-GEO-001 × 100.
+IND-GEO-003,es,unite,número
+IND-GEO-003,ht,comparabilite,"Fè atansyon : li reflete efò resansman GeoNames la, se pa sèlman reyalite kote moun rete."
+IND-GEO-003,ht,definition,Kantite kote moun rete yo resanse nan komin nan.
+IND-GEO-003,ht,limites_connues,"Ti lokalite ka manke ; 1,3 % nan pwen yo rache pa pwoksimite."
+IND-GEO-003,ht,methode_calcul,Konte lokalite GeoNames yo rache ak komin nan pa metòd pwen-nan-polygòn.
+IND-GEO-003,ht,nom,Kantite lokalite ki resanse
+IND-GEO-003,ht,sens_interpretation,Yon valè ki wo pa yon merit : li vle di tou dokimantasyon an pi konplè.
+IND-GEO-003,ht,unite,kantite
 IND-GEO-004,en,comparabilite,Comparable between communes of the same reference year.
+IND-GEO-004,en,definition,Number of recorded localities per 100 km².
 IND-GEO-004,en,limites_connues,Inherits the limitations of IND-GEO-003.
-IND-GEO-004,en,unite,localities / 100 km²
+IND-GEO-004,en,methode_calcul,IND-GEO-003 ÷ IND-GEO-001 × 100.
+IND-GEO-004,en,nom,Density of localities
 IND-GEO-004,en,sens_interpretation,"An approximation of settlement, not a population density."
-IND-GEO-004,es,nom,Densidad de localidades
-IND-GEO-004,es,definition,Número de localidades registradas por 100 km².
-IND-GEO-004,es,methode_calcul,IND-GEO-003 ÷ IND-GEO-001 × 100.
+IND-GEO-004,en,unite,localities / 100 km²
 IND-GEO-004,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-GEO-004,es,definition,Número de localidades registradas por 100 km².
 IND-GEO-004,es,limites_connues,Hereda las limitaciones de IND-GEO-003.
-IND-GEO-004,es,unite,localidades / 100 km²
+IND-GEO-004,es,methode_calcul,IND-GEO-003 ÷ IND-GEO-001 × 100.
+IND-GEO-004,es,nom,Densidad de localidades
 IND-GEO-004,es,sens_interpretation,"Una aproximación del poblamiento, no una densidad de población."
-IND-MAR-001,ht,nom,Mache yo swiv pou pri
-IND-MAR-001,ht,definition,Kantite mache ki nan dispozitif swivi pri a.
-IND-MAR-001,ht,methode_calcul,"Konte nan baz referans òganizasyon yo, kategori Mache."
-IND-MAR-001,ht,comparabilite,Konparab nan tan si dispozitif swivi a pa chanje.
-IND-MAR-001,ht,limites_connues,"Li pa resanse tout mache peyi a, sèlman sa yo swiv yo."
-IND-MAR-001,ht,unite,kantite
-IND-MAR-001,ht,sens_interpretation,"Li mezire kouvèti swivi a, se pa aktivite komès la."
-IND-MAR-001,en,nom,Markets monitored for prices
-IND-MAR-001,en,definition,Number of markets included in the price monitoring system.
-IND-MAR-001,en,methode_calcul,"Count in the organisations referential, Market category."
+IND-GEO-004,es,unite,localidades / 100 km²
+IND-GEO-004,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-GEO-004,ht,definition,Kantite lokalite ki resanse pou chak 100 km².
+IND-GEO-004,ht,limites_connues,Li pote menm limit ak IND-GEO-003.
+IND-GEO-004,ht,methode_calcul,IND-GEO-003 ÷ IND-GEO-001 × 100.
+IND-GEO-004,ht,nom,Dansite lokalite
+IND-GEO-004,ht,sens_interpretation,"Yon apwòch sou kote moun rete, se pa yon dansite popilasyon."
+IND-GEO-004,ht,unite,lokalite / 100 km²
 IND-MAR-001,en,comparabilite,Comparable over time if the monitoring system does not change.
+IND-MAR-001,en,definition,Number of markets included in the price monitoring system.
 IND-MAR-001,en,limites_connues,"Does not record every market in the country, only those monitored."
-IND-MAR-001,en,unite,count
+IND-MAR-001,en,methode_calcul,"Count in the organisations referential, Market category."
+IND-MAR-001,en,nom,Markets monitored for prices
 IND-MAR-001,en,sens_interpretation,"Measures the coverage of the monitoring system, not commercial activity."
-IND-MAR-001,es,nom,Mercados con seguimiento de precios
-IND-MAR-001,es,definition,Número de mercados incluidos en el dispositivo de seguimiento de precios.
-IND-MAR-001,es,methode_calcul,"Recuento en el referencial de organizaciones, categoría Mercado."
+IND-MAR-001,en,unite,count
 IND-MAR-001,es,comparabilite,Comparable en el tiempo si el dispositivo de seguimiento no cambia.
+IND-MAR-001,es,definition,Número de mercados incluidos en el dispositivo de seguimiento de precios.
 IND-MAR-001,es,limites_connues,"No registra todos los mercados del país, solo los que tienen seguimiento."
-IND-MAR-001,es,unite,número
+IND-MAR-001,es,methode_calcul,"Recuento en el referencial de organizaciones, categoría Mercado."
+IND-MAR-001,es,nom,Mercados con seguimiento de precios
 IND-MAR-001,es,sens_interpretation,"Mide la cobertura del seguimiento, no la actividad comercial."
-IND-POP-001,ht,nom,Popilasyon
-IND-POP-001,ht,definition,Popilasyon ki estime ap viv nan antite teritoryal la.
-IND-POP-001,ht,methode_calcul,"Pwojeksyon demografik 2024 pa sèks ak laj (COD-PS, UNFPA), bati sou dekoupaj COD-AB CNIGS 2018 — se yon estimasyon, se pa yon kontaj : dènye resansman an date 2003."
-IND-POP-001,ht,comparabilite,Gen anpil chans metòd la kase ant resansman 2003 la ak dènye estimasyon yo — fòk nou make sa.
-IND-POP-001,ht,limites_connues,"Pa gen senkyèm resansman : nenpòt valè resan se yon estimasyon, estati E, li pa janm O."
-IND-POP-001,ht,unite,moun
-IND-POP-001,ht,sens_interpretation,Se denominatè pifò lòt endikatè yo : kalite pa l la deside kalite pa yo.
-IND-POP-001,en,nom,Population
-IND-POP-001,en,definition,Estimated resident population of the territorial entity.
-IND-POP-001,en,methode_calcul,"2024 demographic projection by sex and age (COD-PS, UNFPA), built on the COD-AB CNIGS 2018 boundaries — an estimate, not a count: the last census dates from 2003."
+IND-MAR-001,es,unite,número
+IND-MAR-001,ht,comparabilite,Konparab nan tan si dispozitif swivi a pa chanje.
+IND-MAR-001,ht,definition,Kantite mache ki nan dispozitif swivi pri a.
+IND-MAR-001,ht,limites_connues,"Li pa resanse tout mache peyi a, sèlman sa yo swiv yo."
+IND-MAR-001,ht,methode_calcul,"Konte nan baz referans òganizasyon yo, kategori Mache."
+IND-MAR-001,ht,nom,Mache yo swiv pou pri
+IND-MAR-001,ht,sens_interpretation,"Li mezire kouvèti swivi a, se pa aktivite komès la."
+IND-MAR-001,ht,unite,kantite
 IND-POP-001,en,comparabilite,A methodological break is likely between the 2003 census and recent estimates — to be flagged.
+IND-POP-001,en,definition,Estimated resident population of the territorial entity.
 IND-POP-001,en,limites_connues,"No fifth census: any recent value is an estimate, status E, never O."
-IND-POP-001,en,unite,inhabitants
+IND-POP-001,en,methode_calcul,"2024 demographic projection by sex and age (COD-PS, UNFPA), built on the COD-AB CNIGS 2018 boundaries — an estimate, not a count: the last census dates from 2003."
+IND-POP-001,en,nom,Population
 IND-POP-001,en,sens_interpretation,Denominator of most other indicators: its quality conditions theirs.
-IND-POP-001,es,nom,Población
-IND-POP-001,es,definition,Población residente estimada de la entidad territorial.
-IND-POP-001,es,methode_calcul,"Proyección demográfica 2024 por sexo y edad (COD-PS, UNFPA), construida sobre la división COD-AB CNIGS 2018 — una estimación, no un conteo: el último censo data de 2003."
+IND-POP-001,en,unite,inhabitants
 IND-POP-001,es,comparabilite,Es probable una ruptura metodológica entre el censo de 2003 y las estimaciones recientes — debe señalarse.
+IND-POP-001,es,definition,Población residente estimada de la entidad territorial.
 IND-POP-001,es,limites_connues,"No hay quinto censo: todo valor reciente es una estimación, estado E, nunca O."
-IND-POP-001,es,unite,habitantes
+IND-POP-001,es,methode_calcul,"Proyección demográfica 2024 por sexo y edad (COD-PS, UNFPA), construida sobre la división COD-AB CNIGS 2018 — una estimación, no un conteo: el último censo data de 2003."
+IND-POP-001,es,nom,Población
 IND-POP-001,es,sens_interpretation,Denominador de la mayoría de los demás indicadores: su calidad condiciona la de ellos.
-IND-POP-002,ht,nom,Dansite popilasyon
-IND-POP-002,ht,definition,Popilasyon rezidan estime a divize pa sipèfisi antite tèritoryal la.
-IND-POP-002,ht,methode_calcul,"IND-POP-001 ÷ IND-GEO-001 : popilasyon pwojte 2024 la divize pa sipèfisi dekoupaj CNIGS 2018 la. De milezim yo pa menm — nou asime sa, nou pa kache l : dekoupaj la pa chanje ant de dat yo."
-IND-POP-002,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : nimeratè a ak denominatè a kouvri tout peyi a, pa gen zòn avèg."
-IND-POP-002,ht,limites_connues,"Yon popilasyon estime divize pa yon sipèfisi ofisyèl bay yon dansite estime (estati E), pa yon kontaj. Sipèfisi a gen ladan l tè kote moun pa ka rete : nan mòn ak bò lanmè, dansite moun viv la pi wo pase sa nou kalkile a. Kòm total nasyonal polygòn yo (26 942 km²) pi piti pase 27 750 km² yo abitye site a, tout valè yo yon ti jan pi wo. Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; nou pibliye l jan l ye, e fòk moun pa li dansite Gressier."
-IND-POP-002,ht,unite,abitan / km²
-IND-POP-002,ht,sens_interpretation,"Wo = plis presyon sou tè a, sou sèvis yo ak sou rezo yo. Li li ansanm ak sipèfisi a : menm dansite a pa vle di menm bagay sou 21 km² ak sou 490 km²."
-IND-POP-002,en,nom,Population density
-IND-POP-002,en,definition,Estimated resident population per square kilometre of the territorial entity.
-IND-POP-002,en,methode_calcul,"IND-POP-001 ÷ IND-GEO-001: the 2024 projected population divided by the area of the 2018 CNIGS boundaries. The two reference years differ — this is assumed, not hidden: the boundaries did not change between them."
+IND-POP-001,es,unite,habitantes
+IND-POP-001,ht,comparabilite,Gen anpil chans metòd la kase ant resansman 2003 la ak dènye estimasyon yo — fòk nou make sa.
+IND-POP-001,ht,definition,Popilasyon ki estime ap viv nan antite teritoryal la.
+IND-POP-001,ht,limites_connues,"Pa gen senkyèm resansman : nenpòt valè resan se yon estimasyon, estati E, li pa janm O."
+IND-POP-001,ht,methode_calcul,"Pwojeksyon demografik 2024 pa sèks ak laj (COD-PS, UNFPA), bati sou dekoupaj COD-AB CNIGS 2018 — se yon estimasyon, se pa yon kontaj : dènye resansman an date 2003."
+IND-POP-001,ht,nom,Popilasyon
+IND-POP-001,ht,sens_interpretation,Se denominatè pifò lòt endikatè yo : kalite pa l la deside kalite pa yo.
+IND-POP-001,ht,unite,moun
 IND-POP-002,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: numerator and denominator both cover the whole country, with no blind spot."
+IND-POP-002,en,definition,Estimated resident population per square kilometre of the territorial entity.
 IND-POP-002,en,limites_connues,"An estimated population divided by an official area yields an estimated density (status E), never a count. The area includes uninhabitable land: in mountainous and coastal communes, lived density exceeds calculated density. Because the national total of the polygons (26,942 km²) falls short of the usual 27,750 km², every value is very slightly raised. Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; we publish the value unchanged, and Gressier's density should not be read."
-IND-POP-002,en,unite,inhabitants / km²
+IND-POP-002,en,methode_calcul,"IND-POP-001 ÷ IND-GEO-001: the 2024 projected population divided by the area of the 2018 CNIGS boundaries. The two reference years differ — this is assumed, not hidden: the boundaries did not change between them."
+IND-POP-002,en,nom,Population density
 IND-POP-002,en,sens_interpretation,"High = pressure on land, services and networks. Read it alongside the area: the same density does not mean the same thing over 21 km² and over 490 km²."
-IND-POP-002,es,nom,Densidad de población
-IND-POP-002,es,definition,Población residente estimada por kilómetro cuadrado de la entidad territorial.
-IND-POP-002,es,methode_calcul,"IND-POP-001 ÷ IND-GEO-001: la población proyectada 2024 dividida por la superficie de la división CNIGS 2018. Los dos años de referencia difieren — se asume, no se oculta: la división no cambió entre ambos."
+IND-POP-002,en,unite,inhabitants / km²
 IND-POP-002,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: numerador y denominador cubren todo el país, sin zonas ciegas."
+IND-POP-002,es,definition,Población residente estimada por kilómetro cuadrado de la entidad territorial.
 IND-POP-002,es,limites_connues,"Una población estimada dividida por una superficie oficial da una densidad estimada (estado E), nunca un conteo. La superficie incluye terrenos inhabitables: en zonas montañosas y costeras, la densidad vivida supera la calculada. Como el total nacional de los polígonos (26 942 km²) es inferior a los 27 750 km² habituales, todos los valores quedan levemente elevados. Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; la publicamos tal cual y la densidad de Gressier no debe leerse."
-IND-POP-002,es,unite,habitantes / km²
+IND-POP-002,es,methode_calcul,"IND-POP-001 ÷ IND-GEO-001: la población proyectada 2024 dividida por la superficie de la división CNIGS 2018. Los dos años de referencia difieren — se asume, no se oculta: la división no cambió entre ambos."
+IND-POP-002,es,nom,Densidad de población
 IND-POP-002,es,sens_interpretation,"Alto = presión sobre el suelo, los servicios y las redes. Léase junto con la superficie: una misma densidad no significa lo mismo en 21 km² que en 490 km²."
-IND-POP-003,ht,nom,Popilasyon ki poko gen 15 an
-IND-POP-003,ht,definition,Popilasyon rezidan estime ki poko gen 15 an.
-IND-POP-003,ht,methode_calcul,"Sòm tranch senk ane COD-PS 2024 yo : 0-4, 5-9, 10-14."
-IND-POP-003,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
-IND-POP-003,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
-IND-POP-003,ht,unite,abitan
-IND-POP-003,ht,sens_interpretation,"Se baz piramid la. Lè l wo, gen plis presyon sou lekòl ak sou sante timoun jodi a, epi sou travay nan dis an."
-IND-POP-003,en,nom,Population under 15
-IND-POP-003,en,definition,Estimated resident population aged under 15.
-IND-POP-003,en,methode_calcul,"Sum of the 2024 COD-PS five-year bands: 0-4, 5-9, 10-14."
+IND-POP-002,es,unite,habitantes / km²
+IND-POP-002,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : nimeratè a ak denominatè a kouvri tout peyi a, pa gen zòn avèg."
+IND-POP-002,ht,definition,Popilasyon rezidan estime a divize pa sipèfisi antite tèritoryal la.
+IND-POP-002,ht,limites_connues,"Yon popilasyon estime divize pa yon sipèfisi ofisyèl bay yon dansite estime (estati E), pa yon kontaj. Sipèfisi a gen ladan l tè kote moun pa ka rete : nan mòn ak bò lanmè, dansite moun viv la pi wo pase sa nou kalkile a. Kòm total nasyonal polygòn yo (26 942 km²) pi piti pase 27 750 km² yo abitye site a, tout valè yo yon ti jan pi wo. Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; nou pibliye l jan l ye, e fòk moun pa li dansite Gressier."
+IND-POP-002,ht,methode_calcul,"IND-POP-001 ÷ IND-GEO-001 : popilasyon pwojte 2024 la divize pa sipèfisi dekoupaj CNIGS 2018 la. De milezim yo pa menm — nou asime sa, nou pa kache l : dekoupaj la pa chanje ant de dat yo."
+IND-POP-002,ht,nom,Dansite popilasyon
+IND-POP-002,ht,sens_interpretation,"Wo = plis presyon sou tè a, sou sèvis yo ak sou rezo yo. Li li ansanm ak sipèfisi a : menm dansite a pa vle di menm bagay sou 21 km² ak sou 490 km²."
+IND-POP-002,ht,unite,abitan / km²
 IND-POP-003,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: the projection covers the whole country, with no blind spot. Comparable over time only against another COD-PS reference year built on the same boundaries."
+IND-POP-003,en,definition,Estimated resident population aged under 15.
 IND-POP-003,en,limites_connues,"Every value here derives from a projection (COD-PS 2024), not a count: status E, never O — the last census dates from 2003. The source is five-year banded: no intermediate age boundary (5-18, median age) is drawn from it, since splitting a band would mean inventing a distribution. The top band is open-ended (80 and over). Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; its age counts inherit the anomaly and should not be read. Finally, the communal breakdown is more fragile than the total: the sex ratio at birth is biologically stable (101.8 men per 100 women nationally in the 0-4 band), yet it spreads from 89 to 116 across communes. An age-and-sex structure should be read with caution at commune level, and a single band's gap means nothing on its own."
-IND-POP-003,en,unite,inhabitants
+IND-POP-003,en,methode_calcul,"Sum of the 2024 COD-PS five-year bands: 0-4, 5-9, 10-14."
+IND-POP-003,en,nom,Population under 15
 IND-POP-003,en,sens_interpretation,"The base of the pyramid. High = pressure on schooling and child health now, on jobs in ten years."
-IND-POP-003,es,nom,Población menor de 15 años
-IND-POP-003,es,definition,Población residente estimada menor de 15 años.
-IND-POP-003,es,methode_calcul,"Suma de los grupos quinquenales del COD-PS 2024: 0-4, 5-9, 10-14."
+IND-POP-003,en,unite,inhabitants
 IND-POP-003,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: la proyección cubre todo el país, sin zonas ciegas. Comparable en el tiempo solo frente a otro año de referencia COD-PS construido sobre la misma división."
+IND-POP-003,es,definition,Población residente estimada menor de 15 años.
 IND-POP-003,es,limites_connues,"Todos estos valores derivan de una proyección (COD-PS 2024), no de un conteo: estado E, nunca O — el último censo data de 2003. La fuente es quinquenal: no se extrae de ella ningún límite de edad intermedio (5-18 años, edad mediana), pues repartir un grupo exigiría inventar. El último grupo es abierto (80 años y más). Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; sus efectivos por edad heredan la anomalía y no deben leerse. Por último, la desagregación comunal es más frágil que el total: la razón de masculinidad al nacer es biológicamente estable (101,8 hombres por 100 mujeres a escala nacional en el grupo 0-4), pero varía de 89 a 116 según la comuna. Una estructura por edad y sexo debe leerse con cautela a nivel comunal, y la diferencia de un solo grupo no significa nada por sí sola."
-IND-POP-003,es,unite,habitantes
+IND-POP-003,es,methode_calcul,"Suma de los grupos quinquenales del COD-PS 2024: 0-4, 5-9, 10-14."
+IND-POP-003,es,nom,Población menor de 15 años
 IND-POP-003,es,sens_interpretation,"La base de la pirámide. Alto = presión sobre la escuela y la salud infantil hoy, sobre el empleo en diez años."
-IND-POP-004,ht,nom,Popilasyon 15 a 64 an
-IND-POP-004,ht,definition,Popilasyon rezidan estime ki nan tranch laj konvansyon an rele laj travay la.
-IND-POP-004,ht,methode_calcul,Sòm tranch senk ane COD-PS 2024 yo : 15-19 rive 60-64.
-IND-POP-004,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
-IND-POP-004,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
-IND-POP-004,ht,unite,abitan
-IND-POP-004,ht,sens_interpretation,"Se denominatè rapò depandans lan. « Laj travay » se yon konvansyon sou laj, se pa yon mezi : li pa di anyen sou travay moun fè vre."
-IND-POP-004,en,nom,Population aged 15 to 64
-IND-POP-004,en,definition,Estimated resident population within the conventional working-age band.
-IND-POP-004,en,methode_calcul,Sum of the 2024 COD-PS five-year bands: 15-19 through 60-64.
+IND-POP-003,es,unite,habitantes
+IND-POP-003,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
+IND-POP-003,ht,definition,Popilasyon rezidan estime ki poko gen 15 an.
+IND-POP-003,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
+IND-POP-003,ht,methode_calcul,"Sòm tranch senk ane COD-PS 2024 yo : 0-4, 5-9, 10-14."
+IND-POP-003,ht,nom,Popilasyon ki poko gen 15 an
+IND-POP-003,ht,sens_interpretation,"Se baz piramid la. Lè l wo, gen plis presyon sou lekòl ak sou sante timoun jodi a, epi sou travay nan dis an."
+IND-POP-003,ht,unite,abitan
 IND-POP-004,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: the projection covers the whole country, with no blind spot. Comparable over time only against another COD-PS reference year built on the same boundaries."
+IND-POP-004,en,definition,Estimated resident population within the conventional working-age band.
 IND-POP-004,en,limites_connues,"Every value here derives from a projection (COD-PS 2024), not a count: status E, never O — the last census dates from 2003. The source is five-year banded: no intermediate age boundary (5-18, median age) is drawn from it, since splitting a band would mean inventing a distribution. The top band is open-ended (80 and over). Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; its age counts inherit the anomaly and should not be read. Finally, the communal breakdown is more fragile than the total: the sex ratio at birth is biologically stable (101.8 men per 100 women nationally in the 0-4 band), yet it spreads from 89 to 116 across communes. An age-and-sex structure should be read with caution at commune level, and a single band's gap means nothing on its own."
-IND-POP-004,en,unite,inhabitants
+IND-POP-004,en,methode_calcul,Sum of the 2024 COD-PS five-year bands: 15-19 through 60-64.
+IND-POP-004,en,nom,Population aged 15 to 64
 IND-POP-004,en,sens_interpretation,"Denominator of the dependency ratio. ""Working age"" is an age convention, not a measurement: it says nothing about actual employment."
-IND-POP-004,es,nom,Población de 15 a 64 años
-IND-POP-004,es,definition,Población residente estimada dentro del grupo de edad convencional de actividad.
-IND-POP-004,es,methode_calcul,Suma de los grupos quinquenales del COD-PS 2024: 15-19 hasta 60-64.
+IND-POP-004,en,unite,inhabitants
 IND-POP-004,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: la proyección cubre todo el país, sin zonas ciegas. Comparable en el tiempo solo frente a otro año de referencia COD-PS construido sobre la misma división."
+IND-POP-004,es,definition,Población residente estimada dentro del grupo de edad convencional de actividad.
 IND-POP-004,es,limites_connues,"Todos estos valores derivan de una proyección (COD-PS 2024), no de un conteo: estado E, nunca O — el último censo data de 2003. La fuente es quinquenal: no se extrae de ella ningún límite de edad intermedio (5-18 años, edad mediana), pues repartir un grupo exigiría inventar. El último grupo es abierto (80 años y más). Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; sus efectivos por edad heredan la anomalía y no deben leerse. Por último, la desagregación comunal es más frágil que el total: la razón de masculinidad al nacer es biológicamente estable (101,8 hombres por 100 mujeres a escala nacional en el grupo 0-4), pero varía de 89 a 116 según la comuna. Una estructura por edad y sexo debe leerse con cautela a nivel comunal, y la diferencia de un solo grupo no significa nada por sí sola."
-IND-POP-004,es,unite,habitantes
+IND-POP-004,es,methode_calcul,Suma de los grupos quinquenales del COD-PS 2024: 15-19 hasta 60-64.
+IND-POP-004,es,nom,Población de 15 a 64 años
 IND-POP-004,es,sens_interpretation,"Denominador de la razón de dependencia. «Edad activa» es una convención de edad, no una medición: nada dice del empleo real."
-IND-POP-005,ht,nom,Popilasyon 65 an ak plis
-IND-POP-005,ht,definition,Popilasyon rezidan estime ki gen 65 an oswa plis.
-IND-POP-005,ht,methode_calcul,"Sòm tranch senk ane COD-PS 2024 yo : 65-69, 70-74, 75-79, 80 an ak plis — dènye tranch lan louvri."
-IND-POP-005,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
-IND-POP-005,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
-IND-POP-005,ht,unite,abitan
-IND-POP-005,ht,sens_interpretation,"Se tèt piramid la. Lè l wo, bezwen swen ak akonpayman ogmante."
-IND-POP-005,en,nom,Population aged 65 and over
-IND-POP-005,en,definition,Estimated resident population aged 65 and over.
-IND-POP-005,en,methode_calcul,"Sum of the 2024 COD-PS five-year bands: 65-69, 70-74, 75-79, 80 and over — the top band is open-ended."
+IND-POP-004,es,unite,habitantes
+IND-POP-004,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
+IND-POP-004,ht,definition,Popilasyon rezidan estime ki nan tranch laj konvansyon an rele laj travay la.
+IND-POP-004,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
+IND-POP-004,ht,methode_calcul,Sòm tranch senk ane COD-PS 2024 yo : 15-19 rive 60-64.
+IND-POP-004,ht,nom,Popilasyon 15 a 64 an
+IND-POP-004,ht,sens_interpretation,"Se denominatè rapò depandans lan. « Laj travay » se yon konvansyon sou laj, se pa yon mezi : li pa di anyen sou travay moun fè vre."
+IND-POP-004,ht,unite,abitan
 IND-POP-005,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: the projection covers the whole country, with no blind spot. Comparable over time only against another COD-PS reference year built on the same boundaries."
+IND-POP-005,en,definition,Estimated resident population aged 65 and over.
 IND-POP-005,en,limites_connues,"Every value here derives from a projection (COD-PS 2024), not a count: status E, never O — the last census dates from 2003. The source is five-year banded: no intermediate age boundary (5-18, median age) is drawn from it, since splitting a band would mean inventing a distribution. The top band is open-ended (80 and over). Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; its age counts inherit the anomaly and should not be read. Finally, the communal breakdown is more fragile than the total: the sex ratio at birth is biologically stable (101.8 men per 100 women nationally in the 0-4 band), yet it spreads from 89 to 116 across communes. An age-and-sex structure should be read with caution at commune level, and a single band's gap means nothing on its own."
-IND-POP-005,en,unite,inhabitants
+IND-POP-005,en,methode_calcul,"Sum of the 2024 COD-PS five-year bands: 65-69, 70-74, 75-79, 80 and over — the top band is open-ended."
+IND-POP-005,en,nom,Population aged 65 and over
 IND-POP-005,en,sens_interpretation,The apex of the pyramid. High = greater health and care needs.
-IND-POP-005,es,nom,Población de 65 años y más
-IND-POP-005,es,definition,Población residente estimada de 65 años y más.
-IND-POP-005,es,methode_calcul,"Suma de los grupos quinquenales del COD-PS 2024: 65-69, 70-74, 75-79, 80 y más — el último grupo es abierto."
+IND-POP-005,en,unite,inhabitants
 IND-POP-005,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: la proyección cubre todo el país, sin zonas ciegas. Comparable en el tiempo solo frente a otro año de referencia COD-PS construido sobre la misma división."
+IND-POP-005,es,definition,Población residente estimada de 65 años y más.
 IND-POP-005,es,limites_connues,"Todos estos valores derivan de una proyección (COD-PS 2024), no de un conteo: estado E, nunca O — el último censo data de 2003. La fuente es quinquenal: no se extrae de ella ningún límite de edad intermedio (5-18 años, edad mediana), pues repartir un grupo exigiría inventar. El último grupo es abierto (80 años y más). Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; sus efectivos por edad heredan la anomalía y no deben leerse. Por último, la desagregación comunal es más frágil que el total: la razón de masculinidad al nacer es biológicamente estable (101,8 hombres por 100 mujeres a escala nacional en el grupo 0-4), pero varía de 89 a 116 según la comuna. Una estructura por edad y sexo debe leerse con cautela a nivel comunal, y la diferencia de un solo grupo no significa nada por sí sola."
-IND-POP-005,es,unite,habitantes
+IND-POP-005,es,methode_calcul,"Suma de los grupos quinquenales del COD-PS 2024: 65-69, 70-74, 75-79, 80 y más — el último grupo es abierto."
+IND-POP-005,es,nom,Población de 65 años y más
 IND-POP-005,es,sens_interpretation,La cima de la pirámide. Alto = mayores necesidades de salud y de cuidados.
-IND-POP-006,ht,nom,Popilasyon depandan (mwens pase 15 an ak 65 an ak plis)
-IND-POP-006,ht,definition,Popilasyon rezidan estime ki deyò tranch laj konvansyon an rele laj travay la.
-IND-POP-006,ht,methode_calcul,IND-POP-003 + IND-POP-005.
-IND-POP-006,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
-IND-POP-006,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
-IND-POP-006,ht,unite,abitan
-IND-POP-006,ht,sens_interpretation,Se nimeratè rapò depandans lan. Mo « depandan » an se yon konvansyon sou laj : anpil nan moun sa yo ap travay.
-IND-POP-006,en,nom,Dependent population (under 15 and 65 and over)
-IND-POP-006,en,definition,Estimated resident population outside the conventional working-age band.
-IND-POP-006,en,methode_calcul,IND-POP-003 + IND-POP-005.
+IND-POP-005,es,unite,habitantes
+IND-POP-005,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
+IND-POP-005,ht,definition,Popilasyon rezidan estime ki gen 65 an oswa plis.
+IND-POP-005,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
+IND-POP-005,ht,methode_calcul,"Sòm tranch senk ane COD-PS 2024 yo : 65-69, 70-74, 75-79, 80 an ak plis — dènye tranch lan louvri."
+IND-POP-005,ht,nom,Popilasyon 65 an ak plis
+IND-POP-005,ht,sens_interpretation,"Se tèt piramid la. Lè l wo, bezwen swen ak akonpayman ogmante."
+IND-POP-005,ht,unite,abitan
 IND-POP-006,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: the projection covers the whole country, with no blind spot. Comparable over time only against another COD-PS reference year built on the same boundaries."
+IND-POP-006,en,definition,Estimated resident population outside the conventional working-age band.
 IND-POP-006,en,limites_connues,"Every value here derives from a projection (COD-PS 2024), not a count: status E, never O — the last census dates from 2003. The source is five-year banded: no intermediate age boundary (5-18, median age) is drawn from it, since splitting a band would mean inventing a distribution. The top band is open-ended (80 and over). Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; its age counts inherit the anomaly and should not be read. Finally, the communal breakdown is more fragile than the total: the sex ratio at birth is biologically stable (101.8 men per 100 women nationally in the 0-4 band), yet it spreads from 89 to 116 across communes. An age-and-sex structure should be read with caution at commune level, and a single band's gap means nothing on its own."
-IND-POP-006,en,unite,inhabitants
+IND-POP-006,en,methode_calcul,IND-POP-003 + IND-POP-005.
+IND-POP-006,en,nom,Dependent population (under 15 and 65 and over)
 IND-POP-006,en,sens_interpretation,"Numerator of the dependency ratio. ""Dependent"" is an age convention: many of these people work."
-IND-POP-006,es,nom,Población dependiente (menores de 15 y de 65 años y más)
-IND-POP-006,es,definition,Población residente estimada fuera del grupo de edad convencional de actividad.
-IND-POP-006,es,methode_calcul,IND-POP-003 + IND-POP-005.
+IND-POP-006,en,unite,inhabitants
 IND-POP-006,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: la proyección cubre todo el país, sin zonas ciegas. Comparable en el tiempo solo frente a otro año de referencia COD-PS construido sobre la misma división."
+IND-POP-006,es,definition,Población residente estimada fuera del grupo de edad convencional de actividad.
 IND-POP-006,es,limites_connues,"Todos estos valores derivan de una proyección (COD-PS 2024), no de un conteo: estado E, nunca O — el último censo data de 2003. La fuente es quinquenal: no se extrae de ella ningún límite de edad intermedio (5-18 años, edad mediana), pues repartir un grupo exigiría inventar. El último grupo es abierto (80 años y más). Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; sus efectivos por edad heredan la anomalía y no deben leerse. Por último, la desagregación comunal es más frágil que el total: la razón de masculinidad al nacer es biológicamente estable (101,8 hombres por 100 mujeres a escala nacional en el grupo 0-4), pero varía de 89 a 116 según la comuna. Una estructura por edad y sexo debe leerse con cautela a nivel comunal, y la diferencia de un solo grupo no significa nada por sí sola."
-IND-POP-006,es,unite,habitantes
+IND-POP-006,es,methode_calcul,IND-POP-003 + IND-POP-005.
+IND-POP-006,es,nom,Población dependiente (menores de 15 y de 65 años y más)
 IND-POP-006,es,sens_interpretation,Numerador de la razón de dependencia. «Dependiente» es una convención de edad: muchas de estas personas trabajan.
-IND-POP-007,ht,nom,Popilasyon 5 a 19 an
-IND-POP-007,ht,definition,Popilasyon rezidan estime ki nan laj pou al lekòl.
-IND-POP-007,ht,methode_calcul,"Sòm tranch senk ane COD-PS 2024 yo : 5-9, 10-14, 15-19. Bòn anwo a se 19 an, se pa 18 : sous la bay laj yo pa gwoup senk ane, koupe tranch 15-19 la ta vle di envante yon chif."
-IND-POP-007,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
-IND-POP-007,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
-IND-POP-007,ht,unite,abitan
-IND-POP-007,ht,sens_interpretation,Se denominatè endikatè òf lekòl yo. Li kwaze ak moun ki poko gen 15 an : de yo pa adisyone.
-IND-POP-007,en,nom,Population aged 5 to 19
-IND-POP-007,en,definition,Estimated resident population of school age.
-IND-POP-007,en,methode_calcul,"Sum of the 2024 COD-PS five-year bands: 5-9, 10-14, 15-19. The upper bound is 19, not 18: the source is five-year banded, and splitting the 15-19 band would mean inventing a distribution."
+IND-POP-006,es,unite,habitantes
+IND-POP-006,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
+IND-POP-006,ht,definition,Popilasyon rezidan estime ki deyò tranch laj konvansyon an rele laj travay la.
+IND-POP-006,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
+IND-POP-006,ht,methode_calcul,IND-POP-003 + IND-POP-005.
+IND-POP-006,ht,nom,Popilasyon depandan (mwens pase 15 an ak 65 an ak plis)
+IND-POP-006,ht,sens_interpretation,Se nimeratè rapò depandans lan. Mo « depandan » an se yon konvansyon sou laj : anpil nan moun sa yo ap travay.
+IND-POP-006,ht,unite,abitan
 IND-POP-007,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: the projection covers the whole country, with no blind spot. Comparable over time only against another COD-PS reference year built on the same boundaries."
+IND-POP-007,en,definition,Estimated resident population of school age.
 IND-POP-007,en,limites_connues,"Every value here derives from a projection (COD-PS 2024), not a count: status E, never O — the last census dates from 2003. The source is five-year banded: no intermediate age boundary (5-18, median age) is drawn from it, since splitting a band would mean inventing a distribution. The top band is open-ended (80 and over). Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; its age counts inherit the anomaly and should not be read. Finally, the communal breakdown is more fragile than the total: the sex ratio at birth is biologically stable (101.8 men per 100 women nationally in the 0-4 band), yet it spreads from 89 to 116 across communes. An age-and-sex structure should be read with caution at commune level, and a single band's gap means nothing on its own."
-IND-POP-007,en,unite,inhabitants
+IND-POP-007,en,methode_calcul,"Sum of the 2024 COD-PS five-year bands: 5-9, 10-14, 15-19. The upper bound is 19, not 18: the source is five-year banded, and splitting the 15-19 band would mean inventing a distribution."
+IND-POP-007,en,nom,Population aged 5 to 19
 IND-POP-007,en,sens_interpretation,Denominator of school-provision indicators. It partly overlaps the under-15 population: the two do not add up.
-IND-POP-007,es,nom,Población de 5 a 19 años
-IND-POP-007,es,definition,Población residente estimada en edad escolar.
-IND-POP-007,es,methode_calcul,"Suma de los grupos quinquenales del COD-PS 2024: 5-9, 10-14, 15-19. El límite superior es 19 años y no 18: la fuente es quinquenal, y dividir el grupo 15-19 exigiría inventar un reparto."
+IND-POP-007,en,unite,inhabitants
 IND-POP-007,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: la proyección cubre todo el país, sin zonas ciegas. Comparable en el tiempo solo frente a otro año de referencia COD-PS construido sobre la misma división."
+IND-POP-007,es,definition,Población residente estimada en edad escolar.
 IND-POP-007,es,limites_connues,"Todos estos valores derivan de una proyección (COD-PS 2024), no de un conteo: estado E, nunca O — el último censo data de 2003. La fuente es quinquenal: no se extrae de ella ningún límite de edad intermedio (5-18 años, edad mediana), pues repartir un grupo exigiría inventar. El último grupo es abierto (80 años y más). Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; sus efectivos por edad heredan la anomalía y no deben leerse. Por último, la desagregación comunal es más frágil que el total: la razón de masculinidad al nacer es biológicamente estable (101,8 hombres por 100 mujeres a escala nacional en el grupo 0-4), pero varía de 89 a 116 según la comuna. Una estructura por edad y sexo debe leerse con cautela a nivel comunal, y la diferencia de un solo grupo no significa nada por sí sola."
-IND-POP-007,es,unite,habitantes
+IND-POP-007,es,methode_calcul,"Suma de los grupos quinquenales del COD-PS 2024: 5-9, 10-14, 15-19. El límite superior es 19 años y no 18: la fuente es quinquenal, y dividir el grupo 15-19 exigiría inventar un reparto."
+IND-POP-007,es,nom,Población de 5 a 19 años
 IND-POP-007,es,sens_interpretation,Denominador de los indicadores de oferta escolar. Se solapa en parte con los menores de 15 años: ambos no se suman.
-IND-POP-008,ht,nom,Popilasyon fi
-IND-POP-008,ht,definition,"Popilasyon rezidan estime ki se fi, tout laj konfonn."
-IND-POP-008,ht,methode_calcul,"Kolòn F_TL COD-PS 2024 la, ki egal sòm 17 tranch fi yo."
-IND-POP-008,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
-IND-POP-008,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
-IND-POP-008,ht,unite,abitan
-IND-POP-008,ht,sens_interpretation,Li li ansanm ak popilasyon gason an ; diferans lan parèt nan rapò gason pou 100 fi a.
-IND-POP-008,en,nom,Female population
-IND-POP-008,en,definition,"Estimated resident female population, all ages."
-IND-POP-008,en,methode_calcul,"Column F_TL of the 2024 COD-PS, equal to the sum of the 17 female bands."
+IND-POP-007,es,unite,habitantes
+IND-POP-007,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
+IND-POP-007,ht,definition,Popilasyon rezidan estime ki nan laj pou al lekòl.
+IND-POP-007,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
+IND-POP-007,ht,methode_calcul,"Sòm tranch senk ane COD-PS 2024 yo : 5-9, 10-14, 15-19. Bòn anwo a se 19 an, se pa 18 : sous la bay laj yo pa gwoup senk ane, koupe tranch 15-19 la ta vle di envante yon chif."
+IND-POP-007,ht,nom,Popilasyon 5 a 19 an
+IND-POP-007,ht,sens_interpretation,Se denominatè endikatè òf lekòl yo. Li kwaze ak moun ki poko gen 15 an : de yo pa adisyone.
+IND-POP-007,ht,unite,abitan
 IND-POP-008,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: the projection covers the whole country, with no blind spot. Comparable over time only against another COD-PS reference year built on the same boundaries."
+IND-POP-008,en,definition,"Estimated resident female population, all ages."
 IND-POP-008,en,limites_connues,"Every value here derives from a projection (COD-PS 2024), not a count: status E, never O — the last census dates from 2003. The source is five-year banded: no intermediate age boundary (5-18, median age) is drawn from it, since splitting a band would mean inventing a distribution. The top band is open-ended (80 and over). Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; its age counts inherit the anomaly and should not be read. Finally, the communal breakdown is more fragile than the total: the sex ratio at birth is biologically stable (101.8 men per 100 women nationally in the 0-4 band), yet it spreads from 89 to 116 across communes. An age-and-sex structure should be read with caution at commune level, and a single band's gap means nothing on its own."
-IND-POP-008,en,unite,inhabitants
+IND-POP-008,en,methode_calcul,"Column F_TL of the 2024 COD-PS, equal to the sum of the 17 female bands."
+IND-POP-008,en,nom,Female population
 IND-POP-008,en,sens_interpretation,Read alongside the male population; the gap between them shows in the sex ratio.
-IND-POP-008,es,nom,Población femenina
-IND-POP-008,es,definition,"Población residente estimada de sexo femenino, todas las edades."
-IND-POP-008,es,methode_calcul,"Columna F_TL del COD-PS 2024, igual a la suma de los 17 grupos femeninos."
+IND-POP-008,en,unite,inhabitants
 IND-POP-008,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: la proyección cubre todo el país, sin zonas ciegas. Comparable en el tiempo solo frente a otro año de referencia COD-PS construido sobre la misma división."
+IND-POP-008,es,definition,"Población residente estimada de sexo femenino, todas las edades."
 IND-POP-008,es,limites_connues,"Todos estos valores derivan de una proyección (COD-PS 2024), no de un conteo: estado E, nunca O — el último censo data de 2003. La fuente es quinquenal: no se extrae de ella ningún límite de edad intermedio (5-18 años, edad mediana), pues repartir un grupo exigiría inventar. El último grupo es abierto (80 años y más). Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; sus efectivos por edad heredan la anomalía y no deben leerse. Por último, la desagregación comunal es más frágil que el total: la razón de masculinidad al nacer es biológicamente estable (101,8 hombres por 100 mujeres a escala nacional en el grupo 0-4), pero varía de 89 a 116 según la comuna. Una estructura por edad y sexo debe leerse con cautela a nivel comunal, y la diferencia de un solo grupo no significa nada por sí sola."
-IND-POP-008,es,unite,habitantes
+IND-POP-008,es,methode_calcul,"Columna F_TL del COD-PS 2024, igual a la suma de los 17 grupos femeninos."
+IND-POP-008,es,nom,Población femenina
 IND-POP-008,es,sens_interpretation,Léase junto con la población masculina; la diferencia se lee en la razón de masculinidad.
-IND-POP-009,ht,nom,Popilasyon gason
-IND-POP-009,ht,definition,"Popilasyon rezidan estime ki se gason, tout laj konfonn."
-IND-POP-009,ht,methode_calcul,"Kolòn M_TL COD-PS 2024 la, ki egal sòm 17 tranch gason yo."
-IND-POP-009,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
-IND-POP-009,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
-IND-POP-009,ht,unite,abitan
-IND-POP-009,ht,sens_interpretation,Li li ansanm ak popilasyon fi a ; diferans lan parèt nan rapò gason pou 100 fi a.
-IND-POP-009,en,nom,Male population
-IND-POP-009,en,definition,"Estimated resident male population, all ages."
-IND-POP-009,en,methode_calcul,"Column M_TL of the 2024 COD-PS, equal to the sum of the 17 male bands."
+IND-POP-008,es,unite,habitantes
+IND-POP-008,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
+IND-POP-008,ht,definition,"Popilasyon rezidan estime ki se fi, tout laj konfonn."
+IND-POP-008,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
+IND-POP-008,ht,methode_calcul,"Kolòn F_TL COD-PS 2024 la, ki egal sòm 17 tranch fi yo."
+IND-POP-008,ht,nom,Popilasyon fi
+IND-POP-008,ht,sens_interpretation,Li li ansanm ak popilasyon gason an ; diferans lan parèt nan rapò gason pou 100 fi a.
+IND-POP-008,ht,unite,abitan
 IND-POP-009,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: the projection covers the whole country, with no blind spot. Comparable over time only against another COD-PS reference year built on the same boundaries."
+IND-POP-009,en,definition,"Estimated resident male population, all ages."
 IND-POP-009,en,limites_connues,"Every value here derives from a projection (COD-PS 2024), not a count: status E, never O — the last census dates from 2003. The source is five-year banded: no intermediate age boundary (5-18, median age) is drawn from it, since splitting a band would mean inventing a distribution. The top band is open-ended (80 and over). Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; its age counts inherit the anomaly and should not be read. Finally, the communal breakdown is more fragile than the total: the sex ratio at birth is biologically stable (101.8 men per 100 women nationally in the 0-4 band), yet it spreads from 89 to 116 across communes. An age-and-sex structure should be read with caution at commune level, and a single band's gap means nothing on its own."
-IND-POP-009,en,unite,inhabitants
+IND-POP-009,en,methode_calcul,"Column M_TL of the 2024 COD-PS, equal to the sum of the 17 male bands."
+IND-POP-009,en,nom,Male population
 IND-POP-009,en,sens_interpretation,Read alongside the female population; the gap between them shows in the sex ratio.
-IND-POP-009,es,nom,Población masculina
-IND-POP-009,es,definition,"Población residente estimada de sexo masculino, todas las edades."
-IND-POP-009,es,methode_calcul,"Columna M_TL del COD-PS 2024, igual a la suma de los 17 grupos masculinos."
+IND-POP-009,en,unite,inhabitants
 IND-POP-009,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: la proyección cubre todo el país, sin zonas ciegas. Comparable en el tiempo solo frente a otro año de referencia COD-PS construido sobre la misma división."
+IND-POP-009,es,definition,"Población residente estimada de sexo masculino, todas las edades."
 IND-POP-009,es,limites_connues,"Todos estos valores derivan de una proyección (COD-PS 2024), no de un conteo: estado E, nunca O — el último censo data de 2003. La fuente es quinquenal: no se extrae de ella ningún límite de edad intermedio (5-18 años, edad mediana), pues repartir un grupo exigiría inventar. El último grupo es abierto (80 años y más). Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; sus efectivos por edad heredan la anomalía y no deben leerse. Por último, la desagregación comunal es más frágil que el total: la razón de masculinidad al nacer es biológicamente estable (101,8 hombres por 100 mujeres a escala nacional en el grupo 0-4), pero varía de 89 a 116 según la comuna. Una estructura por edad y sexo debe leerse con cautela a nivel comunal, y la diferencia de un solo grupo no significa nada por sí sola."
-IND-POP-009,es,unite,habitantes
+IND-POP-009,es,methode_calcul,"Columna M_TL del COD-PS 2024, igual a la suma de los 17 grupos masculinos."
+IND-POP-009,es,nom,Población masculina
 IND-POP-009,es,sens_interpretation,Léase junto con la población femenina; la diferencia se lee en la razón de masculinidad.
-IND-POP-010,ht,nom,Pousantaj moun ki poko gen 15 an
-IND-POP-010,ht,definition,Pati moun ki poko gen 15 an nan popilasyon total la.
-IND-POP-010,ht,methode_calcul,IND-POP-003 ÷ IND-POP-001 × 100.
-IND-POP-010,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
-IND-POP-010,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
-IND-POP-010,ht,unite,%
-IND-POP-010,ht,sens_interpretation,"Wo = popilasyon an jèn. Li rekalkile sou total yo chak fwa w monte yon nivo, ou pa janm fè mwayèn pousantaj komin yo."
-IND-POP-010,en,nom,Share under 15
-IND-POP-010,en,definition,Share of the under-15 population in the total.
-IND-POP-010,en,methode_calcul,IND-POP-003 ÷ IND-POP-001 × 100.
+IND-POP-009,es,unite,habitantes
+IND-POP-009,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
+IND-POP-009,ht,definition,"Popilasyon rezidan estime ki se gason, tout laj konfonn."
+IND-POP-009,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
+IND-POP-009,ht,methode_calcul,"Kolòn M_TL COD-PS 2024 la, ki egal sòm 17 tranch gason yo."
+IND-POP-009,ht,nom,Popilasyon gason
+IND-POP-009,ht,sens_interpretation,Li li ansanm ak popilasyon fi a ; diferans lan parèt nan rapò gason pou 100 fi a.
+IND-POP-009,ht,unite,abitan
 IND-POP-010,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: the projection covers the whole country, with no blind spot. Comparable over time only against another COD-PS reference year built on the same boundaries."
+IND-POP-010,en,definition,Share of the under-15 population in the total.
 IND-POP-010,en,limites_connues,"Every value here derives from a projection (COD-PS 2024), not a count: status E, never O — the last census dates from 2003. The source is five-year banded: no intermediate age boundary (5-18, median age) is drawn from it, since splitting a band would mean inventing a distribution. The top band is open-ended (80 and over). Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; its age counts inherit the anomaly and should not be read. Finally, the communal breakdown is more fragile than the total: the sex ratio at birth is biologically stable (101.8 men per 100 women nationally in the 0-4 band), yet it spreads from 89 to 116 across communes. An age-and-sex structure should be read with caution at commune level, and a single band's gap means nothing on its own."
-IND-POP-010,en,unite,%
+IND-POP-010,en,methode_calcul,IND-POP-003 ÷ IND-POP-001 × 100.
+IND-POP-010,en,nom,Share under 15
 IND-POP-010,en,sens_interpretation,"High = young population. Recomputed from the totals at each level of aggregation, never by averaging communal shares."
-IND-POP-010,es,nom,Proporción de menores de 15 años
-IND-POP-010,es,definition,Proporción de menores de 15 años en la población total.
-IND-POP-010,es,methode_calcul,IND-POP-003 ÷ IND-POP-001 × 100.
+IND-POP-010,en,unite,%
 IND-POP-010,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: la proyección cubre todo el país, sin zonas ciegas. Comparable en el tiempo solo frente a otro año de referencia COD-PS construido sobre la misma división."
+IND-POP-010,es,definition,Proporción de menores de 15 años en la población total.
 IND-POP-010,es,limites_connues,"Todos estos valores derivan de una proyección (COD-PS 2024), no de un conteo: estado E, nunca O — el último censo data de 2003. La fuente es quinquenal: no se extrae de ella ningún límite de edad intermedio (5-18 años, edad mediana), pues repartir un grupo exigiría inventar. El último grupo es abierto (80 años y más). Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; sus efectivos por edad heredan la anomalía y no deben leerse. Por último, la desagregación comunal es más frágil que el total: la razón de masculinidad al nacer es biológicamente estable (101,8 hombres por 100 mujeres a escala nacional en el grupo 0-4), pero varía de 89 a 116 según la comuna. Una estructura por edad y sexo debe leerse con cautela a nivel comunal, y la diferencia de un solo grupo no significa nada por sí sola."
-IND-POP-010,es,unite,%
+IND-POP-010,es,methode_calcul,IND-POP-003 ÷ IND-POP-001 × 100.
+IND-POP-010,es,nom,Proporción de menores de 15 años
 IND-POP-010,es,sens_interpretation,"Alto = población joven. Se recalcula sobre los totales en cada agregación, nunca promediando las proporciones comunales."
-IND-POP-011,ht,nom,Pousantaj moun ki gen 65 an ak plis
-IND-POP-011,ht,definition,Pati moun ki gen 65 an oswa plis nan popilasyon total la.
-IND-POP-011,ht,methode_calcul,IND-POP-005 ÷ IND-POP-001 × 100.
-IND-POP-011,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
-IND-POP-011,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
-IND-POP-011,ht,unite,%
-IND-POP-011,ht,sens_interpretation,Wo = gen plis granmoun : plis bezwen swen ak akonpayman.
-IND-POP-011,en,nom,Share aged 65 and over
-IND-POP-011,en,definition,Share of people aged 65 and over in the total population.
-IND-POP-011,en,methode_calcul,IND-POP-005 ÷ IND-POP-001 × 100.
+IND-POP-010,es,unite,%
+IND-POP-010,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
+IND-POP-010,ht,definition,Pati moun ki poko gen 15 an nan popilasyon total la.
+IND-POP-010,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
+IND-POP-010,ht,methode_calcul,IND-POP-003 ÷ IND-POP-001 × 100.
+IND-POP-010,ht,nom,Pousantaj moun ki poko gen 15 an
+IND-POP-010,ht,sens_interpretation,"Wo = popilasyon an jèn. Li rekalkile sou total yo chak fwa w monte yon nivo, ou pa janm fè mwayèn pousantaj komin yo."
+IND-POP-010,ht,unite,%
 IND-POP-011,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: the projection covers the whole country, with no blind spot. Comparable over time only against another COD-PS reference year built on the same boundaries."
+IND-POP-011,en,definition,Share of people aged 65 and over in the total population.
 IND-POP-011,en,limites_connues,"Every value here derives from a projection (COD-PS 2024), not a count: status E, never O — the last census dates from 2003. The source is five-year banded: no intermediate age boundary (5-18, median age) is drawn from it, since splitting a band would mean inventing a distribution. The top band is open-ended (80 and over). Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; its age counts inherit the anomaly and should not be read. Finally, the communal breakdown is more fragile than the total: the sex ratio at birth is biologically stable (101.8 men per 100 women nationally in the 0-4 band), yet it spreads from 89 to 116 across communes. An age-and-sex structure should be read with caution at commune level, and a single band's gap means nothing on its own."
-IND-POP-011,en,unite,%
+IND-POP-011,en,methode_calcul,IND-POP-005 ÷ IND-POP-001 × 100.
+IND-POP-011,en,nom,Share aged 65 and over
 IND-POP-011,en,sens_interpretation,High = older population: greater health and care needs.
-IND-POP-011,es,nom,Proporción de 65 años y más
-IND-POP-011,es,definition,Proporción de personas de 65 años y más en la población total.
-IND-POP-011,es,methode_calcul,IND-POP-005 ÷ IND-POP-001 × 100.
+IND-POP-011,en,unite,%
 IND-POP-011,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: la proyección cubre todo el país, sin zonas ciegas. Comparable en el tiempo solo frente a otro año de referencia COD-PS construido sobre la misma división."
+IND-POP-011,es,definition,Proporción de personas de 65 años y más en la población total.
 IND-POP-011,es,limites_connues,"Todos estos valores derivan de una proyección (COD-PS 2024), no de un conteo: estado E, nunca O — el último censo data de 2003. La fuente es quinquenal: no se extrae de ella ningún límite de edad intermedio (5-18 años, edad mediana), pues repartir un grupo exigiría inventar. El último grupo es abierto (80 años y más). Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; sus efectivos por edad heredan la anomalía y no deben leerse. Por último, la desagregación comunal es más frágil que el total: la razón de masculinidad al nacer es biológicamente estable (101,8 hombres por 100 mujeres a escala nacional en el grupo 0-4), pero varía de 89 a 116 según la comuna. Una estructura por edad y sexo debe leerse con cautela a nivel comunal, y la diferencia de un solo grupo no significa nada por sí sola."
-IND-POP-011,es,unite,%
+IND-POP-011,es,methode_calcul,IND-POP-005 ÷ IND-POP-001 × 100.
+IND-POP-011,es,nom,Proporción de 65 años y más
 IND-POP-011,es,sens_interpretation,Alto = población más envejecida: mayores necesidades de salud y de cuidados.
-IND-POP-012,ht,nom,Rapò depandans demografik
-IND-POP-012,ht,definition,Kantite moun ki deyò tranch laj travay la pou chak 100 moun ki gen 15 a 64 an.
-IND-POP-012,ht,methode_calcul,IND-POP-006 ÷ IND-POP-004 × 100.
-IND-POP-012,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
-IND-POP-012,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
-IND-POP-012,ht,unite,depandan / 100 moun 15-64 an
-IND-POP-012,ht,sens_interpretation,Wo = chay demografik la lou sou tranch laj travay la. Se pa yon chay ekonomik nou mezire : se yon rapò ant laj.
-IND-POP-012,en,nom,Demographic dependency ratio
-IND-POP-012,en,definition,People outside the working-age band per 100 people aged 15 to 64.
-IND-POP-012,en,methode_calcul,IND-POP-006 ÷ IND-POP-004 × 100.
+IND-POP-011,es,unite,%
+IND-POP-011,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
+IND-POP-011,ht,definition,Pati moun ki gen 65 an oswa plis nan popilasyon total la.
+IND-POP-011,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
+IND-POP-011,ht,methode_calcul,IND-POP-005 ÷ IND-POP-001 × 100.
+IND-POP-011,ht,nom,Pousantaj moun ki gen 65 an ak plis
+IND-POP-011,ht,sens_interpretation,Wo = gen plis granmoun : plis bezwen swen ak akonpayman.
+IND-POP-011,ht,unite,%
 IND-POP-012,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: the projection covers the whole country, with no blind spot. Comparable over time only against another COD-PS reference year built on the same boundaries."
+IND-POP-012,en,definition,People outside the working-age band per 100 people aged 15 to 64.
 IND-POP-012,en,limites_connues,"Every value here derives from a projection (COD-PS 2024), not a count: status E, never O — the last census dates from 2003. The source is five-year banded: no intermediate age boundary (5-18, median age) is drawn from it, since splitting a band would mean inventing a distribution. The top band is open-ended (80 and over). Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; its age counts inherit the anomaly and should not be read. Finally, the communal breakdown is more fragile than the total: the sex ratio at birth is biologically stable (101.8 men per 100 women nationally in the 0-4 band), yet it spreads from 89 to 116 across communes. An age-and-sex structure should be read with caution at commune level, and a single band's gap means nothing on its own."
-IND-POP-012,en,unite,dependants / 100 people aged 15-64
+IND-POP-012,en,methode_calcul,IND-POP-006 ÷ IND-POP-004 × 100.
+IND-POP-012,en,nom,Demographic dependency ratio
 IND-POP-012,en,sens_interpretation,High = heavy demographic load on the working-age band. It is not a measured economic burden: it is a ratio between ages.
-IND-POP-012,es,nom,Razón de dependencia demográfica
-IND-POP-012,es,definition,Personas fuera del grupo de edad activa por cada 100 personas de 15 a 64 años.
-IND-POP-012,es,methode_calcul,IND-POP-006 ÷ IND-POP-004 × 100.
+IND-POP-012,en,unite,dependants / 100 people aged 15-64
 IND-POP-012,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: la proyección cubre todo el país, sin zonas ciegas. Comparable en el tiempo solo frente a otro año de referencia COD-PS construido sobre la misma división."
+IND-POP-012,es,definition,Personas fuera del grupo de edad activa por cada 100 personas de 15 a 64 años.
 IND-POP-012,es,limites_connues,"Todos estos valores derivan de una proyección (COD-PS 2024), no de un conteo: estado E, nunca O — el último censo data de 2003. La fuente es quinquenal: no se extrae de ella ningún límite de edad intermedio (5-18 años, edad mediana), pues repartir un grupo exigiría inventar. El último grupo es abierto (80 años y más). Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; sus efectivos por edad heredan la anomalía y no deben leerse. Por último, la desagregación comunal es más frágil que el total: la razón de masculinidad al nacer es biológicamente estable (101,8 hombres por 100 mujeres a escala nacional en el grupo 0-4), pero varía de 89 a 116 según la comuna. Una estructura por edad y sexo debe leerse con cautela a nivel comunal, y la diferencia de un solo grupo no significa nada por sí sola."
-IND-POP-012,es,unite,dependientes / 100 personas de 15-64 años
+IND-POP-012,es,methode_calcul,IND-POP-006 ÷ IND-POP-004 × 100.
+IND-POP-012,es,nom,Razón de dependencia demográfica
 IND-POP-012,es,sens_interpretation,Alto = fuerte carga demográfica sobre el grupo en edad activa. No es una carga económica medida: es una razón entre edades.
-IND-POP-013,ht,nom,Rapò gason pou 100 fi
-IND-POP-013,ht,definition,Kantite gason pou chak 100 fi.
-IND-POP-013,ht,methode_calcul,IND-POP-009 ÷ IND-POP-008 × 100.
-IND-POP-013,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
-IND-POP-013,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
-IND-POP-013,ht,unite,gason / 100 fi
-IND-POP-013,ht,sens_interpretation,Li rete bò 95-100 nan yon popilasyon ki pa gen gwo deplasman. Yon gwo eka vle di gen moun k ap deplase yon jan chwazi — oswa gen yon limit nan pwojeksyon an.
-IND-POP-013,en,nom,Sex ratio
-IND-POP-013,en,definition,Men per 100 women.
-IND-POP-013,en,methode_calcul,IND-POP-009 ÷ IND-POP-008 × 100.
+IND-POP-012,es,unite,dependientes / 100 personas de 15-64 años
+IND-POP-012,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
+IND-POP-012,ht,definition,Kantite moun ki deyò tranch laj travay la pou chak 100 moun ki gen 15 a 64 an.
+IND-POP-012,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
+IND-POP-012,ht,methode_calcul,IND-POP-006 ÷ IND-POP-004 × 100.
+IND-POP-012,ht,nom,Rapò depandans demografik
+IND-POP-012,ht,sens_interpretation,Wo = chay demografik la lou sou tranch laj travay la. Se pa yon chay ekonomik nou mezire : se yon rapò ant laj.
+IND-POP-012,ht,unite,depandan / 100 moun 15-64 an
 IND-POP-013,en,comparabilite,"Comparable across all 140 communes of the 2018 CNIGS reference: the projection covers the whole country, with no blind spot. Comparable over time only against another COD-PS reference year built on the same boundaries."
+IND-POP-013,en,definition,Men per 100 women.
 IND-POP-013,en,limites_connues,"Every value here derives from a projection (COD-PS 2024), not a count: status E, never O — the last census dates from 2003. The source is five-year banded: no intermediate age boundary (5-18, median age) is drawn from it, since splitting a band would mean inventing a distribution. The top band is open-ended (80 and over). Known source anomaly: COD-PS 2024 assigns 3,987 inhabitants to Gressier (HT0116), out of proportion with its neighbours; its age counts inherit the anomaly and should not be read. Finally, the communal breakdown is more fragile than the total: the sex ratio at birth is biologically stable (101.8 men per 100 women nationally in the 0-4 band), yet it spreads from 89 to 116 across communes. An age-and-sex structure should be read with caution at commune level, and a single band's gap means nothing on its own."
-IND-POP-013,en,unite,men / 100 women
+IND-POP-013,en,methode_calcul,IND-POP-009 ÷ IND-POP-008 × 100.
+IND-POP-013,en,nom,Sex ratio
 IND-POP-013,en,sens_interpretation,Close to 95-100 in a population without marked movement. A clear gap signals selective migration — or a limit of the projection.
-IND-POP-013,es,nom,Razón de masculinidad
-IND-POP-013,es,definition,Hombres por cada 100 mujeres.
-IND-POP-013,es,methode_calcul,IND-POP-009 ÷ IND-POP-008 × 100.
+IND-POP-013,en,unite,men / 100 women
 IND-POP-013,es,comparabilite,"Comparable entre las 140 comunas del referencial CNIGS 2018: la proyección cubre todo el país, sin zonas ciegas. Comparable en el tiempo solo frente a otro año de referencia COD-PS construido sobre la misma división."
+IND-POP-013,es,definition,Hombres por cada 100 mujeres.
 IND-POP-013,es,limites_connues,"Todos estos valores derivan de una proyección (COD-PS 2024), no de un conteo: estado E, nunca O — el último censo data de 2003. La fuente es quinquenal: no se extrae de ella ningún límite de edad intermedio (5-18 años, edad mediana), pues repartir un grupo exigiría inventar. El último grupo es abierto (80 años y más). Anomalía conocida de la fuente: COD-PS 2024 atribuye 3 987 habitantes a Gressier (HT0116), fuera de proporción con sus vecinas; sus efectivos por edad heredan la anomalía y no deben leerse. Por último, la desagregación comunal es más frágil que el total: la razón de masculinidad al nacer es biológicamente estable (101,8 hombres por 100 mujeres a escala nacional en el grupo 0-4), pero varía de 89 a 116 según la comuna. Una estructura por edad y sexo debe leerse con cautela a nivel comunal, y la diferencia de un solo grupo no significa nada por sí sola."
-IND-POP-013,es,unite,hombres / 100 mujeres
+IND-POP-013,es,methode_calcul,IND-POP-009 ÷ IND-POP-008 × 100.
+IND-POP-013,es,nom,Razón de masculinidad
 IND-POP-013,es,sens_interpretation,Cercana a 95-100 en una población sin movimientos marcados. Una brecha clara señala migración selectiva — o un límite de la proyección.
-IND-PRX-001,ht,nom,Enstabilite pri nan mache yo
-IND-PRX-001,ht,definition,Konbyen pri yo deplase yon mwa apre lòt nan mache komin nan pandan ane 2024.
-IND-PRX-001,ht,methode_calcul,"Koefisyan varyasyon pri detay yo an goud pou ane 2024 : pou chak koup (mache, pwodui) ki gen omwen 6 mwa releve, ekatip divize pa mwayèn fwa 100 ; valè komin nan se medyàn koefisyan sa yo. Medyàn, pa mwayèn : yon sèl pwodui ki fè dezòd pa dwe antrene tout komin nan."
-IND-PRX-001,ht,comparabilite,"Konparab ant nèf gwo mache lavil PAM nan swiv yo — yon gwo vil pou chak depatman — epi sèlman ant yo menm. Ou pa ka pote sa nan rès depatman an, ni nan zòn andeyò."
-IND-PRX-001,ht,limites_connues,"PAM pa pran yon echantiyon komin osaza : li kenbe yon rezo sentinèl ki gen yon gwo mache lavil pou chak depatman, nan 9 depatman sou 10 — Nip yo pa gen okenn. Nèf komin sa yo tout ladan yo nan 28 ki gen plis moun nan peyi a, e yo reprezante 22,8 % popilasyon an. Se donk pri lavil : ou pa ka pote yo nan komin andeyò, kote jan machandiz rive, chemen yo ak maj yo pa menm. Pri yo an goud, yo pa korije pou enflasyon — yon pati nan varyasyon an se enflasyon, se pa dezòd mache. Ane 2024 gen onz mwa, pa douz : septanm manke nan sous la. Seri nèf mache istorik yo kanpe 15 desanm 2024 ; sèl releve 2025 la se twa mache Jeremie ki louvri an jiyè, yo twò nèf pou mezire, nou pa mete yo nan kalkil la. Yon koefisyan varyasyon pa di si pri yo monte ou desann : li di konbyen yo deplase."
-IND-PRX-001,ht,unite,koefisyan varyasyon (%)
-IND-PRX-001,ht,sens_interpretation,"Wo = pri yo pa estab yon mwa apre lòt sou gwo mache lavil depatman an, sa peze sou fanmi yo menm lè nivo mwayèn nan pa chanje. Li li ansanm ak kantite pwodui yo swiv : yon enstabilite ki kalkile sou twa pwodui pa gen menm pwa ak youn ki kalkile sou dis."
-IND-PRX-001,en,nom,Price volatility in markets
-IND-PRX-001,en,definition,How much retail prices moved from month to month in the commune's markets during 2024.
-IND-PRX-001,en,methode_calcul,"Coefficient of variation of nominal retail prices in gourdes over 2024: for each (market, commodity) pair recorded at least 6 months, standard deviation ÷ mean × 100; the communal value is the median of those coefficients. Median, not mean: a single erratic commodity must not carry the commune."
+IND-POP-013,es,unite,hombres / 100 mujeres
+IND-POP-013,ht,comparabilite,"Konparab ant tout 140 komin referansyèl CNIGS 2018 la : pwojeksyon an kouvri tout peyi a, pa gen zòn avèg. Pou konpare nan tan, fòk gen yon lòt milezim COD-PS bati sou menm dekoupaj la."
+IND-POP-013,ht,definition,Kantite gason pou chak 100 fi.
+IND-POP-013,ht,limites_connues,"Tout valè sa yo soti nan yon pwojeksyon (COD-PS 2024), se pa yon kontaj : estati E, pa janm O — dènye resansman an date 2003. Sous la bay laj yo pa gwoup senk ane : nou pa rale okenn lòt bòn laj (5-18 an, laj medyàn) ladan l, paske pou sa fòk nou ta envante konbyen moun ki nan chak ane anndan yon tranch. Dènye tranch lan louvri (80 an ak plis). Gen yon anomali nan sous la pou moun konnen : COD-PS 2024 bay Gressier (HT0116) 3 987 abitan, yon chif ki pa nan lòd vwazen l yo ; efektif pa laj li yo pote menm anomali a, fòk moun pa li yo. Pou fini, dekoupaj pa komin lan pi frajil pase total la : lè timoun fèt, rapò gason ak fi a estab (101,8 gason pou 100 fi nan tout peyi a sou tranch 0-4 la), men li ale depi 89 rive 116 selon komin. Fòk moun li estrikti laj ak sèks la ak anpil prekosyon nan nivo komin, e eka yon sèl tranch pou kont li pa vle di anyen."
+IND-POP-013,ht,methode_calcul,IND-POP-009 ÷ IND-POP-008 × 100.
+IND-POP-013,ht,nom,Rapò gason pou 100 fi
+IND-POP-013,ht,sens_interpretation,Li rete bò 95-100 nan yon popilasyon ki pa gen gwo deplasman. Yon gwo eka vle di gen moun k ap deplase yon jan chwazi — oswa gen yon limit nan pwojeksyon an.
+IND-POP-013,ht,unite,gason / 100 fi
 IND-PRX-001,en,comparabilite,Comparable across the nine urban markets the WFP monitors — one major city per department — and among those only. Transposable neither to the rest of the department nor to rural areas.
+IND-PRX-001,en,definition,How much retail prices moved from month to month in the commune's markets during 2024.
 IND-PRX-001,en,limites_connues,"The WFP does not draw a sample of communes: it runs a sentinel network of one main urban market per department, in 9 departments out of 10 — Nippes has none. The nine monitored communes are all among the 28 most populated in the country and account for 22,8 % of the population. These are therefore urban retail prices: they do not transpose to rural communes, where supply, routes and margins differ. Prices are nominal, in gourdes, not deflated — part of the observed variation is inflation, not market instability. 2024 has eleven months, not twelve: September is missing from the source. The nine historic markets stop on 15 December 2024; the only 2025 reading covers three Jérémie markets opened in July, too recent to measure, and is excluded. A coefficient of variation does not say whether prices rose or fell: it says how much they moved."
-IND-PRX-001,en,unite,coefficient of variation (%)
+IND-PRX-001,en,methode_calcul,"Coefficient of variation of nominal retail prices in gourdes over 2024: for each (market, commodity) pair recorded at least 6 months, standard deviation ÷ mean × 100; the communal value is the median of those coefficients. Median, not mean: a single erratic commodity must not carry the commune."
+IND-PRX-001,en,nom,Price volatility in markets
 IND-PRX-001,en,sens_interpretation,"High = prices unstable from month to month on the department's urban market, which weighs on households even when the average level does not change. Read alongside the number of commodities monitored: volatility computed on three does not carry the weight of one computed on ten."
-IND-PRX-001,es,nom,Volatilidad de los precios en los mercados
-IND-PRX-001,es,definition,Cuánto se movieron los precios minoristas de un mes a otro en los mercados de la comuna durante 2024.
-IND-PRX-001,es,methode_calcul,"Coeficiente de variación de los precios minoristas nominales en gourdes durante 2024: para cada par (mercado, producto) con al menos 6 meses registrados, desviación típica ÷ media × 100; el valor comunal es la mediana de esos coeficientes. Mediana y no media: un solo producto errático no debe arrastrar la comuna."
+IND-PRX-001,en,unite,coefficient of variation (%)
 IND-PRX-001,es,comparabilite,Comparable entre los nueve mercados urbanos que el PMA monitorea — una ciudad principal por departamento — y solo entre ellos. No transponible al resto del departamento ni al medio rural.
+IND-PRX-001,es,definition,Cuánto se movieron los precios minoristas de un mes a otro en los mercados de la comuna durante 2024.
 IND-PRX-001,es,limites_connues,"El PMA no extrae una muestra de comunas: mantiene una red centinela de un mercado urbano principal por departamento, en 9 departamentos de 10 — Nippes no tiene ninguno. Las nueve comunas monitoreadas figuran todas entre las 28 más pobladas del país y reúnen el 22,8 % de la población. Son por tanto precios urbanos minoristas: no se transponen a las comunas rurales, donde el abastecimiento, los circuitos y los márgenes difieren. Los precios son nominales, en gourdes, sin deflactar — parte de la variación observada es inflación, no inestabilidad del mercado. 2024 tiene once meses y no doce: septiembre falta en la fuente. La serie de los nueve mercados históricos se detiene el 15 de diciembre de 2024; el único registro de 2025 cubre tres mercados de Jérémie abiertos en julio, demasiado recientes para medirse, y queda excluido. Un coeficiente de variación no dice si los precios subieron o bajaron: dice cuánto se movieron."
-IND-PRX-001,es,unite,coeficiente de variación (%)
+IND-PRX-001,es,methode_calcul,"Coeficiente de variación de los precios minoristas nominales en gourdes durante 2024: para cada par (mercado, producto) con al menos 6 meses registrados, desviación típica ÷ media × 100; el valor comunal es la mediana de esos coeficientes. Mediana y no media: un solo producto errático no debe arrastrar la comuna."
+IND-PRX-001,es,nom,Volatilidad de los precios en los mercados
 IND-PRX-001,es,sens_interpretation,"Alto = precios inestables de un mes a otro en el mercado urbano del departamento, lo que pesa sobre los hogares aunque el nivel medio no cambie. Léase junto con el número de productos seguidos: una volatilidad calculada sobre tres no tiene el peso de una calculada sobre diez."
-IND-QUA-001,ht,nom,Nòt konplè administratif
-IND-QUA-001,ht,definition,Pòsyon dimansyon backbone yo ki dokimante pou komin nan.
-IND-QUA-001,ht,methode_calcul,"Senk dimansyon teste : sipèfisi konnen, lokalite resanse, omwen yon etablisman sante resanse, omwen yon lekòl resanse, omwen yon mache swiv. Nòt = dimansyon ki ranpli ÷ 5 × 100."
-IND-QUA-001,ht,comparabilite,Konparab ant komin nan menm vèsyon backbone la.
-IND-QUA-001,ht,limites_connues,"Li mezire sa NOU konnen sou komin nan, se pa reyalite komin nan. Yon nòt ki fèb montre yon zòn nou pa dokimante."
-IND-QUA-001,ht,unite,%
-IND-QUA-001,ht,sens_interpretation,"Wo = komin nan byen dokimante. Ba = nenpòt analiz la ap frajil, e sa se yon enfòmasyon nan tèt li."
-IND-QUA-001,en,nom,Administrative completeness score
-IND-QUA-001,en,definition,Share of backbone dimensions documented for the commune.
-IND-QUA-001,en,methode_calcul,"Five dimensions tested: area known, localities recorded, at least one health facility recorded, at least one school recorded, at least one market monitored. Score = filled dimensions ÷ 5 × 100."
+IND-PRX-001,es,unite,coeficiente de variación (%)
+IND-PRX-001,ht,comparabilite,"Konparab ant nèf gwo mache lavil PAM nan swiv yo — yon gwo vil pou chak depatman — epi sèlman ant yo menm. Ou pa ka pote sa nan rès depatman an, ni nan zòn andeyò."
+IND-PRX-001,ht,definition,Konbyen pri yo deplase yon mwa apre lòt nan mache komin nan pandan ane 2024.
+IND-PRX-001,ht,limites_connues,"PAM pa pran yon echantiyon komin osaza : li kenbe yon rezo sentinèl ki gen yon gwo mache lavil pou chak depatman, nan 9 depatman sou 10 — Nip yo pa gen okenn. Nèf komin sa yo tout ladan yo nan 28 ki gen plis moun nan peyi a, e yo reprezante 22,8 % popilasyon an. Se donk pri lavil : ou pa ka pote yo nan komin andeyò, kote jan machandiz rive, chemen yo ak maj yo pa menm. Pri yo an goud, yo pa korije pou enflasyon — yon pati nan varyasyon an se enflasyon, se pa dezòd mache. Ane 2024 gen onz mwa, pa douz : septanm manke nan sous la. Seri nèf mache istorik yo kanpe 15 desanm 2024 ; sèl releve 2025 la se twa mache Jeremie ki louvri an jiyè, yo twò nèf pou mezire, nou pa mete yo nan kalkil la. Yon koefisyan varyasyon pa di si pri yo monte ou desann : li di konbyen yo deplase."
+IND-PRX-001,ht,methode_calcul,"Koefisyan varyasyon pri detay yo an goud pou ane 2024 : pou chak koup (mache, pwodui) ki gen omwen 6 mwa releve, ekatip divize pa mwayèn fwa 100 ; valè komin nan se medyàn koefisyan sa yo. Medyàn, pa mwayèn : yon sèl pwodui ki fè dezòd pa dwe antrene tout komin nan."
+IND-PRX-001,ht,nom,Enstabilite pri nan mache yo
+IND-PRX-001,ht,sens_interpretation,"Wo = pri yo pa estab yon mwa apre lòt sou gwo mache lavil depatman an, sa peze sou fanmi yo menm lè nivo mwayèn nan pa chanje. Li li ansanm ak kantite pwodui yo swiv : yon enstabilite ki kalkile sou twa pwodui pa gen menm pwa ak youn ki kalkile sou dis."
+IND-PRX-001,ht,unite,koefisyan varyasyon (%)
 IND-QUA-001,en,comparabilite,Comparable between communes of the same backbone version.
+IND-QUA-001,en,definition,Share of backbone dimensions documented for the commune.
 IND-QUA-001,en,limites_connues,"Measures what WE know about the commune, not the reality of the commune. A low score marks a documentary blind spot."
-IND-QUA-001,en,unite,%
+IND-QUA-001,en,methode_calcul,"Five dimensions tested: area known, localities recorded, at least one health facility recorded, at least one school recorded, at least one market monitored. Score = filled dimensions ÷ 5 × 100."
+IND-QUA-001,en,nom,Administrative completeness score
 IND-QUA-001,en,sens_interpretation,"High = well-documented commune. Low = any analysis there will be fragile, and that is information in itself."
-IND-QUA-001,es,nom,Índice de completitud administrativa
-IND-QUA-001,es,definition,Proporción de las dimensiones del backbone documentadas para la comuna.
-IND-QUA-001,es,methode_calcul,"Cinco dimensiones evaluadas: superficie conocida, localidades registradas, al menos un establecimiento de salud registrado, al menos una escuela registrada, al menos un mercado con seguimiento. Índice = dimensiones informadas ÷ 5 × 100."
+IND-QUA-001,en,unite,%
 IND-QUA-001,es,comparabilite,Comparable entre comunas de la misma versión del backbone.
+IND-QUA-001,es,definition,Proporción de las dimensiones del backbone documentadas para la comuna.
 IND-QUA-001,es,limites_connues,"Mide lo que NOSOTROS sabemos de la comuna, no la realidad de la comuna. Un índice bajo señala un punto ciego documental."
-IND-QUA-001,es,unite,%
+IND-QUA-001,es,methode_calcul,"Cinco dimensiones evaluadas: superficie conocida, localidades registradas, al menos un establecimiento de salud registrado, al menos una escuela registrada, al menos un mercado con seguimiento. Índice = dimensiones informadas ÷ 5 × 100."
+IND-QUA-001,es,nom,Índice de completitud administrativa
 IND-QUA-001,es,sens_interpretation,"Alto = comuna bien documentada. Bajo = todo análisis será frágil allí, y eso ya es información."
-IND-SAN-001,ht,nom,Etablisman sante ki resanse
-IND-SAN-001,ht,definition,Kantite etablisman sante k ap fonksyone yo resanse.
-IND-SAN-001,ht,methode_calcul,"Konte nan baz referans òganizasyon yo, kategori Sante."
-IND-SAN-001,ht,comparabilite,PA konparab ant komin ki deyò zòn kouvri a : sous la kouvri sèlman 14 komin sou 140.
-IND-SAN-001,ht,limites_connues,"KOUVÈTI PASYÈL — 14 komin (Latibonit, Sant, Nò, Lwès). Yon komin ki absan pa gen zewo etablisman : li pa kouvri, se poutèt sa estati a se N. Resansman 2023."
-IND-SAN-001,ht,unite,kantite
-IND-SAN-001,ht,sens_interpretation,"Pi wo = òf la pi dans, men fòk ou rapòte l ak popilasyon an."
-IND-SAN-001,en,nom,Recorded health facilities
-IND-SAN-001,en,definition,Number of operating health facilities recorded.
-IND-SAN-001,en,methode_calcul,"Count in the organisations referential, Health category."
+IND-QUA-001,es,unite,%
+IND-QUA-001,ht,comparabilite,Konparab ant komin nan menm vèsyon backbone la.
+IND-QUA-001,ht,definition,Pòsyon dimansyon backbone yo ki dokimante pou komin nan.
+IND-QUA-001,ht,limites_connues,"Li mezire sa NOU konnen sou komin nan, se pa reyalite komin nan. Yon nòt ki fèb montre yon zòn nou pa dokimante."
+IND-QUA-001,ht,methode_calcul,"Senk dimansyon teste : sipèfisi konnen, lokalite resanse, omwen yon etablisman sante resanse, omwen yon lekòl resanse, omwen yon mache swiv. Nòt = dimansyon ki ranpli ÷ 5 × 100."
+IND-QUA-001,ht,nom,Nòt konplè administratif
+IND-QUA-001,ht,sens_interpretation,"Wo = komin nan byen dokimante. Ba = nenpòt analiz la ap frajil, e sa se yon enfòmasyon nan tèt li."
+IND-QUA-001,ht,unite,%
 IND-SAN-001,en,comparabilite,NOT comparable between communes outside the covered area: the source covers only 14 communes out of 140.
+IND-SAN-001,en,definition,Number of operating health facilities recorded.
 IND-SAN-001,en,limites_connues,"PARTIAL COVERAGE — 14 communes (Artibonite, Centre, Nord, Ouest). An absent commune does not have zero facilities: it is not covered, hence status N. 2023 census."
-IND-SAN-001,en,unite,count
+IND-SAN-001,en,methode_calcul,"Count in the organisations referential, Health category."
+IND-SAN-001,en,nom,Recorded health facilities
 IND-SAN-001,en,sens_interpretation,"Higher = denser provision, to be related to the population."
-IND-SAN-001,es,nom,Establecimientos de salud registrados
-IND-SAN-001,es,definition,Número de establecimientos de salud en funcionamiento registrados.
-IND-SAN-001,es,methode_calcul,"Recuento en el referencial de organizaciones, categoría Salud."
+IND-SAN-001,en,unite,count
 IND-SAN-001,es,comparabilite,NO comparable entre comunas fuera de la zona cubierta: la fuente solo cubre 14 comunas de 140.
+IND-SAN-001,es,definition,Número de establecimientos de salud en funcionamiento registrados.
 IND-SAN-001,es,limites_connues,"COBERTURA PARCIAL — 14 comunas (Artibonite, Centre, Nord, Ouest). Una comuna ausente no tiene cero establecimientos: no está cubierta, de ahí el estado N. Censo de 2023."
-IND-SAN-001,es,unite,número
+IND-SAN-001,es,methode_calcul,"Recuento en el referencial de organizaciones, categoría Salud."
+IND-SAN-001,es,nom,Establecimientos de salud registrados
 IND-SAN-001,es,sens_interpretation,"Más alto = oferta más densa, a relacionar con la población."
-IND-SAN-002,ht,nom,Pòsyon etablisman sante leta
-IND-SAN-002,ht,definition,Pòsyon etablisman sante ki gen estati leta.
-IND-SAN-002,ht,methode_calcul,Etablisman ki gen estati « Public » ÷ total ki resanse × 100.
-IND-SAN-002,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
-IND-SAN-002,ht,limites_connues,Estati « Mikst » pa konte kòm leta.
-IND-SAN-002,ht,unite,%
-IND-SAN-002,ht,sens_interpretation,"Net : li dekri jan òf la òganize, se pa kalite l."
-IND-SAN-002,en,nom,Share of public health facilities
-IND-SAN-002,en,definition,Share of health facilities with public status.
-IND-SAN-002,en,methode_calcul,Facilities with “Public” status ÷ total recorded × 100.
+IND-SAN-001,es,unite,número
+IND-SAN-001,ht,comparabilite,PA konparab ant komin ki deyò zòn kouvri a : sous la kouvri sèlman 14 komin sou 140.
+IND-SAN-001,ht,definition,Kantite etablisman sante k ap fonksyone yo resanse.
+IND-SAN-001,ht,limites_connues,"KOUVÈTI PASYÈL — 14 komin (Latibonit, Sant, Nò, Lwès). Yon komin ki absan pa gen zewo etablisman : li pa kouvri, se poutèt sa estati a se N. Resansman 2023."
+IND-SAN-001,ht,methode_calcul,"Konte nan baz referans òganizasyon yo, kategori Sante."
+IND-SAN-001,ht,nom,Etablisman sante ki resanse
+IND-SAN-001,ht,sens_interpretation,"Pi wo = òf la pi dans, men fòk ou rapòte l ak popilasyon an."
+IND-SAN-001,ht,unite,kantite
 IND-SAN-002,en,comparabilite,Comparable between communes of the same reference year.
+IND-SAN-002,en,definition,Share of health facilities with public status.
 IND-SAN-002,en,limites_connues,“Mixed” status is counted outside public.
-IND-SAN-002,en,unite,%
+IND-SAN-002,en,methode_calcul,Facilities with “Public” status ÷ total recorded × 100.
+IND-SAN-002,en,nom,Share of public health facilities
 IND-SAN-002,en,sens_interpretation,"Neutral: describes the structure of provision, not its quality."
-IND-SAN-002,es,nom,Proporción de establecimientos de salud públicos
-IND-SAN-002,es,definition,Proporción de establecimientos de salud de estatus público.
-IND-SAN-002,es,methode_calcul,Establecimientos con estatus «Público» ÷ total registrado × 100.
+IND-SAN-002,en,unite,%
 IND-SAN-002,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-SAN-002,es,definition,Proporción de establecimientos de salud de estatus público.
 IND-SAN-002,es,limites_connues,El estatus «Mixto» se cuenta fuera de público.
-IND-SAN-002,es,unite,%
+IND-SAN-002,es,methode_calcul,Establecimientos con estatus «Público» ÷ total registrado × 100.
+IND-SAN-002,es,nom,Proporción de establecimientos de salud públicos
 IND-SAN-002,es,sens_interpretation,"Neutro: describe la estructura de la oferta, no su calidad."
-IND-SAN-003,ht,nom,Konplè jeyokodaj sante a
-IND-SAN-003,ht,definition,Pòsyon etablisman sante kote sous la bay kowòdone.
-IND-SAN-003,ht,methode_calcul,Etablisman ki jeyokode ÷ total ki resanse × 100.
-IND-SAN-003,ht,comparabilite,Konparab ant komin.
-IND-SAN-003,ht,limites_connues,"Li mezire kalite SOUS la, se pa kalite sistèm sante a."
-IND-SAN-003,ht,unite,%
-IND-SAN-003,ht,sens_interpretation,Yon valè ki ba vle di nenpòt analiz espasyal sou sante nan komin sa a ap frajil.
-IND-SAN-003,en,nom,Health geocoding completeness
-IND-SAN-003,en,definition,Share of health facilities for which the source provides coordinates.
-IND-SAN-003,en,methode_calcul,Geocoded facilities ÷ total recorded × 100.
+IND-SAN-002,es,unite,%
+IND-SAN-002,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-SAN-002,ht,definition,Pòsyon etablisman sante ki gen estati leta.
+IND-SAN-002,ht,limites_connues,Estati « Mikst » pa konte kòm leta.
+IND-SAN-002,ht,methode_calcul,Etablisman ki gen estati « Public » ÷ total ki resanse × 100.
+IND-SAN-002,ht,nom,Pòsyon etablisman sante leta
+IND-SAN-002,ht,sens_interpretation,"Net : li dekri jan òf la òganize, se pa kalite l."
+IND-SAN-002,ht,unite,%
 IND-SAN-003,en,comparabilite,Comparable between communes.
+IND-SAN-003,en,definition,Share of health facilities for which the source provides coordinates.
 IND-SAN-003,en,limites_connues,"Measures the quality of the SOURCE, not of the health system."
-IND-SAN-003,en,unite,%
+IND-SAN-003,en,methode_calcul,Geocoded facilities ÷ total recorded × 100.
+IND-SAN-003,en,nom,Health geocoding completeness
 IND-SAN-003,en,sens_interpretation,A low value flags a commune where any spatial health analysis will be fragile.
-IND-SAN-003,es,nom,Completitud de la geocodificación sanitaria
-IND-SAN-003,es,definition,Proporción de establecimientos de salud para los que la fuente aporta coordenadas.
-IND-SAN-003,es,methode_calcul,Establecimientos geocodificados ÷ total registrado × 100.
+IND-SAN-003,en,unite,%
 IND-SAN-003,es,comparabilite,Comparable entre comunas.
+IND-SAN-003,es,definition,Proporción de establecimientos de salud para los que la fuente aporta coordenadas.
 IND-SAN-003,es,limites_connues,"Mide la calidad de la FUENTE, no la del sistema de salud."
-IND-SAN-003,es,unite,%
+IND-SAN-003,es,methode_calcul,Establecimientos geocodificados ÷ total registrado × 100.
+IND-SAN-003,es,nom,Completitud de la geocodificación sanitaria
 IND-SAN-003,es,sens_interpretation,Un valor bajo señala una comuna donde todo análisis espacial sanitario será frágil.
-IND-SAN-004,ht,nom,Etablisman sante leta
-IND-SAN-004,ht,definition,Kantite etablisman sante ki gen estati leta.
-IND-SAN-004,ht,methode_calcul,Konte etablisman kote estati sous la se « Public ».
-IND-SAN-004,ht,comparabilite,Menm limit kouvèti ak etablisman ki resanse yo.
-IND-SAN-004,ht,limites_connues,Estati « Mikst » pa konte kòm leta.
-IND-SAN-004,ht,unite,kantite
-IND-SAN-004,ht,sens_interpretation,Se numeratè pòsyon etablisman leta yo ; nou pibliye l apa pou nenpòt moun ka rekalkile to a nan nenpòt nivo.
-IND-SAN-004,en,nom,Public health facilities
-IND-SAN-004,en,definition,Number of health facilities with public status.
-IND-SAN-004,en,methode_calcul,Count of facilities whose source status is “Public”.
+IND-SAN-003,es,unite,%
+IND-SAN-003,ht,comparabilite,Konparab ant komin.
+IND-SAN-003,ht,definition,Pòsyon etablisman sante kote sous la bay kowòdone.
+IND-SAN-003,ht,limites_connues,"Li mezire kalite SOUS la, se pa kalite sistèm sante a."
+IND-SAN-003,ht,methode_calcul,Etablisman ki jeyokode ÷ total ki resanse × 100.
+IND-SAN-003,ht,nom,Konplè jeyokodaj sante a
+IND-SAN-003,ht,sens_interpretation,Yon valè ki ba vle di nenpòt analiz espasyal sou sante nan komin sa a ap frajil.
+IND-SAN-003,ht,unite,%
 IND-SAN-004,en,comparabilite,Same coverage limitations as recorded facilities.
+IND-SAN-004,en,definition,Number of health facilities with public status.
 IND-SAN-004,en,limites_connues,“Mixed” status is not counted as public.
-IND-SAN-004,en,unite,count
+IND-SAN-004,en,methode_calcul,Count of facilities whose source status is “Public”.
+IND-SAN-004,en,nom,Public health facilities
 IND-SAN-004,en,sens_interpretation,Numerator of the share of public facilities; published separately so that this rate can be recomputed at any level.
-IND-SAN-004,es,nom,Establecimientos de salud públicos
-IND-SAN-004,es,definition,Número de establecimientos de salud de estatus público.
-IND-SAN-004,es,methode_calcul,Recuento de establecimientos cuyo estatus de origen es «Público».
+IND-SAN-004,en,unite,count
 IND-SAN-004,es,comparabilite,Mismas limitaciones de cobertura que los establecimientos registrados.
+IND-SAN-004,es,definition,Número de establecimientos de salud de estatus público.
 IND-SAN-004,es,limites_connues,El estatus «Mixto» no se cuenta como público.
-IND-SAN-004,es,unite,número
+IND-SAN-004,es,methode_calcul,Recuento de establecimientos cuyo estatus de origen es «Público».
+IND-SAN-004,es,nom,Establecimientos de salud públicos
 IND-SAN-004,es,sens_interpretation,Numerador de la proporción de establecimientos públicos; se publica por separado para que esta tasa pueda recalcularse a cualquier nivel.
-IND-SAN-005,ht,nom,Etablisman sante ki jeyokode
-IND-SAN-005,ht,definition,Kantite etablisman sante kote sous la bay kowòdone.
-IND-SAN-005,ht,methode_calcul,Konte etablisman ki gen latitid ak lonjitid ranpli.
-IND-SAN-005,ht,comparabilite,Menm limit kouvèti ak etablisman ki resanse yo.
-IND-SAN-005,ht,limites_connues,"Li mezire kalite sous la, se pa kalite sistèm sante a."
-IND-SAN-005,ht,unite,kantite
-IND-SAN-005,ht,sens_interpretation,Se numeratè konplè jeyokodaj la.
-IND-SAN-005,en,nom,Geocoded health facilities
-IND-SAN-005,en,definition,Number of health facilities for which the source provides coordinates.
-IND-SAN-005,en,methode_calcul,Count of facilities with latitude and longitude filled in.
+IND-SAN-004,es,unite,número
+IND-SAN-004,ht,comparabilite,Menm limit kouvèti ak etablisman ki resanse yo.
+IND-SAN-004,ht,definition,Kantite etablisman sante ki gen estati leta.
+IND-SAN-004,ht,limites_connues,Estati « Mikst » pa konte kòm leta.
+IND-SAN-004,ht,methode_calcul,Konte etablisman kote estati sous la se « Public ».
+IND-SAN-004,ht,nom,Etablisman sante leta
+IND-SAN-004,ht,sens_interpretation,Se numeratè pòsyon etablisman leta yo ; nou pibliye l apa pou nenpòt moun ka rekalkile to a nan nenpòt nivo.
+IND-SAN-004,ht,unite,kantite
 IND-SAN-005,en,comparabilite,Same coverage limitations as recorded facilities.
+IND-SAN-005,en,definition,Number of health facilities for which the source provides coordinates.
 IND-SAN-005,en,limites_connues,"Measures the quality of the source, not of the health system."
-IND-SAN-005,en,unite,count
+IND-SAN-005,en,methode_calcul,Count of facilities with latitude and longitude filled in.
+IND-SAN-005,en,nom,Geocoded health facilities
 IND-SAN-005,en,sens_interpretation,Numerator of geocoding completeness.
-IND-SAN-005,es,nom,Establecimientos de salud geocodificados
-IND-SAN-005,es,definition,Número de establecimientos de salud para los que la fuente aporta coordenadas.
-IND-SAN-005,es,methode_calcul,Recuento de establecimientos con latitud y longitud informadas.
+IND-SAN-005,en,unite,count
 IND-SAN-005,es,comparabilite,Mismas limitaciones de cobertura que los establecimientos registrados.
+IND-SAN-005,es,definition,Número de establecimientos de salud para los que la fuente aporta coordenadas.
 IND-SAN-005,es,limites_connues,"Mide la calidad de la fuente, no la del sistema de salud."
-IND-SAN-005,es,unite,número
+IND-SAN-005,es,methode_calcul,Recuento de establecimientos con latitud y longitud informadas.
+IND-SAN-005,es,nom,Establecimientos de salud geocodificados
 IND-SAN-005,es,sens_interpretation,Numerador de la completitud de la geocodificación.
-IND-SAN-010,ht,nom,Etablisman sante pou chak 10 000 moun
-IND-SAN-010,ht,definition,Kantite etablisman sante ki anrejistre divize pa popilasyon komin nan.
-IND-SAN-010,ht,methode_calcul,IND-SAN-001 ÷ IND-POP-001 × 10 000.
-IND-SAN-010,ht,comparabilite,"Konparab ant 14 komin sous OCHA 2023 la kouvri yo, epi sèlman ant yo menm."
-IND-SAN-010,ht,limites_connues,"Nimeratè a kouvri sèlman 14 komin sou 140 : rapò a dekri etablisman yo anrejistre yo, se pa òf swen an. Denominatè a se yon pwojeksyon (COD-PS 2024, estati E), e milezim yo pa menm — 2023 pou etablisman, 2024 pou popilasyon. Yon dispansè ak yon lopital konte chak pou youn : endikatè a pa mezire ni kapasite, ni materyèl, ni pèsonèl. Eka nou wè ant 14 komin ki kouvri yo ale depi 0,61 rive 7,12 : yon diferans konsa montre dabò ke resansman an pa t fèt menm jan toupatou, li pa montre òf la."
-IND-SAN-010,ht,unite,etablisman / 10 000 moun
-IND-SAN-010,ht,sens_interpretation,"Wo = anpil etablisman anrejistre parapò ak popilasyon an. Li li ansanm ak tan pou rive, yon rapò kominal pa ka kenbe sa."
-IND-SAN-010,en,nom,"Health facilities per 10,000 inhabitants"
-IND-SAN-010,en,definition,Number of recorded health facilities per inhabitant of the commune.
-IND-SAN-010,en,methode_calcul,"IND-SAN-001 ÷ IND-POP-001 × 10,000."
+IND-SAN-005,es,unite,número
+IND-SAN-005,ht,comparabilite,Menm limit kouvèti ak etablisman ki resanse yo.
+IND-SAN-005,ht,definition,Kantite etablisman sante kote sous la bay kowòdone.
+IND-SAN-005,ht,limites_connues,"Li mezire kalite sous la, se pa kalite sistèm sante a."
+IND-SAN-005,ht,methode_calcul,Konte etablisman ki gen latitid ak lonjitid ranpli.
+IND-SAN-005,ht,nom,Etablisman sante ki jeyokode
+IND-SAN-005,ht,sens_interpretation,Se numeratè konplè jeyokodaj la.
+IND-SAN-005,ht,unite,kantite
 IND-SAN-010,en,comparabilite,"Comparable across the 14 communes covered by the 2023 OCHA source, and among those only."
+IND-SAN-010,en,definition,Number of recorded health facilities per inhabitant of the commune.
 IND-SAN-010,en,limites_connues,"The numerator covers only 14 of 140 communes: the ratio describes recorded facilities, not the supply of care. The denominator is a projection (COD-PS 2024, status E), and the reference years differ — 2023 for facilities, 2024 for population. A health post and a hospital each count as one: the indicator measures neither capacity, nor equipment, nor staff. Across the 14 covered communes the values range from 0.61 to 7.12: such a spread reflects the uneven completeness of the count first, not the actual provision."
-IND-SAN-010,en,unite,"facilities / 10,000 inhab."
+IND-SAN-010,en,methode_calcul,"IND-SAN-001 ÷ IND-POP-001 × 10,000."
+IND-SAN-010,en,nom,"Health facilities per 10,000 inhabitants"
 IND-SAN-010,en,sens_interpretation,"High = many recorded facilities relative to population. Read alongside travel time, which a communal ratio cannot capture."
-IND-SAN-010,es,nom,Establecimientos de salud por 10 000 habitantes
-IND-SAN-010,es,definition,Número de establecimientos de salud registrados por habitante de la comuna.
-IND-SAN-010,es,methode_calcul,IND-SAN-001 ÷ IND-POP-001 × 10 000.
+IND-SAN-010,en,unite,"facilities / 10,000 inhab."
 IND-SAN-010,es,comparabilite,"Comparable entre las 14 comunas cubiertas por la fuente OCHA 2023, y solo entre ellas."
+IND-SAN-010,es,definition,Número de establecimientos de salud registrados por habitante de la comuna.
 IND-SAN-010,es,limites_connues,"El numerador cubre solo 14 de 140 comunas: la razón describe los establecimientos registrados, no la oferta de atención. El denominador es una proyección (COD-PS 2024, estado E), y los años difieren — 2023 para los establecimientos, 2024 para la población. Un dispensario y un hospital cuentan cada uno por uno: el indicador no mide ni capacidad, ni equipamiento, ni personal. Entre las 14 comunas cubiertas los valores van de 0,61 a 7,12: una diferencia así refleja ante todo la desigual exhaustividad del censo, no la oferta real."
-IND-SAN-010,es,unite,establecimientos / 10 000 hab.
+IND-SAN-010,es,methode_calcul,IND-SAN-001 ÷ IND-POP-001 × 10 000.
+IND-SAN-010,es,nom,Establecimientos de salud por 10 000 habitantes
 IND-SAN-010,es,sens_interpretation,"Alto = muchos establecimientos registrados en relación con la población. Léase junto con el tiempo de acceso, que una razón comunal no capta."
+IND-SAN-010,es,unite,establecimientos / 10 000 hab.
+IND-SAN-010,ht,comparabilite,"Konparab ant 14 komin sous OCHA 2023 la kouvri yo, epi sèlman ant yo menm."
+IND-SAN-010,ht,definition,Kantite etablisman sante ki anrejistre divize pa popilasyon komin nan.
+IND-SAN-010,ht,limites_connues,"Nimeratè a kouvri sèlman 14 komin sou 140 : rapò a dekri etablisman yo anrejistre yo, se pa òf swen an. Denominatè a se yon pwojeksyon (COD-PS 2024, estati E), e milezim yo pa menm — 2023 pou etablisman, 2024 pou popilasyon. Yon dispansè ak yon lopital konte chak pou youn : endikatè a pa mezire ni kapasite, ni materyèl, ni pèsonèl. Eka nou wè ant 14 komin ki kouvri yo ale depi 0,61 rive 7,12 : yon diferans konsa montre dabò ke resansman an pa t fèt menm jan toupatou, li pa montre òf la."
+IND-SAN-010,ht,methode_calcul,IND-SAN-001 ÷ IND-POP-001 × 10 000.
+IND-SAN-010,ht,nom,Etablisman sante pou chak 10 000 moun
+IND-SAN-010,ht,sens_interpretation,"Wo = anpil etablisman anrejistre parapò ak popilasyon an. Li li ansanm ak tan pou rive, yon rapò kominal pa ka kenbe sa."
+IND-SAN-010,ht,unite,etablisman / 10 000 moun
+IND-TOU-001,en,comparabilite,Comparable between communes within the same extract only: each new extract carries the mappers' work.
+IND-TOU-001,en,definition,Number of accommodation establishments recorded in the commune by contributory OpenStreetMap mapping.
+IND-TOU-001,en,limites_connues,"A COUNT OF ESTABLISHMENTS, NEVER A CAPACITY: of 643 accommodations, none states its number of beds and only thirteen their number of rooms. The survey follows contributors, hence towns: 81 of 140 communes carry at least one place to stay, the others are absent and not at zero. A mapped establishment is neither classified, nor licensed, nor necessarily open."
+IND-TOU-001,en,methode_calcul,"Count of OpenStreetMap objects tagged hotel, guest house, motel, chalet, apartment or resort, attached to the commune by the p-code the object carries. No weighting by size: a 200-room hotel and a single guest room each count as one."
+IND-TOU-001,en,nom,Mapped places to stay
+IND-TOU-001,en,sens_interpretation,High = more objects recorded. It does not mean the commune is better supplied.
+IND-TOU-001,en,unite,establishments
+IND-TOU-001,es,comparabilite,Comparable entre comunas dentro de una misma extracción únicamente: cada nueva extracción incorpora el trabajo de quienes cartografían.
+IND-TOU-001,es,definition,Número de establecimientos de alojamiento registrados en la comuna por la cartografía colaborativa de OpenStreetMap.
+IND-TOU-001,es,limites_connues,"UN RECUENTO DE ESTABLECIMIENTOS, NUNCA UNA CAPACIDAD: de 643 alojamientos, ninguno declara su número de camas y solo trece sus habitaciones. El registro sigue a quienes cartografían, es decir a las ciudades: 81 de 140 comunas tienen al menos un alojamiento, las demás están ausentes y no en cero. Un establecimiento cartografiado no está clasificado, ni autorizado, ni necesariamente abierto."
+IND-TOU-001,es,methode_calcul,"Recuento de objetos de OpenStreetMap etiquetados como hotel, casa de huéspedes, motel, chalet, apartamento o complejo, asignados a la comuna por el p-code que lleva el objeto. Sin ponderación por tamaño: un hotel de 200 habitaciones y una sola habitación cuentan igual."
+IND-TOU-001,es,nom,Alojamientos cartografiados
+IND-TOU-001,es,sens_interpretation,Alto = más objetos registrados. No significa que la comuna esté mejor dotada.
+IND-TOU-001,es,unite,establecimientos
+IND-TOU-001,ht,comparabilite,Konparab ant komin nan menm ekstraksyon an sèlman : chak nouvo ekstraksyon pote travay moun k ap katògrafye yo.
+IND-TOU-001,ht,definition,"Konbyen etablisman pou moun desann yo jwenn nan komin nan sou OpenStreetMap, kote moun k ap ede yo mete yo."
+IND-TOU-001,ht,limites_connues,"SE YON KONTAJ ETABLISMAN, SE PA YON KAPASITE : sou 643 kote pou moun desann, okenn pa di konbyen kabann li genyen, sèlman trèz di konbyen chanm. Sa yo katògrafye swiv moun k ap katògrafye yo, donk vil yo : 81 komin sou 140 gen omwen yon kote pou desann, lòt yo pa la ditou — yo pa zewo. Yon etablisman ki sou kat la pa vle di li klase, ni otorize, ni louvri."
+IND-TOU-001,ht,methode_calcul,"Nou konte objè OpenStreetMap ki make otèl, obèj, motèl, chalè, lokasyon oswa konplèks, epi nou mete yo nan komin p-kòd objè a pote a. Nou pa peze yo dapre gwosè yo : yon otèl 200 chanm ak yon sèl chanm lakay moun konte menm jan."
+IND-TOU-001,ht,nom,Kote pou moun desann yo katògrafye
+IND-TOU-001,ht,sens_interpretation,Wo = plis objè yo relve. Sa pa vle di komin nan pi byen founi.
+IND-TOU-001,ht,unite,etablisman
+IND-TOU-002,en,comparabilite,Comparable between communes within the same extract only.
+IND-TOU-002,en,definition,"Number of sites, museums, viewpoints and attractions recorded in the commune by contributory mapping."
+IND-TOU-002,en,limites_connues,"Heritage listed by ISPAN does not appear here: these are two distinct inventories, and this one has no legal standing. Only 46 communes carry an object of this family."
+IND-TOU-002,en,methode_calcul,"Same count, tags: attraction, museum, viewpoint, artwork, gallery, theme park, zoo, aquarium."
+IND-TOU-002,en,nom,Mapped sites and attractions
+IND-TOU-002,en,sens_interpretation,High = more objects recorded.
+IND-TOU-002,en,unite,objects
+IND-TOU-002,es,comparabilite,Comparable entre comunas dentro de una misma extracción.
+IND-TOU-002,es,definition,"Número de sitios, museos, miradores y atracciones registrados en la comuna por la cartografía colaborativa."
+IND-TOU-002,es,limites_connues,"El patrimonio catalogado por el ISPAN no figura aquí: son dos inventarios distintos, y este no tiene valor jurídico. Solo 46 comunas tienen un objeto de esta familia."
+IND-TOU-002,es,methode_calcul,"Mismo recuento, etiquetas: atracción, museo, mirador, obra de arte, galería, parque temático, zoo, acuario."
+IND-TOU-002,es,nom,Sitios y atracciones cartografiados
+IND-TOU-002,es,sens_interpretation,Alto = más objetos registrados.
+IND-TOU-002,es,unite,objetos
+IND-TOU-002,ht,comparabilite,Konparab ant komin nan menm ekstraksyon an sèlman.
+IND-TOU-002,ht,definition,"Konbyen sit, mize, kote pou gade bèl peyizaj ak atraksyon yo jwenn nan komin nan sou kat kontribitif la."
+IND-TOU-002,ht,limites_connues,"Patrimwàn ISPAN klase a pa parèt isit la : se de envantè diferan, epi sa a pa gen okenn valè jiridik. 46 komin sèlman gen yon objè nan fanmi sa a."
+IND-TOU-002,ht,methode_calcul,"Menm kontaj la, ak etikèt sa yo : atraksyon, mize, kote pou gade peyizaj, zèv atizana, galri, pak ak tèm, zou, akaryòm."
+IND-TOU-002,ht,nom,Sit ak atraksyon ki katògrafye
+IND-TOU-002,ht,sens_interpretation,Wo = plis objè yo relve.
+IND-TOU-002,ht,unite,objè
+IND-TOU-003,en,comparabilite,Comparable between communes within the same extract only.
+IND-TOU-003,en,definition,"Number of restaurants, bars, cafés and nightlife venues recorded in the commune by contributory mapping."
+IND-TOU-003,en,limites_connues,"This family measures local commerce as much as tourism: a neighbourhood café and a hotel restaurant count the same. Read it as a density of mapped food business, not as a tourism offer."
+IND-TOU-003,en,methode_calcul,"Same count, tags: restaurant, bar, café, nightclub, fast food, pub, ice cream."
+IND-TOU-003,en,nom,Mapped eating out and nightlife
+IND-TOU-003,en,sens_interpretation,High = more objects recorded.
+IND-TOU-003,en,unite,establishments
+IND-TOU-003,es,comparabilite,Comparable entre comunas dentro de una misma extracción.
+IND-TOU-003,es,definition,"Número de restaurantes, bares, cafeterías y locales de ocio registrados en la comuna por la cartografía colaborativa."
+IND-TOU-003,es,limites_connues,"Esta familia mide el comercio local tanto como el turismo: un café de barrio y un restaurante de hotel cuentan igual. Léase como densidad de comercio de alimentación cartografiado, no como oferta turística."
+IND-TOU-003,es,methode_calcul,"Mismo recuento, etiquetas: restaurante, bar, cafetería, discoteca, comida rápida, pub, heladería."
+IND-TOU-003,es,nom,Restauración y salidas cartografiadas
+IND-TOU-003,es,sens_interpretation,Alto = más objetos registrados.
+IND-TOU-003,es,unite,establecimientos
+IND-TOU-003,ht,comparabilite,Konparab ant komin nan menm ekstraksyon an sèlman.
+IND-TOU-003,ht,definition,"Konbyen restoran, ba, kafe ak kote pou sòti yo jwenn nan komin nan sou kat kontribitif la."
+IND-TOU-003,ht,limites_connues,"Fanmi sa a mezire komès lokal la otan ke touris la : yon kafe nan katye a ak yon restoran otèl konte menm jan. Li l tankou yon dansite komès manje ki katògrafye, se pa yon ofri touristik."
+IND-TOU-003,ht,methode_calcul,"Menm kontaj la, ak etikèt sa yo : restoran, ba, kafe, diskotèk, manje rapid, pub, machann krèm."
+IND-TOU-003,ht,nom,Kote pou manje ak sòti ki katògrafye
+IND-TOU-003,ht,sens_interpretation,Wo = plis objè yo relve.
+IND-TOU-003,ht,unite,etablisman
+IND-TOU-004,en,comparabilite,Comparable between communes within the same extract only.
+IND-TOU-004,en,definition,"Sum of tourism and catering objects recorded in the commune: accommodation, sites, outdoors, information, eating out."
+IND-TOU-004,en,limites_connues,"A total adds objects of different natures — a museum and a bar weigh the same. It serves to spot communes where something is recorded, not to rank them. 107 of 140 communes carry at least one."
+IND-TOU-004,en,methode_calcul,Sum of the five families.
+IND-TOU-004,en,nom,"Mapped tourism supply, all types"
+IND-TOU-004,en,sens_interpretation,High = more objects recorded.
+IND-TOU-004,en,unite,objects
+IND-TOU-004,es,comparabilite,Comparable entre comunas dentro de una misma extracción.
+IND-TOU-004,es,definition,"Suma de los objetos turísticos y de restauración registrados en la comuna: alojamiento, sitios, aire libre, información, restauración."
+IND-TOU-004,es,limites_connues,"Un total suma objetos de naturaleza distinta: un museo y un bar pesan igual. Sirve para detectar comunas donde algo está registrado, no para clasificarlas. 107 de 140 comunas tienen al menos uno."
+IND-TOU-004,es,methode_calcul,Suma de las cinco familias.
+IND-TOU-004,es,nom,"Oferta turística cartografiada, todos los tipos"
+IND-TOU-004,es,sens_interpretation,Alto = más objetos registrados.
+IND-TOU-004,es,unite,objetos
+IND-TOU-004,ht,comparabilite,Konparab ant komin nan menm ekstraksyon an sèlman.
+IND-TOU-004,ht,definition,"Total objè touris ak restorasyon yo relve nan komin nan : kote pou desann, sit, deyò nan lanati, enfòmasyon, kote pou manje."
+IND-TOU-004,ht,limites_connues,"Yon total adisyone objè ki pa menm bagay — yon mize ak yon ba peze menm jan. Li sèvi pou wè ki komin gen yon bagay ki relve, li pa sèvi pou klase yo. 107 komin sou 140 gen omwen youn."
+IND-TOU-004,ht,methode_calcul,Sòm senk fanmi yo.
+IND-TOU-004,ht,nom,Tout sa yo katògrafye nan touris la
+IND-TOU-004,ht,sens_interpretation,Wo = plis objè yo relve.
+IND-TOU-004,ht,unite,objè
+IND-TOU-005,en,comparabilite,"Comparable between communes, but from a single classification: 2013-2015."
+IND-TOU-005,en,definition,"Number of accommodation establishments classified by the Ministry of Tourism in the commune, Hibiscus classification 2013-2015."
+IND-TOU-005,en,limites_connues,"WHAT THE MINISTRY CLASSIFIED, NOT WHAT EXISTS: an establishment never inspected does not appear. The vintage is a warning — ten years, and nothing has succeeded it; a hotel rated in 2015 may have closed. 39 of 140 communes carry one; 18 establishments in sub-communal localities belong to no commune and are published separately."
+IND-TOU-005,en,methode_calcul,"Count of the establishments classified in the ministry's « Résultats par régions » document, attached to the commune by locality name. Eighteen establishments in sub-communal localities are attached to no commune."
+IND-TOU-005,en,nom,Establishments classified by the ministry
+IND-TOU-005,en,sens_interpretation,High = more establishments recognised.
+IND-TOU-005,en,unite,establishments
+IND-TOU-005,es,comparabilite,"Comparable entre comunas, pero de una sola clasificación: 2013-2015."
+IND-TOU-005,es,definition,"Número de establecimientos de alojamiento clasificados por el Ministerio de Turismo en la comuna, clasificación Hibiscus 2013-2015."
+IND-TOU-005,es,limites_connues,"LO QUE EL MINISTERIO CLASIFICÓ, NO LO QUE EXISTE: un establecimiento nunca inspeccionado no figura. La fecha es una advertencia: diez años, y nada la ha sucedido; un hotel calificado en 2015 puede haber cerrado. 39 de 140 comunas tienen uno; 18 establecimientos de localidades infracomunales no pertenecen a ninguna comuna y se publican aparte."
+IND-TOU-005,es,methode_calcul,"Recuento de los establecimientos clasificados en el documento « Résultats par régions » del ministerio, asignados a la comuna por el nombre de la localidad. Dieciocho establecimientos de localidades infracomunales no se asignan a ninguna comuna."
+IND-TOU-005,es,nom,Establecimientos clasificados por el ministerio
+IND-TOU-005,es,sens_interpretation,Alto = más establecimientos reconocidos.
+IND-TOU-005,es,unite,establecimientos
+IND-TOU-005,ht,comparabilite,"Konparab ant komin, men se yon sèl klasman : 2013-2015."
+IND-TOU-005,ht,definition,"Konbyen kote pou moun desann ministè Touris la te klase nan komin nan, klasman Hibiscus 2013-2015."
+IND-TOU-005,ht,limites_connues,"SE SA MINISTÈ A TE KLASE, SE PA SA KI EGZISTE : yon etablisman yo pa t janm enspekte pa la. Dat la se yon avètisman — dis lane, epi anyen pa vin apre ; yon otèl yo te note an 2015 ka fèmen. 39 komin sou 140 gen youn ; 18 etablisman nan ti zòn anba komin pa nan okenn komin, yo pibliye apa."
+IND-TOU-005,ht,methode_calcul,"Nou konte etablisman ministè a klase yo nan dokiman « Résultats par régions », epi nou mete yo nan komin nan dapre non zòn nan. Dizwit etablisman ki nan ti zòn anba komin pa antre nan okenn komin."
+IND-TOU-005,ht,nom,Etablisman ministè a klase
+IND-TOU-005,ht,sens_interpretation,Wo = plis etablisman yo rekonèt.
+IND-TOU-005,ht,unite,etablisman
+IND-TOU-006,en,comparabilite,"Comparable between communes, but from a single classification: 2013-2015."
+IND-TOU-006,en,definition,The highest rating obtained by an establishment of the commune in the Ministry of Tourism's Hibiscus classification.
+IND-TOU-006,en,limites_connues,A MAXIMUM IS NOT AN AVERAGE: a commune with 5 hibiscus may have a single classified establishment and all others at 1. The scale itself is not published by the Haitian State — it belongs to the Corporation de l'industrie touristique du Québec — so we cannot say what each rank requires. Only six communes carry an establishment at 4 or 5.
+IND-TOU-006,en,methode_calcul,The maximum rating in the same classification.
+IND-TOU-006,en,nom,Highest Hibiscus rating in the commune
+IND-TOU-006,en,sens_interpretation,High = a better-rated establishment.
+IND-TOU-006,en,unite,hibiscus (1 to 5)
+IND-TOU-006,es,comparabilite,"Comparable entre comunas, pero de una sola clasificación: 2013-2015."
+IND-TOU-006,es,definition,La nota más alta obtenida por un establecimiento de la comuna en la clasificación Hibiscus del Ministerio de Turismo.
+IND-TOU-006,es,limites_connues,UN MÁXIMO NO ES UNA MEDIA: una comuna con 5 hibiscos puede tener un solo establecimiento clasificado y todos los demás en 1. El baremo mismo no lo publica el Estado haitiano —pertenece a la Corporation de l'industrie touristique du Québec— así que no podemos decir qué exige cada rango. Solo seis comunas tienen un establecimiento de 4 o 5.
+IND-TOU-006,es,methode_calcul,La nota máxima en la misma clasificación.
+IND-TOU-006,es,nom,Nota Hibiscus más alta de la comuna
+IND-TOU-006,es,sens_interpretation,Alto = un establecimiento mejor calificado.
+IND-TOU-006,es,unite,hibiscus (1 a 5)
+IND-TOU-006,ht,comparabilite,"Konparab ant komin, men se yon sèl klasman : 2013-2015."
+IND-TOU-006,ht,definition,Not ki pi wo yon etablisman nan komin nan jwenn nan klasman Hibiscus ministè Touris la.
+IND-TOU-006,ht,limites_connues,"YON NOT KI PI WO SE PA YON NIVO MWAYEN : yon komin ki gen 5 ibiskis ka gen yon sèl etablisman klase, tout lòt yo a 1. Barèm nan menm, Leta ayisyen pa pibliye l — li se pwopriyete Corporation de l'industrie touristique du Québec — donk nou pa ka di kisa chak nivo mande. Sis komin sèlman gen yon etablisman a 4 oswa 5."
+IND-TOU-006,ht,methode_calcul,Not ki pi wo a nan menm klasman an.
+IND-TOU-006,ht,nom,Not Hibiscus ki pi wo nan komin nan
+IND-TOU-006,ht,sens_interpretation,Wo = yon etablisman ki pi byen note.
+IND-TOU-006,ht,unite,hibiscus (1 a 5)
+IND-TOU-007,en,comparabilite,Comparable between communes within the same extract only.
+IND-TOU-007,en,definition,"Number of forts, monuments, memorials, ruins and archaeological sites recorded in the commune by contributory mapping."
+IND-TOU-007,en,limites_connues,"THIS IS NOT A HERITAGE INVENTORY. ISPAN keeps its own, which has legal standing; this one has none. A fort may appear without being protected, and a listed property may be missing. Haiti's only World Heritage property — the National History Park, Citadel, Sans-Souci, Ramiers — spans several communes and is therefore attributed to none here. 52 of 140 communes carry an object of this family."
+IND-TOU-007,en,methode_calcul,"Count of objects tagged fort, castle, monument, memorial, ruins, citywalls, archaeological site or cannon. The values « no », « yes » and « tomb » are EXCLUDED: they weigh 1,111 objects and are not heritage — the first is an import of humanitarian shelters, the last graveyards."
+IND-TOU-007,en,nom,Mapped built heritage
+IND-TOU-007,en,sens_interpretation,High = more objects recorded.
+IND-TOU-007,en,unite,objects
+IND-TOU-007,es,comparabilite,Comparable entre comunas dentro de una misma extracción.
+IND-TOU-007,es,definition,"Número de fuertes, monumentos, memoriales, ruinas y yacimientos arqueológicos registrados en la comuna por la cartografía colaborativa."
+IND-TOU-007,es,limites_connues,"NO ES UN INVENTARIO PATRIMONIAL. El ISPAN tiene el suyo, con valor jurídico; este no tiene ninguno. Un fuerte puede figurar sin estar protegido, y un bien catalogado puede faltar. El único bien haitiano inscrito en el patrimonio mundial —Parque Nacional Histórico Ciudadela, Sans-Souci, Ramiers— abarca varias comunas y no se atribuye aquí a ninguna. 52 de 140 comunas tienen un objeto de esta familia."
+IND-TOU-007,es,methode_calcul,"Recuento de objetos etiquetados como fuerte, castillo, monumento, memorial, ruinas, murallas, yacimiento arqueológico o cañón. Los valores « no », « yes » y « tomb » quedan EXCLUIDOS: suman 1 111 objetos y no son patrimonio."
+IND-TOU-007,es,nom,Patrimonio construido cartografiado
+IND-TOU-007,es,sens_interpretation,Alto = más objetos registrados.
+IND-TOU-007,es,unite,objetos
+IND-TOU-007,ht,comparabilite,Konparab ant komin nan menm ekstraksyon an sèlman.
+IND-TOU-007,ht,definition,"Konbyen fò, moniman, memoryal, vestij ak sit akeyolojik yo jwenn nan komin nan sou kat kontribitif la."
+IND-TOU-007,ht,limites_connues,"SE PA YON ENVANTÈ PATRIMWÀN. ISPAN gen pa l, li gen valè jiridik ; sa a pa gen okenn. Yon fò ka la san li pa pwoteje, epi yon byen ki klase ka pa la. Sèl byen ayisyen ki nan patrimwàn mondyal la — Pak Nasyonal Istorik Sitadèl, Sans-Souci, Ramye — kouvri plizyè komin, donk nou pa mete l nan okenn. 52 komin sou 140 gen yon objè nan fanmi sa a."
+IND-TOU-007,ht,methode_calcul,"Nou konte objè ki make fò, chato, moniman, memoryal, vestij, miray vil, sit akeyolojik oswa kanon. Vale « no », « yes » ak « tomb » yo pa antre : yo se 1 111 objè ki pa patrimwàn — premye a se yon enpòtasyon abri, dènye a se simityè."
+IND-TOU-007,ht,nom,Patrimwàn bati ki katògrafye
+IND-TOU-007,ht,sens_interpretation,Wo = plis objè yo relve.
+IND-TOU-007,ht,unite,objè
+IND-TOU-008,en,comparabilite,Comparable between communes within the same extract only.
+IND-TOU-008,en,definition,"Number of cinemas, arts centres and theatres recorded in the commune by contributory mapping."
+IND-TOU-008,en,limites_connues,"A mapped venue is not an open venue: several Haitian cinemas recorded in OpenStreetMap no longer operate. 30 of 140 communes carry an object of this family, and the count follows mapping as much as cultural activity."
+IND-TOU-008,en,methode_calcul,"Count of objects tagged cinema, arts centre or theatre."
+IND-TOU-008,en,nom,Mapped cultural venues
+IND-TOU-008,en,sens_interpretation,High = more objects recorded.
+IND-TOU-008,en,unite,establishments
+IND-TOU-008,es,comparabilite,Comparable entre comunas dentro de una misma extracción.
+IND-TOU-008,es,definition,"Número de cines, centros de arte y teatros registrados en la comuna por la cartografía colaborativa."
+IND-TOU-008,es,limites_connues,"Un espacio cartografiado no es un espacio abierto: varios cines haitianos registrados en OpenStreetMap ya no funcionan. 30 de 140 comunas tienen un objeto de esta familia, y el recuento sigue tanto a la cartografía como a la actividad cultural."
+IND-TOU-008,es,methode_calcul,"Recuento de objetos etiquetados como cine, centro de arte o teatro."
+IND-TOU-008,es,nom,Espacios culturales cartografiados
+IND-TOU-008,es,sens_interpretation,Alto = más objetos registrados.
+IND-TOU-008,es,unite,establecimientos
+IND-TOU-008,ht,comparabilite,Konparab ant komin nan menm ekstraksyon an sèlman.
+IND-TOU-008,ht,definition,"Konbyen sinema, sant atizana ak teyat yo jwenn nan komin nan sou kat kontribitif la."
+IND-TOU-008,ht,limites_connues,"Yon kote ki sou kat la pa vle di li louvri : plizyè sinema ayisyen ki nan OpenStreetMap pa mache ankò. 30 komin sou 140 gen yon objè nan fanmi sa a, epi kontaj la swiv travay kat la otan ke aktivite kiltirèl la."
+IND-TOU-008,ht,methode_calcul,"Nou konte objè ki make sinema, sant atizana oswa teyat."
+IND-TOU-008,ht,nom,Kote pou kilti ki katògrafye
+IND-TOU-008,ht,sens_interpretation,Wo = plis objè yo relve.
+IND-TOU-008,ht,unite,etablisman

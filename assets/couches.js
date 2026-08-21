@@ -95,6 +95,81 @@
                  A: { c: "#2ec4b6", l: "Access Haiti" },
                  "?": { c: "#8d99ae", l: "opérateur non précisé" } }, prop: "o",
       limite: "Équipements présents dans OpenStreetMap — pylônes et mâts de communication, boutiques, bureaux d'opérateur, accès internet. Ce n'est pas le parc des opérateurs : ni Digicel, ni Natcom, ni le CONATEL ne publient le leur. Une commune sans point n'est pas une commune sans couverture." },
+    /* TOURISME. Deux cartes du meme relevé, et elles ne disent pas la meme
+       chose : les points montrent OU l'offre est cartographiée, l'aplat
+       montre COMBIEN d'hébergements une commune porte. La seconde se lit
+       plus vite, la première se vérifie mieux.
+
+       CE QUE NOUS NE POUVONS PAS CARTOGRAPHIER : la capacité. Sur 643
+       hébergements retenus, AUCUN ne déclare son nombre de lits et treize
+       leur nombre de chambres. « Combien de personnes Haiti peut-il héberger ? »
+       — la première question de tout investisseur et de tout bailleur — reste
+       sans réponse, et aucune coloration ne doit laisser croire le contraire. */
+    { id: "tourisme", nom: "Offre touristique cartographiée (OSM)", type: "points",
+      geojson: "data/atmart_couche_tourisme_HT.geojson",
+      classes: { hebergement: { c: "#3a86ff", l: "hébergement" },
+                 sites: { c: "#c97900", l: "site ou attraction" },
+                 plein_air: { c: "#2a9d8f", l: "plein air" },
+                 information: { c: "#8338ec", l: "information touristique" },
+                 restauration: { c: "#e63946", l: "restauration et sorties" },
+                 patrimoine: { c: "#8d6e63", l: "patrimoine bâti" },
+                 culture: { c: "#00897b", l: "lieu de culture" } }, prop: "f",
+      limite: "Compte ce qui est CARTOGRAPHIÉ dans OpenStreetMap, pas ce qui existe, pas ce qui est ouvert, pas ce qui est agréé par le ministère. Un hôtel jamais cartographié n'apparait pas ; un hôtel fermé depuis 2019 apparait encore. La cartographie contributive suit les contributeurs, donc les villes : 107 communes sur 140 portent au moins un objet, les 33 autres sont VIDES et non à zéro. Aucun établissement ne déclare sa capacité en lits." },
+    { id: "hebergement_nb", nom: "Hébergements cartographiés par commune (OSM)", type: "choroplethe",
+      csv: "data/atmart_tourisme_communes_HT.csv", pcode: "pcode_commune",
+      rampe: "urbain",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          /* Une commune ABSENTE du fichier reste hors de la table, donc grise,
+             donc comptée dans « non documenté ». Lui donner zéro affirmerait
+             qu'elle n'a pas d'hôtel ; la vérité est que personne n'en a
+             cartographié. */
+          if (r.famille === "hebergement")
+            m[r.pcode_commune] = (m[r.pcode_commune] || 0) + (+r.objets_cartographies || 0);
+        });
+        /* La borne basse est le plus PETIT compte relevé, pas zéro. La
+           légende affichait « 0 → 61 » alors qu'aucune commune de la table
+           ne porte zéro hébergement : celles-là sont absentes, donc grises.
+           Annoncer zéro contredisait la carte elle-même. */
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "extrait OSM du 14/08/2026",
+                 unite: "établissements cartographiés (hôtels, auberges, locations)" };
+      },
+      source: "OpenStreetMap via HOT — © contributeurs OSM (ODbL) — passeport PSP-024",
+      limite: "Un nombre d'ÉTABLISSEMENTS, jamais une capacité : zéro des 643 hébergements ne déclare ses lits. Une commune sombre est une commune bien cartographiée autant qu'une commune bien dotée, et rien ici ne permet de trancher entre les deux. 81 communes sur 140 portent au moins un hébergement ; les autres sont grises, pas à zéro." },
+    /* LE CLASSÉ, À CÔTÉ DU CARTOGRAPHIÉ. Cette carte ne compte pas les
+       hôtels : elle compte ceux que le ministère a VISITÉS ET NOTÉS entre
+       2013 et 2015. Cent quatre-vingt-dix établissements, trente-neuf
+       communes — contre six cent quarante-trois hébergements relevés par
+       OpenStreetMap dans quatre-vingt-une. L'écart entre les deux cartes est
+       l'information : il sépare ce qui existe de ce qui est reconnu.
+
+       DEUX RÉSERVES QUI PÈSENT AUTANT QUE LE CHIFFRE. Le millésime d'abord :
+       dix ans, et rien n'a succédé à cette classification — un établissement
+       noté alors peut avoir fermé. Le rattachement ensuite : dix-huit
+       établissements se trouvent dans des localités infra-communales
+       (Labadee, Cormier, Cyvadier, Kabic…) que nous refusons d'attribuer à
+       une commune par ressemblance. Ils sont publiés à part, jamais fondus
+       dans une voisine. */
+    { id: "hibiscus", nom: "Établissements classés par le ministère (Hibiscus 2013-2015)", type: "choroplethe",
+      csv: "data/atmart_hibiscus_communes_HT.csv", pcode: "pcode_commune",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          /* Une commune ABSENTE du fichier n'a pas zéro établissement
+             classé : elle n'apparaît pas dans le document du ministère, ce
+             qui n'est pas la même chose. Elle reste grise. */
+          m[r.pcode_commune] = +r.etablissements_classes || 0;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: "classification 2013-2015",
+                 unite: "établissements classés par le ministère" };
+      },
+      source: "Ministère du Tourisme et des Industries créatives (MTIC) — agrégat communal recalculé par Atmart, passeport PSP-062",
+      limite: "Ce que le ministère a CLASSÉ, pas ce qui existe : un hôtel jamais inspecté n'y figure pas, et un hôtel classé en 2015 peut avoir fermé depuis. Aucune classification n'a été publiée après 2015. 39 communes sur 140 portent un établissement classé ; les autres sont grises, pas à zéro. 18 établissements situés dans des localités infra-communales — Labadee, Cormier, Furcy, Cyvadier, Kabic, Ti mouillage et sept autres — ne sont attribués à aucune commune et sont publiés à part : Kabic relève de Cayes-Jacmel et non de Jacmel, et c'est exactement le genre d'erreur qu'un rattachement de proximité aurait produit." },
     { id: "inondation", nom: "Part de la commune en zone inondable (CNIGS)", type: "choroplethe",
       csv: "data/atmart_alea_inondation_communes_HT.csv", pcode: "pcode_commune",
       agreger: function (rows) {
@@ -912,9 +987,17 @@
       return '<circle r="2.6" fill="' + cl.c + '" fill-opacity="0.75" cx="' +
         proj.x(c[0]).toFixed(1) + '" cy="' + proj.y(c[1]).toFixed(1) + '"/>';
     }).join("");
+    /* LA LÉGENDE PASSE PAR T(), depuis le 20/08/2026. Elle ne le faisait
+       pas : « fonctionnel », « banque », « agence de transfert » restaient
+       en français sous une interface kreyol ou espagnole. C'est la
+       quatrième voie d'échappement du même défaut — une chaîne lue depuis
+       une structure de données ne traverse aucun attribut data-i18n, donc
+       aucun contrôle ne la voyait manquer. Les noms propres (Digicel,
+       Natcom) retombent en français par T(), et c'est exactement ce qu'il
+       faut : ils n'ont pas d'autre forme. */
     var leg = Object.keys(couche.classes).map(function (k) {
       return '<span class="k-p" style="background:' + couche.classes[k].c + '"></span>' +
-             couche.classes[k].l;
+             T(couche.classes[k].l);
     }).join("  ") + " · " + fmtN(doc.features.length) + " points · " + (doc.millesime || "");
     dessiner(fond + pts + nomsDepartements(), leg,
              { source: T(doc.source) + " — " + T(doc.licence),
@@ -1098,6 +1181,12 @@
                       ["ecoles_nb", "ecoles_vues_nb"]],
                      ["Services et infrastructures",
                       ["eau", "carburant", "finance", "telecom", "routes"]],
+                     /* Le tourisme a son groupe et non une place dans
+                        « Services » : ce n'est pas un service rendu aux
+                        habitants, c'est une activité économique, et les deux
+                        questions ne se posent pas dans le même sens. */
+                     ["Tourisme — ce qui est cartographié et ce qui est classé",
+                      ["tourisme", "hebergement_nb", "hibiscus"]],
                      /* L'ACCÈS EN PREMIER DANS SON GROUPE. Compter les
                         établissements d'une commune répond à « qu'y a-t-il ? » ;
                         les temps de trajet répondent à « qui peut y aller ? ».

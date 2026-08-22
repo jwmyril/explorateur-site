@@ -149,7 +149,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_sources.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "29853"
+       "contentSize": "42311"
       }
      ],
      "isBasedOn": "Atmart"
@@ -367,7 +367,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_ong_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "266421"
+       "contentSize": "265719"
       }
      ],
      "isBasedOn": "MPCE — registre officiel des ONG"
@@ -635,7 +635,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_couche_finance_HT.geojson",
        "encodingFormat": "application/geo+json",
-       "contentSize": "54552"
+       "contentSize": "64614"
       }
      ],
      "isBasedOn": "OpenStreetMap via HOT"
@@ -840,10 +840,310 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     },
     {
      "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-028",
+     "identifier": "PRD-028",
+     "name": "Offre touristique cartographiée — couche de points",
+     "description": "Hôtels, auberges, sites, musées, points de vue, campings, offices de tourisme, restaurants et bars cartographiés dans OpenStreetMap, colorés par famille — 2 896 points dans 115 communes sur 140, patrimoine bâti, lieux de culture, plages et curiosités naturelles compris. Ce n'est PAS un inventaire touristique : le ministère n'en publie aucun. Une commune sans point n'est pas une commune sans tourisme, c'est une commune que personne n'a cartographiée.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Tourisme",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_couche_tourisme_HT.geojson",
+       "encodingFormat": "application/geo+json",
+       "contentSize": "434493"
+      }
+     ],
+     "isBasedOn": "OpenStreetMap via HOT"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-029",
+     "identifier": "PRD-029",
+     "name": "Tourisme par commune — dénombrement",
+     "description": "Dénombrement de l'offre touristique par commune et par famille — 643 hébergements, 146 sites et attractions, 1 430 lieux de restauration et de sortie. AUCUNE CAPACITÉ : zéro des 643 hébergements ne déclare son nombre de lits, treize seulement leur nombre de chambres. On compte des établissements, jamais des lits.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Tourisme",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_tourisme_communes_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "133935"
+      }
+     ],
+     "isBasedOn": "OpenStreetMap via HOT"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-033",
+     "identifier": "PRD-033",
+     "name": "Institutions financières agréées, et ce que la carte ne montre pas",
+     "description": "Les 26 institutions agréées par la BRH — banques, maisons de transfert, bureaux de change, paiement électronique, microfinance — avec leur siège, confrontées aux enseignes relevées par la cartographie contributive. HUIT institutions agréées ne sont nommées par AUCUN point de la carte : trois maisons de transfert, trois bureaux de change, deux fournisseurs de paiement électronique. C'est l'information la plus utile des deux, parce qu'elle désigne où il faut aller regarder. Ordre de grandeur à garder en tête : la BRH compte 5 250 fournisseurs de services financiers en juin 2024, la carte contributive en porte 474.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Finances publiques",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_finance_agrements_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "13751"
+      }
+     ],
+     "isBasedOn": "BRH — supervision bancaire ; OpenStreetMap via HOT"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-034",
+     "identifier": "PRD-034",
+     "name": "Caisses populaires agréées, par commune",
+     "description": "Les 58 caisses populaires agréées par la BRH (liste de mars 2025) : nom, sigle, numéro d'agrément, commune du siège, nombre de comptoirs, fédération. C'est la SEULE liste financière officielle qui descende au territoire — pour les banques et les maisons de transfert, la BRH ne publie que le siège social. 57 caisses sur 58 sont rattachées à une commune, réparties sur 47 communes. L'annexe va plus loin : en rattachant aussi les 108 COMPTOIRS que le document nomme, on passe de 47 communes qui hébergent un siège à 71 communes DESSERVIES — et cette seconde question est celle qui intéresse quelqu'un qui cherche où déposer son épargne. Ni téléphone ni courriel : un atlas territorial n'en a pas besoin.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Finances publiques",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_caisses_populaires_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "33056"
+      }
+     ],
+     "isBasedOn": "BRH — liste des caisses populaires agréées"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-035",
+     "identifier": "PRD-035",
+     "name": "Caisses populaires et microfinance cartographiées",
+     "description": "Les points de finance coopérative relevés par OpenStreetMap et reconnus un par un : 30 caisses populaires ou coopératives et 13 points de microfinance, nommés et situés, dans 26 communes. CE N'EST PAS UN RECENSEMENT — la BRH agrée 58 caisses et compte 108 points de service. Un objet n'est retenu que si son nom se déclare ou s'il porte un sigle agréé par la BRH sur un objet étiqueté financier : la règle rate des caisses mal étiquetées, et c'est le sens dans lequel elle doit se tromper. Les mutuelles de solidarité n'y sont pas et ne peuvent pas y être : sans agrément, sans local, souvent sans nom stable.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Finances publiques",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_couche_finance_cooperative_HT.geojson",
+       "encodingFormat": "application/geo+json",
+       "contentSize": "8668"
+      }
+     ],
+     "isBasedOn": "OpenStreetMap via HOT ; sigles agréés de la BRH"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-031",
+     "identifier": "PRD-031",
+     "name": "Indice des prix à la consommation, par région et par commune",
+     "description": "L'IPC de l'IHSI ventilé en cinq régions et rattaché aux 140 communes : niveau de l'indice, variation mensuelle et variation sur douze mois. C'est la SEULE granularité territoriale que l'indice des prix haïtien possède — aucune source internationale ne descend sous le pays. Attention : les 140 communes ne portent que CINQ valeurs distinctes, celles des régions. Ce n'est pas un indice communal, et il serait faux d'en conclure qu'une commune est plus chère qu'une autre à l'intérieur de sa région. L'annexe donne la série des mois publiés par région.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Prix",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_ipc_regions_communes_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "132397"
+      }
+     ],
+     "isBasedOn": "IHSI — Institut Haïtien de Statistique et d'Informatique"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-032",
+     "identifier": "PRD-032",
+     "name": "Prix des denrées de base par marché, 2005-2024",
+     "description": "Le prix moyen annuel de sept denrées de base sur les neuf marchés suivis par le PAM, en gourdes ET en dollars. CE N'EST PAS UN INDICE DES PRIX À LA CONSOMMATION : deux denrées seulement tiennent sur la durée dans les neuf marchés, et ni le logement, ni le transport, ni l'énergie n'y figurent. Ce que ce produit montre et qu'aucune moyenne nationale ne laisse voir : la même marmite de maïs moulu vaut 291 gourdes à Jérémie et 700 à Ouanaminthe en moyenne 2024. Et sur vingt ans, elle est multipliée par 10,8 en gourdes mais par 3,5 seulement en dollars — l'écart est la dépréciation de la monnaie.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Prix",
+      "Haïti"
+     ],
+     "temporalCoverage": "2005/2024",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_prix_denrees_marches_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "603799"
+      }
+     ],
+     "isBasedOn": "PAM (WFP) via OCHA HDX"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-030",
+     "identifier": "PRD-030",
+     "name": "Établissements classés Hibiscus — par commune",
+     "description": "Les 190 établissements d'hébergement classés de 1 à 5 hibiscus par le ministère du Tourisme entre 2013 et 2015, agrégés par commune : nombre d'établissements, note la plus haute, note moyenne. 39 communes sur 140. Ce que le ministère a CLASSÉ, pas ce qui existe — et rien n'a succédé à cette classification depuis 2015. L'annexe liste les 18 établissements de localités infra-communales que nous refusons d'attribuer à une commune par ressemblance.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Tourisme",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_hibiscus_communes_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "15499"
+      }
+     ],
+     "isBasedOn": "Ministère du Tourisme et des Industries créatives (MTIC)"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-033",
+     "identifier": "PRD-033",
+     "name": "Licence de chaque fichier publié",
+     "description": "Une ligne par fichier du site : sa licence de sortie, les sources dont elle découle, l'attribution à porter et la raison. IL N'Y A PAS UNE LICENCE MAIS PLUSIEURS, et c'est le point : onze fichiers sortent sous ODbL parce qu'ils dérivent d'OpenStreetMap, dont le partage à l'identique se transmet aux bases dérivées redistribuées ; d'autres ne relèvent d'aucune licence, l'article 5 du décret haïtien du 12/10/2005 excluant du droit d'auteur les textes officiels et les simples données. Annoncer CC BY partout aurait autorisé à tort ; annoncer ODbL partout aurait interdit sans raison. Le tableau se recalcule à chaque passage depuis le registre des sources.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Méthode",
+      "Haïti"
+     ],
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_licences_donnees_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "21651"
+      }
+     ],
+     "isBasedOn": "Registre des sources et passeports juridiques d'Atmart"
+    },
+    {
+     "@type": "Dataset",
      "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-027",
      "identifier": "PRD-027",
      "name": "Séries nationales d'Haïti",
-     "description": "Soixante-trois séries nationales depuis 2000 — économie, travail, santé, éducation, énergie, terres, sécurité alimentaire, commerce. Elles ne descendent PAS à la commune et ne doivent pas y descendre : elles servent d'échelle pour lire un chiffre local. Deux avertissements portés par chaque ligne : les séries d'emploi sont des estimations modélisées du BIT, et le commerce de marchandises est une donnée miroir — Haïti ne le déclare plus depuis 2017.",
+     "description": "Soixante-treize séries nationales depuis 2000 — économie, travail, tourisme, transport aérien, santé, éducation, énergie, terres, sécurité alimentaire, commerce. Elles ne descendent PAS à la commune et ne doivent pas y descendre : elles servent d'échelle pour lire un chiffre local. Trois avertissements portés par chaque ligne : les séries d'emploi sont des estimations modélisées du BIT ; le commerce de marchandises est une donnée miroir — Haïti ne le déclare plus depuis 2017 ; et les séries touristiques s'arrêtent en 2018 ou 2019, faute de déclaration depuis la pandémie.",
      "url": "https://explorateur.atmart.ltd/datasets.html",
      "creator": {
       "@id": "https://explorateur.atmart.ltd/#organisation"
@@ -867,7 +1167,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_series_nationales_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "443671"
+       "contentSize": "544560"
       }
      ],
      "isBasedOn": "Banque mondiale — WDI ; OIT — ILOSTAT ; FAO — FAOSTAT ; UN Comtrade"
@@ -992,7 +1292,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   }
 </style>
 
-  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
+    <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
   <link rel="canonical" href="https://explorateur.atmart.ltd/es/datasets.html" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/datasets.html" />
   <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/datasets.html" />
@@ -1001,7 +1301,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/datasets.html" />
   <script>window.ATM_LANG_FORCE = "es"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-CckMjSmKNXB3GQWoeKT9XCqlEfEBF/hpHhyDApmKPGA=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-tndJfhaZxyqAs6RdxkZzZ5RxwGUw1wg7v8l0NlRstTI=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-CckMjSmKNXB3GQWoeKT9XCqlEfEBF/hpHhyDApmKPGA=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-QDAkRJZK76tJxdajyvjbKpiZTI7ejD0lvgXMCQ3NmrQ=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -1231,7 +1531,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <span class="tag" data-i18n="ds.t_free">Gratis</span>
   <h3 data-i18n-html="ds.c14_h">Registro de fuentes Atmart</h3>
   <p data-i18n-html="ds.c14_p">Para cada fuente que utilizamos: organismo, URL, licencia, clase jurídica, cobertura, frecuencia y fecha de última verificación. Lo que tenemos derecho a publicar, y lo que no.</p>
-  <p class="price" data-i18n-html="ds.c14_pr">Gratis <small>39 filas • 17 columnas</small></p>
+  <p class="price" data-i18n-html="ds.c14_pr">Gratis <small>45 filas • 22 columnas</small></p>
   <p class="meta" data-i18n-html="ds.c14_meta">📐 Método • Fuentes : Atmart • nivel de confianza A • CC BY 4.0</p>
   <a href="../data/atmart_registre_sources.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Descargar (CSV)</a>
 </div>
@@ -1415,8 +1715,8 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <span class="tag" data-i18n="ds.t_free">Gratis</span>
   <h3 data-i18n-html="ds.prd033_h">Instituciones financieras autorizadas, y lo que el mapa no muestra</h3>
   <p data-i18n-html="ds.prd033_p">Las 26 instituciones autorizadas por el BRH —bancos, casas de transferencia, casas de cambio, pago electrónico, microfinanzas— con su sede, contrastadas con los nombres registrados por la cartografía colaborativa. OCHO instituciones autorizadas no las nombra NINGÚN punto del mapa: tres casas de transferencia, tres casas de cambio, dos proveedores de pago electrónico. Es la mitad más útil, porque indica dónde hay que ir a mirar. Orden de magnitud: el BRH cuenta 5 250 proveedores de servicios financieros en junio de 2024; el mapa colaborativo tiene 474.</p>
-  <p class="price" data-i18n-html="ds.prd033_pr">Gratis <small>26 filas • 10 columnas</small></p>
-  <p class="meta" data-i18n-html="ds.prd033_meta">🏛 Finanzas públicas • Fuentes : BRH — supervision bancaire ; OpenStreetMap via HOT • nivel de confianza B • Données publiques — décret du 12/10/2005, art. 5 (textes officiels et simples données)</p>
+  <p class="price" data-i18n-html="ds.prd033_pr">Gratis <small>82 filas • 8 columnas</small></p>
+  <p class="meta" data-i18n-html="ds.prd033_meta">📐 Método • Fuentes : Registre des sources et passeports juridiques d'Atmart • nivel de confianza A • CC BY 4.0</p>
   <a href="../data/atmart_finance_agrements_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Descargar (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
@@ -1458,6 +1758,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <p class="price" data-i18n-html="ds.prd030_pr">Gratis <small>39 filas • 12 columnas</small></p>
   <p class="meta" data-i18n-html="ds.prd030_meta">📄 Turismo • Fuentes : Ministère du Tourisme et des Industries créatives (MTIC) • nivel de confianza B • Données publiques — décret du 12/10/2005, art. 5 (textes officiels et simples données). Agrégat communal recalculé par Atmart.</p>
   <a href="../data/atmart_hibiscus_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Descargar (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratis</span>
+  <h3 data-i18n-html="ds.prd033_h">Instituciones financieras autorizadas, y lo que el mapa no muestra</h3>
+  <p data-i18n-html="ds.prd033_p">Las 26 instituciones autorizadas por el BRH —bancos, casas de transferencia, casas de cambio, pago electrónico, microfinanzas— con su sede, contrastadas con los nombres registrados por la cartografía colaborativa. OCHO instituciones autorizadas no las nombra NINGÚN punto del mapa: tres casas de transferencia, tres casas de cambio, dos proveedores de pago electrónico. Es la mitad más útil, porque indica dónde hay que ir a mirar. Orden de magnitud: el BRH cuenta 5 250 proveedores de servicios financieros en junio de 2024; el mapa colaborativo tiene 474.</p>
+  <p class="price" data-i18n-html="ds.prd033_pr">Gratis <small>82 filas • 8 columnas</small></p>
+  <p class="meta" data-i18n-html="ds.prd033_meta">📐 Método • Fuentes : Registre des sources et passeports juridiques d'Atmart • nivel de confianza A • CC BY 4.0</p>
+  <a href="../data/atmart_licences_donnees_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Descargar (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit">
   <span class="tag" data-i18n="ds.t_free">Gratis</span>

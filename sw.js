@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v112";
+const CACHE = "explorateur-v113";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -27,10 +27,14 @@ const CORE = [
   // couches qu'il assemble, elles, sont deja en cache.
   "/assets/modules/explorateur-rapport.js?v=21",
   "/couches.html", "/fiche.html", "/assets/couches.js?v=41",
+  // La marque : complete pour l'en-tete, REDUITE pour l'onglet — a 16 pixels
+  // l'emboitement (Haiti dans la boucle, la boucle dans la loupe) devient une
+  // tache, et c'est une contrainte de l'emboitement, pas un reglage a trouver.
   "/assets/brand/explorateur-mark.svg",
+  "/assets/brand/explorateur-mark-mini.svg",
   "/assets/pwa.js?v=2",
-  "/assets/brand/favicon.ico", "/assets/brand/logo-32.png",
-  "/assets/brand/logo-dark-96.png", "/assets/brand/apple-touch-icon.png",
+  "/assets/brand/explorateur.ico", "/assets/brand/explorateur-32.png",
+  "/assets/brand/apple-touch-icon.png",
   // Icones de l'application installee : Android et Chrome exigent 192 et 512,
   // et les versions « maskable » evitent que le lanceur rogne le logo.
   "/assets/brand/icone-192.png", "/assets/brand/icone-512.png",

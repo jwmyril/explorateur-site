@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" role="img" aria-label="Explorateur Haïti">
+<!-- Engendré par build_logo_explorateur.py — ne pas éditer à la main. La silhouette vient de haiti_contour_simplifie.geojson, le contour que le site sert à ses cartes. -->
+<path d="M99 99 L124 124" stroke="#ffffff" stroke-width="11" stroke-linecap="round" fill="none"/>
+<circle cx="60" cy="60" r="55" fill="none" stroke="#ffffff" stroke-width="3"/>
+<path d="M30 92 C20 70 24 44 44 26 C48 23 53 22 55 24 C40 40 33 62 39 88 C37 92 32 94 30 92 Z" fill="#ffffff"/><path d="M36 88 C28 68 32 46 48 30 C36 46 32 66 37 86 Z" fill="#e8e8e8"/>
+<path fill="#ffffff" d="M72.6 47.4 L61.0 49.6 L60.1 52.5 L69.1 54.0 L74.9 57.1 L72.9 61.7 L74.8 64.0 L72.5 65.2 L82.3 72.4 L81.8 75.0 L77.2 74.6 L75.0 77.1 L71.1 77.3 L56.0 75.9 L54.8 75.0 L58.0 74.2 L53.5 75.2 L45.2 72.4 L41.1 73.6 L40.6 78.8 L47.6 80.8 L51.8 85.2 L53.6 85.1 L52.5 83.3 L55.4 81.0 L61.4 80.2 L61.8 81.4 L72.5 82.9 L87.6 81.0 L93.3 85.0 L92.8 82.0 L94.6 79.0 L88.4 73.4 L92.2 73.3 L93.7 71.5 L94.0 68.4 L90.8 66.9 L96.0 62.0 L92.8 59.6 L94.9 57.6 L93.8 53.1 L87.6 52.6 L84.7 50.6 L82.3 52.2 L81.1 50.1 L72.6 47.4 Z M65.0 66.7 L63.9 66.7 L63.1 67.5 L64.7 69.3 L66.5 69.6 L69.0 71.1 L72.2 71.5 L72.5 72.1 L72.8 71.8 L72.8 70.4 L72.0 69.3 L65.0 66.7 Z M73.0 44.8 L71.7 44.8 L69.6 45.2 L69.8 45.4 L71.4 45.8 L72.7 45.9 L75.0 46.5 L76.0 46.6 L76.4 46.5 L76.0 46.0 L75.5 45.7 L73.0 44.8 Z"/>
+</svg>

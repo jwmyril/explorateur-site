@@ -18,6 +18,36 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
   <title data-i18n="xp.title">Explorador de Haití — buscar una comuna, comparar, exportar</title>
   <meta name="description" data-i18n-content="xp.desc" content="Busque cualquier comuna de Haití y consulte su perfil territorial: servicios esenciales, indicadores disponibles, fuentes y años de referencia." />
+
+  <!-- Aperçu de partage. Sans ces balises, LinkedIn refuse le lien : son robot
+       ne peut pas construire de carte et répond « Please enter a valid link »
+       (constaté le 22/08/2026 en ajoutant le site à une section Sélection).
+       Elles restent en français, en dur : les robots sociaux n'exécutent pas
+       le JavaScript, T() ne les traduira jamais. og:url est absolue et sans
+       paramètre — les UTM se posent dans le lien partagé, pas ici.
+
+       PAS de date de publication, volontairement : LinkedIn classe la page en
+       « Article » et en réclame une, mais l'Explorateur n'est pas un article.
+       Ses données changent ; une date figée s'afficherait périmée sur chaque
+       partage. Le Post Inspector garde donc une ligne rouge, et c'est le bon
+       choix. Le canonical n'est pas ici : il existait déjà plus bas, un seul
+       suffit. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Explorateur Haïti" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://explorateur.atmart.ltd/" />
+  <meta property="og:title" content="Explorateur Haïti — les 140 communes, chiffrées, datées, sourcées" />
+  <meta property="og:description" content="53 indicateurs, 6 306 observations, 39 sources — et 1 120 absences documentées. Comparez deux territoires, exportez, vérifiez chaque chiffre à sa source. Sans compte, sans traceur." />
+  <meta property="og:image" content="https://explorateur.atmart.ltd/assets/brand/partage-1200x627.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="627" />
+  <meta property="og:image:alt" content="Explorateur Haïti — 1 120 absences documentées, 140 communes, 53 indicateurs, 39 sources." />
+  <meta name="author" content="Jean Wisner Myril" />
+  <meta property="article:author" content="https://www.linkedin.com/in/jean-wisner-myril-economist-statistician/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Explorateur Haïti — les 140 communes, chiffrées, datées, sourcées" />
+  <meta name="twitter:description" content="53 indicateurs, 6 306 observations, 39 sources — et 1 120 absences documentées. Sans compte, sans traceur." />
+  <meta name="twitter:image" content="https://explorateur.atmart.ltd/assets/brand/partage-1200x627.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="manifest" href="/manifest.webmanifest" />
@@ -45,7 +75,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </script>
 <!-- /JSON-LD -->
 
-    <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/index.html", "ht": "https://explorateur.atmart.ltd/ht/index.html", "en": "https://explorateur.atmart.ltd/en/index.html", "es": "https://explorateur.atmart.ltd/es/index.html"};</script>
+  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/index.html", "ht": "https://explorateur.atmart.ltd/ht/index.html", "en": "https://explorateur.atmart.ltd/en/index.html", "es": "https://explorateur.atmart.ltd/es/index.html"};</script>
   <link rel="canonical" href="https://explorateur.atmart.ltd/es/index.html" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/index.html" />
   <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/index.html" />

@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 82
+  "fichiers": 84
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -25,6 +25,8 @@
    "atmart_couche_bassins_HT.geojson",
    "atmart_couche_inondable_HT.geojson",
    "atmart_credits_departements.json",
+   "atmart_diaspora_destinations.json",
+   "atmart_diaspora_destinations_HT.csv",
    "atmart_ecoles_declarees.json",
    "atmart_finance_agrements_HT.csv",
    "atmart_hibiscus_communes.json",
@@ -302,6 +304,20 @@
     "SRC-032"
    ],
    "attribution": "OIM — Displacement Tracking Matrix (via HDX)"
+  },
+  "atmart_diaspora_destinations.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-054"
+   ],
+   "attribution": "ONU DESA — Division de la population, Département des affaires économiques et sociales des Nations unies"
+  },
+  "atmart_diaspora_destinations_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-054"
+   ],
+   "attribution": "ONU DESA — Division de la population, Département des affaires économiques et sociales des Nations unies"
   },
   "atmart_eau_surface.json": {
    "licence": "Copernicus — free of charge, without restriction of use (aucune licence nommée)",

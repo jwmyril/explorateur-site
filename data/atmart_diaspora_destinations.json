@@ -1,0 +1,227 @@
+{
+ "meta": {
+  "titre": "Personnes nées en Haïti vivant à l'étranger, par pays",
+  "source_id": "SRC-054",
+  "source": "ONU DESA — International Migrant Stock 2024",
+  "passeport": "PSP-065",
+  "licence": "CC BY 3.0 IGO",
+  "attribution": "United Nations, Department of Economic and Social Affairs, Population Division (2024). International Migrant Stock 2024",
+  "millesime": "révision 2024",
+  "unite": "personnes nées en Haïti",
+  "limite": "CE N'EST PAS « LA DIASPORA » : le décompte porte sur les personnes NÉES en Haïti, pas sur celles d'ascendance haïtienne. Un enfant né à Brooklyn ou à Montréal de parents haïtiens n'y figure pas — la diaspora vécue est donc plus nombreuse, d'une quantité que ce fichier ne permet pas d'estimer. CE N'EST PAS NON PLUS UNE DONNÉE COMMUNALE et cela ne le deviendra pas : aucune ligne ne dit de quelle commune la personne est partie, et répartir 1,7 million de personnes sur 140 communes fabriquerait 140 chiffres faux. Enfin ce sont des ESTIMATIONS reconstruites depuis les recensements de chaque pays d'accueil : la colonne base_estimation dit si le pays compte par lieu de naissance (B), par citoyenneté (C) ou en incluant les réfugiés (R) — trois choses différentes qu'il ne faut pas additionner sans le savoir.",
+  "date_extraction": "2026-08-23",
+  "empreinte_capture": "0e10179d05186041"
+ },
+ "monde": {
+  "1990": 521381,
+  "1995": 686087,
+  "2000": 821140,
+  "2005": 958254,
+  "2010": 1157011,
+  "2015": 1467970,
+  "2020": 1764699,
+  "2024": 2017692
+ },
+ "pays_2024": [
+  {
+   "nom": "United States of America",
+   "personnes": 798232
+  },
+  {
+   "nom": "Dominican Republic",
+   "personnes": 535116
+  },
+  {
+   "nom": "Chile",
+   "personnes": 172050
+  },
+  {
+   "nom": "France",
+   "personnes": 116971
+  },
+  {
+   "nom": "Canada",
+   "personnes": 107237
+  },
+  {
+   "nom": "Mexico",
+   "personnes": 91622
+  },
+  {
+   "nom": "Brazil",
+   "personnes": 88383
+  },
+  {
+   "nom": "Bahamas",
+   "personnes": 31353
+  },
+  {
+   "nom": "French Guiana",
+   "personnes": 24246
+  },
+  {
+   "nom": "Turks and Caicos Islands",
+   "personnes": 17446
+  },
+  {
+   "nom": "Guadeloupe",
+   "personnes": 13880
+  },
+  {
+   "nom": "Curaçao",
+   "personnes": 3210
+  },
+  {
+   "nom": "Sint Maarten (Dutch part)",
+   "personnes": 3032
+  },
+  {
+   "nom": "Dominica",
+   "personnes": 2585
+  },
+  {
+   "nom": "Aruba",
+   "personnes": 2501
+  },
+  {
+   "nom": "Martinique",
+   "personnes": 1953
+  },
+  {
+   "nom": "Argentina",
+   "personnes": 1790
+  },
+  {
+   "nom": "Venezuela (Bolivarian Republic of)",
+   "personnes": 1708
+  },
+  {
+   "nom": "Italy",
+   "personnes": 1021
+  },
+  {
+   "nom": "Panama",
+   "personnes": 993
+  },
+  {
+   "nom": "United States Virgin Islands",
+   "personnes": 643
+  },
+  {
+   "nom": "Ecuador",
+   "personnes": 333
+  },
+  {
+   "nom": "Peru",
+   "personnes": 256
+  },
+  {
+   "nom": "Denmark",
+   "personnes": 170
+  },
+  {
+   "nom": "Australia",
+   "personnes": 130
+  },
+  {
+   "nom": "Puerto Rico",
+   "personnes": 117
+  },
+  {
+   "nom": "Costa Rica",
+   "personnes": 103
+  },
+  {
+   "nom": "Luxembourg",
+   "personnes": 89
+  },
+  {
+   "nom": "Belize",
+   "personnes": 66
+  },
+  {
+   "nom": "Norway",
+   "personnes": 57
+  },
+  {
+   "nom": "Honduras",
+   "personnes": 44
+  },
+  {
+   "nom": "Greece",
+   "personnes": 39
+  },
+  {
+   "nom": "Cuba",
+   "personnes": 38
+  },
+  {
+   "nom": "Sri Lanka",
+   "personnes": 36
+  },
+  {
+   "nom": "Antigua and Barbuda",
+   "personnes": 34
+  },
+  {
+   "nom": "Barbados",
+   "personnes": 32
+  },
+  {
+   "nom": "Nicaragua",
+   "personnes": 24
+  },
+  {
+   "nom": "Guinea",
+   "personnes": 21
+  },
+  {
+   "nom": "Cayman Islands",
+   "personnes": 21
+  },
+  {
+   "nom": "Saint Lucia",
+   "personnes": 21
+  },
+  {
+   "nom": "Iceland",
+   "personnes": 20
+  },
+  {
+   "nom": "Bolivia (Plurinational State of)",
+   "personnes": 18
+  },
+  {
+   "nom": "Guatemala",
+   "personnes": 14
+  },
+  {
+   "nom": "Finland",
+   "personnes": 13
+  },
+  {
+   "nom": "Hungary",
+   "personnes": 9
+  },
+  {
+   "nom": "Bulgaria",
+   "personnes": 6
+  },
+  {
+   "nom": "Slovakia",
+   "personnes": 4
+  },
+  {
+   "nom": "Bermuda",
+   "personnes": 3
+  },
+  {
+   "nom": "Cyprus",
+   "personnes": 1
+  },
+  {
+   "nom": "Slovenia",
+   "personnes": 1
+  }
+ ]
+}

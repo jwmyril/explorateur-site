@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 87
+  "fichiers": 90
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -58,6 +58,9 @@
    "atmart_registre_marches_HT.csv",
    "atmart_registre_ong_HT.csv",
    "atmart_registre_sources.csv",
+   "atmart_renvois_us.json",
+   "atmart_renvois_us_annuel.csv",
+   "atmart_renvois_us_mensuel.csv",
    "atmart_sante_declaree.json",
    "atmart_solaire_communes.json",
    "atmart_sols_communes.json",
@@ -585,6 +588,27 @@
     "SRC-ATM-001"
    ],
    "attribution": "Atmart Data"
+  },
+  "atmart_renvois_us.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-056"
+   ],
+   "attribution": "U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
+  },
+  "atmart_renvois_us_annuel.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-056"
+   ],
+   "attribution": "U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
+  },
+  "atmart_renvois_us_mensuel.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-056"
+   ],
+   "attribution": "U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
   },
   "atmart_retours_forces.json": {
    "licence": "sous réserve",

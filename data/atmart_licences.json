@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 84
+  "fichiers": 87
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -111,7 +111,10 @@
    "atmart_infrastructures_communes_HT.csv"
   ],
   "sous réserve": [
-   "atmart_deplaces_HT.csv"
+   "atmart_deplaces_HT.csv",
+   "atmart_retours_forces.json",
+   "atmart_retours_forces_HT.csv",
+   "atmart_retours_forces_points_HT.csv"
   ],
   "à déclarer": [
    "atmart_couches_carte_HT.csv",
@@ -327,11 +330,9 @@
   "atmart_ecoles_declarees.json": {
    "licence": "CC BY 4.0",
    "sources": [
-    "SRC-003",
-    "SRC-004",
-    "SRC-023"
+    "SRC-004"
    ],
-   "attribution": "Fonds National de l'Éducation ; IHSI ; MENFP / SIGEEE"
+   "attribution": "MENFP — Direction de la planification et de la coopération externe (DPCE) ; application SIGEEE"
   },
   "atmart_equipements_hot.json": {
    "licence": "ODbL 1.0",
@@ -584,6 +585,27 @@
     "SRC-ATM-001"
    ],
    "attribution": "Atmart Data"
+  },
+  "atmart_retours_forces.json": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-055"
+   ],
+   "attribution": "OIM — Displacement Tracking Matrix, avec l'Office National de la Migration (ONM) et le Groupe d'appui aux rapatriés et aux réfugiés (GARR)"
+  },
+  "atmart_retours_forces_HT.csv": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-055"
+   ],
+   "attribution": "OIM — Displacement Tracking Matrix, avec l'Office National de la Migration (ONM) et le Groupe d'appui aux rapatriés et aux réfugiés (GARR)"
+  },
+  "atmart_retours_forces_points_HT.csv": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-055"
+   ],
+   "attribution": "OIM — Displacement Tracking Matrix, avec l'Office National de la Migration (ONM) et le Groupe d'appui aux rapatriés et aux réfugiés (GARR)"
   },
   "atmart_sante_declaree.json": {
    "licence": "CC BY 4.0",

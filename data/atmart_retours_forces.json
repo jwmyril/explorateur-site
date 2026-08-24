@@ -1,0 +1,147 @@
+{
+ "meta": {
+  "titre": "Retours forcés vers Haïti — points d'entrée",
+  "source_id": "SRC-055",
+  "passeport": "PSP-066",
+  "source": "OIM/DTM avec l'ONM et le GARR — Suivi des retours forcés vers Haïti",
+  "licence": "Conditions OIM/DTM — passeport PSP-066, publication sous réserve",
+  "attribution": "OIM — Displacement Tracking Matrix, avec l'Office National de la Migration (ONM) et le GARR ; « Suivi des retours forcés vers Haïti »",
+  "millesime": "année 2025",
+  "unite": "% des arrivées de 2025",
+  "total_2025": 270214,
+  "limite": "DEUX COMMUNES SUR CENT QUARANTE PORTENT UNE VALEUR, et les 138 autres ne sont PAS à zéro : elles sont sans donnée. La fiche annuelle ne publie la part que de Belladère (51 %) et d'Ouanaminthe (27 %) ; pour Malpasse et Anse-à-Pitres elle donne une hausse (+346 % et +96 %) sans part. Environ 22 % des arrivées se répartissent entre ces points et les aéroports sans détail publié. LES EFFECTIFS SONT DÉDUITS d'un pourcentage arrondi à l'unité : 51 % de 270 214 place Belladère entre 136 458 et 139 160 personnes, un intervalle de plus de 2 700. C'est la PART qui est cartographiée, pas l'effectif. Enfin le point d'entrée n'est pas l'origine : une personne qui entre à Belladère peut venir de n'importe quel département — la fiche cite le Sud-Est, l'Ouest, l'Artibonite, le Centre et le Nord comme principales régions d'origine, sans les chiffrer.",
+  "departements_origine_cites": [
+   "Sud-Est",
+   "Ouest",
+   "Artibonite",
+   "Centre",
+   "Nord"
+  ],
+  "empreinte_capture": "e9461757adef9e86",
+  "date_extraction": "2026-08-23"
+ },
+ "communes": {
+  "HT0632": {
+   "p": 51.0,
+   "e": "",
+   "n": "Belladère"
+  },
+  "HT0421": {
+   "p": 27.0,
+   "e": "",
+   "n": "Ouanaminthe"
+  },
+  "HT0133": {
+   "p": "",
+   "e": 346.0,
+   "n": "Malpasse"
+  },
+  "HT0234": {
+   "p": "",
+   "e": 96.0,
+   "n": "Anse-à-Pître"
+  }
+ },
+ "national": {
+  "retours_forces_total": {
+   "periode": "2026-S1",
+   "valeur": 141720,
+   "unite": "personnes"
+  },
+  "renvoi_republique_dominicaine": {
+   "periode": "2025",
+   "valeur": 265215,
+   "unite": "personnes"
+  },
+  "renvoi_turques_et_caiques": {
+   "periode": "2025",
+   "valeur": 2935,
+   "unite": "personnes"
+  },
+  "renvoi_etats_unis": {
+   "periode": "2025",
+   "valeur": 1159,
+   "unite": "personnes"
+  },
+  "renvoi_bahamas": {
+   "periode": "2025",
+   "valeur": 756,
+   "unite": "personnes"
+  },
+  "renvoi_jamaique": {
+   "periode": "2025",
+   "valeur": 147,
+   "unite": "personnes"
+  },
+  "part_hommes_adultes": {
+   "periode": "2025",
+   "valeur": 66,
+   "unite": "%"
+  },
+  "evolution_femmes_adultes": {
+   "periode": "2024-2025",
+   "valeur": 92,
+   "unite": "%"
+  },
+  "evolution_filles": {
+   "periode": "2024-2025",
+   "valeur": 152,
+   "unite": "%"
+  },
+  "evolution_garcons": {
+   "periode": "2024-2025",
+   "valeur": 133,
+   "unite": "%"
+  },
+  "age_moyen": {
+   "periode": "2025",
+   "valeur": 34,
+   "unite": "ans"
+  },
+  "part_nes_en_haiti": {
+   "periode": "2025",
+   "valeur": 99,
+   "unite": "%"
+  },
+  "motif_economique": {
+   "periode": "2025",
+   "valeur": 85,
+   "unite": "%"
+  },
+  "deja_deplaces_avant_depart": {
+   "periode": "2025",
+   "valeur": 19,
+   "unite": "%"
+  },
+  "sans_document_identite": {
+   "periode": "2025",
+   "valeur": 32,
+   "unite": "%"
+  },
+  "intention_repartir_6_mois": {
+   "periode": "2025",
+   "valeur": 11,
+   "unite": "%"
+  },
+  "besoin_transport": {
+   "periode": "2025",
+   "valeur": 92,
+   "unite": "%"
+  },
+  "besoin_nourriture": {
+   "periode": "2025",
+   "valeur": 72,
+   "unite": "%"
+  },
+  "besoin_hebergement": {
+   "periode": "2025",
+   "valeur": 27,
+   "unite": "%"
+  },
+  "enquetes_realisees": {
+   "periode": "2025",
+   "valeur": 26853,
+   "unite": "adultes"
+  }
+ }
+}

@@ -277,6 +277,31 @@
        caisse dont le siège est aux Gonaïves dessert des comptoirs ailleurs,
        et ces comptoirs ne sont pas rattachés ici : leur libellé nomme
        souvent une localité, pas une commune. */
+    /* LES RETOURS FORCÉS, et la première carte communale du sujet.
+       Les points d'entrée SONT des communes : Belladère, Ouanaminthe,
+       Anse-à-Pître, et Malpasse qui est une localité de Ganthier.
+
+       DEUX COMMUNES SEULEMENT PORTENT UNE VALEUR, et les 138 autres ne sont
+       pas à zéro — elles sont sans donnée. La source ne publie la part que de
+       Belladère et d'Ouanaminthe. Une commune blanche se lit spontanément
+       comme « rien ne s'y passe » : la limite le dit en toutes lettres, faute
+       de quoi la carte mentirait par son silence. */
+    { id: "retours_forces", nom: "Retours forcés : part des arrivées par point d'entrée (OIM/ONM/GARR)", type: "choroplethe",
+      csv: "data/atmart_retours_forces_points_HT.csv", pcode: "pcode_commune",
+      courbe: "lineaire",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          var p = parseFloat(r.part_arrivees_2025_pct);
+          if (!isNaN(p)) m[r.pcode_commune] = p;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("année 2025"),
+                 unite: "% des arrivées de 2025" };
+      },
+      source: "OIM — Displacement Tracking Matrix, avec l'Office National de la Migration et le GARR ; rattachement des points d'entrée aux communes par Atmart, passeport PSP-066",
+      limite: "DEUX COMMUNES SUR CENT QUARANTE PORTENT UNE VALEUR, ET LES AUTRES NE SONT PAS À ZÉRO : elles sont sans donnée. La fiche annuelle ne publie la part que de Belladère (51 %) et d'Ouanaminthe (27 %) ; pour Malpasse — une localité de Ganthier — et pour Anse-à-Pitres, elle ne donne qu'une évolution, +346 % et +96 % entre 2024 et 2025. Environ 22 % des 270 214 arrivées de 2025 ne sont pas ventilées, entre ces points et les aéroports. LE POINT D'ENTRÉE N'EST PAS L'ORIGINE : une personne qui entre à Belladère peut venir de n'importe quel département, et la source cite le Sud-Est, l'Ouest, l'Artibonite, le Centre et le Nord comme principales régions d'origine sans les chiffrer. Enfin les effectifs se déduisent d'un pourcentage arrondi à l'unité : 51 % place Belladère entre 136 458 et 139 160 personnes, soit un intervalle de plus de 2 700 — c'est la PART qui est cartographiée, jamais l'effectif." },
     { id: "caisses", nom: "Communes desservies par une caisse populaire (BRH)", type: "choroplethe",
       csv: "data/atmart_caisses_communes_desservies_HT.csv", pcode: "pcode_commune",
       courbe: "lineaire",
@@ -1531,6 +1556,15 @@
                      ["Services et infrastructures",
                       ["eau", "carburant", "finance", "coop_finance", "caisses",
                        "telecom", "routes"]],
+                     /* LES RETOURS FORCÉS ONT LEUR PROPRE GROUPE. Les
+                        ranger dans « Services et infrastructures » aurait
+                        laissé entendre qu'un poste frontalier est un service
+                        rendu aux habitants ; les ranger dans « Ce que l'on
+                        sait » aurait fait croire à une carte de qualité de
+                        l'information. C'est un fait mesuré, et il porte son
+                        propre nom. */
+                     ["Migration — retours forcés",
+                      ["retours_forces"]],
                      /* Le tourisme a son groupe et non une place dans
                         « Services » : ce n'est pas un service rendu aux
                         habitants, c'est une activité économique, et les deux

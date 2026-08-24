@@ -277,6 +277,43 @@
        caisse dont le siège est aux Gonaïves dessert des comptoirs ailleurs,
        et ces comptoirs ne sont pas rattachés ici : leur libellé nomme
        souvent une localité, pas une commune. */
+    /* LES LIEUX DE CULTE, en deux cartes et non une.
+
+       Le total répond à « où la carte voit-elle des lieux de culte ? ». Le
+       vodou répond à autre chose : aucun registre administratif haïtien ne le
+       recense, et ces points sont la seule trace territoriale publiée. Fondu
+       dans le total, il pèserait 9 % et disparaîtrait sous les objets
+       chrétiens. */
+    { id: "lieux_culte", nom: "Lieux de culte cartographiés (OpenStreetMap)", type: "choroplethe",
+      csv: "data/atmart_lieux_culte_communes_HT.csv", pcode: "pcode_commune",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          m[r.pcode_commune] = +r.lieux_culte_total || 0;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("relevé du 24/08/2026"),
+                 unite: "lieux de culte cartographiés" };
+      },
+      source: "OpenStreetMap via Overpass — © contributeurs OSM ; rattachement communal par Atmart, passeport PSP-068",
+      limite: "CE N'EST PAS UN RECENSEMENT DES LIEUX DE CULTE, C'EST L'ÉTAT DE LEUR CARTOGRAPHIE. Une commune pâle est bien plus probablement une commune que personne n'a levée qu'une commune peu pratiquante — 121 communes sur 140 portent au moins un point, et les 19 autres ne sont pas des communes sans église. 3 142 objets rattachés : 2 533 chrétiens, 279 vodou, 12 spiritualistes, 4 musulmans, 12 d'une autre religion déclarée, et 302 SANS AUCUNE ÉTIQUETTE de religion — ceux-là ne sont rangés dans aucune famille, parce que les compter comme chrétiens « puisque c'est probable en Haïti » remplacerait une observation par une supposition. L'extraction porte sur un rectangle qui mord sur la République dominicaine ; 32 objets ont été écartés par le rattachement aux contours communaux." },
+    { id: "lieux_culte_vodou", nom: "Lieux de culte vodou cartographiés (OpenStreetMap)", type: "choroplethe",
+      csv: "data/atmart_lieux_culte_communes_HT.csv", pcode: "pcode_commune",
+      courbe: "lineaire",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          var v = +r.vodou || 0;
+          if (v > 0) m[r.pcode_commune] = v;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("relevé du 24/08/2026"),
+                 unite: "lieux de culte vodou cartographiés" };
+      },
+      source: "OpenStreetMap via Overpass — © contributeurs OSM ; rattachement communal par Atmart, passeport PSP-068",
+      limite: "LES 279 POINTS VODOU SONT, À NOTRE CONNAISSANCE, LA SEULE TRACE TERRITORIALE PUBLIÉE de ces lieux : aucun registre administratif haïtien ne les recense. C'est ce qui fait leur valeur et ce qui impose la prudence — ils dépendent entièrement de ce que des contributeurs ont choisi de cartographier, et un lakou non levé n'existe pas dans cette carte. Une commune à zéro ne dit RIEN de la pratique du vodou dans cette commune ; elle dit que personne n'y a posé de point. À lire avec la carte du total, jamais seule." },
     /* LES RETOURS FORCÉS, et la première carte communale du sujet.
        Les points d'entrée SONT des communes : Belladère, Ouanaminthe,
        Anse-à-Pître, et Malpasse qui est une localité de Ganthier.
@@ -1565,6 +1602,12 @@
                         propre nom. */
                      ["Migration — retours forcés",
                       ["retours_forces"]],
+                     /* LE VODOU A SA PLACE À CÔTÉ DU TOTAL, pas ailleurs :
+                        les deux cartes se lisent ensemble, et lire la seconde
+                        seule ferait prendre une absence de contributeur pour
+                        une absence de pratique. */
+                     ["Lieux de culte — ce que la carte en montre",
+                      ["lieux_culte", "lieux_culte_vodou"]],
                      /* Le tourisme a son groupe et non une place dans
                         « Services » : ce n'est pas un service rendu aux
                         habitants, c'est une activité économique, et les deux

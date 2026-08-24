@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 90
+  "fichiers": 93
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -98,11 +98,14 @@
    "atmart_couche_carburant_HT.geojson",
    "atmart_couche_finance_HT.geojson",
    "atmart_couche_finance_cooperative_HT.geojson",
+   "atmart_couche_lieux_culte_HT.geojson",
    "atmart_couche_telecom_HT.geojson",
    "atmart_couche_tourisme_HT.geojson",
    "atmart_equipements_hot.json",
    "atmart_finance_cooperative.json",
    "atmart_finance_cooperative_communes_HT.csv",
+   "atmart_lieux_culte.json",
+   "atmart_lieux_culte_communes_HT.csv",
    "atmart_telecom_communes_HT.csv",
    "atmart_tourisme_communes.json",
    "atmart_tourisme_communes_HT.csv"
@@ -272,6 +275,13 @@
     "SRC-035"
    ],
    "attribution": "CNIGS via HaitiData (geoserver WFS)"
+  },
+  "atmart_couche_lieux_culte_HT.geojson": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-057"
+   ],
+   "attribution": "OpenStreetMap — contributeurs"
   },
   "atmart_couche_telecom_HT.geojson": {
    "licence": "ODbL 1.0",
@@ -448,6 +458,20 @@
     "SRC-ATM-001"
    ],
    "attribution": "Atmart Data"
+  },
+  "atmart_lieux_culte.json": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-057"
+   ],
+   "attribution": "OpenStreetMap — contributeurs"
+  },
+  "atmart_lieux_culte_communes_HT.csv": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-057"
+   ],
+   "attribution": "OpenStreetMap — contributeurs"
   },
   "atmart_marches_HT.geojson": {
    "licence": "CC BY 4.0",

@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 98
+  "fichiers": 105
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -16,6 +16,9 @@
    "EXTRAIT_haiti_lieux_habites_geonames_gps.csv",
    "LISEZMOI_transferts_diaspora.md",
    "atmart_alea_inondation_communes_HT.csv",
+   "atmart_banques.json",
+   "atmart_banques_depots_territoire_HT.csv",
+   "atmart_banques_ratios_HT.csv",
    "atmart_batiments_communes.json",
    "atmart_caisses_communes_desservies_HT.csv",
    "atmart_caisses_populaires.json",
@@ -67,6 +70,10 @@
    "atmart_sante_declaree.json",
    "atmart_solaire_communes.json",
    "atmart_sols_communes.json",
+   "atmart_transferts_departements.json",
+   "atmart_transferts_departements_HT.csv",
+   "atmart_transferts_pays.json",
+   "atmart_transferts_pays_mensuel.csv",
    "atmart_urbanisation_communes.json",
    "catalogue_manifest.json",
    "haiti_communes_simplifie.geojson",
@@ -200,6 +207,27 @@
     "SRC-059"
    ],
    "attribution": "Kepios Pte. Ltd."
+  },
+  "atmart_banques.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-062"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_banques_depots_territoire_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-062"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_banques_ratios_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-062"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
   },
   "atmart_bassins_communes.json": {
    "licence": "Freely available for scientific, educational and commercial use",
@@ -757,6 +785,34 @@
     "SRC-028"
    ],
    "attribution": "Humanitarian OpenStreetMap Team (HOT) via HDX"
+  },
+  "atmart_transferts_departements.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-061"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_transferts_departements_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-061"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_transferts_pays.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-060"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_transferts_pays_mensuel.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-060"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
   },
   "atmart_urbanisation_communes.json": {
    "licence": "CC BY 4.0",

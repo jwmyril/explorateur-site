@@ -1,0 +1,74 @@
+{
+ "meta": {
+  "titre": "Système bancaire haïtien — bilan, performance, territoire",
+  "source_id": "SRC-062",
+  "passeport": "PSP-073",
+  "source": "BRH — supervision bancaire, rapports statistiques",
+  "licence": "Données publiques haïtiennes — décret du 12/10/2005, art. 5 (textes officiels des autorités publiques et simples données)",
+  "attribution": "BRH — Banque de la République d'Haïti, Direction de la supervision des banques et des institutions financières, rapports statistiques trimestriels",
+  "premier_trimestre": "2013-12-31",
+  "dernier_trimestre": "2026-03-31",
+  "limite": "LA MAILLE TERRITORIALE EST BINAIRE : « région métropolitaine » contre « villes de province ». Ce n'est pas une donnée communale, et la BRH n'en publie pas. LES DÉPÔTS SONT LOCALISÉS À L'AGENCE, pas au domicile du déposant. UN COMPTE N'EST PAS UNE PERSONNE : une même personne peut en tenir plusieurs, et le nombre de comptes ne mesure donc pas la bancarisation. LES RATIOS DE STRUCTURE SONT DES ÉTATS À UNE DATE, ceux de rentabilité des FLUX ANNUALISÉS — la colonne `nature` le dit, et les confondre fausse toute comparaison. LES LIGNES MARQUÉES `provisoire = oui` VIENNENT D'UN RAPPORT NON ARRÊTÉ et peuvent être révisées. LES COLONNES D'AGRÉGATION (sous-total, ensemble du système) sont signalées par `est_un_agregat` : les additionner aux banques compterait tout deux fois.",
+  "empreintes_captures": {
+   "brh_rapport_statistique_trim1_2026.xlsx": "cfd287833deb9b90",
+   "brh_rapport_statistique_trim2_2026_provisoire.xlsx": "118bf70cbb872e95"
+  },
+  "date_extraction": "2026-08-25"
+ },
+ "observations_ratios": 5322,
+ "observations_depots": 192,
+ "banques_suivies": [
+  "Banque Nationale de Crédit",
+  "Banque Populaire Haïtienne",
+  "Banque de l'Union Haïtienne",
+  "Capital Bank",
+  "Citibank N.A. (succursale d'Haïti)",
+  "Scotiabank",
+  "Sogebank",
+  "Sogebel",
+  "Unibank"
+ ],
+ "depots_par_zone": {
+  "date": "2026-03-31",
+  "region_metropolitaine_milliers_gourdes": 473187226,
+  "villes_de_province_milliers_gourdes": 138256937,
+  "part_metropolitaine_pourcent": 77.4
+ },
+ "prets_improductifs": {
+  "date": "2026-03-31",
+  "par_banque": [
+   {
+    "banque": "Banque Populaire Haïtienne",
+    "part_des_prets_bruts_pourcent": 75.31
+   },
+   {
+    "banque": "Banque Nationale de Crédit",
+    "part_des_prets_bruts_pourcent": 39.69
+   },
+   {
+    "banque": "Sogebel",
+    "part_des_prets_bruts_pourcent": 8.03
+   },
+   {
+    "banque": "Sogebank",
+    "part_des_prets_bruts_pourcent": 5.65
+   },
+   {
+    "banque": "Unibank",
+    "part_des_prets_bruts_pourcent": 1.1
+   },
+   {
+    "banque": "Capital Bank",
+    "part_des_prets_bruts_pourcent": 0.91
+   },
+   {
+    "banque": "Banque de l'Union Haïtienne",
+    "part_des_prets_bruts_pourcent": 0.57
+   },
+   {
+    "banque": "Citibank N.A. (succursale d'Haïti)",
+    "part_des_prets_bruts_pourcent": 0.0
+   }
+  ]
+ }
+}

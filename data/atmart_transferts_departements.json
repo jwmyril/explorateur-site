@@ -1,0 +1,58 @@
+{
+ "meta": {
+  "titre": "Transferts de la diaspora, par département",
+  "source_id": "SRC-061",
+  "passeport": "PSP-072",
+  "source": "BRH — BRH-Infos à la loupe n° 1, avril 2024",
+  "licence": "Données publiques haïtiennes — décret du 12/10/2005, art. 5 (textes officiels des autorités publiques et simples données)",
+  "attribution": "BRH — Banque de la République d'Haïti, « BRH-Infos à la loupe » n° 1, avril 2024 : les transferts sans contrepartie, tendance, distribution et dynamique du marché",
+  "maille": "département",
+  "limite": "CE N'EST PAS UNE DONNÉE COMMUNALE, et il n'en existe pas : la maille la plus fine publiée pour les transferts est le DÉPARTEMENT. LE MONTANT EST ENREGISTRÉ LÀ OÙ LE TRANSFERT EST PAYÉ, pas où vit le bénéficiaire — un habitant de Kenscoff qui retire à Pétion-Ville est compté dans l'Ouest. La concentration sur l'Ouest mesure donc aussi la concentration du réseau de paiement, ce que la BRH écrit elle-même. SEUL LE CIRCUIT FORMEL EST COMPTÉ : l'argent porté par un voyageur n'y est pas. LES VALEURS SONT TIRÉES D'ÉTIQUETTES DE GRAPHIQUE, recoupées contre les totaux et les pourcentages écrits en toutes lettres dans le même document ; les cinq contrôles passent, mais l'arrondi d'affichage demeure. TROIS PÉRIODES SEULEMENT, dont une de quatre mois qui ne se compare pas à un exercice entier.",
+  "empreinte_capture": "1894e6f72126ad0f",
+  "date_extraction": "2026-08-25"
+ },
+ "periode_carte": "2022-2023",
+ "unite": "dollars américains reçus dans l'exercice",
+ "departements": {
+  "Ouest": {
+   "usd": 2246163260.09,
+   "part": 68.394
+  },
+  "Artibonite": {
+   "usd": 316407666.41,
+   "part": 9.634
+  },
+  "Nord": {
+   "usd": 161874029.18,
+   "part": 4.929
+  },
+  "Sud": {
+   "usd": 148994223.1,
+   "part": 4.537
+  },
+  "Centre": {
+   "usd": 112149757.25,
+   "part": 3.415
+  },
+  "Nord-Ouest": {
+   "usd": 96912986.8,
+   "part": 2.951
+  },
+  "Sud-Est": {
+   "usd": 77387246.1,
+   "part": 2.356
+  },
+  "Nippes": {
+   "usd": 66292699.26,
+   "part": 2.019
+  },
+  "Nord-Est": {
+   "usd": 33886621.83,
+   "part": 1.032
+  },
+  "Grand'Anse": {
+   "usd": 24068970.14,
+   "part": 0.733
+  }
+ }
+}

@@ -277,6 +277,40 @@
        caisse dont le siège est aux Gonaïves dessert des comptoirs ailleurs,
        et ces comptoirs ne sont pas rattachés ici : leur libellé nomme
        souvent une localité, pas une commune. */
+    /* LES MÉDIAS AUTORISÉS. Acte administratif du régulateur, et non
+       cartographie contributive : l'absence d'une station veut dire absence
+       de licence, pas absence d'observation. C'est l'inverse exact de la
+       couche des lieux de culte, juste au-dessus. */
+    { id: "medias", nom: "Radios et télévisions autorisées (CONATEL)", type: "choroplethe",
+      csv: "data/atmart_medias_communes_HT.csv", pcode: "pcode_commune",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          m[r.pcode_commune] = +r.stations_total || 0;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("année 2023-2024"),
+                 unite: "stations autorisées" };
+      },
+      source: "CONATEL — liste des stations de radiodiffusion autorisées 2023-2024 ; rattachement communal par Atmart, passeport PSP-069",
+      limite: "CE SONT LES STATIONS AUTORISÉES, pas toutes celles qui émettent : une commune sans station n'est pas une commune sans radio, c'est une commune sans station licenciée. 807 stations rattachées à 80 communes — 665 radios FM, 8 radios AM, 134 télévisions. 13 stations restent hors rattachement parce que le document nomme une localité et non une commune (Fonds-Parisien, Liancourt), une île qui en compte deux (La Gonâve) ou deux communes à la fois (« GONAIVES/ST MARC »). LE DOCUMENT SE CONTREDIT EN TROIS ENDROITS : ses en-têtes annoncent 36 radios aux Nippes, 20 télévisions au Nord et 18 au Sud quand ses tableaux en contiennent 35, 19 et 17 — et son propre récapitulatif final donne 19 pour le Nord, contredisant son en-tête. Nous publions le contenu des tableaux." },
+    { id: "medias_communautaires", nom: "Radios communautaires repérées (CONATEL)", type: "choroplethe",
+      csv: "data/atmart_medias_communes_HT.csv", pcode: "pcode_commune",
+      courbe: "lineaire",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          var v = +r.radios_communautaires || 0;
+          if (v > 0) m[r.pcode_commune] = v;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("année 2023-2024"),
+                 unite: "radios communautaires repérées" };
+      },
+      source: "CONATEL — liste des stations de radiodiffusion autorisées 2023-2024 ; repérage au type de propriétaire par Atmart, passeport PSP-069",
+      limite: "11 RADIOS COMMUNAUTAIRES SEULEMENT SONT DÉTECTÉES, et c'est un PLANCHER. Le CONATEL ne les étiquette pas : on les reconnaît quand le propriétaire est une organisation de type associatif — association, collectif, konbit, coopérative, fédération, comité. Une radio communautaire enregistrée au nom d'une personne n'est pas détectée, et il y en a certainement. La règle se trompe donc par défaut, jamais par excès : mieux vaut en oublier que d'en inventer. À lire comme « au moins tant », jamais comme un décompte." },
     /* LES LIEUX DE CULTE, en deux cartes et non une.
 
        Le total répond à « où la carte voit-elle des lieux de culte ? ». Le
@@ -1608,6 +1642,8 @@
                         une absence de pratique. */
                      ["Lieux de culte — ce que la carte en montre",
                       ["lieux_culte", "lieux_culte_vodou"]],
+                     ["Médias — stations autorisées",
+                      ["medias", "medias_communautaires"]],
                      /* Le tourisme a son groupe et non une place dans
                         « Services » : ce n'est pas un service rendu aux
                         habitants, c'est une activité économique, et les deux

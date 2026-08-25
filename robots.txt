@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://explorateur.atmart.ltd/sitemap.xml
+
+Sitemap: https://explorateur.atmart.ltd/sitemap-communes.xml

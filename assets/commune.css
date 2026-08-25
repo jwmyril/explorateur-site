@@ -1,0 +1,81 @@
+/* Feuille des pages communales — engendrée par build_pages_communes.py.
+   Externe et non incorporée : 560 pages la partagent, le navigateur ne la
+   télécharge qu'une fois. L'édition légère, elle, garde son style incorporé
+   parce qu'elle est UNE page et qu'une requête y coûte plus qu'elle ne rend. */
+:root{--fond:#fff;--encre:#16202c;--doux:#5b6b7b;--trait:#e6ecf2;
+      --bandeau:#0e2240;--lien:#1550b8;--accent:#2a6df4;--boite:#f5f8fb;
+      --puce:#eef4ff}
+:root[data-theme="dark"]{--fond:#0f1720;--encre:#e8eef5;--doux:#9fb0c2;
+      --trait:#1f2c3a;--bandeau:#0a1420;--lien:#7fb0ff;--accent:#7fb0ff;
+      --boite:#16212d;--puce:#16212d}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--fond:#0f1720;--encre:#e8eef5;--doux:#9fb0c2;
+      --trait:#1f2c3a;--bandeau:#0a1420;--lien:#7fb0ff;--accent:#7fb0ff;
+      --boite:#16212d;--puce:#16212d}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+     color:var(--encre);background:var(--fond)}
+header{background:var(--bandeau);color:#fff;padding:.8rem 1rem}
+header a{color:#fff;text-decoration:none;font-weight:600}
+.langues{float:right;font-weight:400;font-size:.85rem}
+.langues a{margin-left:.5rem;opacity:.8;font-weight:400}
+.langues a[aria-current]{opacity:1;text-decoration:underline}
+main{max-width:48rem;margin:0 auto;padding:1rem 1rem 3rem}
+nav.fil{font-size:.82rem;color:var(--doux);margin:.2rem 0 .6rem}
+nav.fil a{color:var(--lien)}
+h1{font-size:1.7rem;margin:.4rem 0 .2rem}
+h2{font-size:1.15rem;margin:2rem 0 .6rem;padding-top:.9rem;
+   border-top:1px solid var(--trait)}
+h3{font-size:.95rem;margin:1.2rem 0 .3rem;color:var(--doux);
+   text-transform:uppercase;letter-spacing:.03em}
+p{margin:.5rem 0}
+.chapeau{font-size:1.02rem}
+.doux{color:var(--doux);font-size:.88rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+caption{text-align:left;font-weight:600;padding:.4rem 0}
+th,td{text-align:left;padding:.45rem .4rem;border-bottom:1px solid var(--trait);
+      vertical-align:top}
+th{font-size:.78rem;color:var(--doux);text-transform:uppercase;
+   letter-spacing:.03em;font-weight:600}
+td.val{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+td.an{white-space:nowrap;color:var(--doux)}
+td.src{color:var(--doux);font-size:.82rem}
+.st{display:inline-block;font-size:.68rem;font-weight:700;line-height:1;
+    padding:.16rem .3rem;border-radius:4px;background:var(--puce);
+    color:var(--lien);margin-left:.3rem;vertical-align:.08em}
+.boite{background:var(--boite);border-left:3px solid var(--accent);
+       padding:.8rem 1rem;border-radius:0 8px 8px 0;margin:1rem 0}
+ul.abs{list-style:none;padding:0;margin:.6rem 0}
+ul.abs li{padding:.35rem 0;border-bottom:1px solid var(--trait);font-size:.92rem}
+ul.liens{list-style:none;padding:0;margin:.6rem 0}
+ul.liens li{margin:.45rem 0}
+ul.liens a{color:var(--lien)}
+.btn{display:inline-block;margin:.6rem 0;padding:.7rem 1rem;
+     background:var(--bandeau);color:#fff;border-radius:10px;
+     text-decoration:none;min-height:48px;line-height:1.9}
+:root[data-theme="dark"] .btn{background:#1d3350}
+.dept{margin:1.4rem 0}
+.dept ul{list-style:none;padding:0;margin:.3rem 0;display:flex;flex-wrap:wrap;
+         gap:.35rem}
+.dept li a{display:inline-block;padding:.35rem .6rem;border:1px solid var(--trait);
+           border-radius:8px;text-decoration:none;color:var(--lien);
+           font-size:.9rem}
+.dept li a:hover,.dept li a:focus{background:var(--puce);border-color:var(--accent)}
+footer{border-top:1px solid var(--trait);margin-top:2.4rem;padding-top:1rem;
+       font-size:.82rem;color:var(--doux)}
+footer a{color:var(--lien)}
+/* Sur écran étroit, le tableau s'empile au lieu de perdre une colonne.
+   La première version masquait la source sous 34rem : elle tenait dans
+   l'écran, et elle reniait la promesse du produit — chaque valeur porte sa
+   source — précisément sur l'appareil où on lit le plus. Une colonne cachée
+   ne se voit pas manquer ; c'est pour cela qu'il fallait la retirer. */
+@media (max-width:34rem){
+  table,tbody,tr,td{display:block;width:100%}
+  thead{position:absolute;left:-9999px}
+  tr{padding:.55rem 0;border-bottom:1px solid var(--trait)}
+  td{border:0;padding:0}
+  td:first-child{font-weight:600}
+  td.val{display:inline-block;margin:.15rem .6rem .15rem 0}
+  td.an{display:inline-block;font-size:.85rem}
+  td.src{font-size:.78rem;line-height:1.4}
+}

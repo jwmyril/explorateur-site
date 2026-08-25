@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 93
+  "fichiers": 96
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -40,6 +40,9 @@
    "atmart_licences.json",
    "atmart_licences_donnees_HT.csv",
    "atmart_marches_HT.geojson",
+   "atmart_medias.json",
+   "atmart_medias_communes_HT.csv",
+   "atmart_medias_stations_HT.csv",
    "atmart_millesimes_territoriaux.csv",
    "atmart_occupation_sol.json",
    "atmart_occupation_sol_communes_HT.csv",
@@ -479,6 +482,27 @@
     "SRC-011"
    ],
    "attribution": "PAM (WFP)"
+  },
+  "atmart_medias.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-058"
+   ],
+   "attribution": "CONATEL — Conseil National des Télécommunications"
+  },
+  "atmart_medias_communes_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-058"
+   ],
+   "attribution": "CONATEL — Conseil National des Télécommunications"
+  },
+  "atmart_medias_stations_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-058"
+   ],
+   "attribution": "CONATEL — Conseil National des Télécommunications"
   },
   "atmart_millesimes_territoriaux.csv": {
    "licence": "CC BY 4.0",

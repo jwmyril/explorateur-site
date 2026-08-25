@@ -20,6 +20,69 @@ IND-ACC-001,ht,methode_calcul,"Kalkil izokwòn sou rezo wout la depi chak lokali
 IND-ACC-001,ht,nom,Tan pou rive nan sant sante ki pi pre a
 IND-ACC-001,ht,sens_interpretation,"Ba = sèvis la aksesib. Se endikatè ki pi difisil pou repwodui, se poutèt sa li pi diferansyan."
 IND-ACC-001,ht,unite,minit
+IND-ACC-002,en,comparabilite,Comparable between communes of the same reference year.
+IND-ACC-002,en,definition,Median road travel time to the nearest hospital.
+IND-ACC-002,en,limites_connues,"Same limits as access to a health point, including the walk that is not counted. ""Hospital"" follows OpenStreetMap tagging, not a ministry accreditation: in Haiti the word covers many dispensaries and health centres, so the family is broader than the word suggests."
+IND-ACC-002,en,methode_calcul,"Same computation as IND-ACC-001, with destinations restricted to objects tagged as hospitals in OpenStreetMap."
+IND-ACC-002,en,nom,Travel time to the nearest hospital
+IND-ACC-002,en,sens_interpretation,Low = better access
+IND-ACC-002,en,unite,minutes
+IND-ACC-002,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-ACC-002,es,definition,Tiempo mediano de trayecto por carretera hasta el hospital más cercano.
+IND-ACC-002,es,limites_connues,"Mismos límites que el acceso a un punto de salud, incluida la marcha a pie que no se contabiliza. «Hospital» sigue el etiquetado de OpenStreetMap, no una acreditación ministerial: en Haití la palabra abarca numerosos dispensarios y centros de salud, de modo que la familia es más amplia de lo que la palabra sugiere."
+IND-ACC-002,es,methode_calcul,"Mismo cálculo que IND-ACC-001, con destinos limitados a los objetos etiquetados como hospital en OpenStreetMap."
+IND-ACC-002,es,nom,Tiempo de acceso al hospital más cercano
+IND-ACC-002,es,sens_interpretation,Bajo = mejor acceso
+IND-ACC-002,es,unite,minutos
+IND-ACC-002,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
+IND-ACC-002,ht,definition,Tan medyàn pou fè wout la jouk nan lopital ki pi pre a.
+IND-ACC-002,ht,limites_connues,"Menm limit ak tan pou rive nan yon sant sante, mache a pye a pa konte tou. Mo « lopital » la soti nan etikèt OpenStreetMap, se pa yon agreman ministè : ann Ayiti mo sa a kouvri anpil dispansè ak sant sante, kidonk fanmi an pi laj pase sa mo a fè kwè."
+IND-ACC-002,ht,methode_calcul,"Menm kalkil ak IND-ACC-001, men se sèlman kote OpenStreetMap make kòm lopital yo ki konte."
+IND-ACC-002,ht,nom,Tan pou rive nan lopital ki pi pre a
+IND-ACC-002,ht,sens_interpretation,Ba = pi bon aksè
+IND-ACC-002,ht,unite,minit
+IND-ACC-003,en,comparabilite,Comparable between communes of the same reference year.
+IND-ACC-003,en,definition,Median road travel time to the nearest school.
+IND-ACC-003,en,limites_connues,"The computation follows the road network: it does not measure off-road walking, which is the rule in several communal sections — and children walk to school. The figure describes provision, not a pupil's actual journey. Every mapped school counts, whatever its level: the village pre-school is not the secondary school."
+IND-ACC-003,en,methode_calcul,"Same computation as IND-ACC-001, destination: any object tagged as a school."
+IND-ACC-003,en,nom,Travel time to the nearest school
+IND-ACC-003,en,sens_interpretation,Low = better access
+IND-ACC-003,en,unite,minutes
+IND-ACC-003,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-ACC-003,es,definition,Tiempo mediano de trayecto por carretera hasta la escuela más cercana.
+IND-ACC-003,es,limites_connues,"El cálculo sigue la red viaria: no mide los trayectos a pie fuera de carretera, que son la regla en varias secciones comunales — y a la escuela se va a pie. La cifra describe la oferta, no el trayecto real de un alumno. Cuentan todas las escuelas cartografiadas, sea cual sea su nivel: el preescolar del pueblo no es el liceo."
+IND-ACC-003,es,methode_calcul,"Mismo cálculo que IND-ACC-001, destino: todo objeto etiquetado como escuela."
+IND-ACC-003,es,nom,Tiempo de acceso a la escuela más cercana
+IND-ACC-003,es,sens_interpretation,Bajo = mejor acceso
+IND-ACC-003,es,unite,minutos
+IND-ACC-003,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
+IND-ACC-003,ht,definition,Tan medyàn pou fè wout la jouk nan lekòl ki pi pre a.
+IND-ACC-003,ht,limites_connues,"Kalkil la swiv rezo wout la : li pa mezire wout a pye deyò wout yo, e se konsa timoun yo fè li nan plizyè seksyon kominal — paske se a pye moun al lekòl. Chif la dekri sèvis ki genyen an, se pa wout yon elèv fè vre. Tout lekòl ki sou kat la konte, kèlkeswa nivo yo : preskolè bouk la se pa lise a."
+IND-ACC-003,ht,methode_calcul,"Menm kalkil ak IND-ACC-001, destinasyon an se tout kote ki make kòm lekòl."
+IND-ACC-003,ht,nom,Tan pou rive nan lekòl ki pi pre a
+IND-ACC-003,ht,sens_interpretation,Ba = pi bon aksè
+IND-ACC-003,ht,unite,minit
+IND-ACC-004,en,comparabilite,Comparable between communes of the same reference year.
+IND-ACC-004,en,definition,Median road travel time to the nearest market.
+IND-ACC-004,en,limites_connues,"A market does not open every day: travel time says nothing about frequency, and a weekly market ten minutes away is less accessible than a daily market thirty minutes away. The coordinates of the markets monitored by WFP are published to the hundredth of a degree, about one kilometre of precision. The walk to the road is not counted."
+IND-ACC-004,en,methode_calcul,"Same computation as IND-ACC-001, destination: the geolocated markets of the Atmart register."
+IND-ACC-004,en,nom,Travel time to the nearest market
+IND-ACC-004,en,sens_interpretation,Low = better access
+IND-ACC-004,en,unite,minutes
+IND-ACC-004,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-ACC-004,es,definition,Tiempo mediano de trayecto por carretera hasta el mercado más cercano.
+IND-ACC-004,es,limites_connues,"Un mercado no abre todos los días: el tiempo de acceso no dice nada sobre la frecuencia, y un mercado semanal a diez minutos es menos accesible que un mercado diario a treinta. Las coordenadas de los mercados que sigue el PMA se publican con centésimas de grado, es decir alrededor de un kilómetro de precisión. La marcha a pie hasta la carretera no se contabiliza."
+IND-ACC-004,es,methode_calcul,"Mismo cálculo que IND-ACC-001, destino: los mercados geolocalizados del registro Atmart."
+IND-ACC-004,es,nom,Tiempo de acceso al mercado más cercano
+IND-ACC-004,es,sens_interpretation,Bajo = mejor acceso
+IND-ACC-004,es,unite,minutos
+IND-ACC-004,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
+IND-ACC-004,ht,definition,Tan medyàn pou fè wout la jouk nan mache ki pi pre a.
+IND-ACC-004,ht,limites_connues,"Yon mache pa louvri chak jou : tan pou rive a pa di anyen sou konbyen fwa li louvri, e yon mache ki fèt yon fwa pa semèn a dis minit mwens aksesib pase yon mache ki louvri chak jou a trant minit. Kowòdone mache PAM ap swiv yo pibliye nan santyèm degre, sa vle di apeprè yon kilomèt presizyon. Mache a pye jouk nan wout la pa konte."
+IND-ACC-004,ht,methode_calcul,"Menm kalkil ak IND-ACC-001, destinasyon an se mache ki nan rejis Atmart la, ak kowòdone yo."
+IND-ACC-004,ht,nom,Tan pou rive nan mache ki pi pre a
+IND-ACC-004,ht,sens_interpretation,Ba = pi bon aksè
+IND-ACC-004,ht,unite,minit
 IND-BUD-001,en,comparabilite,Requires correcting for inflation to compare two fiscal years.
 IND-BUD-001,en,definition,Executed public expenditure related to the population.
 IND-BUD-001,en,limites_connues,A voted expenditure is not an executed expenditure.
@@ -125,6 +188,69 @@ IND-EDU-010,ht,methode_calcul,"IND-EDU-001 ÷ IND-POP-007 × 10 000. Bòn anwo d
 IND-EDU-010,ht,nom,Lekòl pou chak 10 000 jèn 5 a 19 an
 IND-EDU-010,ht,sens_interpretation,"Wo = anpil etablisman anrejistre parapò ak jèn 5 a 19 an yo. Li pa di anyen sou gwosè lekòl yo, sou eta yo, ni sou distans pou rive."
 IND-EDU-010,ht,unite,lekòl / 10 000 jèn
+IND-ENV-001,en,comparabilite,Comparable between communes of the same reference year.
+IND-ENV-001,en,definition,"Share of the commune's area classified as ""trees"" by satellite observation."
+IND-ENV-001,en,limites_connues,"Tree cover in the satellite's sense is not forest in the forestry sense: orchards, hedgerows and dense scrub are included. Compare it with the World Bank's national forest area, which gives an entirely different figure — two definitions, two methods."
+IND-ENV-001,en,methode_calcul,"Share of WorldCover pixels classified as ""trees"" within the commune polygon, 10 m resolution."
+IND-ENV-001,en,nom,Tree cover
+IND-ENV-001,en,sens_interpretation,High = more cover
+IND-ENV-001,en,unite,% of the commune's area
+IND-ENV-001,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-ENV-001,es,definition,Proporción de la superficie comunal clasificada como «árboles» por la observación satelital.
+IND-ENV-001,es,limites_connues,"La cubierta arbórea en el sentido del satélite no es el bosque en el sentido forestal: entran huertos, setos y matorral denso. Conviene contrastarla con la superficie forestal nacional del Banco Mundial, que da una cifra muy distinta — dos definiciones, dos métodos."
+IND-ENV-001,es,methode_calcul,"Proporción de píxeles WorldCover clasificados como «árboles» dentro del polígono comunal, resolución 10 m."
+IND-ENV-001,es,nom,Cubierta arbórea
+IND-ENV-001,es,sens_interpretation,Alto = más cubierta
+IND-ENV-001,es,unite,% de la superficie comunal
+IND-ENV-001,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
+IND-ENV-001,ht,definition,Pòsyon sipèfisi komin nan satelit la klase kòm « pyebwa ».
+IND-ENV-001,ht,limites_connues,"Sa satelit la rele kouvèti pyebwa se pa forè nan sans forestye a : jaden pyebwa, ranje pyebwa ak raje pran ladan l tou. Pou konpare, gade sipèfisi forè nasyonal Bank Mondyal la bay : li bay yon lòt chif nèt — de definisyon, de metòd."
+IND-ENV-001,ht,methode_calcul,"Pòsyon piksèl WorldCover ki klase « pyebwa » anndan polygòn komin nan, rezolisyon 10 m."
+IND-ENV-001,ht,nom,Kouvèti pyebwa
+IND-ENV-001,ht,sens_interpretation,Wo = plis kouvèti
+IND-ENV-001,ht,unite,% sipèfisi komin nan
+IND-ENV-002,en,comparabilite,Comparable between communes of the same reference year.
+IND-ENV-002,en,definition,"Share of the commune's area occupied by buildings, measured from imagery."
+IND-ENV-002,en,limites_connues,"Detected built-up area includes every construction, residential or not. It says nothing about habitability, nor about population density."
+IND-ENV-002,en,methode_calcul,Share of built-up surface detected by GHSL in 2020 within the commune polygon.
+IND-ENV-002,en,nom,Share of built-up area
+IND-ENV-002,en,sens_interpretation,High = more urban
+IND-ENV-002,en,unite,% of the commune's area
+IND-ENV-002,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-ENV-002,es,definition,"Proporción de la superficie comunal ocupada por construcciones, medida por imágenes."
+IND-ENV-002,es,limites_connues,"La superficie construida detectada incluye toda construcción, también la no residencial. No dice nada sobre la habitabilidad ni sobre la densidad de población."
+IND-ENV-002,es,methode_calcul,Proporción de superficie construida detectada por GHSL en 2020 dentro del polígono comunal.
+IND-ENV-002,es,nom,Proporción de superficie construida
+IND-ENV-002,es,sens_interpretation,Alto = más urbano
+IND-ENV-002,es,unite,% de la superficie comunal
+IND-ENV-002,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
+IND-ENV-002,ht,definition,"Pòsyon sipèfisi komin nan ki gen konstriksyon sou li, jan imaj satelit yo mezire l."
+IND-ENV-002,ht,limites_connues,"Bati yo detekte a gen ladan l tout konstriksyon, menm sa ki pa kay moun. Li pa di anyen ni sou si moun ka rete ladan yo, ni sou konbyen moun ki rete la."
+IND-ENV-002,ht,methode_calcul,Pòsyon sipèfisi bati GHSL detekte an 2020 anndan polygòn komin nan.
+IND-ENV-002,ht,nom,Pòsyon tè ki gen bati sou li
+IND-ENV-002,ht,sens_interpretation,Wo = plis vil
+IND-ENV-002,ht,unite,% sipèfisi komin nan
+IND-ENV-003,en,comparabilite,Comparable between communes of the same reference year.
+IND-ENV-003,en,definition,Mean annual rainfall total over the 1991-2020 climate reference period.
+IND-ENV-003,en,limites_connues,"A thirty-year normal is not a forecast, and it hides year-to-year variability — which is precisely what an average erases."
+IND-ENV-003,en,methode_calcul,"Mean of CHIRPS annual totals over 1991-2020, sampled on the pixels of the commune polygon."
+IND-ENV-003,en,nom,Normal annual rainfall
+IND-ENV-003,en,sens_interpretation,Neither good nor bad: read it alongside agriculture and risk
+IND-ENV-003,en,unite,mm per year
+IND-ENV-003,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-ENV-003,es,definition,Acumulado anual medio de precipitaciones en el periodo de referencia climática 1991-2020.
+IND-ENV-003,es,limites_connues,"Una normal de treinta años no es un pronóstico, y oculta la variabilidad de un año a otro — que es precisamente lo que una media borra."
+IND-ENV-003,es,methode_calcul,"Media de los acumulados anuales CHIRPS en 1991-2020, muestreada sobre los píxeles del polígono comunal."
+IND-ENV-003,es,nom,Precipitación anual normal
+IND-ENV-003,es,sens_interpretation,Ni bueno ni malo: léase junto con la agricultura y el riesgo
+IND-ENV-003,es,unite,mm por año
+IND-ENV-003,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
+IND-ENV-003,ht,definition,Mwayèn total lapli ki tonbe nan yon ane sou peryòd referans klimatik 1991-2020 an.
+IND-ENV-003,ht,limites_connues,"Yon nòmal sou trant ane se pa yon previzyon, e li kache jan yon ane ka diferan de yon lòt — se egzakteman sa yon mwayèn efase."
+IND-ENV-003,ht,methode_calcul,"Mwayèn total anyèl CHIRPS yo sou 1991-2020, pran sou piksèl polygòn komin nan."
+IND-ENV-003,ht,nom,Lapli nòmal nan yon ane
+IND-ENV-003,ht,sens_interpretation,Ni bon ni move : li li ansanm ak agrikilti a ak risk la
+IND-ENV-003,ht,unite,mm pa ane
 IND-GEO-001,en,comparabilite,Comparable as long as the administrative division does not change.
 IND-GEO-001,en,definition,Area of the territorial entity.
 IND-GEO-001,en,limites_connues,"The national total of the sections (26,942 km²) differs from the usual 27,750 km²: coastal tracing of the polygons."
@@ -629,6 +755,69 @@ IND-QUA-001,ht,methode_calcul,"Senk dimansyon teste : sipèfisi konnen, lokalite
 IND-QUA-001,ht,nom,Nòt konplè administratif
 IND-QUA-001,ht,sens_interpretation,"Wo = komin nan byen dokimante. Ba = nenpòt analiz la ap frajil, e sa se yon enfòmasyon nan tèt li."
 IND-QUA-001,ht,unite,%
+IND-QUA-002,en,comparabilite,Comparable between communes of the same reference year.
+IND-QUA-002,en,definition,"Number of data families — health, schools, population — where the sources strongly contradict each other or cannot be cross-checked."
+IND-QUA-002,en,limites_connues,THIS INDICATOR DOES NOT MEASURE THE TERRITORY: it measures the state of the INFORMATION we have about it. A commune scoring badly here is not poorly equipped — it is a commune where our sources contradict each other. That is what makes it actionable: it points to where mappers should be sent or a register requested.
+IND-QUA-002,en,methode_calcul,"For each of the three families — health, schools, population — the ratio between the highest and the lowest value among the available sources; families in disagreement (ratio > 3) or with a single source are counted."
+IND-QUA-002,en,nom,Data families that are weak or unverifiable
+IND-QUA-002,en,sens_interpretation,"High = less reliable information, NOT a less well-equipped territory"
+IND-QUA-002,en,unite,families out of 3
+IND-QUA-002,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-QUA-002,es,definition,"Número de familias de datos — salud, escuelas, población — donde las fuentes se contradicen fuertemente o no pueden contrastarse."
+IND-QUA-002,es,limites_connues,ESTE INDICADOR NO MIDE EL TERRITORIO: mide el estado de la INFORMACIÓN que tenemos sobre él. Una comuna mal puntuada aquí no está mal equipada — es una comuna sobre la que nuestras fuentes se contradicen. Eso es lo que lo hace accionable: señala dónde enviar cartógrafos o dónde pedir un registro.
+IND-QUA-002,es,methode_calcul,"Para cada una de las tres familias — salud, escuelas, población — razón entre el valor más alto y el más bajo de las fuentes disponibles; se cuentan las familias en desacuerdo (razón > 3) o con una única fuente."
+IND-QUA-002,es,nom,Familias de datos débiles o no verificables
+IND-QUA-002,es,sens_interpretation,"Alto = información menos segura, NO territorio peor equipado"
+IND-QUA-002,es,unite,familias de 3
+IND-QUA-002,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
+IND-QUA-002,ht,definition,"Kantite fanmi done — sante, lekòl, popilasyon — kote sous yo kontredi youn lòt anpil oswa kote nou pa ka konfwonte yo."
+IND-QUA-002,ht,limites_connues,ENDIKATÈ SA A PA MEZIRE TERITWA A : li mezire eta ENFÒMASYON nou genyen sou li. Yon komin ki gen yon move nòt isit la se pa yon komin ki mal ekipe — se yon komin kote sous nou yo kontredi youn lòt. Se sa ki fè li itil : li montre kote pou voye moun al fè kat oswa kote pou mande yon rejis.
+IND-QUA-002,ht,methode_calcul,"Pou chak nan twa fanmi yo — sante, lekòl, popilasyon — rapò ant pi gwo valè a ak pi piti valè a nan sous ki disponib yo ; nou konte fanmi ki pa dakò (rapò > 3) oswa ki gen yon sèl sous."
+IND-QUA-002,ht,nom,Fanmi done ki fèb oswa ki pa verifyab
+IND-QUA-002,ht,sens_interpretation,"Wo = enfòmasyon an mwens si, SE PA teritwa a ki mal ekipe"
+IND-QUA-002,ht,unite,fanmi sou 3
+IND-RIS-001,en,comparabilite,Comparable between communes of the same reference year.
+IND-RIS-001,en,definition,"Number of earthquakes whose epicentre lies less than 100 km from the centre of the commune, since 1911."
+IND-RIS-001,en,limites_connues,"A count of PAST events is not a probabilistic hazard. The density of the measurement network has increased greatly: recent decades count better, not necessarily more."
+IND-RIS-001,en,methode_calcul,Count of ComCat catalogue earthquakes whose epicentre is less than 100 km from the commune centroid.
+IND-RIS-001,en,nom,Earthquakes within 100 km
+IND-RIS-001,en,sens_interpretation,High = stronger historical exposure
+IND-RIS-001,en,unite,count since 1911
+IND-RIS-001,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-RIS-001,es,definition,"Número de sismos cuyo epicentro se sitúa a menos de 100 km del centro de la comuna, desde 1911."
+IND-RIS-001,es,limites_connues,"Un recuento de sucesos PASADOS no es una amenaza probabilística. La densidad de la red de medición ha aumentado mucho: las décadas recientes cuentan mejor, no necesariamente más."
+IND-RIS-001,es,methode_calcul,Recuento de los sismos del catálogo ComCat cuyo epicentro está a menos de 100 km del centroide de la comuna.
+IND-RIS-001,es,nom,Sismos en un radio de 100 km
+IND-RIS-001,es,sens_interpretation,Alto = mayor exposición histórica
+IND-RIS-001,es,unite,número desde 1911
+IND-RIS-001,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
+IND-RIS-001,ht,definition,"Kantite tranblemanntè ki gen episant yo nan mwens pase 100 km depi sant komin nan, depi 1911."
+IND-RIS-001,ht,limites_connues,"Konte evènman ki PASE deja se pa menm bagay ak yon alea pwobabilis. Rezo aparèy mezi yo vin pi dans anpil : dènye deseni yo konte pi byen, se pa nesesèman plis ki rive."
+IND-RIS-001,ht,methode_calcul,Konte tranblemanntè katalòg ComCat yo ki gen episant yo nan mwens pase 100 km depi santwòyid komin nan.
+IND-RIS-001,ht,nom,Tranblemanntè nan yon reyon 100 km
+IND-RIS-001,ht,sens_interpretation,Wo = plis ekspozisyon nan istwa a
+IND-RIS-001,ht,unite,kantite depi 1911
+IND-RIS-002,en,comparabilite,Comparable between communes of the same reference year.
+IND-RIS-002,en,definition,"Number of tropical cyclones whose track passed less than 100 km from the centre of the commune, since 1851."
+IND-RIS-002,en,limites_connues,"Passing nearby is not striking: distance says nothing about intensity at ground level, nor about damage. Older tracks are reconstructed, and therefore less precise."
+IND-RIS-002,en,methode_calcul,Count of IBTrACS tracks passing less than 100 km from the commune centroid.
+IND-RIS-002,en,nom,Cyclones passing within 100 km
+IND-RIS-002,en,sens_interpretation,High = stronger historical exposure
+IND-RIS-002,en,unite,count since 1851
+IND-RIS-002,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-RIS-002,es,definition,"Número de ciclones tropicales cuya trayectoria pasó a menos de 100 km del centro de la comuna, desde 1851."
+IND-RIS-002,es,limites_connues,"Pasar cerca no es golpear: la distancia no dice ni la intensidad en el suelo ni los daños. Las trayectorias antiguas están reconstruidas y son, por tanto, menos precisas."
+IND-RIS-002,es,methode_calcul,Recuento de las trayectorias IBTrACS que pasan a menos de 100 km del centroide de la comuna.
+IND-RIS-002,es,nom,Ciclones pasados en un radio de 100 km
+IND-RIS-002,es,sens_interpretation,Alto = mayor exposición histórica
+IND-RIS-002,es,unite,número desde 1851
+IND-RIS-002,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
+IND-RIS-002,ht,definition,"Kantite siklòn twopikal ki pase nan mwens pase 100 km depi sant komin nan, depi 1851."
+IND-RIS-002,ht,limites_connues,"Pase toupre se pa frape : distans lan pa di ni ki fòs van an te genyen atè, ni ki dega ki fèt. Trajektwa ansyen yo se rekonstitisyon, kidonk yo mwens presi."
+IND-RIS-002,ht,methode_calcul,Konte trajektwa IBTrACS yo ki pase nan mwens pase 100 km depi santwòyid komin nan.
+IND-RIS-002,ht,nom,Siklòn ki pase nan yon reyon 100 km
+IND-RIS-002,ht,sens_interpretation,Wo = plis ekspozisyon nan istwa a
+IND-RIS-002,ht,unite,kantite depi 1851
 IND-SAN-001,en,comparabilite,NOT comparable between communes outside the covered area: the source covers only 14 communes out of 140.
 IND-SAN-001,en,definition,Number of operating health facilities recorded.
 IND-SAN-001,en,limites_connues,"PARTIAL COVERAGE — 14 communes (Artibonite, Centre, Nord, Ouest). An absent commune does not have zero facilities: it is not covered, hence status N. 2023 census."

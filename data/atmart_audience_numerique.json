@@ -1,0 +1,85 @@
+{
+ "meta": {
+  "titre": "Audience numérique haïtienne — accès et plateformes",
+  "source_id": "SRC-059",
+  "passeport": "PSP-070",
+  "source": "Kepios / DataReportal, Digital 2026: Haiti",
+  "licence": "Contenu sous droit d'auteur de Kepios Pte. Ltd. — valeurs CITÉES avec attribution, aucune page ni aucun graphique repris",
+  "attribution": "We Are Social & Meltwater (2026), \"Digital 2026: Haiti\", retrieved from https://datareportal.com/reports/digital-2026-haiti",
+  "limite": "CES VALEURS SONT CITÉES, PAS RECALCULÉES : elles viennent du rapport de Kepios, dont aucune page ni aucun graphique n'est repris ici. Le rapport complet se consulte à la source. DEUX SOURCES NE DISENT PAS LA MÊME CHOSE : la Banque mondiale compte 47,9 % d'internautes en 2024, Kepios 39,3 % fin 2025 — huit points, et le plus récent est le plus bas. Nous publions les deux sans arbitrer ; Kepios avertit lui-même qu'il change de sources et de méthodes d'un rapport à l'autre, ce qui rend l'évolution dans le temps délicate. LES « IDENTITÉS DE RÉSEAUX SOCIAUX » NE SONT PAS DES PERSONNES : un individu peut en tenir plusieurs, et certains comptes ne sont pas humains — Kepios le dit, et c'est pourquoi ce nombre peut dépasser celui des internautes. LES AUDIENCES PAR PLATEFORME sont des PORTÉES PUBLICITAIRES déclarées par Meta et TikTok, pas des décomptes d'utilisateurs actifs. CE PRODUIT EST NATIONAL : rien n'y descend à la commune.",
+  "empreinte_capture": "b135cb60065c3dd2",
+  "date_extraction": "2026-08-24"
+ },
+ "valeurs": {
+  "internautes": {
+   "v": 4.69,
+   "u": "millions",
+   "f": "accès"
+  },
+  "penetration_internet": {
+   "v": 39.3,
+   "u": "% de la population",
+   "f": "accès"
+  },
+  "hors_ligne": {
+   "v": 7.25,
+   "u": "millions",
+   "f": "accès"
+  },
+  "connexions_mobiles": {
+   "v": 84.6,
+   "u": "% de la population",
+   "f": "accès"
+  },
+  "mobiles_haut_debit": {
+   "v": 97.2,
+   "u": "%",
+   "f": "accès"
+  },
+  "identites_reseaux_sociaux": {
+   "v": 2.95,
+   "u": "millions",
+   "f": "plateformes"
+  },
+  "part_reseaux_sociaux": {
+   "v": 24.7,
+   "u": "% de la population",
+   "f": "plateformes"
+  },
+  "facebook_utilisateurs": {
+   "v": 2.95,
+   "u": "millions",
+   "f": "plateformes"
+  },
+  "facebook_part_adultes": {
+   "v": 38.4,
+   "u": "%",
+   "f": "plateformes"
+  },
+  "instagram_part_population": {
+   "v": 4.2,
+   "u": "% de la population",
+   "f": "plateformes"
+  },
+  "instagram_part_adultes": {
+   "v": 6.7,
+   "u": "%",
+   "f": "plateformes"
+  },
+  "reseaux_sociaux_hommes": {
+   "v": 54.4,
+   "u": "%",
+   "f": "profil"
+  },
+  "population_urbaine": {
+   "v": 61.4,
+   "u": "% de la population",
+   "f": "profil"
+  },
+  "age_median": {
+   "v": 24.1,
+   "u": "ans",
+   "f": "profil"
+  }
+ }
+}

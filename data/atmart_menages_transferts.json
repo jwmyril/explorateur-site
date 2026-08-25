@@ -1,0 +1,28 @@
+{
+ "meta": {
+  "titre": "Ménages dont le revenu vient des transferts, par département",
+  "source_id": "SRC-064",
+  "passeport": "PSP-076",
+  "source": "FAO — Data in Emergencies Monitoring (DIEM)",
+  "licence": "CC BY 4.0",
+  "attribution": "FAO — Data in Emergencies Monitoring (DIEM), système de suivi des ménages, Haïti, tours 4 à 6",
+  "maille": "département",
+  "limite": "CE N'EST PAS « LA PART DES MÉNAGES QUI REÇOIVENT UN TRANSFERT », qui serait bien plus élevée. C'est la part de ceux pour qui le transfert est LA source de revenu, ou l'une des trois premières — la colonne `rang` le dit. L'ENQUÊTE EST TÉLÉPHONIQUE : elle atteint qui a un téléphone et qui décroche, ce qui sous-estime probablement les zones rurales les plus isolées. L'ÉCHANTILLON PAR DÉPARTEMENT VA DE 135 À 900 MÉNAGES : un écart de deux points entre deux départements ne veut rien dire. TROIS PASSAGES DE JUIN 2023 À JUIN 2024 ne font pas une série temporelle. LA SOURCE NE SÉPARE PAS les transferts venus de l'étranger de ceux venus d'Haïti même.",
+  "empreinte_capture": "b0efcb0a4578cdae",
+  "date_extraction": "2026-08-25"
+ },
+ "observations": 82,
+ "tour_de_reference": "tour 6",
+ "departements": {
+  "Ouest": 7.946,
+  "Nord-Ouest": 5.955,
+  "Sud-Est": 4.837,
+  "Artibonite": 4.809,
+  "Grand'Anse": 4.484,
+  "Nord-Est": 3.433,
+  "Nord": 2.533,
+  "Nippes": 2.281,
+  "Centre": 1.671,
+  "Sud": 0.456
+ }
+}

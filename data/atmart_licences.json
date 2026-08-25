@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 105
+  "fichiers": 110
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -19,6 +19,7 @@
    "atmart_banques.json",
    "atmart_banques_depots_territoire_HT.csv",
    "atmart_banques_ratios_HT.csv",
+   "atmart_banques_reseau_HT.csv",
    "atmart_batiments_communes.json",
    "atmart_caisses_communes_desservies_HT.csv",
    "atmart_caisses_populaires.json",
@@ -46,6 +47,8 @@
    "atmart_medias.json",
    "atmart_medias_communes_HT.csv",
    "atmart_medias_stations_HT.csv",
+   "atmart_menages_transferts.json",
+   "atmart_menages_transferts_HT.csv",
    "atmart_millesimes_territoriaux.csv",
    "atmart_occupation_sol.json",
    "atmart_occupation_sol_communes_HT.csv",
@@ -84,6 +87,8 @@
   "CC BY 4.0 — transformation ou citation": [
    "atmart_audience_numerique.json",
    "atmart_audience_numerique_HT.csv",
+   "atmart_points_transfert.json",
+   "atmart_points_transfert_communes_HT.csv",
    "atmart_professions_communes_HT.csv",
    "atmart_series_nationales.json",
    "atmart_series_nationales_HT.csv"
@@ -226,6 +231,13 @@
    "licence": "CC BY 4.0",
    "sources": [
     "SRC-062"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_banques_reseau_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-063"
    ],
    "attribution": "BRH — Banque de la République d'Haïti"
   },
@@ -548,6 +560,20 @@
    ],
    "attribution": "CONATEL — Conseil National des Télécommunications"
   },
+  "atmart_menages_transferts.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-064"
+   ],
+   "attribution": "FAO — Organisation des Nations unies pour l'alimentation et l'agriculture"
+  },
+  "atmart_menages_transferts_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-064"
+   ],
+   "attribution": "FAO — Organisation des Nations unies pour l'alimentation et l'agriculture"
+  },
   "atmart_millesimes_territoriaux.csv": {
    "licence": "CC BY 4.0",
    "sources": [
@@ -571,6 +597,20 @@
    "licence": "Domaine public",
    "sources": [],
    "attribution": "CHIRPS 2.0 (Climate Hazards Center, UC Santa Barbara)"
+  },
+  "atmart_points_transfert.json": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-065"
+   ],
+   "attribution": "CAM Transfer — maison de transfert agréée par la BRH"
+  },
+  "atmart_points_transfert_communes_HT.csv": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-065"
+   ],
+   "attribution": "CAM Transfer — maison de transfert agréée par la BRH"
   },
   "atmart_population_modelisee.json": {
    "licence": "CC BY 4.0",

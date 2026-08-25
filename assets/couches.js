@@ -281,6 +281,20 @@
        cartographie contributive : l'absence d'une station veut dire absence
        de licence, pas absence d'observation. C'est l'inverse exact de la
        couche des lieux de culte, juste au-dessus. */
+    { id: "points_transfert", nom: "Points de paiement des transferts (un opérateur)", type: "choroplethe",
+      csv: "data/atmart_points_transfert_communes_HT.csv", pcode: "pcode_commune",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          m[r.pcode_commune] = +r.points_de_service || 0;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("relevé du 25 août 2026"),
+                 unite: "points de service" };
+      },
+      source: "CAM Transfer — répertoire public des points de service, relevé le 25/08/2026 ; rattachement communal par Atmart, passeport PSP-074",
+      limite: "CE DÉCOMPTE EST CELUI D'UNE SEULE MAISON DE TRANSFERT SUR SIX. Une commune à zéro n'est donc PAS une commune sans accès au transfert : c'est une commune où cet opérateur n'est pas présent. 1 632 points relevés, 1 624 rattachés à une commune (99,5 %), 114 communes couvertes sur 140. LES MONTANTS, EUX, N'EXISTENT PAS PAR COMMUNE : la maille la plus fine que la BRH publie est le département — c'est ce que montre la couche « Transferts reçus par département ». CE QUI RESTE HORS RATTACHEMENT : La Gonâve, qui est une île comptant deux communes, Fonds-des-Blancs et Vieux Bourg d'Aquin, qui sont des localités d'Aquin, et une valeur de remplissage du fichier d'origine — huit points sur 1 632, laissés dehors plutôt que répartis au jugé. NOUS PUBLIONS LE DÉCOMPTE, PAS L'ANNUAIRE : le fichier d'origine nomme chaque sous-agent, souvent un très petit commerce au nom d'une personne, et un atlas territorial n'en a pas besoin. UN POINT N'EST PAS UNE CAPACITÉ : deux communes à cinq points ne servent pas forcément autant de monde. ENFIN LE RELEVÉ EST DATÉ : un réseau de sous-agents change vite." },
     { id: "medias", nom: "Radios et télévisions autorisées (CONATEL)", type: "choroplethe",
       csv: "data/atmart_medias_communes_HT.csv", pcode: "pcode_commune",
       agreger: function (rows) {
@@ -1642,6 +1656,7 @@
                         une absence de pratique. */
                      ["Lieux de culte — ce que la carte en montre",
                       ["lieux_culte", "lieux_culte_vodou"]],
+                     ["Transferts — où l'on peut toucher l'argent", ["points_transfert"]],
                      ["Médias — stations autorisées",
                       ["medias", "medias_communautaires"]],
                      /* Le tourisme a son groupe et non une place dans

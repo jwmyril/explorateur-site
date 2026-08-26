@@ -6,7 +6,7 @@
    d'où il vient ni ce qu'il ne couvre pas. */
 (function () {
   "use strict";
-  var DV = "?d=2026-08-25b";
+  var DV = "?d=2026-08-26a";
   var $ = function (s) { return document.querySelector(s); };
   var fmtN = function (v) { return (+v).toLocaleString("fr-FR"); };
 
@@ -281,42 +281,6 @@
        cartographie contributive : l'absence d'une station veut dire absence
        de licence, pas absence d'observation. C'est l'inverse exact de la
        couche des lieux de culte, juste au-dessus. */
-    { id: "mortalite_infantile", nom: "Mortalité infantile (EMMUS 2016)", type: "choroplethe",
-      maille: "enquete", rampe: "alerte",
-      csv: "data/atmart_resultats_emmus_HT.csv", pcode: "pcode_region_enquete",
-      agreger: function (rows) {
-        var m = {};
-        rows.forEach(function (r) {
-          if (r.indicateur_id !== "CM_ECMR_C_IMR") return;
-          if (r.annee !== "2016" || r.cartographiable !== "oui") return;
-          m[r.pcode_region_enquete] = +r.valeur || 0;
-        });
-        var vs = Object.keys(m).map(function (k) { return m[k]; });
-        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
-                 periode: T("enquête EMMUS 2016-2017"),
-                 unite: "décès avant un an pour 1 000 naissances vivantes" };
-      },
-      source: "EMMUS / DHS Program — API des indicateurs, passeport PSP-077",
-      limite: "C'EST UN RÉSULTAT, PAS UNE PRÉSENCE, et c'est ce qui manquait à cet atlas : nous savions où sont les dispensaires, pas si les enfants survivent. LA DERNIÈRE ENQUÊTE DATE DE 2016-2017, dix ans : cette carte dit où en était Haïti AVANT l'effondrement sécuritaire, pas où elle en est. LA MAILLE N'EST NI LA COMMUNE NI LE DÉPARTEMENT : l'EMMUS coupe l'Ouest en aire métropolitaine et reste de l'Ouest — plus fin que le département là où ça compte — et laisse les neuf autres entiers. Les contours sont ceux du DHS lui-même, généralisés sur une grille : ils situent une région, ils ne bornent pas un cadastre. C'EST UNE ENQUÊTE PAR SONDAGE : elle a une marge d'erreur que l'API ne publie pas ici, et un écart de deux points entre deux régions ne prouve rien. Les écarts qui tiennent se comptent en dizaines — et il y en a : trois fois plus de décès dans le reste de l'Ouest qu'en Grand'Anse. DEUX LIGNES DE LA SOURCE NE SONT PAS DESSINÉES : l'agrégat « Grand'Anse et Nippes réunies », qui recouvrirait deux régions déjà peintes, et la strate « camps de déplacés » de 2012, qui n'est pas un territoire." },
-
-    { id: "femmes_lettrees", nom: "Femmes sachant lire (EMMUS 2016)", type: "choroplethe",
-      maille: "enquete", rampe: "vegetal",
-      csv: "data/atmart_resultats_emmus_HT.csv", pcode: "pcode_region_enquete",
-      agreger: function (rows) {
-        var m = {};
-        rows.forEach(function (r) {
-          if (r.indicateur_id !== "ED_LITR_W_LIT") return;
-          if (r.annee !== "2016" || r.cartographiable !== "oui") return;
-          m[r.pcode_region_enquete] = +r.valeur || 0;
-        });
-        var vs = Object.keys(m).map(function (k) { return m[k]; });
-        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
-                 periode: T("enquête EMMUS 2016-2017"),
-                 unite: "% des femmes de 15 à 49 ans" };
-      },
-      source: "EMMUS / DHS Program — API des indicateurs, passeport PSP-077",
-      limite: "C'EST UN RÉSULTAT, PAS UNE PRÉSENCE : l'atlas savait compter les écoles déclarées et les écoles vues, il ne savait pas dire si l'on sait lire. LA RAMPE MONTE VERS LE VERT parce qu'ici, beaucoup est une bonne nouvelle — l'inverse de la carte de mortalité, où la même teinte dirait le contraire de la donnée. LA DERNIÈRE ENQUÊTE DATE DE 2016-2017. LA MAILLE EST CELLE DE L'ENQUÊTE, ni commune ni département, avec les contours du DHS lui-même. C'EST UN SONDAGE : un écart de deux points ne prouve rien. LA QUESTION PORTE SUR LES FEMMES DE 15 À 49 ANS, parce que c'est l'échantillon de l'enquête — ce n'est pas le taux d'alphabétisation de la population." },
-
     { id: "transferts_dep", nom: "Transferts reçus par département (BRH)", type: "choroplethe",
       maille: "departement", rampe: "urbain",
       csv: "data/atmart_transferts_departements_HT.csv", pcode: "pcode_departement",
@@ -761,6 +725,191 @@
     COUCHES.push(d);
   });
 
+  /* --------------------------------------------- les résultats, 26/08/2026
+     VINGT CARTES QUI DISENT « COMMENT ÇA VA », et non plus deux. L'atlas
+     comptait des écoles, des dispensaires, des points d'eau : il savait
+     répondre à « qu'y a-t-il là ». Il ne savait pas dire si l'on sait lire,
+     si l'eau arrive, si le courant passe, si une femme a voix au chapitre.
+     Ces vingt-là comblent des thèmes qui étaient MUETS — un thème muet,
+     ici, c'est un thème où l'atlas montrait des équipements et aucun
+     résultat.
+
+     ELLES SE FABRIQUENT AU LIEU DE SE RECOPIER, comme les neuf couches du
+     17/08 juste au-dessus. Toutes lisent le même fichier, filtrent sur un
+     code d'indicateur et une année, et écartent les lignes non
+     cartographiables : écrire vingt fois cet agrégateur aurait fait vingt
+     endroits où la règle « l'agrégat Grand'Anse+Nippes ne se peint pas »
+     peut être juste ou fausse. Il y en a un.
+
+     CE QUI RESTE PROPRE À CHACUNE, C'EST LA PHRASE. Le nom, l'unité, le sens
+     de la rampe et l'avertissement sont écrits un par un : ils portent ce que
+     l'indicateur mesure vraiment, et cela ne se génère pas. L'avertissement
+     que toutes partagent — sondage, maille, millésime, lignes non dessinées —
+     appartient à la maille et n'est écrit qu'une fois. */
+  /* La source est écrite dans CHAQUE couche, et depuis une seule
+     constante. Le contrôle des droits d'usage lit le texte du fichier
+     et exige d'y voir `source:` dans le bloc de la couche — sa propre
+     note explique pourquoi : un contrôle qui accepte que la source soit
+     posée ailleurs finit par accepter qu'elle ne soit posée nulle part.
+     La constante évite la divergence que la duplication ferait courir. */
+  var SRC_EMMUS = "EMMUS / DHS Program — API des indicateurs, passeport PSP-077";
+
+  var RESULTATS = [
+    { id: "mortalite_infantile", ind: "CM_ECMR_C_IMR", rampe: "alerte",
+      source: SRC_EMMUS,
+      nom: "Mortalité infantile (EMMUS 2016)",
+      unite: "décès avant un an pour 1 000 naissances vivantes",
+      limite: "C'EST UN RÉSULTAT, PAS UNE PRÉSENCE, et c'est ce qui manquait à cet atlas : nous savions où sont les dispensaires, pas si les enfants survivent. LE TAUX PORTE SUR LES DIX ANNÉES QUI PRÉCÈDENT L'ENQUÊTE, parce qu'un décès d'enfant est un événement rare et qu'il faut beaucoup de naissances pour en faire un taux : ce n'est pas la mortalité de l'année 2016. L'ÉCART EST DE CEUX QUI TIENNENT : trois fois plus de décès avant un an dans le reste de l'Ouest qu'en Grand'Anse." },
+
+    { id: "mortalite_u5", ind: "CM_ECMR_C_U5M", rampe: "alerte",
+      source: SRC_EMMUS,
+      nom: "Mortalité des moins de cinq ans (EMMUS 2016)",
+      unite: "décès avant cinq ans pour 1 000 naissances vivantes",
+      limite: "CETTE CARTE CONTIENT LA PRÉCÉDENTE : un enfant mort avant un an est aussi mort avant cinq ans. L'écart entre les deux cartes, lui, mesure ce qui tue APRÈS la première année — diarrhée, pneumonie, malnutrition —, c'est-à-dire ce qu'un service de santé de proximité sait éviter. LE TAUX PORTE SUR LES DIX ANNÉES QUI PRÉCÈDENT L'ENQUÊTE." },
+
+    { id: "retard_croissance", ind: "CN_NUTS_C_HA2", rampe: "alerte",
+      source: SRC_EMMUS,
+      nom: "Enfants en retard de croissance (EMMUS 2016)",
+      unite: "% des enfants de moins de 5 ans",
+      limite: "LE RETARD DE CROISSANCE MESURE UNE PRIVATION LONGUE, pas une faim du moment : un enfant trop petit pour son âge l'est devenu sur des années, et il le restera. C'est l'exact contraire de la carte IPC, qui dit la faim d'une saison — les deux ne se remplacent pas et ne se lisent pas ensemble sans le dire. LA MESURE EST ANTHROPOMÉTRIQUE : taille comparée à l'âge, sur une norme internationale, pas une déclaration du ménage." },
+
+    { id: "anemie_enfants", ind: "CN_ANMC_C_ANY", rampe: "alerte",
+      source: SRC_EMMUS,
+      nom: "Enfants anémiés (EMMUS 2016)",
+      unite: "% des enfants de moins de 5 ans",
+      limite: "L'ANÉMIE SE MESURE DANS LE SANG, prélevé pendant l'enquête : c'est l'un des rares chiffres de cet atlas qui ne repose sur aucune déclaration. ELLE N'A PAS QU'UNE CAUSE — carence en fer, paludisme, parasites, drépanocytose — et la carte ne les distingue pas : un taux élevé appelle un diagnostic, il n'en fournit pas un. LE SEUIL DÉPEND DE L'ÂGE et suit la définition de l'OMS." },
+
+    { id: "vaccination", ind: "CH_VACC_C_BAS", rampe: "vegetal",
+      source: SRC_EMMUS,
+      nom: "Enfants complètement vaccinés (EMMUS 2016)",
+      unite: "% des enfants de 12 à 23 mois",
+      limite: "LA RAMPE MONTE VERS LE VERT : ici, beaucoup est une bonne nouvelle. « COMPLÈTEMENT VACCINÉ » EST UNE DÉFINITION PRÉCISE — huit antigènes reçus avant le premier anniversaire —, et non « a reçu des vaccins » : une commune pâle n'est pas une commune sans vaccination, c'est une commune où le calendrier n'est pas mené à son terme. LA PREUVE EST LE CARNET QUAND IL EXISTE, le souvenir de la mère sinon, et les deux ne se valent pas." },
+
+    { id: "moustiquaires", ind: "ML_NETP_H_MOS", rampe: "vegetal",
+      source: SRC_EMMUS,
+      nom: "Ménages ayant une moustiquaire (EMMUS 2016)",
+      unite: "% des ménages",
+      limite: "POSSÉDER N'EST PAS DORMIR DESSOUS, et l'enquête pose les deux questions : celle-ci est la première, la plus favorable des deux. UNE MOUSTIQUAIRE POUR UN MÉNAGE DE HUIT PERSONNES COMPTE COMME UNE POSSESSION. La distribution est le fait de campagnes ponctuelles : cette carte bouge d'une enquête à l'autre au rythme des campagnes, pas à celui du paludisme." },
+
+    { id: "eau_base", ind: "WS_SRCE_P_BAS", rampe: "vegetal",
+      source: SRC_EMMUS,
+      nom: "Accès à un service d'eau de base (EMMUS 2016)",
+      unite: "% de la population",
+      limite: "« SERVICE DE BASE » EST UN SEUIL, ET IL EST BAS : une source améliorée à moins de trente minutes aller-retour. Ce n'est ni l'eau au robinet, ni l'eau potable — la qualité n'est pas testée. À LIRE AVEC LA COUCHE DES POINTS D'EAU, qui dit où sont les ouvrages : celle-ci dit qui les atteint, et les deux ne se déduisent pas l'une de l'autre." },
+
+    { id: "assainissement_base", ind: "WS_TLET_P_BAS", rampe: "vegetal",
+      source: SRC_EMMUS,
+      nom: "Accès à un assainissement de base (EMMUS 2016)",
+      unite: "% de la population",
+      limite: "« DE BASE » VEUT DIRE : des latrines améliorées NON PARTAGÉES avec d'autres ménages. Une latrine partagée par trois familles ne compte pas, et c'est ce qui fait la sévérité de cette carte. C'EST L'INDICATEUR LE PLUS BAS DE TOUTE CETTE SÉRIE, et c'est un fait sur le pays, pas un défaut de mesure." },
+
+    { id: "electricite_foyer", ind: "HC_ELEC_H_ELC", rampe: "vegetal",
+      source: SRC_EMMUS,
+      nom: "Ménages ayant l'électricité (EMMUS 2016)",
+      unite: "% des ménages",
+      limite: "AVOIR L'ÉLECTRICITÉ N'EST PAS L'AVOIR EN CONTINU : la question porte sur le raccordement du logement, pas sur les heures de courant, et le pays en compte peu. LA SOURCE N'EST PAS DISTINGUÉE — réseau, groupe, panneau solaire comptent pareil. À LIRE AVEC LA CARTE DU POTENTIEL SOLAIRE, qui dit ce qu'un lieu pourrait produire quand celle-ci dit ce qu'un foyer reçoit." },
+
+    { id: "cuisson_charbon", ind: "HC_CKFL_H_CHR", rampe: "alerte",
+      source: SRC_EMMUS,
+      nom: "Ménages cuisinant au charbon de bois (EMMUS 2016)",
+      unite: "% des ménages",
+      limite: "CETTE CARTE EST À DOUBLE LECTURE, ET C'EST VOULU. Le charbon de bois est un problème de SANTÉ dans la maison — la fumée est la première cause de maladie respiratoire de l'enfant — et un problème de COUVERT FORESTIER hors de la maison. À LIRE AVEC LA COUCHE DU COUVERT ARBORÉ : la consommation est urbaine, la coupe est rurale, et les deux cartes ne se ressemblent pas. UNE PART BASSE N'EST PAS UNE BONNE NOUVELLE EN SOI : elle peut signaler le bois ramassé, qui est pire." },
+
+    { id: "sol_en_terre", ind: "HC_FLRM_H_ETH", rampe: "alerte",
+      source: SRC_EMMUS,
+      nom: "Ménages dont le sol est en terre (EMMUS 2016)",
+      unite: "% des ménages",
+      limite: "C'EST LA MESURE DE PAUVRETÉ LA PLUS SOLIDE DE CET ATLAS, et elle ne demande ni revenu ni déclaration : on regarde le sol. UN SOL EN TERRE SE NETTOIE MAL et porte les parasites intestinaux — c'est un fait sanitaire autant qu'économique. AUCUNE ENQUÊTE HAÏTIENNE NE PUBLIE DE TAUX DE PAUVRETÉ MONÉTAIRE PAR RÉGION depuis l'ECVMAS de 2012, dont les microdonnées ne sont pas diffusées : cette carte est ce que nous avons, elle n'est pas un taux de pauvreté." },
+
+    { id: "sans_instruction", ind: "ED_EDAT_B_NED", rampe: "alerte",
+      source: SRC_EMMUS,
+      nom: "Population sans instruction (EMMUS 2016)",
+      unite: "% des 6 ans et plus",
+      limite: "« SANS INSTRUCTION » VEUT DIRE N'AVOIR JAMAIS ÉTÉ SCOLARISÉ, pas être sorti tôt du système. LA POPULATION COMPTÉE COMMENCE À 6 ANS, et beaucoup d'enfants de 6 ans ne sont pas encore entrés à l'école : une part du chiffre est de l'attente, pas de l'exclusion. À LIRE AVEC LES CARTES D'ÉCOLES DÉCLARÉES ET VUES, qui disent où sont les établissements : celle-ci dit qui n'y est jamais allé." },
+
+    { id: "emploi_femmes", ind: "EM_EMPL_W_EMC", rampe: "urbain",
+      source: SRC_EMMUS,
+      nom: "Femmes qui travaillent (EMMUS 2016)",
+      unite: "% des femmes de 15 à 49 ans",
+      limite: "LA RAMPE EST NEUTRE, ET C'EST UN CHOIX ASSUMÉ : dans un pays où l'essentiel du travail féminin est du commerce de survie, une part élevée ne dit pas une économie qui va bien. LE TRAVAIL COMPTÉ EST DÉCLARÉ PAR LA FEMME ELLE-MÊME, informel compris ; le travail domestique non rémunéré, lui, n'est pas compté — et c'est une convention de l'enquête, pas un jugement. C'EST LE SEUL INDICATEUR D'EMPLOI DE CET ATLAS : aucune enquête emploi haïtienne récente n'est publiée par région." },
+
+    { id: "fecondite", ind: "FE_FRTR_W_TFR", rampe: "urbain",
+      source: SRC_EMMUS,
+      nom: "Nombre d'enfants par femme (EMMUS 2016)",
+      unite: "enfants par femme, 15 à 49 ans",
+      limite: "LA RAMPE EST NEUTRE PARCE QUE CE CHIFFRE N'A PAS DE BON SENS : un nombre d'enfants n'est ni une réussite ni un échec, et le colorer en vert ou en rouge serait un jugement, pas une mesure. C'EST UN INDICE SYNTHÉTIQUE : le nombre d'enfants qu'aurait une femme si les taux observés aujourd'hui duraient toute sa vie — pas le nombre d'enfants des femmes d'aujourd'hui. À LIRE AVEC LA CARTE DU BESOIN DE PLANIFICATION NON SATISFAIT, qui dit ce que les femmes elles-mêmes souhaitent." },
+
+    { id: "besoin_planification", ind: "FP_NADM_W_UMT", rampe: "alerte",
+      source: SRC_EMMUS,
+      nom: "Besoin de planification non satisfait (EMMUS 2016)",
+      unite: "% des femmes en union",
+      limite: "CET INDICATEUR PART DU SOUHAIT DE LA FEMME, et c'est ce qui le rend citable sans jugement : il compte celles qui déclarent vouloir espacer ou arrêter les naissances et qui n'utilisent aucune méthode. Un taux élevé est un manque de moyens, pas un choix. LA QUESTION N'EST POSÉE QU'AUX FEMMES EN UNION dans cette version de l'indicateur : les femmes seules sexuellement actives ont le leur, et les deux ne se confondent pas." },
+
+    { id: "union_avant_18", ind: "MA_MBAY_W_B18", rampe: "alerte",
+      source: SRC_EMMUS,
+      nom: "Femmes unies avant 18 ans (EMMUS 2016)",
+      unite: "% des femmes de 20 à 24 ans",
+      limite: "LA COHORTE EST CELLE DES 20-24 ANS, et c'est la seule façon honnête de mesurer : interroger les femmes de 15-19 ans donnerait un chiffre plus bas, puisque certaines s'uniront encore. LE CHIFFRE DIT DONC CE QUI S'EST PASSÉ IL Y A DE DEUX À DIX ANS, pas la situation des adolescentes d'aujourd'hui. « UNION » COUVRE LE MARIAGE ET LE PLAÇAGE : ne compter que le mariage civil ou religieux effacerait la forme la plus courante de vie de couple en Haïti." },
+
+    { id: "violence_conjugale", ind: "DV_EXPV_W_12M", rampe: "alerte",
+      source: SRC_EMMUS,
+      nom: "Violences physiques subies par les femmes (EMMUS 2016)",
+      unite: "% des femmes de 15 à 49 ans",
+      limite: "CE QUI EST MESURÉ EST CE QUI EST DIT, et une violence tue se compte zéro : une région pâle peut être une région où l'on parle moins, pas où l'on frappe moins. C'est la limite la plus lourde de cette carte, et elle joue dans un seul sens — le chiffre réel est plus haut, jamais plus bas. LE MODULE VIOLENCE N'EST POSÉ QU'À UNE FEMME PAR MÉNAGE, seule et par une enquêtrice formée, précisément pour que la réponse soit possible. LES DOUZE DERNIERS MOIS SEULEMENT : la question « depuis l'âge de 15 ans » donne un tout autre chiffre." },
+
+    { id: "decisions_femmes", ind: "WE_DMAK_W_NON", rampe: "alerte",
+      source: SRC_EMMUS,
+      nom: "Femmes sans voix sur les décisions du ménage (EMMUS 2016)",
+      unite: "% des femmes en union",
+      limite: "TROIS DÉCISIONS SONT TESTÉES — ses propres soins de santé, les gros achats du ménage, les visites à la famille —, et cette carte compte les femmes qui n'ont voix sur AUCUNE des trois. LA DÉCISION PARTAGÉE COMPTE COMME UNE VOIX : la mesure n'oppose pas la femme à son conjoint. LA QUESTION NE PORTE QUE SUR LES FEMMES EN UNION, puisqu'il faut être deux pour partager une décision." },
+
+    { id: "naissances_enregistrees", ind: "CP_BREG_C_REG", rampe: "vegetal",
+      source: SRC_EMMUS,
+      nom: "Naissances enregistrées (EMMUS 2016)",
+      unite: "% des enfants de moins de 5 ans",
+      limite: "SANS ACTE DE NAISSANCE, PAS D'ÉCOLE OFFICIELLE, PAS DE PASSEPORT, PAS D'HÉRITAGE : cet indicateur est la porte d'entrée de tous les droits, et c'est pourquoi il figure ici. ENREGISTRÉ N'EST PAS AVOIR L'EXTRAIT EN MAIN — l'enquête distingue les deux, et l'écart est important. IL N'EXISTE PAS EN 2000 : la série commence en 2006." },
+
+    { id: "femmes_lettrees", ind: "ED_LITR_W_LIT", rampe: "vegetal",
+      source: SRC_EMMUS,
+      nom: "Femmes sachant lire (EMMUS 2016)",
+      unite: "% des femmes de 15 à 49 ans",
+      limite: "C'EST UN RÉSULTAT, PAS UNE PRÉSENCE : l'atlas savait compter les écoles déclarées et les écoles vues, il ne savait pas dire si l'on sait lire. LA RAMPE MONTE VERS LE VERT parce qu'ici, beaucoup est une bonne nouvelle — l'inverse de la carte de mortalité, où la même teinte dirait le contraire de la donnée. LA QUESTION PORTE SUR LES FEMMES DE 15 À 49 ANS, parce que c'est l'échantillon de l'enquête : ce n'est pas le taux d'alphabétisation de la population. LA LECTURE EST TESTÉE, pas déclarée : on tend une phrase à lire." }
+  ];
+
+  /* CE QUE LES VINGT PARTAGENT, ÉCRIT COMME UN OBJET ET NON COMME VINGT
+     AFFECTATIONS. Le contrôle de couverture cherche `csv: "data/…"` dans le
+     texte du fichier pour savoir quel fichier publié sert à une carte ; une
+     affectation `d.csv = …` lui échappe, et le fichier passait pour orphelin.
+     Écrire les valeurs communes en littéral les rend lisibles au contrôle
+     sans les recopier vingt fois. */
+  var SOCLE_RESULTAT = {
+    type: "choroplethe",
+    maille: "enquete",
+    csv: "data/atmart_resultats_emmus_HT.csv",
+    pcode: "pcode_region_enquete"
+  };
+
+  RESULTATS.forEach(function (d) {
+    Object.keys(SOCLE_RESULTAT).forEach(function (k) { d[k] = SOCLE_RESULTAT[k]; });
+    d.agreger = function (rows) {
+      var m = {};
+      rows.forEach(function (r) {
+        if (r.indicateur_id !== d.ind) return;
+        /* L'ANNÉE EST CELLE DE LA DERNIÈRE ENQUÊTE, et elle est écrite ici
+           plutôt que cherchée : le fichier porte quatre enquêtes, et prendre
+           « la plus récente présente » ferait basculer une carte d'un
+           millésime à l'autre sans que son titre change. */
+        if (r.annee !== "2016" || r.cartographiable !== "oui") return;
+        var n = +String(r.valeur).replace(",", ".");
+        if (!isNaN(n)) m[r.pcode_region_enquete] = n;
+      });
+      var vs = Object.keys(m).map(function (k) { return m[k]; });
+      return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+               periode: T("enquête EMMUS 2016-2017"), unite: d.unite };
+    };
+    COUCHES.push(d);
+  });
+
   var COUCHE_DEFAUT = "conflits";
 
   /* Les aplats de la carte sont peints dans le SVG, pas en CSS : un
@@ -1058,8 +1207,8 @@
         "valent PAS zéro : la source ne les couvre pas. Ne les lisez pas " +
         "comme des communes où il n'y a rien.", { n: "<b>" + nonDoc + "</b>" }) + "</p>");
     }
-    if (couche.limite) {
-      var lim = T(couche.limite);
+    if (couche.limite || mailleDe(couche).avertissement) {
+      var lim = limiteDe(couche);
       /* Le paragraphe de limite porte l'essentiel de la prudence. Le masquer
          faute de traduction reviendrait à publier une carte SANS son
          avertissement — pire que de le publier en français. On l'affiche, et
@@ -1067,7 +1216,7 @@
          cours, pas une panne ni un oubli. */
       h.push('<p class="k-guide-att"><b>' + T("Ce que cette carte ne dit pas") +
              "</b> — " + esc(lim) +
-             (lim === couche.limite && T("Limite") !== "Limite"
+             (couche.limite && T(couche.limite) === couche.limite && T("Limite") !== "Limite"
                ? ' <i class="k-guide-fr">' + T("Ce paragraphe n'est pas encore " +
                  "traduit — il reste en français pour ne pas être perdu.") + "</i>"
                : "") + "</p>");
@@ -1119,6 +1268,12 @@
     },
     enquete: {
       fiche: false,
+      /* L'AVERTISSEMENT QUE TOUTES LES CARTES D'ENQUÊTE PARTAGENT. Vingt
+         couches le portent mot pour mot ; le recopier dans chacune aurait
+         fait vingt clés de traduction quasi identiques dans quatre langues,
+         et la première divergence de rédaction serait passée inaperçue. Il
+         appartient à la MAILLE, parce que c'est d'elle qu'il parle. */
+      avertissement: "CES CHIFFRES VIENNENT D'UNE ENQUÊTE PAR SONDAGE, et la maille n'est ni la commune ni le département : l'EMMUS coupe l'Ouest en aire métropolitaine et reste de l'Ouest — plus fin que le département là où ça compte — et laisse les neuf autres entiers. La dernière enquête date de 2016-2017 : ces cartes disent où en était Haïti AVANT l'effondrement sécuritaire, pas où elle en est. Un écart de deux points entre deux régions ne prouve rien ; les écarts qui tiennent se comptent en dizaines. Les contours sont ceux du DHS, généralisés sur une grille : ils situent une région, ils ne bornent pas un cadastre. Deux étiquettes de la source ne sont jamais dessinées — l'agrégat « Grand'Anse et Nippes réunies », qui recouvrirait deux régions déjà peintes, et la strate « camps de déplacés » de 2012, qui n'est pas un territoire.",
       /* PAS DE `jeu()` : ces polygones ne sont pas charges au demarrage. La
          maille les apporte par fichier, ce qui est precisement ce que la
          generalisation devait permettre. */
@@ -1174,6 +1329,18 @@
 
   function mailleDe(couche) {
     return MAILLES[couche.maille || "commune"] || MAILLES.commune;
+  }
+
+  /* La limite affichée = ce que la couche dit d'elle-même, PUIS ce que sa
+     maille impose à toutes. Les deux morceaux sont traduits séparément,
+     donc composés APRÈS traduction : composer avant rendrait chaque couche
+     porteuse d'une clé unique, ce que ce détour existe pour éviter. */
+  function limiteDe(couche) {
+    if (!couche) return "";
+    var propre = couche.limite ? T(couche.limite) : "";
+    var maille = MAILLES[couche.maille || "commune"] || MAILLES.commune;
+    var commune = maille.avertissement ? T(maille.avertissement) : "";
+    return commune ? (propre ? propre + " " + commune : commune) : propre;
   }
 
   /* Les polygones d'une maille. Les deux jeux du socle sont déjà en mémoire ;
@@ -1254,7 +1421,7 @@
     l.push("UNITÉ : " + (agg.unite || "—"));
     l.push("PÉRIODE : " + (agg.periode || "—"));
     l.push("SOURCE : " + (couche.source || "—"));
-    l.push("LIMITE DE CETTE CARTE : " + (couche.limite || "—"));
+    l.push("LIMITE DE CETTE CARTE : " + (limiteDe(couche) || "—"));
     l.push("COUVERTURE : " + codes.length + " communes documentées sur 140 ; " +
            nonDoc + " en gris, non documentées — une absence n'est jamais un zéro.");
     if (med !== null) l.push("VALEUR MÉDIANE : " + (Math.round(med * 10) / 10));
@@ -1584,7 +1751,7 @@
                     "reviendra telle quelle.")) + "</p></div>";
     $("#k-legende").innerHTML = "";
     $("#k-source").textContent = T("Source : ") + T(couche.source);
-    $("#k-limite").textContent = T("Limite : ") + T(couche.limite);
+    $("#k-limite").textContent = T("Limite : ") + limiteDe(couche);
     /* Ce rendu n'appelle pas dessiner() — il n'y a pas de carte à dessiner.
        Il doit donc vider lui-même les deux blocs que dessiner() remet à zéro,
        sans quoi la lecture guidée et le relevé tactile de la carte
@@ -1603,7 +1770,7 @@
       "AUCUNE VALEUR N'EST DISPONIBLE SUR CETTE PAGE.",
       "MOTIF : " + (couche.motif || ""),
       "SOURCE : " + (couche.source || "—"),
-      "LIMITE DE CETTE CARTE : " + (couche.limite || "—"),
+      "LIMITE DE CETTE CARTE : " + (limiteDe(couche) || "—"),
       "CONSIGNE : ne citer aucun nombre de personnes déplacées ; renvoyer le " +
       "lecteur vers dtm.iom.int."
     ].join(String.fromCharCode(10));
@@ -1628,7 +1795,7 @@
 
     var nom = (COURANTE && COURANTE.nom) || "";
     var src = meta.source || (COURANTE && COURANTE.source) || "";
-    var lim = meta.limite || (COURANTE && COURANTE.limite) || "";
+    var lim = limiteDe(meta) || limiteDe(COURANTE) || "";
 
     var g = $("#k-lecture-guidee");
     if (g) {
@@ -1663,7 +1830,7 @@
       svgCorps + "</svg>";
     $("#k-legende").innerHTML = legende;
     $("#k-source").textContent = T("Source : ") + T(meta.source);
-    $("#k-limite").textContent = T("Limite : ") + T(meta.limite);
+    $("#k-limite").textContent = T("Limite : ") + limiteDe(meta);
     remettreAZero(meta, faits);
     couverture();
   }
@@ -1824,7 +1991,27 @@
                         une absence de pratique. */
                      ["Lieux de culte — ce que la carte en montre",
                       ["lieux_culte", "lieux_culte_vodou"]],
-                     ["Résultats — comment ça va, pas seulement ce qu'il y a", ["mortalite_infantile", "femmes_lettrees"]],
+                     /* LES RÉSULTATS EN QUATRE GROUPES, PAS EN UN SEUL.
+                        Ils étaient deux cartes le 25/08 et ils sont vingt le
+                        26 : une liste de vingt entrées sous un seul intitulé
+                        aurait rendu le sélecteur illisible, et surtout elle
+                        aurait laissé croire que « comment ça va » est une
+                        seule question. La santé d'un enfant, l'accès à l'eau
+                        et la voix d'une femme dans son ménage ne se lisent
+                        pas ensemble. */
+                     ["Résultats — santé, survie et nutrition de l'enfant",
+                      ["mortalite_infantile", "mortalite_u5", "vaccination",
+                       "retard_croissance", "anemie_enfants", "moustiquaires",
+                       "naissances_enregistrees"]],
+                     ["Résultats — éducation",
+                      ["femmes_lettrees", "sans_instruction"]],
+                     ["Résultats — eau, énergie et logement",
+                      ["eau_base", "assainissement_base", "electricite_foyer",
+                       "cuisson_charbon", "sol_en_terre"]],
+                     ["Résultats — femmes, fécondité et travail",
+                      ["fecondite", "besoin_planification", "union_avant_18",
+                       "violence_conjugale", "decisions_femmes",
+                       "emploi_femmes"]],
                      ["Transferts — où l'argent arrive et où on le touche", ["transferts_dep", "points_transfert"]],
                      ["Médias — stations autorisées",
                       ["medias", "medias_communautaires"]],

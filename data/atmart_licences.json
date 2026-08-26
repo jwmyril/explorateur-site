@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 120
+  "fichiers": 123
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -32,6 +32,8 @@
    "atmart_diaspora_destinations.json",
    "atmart_diaspora_destinations_HT.csv",
    "atmart_ecoles_declarees.json",
+   "atmart_enquetes.json",
+   "atmart_enquetes_inventaire_HT.csv",
    "atmart_finance_agrements_HT.csv",
    "atmart_hibiscus_communes.json",
    "atmart_hibiscus_communes_HT.csv",
@@ -150,6 +152,7 @@
   ],
   "à déclarer": [
    "atmart_couches_carte_HT.csv",
+   "atmart_enquetes_resultats_HT.csv",
    "atmart_indicateurs_communes_HT.csv",
    "haiti_regions_enquete_simplifie.geojson"
   ]
@@ -437,6 +440,25 @@
     "SRC-004"
    ],
    "attribution": "MENFP — Direction de la planification et de la coopération externe (DPCE) ; application SIGEEE"
+  },
+  "atmart_enquetes.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-066"
+   ],
+   "attribution": "The DHS Program (ICF International), financé par l'USAID"
+  },
+  "atmart_enquetes_inventaire_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-066"
+   ],
+   "attribution": "The DHS Program (ICF International), financé par l'USAID"
+  },
+  "atmart_enquetes_resultats_HT.csv": {
+   "licence": "à déclarer",
+   "sources": [],
+   "attribution": ""
   },
   "atmart_equipements_hot.json": {
    "licence": "ODbL 1.0",

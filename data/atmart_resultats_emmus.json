@@ -8,19 +8,30 @@
   "attribution": "The DHS Program Indicator Data API, The Demographic and Health Surveys (DHS) Program. ICF International. Funded by the United States Agency for International Development (USAID). [Accessed 08-26-2026]",
   "maille": "région d'enquête (11 régions, découpage du DHS)",
   "limite": "LA DERNIÈRE ENQUÊTE DATE DE 2016-2017 : dix ans. Ce produit dit où en était Haïti AVANT l'effondrement sécuritaire, pas où elle en est. LA MAILLE N'EST NI LA COMMUNE NI LE DÉPARTEMENT : l'EMMUS coupe l'Ouest en aire métropolitaine et reste de l'Ouest, plus fin que le département là où ça compte, et laisse les neuf autres entiers. EN 2000 LA GRAND'ANSE ET LES NIPPES NE FORMAIENT QU'UNE RÉGION : ces observations portent `cartographiable = non`, parce que les étaler sur deux régions donnerait à croire qu'on a mesuré séparément ce qui ne l'était pas — et à partir de 2006 l'API publie cet agrégat EN PLUS des deux régions, si bien que l'additionner compterait tout deux fois. L'ENQUÊTE 2012 COMPTE UNE STRATE « CAMPS DE DÉPLACÉS », qui n'est pas un territoire et n'a donc pas de contour : ses valeurs sont publiées, jamais dessinées. C'EST UNE ENQUÊTE PAR SONDAGE : elle a une marge d'erreur que l'API ne publie pas ici, et un écart de deux points entre deux enquêtes n'est pas forcément un changement. LES CONTOURS SONT CEUX DU DHS, généralisés sur une grille — ils situent une région, ils ne bornent pas un cadastre.",
-  "date_extraction": "2026-08-25"
+  "date_extraction": "2026-08-26"
  },
- "observations": 401,
+ "observations": 908,
  "indicateurs": [
+  "Besoin de planification familiale non satisfait (femmes en union)",
   "Enfants complètement vaccinés (8 antigènes)",
+  "Enfants de moins de 5 ans anémiés",
+  "Enfants de moins de 5 ans dont la naissance est enregistrée",
   "Enfants en retard de croissance",
+  "Femmes ayant subi des violences physiques dans les douze derniers mois",
+  "Femmes ayant travaillé dans l'année et travaillant actuellement",
+  "Femmes de 20 à 24 ans unies avant 18 ans",
+  "Femmes n'ayant voix sur aucune décision du ménage",
   "Femmes sachant lire",
   "Indice synthétique de fécondité",
   "Mortalité des moins de 5 ans",
   "Mortalité infantile",
+  "Ménages ayant l'électricité",
+  "Ménages cuisinant au charbon de bois",
+  "Ménages dont le sol est en terre ou en sable",
   "Ménages possédant au moins une moustiquaire",
   "Population ayant un assainissement de base",
-  "Population ayant un service d'eau de base"
+  "Population ayant un service d'eau de base",
+  "Population de 6 ans et plus sans instruction"
  ],
  "enquetes": [
   "EMMUS 2000",

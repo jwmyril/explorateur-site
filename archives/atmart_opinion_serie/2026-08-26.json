@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "titre": "Vingt ans d'opinion publique — Haïti et République dominicaine",
+  "passeport": "PSP-033",
+  "source_id": "SRC-014",
+  "source": "LAPOP Lab, Vanderbilt University — AmericasBarometer",
+  "licence": "Licence par clic LAPOP — agrégats autorisés, partage des fichiers interdit, USAGE COMMERCIAL INTERDIT (clause 1)",
+  "maille": "national, deux pays",
+  "limite": "LE MODE DE COLLECTE CHANGE EN COURS DE SÉRIE, et c'est la précaution qui commande tout : les vagues récentes sont téléphoniques, les anciennes en face-à-face. Une rupture entre deux points peut donc être un changement d'INSTRUMENT plutôt qu'un changement d'opinion — chaque ligne porte son mode pour qu'on puisse le voir. UNE QUESTION N'EST ESTIMÉE QUE SI SON CODE FIGURE DANS LE QUESTIONNAIRE DE SA VAGUE, vérifié sur dix-sept questionnaires officiels ; c'est pourquoi certaines séries commencent plus tard que d'autres — la victimation criminelle n'existe qu'à partir de 2012. CE CONTRÔLE NE DÉTECTE PAS un changement de formulation à code constant : une question qui garde son nom en changeant de sens passerait. LES ÉCHELLES SONT RAMENÉES À 0-100 PAR NOUS. USAGE COMMERCIAL INTERDIT par la licence : ces valeurs servent l'Explorateur, qui est gratuit, jamais une prestation facturée.",
+  "date_extraction": "2026-08-26"
+ },
+ "observations": 253,
+ "vagues": [
+  2006,
+  2008,
+  2010,
+  2012,
+  2014,
+  2017,
+  2019,
+  2021,
+  2023
+ ],
+ "contexte_des_enquetes": [
+  {
+   "pays": "Haïti",
+   "vague": 2006,
+   "n": 1625,
+   "mode": "face-à-face",
+   "grappes": 74,
+   "strates": 4
+  },
+  {
+   "pays": "Haïti",
+   "vague": 2008,
+   "n": 1536,
+   "mode": "face-à-face",
+   "grappes": 70,
+   "strates": 5
+  },
+  {
+   "pays": "Haïti",
+   "vague": 2010,
+   "n": 1752,
+   "mode": "face-à-face",
+   "grappes": 149,
+   "strates": 5
+  },
+  {
+   "pays": "Haïti",
+   "vague": 2012,
+   "n": 1836,
+   "mode": "face-à-face",
+   "grappes": 114,
+   "strates": 5
+  },
+  {
+   "pays": "Haïti",
+   "vague": 2014,
+   "n": 1512,
+   "mode": "face-à-face",
+   "grappes": 61,
+   "strates": 5
+  },
+  {
+   "pays": "Haïti",
+   "vague": 2017,
+   "n": 2221,
+   "mode": "face-à-face",
+   "grappes": 88,
+   "strates": 5
+  },
+  {
+   "pays": "Haïti",
+   "vague": 2021,
+   "n": 3088,
+   "mode": "téléphone",
+   "grappes": 3088,
+   "strates": 1
+  },
+  {
+   "pays": "Haïti",
+   "vague": 2023,
+   "n": 1611,
+   "mode": "téléphone",
+   "grappes": 1611,
+   "strates": 1
+  },
+  {
+   "pays": "République dominicaine",
+   "vague": 2012,
+   "n": 1512,
+   "mode": "face-à-face",
+   "grappes": 55,
+   "strates": 4
+  },
+  {
+   "pays": "République dominicaine",
+   "vague": 2014,
+   "n": 1520,
+   "mode": "face-à-face",
+   "grappes": 63,
+   "strates": 4
+  },
+  {
+   "pays": "République dominicaine",
+   "vague": 2019,
+   "n": 1516,
+   "mode": "face-à-face",
+   "grappes": 63,
+   "strates": 4
+  },
+  {
+   "pays": "République dominicaine",
+   "vague": 2021,
+   "n": 3000,
+   "mode": "téléphone",
+   "grappes": 3000,
+   "strates": 1
+  },
+  {
+   "pays": "République dominicaine",
+   "vague": 2023,
+   "n": 1596,
+   "mode": "face-à-face",
+   "grappes": 63,
+   "strates": 4
+  }
+ ],
+ "series_d_au_moins_quatre_points": 39,
+ "series_totales": 48
+}

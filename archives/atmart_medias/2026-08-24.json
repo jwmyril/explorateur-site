@@ -1,0 +1,422 @@
+{
+ "meta": {
+  "titre": "Stations de radio et de télévision autorisées, par commune",
+  "source_id": "SRC-058",
+  "passeport": "PSP-069",
+  "source": "CONATEL — liste des stations de radiodiffusion autorisées 2023-2024",
+  "licence": "Données publiques haïtiennes — décret du 12/10/2005, art. 5 (textes officiels des autorités publiques et simples données)",
+  "attribution": "CONATEL — Conseil National des Télécommunications, liste des stations de radiodiffusion autorisées 2023-2024",
+  "unite": "stations autorisées",
+  "limite": "CE SONT LES STATIONS AUTORISÉES, pas toutes celles qui émettent : une station absente n'est pas une station qu'on n'a pas vue, c'est une station sans licence. LE PROPRIÉTAIRE EST PUBLIÉ parce qu'une fréquence est un bien public concédé et que le CONATEL le publie lui-même. LES RADIOS COMMUNAUTAIRES sont reconnues au type de propriétaire — association, collectif, konbit, coopérative — et la règle en rate forcément : une radio communautaire enregistrée au nom d'une personne n'est pas détectée. Elle se trompe donc par défaut, jamais par excès. LA VILLE N'EST PAS TOUJOURS LA COMMUNE : les variantes d'écriture (PAP, CAYES, ST MARC) sont traduites une par une ; ce qui ne se rattache pas reste hors rattachement — une localité comme Fonds-Parisien ou Liancourt n'est pas une commune, et « La Gonâve » en désigne deux. LE DOCUMENT SE CONTREDIT EN TROIS ENDROITS et nous ne tranchons pas : ses en-têtes annoncent 36 radios aux Nippes, 20 télévisions au Nord et 18 au Sud, quand ses propres tableaux en contiennent 35, 19 et 17. Pour le Nord, le RÉCAPITULATIF du document donne 19 — il contredit donc son propre en-tête. Nous publions le contenu des tableaux, et nous disons l'écart.",
+  "totaux": {
+   "radios_fm": 665,
+   "radios_am": 8,
+   "televisions": 133,
+   "communautaires_detectees": 11
+  },
+  "empreinte_capture": "1fdc7a605e01f339",
+  "date_extraction": "2026-08-24"
+ },
+ "communes": {
+  "HT0111": {
+   "r": 80,
+   "t": 37,
+   "c": 2
+  },
+  "HT0112": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0113": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0114": {
+   "r": 3,
+   "t": 0,
+   "c": 0
+  },
+  "HT0117": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0121": {
+   "r": 6,
+   "t": 1,
+   "c": 0
+  },
+  "HT0122": {
+   "r": 13,
+   "t": 0,
+   "c": 1
+  },
+  "HT0123": {
+   "r": 1,
+   "t": 0,
+   "c": 1
+  },
+  "HT0131": {
+   "r": 9,
+   "t": 0,
+   "c": 0
+  },
+  "HT0133": {
+   "r": 3,
+   "t": 0,
+   "c": 0
+  },
+  "HT0135": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0141": {
+   "r": 3,
+   "t": 1,
+   "c": 0
+  },
+  "HT0211": {
+   "r": 54,
+   "t": 10,
+   "c": 1
+  },
+  "HT0212": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0213": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0214": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0231": {
+   "r": 3,
+   "t": 0,
+   "c": 0
+  },
+  "HT0233": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0311": {
+   "r": 70,
+   "t": 18,
+   "c": 1
+  },
+  "HT0312": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0313": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0321": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0322": {
+   "r": 3,
+   "t": 0,
+   "c": 0
+  },
+  "HT0344": {
+   "r": 1,
+   "t": 1,
+   "c": 0
+  },
+  "HT0352": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0361": {
+   "r": 5,
+   "t": 0,
+   "c": 0
+  },
+  "HT0371": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0411": {
+   "r": 10,
+   "t": 0,
+   "c": 0
+  },
+  "HT0412": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0421": {
+   "r": 10,
+   "t": 0,
+   "c": 0
+  },
+  "HT0423": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0431": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0432": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0433": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0434": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0443": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0511": {
+   "r": 53,
+   "t": 9,
+   "c": 1
+  },
+  "HT0512": {
+   "r": 1,
+   "t": 1,
+   "c": 0
+  },
+  "HT0513": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0521": {
+   "r": 8,
+   "t": 0,
+   "c": 0
+  },
+  "HT0523": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0531": {
+   "r": 27,
+   "t": 6,
+   "c": 0
+  },
+  "HT0532": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0533": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0541": {
+   "r": 5,
+   "t": 1,
+   "c": 0
+  },
+  "HT0542": {
+   "r": 3,
+   "t": 0,
+   "c": 0
+  },
+  "HT0544": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0551": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0611": {
+   "r": 32,
+   "t": 8,
+   "c": 1
+  },
+  "HT0614": {
+   "r": 2,
+   "t": 1,
+   "c": 0
+  },
+  "HT0621": {
+   "r": 8,
+   "t": 1,
+   "c": 0
+  },
+  "HT0622": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0631": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0632": {
+   "r": 4,
+   "t": 0,
+   "c": 0
+  },
+  "HT0633": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0711": {
+   "r": 58,
+   "t": 14,
+   "c": 2
+  },
+  "HT0712": {
+   "r": 4,
+   "t": 2,
+   "c": 0
+  },
+  "HT0714": {
+   "r": 4,
+   "t": 1,
+   "c": 0
+  },
+  "HT0716": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0721": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0723": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0733": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0741": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0753": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0811": {
+   "r": 36,
+   "t": 11,
+   "c": 1
+  },
+  "HT0821": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0822": {
+   "r": 4,
+   "t": 0,
+   "c": 0
+  },
+  "HT0823": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0831": {
+   "r": 2,
+   "t": 0,
+   "c": 0
+  },
+  "HT0834": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0911": {
+   "r": 41,
+   "t": 7,
+   "c": 0
+  },
+  "HT0913": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0921": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0922": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0931": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT0934": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT1011": {
+   "r": 29,
+   "t": 2,
+   "c": 0
+  },
+  "HT1014": {
+   "r": 3,
+   "t": 0,
+   "c": 0
+  },
+  "HT1021": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  },
+  "HT1031": {
+   "r": 1,
+   "t": 0,
+   "c": 0
+  }
+ }
+}

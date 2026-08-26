@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 122
+  "fichiers": 120
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -94,8 +94,6 @@
    "atmart_comparaison_haiti_rd_HT.csv",
    "atmart_opinion_lapop.json",
    "atmart_opinion_lapop_HT.csv",
-   "atmart_opinion_regions.json",
-   "atmart_opinion_regions_HT.csv",
    "atmart_opinion_serie.json",
    "atmart_opinion_serie_HT.csv",
    "atmart_points_transfert.json",
@@ -640,20 +638,6 @@
     "SRC-067"
    ],
    "attribution": "LAPOP Lab, Vanderbilt University — financé par l'USAID"
-  },
-  "atmart_opinion_regions.json": {
-   "licence": "CC BY 4.0 — transformation ou citation",
-   "sources": [
-    "SRC-014"
-   ],
-   "attribution": "LAPOP Lab / Center for Global Democracy, Vanderbilt University"
-  },
-  "atmart_opinion_regions_HT.csv": {
-   "licence": "CC BY 4.0 — transformation ou citation",
-   "sources": [
-    "SRC-014"
-   ],
-   "attribution": "LAPOP Lab / Center for Global Democracy, Vanderbilt University"
   },
   "atmart_opinion_serie.json": {
    "licence": "CC BY 4.0 — transformation ou citation",

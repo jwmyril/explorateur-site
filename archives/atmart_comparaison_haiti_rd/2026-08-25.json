@@ -1,0 +1,145 @@
+{
+ "meta": {
+  "titre": "Haïti et République dominicaine — seize questions posées à l'identique",
+  "passeport": "PSP-033",
+  "source_id": "SRC-014",
+  "source": "LAPOP Lab, Vanderbilt University — AmericasBarometer 2023",
+  "licence": "Licence par clic LAPOP — agrégats autorisés, partage des fichiers interdit, USAGE COMMERCIAL INTERDIT (clause 1)",
+  "limite": "LES DEUX ENQUÊTES N'ONT PAS ÉTÉ FAITES DE LA MÊME FAÇON, et cela commande toute lecture. Haïti 2023 : entretiens PAR TÉLÉPHONE sur numéros mobiles tirés au hasard, excluant qui n'a pas de portable, taux de réponse 6,6 % — le plus bas des vingt-quatre pays. République dominicaine 2023 : entretiens EN FACE-À-FACE, 63 grappes, plan stratifié, taux de réponse 19,0 %. Un écart mêle donc une différence de pays et une différence d'instrument : sur les questions sensibles, on ne dit pas la même chose à un enquêteur venu chez soi qu'à une voix au téléphone. AUCUN ÉCART ICI N'EST UNE MESURE PROPRE DE LA DIFFÉRENCE ENTRE LES DEUX SOCIÉTÉS — il indique où regarder, pas ce qu'il faut conclure. LA COMPARAISON EST NATIONALE : Haïti a cinq régions d'enquête, la République dominicaine quatre, et elles ne se correspondent pas. LES ÉCHELLES SONT RAMENÉES À 0-100 PAR NOUS, ce qui explique un écart apparent avec notre produit tiré du RAPPORT public (PSP-078) : celui-ci annonce « 54 % font confiance à la police », un pourcentage de personnes ; celui-ci donne 58,6 sur une échelle de 1 à 7 ramenée à 0-100, une intensité moyenne. Les deux sont justes et ne mesurent pas la même chose. USAGE COMMERCIAL INTERDIT par la licence.",
+  "date_extraction": "2026-08-25"
+ },
+ "contexte_des_enquetes": {
+  "Haïti": {
+   "n": 1611,
+   "mode": "téléphone (numéros mobiles tirés au hasard)",
+   "taux_de_reponse_pourcent": 6.6,
+   "strates": 1,
+   "grappes": 1611,
+   "annee": 2023
+  },
+  "République dominicaine": {
+   "n": 1596,
+   "mode": "face-à-face",
+   "taux_de_reponse_pourcent": 19.0,
+   "strates": 4,
+   "grappes": 63,
+   "annee": 2023
+  }
+ },
+ "indicateurs_compares": 16,
+ "ecarts_etablis": 11,
+ "ecarts": [
+  {
+   "indicateur": "Confiance dans le chef de l'exécutif (Président en 2016/17, Premier ministre en 2023 — référent différent, ne pas comparer les deux vagues)",
+   "haiti": 13.0361,
+   "rd": 51.7616,
+   "ecart": -38.73,
+   "etabli": "oui"
+  },
+  {
+   "indicateur": "Confiance dans la Police nationale (PNH)",
+   "haiti": 58.5909,
+   "rd": 32.7543,
+   "ecart": 25.84,
+   "etabli": "oui"
+  },
+  {
+   "indicateur": "Fierté de vivre sous le système politique haïtien",
+   "haiti": 24.5308,
+   "rd": 49.3792,
+   "ecart": -24.85,
+   "etabli": "oui"
+  },
+  {
+   "indicateur": "Confiance dans les élections",
+   "haiti": 27.9129,
+   "rd": 45.6907,
+   "ecart": -17.78,
+   "etabli": "oui"
+  },
+  {
+   "indicateur": "Les droits fondamentaux sont protégés par le système politique",
+   "haiti": 24.069,
+   "rd": 40.4172,
+   "ecart": -16.35,
+   "etabli": "oui"
+  },
+  {
+   "indicateur": "Les tribunaux garantissent un procès équitable",
+   "haiti": 28.1246,
+   "rd": 44.1239,
+   "ecart": -16.0,
+   "etabli": "oui"
+  },
+  {
+   "indicateur": "Confiance dans les médias",
+   "haiti": 47.2198,
+   "rd": 61.4008,
+   "ecart": -14.18,
+   "etabli": "oui"
+  },
+  {
+   "indicateur": "Il faut soutenir le système politique haïtien",
+   "haiti": 43.5104,
+   "rd": 57.5143,
+   "ecart": -14.0,
+   "etabli": "oui"
+  },
+  {
+   "indicateur": "Respect des institutions politiques",
+   "haiti": 54.2359,
+   "rd": 64.7003,
+   "ecart": -10.46,
+   "etabli": "oui"
+  },
+  {
+   "indicateur": "A été sollicité pour un pot-de-vin par un policier (12 derniers mois)",
+   "haiti": 2.4077,
+   "rd": 18.7696,
+   "ecart": -16.36,
+   "etabli": "oui"
+  },
+  {
+   "indicateur": "A été sollicité pour un pot-de-vin par un agent public (12 derniers mois)",
+   "haiti": 11.2106,
+   "rd": 7.8321,
+   "ecart": 3.38,
+   "etabli": "non"
+  },
+  {
+   "indicateur": "La corruption des agents publics est répandue (1 très répandue → 4 très rare)",
+   "haiti": 35.5947,
+   "rd": 33.4838,
+   "ecart": 2.11,
+   "etabli": "non"
+  },
+  {
+   "indicateur": "Part des responsables politiques jugés corrompus (1 aucun → 5 tous)",
+   "haiti": 66.1607,
+   "rd": 66.5587,
+   "ecart": -0.4,
+   "etabli": "non"
+  },
+  {
+   "indicateur": "Intention de partir vivre ou travailler à l'étranger dans les trois ans",
+   "haiti": 78.5491,
+   "rd": 39.7226,
+   "ecart": 38.83,
+   "etabli": "oui"
+  },
+  {
+   "indicateur": "Sentiment d'insécurité dans le quartier (1 très sûr → 4 très peu sûr)",
+   "haiti": 53.9944,
+   "rd": 49.1005,
+   "ecart": 4.89,
+   "etabli": "non"
+  },
+  {
+   "indicateur": "A été victime d'un délit (12 derniers mois)",
+   "haiti": 25.4362,
+   "rd": 24.1855,
+   "ecart": 1.25,
+   "etabli": "non"
+  }
+ ]
+}

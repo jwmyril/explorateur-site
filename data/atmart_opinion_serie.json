@@ -6,10 +6,10 @@
   "source": "LAPOP Lab, Vanderbilt University — AmericasBarometer",
   "licence": "Licence par clic LAPOP — agrégats autorisés, partage des fichiers interdit, USAGE COMMERCIAL INTERDIT (clause 1)",
   "maille": "national et région d'enquête, deux pays",
-  "limite": "LE MODE DE COLLECTE CHANGE EN COURS DE SÉRIE : les vagues récentes sont téléphoniques, les anciennes en face-à-face. Une rupture entre deux points peut donc être un changement d'INSTRUMENT plutôt que d'opinion — chaque ligne porte son mode. LES RÉGIONS SONT LES STRATES DE TIRAGE, cinq en Haïti et quatre en République dominicaine ; elles ne se correspondent PAS d'un pays à l'autre et ne doivent jamais être appariées. UNE QUESTION N'EST ESTIMÉE QUE SI SON CODE FIGURE DANS LE QUESTIONNAIRE DE SA VAGUE, vérifié sur dix-sept questionnaires officiels ; ce contrôle ne détecte pas un changement de formulation à code constant. DEUX VAGUES DOMINICAINES SONT AUTO-PONDÉRÉES (2008, 2010) : leur note technique dit « Unweighted », et la colonne `ponderation` le porte sur chaque ligne. LA VAGUE DOMINICAINE DE 2006 EST ÉCARTÉE — son fichier contredit sa propre note technique sur l'effectif. LES ÉCHELLES SONT RAMENÉES À 0-100 PAR NOUS. USAGE COMMERCIAL INTERDIT par la licence.",
+  "limite": "LE MODE DE COLLECTE CHANGE EN COURS DE SÉRIE : les vagues récentes sont téléphoniques, les anciennes en face-à-face. Une rupture entre deux points peut donc être un changement d'INSTRUMENT plutôt que d'opinion — chaque ligne porte son mode. LES RÉGIONS SONT LES STRATES DE TIRAGE, cinq en Haïti et quatre en République dominicaine ; elles ne se correspondent PAS d'un pays à l'autre et ne doivent jamais être appariées. UNE QUESTION N'EST ESTIMÉE QUE SI SON CODE FIGURE DANS LE QUESTIONNAIRE DE SA VAGUE, vérifié sur dix-sept questionnaires officiels ; ce contrôle ne détecte pas un changement de formulation à code constant. DEUX VAGUES DOMINICAINES SONT AUTO-PONDÉRÉES (2008, 2010) : leur note technique dit « Unweighted », et la colonne `ponderation` le porte sur chaque ligne. LA VAGUE DOMINICAINE DE 2006 EST ÉCARTÉE — son fichier contredit sa propre note technique sur l'effectif. LES ÉCHELLES SONT RAMENÉES À 0-100 PAR NOUS. LE MILIEU URBAIN/RURAL N'EXISTE QUE POUR LES VAGUES EN FACE-À-FACE : il vient du plan de sondage. Les vagues téléphoniques posent à la place une question à quatre modalités sur le lieu de vie, qui ne mesure pas la même chose et n'est donc pas reprise ici. USAGE COMMERCIAL INTERDIT par la licence.",
   "date_extraction": "2026-08-26"
  },
- "observations": 1494,
+ "observations": 1988,
  "observations_nationales": 290,
  "vagues": [
   2006,
@@ -31,6 +31,7 @@
    "grappes": 74,
    "strates": 4,
    "regions_estimables": 3,
+   "milieu_estimable": true,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -42,6 +43,7 @@
    "grappes": 70,
    "strates": 5,
    "regions_estimables": 5,
+   "milieu_estimable": true,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -53,6 +55,7 @@
    "grappes": 149,
    "strates": 5,
    "regions_estimables": 5,
+   "milieu_estimable": true,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -64,6 +67,7 @@
    "grappes": 114,
    "strates": 5,
    "regions_estimables": 5,
+   "milieu_estimable": true,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -75,6 +79,7 @@
    "grappes": 61,
    "strates": 5,
    "regions_estimables": 5,
+   "milieu_estimable": true,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -86,6 +91,7 @@
    "grappes": 88,
    "strates": 5,
    "regions_estimables": 5,
+   "milieu_estimable": true,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -97,6 +103,7 @@
    "grappes": 3088,
    "strates": 1,
    "regions_estimables": 5,
+   "milieu_estimable": false,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -108,6 +115,7 @@
    "grappes": 1611,
    "strates": 1,
    "regions_estimables": 5,
+   "milieu_estimable": false,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -119,6 +127,7 @@
    "grappes": 57,
    "strates": 4,
    "regions_estimables": 0,
+   "milieu_estimable": true,
    "note_regions": "codes et étiquettes ne concordent pas dans ce fichier — aucune région nommée",
    "ponderation": "note technique : « Dominican Republic 2008, 1,507, Unweighted »"
   },
@@ -130,6 +139,7 @@
    "grappes": 60,
    "strates": 4,
    "regions_estimables": 4,
+   "milieu_estimable": true,
    "note_regions": "",
    "ponderation": "note technique : « Dominican Republic 2010, 1,500, Unweighted »"
   },
@@ -141,6 +151,7 @@
    "grappes": 55,
    "strates": 4,
    "regions_estimables": 4,
+   "milieu_estimable": true,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -152,6 +163,7 @@
    "grappes": 63,
    "strates": 4,
    "regions_estimables": 4,
+   "milieu_estimable": true,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -163,6 +175,7 @@
    "grappes": 63,
    "strates": 4,
    "regions_estimables": 4,
+   "milieu_estimable": true,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -174,6 +187,7 @@
    "grappes": 3000,
    "strates": 1,
    "regions_estimables": 4,
+   "milieu_estimable": false,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   },
@@ -185,6 +199,7 @@
    "grappes": 63,
    "strates": 4,
    "regions_estimables": 4,
+   "milieu_estimable": true,
    "note_regions": "",
    "ponderation": "poids de sondage du fichier"
   }

@@ -1,0 +1,212 @@
+{
+ "meta": {
+  "titre": "Transferts sans contrepartie — origine et destination",
+  "source_id": "SRC-060",
+  "passeport": "PSP-071",
+  "source": "BRH — Banque de la République d'Haïti",
+  "licence": "Données publiques haïtiennes — décret du 12/10/2005, art. 5 (textes officiels des autorités publiques et simples données)",
+  "attribution": "BRH — Banque de la République d'Haïti, transferts sans contrepartie reçus et expédiés par pays",
+  "premier_mois": "2017-10",
+  "dernier_mois": "2026-05",
+  "dernier_exercice_complet": 2025,
+  "limite": "« PAYS » EST PARFOIS UNE RÉGION. Afrique, Asie, Amérique centrale, Autres Antilles, Autres pays d'Europe et Autres Amérique du Sud sont des AGRÉGATS de plusieurs États — la colonne `est_un_pays` le dit, et aucune carte ne doit les traiter comme des pays. LES MONTANTS SONT CEUX DU CIRCUIT FORMEL : ce qui passe de la main à la main, par un voyageur ou hors des maisons de transfert agréées, n'y figure pas. L'EXERCICE FISCAL HAÏTIEN COURT D'OCTOBRE À SEPTEMBRE : chaque ligne porte son mois calendaire ET son exercice, pour qu'on ne les confonde pas. LE DERNIER EXERCICE EST INCOMPLET et ne se compare pas tel quel aux précédents. CE PRODUIT EST NATIONAL : la ventilation par département existe ailleurs, jamais par commune.",
+  "empreinte_capture": "694c3374b9d0b455",
+  "date_extraction": "2026-08-25"
+ },
+ "observations": 3371,
+ "exercice_de_reference": 2025,
+ "provenances": [
+  {
+   "nom": "États-Unis",
+   "usd": 3514789728,
+   "part": 79.2
+  },
+  {
+   "nom": "France",
+   "usd": 236639146,
+   "part": 5.3
+  },
+  {
+   "nom": "Canada",
+   "usd": 224576277,
+   "part": 5.1
+  },
+  {
+   "nom": "République dominicaine",
+   "usd": 150448669,
+   "part": 3.4
+  },
+  {
+   "nom": "Chili",
+   "usd": 100321088,
+   "part": 2.3
+  },
+  {
+   "nom": "Brésil",
+   "usd": 63530792,
+   "part": 1.4
+  },
+  {
+   "nom": "Autres Antilles",
+   "usd": 32458718,
+   "part": 0.7
+  },
+  {
+   "nom": "Uruguay",
+   "usd": 25413543,
+   "part": 0.6
+  }
+ ],
+ "destinations": [
+  {
+   "nom": "République dominicaine",
+   "usd": 155852925,
+   "part": 52.0
+  },
+  {
+   "nom": "États-Unis",
+   "usd": 86450223,
+   "part": 28.8
+  },
+  {
+   "nom": "Canada",
+   "usd": 17797901,
+   "part": 5.9
+  },
+  {
+   "nom": "Asie",
+   "usd": 11978594,
+   "part": 4.0
+  },
+  {
+   "nom": "Amérique centrale",
+   "usd": 5259449,
+   "part": 1.8
+  },
+  {
+   "nom": "Brésil",
+   "usd": 5003745,
+   "part": 1.7
+  },
+  {
+   "nom": "France",
+   "usd": 4697526,
+   "part": 1.6
+  },
+  {
+   "nom": "Chili",
+   "usd": 2868609,
+   "part": 1.0
+  }
+ ],
+ "totaux_par_exercice": [
+  {
+   "exercice": 2018,
+   "sens": "reçu",
+   "usd": 2355552920,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2019,
+   "sens": "reçu",
+   "usd": 2506425482,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2020,
+   "sens": "reçu",
+   "usd": 2978691687,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2021,
+   "sens": "reçu",
+   "usd": 3624024973,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2022,
+   "sens": "reçu",
+   "usd": 3419241200,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2023,
+   "sens": "reçu",
+   "usd": 3283316950,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2024,
+   "sens": "reçu",
+   "usd": 3634170536,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2025,
+   "sens": "reçu",
+   "usd": 4435386901,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2026,
+   "sens": "reçu",
+   "usd": 3396525158,
+   "mois_couverts": 8
+  },
+  {
+   "exercice": 2018,
+   "sens": "expédié",
+   "usd": 278204423,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2019,
+   "sens": "expédié",
+   "usd": 256477769,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2020,
+   "sens": "expédié",
+   "usd": 244750437,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2021,
+   "sens": "expédié",
+   "usd": 302404482,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2022,
+   "sens": "expédié",
+   "usd": 271388414,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2023,
+   "sens": "expédié",
+   "usd": 253195031,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2024,
+   "sens": "expédié",
+   "usd": 282111808,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2025,
+   "sens": "expédié",
+   "usd": 299705654,
+   "mois_couverts": 12
+  },
+  {
+   "exercice": 2026,
+   "sens": "expédié",
+   "usd": 191171427,
+   "mois_couverts": 8
+  }
+ ]
+}

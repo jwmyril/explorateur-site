@@ -1,0 +1,88 @@
+{
+ "meta": {
+  "titre": "Résultats de santé, d'éducation et de conditions de vie",
+  "source_id": "SRC-066",
+  "passeport": "PSP-077",
+  "source": "EMMUS / DHS Program — API des indicateurs",
+  "licence": "Libre d'usage — la seule condition posée par le producteur est la citation ; ni inscription, ni restriction de rediffusion",
+  "attribution": "The DHS Program Indicator Data API, The Demographic and Health Surveys (DHS) Program. ICF International. Funded by the United States Agency for International Development (USAID). [Accessed 08-26-2026]",
+  "maille": "région d'enquête (11 régions, découpage du DHS)",
+  "limite": "LA DERNIÈRE ENQUÊTE DATE DE 2016-2017 : dix ans. Ce produit dit où en était Haïti AVANT l'effondrement sécuritaire, pas où elle en est. LA MAILLE N'EST NI LA COMMUNE NI LE DÉPARTEMENT : l'EMMUS coupe l'Ouest en aire métropolitaine et reste de l'Ouest, plus fin que le département là où ça compte, et laisse les neuf autres entiers. EN 2000 LA GRAND'ANSE ET LES NIPPES NE FORMAIENT QU'UNE RÉGION : ces observations portent `cartographiable = non`, parce que les étaler sur deux régions donnerait à croire qu'on a mesuré séparément ce qui ne l'était pas — et à partir de 2006 l'API publie cet agrégat EN PLUS des deux régions, si bien que l'additionner compterait tout deux fois. L'ENQUÊTE 2012 COMPTE UNE STRATE « CAMPS DE DÉPLACÉS », qui n'est pas un territoire et n'a donc pas de contour : ses valeurs sont publiées, jamais dessinées. C'EST UNE ENQUÊTE PAR SONDAGE : elle a une marge d'erreur que l'API ne publie pas ici, et un écart de deux points entre deux enquêtes n'est pas forcément un changement. LES CONTOURS SONT CEUX DU DHS, généralisés sur une grille — ils situent une région, ils ne bornent pas un cadastre.",
+  "date_extraction": "2026-08-25"
+ },
+ "observations": 401,
+ "indicateurs": [
+  "Enfants complètement vaccinés (8 antigènes)",
+  "Enfants en retard de croissance",
+  "Femmes sachant lire",
+  "Indice synthétique de fécondité",
+  "Mortalité des moins de 5 ans",
+  "Mortalité infantile",
+  "Ménages possédant au moins une moustiquaire",
+  "Population ayant un assainissement de base",
+  "Population ayant un service d'eau de base"
+ ],
+ "enquetes": [
+  "EMMUS 2000",
+  "EMMUS 2006",
+  "EMMUS 2012",
+  "EMMUS 2016"
+ ],
+ "mortalite_infantile_2016": [
+  {
+   "region": "Reste de l'Ouest",
+   "pcode": "412002",
+   "valeur": 84.0
+  },
+  {
+   "region": "Nippes",
+   "pcode": "412011",
+   "valeur": 72.0
+  },
+  {
+   "region": "Aire métropolitaine",
+   "pcode": "412001",
+   "valeur": 66.0
+  },
+  {
+   "region": "Centre",
+   "pcode": "412007",
+   "valeur": 65.0
+  },
+  {
+   "region": "Sud-Est",
+   "pcode": "412003",
+   "valeur": 55.0
+  },
+  {
+   "region": "Nord-Est",
+   "pcode": "412005",
+   "valeur": 54.0
+  },
+  {
+   "region": "Artibonite",
+   "pcode": "412006",
+   "valeur": 51.0
+  },
+  {
+   "region": "Nord-Ouest",
+   "pcode": "412012",
+   "valeur": 45.0
+  },
+  {
+   "region": "Sud",
+   "pcode": "412008",
+   "valeur": 40.0
+  },
+  {
+   "region": "Nord",
+   "pcode": "412004",
+   "valeur": 33.0
+  },
+  {
+   "region": "Grand'Anse",
+   "pcode": "412010",
+   "valeur": 28.0
+  }
+ ]
+}

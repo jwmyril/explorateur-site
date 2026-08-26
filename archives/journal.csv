@@ -99,7 +99,8 @@ atmart_licences.json,2026-08-25,archives/atmart_licences/2026-08-25-5.json,f71fc
 atmart_licences.json,2026-08-25,archives/atmart_licences/2026-08-25-6.json,2a990ee6a39d8f32937458b4bbc8692caf1220e96eb29555fc0e7834c85117db,26860,943,2026-08-25,vitrine,8eaf0b2943,non
 atmart_licences.json,2026-08-25,archives/atmart_licences/2026-08-25-7.json,27dc2cacc0d741f267f2c9fd83c5c1caf32ad6317c52a3798eac507291bbd48d,27366,959,2026-08-25,vitrine,ad03d03fd7,non
 atmart_licences.json,2026-08-25,archives/atmart_licences/2026-08-25-8.json,4e6313f123515c7f7120c8d9758602a14ce5bb2b0c1195c51210f7c20aeaeae2,27967,976,2026-08-25,vitrine,8077a237fd,non
-atmart_licences.json,2026-08-26,archives/atmart_licences/2026-08-26.json,a5567c6cefa25a7e3e776f33ecbae5d6fdb766097f713b1ed7fd64ae9ab4a4bb,28465,992,2026-08-26,vitrine,42e12fd579,oui
+atmart_licences.json,2026-08-26,archives/atmart_licences/2026-08-26.json,a5567c6cefa25a7e3e776f33ecbae5d6fdb766097f713b1ed7fd64ae9ab4a4bb,28465,992,2026-08-26,vitrine,42e12fd579,non
+atmart_licences.json,2026-08-26,archives/atmart_licences/2026-08-26-2.json,21dd57e9f79aa1190491d81ca5d1c130650df9a437584606caca120f0508fd63,27959,976,2026-08-26,vitrine,95b926e7b6,oui
 atmart_licences.json,2026-08-23,archives/atmart_licences/2026-08-23-3.json,3fbe2f7c89f249d64b15fbf0152bc58ef4b637fa117b9ca018d574223656d951,19526,691,2026-08-23,site,71b6010f36,non
 atmart_licences_donnees_HT.csv,2026-08-22,archives/atmart_licences_donnees_HT/2026-08-22.csv,60f62aacdf42b6dea8769cc811a07da8a3151bb198b788e414041c96d0b414a4,21568,83,2026-08-22,vitrine,5198a9223d,non
 atmart_licences_donnees_HT.csv,2026-08-23,archives/atmart_licences_donnees_HT/2026-08-23.csv,9de549ee1b429576d6f9e38ebf04cdba78997c5d6fccbcfab916dd56e22f9e8b,23273,88,2026-08-23,vitrine,6c2a1d8ac8,non
@@ -114,7 +115,8 @@ atmart_licences_donnees_HT.csv,2026-08-25,archives/atmart_licences_donnees_HT/20
 atmart_licences_donnees_HT.csv,2026-08-25,archives/atmart_licences_donnees_HT/2026-08-25-6.csv,c2294cde8fa3a4acaeb05bca72024e56e3143b8ffd04e829972343cb26add2ba,32975,117,2026-08-25,vitrine,8eaf0b2943,non
 atmart_licences_donnees_HT.csv,2026-08-25,archives/atmart_licences_donnees_HT/2026-08-25-7.csv,da2ecbc2edfcfac296be38e83988619494037bfcb84024d067df0990e2497fa7,33979,119,2026-08-25,vitrine,ad03d03fd7,non
 atmart_licences_donnees_HT.csv,2026-08-25,archives/atmart_licences_donnees_HT/2026-08-25-8.csv,81aa729d00dbb8dcaf2b904207a36bd0289788bf3933490e78b327e2959b6887,35104,121,2026-08-25,vitrine,8077a237fd,non
-atmart_licences_donnees_HT.csv,2026-08-26,archives/atmart_licences_donnees_HT/2026-08-26.csv,3eaf5b91a0d49c793cc73110e60e5427b335edced96fa1f5f17c049fa6fc2784,36104,123,2026-08-26,vitrine,42e12fd579,oui
+atmart_licences_donnees_HT.csv,2026-08-26,archives/atmart_licences_donnees_HT/2026-08-26.csv,3eaf5b91a0d49c793cc73110e60e5427b335edced96fa1f5f17c049fa6fc2784,36104,123,2026-08-26,vitrine,42e12fd579,non
+atmart_licences_donnees_HT.csv,2026-08-26,archives/atmart_licences_donnees_HT/2026-08-26-2.csv,3b24a8b72e3327806d27147bc2dcb8a2ada019ebf7a581e4c8fb48f6c33ff7fc,35100,121,2026-08-26,vitrine,95b926e7b6,oui
 atmart_licences_donnees_HT.csv,2026-08-23,archives/atmart_licences_donnees_HT/2026-08-23-3.csv,4a315725f6c9935b361d64b9681b38871b48e0e79a92c08e0ce7aeadfeec3212,22134,85,2026-08-23,site,71b6010f36,non
 atmart_lieux_culte.json,2026-08-24,archives/atmart_lieux_culte/2026-08-24.json,b71c08f54f90007803522aa6108da29e1887a3affb78cd74482cc70c682ff6bc,6110,507,2026-08-24,vitrine,ef1dcae893,oui
 atmart_lieux_culte_communes_HT.csv,2026-08-24,archives/atmart_lieux_culte_communes_HT/2026-08-24.csv,96d0ec8b6b07212df27c6de30128e20ecce1bc4c07b054f462a73b0d17be242c,44969,122,2026-08-24,vitrine,ef1dcae893,oui
@@ -132,9 +134,11 @@ atmart_opinion_lapop.json,2026-08-25,archives/atmart_opinion_lapop/2026-08-25.js
 atmart_opinion_lapop_HT.csv,2026-08-25,archives/atmart_opinion_lapop_HT/2026-08-25.csv,b6134cbba59a2c72daede241a9a3e0752019aa3412ecaab554fb6ed94e722f97,10081,17,2026-08-25,vitrine,8eaf0b2943,oui
 atmart_opinion_serie.json,2026-08-26,archives/atmart_opinion_serie/2026-08-26.json,f3e96d14e528c672d560d6eb1d18901c1bddedab1f034a444ab7b292d38f9b6b,3242,131,2026-08-26,vitrine,42e12fd579,non
 atmart_opinion_serie.json,2026-08-26,archives/atmart_opinion_serie/2026-08-26-2.json,9c5183b200a9d7d697b64bff20b7762adf67967e318014fc20716d2120f116ec,5397,194,2026-08-26,vitrine,f4bfe6354a,non
-atmart_opinion_serie.json,2026-08-26,archives/atmart_opinion_serie/2026-08-26-3.json,5c4964669903a840846704d7c175782ea4a14e17ba2e462865248731daead271,5700,197,2026-08-26,vitrine,ee8daaeb78,oui
+atmart_opinion_serie.json,2026-08-26,archives/atmart_opinion_serie/2026-08-26-3.json,5c4964669903a840846704d7c175782ea4a14e17ba2e462865248731daead271,5700,197,2026-08-26,vitrine,ee8daaeb78,non
+atmart_opinion_serie.json,2026-08-26,archives/atmart_opinion_serie/2026-08-26-4.json,f775d7793369d1b9562885c1e7c0d7136890f0529e31026a3b2042a2087c4864,6401,212,2026-08-26,vitrine,95b926e7b6,oui
 atmart_opinion_serie_HT.csv,2026-08-26,archives/atmart_opinion_serie_HT/2026-08-26.csv,2bf8e34145e4759c3b2314eeea9fd4c80d504c58c7614d6cd63bdb18b6560ad8,86303,254,2026-08-26,vitrine,42e12fd579,non
-atmart_opinion_serie_HT.csv,2026-08-26,archives/atmart_opinion_serie_HT/2026-08-26-2.csv,489c67e1d1afa7963a7b1e87c352f4b249515df10d3c07c58c47efd626dea668,593312,1495,2026-08-26,vitrine,f4bfe6354a,oui
+atmart_opinion_serie_HT.csv,2026-08-26,archives/atmart_opinion_serie_HT/2026-08-26-2.csv,489c67e1d1afa7963a7b1e87c352f4b249515df10d3c07c58c47efd626dea668,593312,1495,2026-08-26,vitrine,f4bfe6354a,non
+atmart_opinion_serie_HT.csv,2026-08-26,archives/atmart_opinion_serie_HT/2026-08-26-3.csv,8b4f7662c992d0a64cbbc75156c6810dbbbb3a62a9cbe78d5a585000d6c400cc,780857,1989,2026-08-26,vitrine,95b926e7b6,oui
 atmart_pluie_communes.json,2026-08-17,archives/atmart_pluie_communes/2026-08-17.json,8de3dd3bdfa8cd5679e1e980a842f7a8ef496e57cb8e0221f732741f9fb6f39e,18358,0,2026-08-17,site,a3a8044c7c,oui
 atmart_points_transfert.json,2026-08-25,archives/atmart_points_transfert/2026-08-25.json,206732d4c7da1766fb34a412a09fad8b89786c3c3a577282436851b5c51270d7,3854,177,2026-08-25,vitrine,89499aafb2,oui
 atmart_points_transfert_communes_HT.csv,2026-08-25,archives/atmart_points_transfert_communes_HT/2026-08-25.csv,1d11bdddcd80d391b8b99cd10a29f845644989b876d7c7a4fc70f7eeec71a587,52608,141,2026-08-25,vitrine,89499aafb2,oui
@@ -286,3 +290,5 @@ haiti_contour_simplifie.geojson,2026-07-31,archives/haiti_contour_simplifie/2026
 haiti_departements_simplifie.geojson,2026-08-14,archives/haiti_departements_simplifie/2026-08-14.geojson,9824d2bce124ac292ca1750e679368c7c7fca85eccf997f6e05f0cb1031f3aa2,42967,1,2026-08-14,vitrine,5eda4cfd6c,oui
 haiti_regions_enquete_simplifie.geojson,2026-08-25,archives/haiti_regions_enquete_simplifie/2026-08-25.geojson,5af3297db1ccfa05602efd3092af80a21e37f18368c1ec852d5410dfebccb500,170661,0,2026-08-25,vitrine,5e9213b95d,oui
 transferts_diaspora_haiti_2000_2025.csv,2026-07-31,archives/transferts_diaspora_haiti_2000_2025/2026-07-31.csv,e38973a5d68dc4a39c083ba8898f150cfc6bc53831af6e20bc7e95265ea07cbe,1375,27,2026-07-31,vitrine,fbe7a69209,oui
+atmart_opinion_regions.json,2026-08-25,archives/atmart_opinion_regions/2026-08-25.json,512927ef40726e67e4dc2ee68910703b8ebbc3d589ceb8ea3027ecc674f6927e,1999,28,2026-08-25,vitrine,ad03d03fd7,non
+atmart_opinion_regions_HT.csv,2026-08-25,archives/atmart_opinion_regions_HT/2026-08-25.csv,1fc7a5b676fcc94981ea0f740fb70b244fe94a6a5329babc83bcef81a1fd2cb9,233208,359,2026-08-25,vitrine,ad03d03fd7,non

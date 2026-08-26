@@ -1,0 +1,96 @@
+{
+ "meta": {
+  "titre": "Ce que les Haïtiens disent — insécurité, institutions, migration",
+  "source_id": "SRC-067",
+  "passeport": "PSP-078",
+  "source": "LAPOP Lab, Vanderbilt University — AmericasBarometer 2023",
+  "licence": "Rapport public — valeurs CITÉES avec attribution ; les microdonnées de l'enquête relèvent d'un autre régime et ne sont pas utilisées ici",
+  "attribution": "LAPOP Lab, Vanderbilt University — « The AmericasBarometer takes the Pulse of Democracy in Haiti », 2023, financé par l'USAID",
+  "maille": "national",
+  "limite": "CE PRODUIT EST NATIONAL, ET IL LE RESTERA. L'enquête 2023 s'est faite PAR TÉLÉPHONE, en composition aléatoire de numéros mobiles : elle exclut par construction quiconque n'a pas de portable. SON TAUX DE RÉPONSE EST DE 6,6 %, le plus bas des vingt-quatre pays de la vague, contre 16,1 % en moyenne régionale. SA STRATIFICATION N'EST PAS DÉPARTEMENTALE : cinq strates, et 119 répondants sur 1 611 sans strate renseignée. Le rapport publie une figure régionale dont les étiquettes ne sont pas lisibles ; nous ne la reprenons pas, parce que deviner quel pourcentage va à quelle région serait un rattachement au jugé. CE SONT DES OPINIONS ET DES EXPÉRIENCES DÉCLARÉES, pas des faits constatés : « 24 % signalent des gangs dans leur quartier » ne dit pas que 24 % des quartiers en ont. LA MARGE D'ERREUR NATIONALE EST DE 2,44 POINTS au seuil de 95 % — un écart de deux points ne prouve rien. LES MICRODONNÉES NE SONT PAS UTILISÉES : leur téléchargement suppose d'accepter une licence, et leurs conditions interdisent de transmettre les fichiers à des tiers.",
+  "empreinte_capture": "9c8db8781c23f350",
+  "date_extraction": "2026-08-25"
+ },
+ "mesures": {
+  "victimation_criminelle": {
+   "v": 25,
+   "u": "%",
+   "f": "insécurité vécue"
+  },
+  "sentiment_insecurite": {
+   "v": 56,
+   "u": "%",
+   "f": "insécurité vécue"
+  },
+  "insecurite_premier_probleme": {
+   "v": 70,
+   "u": "%",
+   "f": "insécurité vécue"
+  },
+  "gangs_dans_le_quartier": {
+   "v": 24,
+   "u": "%",
+   "f": "insécurité vécue"
+  },
+  "economie_premier_probleme": {
+   "v": 13,
+   "u": "%",
+   "f": "insécurité vécue"
+  },
+  "confiance_police": {
+   "v": 54,
+   "u": "%",
+   "f": "institutions"
+  },
+  "confiance_police_2017": {
+   "v": 42,
+   "u": "%",
+   "f": "institutions"
+  },
+  "corruption_repandue": {
+   "v": 73,
+   "u": "%",
+   "f": "institutions"
+  },
+  "pot_de_vin_police": {
+   "v": 2,
+   "u": "%",
+   "f": "institutions"
+  },
+  "etat_ne_fait_rien": {
+   "v": 58,
+   "u": "%",
+   "f": "institutions"
+  },
+  "confiance_systeme_electoral": {
+   "v": 24,
+   "u": "%",
+   "f": "institutions"
+  },
+  "intention_emigrer": {
+   "v": 79,
+   "u": "%",
+   "f": "migration"
+  },
+  "destination_etats_unis": {
+   "v": 69,
+   "u": "%",
+   "f": "migration"
+  },
+  "insecurite_alimentaire": {
+   "v": 78,
+   "u": "%",
+   "f": "conditions de vie"
+  },
+  "hausse_insecurite_alimentaire": {
+   "v": 36,
+   "u": "points de pourcentage",
+   "f": "conditions de vie"
+  },
+  "soutien_militaire_americain": {
+   "v": 71,
+   "u": "%",
+   "f": "sécurité et institutions"
+  }
+ }
+}

@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 114
+  "fichiers": 116
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -90,6 +90,8 @@
    "atmart_annuaire_transfert_HT.csv",
    "atmart_audience_numerique.json",
    "atmart_audience_numerique_HT.csv",
+   "atmart_opinion_lapop.json",
+   "atmart_opinion_lapop_HT.csv",
    "atmart_points_transfert.json",
    "atmart_points_transfert_communes_HT.csv",
    "atmart_professions_communes_HT.csv",
@@ -603,6 +605,20 @@
     "SRC-035"
    ],
    "attribution": "CNIGS via HaitiData (geoserver WFS)"
+  },
+  "atmart_opinion_lapop.json": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-067"
+   ],
+   "attribution": "LAPOP Lab, Vanderbilt University — financé par l'USAID"
+  },
+  "atmart_opinion_lapop_HT.csv": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-067"
+   ],
+   "attribution": "LAPOP Lab, Vanderbilt University — financé par l'USAID"
   },
   "atmart_pluie_communes.json": {
    "licence": "Domaine public",

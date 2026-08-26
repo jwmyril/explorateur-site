@@ -236,7 +236,8 @@ atmart_registre_sources.csv,2026-08-25,archives/atmart_registre_sources/2026-08-
 atmart_registre_sources.csv,2026-08-25,archives/atmart_registre_sources/2026-08-25-5.csv,98026398743a4e01545d9388d0a3039e4ed36d87170f1eb1db85121fb1ceb6bd,57901,59,2026-08-25,vitrine,5e9213b95d,non
 atmart_registre_sources.csv,2026-08-25,archives/atmart_registre_sources/2026-08-25-6.csv,b40c91d429613f00de80c1ab84d107497cc4092c6754314805f7379174451c12,58882,60,2026-08-25,vitrine,8eaf0b2943,non
 atmart_registre_sources.csv,2026-08-25,archives/atmart_registre_sources/2026-08-25-7.csv,d21949c88c90e45477900b34a8f03d497173edbc51423e703ddf7f61ebfebf30,58865,60,2026-08-25,vitrine,ad03d03fd7,non
-atmart_registre_sources.csv,2026-08-26,archives/atmart_registre_sources/2026-08-26.csv,7759be97d4f39f612bb1942df03a8ddc33fb9b52f07c684cf175d782ffa894e3,59971,60,2026-08-26,vitrine,9c832550e8,oui
+atmart_registre_sources.csv,2026-08-26,archives/atmart_registre_sources/2026-08-26.csv,7759be97d4f39f612bb1942df03a8ddc33fb9b52f07c684cf175d782ffa894e3,59971,60,2026-08-26,vitrine,9c832550e8,non
+atmart_registre_sources.csv,2026-08-26,archives/atmart_registre_sources/2026-08-26-2.csv,2e72bfef59073afdbf36ed6769bb578c4f51f5f7027b8ca03af93ca0973a75d6,59967,60,2026-08-26,vitrine,eec20d9659,oui
 atmart_registre_sources.csv,2026-08-23,archives/atmart_registre_sources/2026-08-23-3.csv,dfc0fbfde2cfe91e731f5733b78f16cdfe215989e5cc0c15c75b18726570fc2d,44127,47,2026-08-23,site,71b6010f36,non
 atmart_renvois_us.json,2026-08-23,archives/atmart_renvois_us/2026-08-23.json,acfa9c47c823590d7acfcc781e5df95cd2cc3c30fdf9d9666ab44e6e77b6416b,20105,470,2026-08-23,vitrine,7aa251bc4a,oui
 atmart_renvois_us_annuel.csv,2026-08-23,archives/atmart_renvois_us_annuel/2026-08-23.csv,c49a1b7223d3d73dc5c419c55fd26800e29ef5840c5db9feacf2557d55f43f45,9196,33,2026-08-23,vitrine,7aa251bc4a,oui

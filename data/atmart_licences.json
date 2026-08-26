@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 123
+  "fichiers": 125
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -24,6 +24,8 @@
    "atmart_caisses_communes_desservies_HT.csv",
    "atmart_caisses_populaires.json",
    "atmart_caisses_populaires_HT.csv",
+   "atmart_communes_regions_enquete.json",
+   "atmart_communes_regions_enquete_HT.csv",
    "atmart_concordance.json",
    "atmart_concordance_HT.csv",
    "atmart_couche_bassins_HT.geojson",
@@ -291,6 +293,20 @@
     "SRC-053"
    ],
    "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_communes_regions_enquete.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-066"
+   ],
+   "attribution": "The DHS Program (ICF International), financé par l'USAID"
+  },
+  "atmart_communes_regions_enquete_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-066"
+   ],
+   "attribution": "The DHS Program (ICF International), financé par l'USAID"
   },
   "atmart_comparaison_haiti_rd.json": {
    "licence": "CC BY 4.0 — transformation ou citation",

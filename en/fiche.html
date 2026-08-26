@@ -59,7 +59,7 @@ footer a,main a.lien{color:#1550b8}
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/fiche.html" />
   <script>window.ATM_LANG_FORCE = "en"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/fiche.html", "ht": "https://explorateur.atmart.ltd/ht/fiche.html", "en": "https://explorateur.atmart.ltd/en/fiche.html", "es": "https://explorateur.atmart.ltd/es/fiche.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-+OV/XMNJVwz+Zl6jfIgablyZ31Cgx0/d7OVvomnY4CU=' 'sha256-9RT7XFx/kCLMl+U0mQRFMpEHjDQKb9eZ7cJ5rHf+Wyk=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-qI63wxzjoqX8SrXkiSgyeGQBwcVIM9wmaG1scUqyW3k='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-44VP3T318zEnqopKFZectwk53NAtDY6R0LpHLjp5bGo=' 'sha256-9RT7XFx/kCLMl+U0mQRFMpEHjDQKb9eZ7cJ5rHf+Wyk=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-qI63wxzjoqX8SrXkiSgyeGQBwcVIM9wmaG1scUqyW3k='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -176,6 +176,34 @@ footer a,main a.lien{color:#1550b8}
 
   /* Deux essais avant d'abandonner : une connexion instable coupe souvent la
      première requête, et un message d'échec prématuré ferait fuir. */
+  /* LA VERSION DES DONNÉES, ET POURQUOI ELLE EXISTE ICI.
+     « Garder les 140 communes sur cet appareil » remplit un cache que le
+     service worker ne purge JAMAIS — c'est voulu : ce que le lecteur a
+     demandé à garder doit survivre aux mises en ligne. Mais rien ne le
+     rafraîchissait non plus. Une fiche gardée en août restait celle d'août,
+     indéfiniment, et le lecteur n'avait aucun moyen de le savoir.
+     Le défaut est resté invisible tant que les fiches ne changeaient qu'à la
+     marge. Le 26/08/2026 elles gagnent une section entière — ce que
+     l'enquête dit de la région de la commune — et une copie gardée ne
+     l'aurait jamais montrée.
+     On date donc le contenu. Quand la date change, le cache gardé est vidé
+     et le lecteur en est informé : il peut regarder en ligne tout de suite,
+     ou re-garder les 140 d'un clic. Vider sans le dire serait aussi mauvais
+     que ne pas vider. */
+  var VERSION_FICHES = "2026-08-26";
+
+  function verifierFraicheur() {
+    var cle = "explorateur_fiches_version";
+    var vue = null;
+    try { vue = localStorage.getItem(cle); } catch (e) { return Promise.resolve(false); }
+    if (vue === VERSION_FICHES) return Promise.resolve(false);
+    try { localStorage.setItem(cle, VERSION_FICHES); } catch (e) { /* mode privé */ }
+    if (!vue || !window.caches) return Promise.resolve(false);
+    return caches.delete("explorateur-communes").then(function (vide) {
+      return !!vide;
+    }).catch(function () { return false; });
+  }
+
   function charger(u, essais) {
     essais = essais === undefined ? 2 : essais;
     return fetch(u).then(function (r) {
@@ -237,6 +265,32 @@ footer a,main a.lien{color:#1550b8}
         (m.c ? " · " + m.c + " communes sur 140 couvertes par cette source" : "") +
         (m.src ? " · " + texte(m.src) : "") + "</small></div>");
     });
+    /* CE QUE L'ENQUÊTE DIT DE LA RÉGION — sous son propre titre, après les
+       mesures communales et jamais mêlé à elles. Un chiffre de région rangé
+       parmi des chiffres de commune devient un chiffre de commune dans la
+       tête du lecteur, et aucune petite ligne ne le rattrape ensuite. Le
+       titre nomme donc la région, et l'avertissement précède les valeurs. */
+    if (f.enq && f.enq.r && f.enq.v && f.enq.v.length) {
+      h.push('<h2 class="enq-t">Ce que l\'enquête dit de la région ' +
+             texte(f.enq.r) + "</h2>");
+      h.push('<p class="note">Ces ' + f.enq.v.length + " valeurs ne sont PAS " +
+             "des mesures de cette commune : l'EMMUS " + texte(f.enq.an) +
+             " a interrogé un échantillon de la région « " + texte(f.enq.r) +
+             " », et toutes les communes de cette région portent le même " +
+             "chiffre. La dernière enquête date de 2016-2017 : elle dit où " +
+             "en était le pays avant l'effondrement sécuritaire.</p>");
+      f.enq.v.forEach(function (m) {
+        h.push('<div class="mes"><b>' + nombre(m.val, m.u) + "</b><span>" +
+               texte(m.n) + "</span><small>région " + texte(f.enq.r) +
+               " · enquête EMMUS " + texte(f.enq.an) + "</small></div>");
+      });
+    } else if (f.enq && f.enq.motif) {
+      h.push('<h2 class="enq-t">Ce que l\'enquête dit de cette commune</h2>');
+      h.push('<p class="note">Rien, et le motif se dit plutôt qu\'il ne se ' +
+             "cache : " + texte(f.enq.motif) + ". Remplir cette commune avec " +
+             "les chiffres de la région la plus probable poserait des valeurs " +
+             "invérifiables sur un territoire.</p>");
+    }
     h.push('<p style="margin-top:1.2rem"><a class="btn" href="/?id=' + texte(f.id) +
            '">Voir la fiche complète (carte, pyramide, comparaison)</a></p>');
     h.push('<p style="margin-top:.8rem"><a class="lien" href="fiche.html">← chercher une autre commune</a></p>');
@@ -287,22 +341,39 @@ footer a,main a.lien{color:#1550b8}
 
   function proposerGarder() {
     var zone = $("#garder");
+    /* Le bloc ci-dessous réécrit `zone.innerHTML` de fond en comble. Écrire
+       le message de purge AVANT lui revenait à ne pas l'écrire du tout — ce
+       que le test a montré du premier coup. On le garde donc de côté et on
+       le remet EN TÊTE une fois la zone reconstruite. */
+    verifierFraicheur().then(function (purge) {
+      proposerGarder2(zone, purge ?
+        '<p class="note">Les fiches ont changé depuis que vous les aviez ' +
+        "gardées : les copies de votre appareil ont été effacées pour ne pas " +
+        "vous montrer d'anciens chiffres. Vous pouvez les garder à nouveau " +
+        "ci-dessous.</p>" : "");
+    });
+  }
+
+  function proposerGarder2(zone, avis) {
+    function poser(html) {
+      zone.hidden = false;
+      zone.innerHTML = avis + html;
+    }
     cacheDuSite().then(function (cache) {
       if (!cache) return;               // navigateur sans cache : on se tait
       return comptees(cache).then(function (deja) {
-        zone.hidden = false;
         if (deja >= index.length) {
-          zone.innerHTML = '<p class="note">Les ' + index.length + ' communes sont ' +
-            "gardées sur cet appareil : vous pouvez les lire sans connexion.</p>";
+          poser('<p class="note">Les ' + index.length + ' communes sont ' +
+            "gardées sur cet appareil : vous pouvez les lire sans connexion.</p>");
           return;
         }
-        zone.innerHTML = '<p class="note">Hors connexion, vous pouvez chercher les ' +
+        poser('<p class="note">Hors connexion, vous pouvez chercher les ' +
           index.length + " communes, mais ne lire que celles déjà ouvertes" +
           (deja ? " (" + deja + " pour l'instant)" : "") + ".<br>" +
           '<button type="button" id="gd" class="btn">Garder les ' + index.length +
           " communes sur cet appareil</button> " +
           '<small style="display:block;margin-top:.4rem">Environ 700 Ko, une seule fois. ' +
-          "Rien n'est envoyé : tout reste sur votre téléphone.</small></p>";
+          "Rien n'est envoyé : tout reste sur votre téléphone.</small></p>");
         document.getElementById("gd").addEventListener("click", function () {
           telecharger(cache, zone);
         });

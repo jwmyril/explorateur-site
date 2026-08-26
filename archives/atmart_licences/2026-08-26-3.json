@@ -1,0 +1,999 @@
+{
+ "meta": {
+  "titre": "Licence de chaque fichier publié",
+  "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
+  "fichiers": 123
+ },
+ "par_licence": {
+  "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
+   "atmart_cyclones_communes.json"
+  ],
+  "CC BY 4.0": [
+   "ECHANTILLON_haiti_sections_gps.csv",
+   "EXTRAIT_geojson.md",
+   "EXTRAIT_haiti_140_villes_chefs_lieux_gps.csv",
+   "EXTRAIT_haiti_570_sections_communales_gps.csv",
+   "EXTRAIT_haiti_lieux_habites_geonames_gps.csv",
+   "LISEZMOI_transferts_diaspora.md",
+   "atmart_alea_inondation_communes_HT.csv",
+   "atmart_banques.json",
+   "atmart_banques_depots_territoire_HT.csv",
+   "atmart_banques_ratios_HT.csv",
+   "atmart_banques_reseau_HT.csv",
+   "atmart_batiments_communes.json",
+   "atmart_caisses_communes_desservies_HT.csv",
+   "atmart_caisses_populaires.json",
+   "atmart_caisses_populaires_HT.csv",
+   "atmart_concordance.json",
+   "atmart_concordance_HT.csv",
+   "atmart_couche_bassins_HT.geojson",
+   "atmart_couche_inondable_HT.geojson",
+   "atmart_credits_departements.json",
+   "atmart_diaspora_destinations.json",
+   "atmart_diaspora_destinations_HT.csv",
+   "atmart_ecoles_declarees.json",
+   "atmart_enquetes.json",
+   "atmart_enquetes_inventaire_HT.csv",
+   "atmart_finance_agrements_HT.csv",
+   "atmart_hibiscus_communes.json",
+   "atmart_hibiscus_communes_HT.csv",
+   "atmart_hibiscus_non_rattachees_HT.csv",
+   "atmart_indicateurs_national_HT.csv",
+   "atmart_ipc_HT.csv",
+   "atmart_ipc_regions.json",
+   "atmart_ipc_regions_HT.csv",
+   "atmart_ipc_regions_communes_HT.csv",
+   "atmart_licences.json",
+   "atmart_licences_donnees_HT.csv",
+   "atmart_marches_HT.geojson",
+   "atmart_medias.json",
+   "atmart_medias_communes_HT.csv",
+   "atmart_medias_stations_HT.csv",
+   "atmart_menages_transferts.json",
+   "atmart_menages_transferts_HT.csv",
+   "atmart_millesimes_territoriaux.csv",
+   "atmart_occupation_sol.json",
+   "atmart_occupation_sol_communes_HT.csv",
+   "atmart_population_modelisee.json",
+   "atmart_population_trois_sources.json",
+   "atmart_presence_organisations_HT.csv",
+   "atmart_prix_denrees.json",
+   "atmart_prix_denrees_marches_HT.csv",
+   "atmart_prix_marches_HT.csv",
+   "atmart_projets_national.json",
+   "atmart_pyramide_ages_HT.csv",
+   "atmart_referentiel_indicateurs.csv",
+   "atmart_referentiel_indicateurs_i18n.csv",
+   "atmart_referentiel_temps_HT.csv",
+   "atmart_referentiel_territoire_base_HT.csv",
+   "atmart_registre_marches_HT.csv",
+   "atmart_registre_ong_HT.csv",
+   "atmart_registre_sources.csv",
+   "atmart_renvois_us.json",
+   "atmart_renvois_us_annuel.csv",
+   "atmart_renvois_us_mensuel.csv",
+   "atmart_resultats_emmus.json",
+   "atmart_resultats_emmus_HT.csv",
+   "atmart_sante_declaree.json",
+   "atmart_solaire_communes.json",
+   "atmart_sols_communes.json",
+   "atmart_transferts_departements.json",
+   "atmart_transferts_departements_HT.csv",
+   "atmart_transferts_pays.json",
+   "atmart_transferts_pays_mensuel.csv",
+   "atmart_urbanisation_communes.json",
+   "catalogue_manifest.json",
+   "haiti_communes_simplifie.geojson",
+   "haiti_contour_simplifie.geojson",
+   "haiti_departements_simplifie.geojson",
+   "transferts_diaspora_haiti_2000_2025.csv"
+  ],
+  "CC BY 4.0 — transformation ou citation": [
+   "atmart_annuaire_transfert_HT.csv",
+   "atmart_audience_numerique.json",
+   "atmart_audience_numerique_HT.csv",
+   "atmart_comparaison_haiti_rd.json",
+   "atmart_comparaison_haiti_rd_HT.csv",
+   "atmart_opinion_lapop.json",
+   "atmart_opinion_lapop_HT.csv",
+   "atmart_opinion_serie.json",
+   "atmart_opinion_serie_HT.csv",
+   "atmart_points_transfert.json",
+   "atmart_points_transfert_communes_HT.csv",
+   "atmart_professions_communes_HT.csv",
+   "atmart_series_nationales.json",
+   "atmart_series_nationales_HT.csv"
+  ],
+  "CC BY-NC 4.0": [
+   "atmart_conflits_HT.csv"
+  ],
+  "CC BY-SA 4.0": [
+   "atmart_couche_eau_HT.geojson"
+  ],
+  "Copernicus — free of charge, without restriction of use (aucune licence nommée)": [
+   "atmart_eau_surface.json"
+  ],
+  "Domaine public": [
+   "atmart_pluie_communes.json"
+  ],
+  "Domaine public (USGS)": [
+   "atmart_seismes_communes.json"
+  ],
+  "Freely available for scientific, educational and commercial use": [
+   "atmart_bassins_communes.json"
+  ],
+  "ODbL 1.0": [
+   "atmart_couche_carburant_HT.geojson",
+   "atmart_couche_finance_HT.geojson",
+   "atmart_couche_finance_cooperative_HT.geojson",
+   "atmart_couche_lieux_culte_HT.geojson",
+   "atmart_couche_telecom_HT.geojson",
+   "atmart_couche_tourisme_HT.geojson",
+   "atmart_equipements_hot.json",
+   "atmart_finance_cooperative.json",
+   "atmart_finance_cooperative_communes_HT.csv",
+   "atmart_lieux_culte.json",
+   "atmart_lieux_culte_communes_HT.csv",
+   "atmart_telecom_communes_HT.csv",
+   "atmart_tourisme_communes.json",
+   "atmart_tourisme_communes_HT.csv"
+  ],
+  "ODbL 1.0 pour OSM ; CC BY-IGO pour les marchés PAM": [
+   "atmart_acces_routier.json"
+  ],
+  "par ligne — voir la colonne « licence »": [
+   "atmart_infrastructures_communes_HT.csv"
+  ],
+  "sous réserve": [
+   "atmart_deplaces_HT.csv",
+   "atmart_retours_forces.json",
+   "atmart_retours_forces_HT.csv",
+   "atmart_retours_forces_points_HT.csv"
+  ],
+  "à déclarer": [
+   "atmart_couches_carte_HT.csv",
+   "atmart_enquetes_resultats_HT.csv",
+   "atmart_indicateurs_communes_HT.csv",
+   "haiti_regions_enquete_simplifie.geojson"
+  ]
+ },
+ "fichiers": {
+  "ECHANTILLON_haiti_sections_gps.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-001"
+   ],
+   "attribution": "CNIGS / UN OCHA"
+  },
+  "EXTRAIT_geojson.md": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-001"
+   ],
+   "attribution": "CNIGS / UN OCHA"
+  },
+  "EXTRAIT_haiti_140_villes_chefs_lieux_gps.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-001"
+   ],
+   "attribution": "CNIGS / UN OCHA"
+  },
+  "EXTRAIT_haiti_570_sections_communales_gps.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-001"
+   ],
+   "attribution": "CNIGS / UN OCHA"
+  },
+  "EXTRAIT_haiti_lieux_habites_geonames_gps.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-002"
+   ],
+   "attribution": "GeoNames"
+  },
+  "LISEZMOI_transferts_diaspora.md": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-015"
+   ],
+   "attribution": "Banque mondiale"
+  },
+  "atmart_acces_routier.json": {
+   "licence": "ODbL 1.0 pour OSM ; CC BY-IGO pour les marchés PAM",
+   "sources": [],
+   "attribution": "© OpenStreetMap contributors, extrait par HOT ; marchés : WFP via OCHA HDX"
+  },
+  "atmart_alea_inondation_communes_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-035"
+   ],
+   "attribution": "CNIGS via HaitiData (geoserver WFS)"
+  },
+  "atmart_annuaire_transfert_HT.csv": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-065"
+   ],
+   "attribution": "CAM Transfer — maison de transfert agréée par la BRH"
+  },
+  "atmart_audience_numerique.json": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-059"
+   ],
+   "attribution": "Kepios Pte. Ltd."
+  },
+  "atmart_audience_numerique_HT.csv": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-059"
+   ],
+   "attribution": "Kepios Pte. Ltd."
+  },
+  "atmart_banques.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-062"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_banques_depots_territoire_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-062"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_banques_ratios_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-062"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_banques_reseau_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-063"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_bassins_communes.json": {
+   "licence": "Freely available for scientific, educational and commercial use",
+   "sources": [],
+   "attribution": "HydroBASINS / HydroSHEDS — https://www.hydrosheds.org"
+  },
+  "atmart_batiments_communes.json": {
+   "licence": "CC BY 4.0",
+   "sources": [],
+   "attribution": "Google Open Buildings V3 — Sirko et al., Google Research, CC BY 4.0"
+  },
+  "atmart_caisses_communes_desservies_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-053"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_caisses_populaires.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-053"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_caisses_populaires_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-053"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_comparaison_haiti_rd.json": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-014",
+    "SRC-067"
+   ],
+   "attribution": "LAPOP Lab / Center for Global Democracy, Vanderbilt University ; LAPOP Lab, Vanderbilt University — financé par l'USAID"
+  },
+  "atmart_comparaison_haiti_rd_HT.csv": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-014"
+   ],
+   "attribution": "LAPOP Lab / Center for Global Democracy, Vanderbilt University"
+  },
+  "atmart_concordance.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-ATM-001"
+   ],
+   "attribution": "Atmart Data"
+  },
+  "atmart_concordance_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-ATM-001"
+   ],
+   "attribution": "Atmart Data"
+  },
+  "atmart_conflits_HT.csv": {
+   "licence": "CC BY-NC 4.0",
+   "sources": [
+    "SRC-034"
+   ],
+   "attribution": "ACLED via HDX"
+  },
+  "atmart_couche_bassins_HT.geojson": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-035"
+   ],
+   "attribution": "CNIGS via HaitiData (geoserver WFS)"
+  },
+  "atmart_couche_carburant_HT.geojson": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-028"
+   ],
+   "attribution": "Humanitarian OpenStreetMap Team (HOT) via HDX"
+  },
+  "atmart_couche_eau_HT.geojson": {
+   "licence": "CC BY-SA 4.0",
+   "sources": [
+    "SRC-029"
+   ],
+   "attribution": "Water Point Data Exchange (WPdx) via HDX"
+  },
+  "atmart_couche_finance_HT.geojson": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-028"
+   ],
+   "attribution": "Humanitarian OpenStreetMap Team (HOT) via HDX"
+  },
+  "atmart_couche_finance_cooperative_HT.geojson": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-028"
+   ],
+   "attribution": "Humanitarian OpenStreetMap Team (HOT) via HDX"
+  },
+  "atmart_couche_inondable_HT.geojson": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-035"
+   ],
+   "attribution": "CNIGS via HaitiData (geoserver WFS)"
+  },
+  "atmart_couche_lieux_culte_HT.geojson": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-057"
+   ],
+   "attribution": "OpenStreetMap — contributeurs"
+  },
+  "atmart_couche_telecom_HT.geojson": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-036"
+   ],
+   "attribution": "OpenStreetMap (contributeurs) via Overpass API"
+  },
+  "atmart_couche_tourisme_HT.geojson": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-028"
+   ],
+   "attribution": "Humanitarian OpenStreetMap Team (HOT) via HDX"
+  },
+  "atmart_couches_carte_HT.csv": {
+   "licence": "à déclarer",
+   "sources": [],
+   "attribution": ""
+  },
+  "atmart_credits_departements.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-047"
+   ],
+   "attribution": "Ministère de l'Économie et des Finances — Direction générale du budget"
+  },
+  "atmart_cyclones_communes.json": {
+   "licence": "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM",
+   "sources": [],
+   "attribution": "NOAA NCEI IBTrACS v04r01 — bassin Atlantique Nord"
+  },
+  "atmart_deplaces_HT.csv": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-032"
+   ],
+   "attribution": "OIM — Displacement Tracking Matrix (via HDX)"
+  },
+  "atmart_diaspora_destinations.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-054"
+   ],
+   "attribution": "ONU DESA — Division de la population, Département des affaires économiques et sociales des Nations unies"
+  },
+  "atmart_diaspora_destinations_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-054"
+   ],
+   "attribution": "ONU DESA — Division de la population, Département des affaires économiques et sociales des Nations unies"
+  },
+  "atmart_eau_surface.json": {
+   "licence": "Copernicus — free of charge, without restriction of use (aucune licence nommée)",
+   "sources": [],
+   "attribution": "Source: EC JRC/Google — Pekel et al., Nature 540, 418-422 (2016)"
+  },
+  "atmart_ecoles_declarees.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-004"
+   ],
+   "attribution": "MENFP — Direction de la planification et de la coopération externe (DPCE) ; application SIGEEE"
+  },
+  "atmart_enquetes.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-066"
+   ],
+   "attribution": "The DHS Program (ICF International), financé par l'USAID"
+  },
+  "atmart_enquetes_inventaire_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-066"
+   ],
+   "attribution": "The DHS Program (ICF International), financé par l'USAID"
+  },
+  "atmart_enquetes_resultats_HT.csv": {
+   "licence": "à déclarer",
+   "sources": [],
+   "attribution": ""
+  },
+  "atmart_equipements_hot.json": {
+   "licence": "ODbL 1.0",
+   "sources": [],
+   "attribution": "© OpenStreetMap contributors, extrait par HOT"
+  },
+  "atmart_finance_agrements_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-053"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_finance_cooperative.json": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-028"
+   ],
+   "attribution": "Humanitarian OpenStreetMap Team (HOT) via HDX"
+  },
+  "atmart_finance_cooperative_communes_HT.csv": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-028"
+   ],
+   "attribution": "Humanitarian OpenStreetMap Team (HOT) via HDX"
+  },
+  "atmart_hibiscus_communes.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-051"
+   ],
+   "attribution": "Ministère du Tourisme et des Industries créatives (MTIC)"
+  },
+  "atmart_hibiscus_communes_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-051"
+   ],
+   "attribution": "Ministère du Tourisme et des Industries créatives (MTIC)"
+  },
+  "atmart_hibiscus_non_rattachees_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-051"
+   ],
+   "attribution": "Ministère du Tourisme et des Industries créatives (MTIC)"
+  },
+  "atmart_indicateurs_communes_HT.csv": {
+   "licence": "à déclarer",
+   "sources": [],
+   "attribution": ""
+  },
+  "atmart_indicateurs_national_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-024"
+   ],
+   "attribution": "MEF / Direction Générale du Budget (DGB)"
+  },
+  "atmart_infrastructures_communes_HT.csv": {
+   "licence": "par ligne — voir la colonne « licence »",
+   "sources": [
+    "SRC-028",
+    "SRC-029",
+    "SRC-030",
+    "SRC-031",
+    "SRC-036"
+   ],
+   "attribution": "Humanitarian OpenStreetMap Team (HOT) via HDX ; OpenCelliD (Unwired Labs) / GSMA / Ookla ; OpenStreetMap (contributeurs) via Overpass API ; OpenStreetMap via Overpass ; Water Point Data Exchange (WPdx) via HDX"
+  },
+  "atmart_ipc_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-033"
+   ],
+   "attribution": "IPC — Cadre intégré de classification de la sécurité alimentaire"
+  },
+  "atmart_ipc_regions.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-052"
+   ],
+   "attribution": "IHSI — Institut Haïtien de Statistique et d'Informatique"
+  },
+  "atmart_ipc_regions_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-052"
+   ],
+   "attribution": "IHSI — Institut Haïtien de Statistique et d'Informatique"
+  },
+  "atmart_ipc_regions_communes_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-052"
+   ],
+   "attribution": "IHSI — Institut Haïtien de Statistique et d'Informatique"
+  },
+  "atmart_licences.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-ATM-001"
+   ],
+   "attribution": "Atmart Data"
+  },
+  "atmart_licences_donnees_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-ATM-001"
+   ],
+   "attribution": "Atmart Data"
+  },
+  "atmart_lieux_culte.json": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-057"
+   ],
+   "attribution": "OpenStreetMap — contributeurs"
+  },
+  "atmart_lieux_culte_communes_HT.csv": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-057"
+   ],
+   "attribution": "OpenStreetMap — contributeurs"
+  },
+  "atmart_marches_HT.geojson": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-011"
+   ],
+   "attribution": "PAM (WFP)"
+  },
+  "atmart_medias.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-058"
+   ],
+   "attribution": "CONATEL — Conseil National des Télécommunications"
+  },
+  "atmart_medias_communes_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-058"
+   ],
+   "attribution": "CONATEL — Conseil National des Télécommunications"
+  },
+  "atmart_medias_stations_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-058"
+   ],
+   "attribution": "CONATEL — Conseil National des Télécommunications"
+  },
+  "atmart_menages_transferts.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-064"
+   ],
+   "attribution": "FAO — Organisation des Nations unies pour l'alimentation et l'agriculture"
+  },
+  "atmart_menages_transferts_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-064"
+   ],
+   "attribution": "FAO — Organisation des Nations unies pour l'alimentation et l'agriculture"
+  },
+  "atmart_millesimes_territoriaux.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-001"
+   ],
+   "attribution": "CNIGS / UN OCHA"
+  },
+  "atmart_occupation_sol.json": {
+   "licence": "CC BY 4.0",
+   "sources": [],
+   "attribution": "© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium"
+  },
+  "atmart_occupation_sol_communes_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-035"
+   ],
+   "attribution": "CNIGS via HaitiData (geoserver WFS)"
+  },
+  "atmart_opinion_lapop.json": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-067"
+   ],
+   "attribution": "LAPOP Lab, Vanderbilt University — financé par l'USAID"
+  },
+  "atmart_opinion_lapop_HT.csv": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-067"
+   ],
+   "attribution": "LAPOP Lab, Vanderbilt University — financé par l'USAID"
+  },
+  "atmart_opinion_serie.json": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-014"
+   ],
+   "attribution": "LAPOP Lab / Center for Global Democracy, Vanderbilt University"
+  },
+  "atmart_opinion_serie_HT.csv": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-014"
+   ],
+   "attribution": "LAPOP Lab / Center for Global Democracy, Vanderbilt University"
+  },
+  "atmart_pluie_communes.json": {
+   "licence": "Domaine public",
+   "sources": [],
+   "attribution": "CHIRPS 2.0 (Climate Hazards Center, UC Santa Barbara)"
+  },
+  "atmart_points_transfert.json": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-065"
+   ],
+   "attribution": "CAM Transfer — maison de transfert agréée par la BRH"
+  },
+  "atmart_points_transfert_communes_HT.csv": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-065"
+   ],
+   "attribution": "CAM Transfer — maison de transfert agréée par la BRH"
+  },
+  "atmart_population_modelisee.json": {
+   "licence": "CC BY 4.0",
+   "sources": [],
+   "attribution": "WorldPop 2020, ajusté sur les projections des Nations unies"
+  },
+  "atmart_population_trois_sources.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-003"
+   ],
+   "attribution": "IHSI"
+  },
+  "atmart_presence_organisations_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-026"
+   ],
+   "attribution": "OCHA Haïti (via HDX)"
+  },
+  "atmart_prix_denrees.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-011"
+   ],
+   "attribution": "PAM (WFP)"
+  },
+  "atmart_prix_denrees_marches_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-011"
+   ],
+   "attribution": "PAM (WFP)"
+  },
+  "atmart_prix_marches_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-011"
+   ],
+   "attribution": "PAM (WFP)"
+  },
+  "atmart_professions_communes_HT.csv": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-025"
+   ],
+   "attribution": "Compilation Perplexity.ai (multi-sources web)"
+  },
+  "atmart_projets_national.json": {
+   "licence": "CC BY 4.0",
+   "sources": [],
+   "attribution": "Banque mondiale — API Projects & Operations"
+  },
+  "atmart_pyramide_ages_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-013"
+   ],
+   "attribution": "UNFPA via OCHA HDX"
+  },
+  "atmart_referentiel_indicateurs.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-024"
+   ],
+   "attribution": "MEF / Direction Générale du Budget (DGB)"
+  },
+  "atmart_referentiel_indicateurs_i18n.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-ATM-001"
+   ],
+   "attribution": "Atmart Data"
+  },
+  "atmart_referentiel_temps_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-ATM-001"
+   ],
+   "attribution": "Atmart Data"
+  },
+  "atmart_referentiel_territoire_base_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-001",
+    "SRC-002"
+   ],
+   "attribution": "CNIGS / UN OCHA ; GeoNames"
+  },
+  "atmart_registre_marches_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-011"
+   ],
+   "attribution": "PAM (WFP)"
+  },
+  "atmart_registre_ong_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-027"
+   ],
+   "attribution": "MPCE / UCAONG"
+  },
+  "atmart_registre_sources.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-ATM-001"
+   ],
+   "attribution": "Atmart Data"
+  },
+  "atmart_renvois_us.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-056"
+   ],
+   "attribution": "U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
+  },
+  "atmart_renvois_us_annuel.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-056"
+   ],
+   "attribution": "U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
+  },
+  "atmart_renvois_us_mensuel.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-056"
+   ],
+   "attribution": "U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
+  },
+  "atmart_resultats_emmus.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-066"
+   ],
+   "attribution": "The DHS Program (ICF International), financé par l'USAID"
+  },
+  "atmart_resultats_emmus_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-066"
+   ],
+   "attribution": "The DHS Program (ICF International), financé par l'USAID"
+  },
+  "atmart_retours_forces.json": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-055"
+   ],
+   "attribution": "OIM — Displacement Tracking Matrix, avec l'Office National de la Migration (ONM) et le Groupe d'appui aux rapatriés et aux réfugiés (GARR)"
+  },
+  "atmart_retours_forces_HT.csv": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-055"
+   ],
+   "attribution": "OIM — Displacement Tracking Matrix, avec l'Office National de la Migration (ONM) et le Groupe d'appui aux rapatriés et aux réfugiés (GARR)"
+  },
+  "atmart_retours_forces_points_HT.csv": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-055"
+   ],
+   "attribution": "OIM — Displacement Tracking Matrix, avec l'Office National de la Migration (ONM) et le Groupe d'appui aux rapatriés et aux réfugiés (GARR)"
+  },
+  "atmart_sante_declaree.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-048"
+   ],
+   "attribution": "Ministère de la Santé publique et de la Population (MSPP)"
+  },
+  "atmart_seismes_communes.json": {
+   "licence": "Domaine public (USGS)",
+   "sources": [],
+   "attribution": "USGS ComCat"
+  },
+  "atmart_series_nationales.json": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-015",
+    "SRC-COMTRADE",
+    "SRC-FAOSTAT",
+    "SRC-ILOSTAT"
+   ],
+   "attribution": "Banque mondiale ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail"
+  },
+  "atmart_series_nationales_HT.csv": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-015",
+    "SRC-COMTRADE",
+    "SRC-FAOSTAT",
+    "SRC-ILOSTAT"
+   ],
+   "attribution": "Banque mondiale ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail"
+  },
+  "atmart_solaire_communes.json": {
+   "licence": "CC BY 4.0",
+   "sources": [],
+   "attribution": "Global Solar Atlas 2.0 (ESMAP / Banque mondiale / Solargis)"
+  },
+  "atmart_sols_communes.json": {
+   "licence": "CC BY 4.0",
+   "sources": [],
+   "attribution": "ISRIC — World Soil Information, SoilGrids 2.0 (CC BY 4.0). Poggio et al. 2021, SOIL 7:217-240."
+  },
+  "atmart_telecom_communes_HT.csv": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-036"
+   ],
+   "attribution": "OpenStreetMap (contributeurs) via Overpass API"
+  },
+  "atmart_tourisme_communes.json": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-028"
+   ],
+   "attribution": "Humanitarian OpenStreetMap Team (HOT) via HDX"
+  },
+  "atmart_tourisme_communes_HT.csv": {
+   "licence": "ODbL 1.0",
+   "sources": [
+    "SRC-028"
+   ],
+   "attribution": "Humanitarian OpenStreetMap Team (HOT) via HDX"
+  },
+  "atmart_transferts_departements.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-061"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_transferts_departements_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-061"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_transferts_pays.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-060"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_transferts_pays_mensuel.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-060"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti"
+  },
+  "atmart_urbanisation_communes.json": {
+   "licence": "CC BY 4.0",
+   "sources": [],
+   "attribution": "© European Union, 1995-2025 — Global Human Settlement Layer (GHSL), produits GHS-BUILT-S R2023A (4326/3ss, V1-0) et GHS-SMOD R2023A (4326/30ss, V2-0), Joint Research Centre. Citation obligatoire de l'article de référence : Pesaresi, M., Schiavina, M., Politis, P., Freire, S., Krasnodębska, K., Uhl, J. H., … Kemper, T. (2024), « Advances on the Global Human Settlement Layer by joint assessment of Earth Observation and population survey data », International Journal of Digital Earth, 17(1), doi:10.1080/17538947.2024.2390454. Le producteur précise qu'une citation du seul site GHSL est insuffisante."
+  },
+  "catalogue_manifest.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-ATM-001"
+   ],
+   "attribution": "Atmart Data"
+  },
+  "haiti_communes_simplifie.geojson": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-001"
+   ],
+   "attribution": "CNIGS / UN OCHA"
+  },
+  "haiti_contour_simplifie.geojson": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-001"
+   ],
+   "attribution": "CNIGS / UN OCHA"
+  },
+  "haiti_departements_simplifie.geojson": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-001"
+   ],
+   "attribution": "CNIGS / UN OCHA"
+  },
+  "haiti_regions_enquete_simplifie.geojson": {
+   "licence": "à déclarer",
+   "sources": [],
+   "attribution": ""
+  },
+  "transferts_diaspora_haiti_2000_2025.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-015"
+   ],
+   "attribution": "Banque mondiale"
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "meta": {
+  "titre": "Quelle région d'enquête contient quelle commune",
+  "source_id": "SRC-066",
+  "passeport": "PSP-077",
+  "limite": "UNE VALEUR RÉGIONALE N'EST PAS UNE MESURE DE LA COMMUNE. Cette table dit dans quelle région d'enquête une commune se trouve, pas ce qui a été mesuré chez elle : l'EMMUS n'échantillonne pas au niveau communal, et deux communes d'une même région partagent le même chiffre. NEUF DÉPARTEMENTS SUR DIX COÏNCIDENT avec une région, et leur rattachement est administratif, donc exact. L'OUEST EST LE SEUL CAS DIFFICILE : l'enquête le coupe en aire métropolitaine et reste de l'Ouest, et ne publie pas la liste des communes de chacune. LE CONTOUR DE L'ENQUÊTE A ÉTÉ CONFRONTÉ AUX 120 COMMUNES dont la région est connue d'avance avant d'être utilisé pour les 20 autres ; le taux de retrouvaille est publié. UNE COMMUNE QUE LE CONTOUR NE TRANCHE PAS reste indéterminée, avec son motif — la remplir au plus probable poserait un chiffre invérifiable sur un territoire.",
+  "seuil_de_marge": 0.2
+ },
+ "communes": 140,
+ "rattachees": 138,
+ "indeterminees": [
+  "Pétion-Ville",
+  "Kenscoff"
+ ],
+ "confrontation_du_contour": {
+  "communes_testees": 120,
+  "retrouvees": 120,
+  "taux": 1.0,
+  "contour_juge_utilisable": true,
+  "marge_minimale_observee": 0.125,
+  "marge_mediane_observee": 0.7667,
+  "cas_connus_sous_le_seuil": 2,
+  "seuil_de_marge": 0.2,
+  "desaccords": []
+ },
+ "par_region": {
+  "Aire métropolitaine": 5,
+  "Artibonite": 15,
+  "Centre": 12,
+  "Grand'Anse": 12,
+  "Nippes": 11,
+  "Nord": 19,
+  "Nord-Est": 13,
+  "Nord-Ouest": 10,
+  "Reste de l'Ouest": 13,
+  "Sud": 18,
+  "Sud-Est": 10,
+  "indéterminée": 2
+ }
+}

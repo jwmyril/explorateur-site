@@ -149,7 +149,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_sources.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "42311"
+       "contentSize": "60027"
       }
      ],
      "isBasedOn": "Atmart"
@@ -909,7 +909,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
      "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-033",
      "identifier": "PRD-033",
      "name": "Institutions financières agréées, et ce que la carte ne montre pas",
-     "description": "Les 26 institutions agréées par la BRH — banques, maisons de transfert, bureaux de change, paiement électronique, microfinance — avec leur siège, confrontées aux enseignes relevées par la cartographie contributive. HUIT institutions agréées ne sont nommées par AUCUN point de la carte : trois maisons de transfert, trois bureaux de change, deux fournisseurs de paiement électronique. C'est l'information la plus utile des deux, parce qu'elle désigne où il faut aller regarder. Ordre de grandeur à garder en tête : la BRH compte 5 250 fournisseurs de services financiers en juin 2024, la carte contributive en porte 474.",
+     "description": "Les institutions financières AGRÉÉES par la BRH : 9 banques, 6 maisons de transfert, 5 fournisseurs de paiement électronique, 4 bureaux de change, 2 entreprises de microfinance et 5 COMPAGNIES D'ASSURANCE — 31 institutions en tout. C'est un acte administratif : une enseigne absente n'est pas une enseigne qu'on n'a pas vue, c'est une enseigne sans agrément. La page des assurances n'est pas au menu du site de la BRH et ne publie que des NOMS, sans adresse. L'Association des Assureurs d'Haïti en est ÉCARTÉE : elle représente les assureurs sans en être un, et la compter gonflerait le décompte d'un cinquième.",
      "url": "https://explorateur.atmart.ltd/couches.html",
      "creator": {
       "@id": "https://explorateur.atmart.ltd/#organisation"
@@ -932,7 +932,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_finance_agrements_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "13751"
+       "contentSize": "16053"
       }
      ],
      "isBasedOn": "BRH — supervision bancaire ; OpenStreetMap via HOT"
@@ -1105,8 +1105,658 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     },
     {
      "@type": "Dataset",
-     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-033",
-     "identifier": "PRD-033",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-049",
+     "identifier": "PRD-049",
+     "name": "Annuaire des points de paiement des transferts",
+     "description": "Les 1 632 points de service d'une maison de transfert, un par ligne, avec leur enseigne, leur adresse et leur commune. 1 624 rattachés à une commune, 1 627 avec une adresse. Là où la couche cartographique COMPTE les guichets, cet annuaire les SITUE — utile pour préparer une distribution, mesurer une accessibilité réelle ou simplement un trajet. LE TÉLÉPHONE N'EST PAS REPRIS : le fichier d'origine en porte un par point, souvent un numéro mobile personnel, et une adresse dit où se trouve un commerce quand un numéro permet de joindre quelqu'un. UNE SEULE MAISON SUR SIX : ce n'est pas l'annuaire des points de paiement d'Haïti, c'est celui d'un opérateur, et le relèvement est daté — un réseau de sous-agents change vite. Le contrôle : l'annuaire et la carte comptent la même chose sur les 114 communes servies.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Économie",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_annuaire_transfert_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "910416"
+      }
+     ],
+     "isBasedOn": "CAM Transfer — répertoire public des points de service"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-056",
+     "identifier": "PRD-056",
+     "name": "Quelle région d'enquête contient quelle commune",
+     "description": "LA TABLE QUI REND LES RÉSULTATS D'ENQUÊTE LISIBLES COMMUNE PAR COMMUNE. Vingt cartes de résultats existaient et ne parlaient que sur la carte : la fiche d'une commune n'en portait rien. Pour les y porter, il fallait savoir quelle région d'enquête contient quelle commune — et l'EMMUS ne publie pas la liste. DEUX MÉTHODES, DANS CET ORDRE. Neuf départements sur dix coïncident exactement avec une région : le rattachement est administratif, donc exact, pour 120 communes. L'OUEST EST LE SEUL CAS DIFFICILE — l'enquête le coupe en aire métropolitaine et reste de l'Ouest, sans dire où passe la coupe. LE CONTOUR DE L'ENQUÊTE EST TESTÉ AVANT D'ÊTRE CRU : confronté aux 120 communes dont la région est connue d'avance, il les retrouve 120 fois sur 120. C'est cet étalonnage, publié, qui autorise à s'en servir pour les 20 autres. RÉSULTAT : 138 communes sur 140 rattachées, et DEUX QUI RESTENT VIDES — Pétion-Ville et Kenscoff, que le contour ne sépare que de 17 et 15 points. Elles sortent avec leur motif écrit : les remplir au plus probable poserait des chiffres invérifiables sur un territoire. CE QU'UNE VALEUR RÉGIONALE N'EST PAS : une mesure de la commune. L'EMMUS n'échantillonne pas au niveau communal, et toutes les communes d'une région partagent le même chiffre — la colonne `portee_de_la_valeur` le dit sur chaque ligne.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Social",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_communes_regions_enquete_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "38163"
+      }
+     ],
+     "isBasedOn": "EMMUS / DHS Program — contours de l'enquête ; découpage administratif du référentiel Atmart"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-055",
+     "identifier": "PRD-055",
+     "name": "La base des résultats d'enquête — 2 132 indicateurs par région",
+     "description": "TOUT CE QUE L'EMMUS PUBLIE PAR RÉGION, et non plus une poignée d'indicateurs choisis à la main. 76 983 valeurs, 2 132 indicateurs, quatre enquêtes de 2000 à 2016 — dont 1 521 indicateurs présents dans au moins trois enquêtes, c'est-à-dire qui font une SÉRIE. Vingt-trois familles : santé de l'enfant, nutrition, éducation, emploi, eau et assainissement, conditions de vie du ménage, autonomie des femmes, violences conjugales, protection de l'enfance. CE QUI EXISTE EST MESURÉ, PAS DÉCLARÉ : un inventaire accompagne la base et dit, indicateur par indicateur, dans quelles enquêtes il figure — un indicateur vu une seule fois ne fait pas une tendance, et rien dans un fichier de valeurs ne le signale à l'œil nu. LES LIBELLÉS RESTENT EN ANGLAIS et la colonne le déclare : traduire 2 132 libellés à la machine produirait des faux-amis méthodologiques. Les vingt indicateurs portés sur la carte, eux, sont traduits un par un. UNE ERREUR ATTRAPÉE EN CHEMIN, et elle dit ce que vaut un contrôle : un premier filtre écartait les lignes portant une « seconde variable », ce qui supprimait toute la famille de la MORTALITÉ DES ENFANTS — dont le libellé « dix années précédant l'enquête » est une période de référence, pas un découpage. Un filtre qui retire des lignes ne casse jamais rien : il rend le fichier plus petit. LA LIMITE QUI COMMANDE TOUT : la dernière enquête date de 2016-2017, et l'API ne publie un intervalle de confiance que sur 448 valeurs — comparer deux régions sur deux points d'écart n'est pas permis par ces données.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Social",
+      "Haïti"
+     ],
+     "temporalCoverage": "2000/2016",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_enquetes_resultats_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "5596266"
+      },
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_enquetes_inventaire_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "655694"
+      }
+     ],
+     "isBasedOn": "EMMUS / DHS Program — API des indicateurs et référentiel officiel"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-054",
+     "identifier": "PRD-054",
+     "name": "Vingt ans d'opinion publique — Haïti et République dominicaine",
+     "description": "LA PREMIÈRE SÉRIE LONGUE DE L'EXPLORATEUR SUR CE QUE LES GENS PENSENT. 1 494 estimations, neuf vagues de 2006 à 2023, les deux pays d'une même île, au NATIONAL ET PAR RÉGION D'ENQUÊTE — confiance dans les tribunaux, le Parlement, la police, les élections ; corruption ; insécurité vécue ; envie de partir. Trente-neuf séries dépassent quatre points, seuil en dessous duquel une tendance n'est qu'une illusion d'optique. LES RÉGIONS SONT LES STRATES DE TIRAGE — cinq en Haïti, quatre en République dominicaine — et elles ne se correspondent PAS d'un pays à l'autre : on les publie côte à côte, jamais appariées. CE QU'ELLE MONTRE : l'intention d'émigrer des Haïtiens passe de 58 % en 2012 à 78 % en 2023, une montée continue — quand celle des Dominicains oscille entre 29 et 44 %. LA DISPONIBILITÉ EST MESURÉE, PAS DÉCLARÉE : une question n'est estimée que si son code figure dans le questionnaire officiel de sa vague, vérifié sur dix-sept questionnaires. C'est pourquoi la victimation criminelle ne remonte pas avant 2012. LA PRÉCAUTION QUI COMMANDE TOUT : le mode de collecte change en cours de série — téléphone pour les vagues récentes, face-à-face avant — et une rupture de courbe peut être un changement d'instrument plutôt que d'opinion. Chaque ligne porte son mode pour qu'on puisse le voir.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Société",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_opinion_serie_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "782846"
+      }
+     ],
+     "isBasedOn": "LAPOP Lab, Vanderbilt University — AmericasBarometer 2006-2023"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-053",
+     "identifier": "PRD-053",
+     "name": "Haïti et République dominicaine — seize questions posées à l'identique",
+     "description": "LA PREMIÈRE COMPARAISON CARAÏBE DE L'EXPLORATEUR, et elle porte sur les deux pays d'une même île. Seize questions identiques en 2023, onze écarts établis. QUATRE RÉSULTATS QUI FRAPPENT : l'intention d'émigrer sépare les deux pays de 39 points (78,5 contre 39,7) ; la confiance dans le chef du gouvernement les sépare de 39 points EN SENS INVERSE (13,0 contre 51,8) ; les Haïtiens font PLUS confiance à leur police que les Dominicains à la leur (58,6 contre 32,8) ; et on leur demande huit fois moins souvent des pots-de-vin (2,4 contre 18,8). En revanche la victimation criminelle est presque identique (25,4 contre 24,2) et l'écart n'est PAS établi. L'AVERTISSEMENT COMMANDE TOUTE LECTURE : Haïti a été enquêtée PAR TÉLÉPHONE, la République dominicaine EN FACE-À-FACE. Un écart mêle donc une différence de pays et une différence d'instrument — on ne dit pas la même chose à un enquêteur venu chez soi qu'à une voix au téléphone. Ce produit indique où regarder, pas ce qu'il faut conclure.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Société",
+      "Haïti"
+     ],
+     "temporalCoverage": "2023",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_comparaison_haiti_rd_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "7926"
+      }
+     ],
+     "isBasedOn": "LAPOP Lab, Vanderbilt University — AmericasBarometer 2023"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-051",
+     "identifier": "PRD-051",
+     "name": "Ce que les Haïtiens disent — insécurité vécue, institutions, envie de partir",
+     "description": "L'ATLAS MESURAIT L'INSÉCURITÉ PAR LES ÉVÉNEMENTS, jamais par ce que les gens en vivent — et il n'avait RIEN sur la gouvernance ni sur la justice. Seize mesures y répondent, enquête de mai-juin 2023 : la source la plus fraîche de l'atlas sur ces questions, quand l'EMMUS s'arrête en 2016. QUATRE HAÏTIENS SUR CINQ (79 %) ONT L'INTENTION D'ÉMIGRER — un record depuis le début de la série en 2006, et 69 % d'entre eux visent les États-Unis. 78 % ont connu l'insécurité alimentaire, en hausse de 36 points depuis 2012. 70 % jugent l'insécurité le problème le plus grave, contre 13 % pour l'économie. Et deux chiffres qui surprennent : 54 % font confiance à la police nationale, remontée depuis son point bas de 2017, mais 24 % seulement au système électoral. CE PRODUIT EST NATIONAL ET LE RESTERA : enquête par téléphone qui exclut qui n'a pas de portable, taux de réponse de 6,6 % — le plus bas des vingt-quatre pays de la vague — et cinq strates seulement. Rien ici ne se cartographie, et la fiche dit pourquoi.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Société",
+      "Haïti"
+     ],
+     "temporalCoverage": "2023",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_opinion_lapop_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "10098"
+      }
+     ],
+     "isBasedOn": "LAPOP Lab, Vanderbilt University — AmericasBarometer 2023"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-050",
+     "identifier": "PRD-050",
+     "name": "Résultats de santé, d'éducation et de conditions de vie — EMMUS",
+     "description": "L'ATLAS SAVAIT OÙ SONT LES ÉCOLES ; IL NE SAVAIT PAS SI LES ENFANTS APPRENNENT. Il savait où sont les dispensaires, pas si les gens vont mieux. Voici les résultats portés sur la carte : 908 observations, VINGT indicateurs, seize ans, et vingt cartes là où il y en avait deux. Mortalité infantile et infanto-juvénile, retard de croissance, anémie, vaccination, moustiquaires ; alphabétisation des femmes et population sans instruction ; eau, assainissement, électricité, cuisson au charbon, sol en terre ; fécondité, besoin de planification non satisfait, union avant 18 ans, violences subies, décisions du ménage, travail des femmes ; naissances enregistrées — sur les enquêtes de 2000, 2006, 2012 et 2016. CES VINGT-LÀ COMBLENT DES THÈMES QUI ÉTAIENT MUETS : l'atlas montrait des équipements et aucun résultat sur l'eau, l'énergie, l'emploi, le logement, la situation des femmes. Ils sont choisis dans la base complète (PRD-055), qui en publie 2 132. UN ENFANT A TROIS FOIS PLUS DE RISQUES DE MOURIR AVANT UN AN dans le reste de l'Ouest (84 pour mille) qu'en Grand'Anse (28). LA MAILLE N'EST NI LA COMMUNE NI LE DÉPARTEMENT : l'EMMUS coupe l'Ouest en aire métropolitaine et reste de l'Ouest — plus fin que le département là où ça compte — et les contours viennent du DHS lui-même, nous n'avons rien reconstitué. LA LIMITE QUI COMPTE : la dernière enquête date de 2016-2017. Ce produit dit où en était Haïti AVANT l'effondrement sécuritaire, pas où elle en est.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Social",
+      "Haïti"
+     ],
+     "temporalCoverage": "2000/2016",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_resultats_emmus_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "514693"
+      }
+     ],
+     "isBasedOn": "EMMUS / DHS Program — API des indicateurs"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-046",
+     "identifier": "PRD-046",
+     "name": "Où l'on peut toucher un transfert — par commune",
+     "description": "LA SEULE DONNÉE COMMUNALE QUI EXISTE SUR LES TRANSFERTS. Les montants ne descendent pas sous le département, mais le RÉSEAU de paiement, lui, se lit commune par commune : 1 632 points de service relevés, 1 624 rattachés (99,5 %), 114 communes couvertes sur 140. C'est la pièce qui manquait au raisonnement — la BRH explique la concentration des montants par celle des sous-agents, et on peut enfin regarder les deux côte à côte. DEUX AVERTISSEMENTS QUI COMPTENT : ce décompte est celui d'UNE maison de transfert sur six, donc une commune à zéro n'est pas une commune sans accès ; et nous publions le DÉCOMPTE, jamais l'annuaire des sous-agents — mesurer sans ficher.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Économie",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_points_transfert_communes_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "52749"
+      }
+     ],
+     "isBasedOn": "CAM Transfer — répertoire public des points de service"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-047",
+     "identifier": "PRD-047",
+     "name": "Réseau bancaire et dollarisation — le guichet haïtien",
+     "description": "DEUX CENT DEUX guichets bancaires pour tout le pays en septembre 2025 : un point de service pour environ 59 000 habitants. Le dénombrement officiel du régulateur, banque par banque, sur dix trimestres — avec les effectifs, les comptes de dépôt et de prêt, l'actif et le portefeuille. ET LE FAIT MONÉTAIRE QUI CHANGE LA LECTURE DE TOUT LE RESTE : 64,3 % des dépôts du système ne sont pas en gourdes. Un pays dont l'épargne est majoritairement libellée dans la monnaie d'un autre ne pilote pas son taux de change comme les autres. Le contrôle : la colonne SYSTÈME refait la somme des banques sur les sept grandeurs additives, aux dix dates.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Économie",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_banques_reseau_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "332300"
+      }
+     ],
+     "isBasedOn": "BRH — sommaire financier détaillé (indicateurs CAMEL)"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-048",
+     "identifier": "PRD-048",
+     "name": "Les ménages qui vivent des transferts — par département",
+     "description": "LES DEUX MESURES NE DONNENT PAS LE MÊME CLASSEMENT, ET IL FAUT SAVOIR POURQUOI AVANT D'EN CONCLURE QUOI QUE CE SOIT. La Grand'Anse reçoit 0,7 % des montants mais 4,5 % de ses ménages ont le transfert pour source principale de revenu ; le Sud reçoit trois fois et demie plus d'argent par habitant et n'en compte que 0,5 %. CES ÉCARTS NE MESURENT PROBABLEMENT PAS LA DÉPENDANCE : la BRH enregistre l'argent LÀ OÙ IL EST PAYÉ, et la densité du réseau de paiement suit les montants par habitant à +0,79 d'un département à l'autre — la carte officielle de l'argent est d'abord une carte des guichets. Hors Port-au-Prince, montants et dépendance ne sont plus corrélés du tout (−0,27). S'y ajoute que la FAO ne sépare pas les transferts venus de l'étranger de ceux venus d'Haïti même. Dix départements, trois passages d'enquête de juin 2023 à juin 2024, trois rangs de source de revenu. CE QUE CE CHIFFRE N'EST PAS : la part des ménages qui REÇOIVENT un transfert, qui serait bien plus élevée. Enquête téléphonique, 135 à 900 ménages par département : un écart de deux points ne veut rien dire.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Économie",
+      "Haïti"
+     ],
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "isAccessibleForFree": true,
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_menages_transferts_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "31606"
+      }
+     ],
+     "isBasedOn": "FAO — Data in Emergencies Monitoring (DIEM), tours 4 à 6"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-043",
+     "identifier": "PRD-043",
+     "name": "Transferts de la diaspora — origine, destination, mois par mois",
+     "description": "Trois mille trois cent soixante et onze observations : le montant des transferts reçus de l'étranger ET expédiés vers l'étranger, par pays et par mois, d'octobre 2017 à mai 2026, avec le nombre d'opérations et le montant moyen. Les États-Unis pèsent 79 % de ce qui entre. MAIS HAÏTI EXPÉDIE AUSSI, et sa première destination n'est pas les États-Unis : c'est la RÉPUBLIQUE DOMINICAINE, à 52 % — sur l'exercice 2025 Haïti lui envoie 155,9 millions et n'en reçoit que 150,4. Le transfert sortant pèse en moyenne trois fois l'entrant (590 $ contre 181 $) : ce ne sont ni les mêmes gens ni le même geste. La somme des pays refait le total publié par la BRH sur les 215 mois × sens. Six lignes sont des RÉGIONS et non des pays, et une colonne le dit.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Économie",
+      "Haïti"
+     ],
+     "temporalCoverage": "2017/2026",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_transferts_pays_mensuel.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "1289610"
+      }
+     ],
+     "isBasedOn": "BRH — statistiques de la balance des paiements"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-044",
+     "identifier": "PRD-044",
+     "name": "Où arrive l'argent de la diaspora — par département",
+     "description": "La SEULE ventilation territoriale officielle des transferts qui existe en Haïti : dix départements, reçus et expédiés, sur trois périodes. L'Ouest reçoit 68 à 70 % de tout l'argent ; la Grand'Anse en reçoit 0,7 %. Le rapport est de QUATRE-VINGT-TREIZE POUR UN quand le rapport de population est de dix pour un — les transferts ne redistribuent pas, ils concentrent. LE PIÈGE À CONNAÎTRE : le montant est enregistré là où le transfert est PAYÉ, pas où vit le bénéficiaire — la concentration mesure donc aussi celle du réseau de paiement, ce que la BRH écrit elle-même. IL N'EXISTE RIEN DE COMMUNAL sur les transferts. Les valeurs sont relues depuis les étiquettes des graphiques du document et recoupées contre ses propres totaux écrits en toutes lettres : les cinq contrôles passent.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Économie",
+      "Haïti"
+     ],
+     "temporalCoverage": "2021/2023",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_transferts_departements_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "26910"
+      }
+     ],
+     "isBasedOn": "BRH — BRH-Infos à la loupe n° 1, avril 2024"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-045",
+     "identifier": "PRD-045",
+     "name": "Système bancaire haïtien — bilan, performance, territoire",
+     "description": "Quarante trimestres de ratios prudentiels, banque par banque, de décembre 2013 à mars 2026 : fonds propres, prêts improductifs, ROA, ROE, coût d'exploitation, productivité par employé. La série est publique mais vit dans un classeur de près de quatre cents feuilles ; elle est ici remise à plat. LES PRÊTS IMPRODUCTIFS NE SE RESSEMBLENT PAS D'UNE BANQUE À L'AUTRE : de 0 % à 75 % des prêts bruts en mars 2026 — une moyenne de système cacherait exactement ce qu'il faut voir. ET UNE DONNÉE TERRITORIALE INATTENDUE : la répartition des dépôts entre RÉGION MÉTROPOLITAINE (77 %) et VILLES DE PROVINCE (23 %), par banque et par type de dépôt. Ce n'est pas communal — la BRH ne descend pas plus bas.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Économie",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_banques_ratios_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "3089963"
+      },
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_banques_depots_territoire_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "94655"
+      }
+     ],
+     "isBasedOn": "BRH — supervision bancaire, rapports statistiques trimestriels"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-042",
+     "identifier": "PRD-042",
+     "name": "Audience numérique haïtienne — accès et plateformes",
+     "description": "Quatorze repères sur qui est en ligne en Haïti, sur quelles plateformes et par quel tuyau. 4,69 millions d'internautes fin 2025, soit 39,3 % de la population — et 7,25 millions de personnes hors ligne. Facebook touche 38,4 % des adultes, Instagram 6,7 %. LE FAIT QUI STRUCTURE TOUT : 0,3 abonnement au haut débit FIXE pour 100 habitants (Banque mondiale) contre des connexions MOBILES équivalentes à 84,6 % de la population, dont 97,2 % en 3G ou mieux — l'audience numérique haïtienne est mobile, entièrement. DEUX SOURCES NE DISENT PAS LA MÊME CHOSE : la Banque mondiale compte 47,9 % d'internautes en 2024, Kepios 39,3 % fin 2025, et nous publions les deux sans arbitrer. Les valeurs de Kepios sont CITÉES avec attribution ; aucune de ses pages ni aucun de ses graphiques n'est repris.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Numérique",
+      "Haïti"
+     ],
+     "temporalCoverage": "2025",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_audience_numerique_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "6573"
+      }
+     ],
+     "isBasedOn": "Kepios / DataReportal — Digital 2026: Haiti ; Banque mondiale (WDI)"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-041",
+     "identifier": "PRD-041",
+     "name": "Radios et télévisions autorisées, par commune",
+     "description": "807 stations AUTORISÉES par le CONATEL : 665 radios FM, 8 radios AM et 134 télévisions, avec leur fréquence, leur propriétaire et leur ville. 80 communes en portent au moins une. C'est un ACTE ADMINISTRATIF, pas de la cartographie contributive : une station absente n'est pas une station qu'on n'a pas vue, c'est une station sans licence. LE PROPRIÉTAIRE EST PUBLIÉ parce qu'une fréquence est un bien public concédé et que le régulateur le publie lui-même. LE DOCUMENT SE CONTREDIT en trois endroits — ses en-têtes annoncent 36 radios aux Nippes, 20 télévisions au Nord et 18 au Sud quand ses tableaux en contiennent 35, 19 et 17 — et nous publions le contenu des tableaux en disant l'écart.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Société",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_medias_communes_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "47465"
+      }
+     ],
+     "isBasedOn": "CONATEL — liste des stations de radiodiffusion autorisées 2023-2024"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-040",
+     "identifier": "PRD-040",
+     "name": "Lieux de culte cartographiés, par commune",
+     "description": "3 142 lieux de culte rattachés à 121 communes sur 140 : 2 533 chrétiens, 279 VODOU, 12 spiritualistes, 4 musulmans, et 302 sans étiquette de religion. CE N'EST PAS UN RECENSEMENT mais l'état de la CARTOGRAPHIE — une commune pâle est bien plus probablement une commune que personne n'a levée qu'une commune peu pratiquante. LE VODOU SORT DANS SA PROPRE COLONNE parce qu'aucun registre administratif haïtien ne le recense : le fondre dans un total effacerait ce que cette donnée a de rare. Les 302 objets sans religion déclarée ne sont pas rangés avec les chrétiens — les y mettre parce que « c'est probable en Haïti » remplacerait une observation par une supposition.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Société",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_lieux_culte_communes_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "45091"
+      }
+     ],
+     "isBasedOn": "OpenStreetMap via Overpass API"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-039",
+     "identifier": "PRD-039",
+     "name": "Renvois depuis les États-Unis — Haïti et République dominicaine",
+     "description": "Série MENSUELLE depuis octobre 2009, par pays et par type de renvoi — 364 observations. Assez longue et assez régulière pour y lire une tendance et une rupture. LE MOT « REPATRIATION » RECOUVRE QUATRE MÉCANISMES : éloignement formel, retour sous contrainte, retour administratif et expulsion sanitaire au titre du Title 42. Les additionner sous le mot « déportation » inverse la lecture : Haïti compte 14 090 renvois en 2022, mais 1 540 éloignements formels seulement — 12 360 étaient des expulsions Title 42, sans procédure d'immigration. La comparaison avec la République dominicaine éclaire : avant 2020 elle comptait quatre à neuf fois plus d'éloignements formels qu'Haïti ; depuis 2023 elle repart à 4 170 quand Haïti reste à 740.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Population",
+      "Haïti"
+     ],
+     "temporalCoverage": "2009/2024",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_renvois_us_mensuel.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "102783"
+      }
+     ],
+     "isBasedOn": "DHS — Office of Homeland Security Statistics, Key Homeland Security Metrics : Repatriations"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-038",
+     "identifier": "PRD-038",
+     "name": "Retours forcés vers Haïti — points d'entrée et profil",
+     "description": "270 214 personnes ont été retournées de force vers Haïti en 2025, +36 % sur 2024, dont 265 215 depuis la République dominicaine (98 %). Elles entrent par des points qui SONT des communes : Belladère reçoit 51 % des arrivées, Ouanaminthe 27 %. La première carte communale du sujet. Le profil suit : 66 % d'hommes adultes, mais les femmes ont augmenté de 92 %, les filles de 152 % et les garçons de 133 % en un an ; âge moyen 34 ans ; 85 % étaient partis pour des raisons économiques ; 32 % n'ont aucun document d'identité ; 19 % étaient déjà déplacées à l'intérieur d'Haïti avant de partir. DEUX COMMUNES SEULEMENT portent une part, et les 138 autres ne sont pas à zéro : elles sont sans donnée.",
+     "url": "https://explorateur.atmart.ltd/couches.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Population",
+      "Haïti"
+     ],
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_retours_forces_points_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "1746"
+      }
+     ],
+     "isBasedOn": "OIM/DTM avec l'ONM et le GARR — Suivi des retours forcés vers Haïti"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-037",
+     "identifier": "PRD-037",
+     "name": "Diaspora haïtienne — où elle vit",
+     "description": "Combien de personnes NÉES EN HAÏTI vivent dans chaque pays, de 1990 à 2024, par sexe. Deux millions en 2024 contre 521 000 en 1990 — près de quatre fois plus en trente-quatre ans. Les cinq premiers pays d'accueil : États-Unis (798 000), République dominicaine (535 000), Chili (172 000), France (117 000), Canada (107 000). CE N'EST PAS « LA DIASPORA » : le décompte porte sur le lieu de NAISSANCE, jamais sur l'ascendance — un enfant né à Brooklyn de parents haïtiens n'y figure pas, et la diaspora vécue est donc plus nombreuse, d'une quantité que cette source ne permet pas d'estimer. CE N'EST PAS NON PLUS UNE DONNÉE COMMUNALE et ça ne le deviendra pas : aucune ligne ne dit de quelle commune la personne est partie.",
+     "url": "https://explorateur.atmart.ltd/datasets.html",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Population",
+      "Haïti"
+     ],
+     "temporalCoverage": "1990/2024",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_diaspora_destinations_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "469992"
+      }
+     ],
+     "isBasedOn": "ONU DESA — International Migrant Stock 2024"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-036",
+     "identifier": "PRD-036",
      "name": "Licence de chaque fichier publié",
      "description": "Une ligne par fichier du site : sa licence de sortie, les sources dont elle découle, l'attribution à porter et la raison. IL N'Y A PAS UNE LICENCE MAIS PLUSIEURS, et c'est le point : onze fichiers sortent sous ODbL parce qu'ils dérivent d'OpenStreetMap, dont le partage à l'identique se transmet aux bases dérivées redistribuées ; d'autres ne relèvent d'aucune licence, l'article 5 du décret haïtien du 12/10/2005 excluant du droit d'auteur les textes officiels et les simples données. Annoncer CC BY partout aurait autorisé à tort ; annoncer ODbL partout aurait interdit sans raison. Le tableau se recalcule à chaque passage depuis le registre des sources.",
      "url": "https://explorateur.atmart.ltd/datasets.html",
@@ -1133,7 +1783,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_licences_donnees_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "21651"
+       "contentSize": "36429"
       }
      ],
      "isBasedOn": "Registre des sources et passeports juridiques d'Atmart"
@@ -1143,7 +1793,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
      "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-027",
      "identifier": "PRD-027",
      "name": "Séries nationales d'Haïti",
-     "description": "Soixante-treize séries nationales depuis 2000 — économie, travail, tourisme, transport aérien, santé, éducation, énergie, terres, sécurité alimentaire, commerce. Elles ne descendent PAS à la commune et ne doivent pas y descendre : elles servent d'échelle pour lire un chiffre local. Trois avertissements portés par chaque ligne : les séries d'emploi sont des estimations modélisées du BIT ; le commerce de marchandises est une donnée miroir — Haïti ne le déclare plus depuis 2017 ; et les séries touristiques s'arrêtent en 2018 ou 2019, faute de déclaration depuis la pandémie.",
+     "description": "<span data-mf=\"prd_027_series\">84</span> séries nationales depuis 2000 — économie, travail, tourisme, transport aérien, santé, éducation, énergie, terres, sécurité alimentaire, commerce. Elles ne descendent PAS à la commune et ne doivent pas y descendre : elles servent d'échelle pour lire un chiffre local. Trois avertissements portés par chaque ligne : les séries d'emploi sont des estimations modélisées du BIT ; le commerce de marchandises est une donnée miroir — Haïti ne le déclare plus depuis 2017 ; et les séries touristiques s'arrêtent en 2018 ou 2019, faute de déclaration depuis la pandémie.",
      "url": "https://explorateur.atmart.ltd/datasets.html",
      "creator": {
       "@id": "https://explorateur.atmart.ltd/#organisation"
@@ -1167,7 +1817,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_series_nationales_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "544560"
+       "contentSize": "563901"
       }
      ],
      "isBasedOn": "Banque mondiale — WDI ; OIT — ILOSTAT ; FAO — FAOSTAT ; UN Comtrade"
@@ -1211,7 +1861,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
      "identifier": "PRD-107",
      "name": "Modèle Power BI — Explorateur Haïti",
      "description": "Projet PBIP prêt à ouvrir : 7 tables branchées sur les données publiées, relations par p-codes, mesures documentées — se rafraîchit quand le site se met à jour.",
-     "url": "https://explorateur.atmart.ltd/https://payhip.com/b/XSAdi",
+     "url": "https://payhip.com/b/XSAdi",
      "creator": {
       "@id": "https://explorateur.atmart.ltd/#organisation"
      },
@@ -1234,7 +1884,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       "price": "50",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "url": "https://explorateur.atmart.ltd/https://payhip.com/b/XSAdi"
+      "url": "https://payhip.com/b/XSAdi"
      },
      "isBasedOn": "Atmart Data — assemblage des jeux publiés"
     },
@@ -1244,7 +1894,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
      "identifier": "PRD-108",
      "name": "Modèle QGIS — Explorateur Haïti",
      "description": "Projet QGIS prêt à ouvrir : communes, départements, bassins versants, zones inondables, points d'eau, stations et finance — couches distantes stylées, connexion requise.",
-     "url": "https://explorateur.atmart.ltd/https://payhip.com/b/DBirg",
+     "url": "https://payhip.com/b/DBirg",
      "creator": {
       "@id": "https://explorateur.atmart.ltd/#organisation"
      },
@@ -1267,7 +1917,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       "price": "50",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "url": "https://explorateur.atmart.ltd/https://payhip.com/b/DBirg"
+      "url": "https://payhip.com/b/DBirg"
      },
      "isBasedOn": "Atmart Data — assemblage des jeux publiés"
     }
@@ -1301,7 +1951,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/datasets.html" />
   <script>window.ATM_LANG_FORCE = "ht"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-QDAkRJZK76tJxdajyvjbKpiZTI7ejD0lvgXMCQ3NmrQ=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-fixrKEyRASv52mG7cJnr0cxMUo/8UUodX8d0vHqhvpI=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-dU7y9sbzLveRDRsQ5eSxY4H6C9ewGtpddrc8Vkc2GD8=' 'sha256-fixrKEyRASv52mG7cJnr0cxMUo/8UUodX8d0vHqhvpI=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>

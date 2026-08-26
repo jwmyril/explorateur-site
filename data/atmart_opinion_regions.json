@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "titre": "Opinion publique — confiance, corruption, sécurité, migration",
+  "passeport": "PSP-033",
+  "source_id": "SRC-014",
+  "source": "LAPOP Lab, Vanderbilt University — AmericasBarometer Haïti",
+  "licence": "Licence par clic LAPOP — analyse et agrégats autorisés, partage des fichiers interdit, USAGE COMMERCIAL INTERDIT (clause 1)",
+  "attribution": "LAPOP Lab. AmericasBarometer Haiti, {annee}, v{version}. Center for Global Democracy, Nashville, TN. www.vanderbilt.edu/lapop",
+  "remerciement_exige": "These data were supplied by the Latin American Public Opinion Project at Vanderbilt University, which takes no responsibility for any interpretation of the data.",
+  "maille": "national, cinq régions d'enquête, urbain/rural",
+  "limite": "USAGE COMMERCIAL INTERDIT PAR LA LICENCE (clause 1) : ces valeurs peuvent servir l'Explorateur, qui est gratuit, jamais une prestation facturée. LES FICHIERS D'ENQUÊTE NE SONT PAS PUBLIÉS et ne le seront pas — la clause 2 l'interdit, y compris envers une revue ; ce qui se partage, c'est le code de réplication. NI COMMUNE NI DÉPARTEMENT : le plan de sondage ne les rend pas représentatifs, et le croisement région × département du fichier n'est pas propre. Les cinq RÉGIONS D'ENQUÊTE sont les strates de tirage, donc le seul découpage géographique fondé. LIRE L'INTERVALLE AVANT L'ESTIMATION : sur ces échantillons, la plupart des écarts entre régions ne sont pas établis — leurs intervalles se chevauchent. DEUX VAGUES SUR TROIS SONT TÉLÉPHONIQUES (2021, 2023) et excluent qui n'a pas de portable ; celle de 2016/17 est en face-à-face. LES ÉCHELLES SONT RAMENÉES À 0-100 PAR NOUS, ce n'est pas une norme LAPOP.",
+  "date_extraction": "2026-08-25"
+ },
+ "observations": 358,
+ "vagues": [
+  "2016/17",
+  "2021",
+  "2023"
+ ],
+ "regions_enquete": [
+  "Aire métropolitaine",
+  "Centre",
+  "Nord",
+  "Reste de l'Ouest",
+  "Sud"
+ ],
+ "ecarts_regionaux_etablis": 27,
+ "ecarts_regionaux_testes": 52
+}

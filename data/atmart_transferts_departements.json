@@ -14,43 +14,53 @@
  "periode_carte": "2022-2023",
  "unite": "dollars américains reçus dans l'exercice",
  "departements": {
-  "Ouest": {
+  "HT01": {
+   "nom": "Ouest",
    "usd": 2246163260.09,
    "part": 68.394
   },
-  "Artibonite": {
+  "HT05": {
+   "nom": "Artibonite",
    "usd": 316407666.41,
    "part": 9.634
   },
-  "Nord": {
+  "HT03": {
+   "nom": "Nord",
    "usd": 161874029.18,
    "part": 4.929
   },
-  "Sud": {
+  "HT07": {
+   "nom": "Sud",
    "usd": 148994223.1,
    "part": 4.537
   },
-  "Centre": {
+  "HT06": {
+   "nom": "Centre",
    "usd": 112149757.25,
    "part": 3.415
   },
-  "Nord-Ouest": {
+  "HT09": {
+   "nom": "Nord-Ouest",
    "usd": 96912986.8,
    "part": 2.951
   },
-  "Sud-Est": {
+  "HT02": {
+   "nom": "Sud-Est",
    "usd": 77387246.1,
    "part": 2.356
   },
-  "Nippes": {
+  "HT10": {
+   "nom": "Nippes",
    "usd": 66292699.26,
    "part": 2.019
   },
-  "Nord-Est": {
+  "HT04": {
+   "nom": "Nord-Est",
    "usd": 33886621.83,
    "part": 1.032
   },
-  "Grand'Anse": {
+  "HT08": {
+   "nom": "Grand'Anse",
    "usd": 24068970.14,
    "part": 0.733
   }

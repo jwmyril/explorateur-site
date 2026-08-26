@@ -281,6 +281,22 @@
        cartographie contributive : l'absence d'une station veut dire absence
        de licence, pas absence d'observation. C'est l'inverse exact de la
        couche des lieux de culte, juste au-dessus. */
+    { id: "transferts_dep", nom: "Transferts reçus par département (BRH)", type: "choroplethe",
+      maille: "departement", rampe: "urbain",
+      csv: "data/atmart_transferts_departements_HT.csv", pcode: "pcode_departement",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          if (r.sens !== "reçu" || r.periode !== "2022-2023") return;
+          m[r.pcode_departement] = Math.round(+r.montant_usd / 1e6);
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("exercice fiscal 2022-2023"),
+                 unite: "millions de dollars reçus" };
+      },
+      source: "BRH — BRH-Infos à la loupe n° 1, avril 2024 ; rattachement au référentiel par Atmart, passeport PSP-072",
+      limite: "LA MAILLE EST LE DÉPARTEMENT, ET C'EST LE PLUS FIN QUI EXISTE : la BRH ne publie les montants de transferts à aucune échelle plus petite, et aucune autre source haïtienne ne le fait. Pour savoir OÙ l'on peut toucher l'argent commune par commune, voir la couche des points de paiement. LE MONTANT EST ENREGISTRÉ LÀ OÙ LE TRANSFERT EST PAYÉ, pas où vit le bénéficiaire : un habitant de Kenscoff qui retire à Pétion-Ville est compté dans l'Ouest. La concentration sur l'Ouest mesure donc aussi celle du réseau de paiement — la densité des guichets suit les montants par habitant à +0,79 d'un département à l'autre. SEUL LE CIRCUIT FORMEL EST COMPTÉ : l'argent porté par un voyageur n'y figure pas, et le portefeuille mobile est payé sur un téléphone, qui n'a pas de département. LES VALEURS SONT TIRÉES D'ÉTIQUETTES DE GRAPHIQUE, remises à l'endroit puis recoupées contre les totaux écrits en toutes lettres dans le même document ; les cinq contrôles passent. TROIS PÉRIODES SEULEMENT, dont une de quatre mois qui ne se compare pas à un exercice entier." },
     { id: "points_transfert", nom: "Points de paiement des transferts (un opérateur)", type: "choroplethe",
       csv: "data/atmart_points_transfert_communes_HT.csv", pcode: "pcode_commune",
       agreger: function (rows) {
@@ -944,7 +960,8 @@
     return t.length % 2 ? t[m] : (t[m - 1] + t[m]) / 2;
   }
 
-  function lectureGuidee(couche, agg, nonDoc) {
+  function lectureGuidee(couche, agg, nonDoc, maille) {
+    maille = maille || MAILLES.commune;
     var e = $("#k-lecture-guidee");
     if (!e) return;
     var vals = agg.valeurs, codes = Object.keys(vals);
@@ -1019,13 +1036,108 @@
                  "traduit — il reste en français pour ne pas être perdu.") + "</i>"
                : "") + "</p>");
     }
-    h.push('<p class="k-guide-sui">' + T(
-      "Touchez une commune pour lire sa valeur ; touchez-la encore pour ouvrir sa fiche.") +
+    h.push('<p class="k-guide-sui">' + maille.toucher() +
       "</p></div></details>");
     e.innerHTML = h.join("");
   }
 
+  /* ------------------------------------------------------------ les mailles
+     UNE COUCHE CHOROPLÈTHE SE PEINT SUR UN JEU DE POLYGONES, et rien n'oblige
+     ce jeu à être les 140 communes. Les résultats d'enquête n'existent pas à
+     la commune : l'EMMUS publie par région, et sa région n'est ni la commune
+     ni le département — elle coupe l'Ouest en deux et fusionnait la
+     Grand'Anse et les Nippes avant 2016. « Un mode département » n'aurait
+     donc rien réglé : il faut une maille quelconque.
+
+     CHAQUE MAILLE PORTE SES PROPRES PHRASES, entières, plutôt qu'un nom qu'on
+     injecterait dans une phrase française. « Les {g} communes en gris » ne
+     devient pas « Les {g} départements en gris » par substitution en kreyòl :
+     la construction change. La maille communale garde exactement les phrases
+     d'avant, si bien qu'aucune traduction existante n'est touchée.
+
+     `jeu()` sert les deux jeux déjà chargés au démarrage ; `fichier` permet
+     à une maille future — celle du DHS, par exemple — d'apporter ses propres
+     polygones sans toucher au moteur. */
+  var MAILLES = {
+    commune: {
+      fiche: true,
+      jeu: function () { return communes; },
+      gris: function (n) {
+        return TF("{n} commune(s) en gris : non documenté, jamais zéro", { n: n });
+      },
+      toutes: function (n) {
+        return TF("Les {n} communes sont documentées.", { n: n });
+      },
+      part: function (d, t, p) {
+        return d > 1 ? TF("{d} communes documentées sur {t} ({p} %).", { d: d, t: t, p: p })
+                     : TF("{d} commune documentée sur {t} ({p} %).", { d: d, t: t, p: p });
+      },
+      creux: function (g) {
+        return g === 1
+          ? T("La commune en gris n'est pas une commune à zéro : la source ne la couvre pas.")
+          : TF("Les {g} communes en gris ne sont pas des communes à zéro : la source ne les couvre pas.", { g: g });
+      },
+      toucher: function () {
+        return T("Touchez une commune pour lire sa valeur ; touchez-la encore pour ouvrir sa fiche.");
+      }
+    },
+    departement: {
+      fiche: false,
+      jeu: function () { return departements; },
+      fichier: "data/haiti_departements_simplifie.geojson",
+      gris: function (n) {
+        return TF("{n} département(s) en gris : non documenté, jamais zéro", { n: n });
+      },
+      toutes: function (n) {
+        return TF("Les {n} départements sont documentés.", { n: n });
+      },
+      part: function (d, t, p) {
+        return d > 1 ? TF("{d} départements documentés sur {t} ({p} %).", { d: d, t: t, p: p })
+                     : TF("{d} département documenté sur {t} ({p} %).", { d: d, t: t, p: p });
+      },
+      creux: function (g) {
+        return g === 1
+          ? T("Le département en gris n'est pas un département à zéro : la source ne le couvre pas.")
+          : TF("Les {g} départements en gris ne sont pas des départements à zéro : la source ne les couvre pas.", { g: g });
+      },
+      toucher: function () {
+        return T("Touchez un département pour lire sa valeur. Les fiches n'existent qu'à la commune.");
+      }
+    }
+  };
+
+  /* La maille du rendu en cours. `couverture()` lit le DOM et ne reçoit pas
+     la couche ; sans cette variable elle parlerait de communes sous une carte
+     départementale. Même motif que `derniereCarte` plus haut. */
+  var mailleCourante = MAILLES.commune;
+
+  function mailleDe(couche) {
+    return MAILLES[couche.maille || "commune"] || MAILLES.commune;
+  }
+
+  /* Les polygones d'une maille. Les deux jeux du socle sont déjà en mémoire ;
+     une maille qui apporte les siens les charge une fois et les garde. */
+  var cachePoly = {};
+  function polygonesDe(maille) {
+    var direct = maille.jeu && maille.jeu();
+    if (direct) return Promise.resolve(direct);
+    var f = maille.fichier;
+    if (!f) return Promise.reject(new Error("maille sans polygones"));
+    if (!cachePoly[f]) {
+      cachePoly[f] = charger(f).then(function (t) { return JSON.parse(t); });
+    }
+    return cachePoly[f];
+  }
+
   function rendreChoroplethe(couche, rows) {
+    var maille = mailleDe(couche);
+    return polygonesDe(maille).then(function (jeu) {
+      dessinerChoroplethe(couche, rows, maille, jeu);
+    });
+  }
+
+  function dessinerChoroplethe(couche, rows, maille, jeu) {
+    mailleCourante = maille;
     var agg = couche.agreger(rows);
     var vals = agg.valeurs;
     var max = 0, nonDoc = 0;
@@ -1034,11 +1146,12 @@
        affiche. Sans déclaration, zéro : le comportement d'avant, pour les
        couches dont le zéro est un vrai plancher. */
     var bas = agg.min !== undefined ? agg.min : 0;
-    var svg = communes.features.map(function (f) {
+    var svg = jeu.features.map(function (f) {
       var p = f.properties, v = vals[p.pcode];
       var doc = v !== undefined;
       if (!doc) nonDoc++;
-      return '<path class="k-com' + (doc ? "" : " k-vide") + '" data-id="' + p.atmart_geo_id + '" fill="' +
+      /* PAS DE `data-id` QUAND LA MAILLE N'A PAS DE FICHE : le clic ne mene alors nulle part, au lieu d'ouvrir une page vide. Le survol continue de lire le nom et la valeur dans le <title>. */
+      return '<path class="k-com' + (doc ? "" : " k-vide") + '"' + (maille.fiche ? ' data-id="' + p.atmart_geo_id + '"' : "") + ' fill="' +
         (doc ? teinte(v, bas, max, couche.rampe, couche.courbe) : nonDocumente()) + '" d="' + chemin(f.geometry) + '"><title>' + p.nom_fr +
         (doc ? " — " + fmtN(v) + " " + T(agg.unite)
              : " — " + T("non documenté")) + "</title></path>";
@@ -1052,11 +1165,11 @@
        incomplète se lit comme une carte complète où tout va bien. */
     if (nonDoc) {
       leg += ' · <b class="k-manque">' +
-        TF("{n} commune(s) en gris : non documenté, jamais zéro", { n: nonDoc }) +
+        maille.gris(nonDoc) +
         "</b>";
     }
     dessiner(svg + nomsDepartements(), leg, couche);
-    lectureGuidee(couche, agg, nonDoc);
+    lectureGuidee(couche, agg, nonDoc, maille);
     memoriserFaits(couche, agg, nonDoc);
   }
 
@@ -1527,7 +1640,7 @@
        phrases entières avec des variables, jamais des fragments cousus. */
     if (!gris) {
       e.className = "";
-      e.textContent = TF("Les {n} communes sont documentées.", { n: tous.length });
+      e.textContent = mailleCourante.toutes(tous.length);
       return;
     }
     /* Sous la moitié du pays, ce n'est plus une précision : c'est ce qu'il
@@ -1539,15 +1652,9 @@
        qui accorde autrement — ou qui ne distingue pas le singulier, comme le
        kreyòl — peut alors écrire ce qui lui convient au lieu de subir la
        grammaire française par morceaux. */
-    var un = gris === 1;
     e.textContent =
-      (doc > 1 ? TF("{d} communes documentées sur {t} ({p} %).",
-                    { d: doc, t: tous.length, p: part })
-               : TF("{d} commune documentée sur {t} ({p} %).",
-                    { d: doc, t: tous.length, p: part })) + " " +
-      (un ? T("La commune en gris n'est pas une commune à zéro : la source ne la couvre pas.")
-          : TF("Les {g} communes en gris ne sont pas des communes à zéro : la source ne les couvre pas.",
-               { g: gris })) +
+      mailleCourante.part(doc, tous.length, part) + " " +
+      mailleCourante.creux(gris) +
       (part < 50
         ? " " + T("Cette carte montre l'étendue d'une source, pas celle du phénomène.")
         : "");
@@ -1656,7 +1763,7 @@
                         une absence de pratique. */
                      ["Lieux de culte — ce que la carte en montre",
                       ["lieux_culte", "lieux_culte_vodou"]],
-                     ["Transferts — où l'on peut toucher l'argent", ["points_transfert"]],
+                     ["Transferts — où l'argent arrive et où on le touche", ["transferts_dep", "points_transfert"]],
                      ["Médias — stations autorisées",
                       ["medias", "medias_communautaires"]],
                      /* Le tourisme a son groupe et non une place dans

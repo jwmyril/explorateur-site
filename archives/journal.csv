@@ -235,7 +235,8 @@ atmart_registre_sources.csv,2026-08-25,archives/atmart_registre_sources/2026-08-
 atmart_registre_sources.csv,2026-08-25,archives/atmart_registre_sources/2026-08-25-4.csv,1b8c42cde338304bfaea3ac83aa1d59d97c0a8eccaa7e1d11eb70f70d4733087,56718,58,2026-08-25,vitrine,2244cf0d92,non
 atmart_registre_sources.csv,2026-08-25,archives/atmart_registre_sources/2026-08-25-5.csv,98026398743a4e01545d9388d0a3039e4ed36d87170f1eb1db85121fb1ceb6bd,57901,59,2026-08-25,vitrine,5e9213b95d,non
 atmart_registre_sources.csv,2026-08-25,archives/atmart_registre_sources/2026-08-25-6.csv,b40c91d429613f00de80c1ab84d107497cc4092c6754314805f7379174451c12,58882,60,2026-08-25,vitrine,8eaf0b2943,non
-atmart_registre_sources.csv,2026-08-25,archives/atmart_registre_sources/2026-08-25-7.csv,d21949c88c90e45477900b34a8f03d497173edbc51423e703ddf7f61ebfebf30,58865,60,2026-08-25,vitrine,ad03d03fd7,oui
+atmart_registre_sources.csv,2026-08-25,archives/atmart_registre_sources/2026-08-25-7.csv,d21949c88c90e45477900b34a8f03d497173edbc51423e703ddf7f61ebfebf30,58865,60,2026-08-25,vitrine,ad03d03fd7,non
+atmart_registre_sources.csv,2026-08-26,archives/atmart_registre_sources/2026-08-26.csv,7759be97d4f39f612bb1942df03a8ddc33fb9b52f07c684cf175d782ffa894e3,59971,60,2026-08-26,vitrine,9c832550e8,oui
 atmart_registre_sources.csv,2026-08-23,archives/atmart_registre_sources/2026-08-23-3.csv,dfc0fbfde2cfe91e731f5733b78f16cdfe215989e5cc0c15c75b18726570fc2d,44127,47,2026-08-23,site,71b6010f36,non
 atmart_renvois_us.json,2026-08-23,archives/atmart_renvois_us/2026-08-23.json,acfa9c47c823590d7acfcc781e5df95cd2cc3c30fdf9d9666ab44e6e77b6416b,20105,470,2026-08-23,vitrine,7aa251bc4a,oui
 atmart_renvois_us_annuel.csv,2026-08-23,archives/atmart_renvois_us_annuel/2026-08-23.csv,c49a1b7223d3d73dc5c419c55fd26800e29ef5840c5db9feacf2557d55f43f45,9196,33,2026-08-23,vitrine,7aa251bc4a,oui
@@ -253,7 +254,8 @@ atmart_series_nationales.json,2026-08-18,archives/atmart_series_nationales/2026-
 atmart_series_nationales.json,2026-08-19,archives/atmart_series_nationales/2026-08-19.json,f2d50cdeaa2b1cc26cf78beb5d2ee6c8e5f838d61be748cb8d7a835cd4a718aa,39290,0,2026-08-19,vitrine,a1e6608c6b,non
 atmart_series_nationales.json,2026-08-21,archives/atmart_series_nationales/2026-08-21.json,fd4722f393dd8f7477befc26e0a5a3013279ee6eb27de1a2eb561568bcaf517f,45166,0,2026-08-21,vitrine,7957dbebf8,non
 atmart_series_nationales.json,2026-08-21,archives/atmart_series_nationales/2026-08-21-2.json,d74b4d26e3c479024c234bf9bb73995bd72ef0e35514c3b05414b585152032b3,47914,0,2026-08-21,vitrine,8f81f55118,non
-atmart_series_nationales.json,2026-08-24,archives/atmart_series_nationales/2026-08-24.json,d622b77e1858e0b915856d32b0c15504c05750d5676e6a6515a328a30b361bd0,49637,0,2026-08-24,vitrine,d2fe3d9d9e,oui
+atmart_series_nationales.json,2026-08-24,archives/atmart_series_nationales/2026-08-24.json,d622b77e1858e0b915856d32b0c15504c05750d5676e6a6515a328a30b361bd0,49637,0,2026-08-24,vitrine,d2fe3d9d9e,non
+atmart_series_nationales.json,2026-08-26,archives/atmart_series_nationales/2026-08-26.json,ce19634f9b4a387c66b18f9d09e717cd6bd67b52d76584930fcc3054cd759703,59277,0,2026-08-26,vitrine,9c832550e8,oui
 atmart_series_nationales_HT.csv,2026-08-18,archives/atmart_series_nationales_HT/2026-08-18.csv,8ca7675a16dad1632aa1cc056a8ae8f73182b95ca7b16f0fe31da7deec657076,240437,908,2026-08-18,vitrine,202933929e,non
 atmart_series_nationales_HT.csv,2026-08-19,archives/atmart_series_nationales_HT/2026-08-19.csv,707a1edd198130732e65eb2fa4ab87c3d28b4e05b22d57b421f9dcd5072dad67,442251,1420,2026-08-19,vitrine,a1e6608c6b,non
 atmart_series_nationales_HT.csv,2026-08-21,archives/atmart_series_nationales_HT/2026-08-21.csv,1ac504f39c2473de60c51b7e4626a4e9dc7c411c056b184f3bf4eacda7e24b69,500160,1586,2026-08-21,vitrine,7957dbebf8,non
@@ -299,7 +301,8 @@ catalogue_manifest.json,2026-08-21,archives/catalogue_manifest/2026-08-21-5.json
 catalogue_manifest.json,2026-08-21,archives/catalogue_manifest/2026-08-21-6.json,83409071ad5a1149262e5895a5b34c3beec1576f2a54145face4e3da79d4d659,2990,108,2026-08-21,vitrine,4567a32e9b,non
 catalogue_manifest.json,2026-08-21,archives/catalogue_manifest/2026-08-21-7.json,18258eaae4c60e38c32fff0bf98298b3eabf5ddfd056e5206cad1d9632a29285,3037,110,2026-08-21,vitrine,e46de3f42f,non
 catalogue_manifest.json,2026-08-21,archives/catalogue_manifest/2026-08-21-8.json,c3b7c956567cd02fc768d4d97818531e0943b4d40f47ecd2142863c0263a0699,3037,110,2026-08-21,vitrine,fd1ce67602,non
-catalogue_manifest.json,2026-08-23,archives/catalogue_manifest/2026-08-23.json,20f35ac7b04031f6582e9c8985892af72bb041b767e595779e2151727dedaaba,3134,114,2026-08-23,vitrine,6c2a1d8ac8,oui
+catalogue_manifest.json,2026-08-23,archives/catalogue_manifest/2026-08-23.json,20f35ac7b04031f6582e9c8985892af72bb041b767e595779e2151727dedaaba,3134,114,2026-08-23,vitrine,6c2a1d8ac8,non
+catalogue_manifest.json,2026-08-26,archives/catalogue_manifest/2026-08-26.json,16bf5eeedc876bb3c2015477f9da6ec6875441f3788c3a38136f23bc93f694ea,4039,151,2026-08-26,vitrine,9c832550e8,oui
 haiti_communes_simplifie.geojson,2026-08-14,archives/haiti_communes_simplifie/2026-08-14.geojson,e0162bfa16e701a3f71804c6b7a574bf0a943801fc5687f065807b2cbb681e64,231716,1,2026-08-14,vitrine,5eda4cfd6c,oui
 haiti_contour_simplifie.geojson,2026-07-31,archives/haiti_contour_simplifie/2026-07-31.geojson,15b281bc0d8b87827805908cc7e90d0a9a3ceb8541b866650c1ca19d3946c3c1,16785,0,2026-07-31,vitrine,3f56418955,oui
 haiti_departements_simplifie.geojson,2026-08-14,archives/haiti_departements_simplifie/2026-08-14.geojson,9824d2bce124ac292ca1750e679368c7c7fca85eccf997f6e05f0cb1031f3aa2,42967,1,2026-08-14,vitrine,5eda4cfd6c,oui

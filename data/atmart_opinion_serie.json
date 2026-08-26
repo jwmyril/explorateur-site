@@ -1,15 +1,16 @@
 {
  "meta": {
-  "titre": "Vingt ans d'opinion publique — Haïti et République dominicaine",
+  "titre": "Vingt ans d'opinion publique — Haïti et République dominicaine, national et régions",
   "passeport": "PSP-033",
   "source_id": "SRC-014",
   "source": "LAPOP Lab, Vanderbilt University — AmericasBarometer",
   "licence": "Licence par clic LAPOP — agrégats autorisés, partage des fichiers interdit, USAGE COMMERCIAL INTERDIT (clause 1)",
-  "maille": "national, deux pays",
-  "limite": "LE MODE DE COLLECTE CHANGE EN COURS DE SÉRIE, et c'est la précaution qui commande tout : les vagues récentes sont téléphoniques, les anciennes en face-à-face. Une rupture entre deux points peut donc être un changement d'INSTRUMENT plutôt qu'un changement d'opinion — chaque ligne porte son mode pour qu'on puisse le voir. UNE QUESTION N'EST ESTIMÉE QUE SI SON CODE FIGURE DANS LE QUESTIONNAIRE DE SA VAGUE, vérifié sur dix-sept questionnaires officiels ; c'est pourquoi certaines séries commencent plus tard que d'autres — la victimation criminelle n'existe qu'à partir de 2012. CE CONTRÔLE NE DÉTECTE PAS un changement de formulation à code constant : une question qui garde son nom en changeant de sens passerait. LES ÉCHELLES SONT RAMENÉES À 0-100 PAR NOUS. USAGE COMMERCIAL INTERDIT par la licence : ces valeurs servent l'Explorateur, qui est gratuit, jamais une prestation facturée.",
+  "maille": "national et région d'enquête, deux pays",
+  "limite": "LE MODE DE COLLECTE CHANGE EN COURS DE SÉRIE : les vagues récentes sont téléphoniques, les anciennes en face-à-face. Une rupture entre deux points peut donc être un changement d'INSTRUMENT plutôt que d'opinion — chaque ligne porte son mode. LES RÉGIONS SONT LES STRATES DE TIRAGE, cinq en Haïti et quatre en République dominicaine ; elles ne se correspondent PAS d'un pays à l'autre et ne doivent jamais être appariées. UNE QUESTION N'EST ESTIMÉE QUE SI SON CODE FIGURE DANS LE QUESTIONNAIRE DE SA VAGUE, vérifié sur dix-sept questionnaires officiels ; ce contrôle ne détecte pas un changement de formulation à code constant. DEUX VAGUES DOMINICAINES SONT AUTO-PONDÉRÉES (2008, 2010) : leur note technique dit « Unweighted », et la colonne `ponderation` le porte sur chaque ligne. LA VAGUE DOMINICAINE DE 2006 EST ÉCARTÉE — son fichier contredit sa propre note technique sur l'effectif. LES ÉCHELLES SONT RAMENÉES À 0-100 PAR NOUS. USAGE COMMERCIAL INTERDIT par la licence.",
   "date_extraction": "2026-08-26"
  },
- "observations": 253,
+ "observations": 1494,
+ "observations_nationales": 290,
  "vagues": [
   2006,
   2008,
@@ -28,7 +29,10 @@
    "n": 1625,
    "mode": "face-à-face",
    "grappes": 74,
-   "strates": 4
+   "strates": 4,
+   "regions_estimables": 3,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   },
   {
    "pays": "Haïti",
@@ -36,7 +40,10 @@
    "n": 1536,
    "mode": "face-à-face",
    "grappes": 70,
-   "strates": 5
+   "strates": 5,
+   "regions_estimables": 5,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   },
   {
    "pays": "Haïti",
@@ -44,7 +51,10 @@
    "n": 1752,
    "mode": "face-à-face",
    "grappes": 149,
-   "strates": 5
+   "strates": 5,
+   "regions_estimables": 5,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   },
   {
    "pays": "Haïti",
@@ -52,7 +62,10 @@
    "n": 1836,
    "mode": "face-à-face",
    "grappes": 114,
-   "strates": 5
+   "strates": 5,
+   "regions_estimables": 5,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   },
   {
    "pays": "Haïti",
@@ -60,7 +73,10 @@
    "n": 1512,
    "mode": "face-à-face",
    "grappes": 61,
-   "strates": 5
+   "strates": 5,
+   "regions_estimables": 5,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   },
   {
    "pays": "Haïti",
@@ -68,7 +84,10 @@
    "n": 2221,
    "mode": "face-à-face",
    "grappes": 88,
-   "strates": 5
+   "strates": 5,
+   "regions_estimables": 5,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   },
   {
    "pays": "Haïti",
@@ -76,7 +95,10 @@
    "n": 3088,
    "mode": "téléphone",
    "grappes": 3088,
-   "strates": 1
+   "strates": 1,
+   "regions_estimables": 5,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   },
   {
    "pays": "Haïti",
@@ -84,7 +106,32 @@
    "n": 1611,
    "mode": "téléphone",
    "grappes": 1611,
-   "strates": 1
+   "strates": 1,
+   "regions_estimables": 5,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
+  },
+  {
+   "pays": "République dominicaine",
+   "vague": 2008,
+   "n": 1507,
+   "mode": "face-à-face",
+   "grappes": 57,
+   "strates": 4,
+   "regions_estimables": 0,
+   "note_regions": "codes et étiquettes ne concordent pas dans ce fichier — aucune région nommée",
+   "ponderation": "note technique : « Dominican Republic 2008, 1,507, Unweighted »"
+  },
+  {
+   "pays": "République dominicaine",
+   "vague": 2010,
+   "n": 1500,
+   "mode": "face-à-face",
+   "grappes": 60,
+   "strates": 4,
+   "regions_estimables": 4,
+   "note_regions": "",
+   "ponderation": "note technique : « Dominican Republic 2010, 1,500, Unweighted »"
   },
   {
    "pays": "République dominicaine",
@@ -92,7 +139,10 @@
    "n": 1512,
    "mode": "face-à-face",
    "grappes": 55,
-   "strates": 4
+   "strates": 4,
+   "regions_estimables": 4,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   },
   {
    "pays": "République dominicaine",
@@ -100,7 +150,10 @@
    "n": 1520,
    "mode": "face-à-face",
    "grappes": 63,
-   "strates": 4
+   "strates": 4,
+   "regions_estimables": 4,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   },
   {
    "pays": "République dominicaine",
@@ -108,7 +161,10 @@
    "n": 1516,
    "mode": "face-à-face",
    "grappes": 63,
-   "strates": 4
+   "strates": 4,
+   "regions_estimables": 4,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   },
   {
    "pays": "République dominicaine",
@@ -116,7 +172,10 @@
    "n": 3000,
    "mode": "téléphone",
    "grappes": 3000,
-   "strates": 1
+   "strates": 1,
+   "regions_estimables": 4,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   },
   {
    "pays": "République dominicaine",
@@ -124,9 +183,13 @@
    "n": 1596,
    "mode": "face-à-face",
    "grappes": 63,
-   "strates": 4
+   "strates": 4,
+   "regions_estimables": 4,
+   "note_regions": "",
+   "ponderation": "poids de sondage du fichier"
   }
  ],
- "series_d_au_moins_quatre_points": 39,
- "series_totales": 48
+ "vagues_ecartees": [],
+ "series_nationales_d_au_moins_quatre_points": 40,
+ "series_nationales_totales": 48
 }

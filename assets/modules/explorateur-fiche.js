@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=34";
+import { S } from "./etat.js?v=35";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, sansAccent, situation, valeurBrute } = A;
@@ -2064,6 +2064,96 @@ export default function (A) {
      ils vivent, Léogâne passe de 6 secondes à 46 minutes. Une commune où
      le centre est à deux minutes et la section la plus lointaine à trois
      heures n'est pas une commune desservie. */
+  /* ----------------------------------- ce que l'enquête dit de la région
+     LES RÉSULTATS ÉTAIENT MUETS PARTOUT SAUF SUR LA CARTE. Vingt cartes
+     existent depuis le 26/08/2026 — mortalité, anémie, eau, électricité, sol
+     en terre, violences subies — et la fiche d'une commune n'en portait rien.
+     L'édition légère les a reçues le jour même ; celle-ci, qui est la fiche
+     que la plupart des lecteurs ouvrent, les reçoit ici.
+
+     UN FICHIER TAILLÉ POUR CET USAGE. La table de rattachement pèse 38 Ko et
+     les résultats 514 : un demi-méga pour afficher vingt lignes. Le
+     producteur écrit donc `atmart_enquete_fiche.json`, 29 Ko, qui porte les
+     onze régions avec leurs valeurs et les 140 communes avec leur région —
+     ou leur motif quand il n'y en a pas.
+
+     ET LE BLOC DIT CE QU'IL MONTRE AVANT DE LE MONTRER. Ces valeurs sont
+     celles d'une RÉGION. Deux communes d'une même région portent le même
+     chiffre, et personne ne l'a mesuré chez elles. L'avertissement précède
+     les nombres au lieu de les suivre : une précaution lue après coup ne
+     défait pas l'impression déjà formée. */
+  function chargerEnquete() {
+    if (S.enqPromesse) return S.enqPromesse;
+    S.enqPromesse = charger(DIR + "atmart_enquete_fiche.json", 1)
+      .then(function (t) { S.enq = JSON.parse(t); return S.enq; })
+      .catch(function () { S.enq = null; return null; });
+    return S.enqPromesse;
+  }
+
+  function blocEnquete(r) {
+    return r.niveau_admin === "3"
+      ? '<div id="x-enquete" class="x-pyr"><p class="x-note">' +
+        T("Résultats d'enquête — chargement…") + "</p></div>"
+      : "";
+  }
+
+  /* LE MOTIF EST COMPOSÉ, PAS RECOPIÉ. Le fichier porte un code et un
+     nombre ; la phrase est écrite ici, donc traduite comme le reste. Une
+     phrase de données affichée telle quelle mettait un paragraphe français
+     au milieu d'une page kreyòl. Le motif français reste dans le fichier et
+     sert de repli : mieux vaut une phrase dans la mauvaise langue que pas de
+     phrase du tout. */
+  function motifEnquete(d, com) {
+    if (com.code === "ouest_indecidable") {
+      return TF("l'enquête coupe l'Ouest en deux et ne publie pas la liste des communes de son aire métropolitaine ; le contour ne sépare les deux régions que de {m} points, sous le seuil de {s}",
+                { m: com.marge, s: d.seuil_de_marge_points });
+    }
+    return esc(com.motif || "");
+  }
+
+  function htmlEnquete(d, r) {
+    if (!d) {
+      return '<p class="x-note">' +
+        T("Les résultats d'enquête n'ont pas pu être chargés — la fiche reste lisible sans eux.") + "</p>";
+    }
+    var com = d.communes && d.communes[r.pcode];
+    if (!com) {
+      return '<p class="x-note">' +
+        T("Cette commune n'est pas rattachée à une région d'enquête.") + "</p>";
+    }
+    if (!com.r) {
+      return '<h3 class="x-h3">' + T("Ce que l'enquête dit de cette commune") + "</h3>" +
+        '<p class="x-note">' + T("Rien, et le motif se dit plutôt qu'il ne se cache :") +
+        " " + motifEnquete(d, com) + ". " +
+        T("Remplir cette commune avec les chiffres de la région la plus probable poserait des valeurs invérifiables sur un territoire.") +
+        "</p>";
+    }
+    var reg = d.regions && d.regions[com.r];
+    if (!reg || !reg.v || !reg.v.length) {
+      return '<p class="x-note">' +
+        T("Aucun résultat publié pour la région de cette commune.") + "</p>";
+    }
+    var h = ['<h3 class="x-h3">' +
+             TF("Ce que l'enquête dit de la région {r}", { r: esc(reg.nom) }) + "</h3>"];
+    h.push('<p class="x-note">' +
+      TF("Ces {n} valeurs ne sont PAS des mesures de cette commune : l'EMMUS {a} a interrogé un échantillon de la région « {r} », et toutes les communes de cette région portent le même chiffre. La dernière enquête date de 2016-2017 : elle dit où en était le pays avant l'effondrement sécuritaire, pas où il en est.",
+         { n: reg.v.length, a: esc(d.annee), r: esc(reg.nom) }) + "</p>");
+    h.push('<div class="x-mesures">' + reg.v.map(function (m) {
+      return '<div class="x-mesure"><b>' + fmt(nb(m.v), "") + "</b><span>" +
+        esc(m.n) + '</span><small class="x-mill">' + esc(m.u) + " · " +
+        TF("région {r} · enquête EMMUS {a}", { r: esc(reg.nom), a: esc(d.annee) }) +
+        "</small></div>";
+    }).join("") + "</div>");
+    h.push('<p class="x-note">' + T("Source : ") + esc(d.source) + "</p>");
+    return h.join("");
+  }
+
+  function remplirEnquete(r) {
+    var el = $("#x-enquete");
+    if (!el) return;
+    chargerEnquete().then(function (d) { el.innerHTML = htmlEnquete(d, r); });
+  }
+
   function blocAcces(r) {
     return r.niveau_admin === "3"
       ? '<div id="x-acces" class="x-pyr"><p class="x-note">' +
@@ -2636,6 +2726,14 @@ export default function (A) {
       blocs: [["blocAcces", "services"], ["blocSantedec", "services"],
               ["blocEquipements", "services"], ["blocEcolesdec", "services"],
               ["blocServices", "services"], ["blocOrganisations", "organisations"]] },
+    /* LES RÉSULTATS ONT LEUR PROPRE CATÉGORIE, et pas une place dans
+       « Services essentiels ». Un dispensaire est un service ; la mortalité
+       infantile est ce qui arrive quand même. Les ranger ensemble ferait
+       lire l'un comme la conséquence de l'autre, ce qu'aucune de ces deux
+       données ne permet d'affirmer. Elle vient APRÈS les services : on voit
+       d'abord ce qu'il y a, ensuite comment ça va. */
+    { id: "cat-resultats", titre: "Résultats d'enquête — comment ça va",
+      blocs: [["blocEnquete", "services"]] },
     { id: "cat-risques", titre: "Risques et climat",
       blocs: [["blocSeismes", "services"], ["blocCyclones", "services"],
               ["blocPluie", "services"], ["blocEau", "services"],
@@ -2673,6 +2771,7 @@ export default function (A) {
   var BLOCS = {
     blocObjectif: blocObjectif, blocCarte: blocCarte, blocIndicateurs: blocIndicateurs,
     blocPop3: blocPop3, blocPopMod: blocPopMod, blocPyramide: blocPyramide,
+    blocEnquete: blocEnquete,
     blocAcces: blocAcces, blocSantedec: blocSantedec, blocEquipements: blocEquipements,
     blocEcolesdec: blocEcolesdec, blocServices: blocServices,
     blocOrganisations: blocOrganisations, blocSeismes: blocSeismes,
@@ -2878,6 +2977,7 @@ export default function (A) {
     remplirCredits(r);
     remplirEcolesdec(r);
     remplirAcces(r);
+    remplirEnquete(r);
     remplirPop3(r);
     remplirEquipements(r);
     remplirBassins(r);
@@ -2927,5 +3027,5 @@ export default function (A) {
     try { history.replaceState(null, "", q); } catch (e) {}
   }
 
-  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, accueil, exemplesValides, replier, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocPop3, chargerPop3, remplirPop3, htmlPop3, blocAcces, chargerAcces, remplirAcces, htmlAcces, blocEcolesdec, chargerEcolesdec, remplirEcolesdec, htmlEcolesdec, blocSantedec, chargerSantedec, remplirSantedec, htmlSantedec, blocCredits, chargerCredits, remplirCredits, htmlCredits, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
+  Object.assign(A, {OBJECTIFS, fil, situe, synthese, blocResume, chargerPyramide, libTranche, pyramideDe, pct, pasAxe, svgPyramide, tablePyramide, blocPyramide, observerPyramide, aLApproche, remplirPyramide, traitsDistinctifs, lacunesLisibles, avertissements, FENETRE, chargerPrix, pasRond, svgSerie, blocPrix, remplirPrix, chargerNat, blocNat, remplirNat, chargerServices, blocServices, sectionServices, remplirServices, blocSeismes, chargerSeismes, remplirSeismes, htmlSeismes, blocPluie, chargerPluie, remplirPluie, htmlPluie, blocSol, chargerSol, remplirSol, htmlSol, blocPopMod, chargerPopMod, remplirPopMod, htmlPopMod, blocObjectif, blocAccueil, accueil, exemplesValides, replier, blocIndicateurs, blocSols, chargerSols, remplirSols, htmlSols, blocCyclones, chargerCyclones, remplirCyclones, htmlCyclones, blocEau, chargerEau, remplirEau, htmlEau, blocSolaire, chargerSolaire, remplirSolaire, htmlSolaire, blocBatiments, chargerBatiments, remplirBatiments, htmlBatiments, blocUrbanisation, chargerUrbanisation, remplirUrbanisation, htmlUrbanisation, blocProjets, chargerProjets, remplirProjets, htmlProjets, blocBassins, chargerBassins, remplirBassins, htmlBassins, blocEquipements, chargerEquipements, remplirEquipements, htmlEquipements, blocPop3, chargerPop3, remplirPop3, htmlPop3, blocEnquete, chargerEnquete, remplirEnquete, htmlEnquete, blocAcces, chargerAcces, remplirAcces, htmlAcces, blocEcolesdec, chargerEcolesdec, remplirEcolesdec, htmlEcolesdec, blocSantedec, chargerSantedec, remplirSantedec, htmlSantedec, blocCredits, chargerCredits, remplirCredits, htmlCredits, blocLacunes, blocComparer, blocTechnique, blocOrganisations, blocEnfants, blocVerrou, agregat, fiche, majURL});
 }

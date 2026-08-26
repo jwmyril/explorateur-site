@@ -1,0 +1,1589 @@
+{
+ "annee": "2016",
+ "source": "EMMUS / DHS Program — API des indicateurs, passeport PSP-077",
+ "portee": "estimation de la RÉGION D'ENQUÊTE, pas mesure de la commune",
+ "regions": {
+  "412001": {
+   "nom": "Aire métropolitaine",
+   "v": [
+    {
+     "n": "Besoin de planification familiale non satisfait (femmes en union)",
+     "v": "36.5",
+     "u": "%"
+    },
+    {
+     "n": "Enfants complètement vaccinés (8 antigènes)",
+     "v": "38.6",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans anémiés",
+     "v": "68.5",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans dont la naissance est enregistrée",
+     "v": "92.3",
+     "u": "%"
+    },
+    {
+     "n": "Enfants en retard de croissance",
+     "v": "20.2",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant subi des violences physiques dans les douze derniers mois",
+     "v": "11.5",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant travaillé dans l'année et travaillant actuellement",
+     "v": "45.6",
+     "u": "%"
+    },
+    {
+     "n": "Femmes de 20 à 24 ans unies avant 18 ans",
+     "v": "10.4",
+     "u": "%"
+    },
+    {
+     "n": "Femmes n'ayant voix sur aucune décision du ménage",
+     "v": "4.0",
+     "u": "%"
+    },
+    {
+     "n": "Femmes sachant lire",
+     "v": "86.1",
+     "u": "%"
+    },
+    {
+     "n": "Indice synthétique de fécondité",
+     "v": "2.0",
+     "u": "enfants par femme, 15-49 ans"
+    },
+    {
+     "n": "Mortalité des moins de 5 ans",
+     "v": "89.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Mortalité infantile",
+     "v": "66.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Ménages ayant l'électricité",
+     "v": "87.8",
+     "u": "%"
+    },
+    {
+     "n": "Ménages cuisinant au charbon de bois",
+     "v": "77.6",
+     "u": "%"
+    },
+    {
+     "n": "Ménages dont le sol est en terre ou en sable",
+     "v": "5.4",
+     "u": "%"
+    },
+    {
+     "n": "Ménages possédant au moins une moustiquaire",
+     "v": "28.8",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un assainissement de base",
+     "v": "49.2",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un service d'eau de base",
+     "v": "92.3",
+     "u": "%"
+    },
+    {
+     "n": "Population de 6 ans et plus sans instruction",
+     "v": "8.5",
+     "u": "%"
+    }
+   ]
+  },
+  "412002": {
+   "nom": "Reste de l'Ouest",
+   "v": [
+    {
+     "n": "Besoin de planification familiale non satisfait (femmes en union)",
+     "v": "43.5",
+     "u": "%"
+    },
+    {
+     "n": "Enfants complètement vaccinés (8 antigènes)",
+     "v": "32.1",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans anémiés",
+     "v": "63.9",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans dont la naissance est enregistrée",
+     "v": "86.7",
+     "u": "%"
+    },
+    {
+     "n": "Enfants en retard de croissance",
+     "v": "22.5",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant subi des violences physiques dans les douze derniers mois",
+     "v": "13.6",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant travaillé dans l'année et travaillant actuellement",
+     "v": "44.1",
+     "u": "%"
+    },
+    {
+     "n": "Femmes de 20 à 24 ans unies avant 18 ans",
+     "v": "18.1",
+     "u": "%"
+    },
+    {
+     "n": "Femmes n'ayant voix sur aucune décision du ménage",
+     "v": "6.9",
+     "u": "%"
+    },
+    {
+     "n": "Femmes sachant lire",
+     "v": "75.5",
+     "u": "%"
+    },
+    {
+     "n": "Indice synthétique de fécondité",
+     "v": "3.7",
+     "u": "enfants par femme, 15-49 ans"
+    },
+    {
+     "n": "Mortalité des moins de 5 ans",
+     "v": "112.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Mortalité infantile",
+     "v": "84.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Ménages ayant l'électricité",
+     "v": "33.1",
+     "u": "%"
+    },
+    {
+     "n": "Ménages cuisinant au charbon de bois",
+     "v": "41.0",
+     "u": "%"
+    },
+    {
+     "n": "Ménages dont le sol est en terre ou en sable",
+     "v": "31.3",
+     "u": "%"
+    },
+    {
+     "n": "Ménages possédant au moins une moustiquaire",
+     "v": "31.8",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un assainissement de base",
+     "v": "31.8",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un service d'eau de base",
+     "v": "57.8",
+     "u": "%"
+    },
+    {
+     "n": "Population de 6 ans et plus sans instruction",
+     "v": "25.5",
+     "u": "%"
+    }
+   ]
+  },
+  "412003": {
+   "nom": "Sud-Est",
+   "v": [
+    {
+     "n": "Besoin de planification familiale non satisfait (femmes en union)",
+     "v": "47.0",
+     "u": "%"
+    },
+    {
+     "n": "Enfants complètement vaccinés (8 antigènes)",
+     "v": "27.3",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans anémiés",
+     "v": "61.3",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans dont la naissance est enregistrée",
+     "v": "82.1",
+     "u": "%"
+    },
+    {
+     "n": "Enfants en retard de croissance",
+     "v": "20.0",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant subi des violences physiques dans les douze derniers mois",
+     "v": "6.9",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant travaillé dans l'année et travaillant actuellement",
+     "v": "43.7",
+     "u": "%"
+    },
+    {
+     "n": "Femmes de 20 à 24 ans unies avant 18 ans",
+     "v": "13.1",
+     "u": "%"
+    },
+    {
+     "n": "Femmes n'ayant voix sur aucune décision du ménage",
+     "v": "6.8",
+     "u": "%"
+    },
+    {
+     "n": "Femmes sachant lire",
+     "v": "78.5",
+     "u": "%"
+    },
+    {
+     "n": "Indice synthétique de fécondité",
+     "v": "3.4",
+     "u": "enfants par femme, 15-49 ans"
+    },
+    {
+     "n": "Mortalité des moins de 5 ans",
+     "v": "76.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Mortalité infantile",
+     "v": "55.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Ménages ayant l'électricité",
+     "v": "20.1",
+     "u": "%"
+    },
+    {
+     "n": "Ménages cuisinant au charbon de bois",
+     "v": "19.0",
+     "u": "%"
+    },
+    {
+     "n": "Ménages dont le sol est en terre ou en sable",
+     "v": "29.4",
+     "u": "%"
+    },
+    {
+     "n": "Ménages possédant au moins une moustiquaire",
+     "v": "28.1",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un assainissement de base",
+     "v": "36.0",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un service d'eau de base",
+     "v": "51.3",
+     "u": "%"
+    },
+    {
+     "n": "Population de 6 ans et plus sans instruction",
+     "v": "24.2",
+     "u": "%"
+    }
+   ]
+  },
+  "412004": {
+   "nom": "Nord",
+   "v": [
+    {
+     "n": "Besoin de planification familiale non satisfait (femmes en union)",
+     "v": "41.7",
+     "u": "%"
+    },
+    {
+     "n": "Enfants complètement vaccinés (8 antigènes)",
+     "v": "60.5",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans anémiés",
+     "v": "66.1",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans dont la naissance est enregistrée",
+     "v": "89.9",
+     "u": "%"
+    },
+    {
+     "n": "Enfants en retard de croissance",
+     "v": "20.0",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant subi des violences physiques dans les douze derniers mois",
+     "v": "10.9",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant travaillé dans l'année et travaillant actuellement",
+     "v": "39.7",
+     "u": "%"
+    },
+    {
+     "n": "Femmes de 20 à 24 ans unies avant 18 ans",
+     "v": "15.5",
+     "u": "%"
+    },
+    {
+     "n": "Femmes n'ayant voix sur aucune décision du ménage",
+     "v": "6.7",
+     "u": "%"
+    },
+    {
+     "n": "Femmes sachant lire",
+     "v": "79.9",
+     "u": "%"
+    },
+    {
+     "n": "Indice synthétique de fécondité",
+     "v": "3.0",
+     "u": "enfants par femme, 15-49 ans"
+    },
+    {
+     "n": "Mortalité des moins de 5 ans",
+     "v": "54.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Mortalité infantile",
+     "v": "33.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Ménages ayant l'électricité",
+     "v": "42.1",
+     "u": "%"
+    },
+    {
+     "n": "Ménages cuisinant au charbon de bois",
+     "v": "44.2",
+     "u": "%"
+    },
+    {
+     "n": "Ménages dont le sol est en terre ou en sable",
+     "v": "38.2",
+     "u": "%"
+    },
+    {
+     "n": "Ménages possédant au moins une moustiquaire",
+     "v": "45.0",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un assainissement de base",
+     "v": "32.2",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un service d'eau de base",
+     "v": "64.3",
+     "u": "%"
+    },
+    {
+     "n": "Population de 6 ans et plus sans instruction",
+     "v": "20.1",
+     "u": "%"
+    }
+   ]
+  },
+  "412005": {
+   "nom": "Nord-Est",
+   "v": [
+    {
+     "n": "Besoin de planification familiale non satisfait (femmes en union)",
+     "v": "39.0",
+     "u": "%"
+    },
+    {
+     "n": "Enfants complètement vaccinés (8 antigènes)",
+     "v": "57.1",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans anémiés",
+     "v": "65.9",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans dont la naissance est enregistrée",
+     "v": "87.7",
+     "u": "%"
+    },
+    {
+     "n": "Enfants en retard de croissance",
+     "v": "21.0",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant subi des violences physiques dans les douze derniers mois",
+     "v": "10.1",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant travaillé dans l'année et travaillant actuellement",
+     "v": "41.7",
+     "u": "%"
+    },
+    {
+     "n": "Femmes de 20 à 24 ans unies avant 18 ans",
+     "v": "19.2",
+     "u": "%"
+    },
+    {
+     "n": "Femmes n'ayant voix sur aucune décision du ménage",
+     "v": "7.2",
+     "u": "%"
+    },
+    {
+     "n": "Femmes sachant lire",
+     "v": "77.6",
+     "u": "%"
+    },
+    {
+     "n": "Indice synthétique de fécondité",
+     "v": "3.6",
+     "u": "enfants par femme, 15-49 ans"
+    },
+    {
+     "n": "Mortalité des moins de 5 ans",
+     "v": "77.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Mortalité infantile",
+     "v": "54.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Ménages ayant l'électricité",
+     "v": "39.7",
+     "u": "%"
+    },
+    {
+     "n": "Ménages cuisinant au charbon de bois",
+     "v": "45.2",
+     "u": "%"
+    },
+    {
+     "n": "Ménages dont le sol est en terre ou en sable",
+     "v": "49.8",
+     "u": "%"
+    },
+    {
+     "n": "Ménages possédant au moins une moustiquaire",
+     "v": "44.8",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un assainissement de base",
+     "v": "30.9",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un service d'eau de base",
+     "v": "73.5",
+     "u": "%"
+    },
+    {
+     "n": "Population de 6 ans et plus sans instruction",
+     "v": "21.4",
+     "u": "%"
+    }
+   ]
+  },
+  "412006": {
+   "nom": "Artibonite",
+   "v": [
+    {
+     "n": "Besoin de planification familiale non satisfait (femmes en union)",
+     "v": "37.4",
+     "u": "%"
+    },
+    {
+     "n": "Enfants complètement vaccinés (8 antigènes)",
+     "v": "39.5",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans anémiés",
+     "v": "66.8",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans dont la naissance est enregistrée",
+     "v": "75.5",
+     "u": "%"
+    },
+    {
+     "n": "Enfants en retard de croissance",
+     "v": "22.4",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant subi des violences physiques dans les douze derniers mois",
+     "v": "10.0",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant travaillé dans l'année et travaillant actuellement",
+     "v": "46.6",
+     "u": "%"
+    },
+    {
+     "n": "Femmes de 20 à 24 ans unies avant 18 ans",
+     "v": "18.5",
+     "u": "%"
+    },
+    {
+     "n": "Femmes n'ayant voix sur aucune décision du ménage",
+     "v": "5.6",
+     "u": "%"
+    },
+    {
+     "n": "Femmes sachant lire",
+     "v": "70.0",
+     "u": "%"
+    },
+    {
+     "n": "Indice synthétique de fécondité",
+     "v": "3.2",
+     "u": "enfants par femme, 15-49 ans"
+    },
+    {
+     "n": "Mortalité des moins de 5 ans",
+     "v": "84.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Mortalité infantile",
+     "v": "51.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Ménages ayant l'électricité",
+     "v": "26.1",
+     "u": "%"
+    },
+    {
+     "n": "Ménages cuisinant au charbon de bois",
+     "v": "39.8",
+     "u": "%"
+    },
+    {
+     "n": "Ménages dont le sol est en terre ou en sable",
+     "v": "47.7",
+     "u": "%"
+    },
+    {
+     "n": "Ménages possédant au moins une moustiquaire",
+     "v": "27.4",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un assainissement de base",
+     "v": "25.8",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un service d'eau de base",
+     "v": "54.9",
+     "u": "%"
+    },
+    {
+     "n": "Population de 6 ans et plus sans instruction",
+     "v": "26.0",
+     "u": "%"
+    }
+   ]
+  },
+  "412007": {
+   "nom": "Centre",
+   "v": [
+    {
+     "n": "Besoin de planification familiale non satisfait (femmes en union)",
+     "v": "37.6",
+     "u": "%"
+    },
+    {
+     "n": "Enfants complètement vaccinés (8 antigènes)",
+     "v": "47.0",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans anémiés",
+     "v": "66.8",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans dont la naissance est enregistrée",
+     "v": "77.2",
+     "u": "%"
+    },
+    {
+     "n": "Enfants en retard de croissance",
+     "v": "30.1",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant subi des violences physiques dans les douze derniers mois",
+     "v": "9.1",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant travaillé dans l'année et travaillant actuellement",
+     "v": "42.3",
+     "u": "%"
+    },
+    {
+     "n": "Femmes de 20 à 24 ans unies avant 18 ans",
+     "v": "22.3",
+     "u": "%"
+    },
+    {
+     "n": "Femmes n'ayant voix sur aucune décision du ménage",
+     "v": "3.8",
+     "u": "%"
+    },
+    {
+     "n": "Femmes sachant lire",
+     "v": "65.6",
+     "u": "%"
+    },
+    {
+     "n": "Indice synthétique de fécondité",
+     "v": "4.2",
+     "u": "enfants par femme, 15-49 ans"
+    },
+    {
+     "n": "Mortalité des moins de 5 ans",
+     "v": "90.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Mortalité infantile",
+     "v": "65.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Ménages ayant l'électricité",
+     "v": "37.1",
+     "u": "%"
+    },
+    {
+     "n": "Ménages cuisinant au charbon de bois",
+     "v": "24.5",
+     "u": "%"
+    },
+    {
+     "n": "Ménages dont le sol est en terre ou en sable",
+     "v": "58.3",
+     "u": "%"
+    },
+    {
+     "n": "Ménages possédant au moins une moustiquaire",
+     "v": "40.3",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un assainissement de base",
+     "v": "25.0",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un service d'eau de base",
+     "v": "51.9",
+     "u": "%"
+    },
+    {
+     "n": "Population de 6 ans et plus sans instruction",
+     "v": "24.9",
+     "u": "%"
+    }
+   ]
+  },
+  "412008": {
+   "nom": "Sud",
+   "v": [
+    {
+     "n": "Besoin de planification familiale non satisfait (femmes en union)",
+     "v": "45.1",
+     "u": "%"
+    },
+    {
+     "n": "Enfants complètement vaccinés (8 antigènes)",
+     "v": "38.5",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans anémiés",
+     "v": "69.9",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans dont la naissance est enregistrée",
+     "v": "88.7",
+     "u": "%"
+    },
+    {
+     "n": "Enfants en retard de croissance",
+     "v": "22.0",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant subi des violences physiques dans les douze derniers mois",
+     "v": "8.3",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant travaillé dans l'année et travaillant actuellement",
+     "v": "41.0",
+     "u": "%"
+    },
+    {
+     "n": "Femmes de 20 à 24 ans unies avant 18 ans",
+     "v": "9.8",
+     "u": "%"
+    },
+    {
+     "n": "Femmes n'ayant voix sur aucune décision du ménage",
+     "v": "7.1",
+     "u": "%"
+    },
+    {
+     "n": "Femmes sachant lire",
+     "v": "80.0",
+     "u": "%"
+    },
+    {
+     "n": "Indice synthétique de fécondité",
+     "v": "3.1",
+     "u": "enfants par femme, 15-49 ans"
+    },
+    {
+     "n": "Mortalité des moins de 5 ans",
+     "v": "62.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Mortalité infantile",
+     "v": "40.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Ménages ayant l'électricité",
+     "v": "19.0",
+     "u": "%"
+    },
+    {
+     "n": "Ménages cuisinant au charbon de bois",
+     "v": "26.0",
+     "u": "%"
+    },
+    {
+     "n": "Ménages dont le sol est en terre ou en sable",
+     "v": "37.3",
+     "u": "%"
+    },
+    {
+     "n": "Ménages possédant au moins une moustiquaire",
+     "v": "25.8",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un assainissement de base",
+     "v": "30.7",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un service d'eau de base",
+     "v": "58.3",
+     "u": "%"
+    },
+    {
+     "n": "Population de 6 ans et plus sans instruction",
+     "v": "24.1",
+     "u": "%"
+    }
+   ]
+  },
+  "412010": {
+   "nom": "Grand'Anse",
+   "v": [
+    {
+     "n": "Besoin de planification familiale non satisfait (femmes en union)",
+     "v": "42.9",
+     "u": "%"
+    },
+    {
+     "n": "Enfants complètement vaccinés (8 antigènes)",
+     "v": "42.1",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans anémiés",
+     "v": "68.4",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans dont la naissance est enregistrée",
+     "v": "80.2",
+     "u": "%"
+    },
+    {
+     "n": "Enfants en retard de croissance",
+     "v": "21.6",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant subi des violences physiques dans les douze derniers mois",
+     "v": "8.7",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant travaillé dans l'année et travaillant actuellement",
+     "v": "41.4",
+     "u": "%"
+    },
+    {
+     "n": "Femmes de 20 à 24 ans unies avant 18 ans",
+     "v": "12.3",
+     "u": "%"
+    },
+    {
+     "n": "Femmes n'ayant voix sur aucune décision du ménage",
+     "v": "7.2",
+     "u": "%"
+    },
+    {
+     "n": "Femmes sachant lire",
+     "v": "73.8",
+     "u": "%"
+    },
+    {
+     "n": "Indice synthétique de fécondité",
+     "v": "4.0",
+     "u": "enfants par femme, 15-49 ans"
+    },
+    {
+     "n": "Mortalité des moins de 5 ans",
+     "v": "53.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Mortalité infantile",
+     "v": "28.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Ménages ayant l'électricité",
+     "v": "5.9",
+     "u": "%"
+    },
+    {
+     "n": "Ménages cuisinant au charbon de bois",
+     "v": "23.6",
+     "u": "%"
+    },
+    {
+     "n": "Ménages dont le sol est en terre ou en sable",
+     "v": "56.2",
+     "u": "%"
+    },
+    {
+     "n": "Ménages possédant au moins une moustiquaire",
+     "v": "30.9",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un assainissement de base",
+     "v": "20.3",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un service d'eau de base",
+     "v": "42.1",
+     "u": "%"
+    },
+    {
+     "n": "Population de 6 ans et plus sans instruction",
+     "v": "23.3",
+     "u": "%"
+    }
+   ]
+  },
+  "412011": {
+   "nom": "Nippes",
+   "v": [
+    {
+     "n": "Besoin de planification familiale non satisfait (femmes en union)",
+     "v": "39.8",
+     "u": "%"
+    },
+    {
+     "n": "Enfants complètement vaccinés (8 antigènes)",
+     "v": "53.4",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans anémiés",
+     "v": "66.7",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans dont la naissance est enregistrée",
+     "v": "91.9",
+     "u": "%"
+    },
+    {
+     "n": "Enfants en retard de croissance",
+     "v": "17.2",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant subi des violences physiques dans les douze derniers mois",
+     "v": "8.1",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant travaillé dans l'année et travaillant actuellement",
+     "v": "44.0",
+     "u": "%"
+    },
+    {
+     "n": "Femmes de 20 à 24 ans unies avant 18 ans",
+     "v": "21.4",
+     "u": "%"
+    },
+    {
+     "n": "Femmes n'ayant voix sur aucune décision du ménage",
+     "v": "7.6",
+     "u": "%"
+    },
+    {
+     "n": "Femmes sachant lire",
+     "v": "80.3",
+     "u": "%"
+    },
+    {
+     "n": "Indice synthétique de fécondité",
+     "v": "2.7",
+     "u": "enfants par femme, 15-49 ans"
+    },
+    {
+     "n": "Mortalité des moins de 5 ans",
+     "v": "90.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Mortalité infantile",
+     "v": "72.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Ménages ayant l'électricité",
+     "v": "18.7",
+     "u": "%"
+    },
+    {
+     "n": "Ménages cuisinant au charbon de bois",
+     "v": "25.1",
+     "u": "%"
+    },
+    {
+     "n": "Ménages dont le sol est en terre ou en sable",
+     "v": "39.5",
+     "u": "%"
+    },
+    {
+     "n": "Ménages possédant au moins une moustiquaire",
+     "v": "42.9",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un assainissement de base",
+     "v": "30.0",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un service d'eau de base",
+     "v": "66.7",
+     "u": "%"
+    },
+    {
+     "n": "Population de 6 ans et plus sans instruction",
+     "v": "22.2",
+     "u": "%"
+    }
+   ]
+  },
+  "412012": {
+   "nom": "Nord-Ouest",
+   "v": [
+    {
+     "n": "Besoin de planification familiale non satisfait (femmes en union)",
+     "v": "44.9",
+     "u": "%"
+    },
+    {
+     "n": "Enfants complètement vaccinés (8 antigènes)",
+     "v": "40.5",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans anémiés",
+     "v": "64.9",
+     "u": "%"
+    },
+    {
+     "n": "Enfants de moins de 5 ans dont la naissance est enregistrée",
+     "v": "82.8",
+     "u": "%"
+    },
+    {
+     "n": "Enfants en retard de croissance",
+     "v": "20.3",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant subi des violences physiques dans les douze derniers mois",
+     "v": "8.8",
+     "u": "%"
+    },
+    {
+     "n": "Femmes ayant travaillé dans l'année et travaillant actuellement",
+     "v": "42.2",
+     "u": "%"
+    },
+    {
+     "n": "Femmes de 20 à 24 ans unies avant 18 ans",
+     "v": "11.5",
+     "u": "%"
+    },
+    {
+     "n": "Femmes n'ayant voix sur aucune décision du ménage",
+     "v": "8.4",
+     "u": "%"
+    },
+    {
+     "n": "Femmes sachant lire",
+     "v": "80.9",
+     "u": "%"
+    },
+    {
+     "n": "Indice synthétique de fécondité",
+     "v": "3.4",
+     "u": "enfants par femme, 15-49 ans"
+    },
+    {
+     "n": "Mortalité des moins de 5 ans",
+     "v": "58.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Mortalité infantile",
+     "v": "45.0",
+     "u": "pour 1 000 naissances vivantes"
+    },
+    {
+     "n": "Ménages ayant l'électricité",
+     "v": "13.7",
+     "u": "%"
+    },
+    {
+     "n": "Ménages cuisinant au charbon de bois",
+     "v": "34.6",
+     "u": "%"
+    },
+    {
+     "n": "Ménages dont le sol est en terre ou en sable",
+     "v": "46.0",
+     "u": "%"
+    },
+    {
+     "n": "Ménages possédant au moins une moustiquaire",
+     "v": "35.4",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un assainissement de base",
+     "v": "24.9",
+     "u": "%"
+    },
+    {
+     "n": "Population ayant un service d'eau de base",
+     "v": "51.5",
+     "u": "%"
+    },
+    {
+     "n": "Population de 6 ans et plus sans instruction",
+     "v": "20.5",
+     "u": "%"
+    }
+   ]
+  }
+ },
+ "seuil_de_marge_points": 20,
+ "communes": {
+  "HT0111": {
+   "r": "412001"
+  },
+  "HT0112": {
+   "r": "412001"
+  },
+  "HT0113": {
+   "r": "412001"
+  },
+  "HT0114": {
+   "code": "ouest_indecidable",
+   "marge": 17,
+   "motif": "l'enquête coupe l'Ouest en deux et ne publie pas la liste des communes de son aire métropolitaine ; le contour ne sépare les deux que de 17 points, sous le seuil de 20"
+  },
+  "HT0115": {
+   "code": "ouest_indecidable",
+   "marge": 15,
+   "motif": "l'enquête coupe l'Ouest en deux et ne publie pas la liste des communes de son aire métropolitaine ; le contour ne sépare les deux que de 15 points, sous le seuil de 20"
+  },
+  "HT0116": {
+   "r": "412002"
+  },
+  "HT0117": {
+   "r": "412001"
+  },
+  "HT0118": {
+   "r": "412001"
+  },
+  "HT0121": {
+   "r": "412002"
+  },
+  "HT0122": {
+   "r": "412002"
+  },
+  "HT0123": {
+   "r": "412002"
+  },
+  "HT0131": {
+   "r": "412002"
+  },
+  "HT0132": {
+   "r": "412002"
+  },
+  "HT0133": {
+   "r": "412002"
+  },
+  "HT0134": {
+   "r": "412002"
+  },
+  "HT0135": {
+   "r": "412002"
+  },
+  "HT0141": {
+   "r": "412002"
+  },
+  "HT0142": {
+   "r": "412002"
+  },
+  "HT0151": {
+   "r": "412002"
+  },
+  "HT0152": {
+   "r": "412002"
+  },
+  "HT0211": {
+   "r": "412003"
+  },
+  "HT0212": {
+   "r": "412003"
+  },
+  "HT0213": {
+   "r": "412003"
+  },
+  "HT0214": {
+   "r": "412003"
+  },
+  "HT0221": {
+   "r": "412003"
+  },
+  "HT0222": {
+   "r": "412003"
+  },
+  "HT0231": {
+   "r": "412003"
+  },
+  "HT0232": {
+   "r": "412003"
+  },
+  "HT0233": {
+   "r": "412003"
+  },
+  "HT0234": {
+   "r": "412003"
+  },
+  "HT0311": {
+   "r": "412004"
+  },
+  "HT0312": {
+   "r": "412004"
+  },
+  "HT0313": {
+   "r": "412004"
+  },
+  "HT0321": {
+   "r": "412004"
+  },
+  "HT0322": {
+   "r": "412004"
+  },
+  "HT0323": {
+   "r": "412004"
+  },
+  "HT0331": {
+   "r": "412004"
+  },
+  "HT0332": {
+   "r": "412004"
+  },
+  "HT0341": {
+   "r": "412004"
+  },
+  "HT0342": {
+   "r": "412004"
+  },
+  "HT0343": {
+   "r": "412004"
+  },
+  "HT0344": {
+   "r": "412004"
+  },
+  "HT0345": {
+   "r": "412004"
+  },
+  "HT0351": {
+   "r": "412004"
+  },
+  "HT0352": {
+   "r": "412004"
+  },
+  "HT0361": {
+   "r": "412004"
+  },
+  "HT0362": {
+   "r": "412004"
+  },
+  "HT0371": {
+   "r": "412004"
+  },
+  "HT0372": {
+   "r": "412004"
+  },
+  "HT0411": {
+   "r": "412005"
+  },
+  "HT0412": {
+   "r": "412005"
+  },
+  "HT0413": {
+   "r": "412005"
+  },
+  "HT0421": {
+   "r": "412005"
+  },
+  "HT0422": {
+   "r": "412005"
+  },
+  "HT0423": {
+   "r": "412005"
+  },
+  "HT0431": {
+   "r": "412005"
+  },
+  "HT0432": {
+   "r": "412005"
+  },
+  "HT0433": {
+   "r": "412005"
+  },
+  "HT0434": {
+   "r": "412005"
+  },
+  "HT0441": {
+   "r": "412005"
+  },
+  "HT0442": {
+   "r": "412005"
+  },
+  "HT0443": {
+   "r": "412005"
+  },
+  "HT0511": {
+   "r": "412006"
+  },
+  "HT0512": {
+   "r": "412006"
+  },
+  "HT0513": {
+   "r": "412006"
+  },
+  "HT0521": {
+   "r": "412006"
+  },
+  "HT0522": {
+   "r": "412006"
+  },
+  "HT0523": {
+   "r": "412006"
+  },
+  "HT0531": {
+   "r": "412006"
+  },
+  "HT0532": {
+   "r": "412006"
+  },
+  "HT0533": {
+   "r": "412006"
+  },
+  "HT0541": {
+   "r": "412006"
+  },
+  "HT0542": {
+   "r": "412006"
+  },
+  "HT0543": {
+   "r": "412006"
+  },
+  "HT0544": {
+   "r": "412006"
+  },
+  "HT0551": {
+   "r": "412006"
+  },
+  "HT0552": {
+   "r": "412006"
+  },
+  "HT0611": {
+   "r": "412007"
+  },
+  "HT0612": {
+   "r": "412007"
+  },
+  "HT0613": {
+   "r": "412007"
+  },
+  "HT0614": {
+   "r": "412007"
+  },
+  "HT0621": {
+   "r": "412007"
+  },
+  "HT0622": {
+   "r": "412007"
+  },
+  "HT0623": {
+   "r": "412007"
+  },
+  "HT0631": {
+   "r": "412007"
+  },
+  "HT0632": {
+   "r": "412007"
+  },
+  "HT0633": {
+   "r": "412007"
+  },
+  "HT0641": {
+   "r": "412007"
+  },
+  "HT0642": {
+   "r": "412007"
+  },
+  "HT0711": {
+   "r": "412008"
+  },
+  "HT0712": {
+   "r": "412008"
+  },
+  "HT0713": {
+   "r": "412008"
+  },
+  "HT0714": {
+   "r": "412008"
+  },
+  "HT0715": {
+   "r": "412008"
+  },
+  "HT0716": {
+   "r": "412008"
+  },
+  "HT0721": {
+   "r": "412008"
+  },
+  "HT0722": {
+   "r": "412008"
+  },
+  "HT0723": {
+   "r": "412008"
+  },
+  "HT0731": {
+   "r": "412008"
+  },
+  "HT0732": {
+   "r": "412008"
+  },
+  "HT0733": {
+   "r": "412008"
+  },
+  "HT0741": {
+   "r": "412008"
+  },
+  "HT0742": {
+   "r": "412008"
+  },
+  "HT0743": {
+   "r": "412008"
+  },
+  "HT0751": {
+   "r": "412008"
+  },
+  "HT0752": {
+   "r": "412008"
+  },
+  "HT0753": {
+   "r": "412008"
+  },
+  "HT0811": {
+   "r": "412010"
+  },
+  "HT0812": {
+   "r": "412010"
+  },
+  "HT0813": {
+   "r": "412010"
+  },
+  "HT0814": {
+   "r": "412010"
+  },
+  "HT0815": {
+   "r": "412010"
+  },
+  "HT0821": {
+   "r": "412010"
+  },
+  "HT0822": {
+   "r": "412010"
+  },
+  "HT0823": {
+   "r": "412010"
+  },
+  "HT0831": {
+   "r": "412010"
+  },
+  "HT0832": {
+   "r": "412010"
+  },
+  "HT0833": {
+   "r": "412010"
+  },
+  "HT0834": {
+   "r": "412010"
+  },
+  "HT0911": {
+   "r": "412012"
+  },
+  "HT0912": {
+   "r": "412012"
+  },
+  "HT0913": {
+   "r": "412012"
+  },
+  "HT0914": {
+   "r": "412012"
+  },
+  "HT0921": {
+   "r": "412012"
+  },
+  "HT0922": {
+   "r": "412012"
+  },
+  "HT0931": {
+   "r": "412012"
+  },
+  "HT0932": {
+   "r": "412012"
+  },
+  "HT0933": {
+   "r": "412012"
+  },
+  "HT0934": {
+   "r": "412012"
+  },
+  "HT1011": {
+   "r": "412011"
+  },
+  "HT1012": {
+   "r": "412011"
+  },
+  "HT1013": {
+   "r": "412011"
+  },
+  "HT1014": {
+   "r": "412011"
+  },
+  "HT1021": {
+   "r": "412011"
+  },
+  "HT1022": {
+   "r": "412011"
+  },
+  "HT1023": {
+   "r": "412011"
+  },
+  "HT1024": {
+   "r": "412011"
+  },
+  "HT1025": {
+   "r": "412011"
+  },
+  "HT1031": {
+   "r": "412011"
+  },
+  "HT1032": {
+   "r": "412011"
+  }
+ }
+}

@@ -5,16 +5,28 @@
    Aucun compteur n'est écrit en dur : tout est compté depuis les fichiers. */
 /* SANS NUMÉRO DE VERSION, ET C'EST OBLIGATOIRE.
    Le navigateur identifie un module par son URL COMPLÈTE, requête comprise :
-   "./etat.js?v=34" et "./etat.js?v=34" sont deux modules distincts, chacun avec
-   son propre objet S. Les six sous-modules importent "./etat.js?v=34" ; tant que
-   cette ligne portait ?v=21, l'état était coupé en deux — le moteur
-   remplissait S.terr et S.vals d'un côté, la fiche les lisait de l'autre et
-   n'y trouvait rien. Symptôme observé en production le 17/08/2026 : toutes
-   les fiches affichaient « 0 source » et « 0 indicateurs documentés sur 0 »,
-   alors que les 4 200 valeurs étaient bel et bien chargées.
-   Si etat.js doit un jour être versionné, il faut l'être dans les SEPT
-   fichiers à la fois, et dans la liste CORE du service worker. */
-import { S } from "./etat.js?v=34";
+   "./etat.js" et "./etat.js?v=35" sont deux modules distincts, chacun avec
+   son propre objet S. LES SEPT FICHIERS DOIVENT DONC PORTER LA MÊME CHAÎNE,
+   à la lettre près, et la liste CORE du service worker avec eux.
+
+   Le 17/08/2026 cette ligne portait ?v=21 quand les autres portaient ?v=22 :
+   le moteur remplissait S.terr et S.vals d'un côté, la fiche les lisait de
+   l'autre et n'y trouvait rien. Toutes les fiches affichaient « 0 source »
+   et « 0 indicateurs documentés sur 0 » alors que les 4 200 valeurs étaient
+   chargées. Le correctif d'alors a réaligné QUATRE fichiers sur sept.
+
+   LES TROIS AUTRES — carte, comparaison, i18n — importaient "./etat.js" tout
+   court, et personne ne l'a vu pendant neuf jours, parce que la panne était
+   cette fois SILENCIEUSE : `etat.js` déclare `LANG: "fr"`, si bien que les
+   quatre fichiers versionnés lisaient toujours « français » pendant que
+   i18n.js écrivait la vraie langue dans l'autre état. Conséquences réelles :
+   les nombres et les dates restaient formatés à la française en anglais et
+   en espagnol, et un lien partagé depuis une fiche ne portait jamais la
+   langue de celui qui l'avait écrit. Un défaut qui rend une page FAUSSE se
+   voit ; un défaut qui la rend seulement française ne se voit pas.
+
+   Les sept sont réalignés le 26/08/2026. */
+import { S } from "./etat.js?v=35";
 
 (async function () {
   "use strict";
@@ -982,7 +994,7 @@ import { S } from "./etat.js?v=34";
      mais l'ordre de cette liste doit continuer de se lire comme l'ordre des
      dépendances. */
   for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison", "rapport"]) {
-    (await import("./explorateur-" + m + ".js?v=34")).default(A);
+    (await import("./explorateur-" + m + ".js?v=35")).default(A);
   }
 
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);

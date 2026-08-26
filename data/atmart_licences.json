@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 111
+  "fichiers": 114
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -70,6 +70,8 @@
    "atmart_renvois_us.json",
    "atmart_renvois_us_annuel.csv",
    "atmart_renvois_us_mensuel.csv",
+   "atmart_resultats_emmus.json",
+   "atmart_resultats_emmus_HT.csv",
    "atmart_sante_declaree.json",
    "atmart_solaire_communes.json",
    "atmart_sols_communes.json",
@@ -142,7 +144,8 @@
   ],
   "à déclarer": [
    "atmart_couches_carte_HT.csv",
-   "atmart_indicateurs_communes_HT.csv"
+   "atmart_indicateurs_communes_HT.csv",
+   "haiti_regions_enquete_simplifie.geojson"
   ]
  },
  "fichiers": {
@@ -750,6 +753,20 @@
    ],
    "attribution": "U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
   },
+  "atmart_resultats_emmus.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-066"
+   ],
+   "attribution": "The DHS Program (ICF International), financé par l'USAID"
+  },
+  "atmart_resultats_emmus_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-066"
+   ],
+   "attribution": "The DHS Program (ICF International), financé par l'USAID"
+  },
   "atmart_retours_forces.json": {
    "licence": "sous réserve",
    "sources": [
@@ -894,6 +911,11 @@
     "SRC-001"
    ],
    "attribution": "CNIGS / UN OCHA"
+  },
+  "haiti_regions_enquete_simplifie.geojson": {
+   "licence": "à déclarer",
+   "sources": [],
+   "attribution": ""
   },
   "transferts_diaspora_haiti_2000_2025.csv": {
    "licence": "CC BY 4.0",

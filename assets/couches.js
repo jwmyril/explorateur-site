@@ -6,7 +6,7 @@
    d'où il vient ni ce qu'il ne couvre pas. */
 (function () {
   "use strict";
-  var DV = "?d=2026-08-25a";
+  var DV = "?d=2026-08-25b";
   var $ = function (s) { return document.querySelector(s); };
   var fmtN = function (v) { return (+v).toLocaleString("fr-FR"); };
 
@@ -281,6 +281,42 @@
        cartographie contributive : l'absence d'une station veut dire absence
        de licence, pas absence d'observation. C'est l'inverse exact de la
        couche des lieux de culte, juste au-dessus. */
+    { id: "mortalite_infantile", nom: "Mortalité infantile (EMMUS 2016)", type: "choroplethe",
+      maille: "enquete", rampe: "alerte",
+      csv: "data/atmart_resultats_emmus_HT.csv", pcode: "pcode_region_enquete",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          if (r.indicateur_id !== "CM_ECMR_C_IMR") return;
+          if (r.annee !== "2016" || r.cartographiable !== "oui") return;
+          m[r.pcode_region_enquete] = +r.valeur || 0;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("enquête EMMUS 2016-2017"),
+                 unite: "décès avant un an pour 1 000 naissances vivantes" };
+      },
+      source: "EMMUS / DHS Program — API des indicateurs, passeport PSP-077",
+      limite: "C'EST UN RÉSULTAT, PAS UNE PRÉSENCE, et c'est ce qui manquait à cet atlas : nous savions où sont les dispensaires, pas si les enfants survivent. LA DERNIÈRE ENQUÊTE DATE DE 2016-2017, dix ans : cette carte dit où en était Haïti AVANT l'effondrement sécuritaire, pas où elle en est. LA MAILLE N'EST NI LA COMMUNE NI LE DÉPARTEMENT : l'EMMUS coupe l'Ouest en aire métropolitaine et reste de l'Ouest — plus fin que le département là où ça compte — et laisse les neuf autres entiers. Les contours sont ceux du DHS lui-même, généralisés sur une grille : ils situent une région, ils ne bornent pas un cadastre. C'EST UNE ENQUÊTE PAR SONDAGE : elle a une marge d'erreur que l'API ne publie pas ici, et un écart de deux points entre deux régions ne prouve rien. Les écarts qui tiennent se comptent en dizaines — et il y en a : trois fois plus de décès dans le reste de l'Ouest qu'en Grand'Anse. DEUX LIGNES DE LA SOURCE NE SONT PAS DESSINÉES : l'agrégat « Grand'Anse et Nippes réunies », qui recouvrirait deux régions déjà peintes, et la strate « camps de déplacés » de 2012, qui n'est pas un territoire." },
+
+    { id: "femmes_lettrees", nom: "Femmes sachant lire (EMMUS 2016)", type: "choroplethe",
+      maille: "enquete", rampe: "vegetal",
+      csv: "data/atmart_resultats_emmus_HT.csv", pcode: "pcode_region_enquete",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          if (r.indicateur_id !== "ED_LITR_W_LIT") return;
+          if (r.annee !== "2016" || r.cartographiable !== "oui") return;
+          m[r.pcode_region_enquete] = +r.valeur || 0;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("enquête EMMUS 2016-2017"),
+                 unite: "% des femmes de 15 à 49 ans" };
+      },
+      source: "EMMUS / DHS Program — API des indicateurs, passeport PSP-077",
+      limite: "C'EST UN RÉSULTAT, PAS UNE PRÉSENCE : l'atlas savait compter les écoles déclarées et les écoles vues, il ne savait pas dire si l'on sait lire. LA RAMPE MONTE VERS LE VERT parce qu'ici, beaucoup est une bonne nouvelle — l'inverse de la carte de mortalité, où la même teinte dirait le contraire de la donnée. LA DERNIÈRE ENQUÊTE DATE DE 2016-2017. LA MAILLE EST CELLE DE L'ENQUÊTE, ni commune ni département, avec les contours du DHS lui-même. C'EST UN SONDAGE : un écart de deux points ne prouve rien. LA QUESTION PORTE SUR LES FEMMES DE 15 À 49 ANS, parce que c'est l'échantillon de l'enquête — ce n'est pas le taux d'alphabétisation de la population." },
+
     { id: "transferts_dep", nom: "Transferts reçus par département (BRH)", type: "choroplethe",
       maille: "departement", rampe: "urbain",
       csv: "data/atmart_transferts_departements_HT.csv", pcode: "pcode_departement",
@@ -1081,6 +1117,31 @@
         return T("Touchez une commune pour lire sa valeur ; touchez-la encore pour ouvrir sa fiche.");
       }
     },
+    enquete: {
+      fiche: false,
+      /* PAS DE `jeu()` : ces polygones ne sont pas charges au demarrage. La
+         maille les apporte par fichier, ce qui est precisement ce que la
+         generalisation devait permettre. */
+      fichier: "data/haiti_regions_enquete_simplifie.geojson",
+      gris: function (n) {
+        return TF("{n} région(s) d'enquête en gris : non documenté, jamais zéro", { n: n });
+      },
+      toutes: function (n) {
+        return TF("Les {n} régions d'enquête sont documentées.", { n: n });
+      },
+      part: function (d, t, p) {
+        return d > 1 ? TF("{d} régions d'enquête documentées sur {t} ({p} %).", { d: d, t: t, p: p })
+                     : TF("{d} région d'enquête documentée sur {t} ({p} %).", { d: d, t: t, p: p });
+      },
+      creux: function (g) {
+        return g === 1
+          ? T("La région en gris n'est pas une région à zéro : l'enquête ne la couvre pas.")
+          : TF("Les {g} régions en gris ne sont pas des régions à zéro : l'enquête ne les couvre pas.", { g: g });
+      },
+      toucher: function () {
+        return T("Touchez une région pour lire sa valeur. Une région d'enquête n'est pas une entité administrative : elle n'a pas de fiche.");
+      }
+    },
     departement: {
       fiche: false,
       jeu: function () { return departements; },
@@ -1763,6 +1824,7 @@
                         une absence de pratique. */
                      ["Lieux de culte — ce que la carte en montre",
                       ["lieux_culte", "lieux_culte_vodou"]],
+                     ["Résultats — comment ça va, pas seulement ce qu'il y a", ["mortalite_infantile", "femmes_lettrees"]],
                      ["Transferts — où l'argent arrive et où on le touche", ["transferts_dep", "points_transfert"]],
                      ["Médias — stations autorisées",
                       ["medias", "medias_communautaires"]],

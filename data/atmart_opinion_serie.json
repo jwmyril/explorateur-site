@@ -189,7 +189,10 @@
    "ponderation": "poids de sondage du fichier"
   }
  ],
- "vagues_ecartees": [],
+ "vagues_ecartees": [
+  "République dominicaine 2004 — aucun questionnaire n'a été relevé pour cette vague, donc aucune question ne peut être déclarée posée",
+  "République dominicaine 2006 — le fichier compte 2 518 lignes quand sa note technique en annonce 1 519, et il n'a pas de variable d'unité primaire"
+ ],
  "series_nationales_d_au_moins_quatre_points": 40,
  "series_nationales_totales": 48
 }

@@ -83,6 +83,90 @@ IND-ACC-004,ht,methode_calcul,"Menm kalkil ak IND-ACC-001, destinasyon an se mac
 IND-ACC-004,ht,nom,Tan pou rive nan mache ki pi pre a
 IND-ACC-004,ht,sens_interpretation,Ba = pi bon aksè
 IND-ACC-004,ht,unite,minit
+IND-AGR-001,en,comparabilite,Comparable between communes of the same reference year.
+IND-AGR-001,en,definition,Share of the commune's area classified as cropland by satellite observation.
+IND-AGR-001,en,limites_connues,"THE SATELLITE SEES A COVER, NOT A FARM: it says neither what is grown, nor by whom, nor whether the harvest took place. A plot lying fallow when the image was taken drops out of the count. THE CREOLE GARDEN, mixing trees and food crops, is often classified as trees or shrubs rather than cropland: this indicator structurally understates Haitian agriculture, and that must be said before comparing two communes."
+IND-AGR-001,en,methode_calcul,Share of WorldCover pixels classified as cropland within the commune outline.
+IND-AGR-001,en,nom,Share of the territory under cropland
+IND-AGR-001,en,sens_interpretation,High = more cultivated land
+IND-AGR-001,en,unite,% of the commune's area
+IND-AGR-001,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-AGR-001,es,definition,Parte de la superficie comunal clasificada como tierras cultivadas por observación satelital.
+IND-AGR-001,es,limites_connues,"EL SATÉLITE VE UNA COBERTURA, NO UNA EXPLOTACIÓN: no dice ni qué se cultiva, ni quién, ni si hubo cosecha. Una parcela en barbecho en el momento de la imagen sale del recuento. EL JARDÍN CRIOLLO, que mezcla árboles y cultivos alimentarios, suele clasificarse como árboles o arbustos y no como cultivo: este indicador subestima estructuralmente la agricultura haitiana, y hay que decirlo antes de comparar dos comunas."
+IND-AGR-001,es,methode_calcul,Parte de los píxeles de WorldCover clasificados como tierras cultivadas dentro del contorno comunal.
+IND-AGR-001,es,nom,Parte del territorio en cultivos
+IND-AGR-001,es,sens_interpretation,Alto = más tierras cultivadas
+IND-AGR-001,es,unite,% de la superficie comunal
+IND-AGR-001,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-AGR-001,ht,definition,Pati nan sifas komin nan satelit la klase kòm tè yo travay.
+IND-AGR-001,ht,limites_connues,"SATELIT LA WÈ YON KOUVÈTI, SE PA YON EKSPLWATASYON : li pa di ni sa yo plante, ni kiyès ki plante l, ni si rekòt la fèt. Yon pasèl ki an repo lè imaj la pran soti nan konte a. JADEN KREYÒL YO, ki mele pyebwa ak manje, souvan klase kòm pyebwa oswa touf olye ke jaden : endikatè sa a bese agrikilti ayisyen an pa estrikti, e fòk nou di sa anvan nou konpare de komin."
+IND-AGR-001,ht,methode_calcul,Pati piksèl WorldCover yo klase « tè kiltive » nan kontou komin nan.
+IND-AGR-001,ht,nom,Pati nan teritwa a ki nan jaden
+IND-AGR-001,ht,sens_interpretation,Wo = plis tè yo travay
+IND-AGR-001,ht,unite,% sifas komin nan
+IND-BAT-001,en,comparabilite,Comparable between communes of the same reference year.
+IND-BAT-001,en,definition,Number of building footprints detected by satellite imagery in the commune.
+IND-BAT-001,en,limites_connues,"A DETECTED BUILDING IS NOT A DWELLING: warehouses, schools, sheds and shelters all count the same, and two adjoining houses may register as one. DETECTION DEPENDS ON THE IMAGE: under dense tree cover a thatched roof goes unseen — wooded communes are therefore undercounted, and that is not a shortage of buildings."
+IND-BAT-001,en,methode_calcul,Count of Open Buildings footprints whose centroid falls inside the commune outline.
+IND-BAT-001,en,nom,Detected buildings
+IND-BAT-001,en,sens_interpretation,High = more constructions detected
+IND-BAT-001,en,unite,buildings
+IND-BAT-001,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-BAT-001,es,definition,Número de huellas de edificios detectadas por imagen satelital en la comuna.
+IND-BAT-001,es,limites_connues,"UN EDIFICIO DETECTADO NO ES UNA VIVIENDA: almacenes, escuelas, cobertizos y refugios cuentan igual, y dos casas medianeras pueden registrarse como una. LA DETECCIÓN DEPENDE DE LA IMAGEN: bajo cubierta arbórea densa, un techo de paja pasa desapercibido — las comunas boscosas están por tanto subcontadas, y eso no es falta de construcciones."
+IND-BAT-001,es,methode_calcul,Recuento de huellas de Open Buildings cuyo centroide cae dentro del contorno comunal.
+IND-BAT-001,es,nom,Edificios detectados
+IND-BAT-001,es,sens_interpretation,Alto = más construcciones detectadas
+IND-BAT-001,es,unite,edificios
+IND-BAT-001,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-BAT-001,ht,definition,Konbyen anprent bilding satelit la detekte nan komin nan.
+IND-BAT-001,ht,limites_connues,"YON BILDING YO DETEKTE SE PA YON KAY : depo, lekòl, hanga ak abri konte menm jan, e de kay kole ka fè yon sèl. DETEKSYON AN DEPANN DE IMAJ LA : anba gwo pyebwa, yon tèt kay an pay pa parèt — komin ki gen anpil pyebwa konte mwens, e se pa paske gen mwens konstriksyon."
+IND-BAT-001,ht,methode_calcul,Konte anprent Open Buildings yo ki gen sant yo nan kontou komin nan.
+IND-BAT-001,ht,nom,Bilding satelit la detekte
+IND-BAT-001,ht,sens_interpretation,Wo = plis konstriksyon detekte
+IND-BAT-001,ht,unite,bilding
+IND-BAT-002,en,comparabilite,Comparable between communes of the same reference year.
+IND-BAT-002,en,definition,Mean ground area of the footprints detected in the commune.
+IND-BAT-002,en,limites_connues,"THIS FIGURE SAYS NOTHING ABOUT COMFORT OR SOUNDNESS. A high average may come from a few warehouses as easily as from spacious houses; a low one, from dense small-plot housing. It serves to tell FORMS of built fabric apart between communes, never to rank them."
+IND-BAT-002,en,methode_calcul,Total footprint area divided by the number of footprints in the commune.
+IND-BAT-002,en,nom,Average building footprint
+IND-BAT-002,en,sens_interpretation,"Neutral — says the form of the built fabric, not its quality"
+IND-BAT-002,en,unite,m² per building
+IND-BAT-002,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-BAT-002,es,definition,Superficie media al suelo de las huellas detectadas en la comuna.
+IND-BAT-002,es,limites_connues,"ESTA CIFRA NO DICE NADA SOBRE EL CONFORT NI LA SOLIDEZ. Una media alta puede venir de unos pocos almacenes tanto como de casas espaciosas; una media baja, de un hábitat denso de parcelas pequeñas. Sirve para distinguir FORMAS de edificación entre comunas, nunca para clasificarlas."
+IND-BAT-002,es,methode_calcul,Superficie total de las huellas dividida por el número de huellas en la comuna.
+IND-BAT-002,es,nom,Superficie media de un edificio
+IND-BAT-002,es,sens_interpretation,"Neutro — dice el tipo de edificación, no su calidad"
+IND-BAT-002,es,unite,m² por edificio
+IND-BAT-002,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-BAT-002,ht,definition,Sifas atè mwayèn anprent yo detekte nan komin nan.
+IND-BAT-002,ht,limites_connues,"CHIF SA A PA DI ANYEN SOU KONFÒ NI SOU SOLIDITE. Yon mwayèn wo ka soti nan kèk depo menm jan ak nan gwo kay ; yon mwayèn ba, nan yon abita sere ak ti pasèl. Li sèvi pou distenge FÒM bilding ant komin, pa janm pou klase yo."
+IND-BAT-002,ht,methode_calcul,Sifas total anprent yo divize pa kantite anprent nan komin nan.
+IND-BAT-002,ht,nom,Gwosè mwayèn yon bilding
+IND-BAT-002,ht,sens_interpretation,"Nèt — li di ki kalite bilding, se pa kalite yo"
+IND-BAT-002,ht,unite,m² pou chak bilding
+IND-BAT-003,en,comparabilite,Comparable between communes of the same reference year.
+IND-BAT-003,en,definition,"Increase in the commune's built-up area between 1990 and 2020, as a percentage of its 1990 built-up area."
+IND-BAT-003,en,limites_connues,"STRONG GROWTH OFTEN STARTS FROM A TINY BASE: doubling a few hectares yields a spectacular percentage without anything comparable to a spreading city having happened. Always read it alongside the 2020 built-up share, never alone. The four vintages come from the SAME instrument, which makes them comparable with one another — that is rare, and it is what gives the series its value."
+IND-BAT-003,en,methode_calcul,"(2020 built-up area minus 1990 built-up area) divided by the 1990 built-up area, times one hundred, on the GHSL grid."
+IND-BAT-003,en,nom,Built-up growth 1990-2020
+IND-BAT-003,en,sens_interpretation,High = faster urbanisation
+IND-BAT-003,en,unite,% over thirty years
+IND-BAT-003,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-BAT-003,es,definition,"Aumento de la superficie edificada de la comuna entre 1990 y 2020, en porcentaje de la superficie edificada de 1990."
+IND-BAT-003,es,limites_connues,"UN CRECIMIENTO FUERTE PARTE A MENUDO DE UNA BASE MINÚSCULA: duplicar unas hectáreas da un porcentaje espectacular sin que haya ocurrido nada comparable a una ciudad que se extiende. Léase siempre junto con la parte edificada de 2020, nunca sola. Los cuatro milésimos vienen del MISMO instrumento, lo que los hace comparables entre sí — es raro, y es lo que da valor a la serie."
+IND-BAT-003,es,methode_calcul,"(superficie edificada 2020 menos superficie edificada 1990) dividida por la de 1990, por cien, sobre la cuadrícula GHSL."
+IND-BAT-003,es,nom,Crecimiento de lo edificado 1990-2020
+IND-BAT-003,es,sens_interpretation,Alto = urbanización más rápida
+IND-BAT-003,es,unite,% en treinta años
+IND-BAT-003,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-BAT-003,ht,definition,"Konbyen sifas bilding komin nan ogmante ant 1990 ak 2020, an pousan sifas bilding 1990 la."
+IND-BAT-003,ht,limites_connues,"YON GWO KWASANS SOUVAN PATI SOU YON BAZ TOU PITI : double kèk ekta bay yon pousantaj ki frape san anyen ki konparab ak yon vil k ap gaye pa t rive. Toujou li l ansanm ak pati bati 2020 la, jamè pou kont li. Kat milezim yo soti nan MENM enstriman an, sa ki fè yo konparab ant yo — se ra, e se sa ki fè valè seri a."
+IND-BAT-003,ht,methode_calcul,"(sifas bati 2020 mwens sifas bati 1990) divize pa sifas bati 1990, fwa san, sou kadriyaj GHSL la."
+IND-BAT-003,ht,nom,Konbyen bilding ogmante 1990-2020
+IND-BAT-003,ht,sens_interpretation,Wo = ivanizasyon pi rapid
+IND-BAT-003,ht,unite,% sou trant an
 IND-BUD-001,en,comparabilite,Requires correcting for inflation to compare two fiscal years.
 IND-BUD-001,en,definition,Executed public expenditure related to the population.
 IND-BUD-001,en,limites_connues,A voted expenditure is not an executed expenditure.
@@ -104,6 +188,27 @@ IND-BUD-001,ht,methode_calcul,Depans egzekite nan ekzèsis la ÷ popilasyon. Se 
 IND-BUD-001,ht,nom,Depans piblik pou chak moun
 IND-BUD-001,ht,sens_interpretation,"Pou li l byen, gade tou ki jan depans lan òganize."
 IND-BUD-001,ht,unite,HTG / moun
+IND-EAU-001,en,comparabilite,Comparable between communes of the same reference year.
+IND-EAU-001,en,definition,Share of the commune's area covered by surface water present all year round.
+IND-EAU-001,en,limites_connues,"SURFACE WATER IS NOT DRINKING WATER, and it is not access to water either: a salt lake counts, an aquifer does not. THE SEASONAL SHARE IS NOT COUNTED HERE — it is often larger, and it is what floods. A high figure may signal a resource as much as a hazard, and this indicator does not choose between them."
+IND-EAU-001,en,methode_calcul,Share of Global Surface Water pixels classified as permanent water within the commune outline.
+IND-EAU-001,en,nom,Share of the territory under permanent water
+IND-EAU-001,en,sens_interpretation,Neutral — neither good nor bad
+IND-EAU-001,en,unite,% of the commune's area
+IND-EAU-001,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-EAU-001,es,definition,Parte de la superficie comunal cubierta por agua superficial presente todo el año.
+IND-EAU-001,es,limites_connues,"EL AGUA SUPERFICIAL NO ES AGUA POTABLE, y tampoco es acceso al agua: un lago salado cuenta, un acuífero no. LA PARTE ESTACIONAL NO SE CUENTA AQUÍ — suele ser mayor, y es la que inunda. Una cifra alta puede señalar un recurso tanto como un riesgo, y este indicador no decide entre ambos."
+IND-EAU-001,es,methode_calcul,Parte de los píxeles de Global Surface Water clasificados como agua permanente dentro del contorno comunal.
+IND-EAU-001,es,nom,Parte del territorio con agua permanente
+IND-EAU-001,es,sens_interpretation,Neutro — ni bueno ni malo
+IND-EAU-001,es,unite,% de la superficie comunal
+IND-EAU-001,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-EAU-001,ht,definition,Pati nan sifas komin nan ki kouvri ak dlo ki la tout ane a.
+IND-EAU-001,ht,limites_connues,"DLO SOU SIFAS LA SE PA DLO POU BWÈ, e se pa aksè ak dlo non plis : yon lak sale konte, yon nap anba tè pa konte. PATI SEZONYÈ A PA KONTE ISIT — souvan li pi gwo, e se li ki fè inondasyon. Yon chif wo ka vle di yon resous kou yon danje, e endikatè sa a pa chwazi ant de yo."
+IND-EAU-001,ht,methode_calcul,Pati piksèl Global Surface Water yo klase kòm dlo pèmanan nan kontou komin nan.
+IND-EAU-001,ht,nom,Pati nan teritwa a ki gen dlo tout ane a
+IND-EAU-001,ht,sens_interpretation,Nèt — ni bon ni move
+IND-EAU-001,ht,unite,% sifas komin nan
 IND-EDU-001,en,comparabilite,"NOT comparable between departments: the source covers only Sud, Ouest, Nippes and Grande'Anse."
 IND-EDU-001,en,definition,Number of schools recorded.
 IND-EDU-001,en,limites_connues,"PARTIAL COVERAGE — 4 departments out of 10, 49 communes out of 140. A zero value means “not recorded”, never “no schools”."
@@ -188,6 +293,27 @@ IND-EDU-010,ht,methode_calcul,"IND-EDU-001 ÷ IND-POP-007 × 10 000. Bòn anwo d
 IND-EDU-010,ht,nom,Lekòl pou chak 10 000 jèn 5 a 19 an
 IND-EDU-010,ht,sens_interpretation,"Wo = anpil etablisman anrejistre parapò ak jèn 5 a 19 an yo. Li pa di anyen sou gwosè lekòl yo, sou eta yo, ni sou distans pou rive."
 IND-EDU-010,ht,unite,lekòl / 10 000 jèn
+IND-ENE-001,en,comparabilite,Comparable between communes of the same reference year.
+IND-ENE-001,en,definition,"Photovoltaic output expected from a one-kilowatt-peak installation over a year, averaged across the commune's pixels."
+IND-ENE-001,en,limites_connues,"IT IS A RESOURCE, NOT EQUIPMENT: this figure says what a panel would produce, not what is installed. Differences between communes are small in a country this small and this sunny — a ranking on this indicator separates values that sit within a few per cent of each other. Relief matters more than latitude: the shadow of the mornes makes the difference, and it is averaged here over the whole commune."
+IND-ENE-001,en,methode_calcul,Mean of the Global Solar Atlas PVOUT values over every pixel falling inside the commune outline.
+IND-ENE-001,en,nom,Solar potential
+IND-ENE-001,en,sens_interpretation,High = better potential
+IND-ENE-001,en,unite,kWh per kWp per year
+IND-ENE-001,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-ENE-001,es,definition,"Producción fotovoltaica esperada de una instalación de un kilovatio-pico en un año, promediada sobre los píxeles de la comuna."
+IND-ENE-001,es,limites_connues,"ES UN RECURSO, NO UN EQUIPAMIENTO: esta cifra dice lo que produciría un panel, no lo que está instalado. Las diferencias entre comunas son pequeñas en un país tan pequeño y tan soleado: una clasificación sobre este indicador separa valores que se mantienen en unos pocos por ciento. El relieve cuenta más que la latitud: la sombra de los mornes marca la diferencia, y aquí se promedia sobre toda la comuna."
+IND-ENE-001,es,methode_calcul,Media de los valores PVOUT del Global Solar Atlas sobre todos los píxeles dentro del contorno comunal.
+IND-ENE-001,es,nom,Potencial solar
+IND-ENE-001,es,sens_interpretation,Alto = mejor potencial
+IND-ENE-001,es,unite,kWh por kWp y por año
+IND-ENE-001,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-ENE-001,ht,definition,"Konbyen kouran yon enstalasyon solè yon kilowat-krèt ta pwodui nan yon ane, mwayèn pikselo komin nan."
+IND-ENE-001,ht,limites_connues,"SE YON RESOUS, SE PA YON EKIPMAN : chif sa a di sa yon panno ta pwodui, se pa sa ki enstale. Diferans ant komin yo piti nan yon peyi tou piti e tou ansoleye : yon klasman sou endikatè sa a separe valè ki kole youn ak lòt. Se relyèf la ki fè diferans lan plis pase latitid — lonbraj mòn yo — e li mwayenize sou tout komin nan."
+IND-ENE-001,ht,methode_calcul,Mwayèn valè PVOUT Global Solar Atlas la sou tout piksèl ki tonbe nan kontou komin nan.
+IND-ENE-001,ht,nom,Potansyèl solèy la
+IND-ENE-001,ht,sens_interpretation,Wo = pi bon potansyèl
+IND-ENE-001,ht,unite,kWh pou chak kWc pa ane
 IND-ENV-001,en,comparabilite,Comparable between communes of the same reference year.
 IND-ENV-001,en,definition,"Share of the commune's area classified as ""trees"" by satellite observation."
 IND-ENV-001,en,limites_connues,"Tree cover in the satellite's sense is not forest in the forestry sense: orchards, hedgerows and dense scrub are included. Compare it with the World Bank's national forest area, which gives an entirely different figure — two definitions, two methods."
@@ -251,6 +377,27 @@ IND-ENV-003,ht,methode_calcul,"Mwayèn total anyèl CHIRPS yo sou 1991-2020, pra
 IND-ENV-003,ht,nom,Lapli nòmal nan yon ane
 IND-ENV-003,ht,sens_interpretation,Ni bon ni move : li li ansanm ak agrikilti a ak risk la
 IND-ENV-003,ht,unite,mm pa ane
+IND-FIN-001,en,comparabilite,Comparable between communes of the same reference year.
+IND-FIN-001,en,definition,"Number of counters where a remittance can be collected in the commune, for the operator that publishes its network."
+IND-FIN-001,en,limites_connues,"ONE OPERATOR ONLY IS COUNTED. Six remittance houses are licensed by the BRH; only one publishes its list in a usable form. The figure therefore describes the shape of ONE network, not total access to money — a commune at zero may well be served by a competitor. It remains the ONLY commune-level data that exists on remittances: the amounts do not go below the department."
+IND-FIN-001,en,methode_calcul,"Count of service points from the operator's public directory, attached to the commune outlines."
+IND-FIN-001,en,nom,Remittance payout points
+IND-FIN-001,en,sens_interpretation,High = denser network
+IND-FIN-001,en,unite,payout points
+IND-FIN-001,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-FIN-001,es,definition,"Número de ventanillas donde puede cobrarse una remesa en la comuna, para el operador que publica su red."
+IND-FIN-001,es,limites_connues,"SE CUENTA UN SOLO OPERADOR. Seis casas de transferencia están autorizadas por el BRH; solo una publica su lista en forma utilizable. La cifra describe por tanto la forma de UNA red, no el acceso total al dinero — una comuna en cero puede estar servida por un competidor. Sigue siendo el ÚNICO dato comunal que existe sobre las remesas: los montos no bajan del departamento."
+IND-FIN-001,es,methode_calcul,"Recuento de puntos de servicio del directorio público del operador, vinculados a los contornos comunales."
+IND-FIN-001,es,nom,Puntos de pago de remesas
+IND-FIN-001,es,sens_interpretation,Alto = red más densa
+IND-FIN-001,es,unite,puntos de pago
+IND-FIN-001,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-FIN-001,ht,definition,"Konbyen gichè kote yon moun ka touche yon transfè nan komin nan, pou operatè ki pibliye rezo l la."
+IND-FIN-001,ht,limites_connues,"SE YON SÈL OPERATÈ YO KONTE. Sis mezon transfè gen agreman BRH ; se yon sèl ki pibliye lis li nan yon fòm ou ka sèvi. Chif la dekri fòm YON rezo, se pa aksè total ak lajan — yon komin ki gen zewo ka gen yon konkiran k ap sèvi l. Se kanmenm SÈL done kominal ki egziste sou transfè yo : montan yo pa desann anba depatman an."
+IND-FIN-001,ht,methode_calcul,"Konte pwen sèvis anyè piblik operatè a, ratache nan kontou komin yo."
+IND-FIN-001,ht,nom,Kote yo ka touche transfè
+IND-FIN-001,ht,sens_interpretation,Wo = rezo pi sere
+IND-FIN-001,ht,unite,kote pou touche
 IND-GEO-001,en,comparabilite,Comparable as long as the administrative division does not change.
 IND-GEO-001,en,definition,Area of the territorial entity.
 IND-GEO-001,en,limites_connues,"The national total of the sections (26,942 km²) differs from the usual 27,750 km²: coastal tracing of the polygons."
@@ -818,6 +965,48 @@ IND-RIS-002,ht,methode_calcul,Konte trajektwa IBTrACS yo ki pase nan mwens pase 
 IND-RIS-002,ht,nom,Siklòn ki pase nan yon reyon 100 km
 IND-RIS-002,ht,sens_interpretation,Wo = plis ekspozisyon nan istwa a
 IND-RIS-002,ht,unite,kantite depi 1851
+IND-RIS-003,en,comparabilite,Comparable between communes of the same reference year.
+IND-RIS-003,en,definition,Magnitude of the strongest earthquake whose epicentre passed within 100 km of the commune since 1911.
+IND-RIS-003,en,limites_connues,"MAGNITUDE IS NOT THE SHAKING FELT: it measures energy at the source, not what the commune underwent, which depends on distance, depth and ground. ONE HUNDRED KILOMETRES IS A CHOICE, not a physical threshold. And a catalogue is the more complete the more recent it is: the absence of an old earthquake may be the absence of a measuring station."
+IND-RIS-003,en,methode_calcul,Maximum magnitude among ComCat catalogue events whose epicentre lies within 100 km of the commune centre.
+IND-RIS-003,en,nom,Strongest earthquake felt within 100 km
+IND-RIS-003,en,sens_interpretation,High = has known a stronger earthquake
+IND-RIS-003,en,unite,magnitude
+IND-RIS-003,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-RIS-003,es,definition,Magnitud del sismo más fuerte cuyo epicentro pasó a menos de 100 km de la comuna desde 1911.
+IND-RIS-003,es,limites_connues,"LA MAGNITUD NO ES LA SACUDIDA SENTIDA: mide la energía en la fuente, no lo que sufrió la comuna, que depende de la distancia, la profundidad y el suelo. CIEN KILÓMETROS ES UNA ELECCIÓN, no un umbral físico. Y un catálogo es tanto más completo cuanto más reciente: la ausencia de un sismo antiguo puede ser la ausencia de una estación de medición."
+IND-RIS-003,es,methode_calcul,Magnitud máxima entre los eventos del catálogo ComCat cuyo epicentro está a menos de 100 km del centro comunal.
+IND-RIS-003,es,nom,Sismo más fuerte sentido a menos de 100 km
+IND-RIS-003,es,sens_interpretation,Alto = ha conocido un sismo más fuerte
+IND-RIS-003,es,unite,magnitud
+IND-RIS-003,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-RIS-003,ht,definition,Manyitid pi gwo tranblemanntè ki gen episant li a mwens pase 100 km komin nan depi 1911.
+IND-RIS-003,ht,limites_connues,"MANYITID SE PA SOUKOUS MOUN SANTI A : li mezire enèji nan sous la, se pa sa komin nan sibi, ki depann de distans, pwofondè ak tè a. SAN KILOMÈT SE YON CHWA, se pa yon limit fizik. E yon katalòg pi konplè plis li resan : absans yon tranblemanntè ansyen ka vle di absans yon estasyon mezi."
+IND-RIS-003,ht,methode_calcul,Manyitid maksimòm evènman katalòg ComCat yo ki gen episant yo a mwens 100 km sant komin nan.
+IND-RIS-003,ht,nom,Pi gwo tranblemanntè yo santi a mwens 100 km
+IND-RIS-003,ht,sens_interpretation,Wo = te konnen yon tranblemanntè pi fò
+IND-RIS-003,ht,unite,manyitid
+IND-RIS-004,en,comparabilite,Comparable between communes of the same reference year.
+IND-RIS-004,en,definition,Highest wind speed carried by a cyclone that passed within 100 km of the commune since 1851.
+IND-RIS-004,en,limites_connues,"IT IS THE CYCLONE'S WIND, NOT THE WIND THE COMMUNE UNDERWENT: the speed is the one measured at the centre of the system, at a distance that may reach one hundred kilometres. OLD RECORDS ARE LESS RELIABLE — before the satellite era, a cyclone's intensity at sea was estimated, sometimes not measured at all. A high maximum says a violent event has already passed there; it does not say how often."
+IND-RIS-004,en,methode_calcul,Maximum wind speed among IBTrACS tracks passing within 100 km of the commune centre.
+IND-RIS-004,en,nom,Peak wind of a cyclone passing nearby
+IND-RIS-004,en,sens_interpretation,High = has known a more violent cyclone
+IND-RIS-004,en,unite,km/h
+IND-RIS-004,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-RIS-004,es,definition,Velocidad de viento más alta que llevó un ciclón que pasó a menos de 100 km de la comuna desde 1851.
+IND-RIS-004,es,limites_connues,"ES EL VIENTO DEL CICLÓN, NO EL VIENTO QUE SUFRIÓ LA COMUNA: la velocidad es la medida en el centro del sistema, a una distancia que puede alcanzar los cien kilómetros. LOS REGISTROS ANTIGUOS SON MENOS FIABLES — antes de la era satelital, la intensidad de un ciclón en el mar se estimaba, a veces no se medía en absoluto. Un máximo alto dice que un evento violento ya pasó por allí; no dice con qué frecuencia."
+IND-RIS-004,es,methode_calcul,Velocidad de viento máxima entre las trayectorias IBTrACS que pasan a menos de 100 km del centro comunal.
+IND-RIS-004,es,nom,Viento máximo de un ciclón que pasó cerca
+IND-RIS-004,es,sens_interpretation,Alto = ha conocido un ciclón más violento
+IND-RIS-004,es,unite,km/h
+IND-RIS-004,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-RIS-004,ht,definition,Vitès van ki pi wo yon siklòn ki pase a mwens pase 100 km komin nan te pote depi 1851.
+IND-RIS-004,ht,limites_connues,"SE VAN SIKLÒN NAN, SE PA VAN KOMIN NAN SIBI : vitès la se sa yo mezire nan sant sistèm nan, nan yon distans ki ka rive san kilomèt. RELVE ANSYEN YO MWENS FYAB — anvan epòk satelit la, entansite yon siklòn sou lanmè te estime, pafwa pa t mezire ditou. Yon maksimòm wo di ke yon evènman vyolan gen tan pase la, li pa di frekans lan."
+IND-RIS-004,ht,methode_calcul,Vitès van maksimòm nan trajektwa IBTrACS yo ki pase a mwens 100 km sant komin nan.
+IND-RIS-004,ht,nom,Pi gwo van yon siklòn ki pase toupre
+IND-RIS-004,ht,sens_interpretation,Wo = te konnen yon siklòn pi vyolan
+IND-RIS-004,ht,unite,km/è
 IND-SAN-001,en,comparabilite,NOT comparable between communes outside the covered area: the source covers only 14 communes out of 140.
 IND-SAN-001,en,definition,Number of operating health facilities recorded.
 IND-SAN-001,en,limites_connues,"PARTIAL COVERAGE — 14 communes (Artibonite, Centre, Nord, Ouest). An absent commune does not have zero facilities: it is not covered, hence status N. 2023 census."
@@ -944,6 +1133,69 @@ IND-SAN-010,ht,methode_calcul,IND-SAN-001 ÷ IND-POP-001 × 10 000.
 IND-SAN-010,ht,nom,Etablisman sante pou chak 10 000 moun
 IND-SAN-010,ht,sens_interpretation,"Wo = anpil etablisman anrejistre parapò ak popilasyon an. Li li ansanm ak tan pou rive, yon rapò kominal pa ka kenbe sa."
 IND-SAN-010,ht,unite,etablisman / 10 000 moun
+IND-SOC-001,en,comparabilite,Comparable between communes of the same reference year.
+IND-SOC-001,en,definition,Number of radio stations holding a CONATEL licence whose registered seat is in the commune.
+IND-SOC-001,en,limites_connues,"IT IS AN ADMINISTRATIVE ACT, NOT AN OBSERVATION: a commune at zero has no LICENSED station, which is not the same as no station on air. It is the exact opposite of the contributive layers, where a zero would mean « nobody looked ». THE SEAT IS NOT THE COVERAGE: a station based in Port-au-Prince is heard far beyond it, and a commune without a station is not a commune without radio."
+IND-SOC-001,en,methode_calcul,"Count of stations in the CONATEL licence list, attached to the commune of their declared seat."
+IND-SOC-001,en,nom,Licensed radio stations
+IND-SOC-001,en,sens_interpretation,High = more licensed stations
+IND-SOC-001,en,unite,licensed stations
+IND-SOC-001,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-SOC-001,es,definition,Número de emisoras de radio con autorización del CONATEL cuya sede está en la comuna.
+IND-SOC-001,es,limites_connues,"ES UN ACTO ADMINISTRATIVO, NO UNA OBSERVACIÓN: una comuna en cero no tiene emisora AUTORIZADA, lo que no es lo mismo que no tener emisora al aire. Es lo contrario exacto de las capas contributivas, donde un cero significaría « nadie miró ». LA SEDE NO ES LA COBERTURA: una radio con sede en Puerto Príncipe se oye mucho más allá, y una comuna sin emisora no es una comuna sin radio."
+IND-SOC-001,es,methode_calcul,"Recuento de emisoras en la lista de autorizaciones del CONATEL, vinculadas a la comuna de su sede declarada."
+IND-SOC-001,es,nom,Emisoras de radio autorizadas
+IND-SOC-001,es,sens_interpretation,Alto = más emisoras autorizadas
+IND-SOC-001,es,unite,emisoras autorizadas
+IND-SOC-001,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-SOC-001,ht,definition,Konbyen estasyon radyo ki gen otorizasyon CONATEL e ki gen syèj yo nan komin nan.
+IND-SOC-001,ht,limites_connues,"SE YON AK ADMINISTRATIF, SE PA YON OBSÈVASYON : yon komin ki gen zewo pa gen estasyon KI GEN OTORIZASYON, sa ki pa menm bagay ak pa gen estasyon k ap emèt. Se kontrè kouch kontribitif yo, kote yon zewo ta vle di « pèsonn pa t gade ». SYÈJ LA SE PA KOUVÈTI A : yon radyo ki chita Pòtoprens tande byen lwen, e yon komin san estasyon se pa yon komin san radyo."
+IND-SOC-001,ht,methode_calcul,"Konte estasyon nan lis otorizasyon CONATEL la, ratache nan komin syèj yo deklare a."
+IND-SOC-001,ht,nom,Estasyon radyo ki gen otorizasyon
+IND-SOC-001,ht,sens_interpretation,Wo = plis estasyon ki gen otorizasyon
+IND-SOC-001,ht,unite,estasyon ki gen otorizasyon
+IND-SOC-002,en,comparabilite,Comparable between communes of the same reference year.
+IND-SOC-002,en,definition,Number of television stations holding a CONATEL licence whose registered seat is in the commune.
+IND-SOC-002,en,limites_connues,"Same limits as for radio: a licence is not a broadcast, and a seat is not coverage. Television is even more concentrated on the metropolitan area than radio."
+IND-SOC-002,en,methode_calcul,"Count of television stations in the CONATEL licence list, attached to the commune of their declared seat."
+IND-SOC-002,en,nom,Licensed television stations
+IND-SOC-002,en,sens_interpretation,High = more licensed stations
+IND-SOC-002,en,unite,licensed stations
+IND-SOC-002,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-SOC-002,es,definition,Número de canales de televisión con autorización del CONATEL cuya sede está en la comuna.
+IND-SOC-002,es,limites_connues,"Mismos límites que para la radio: una autorización no es una emisión, y una sede no es cobertura. La televisión está aún más concentrada en el área metropolitana que la radio."
+IND-SOC-002,es,methode_calcul,"Recuento de canales en la lista de autorizaciones del CONATEL, vinculados a la comuna de su sede declarada."
+IND-SOC-002,es,nom,Canales de televisión autorizados
+IND-SOC-002,es,sens_interpretation,Alto = más emisoras autorizadas
+IND-SOC-002,es,unite,emisoras autorizadas
+IND-SOC-002,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-SOC-002,ht,definition,Konbyen estasyon televizyon ki gen otorizasyon CONATEL e ki gen syèj yo nan komin nan.
+IND-SOC-002,ht,limites_connues,"Menm limit ak radyo a : otorizasyon se pa emisyon, e syèj se pa kouvèti. Televizyon an pi konsantre toujou pase radyo a sou zòn metwopolitèn nan."
+IND-SOC-002,ht,methode_calcul,"Konte estasyon televizyon nan lis otorizasyon CONATEL la, ratache nan komin syèj yo deklare a."
+IND-SOC-002,ht,nom,Estasyon televizyon ki gen otorizasyon
+IND-SOC-002,ht,sens_interpretation,Wo = plis estasyon ki gen otorizasyon
+IND-SOC-002,ht,unite,estasyon ki gen otorizasyon
+IND-SOC-003,en,comparabilite,Comparable between communes of the same reference year.
+IND-SOC-003,en,definition,Number of places of worship recorded in the commune by OpenStreetMap contributors.
+IND-SOC-003,en,limites_connues,"IT IS NOT A CENSUS, IT IS THE STATE OF A MAPPING EFFORT. A commune without a value is not a commune without churches: it is a commune nobody has surveyed — nineteen are in that case, and they come out EMPTY, never at zero. That would be the easiest mistake to make on this indicator, and the hardest to undo once published."
+IND-SOC-003,en,methode_calcul,"Count of OpenStreetMap objects tagged amenity=place_of_worship, attached to the commune outlines."
+IND-SOC-003,en,nom,Mapped places of worship
+IND-SOC-003,en,sens_interpretation,High = more places recorded
+IND-SOC-003,en,unite,places of worship recorded
+IND-SOC-003,es,comparabilite,Comparable entre comunas del mismo año de referencia.
+IND-SOC-003,es,definition,Número de lugares de culto registrados en la comuna por contribuyentes de OpenStreetMap.
+IND-SOC-003,es,limites_connues,"NO ES UN CENSO, ES EL ESTADO DE UNA CARTOGRAFÍA. Una comuna sin valor no es una comuna sin iglesias: es una comuna que nadie ha levantado — diecinueve están en ese caso, y salen VACÍAS, nunca en cero. Sería el error más fácil de cometer sobre este indicador, y el más difícil de deshacer una vez publicado."
+IND-SOC-003,es,methode_calcul,"Recuento de objetos de OpenStreetMap etiquetados amenity=place_of_worship, vinculados a los contornos comunales."
+IND-SOC-003,es,nom,Lugares de culto cartografiados
+IND-SOC-003,es,sens_interpretation,Alto = más lugares registrados
+IND-SOC-003,es,unite,lugares de culto registrados
+IND-SOC-003,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-SOC-003,ht,definition,Konbyen kote yo priye kontribitè OpenStreetMap yo leve nan komin nan.
+IND-SOC-003,ht,limites_connues,"SE PA YON RESANSMAN, SE ETA YON KATOGRAFI. Yon komin san valè se pa yon komin san legliz : se yon komin pèsonn pa t leve — disnèf nan ka sa a, e yo soti VID, jamè zewo. Se ta fot ki pi fasil pou fè sou endikatè sa a, e ki pi difisil pou rattrape yon fwa li pibliye."
+IND-SOC-003,ht,methode_calcul,"Konte objè OpenStreetMap ki make amenity=place_of_worship, ratache nan kontou komin yo."
+IND-SOC-003,ht,nom,Kote yo priye ki sou kat la
+IND-SOC-003,ht,sens_interpretation,Wo = plis kote yo leve sou kat la
+IND-SOC-003,ht,unite,kote yo priye ki leve sou kat la
 IND-TOU-001,en,comparabilite,Comparable between communes within the same extract only: each new extract carries the mappers' work.
 IND-TOU-001,en,definition,Number of accommodation establishments recorded in the commune by contributory OpenStreetMap mapping.
 IND-TOU-001,en,limites_connues,"A COUNT OF ESTABLISHMENTS, NEVER A CAPACITY: of 643 accommodations, none states its number of beds and only thirteen their number of rooms. The survey follows contributors, hence towns: 81 of 140 communes carry at least one place to stay, the others are absent and not at zero. A mapped establishment is neither classified, nor licensed, nor necessarily open."

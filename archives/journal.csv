@@ -53,7 +53,8 @@ atmart_ecoles_declarees.json,2026-08-17,archives/atmart_ecoles_declarees/2026-08
 atmart_ecoles_declarees.json,2026-08-17,archives/atmart_ecoles_declarees/2026-08-17-2.json,a05792d61e4a1d102a4f5dcf585c2546a618b3dbf6a40c65d26cd36fc8169de5,9387,0,2026-08-17,site,46a5774fdd,non
 atmart_ecoles_declarees.json,2026-08-23,archives/atmart_ecoles_declarees/2026-08-23.json,005daf8d0d752524a58c3137c0c945c4f0414afe321cda3664ea9057ee0bd768,9365,0,2026-08-23,site,d235690190,oui
 atmart_enquete_fiche.json,2026-08-26,archives/atmart_enquete_fiche/2026-08-26.json,32ed5ee5ddbd00221ca43508dc16040a763841e28970225b360623cc33c56dbf,29561,1588,2026-08-26,vitrine,8a4a9f4388,oui
-atmart_enquetes.json,2026-08-26,archives/atmart_enquetes/2026-08-26.json,2ed7eaeb41e469d1067158b1828188029e6ca99b6fdcccfa5662e48c39183f24,4052,134,2026-08-26,vitrine,7a13592174,oui
+atmart_enquetes.json,2026-08-26,archives/atmart_enquetes/2026-08-26.json,2ed7eaeb41e469d1067158b1828188029e6ca99b6fdcccfa5662e48c39183f24,4052,134,2026-08-26,vitrine,7a13592174,non
+atmart_enquetes.json,2026-08-26,archives/atmart_enquetes/2026-08-26-3.json,579ac781ba867022aa854bf9aeb09f95253c822d7cf3d85869a95c434591626e,4169,137,2026-08-26,vitrine,bd567ce890,oui
 atmart_enquetes.json,2026-08-26,archives/atmart_enquetes/2026-08-26-2.json,22f1de57e71f512eb1ce467a4645ebd67fc0dc149d69b828d35ed32594ead1e3,4052,134,2026-08-26,site,f73350d46b,non
 atmart_enquetes_inventaire_HT.csv,2026-08-26,archives/atmart_enquetes_inventaire_HT/2026-08-26.csv,ecb734704a24ab1603bbb2b7c3a2d21f5b9a3e519b65fe04172b674733fb8870,653561,2133,2026-08-26,vitrine,7a13592174,oui
 atmart_enquetes_resultats_HT.csv,2026-08-26,archives/atmart_enquetes_resultats_HT/2026-08-26.csv,c6e32b9fe67a30c6d8eeb92cdd85eb0d90421fd5b0f6766f761c8183ba21302d,5519282,76984,2026-08-26,vitrine,7a13592174,oui
@@ -303,7 +304,8 @@ catalogue_manifest.json,2026-08-21,archives/catalogue_manifest/2026-08-21-6.json
 catalogue_manifest.json,2026-08-21,archives/catalogue_manifest/2026-08-21-7.json,18258eaae4c60e38c32fff0bf98298b3eabf5ddfd056e5206cad1d9632a29285,3037,110,2026-08-21,vitrine,e46de3f42f,non
 catalogue_manifest.json,2026-08-21,archives/catalogue_manifest/2026-08-21-8.json,c3b7c956567cd02fc768d4d97818531e0943b4d40f47ecd2142863c0263a0699,3037,110,2026-08-21,vitrine,fd1ce67602,non
 catalogue_manifest.json,2026-08-23,archives/catalogue_manifest/2026-08-23.json,20f35ac7b04031f6582e9c8985892af72bb041b767e595779e2151727dedaaba,3134,114,2026-08-23,vitrine,6c2a1d8ac8,non
-catalogue_manifest.json,2026-08-26,archives/catalogue_manifest/2026-08-26.json,16bf5eeedc876bb3c2015477f9da6ec6875441f3788c3a38136f23bc93f694ea,4039,151,2026-08-26,vitrine,9c832550e8,oui
+catalogue_manifest.json,2026-08-26,archives/catalogue_manifest/2026-08-26.json,16bf5eeedc876bb3c2015477f9da6ec6875441f3788c3a38136f23bc93f694ea,4039,151,2026-08-26,vitrine,9c832550e8,non
+catalogue_manifest.json,2026-08-26,archives/catalogue_manifest/2026-08-26-2.json,42f43f2a73d95a91db3c513f65ebec9de19d1ee1da6d32726108ba2a00259293,4068,152,2026-08-26,vitrine,bd567ce890,oui
 haiti_communes_simplifie.geojson,2026-08-14,archives/haiti_communes_simplifie/2026-08-14.geojson,e0162bfa16e701a3f71804c6b7a574bf0a943801fc5687f065807b2cbb681e64,231716,1,2026-08-14,vitrine,5eda4cfd6c,oui
 haiti_contour_simplifie.geojson,2026-07-31,archives/haiti_contour_simplifie/2026-07-31.geojson,15b281bc0d8b87827805908cc7e90d0a9a3ceb8541b866650c1ca19d3946c3c1,16785,0,2026-07-31,vitrine,3f56418955,oui
 haiti_departements_simplifie.geojson,2026-08-14,archives/haiti_departements_simplifie/2026-08-14.geojson,9824d2bce124ac292ca1750e679368c7c7fca85eccf997f6e05f0cb1031f3aa2,42967,1,2026-08-14,vitrine,5eda4cfd6c,oui

@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v121";
+const CACHE = "explorateur-v122";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -11,11 +11,11 @@ const CACHE = "explorateur-v121";
    prix d'un forfait compte a l'octet. La lecture, elle, passe par
    `caches.match`, qui interroge tous les caches — rien d'autre a changer. */
 const GARDE = "explorateur-communes";
-const DV = "?d=2026-08-19a";   // doit suivre le DV de assets/modules/explorateur.js
+const DV = "?d=2026-08-27a";   // doit suivre le DV de assets/modules/explorateur.js
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=35", "/assets/data.css?v=46", "/assets/modules/explorateur.js?v=39",
+  "/assets/style.css?v=35", "/assets/data.css?v=46", "/assets/modules/explorateur.js?v=40",
   "/assets/modules/etat.js?v=35",
   "/assets/modules/explorateur-i18n.js?v=35",
   "/assets/modules/explorateur-carte.js?v=35",
@@ -26,7 +26,7 @@ const CORE = [
   // la commune » ne repondrait pas hors connexion, alors que les treize
   // couches qu'il assemble, elles, sont deja en cache.
   "/assets/modules/explorateur-rapport.js?v=21",
-  "/couches.html", "/fiche.html", "/assets/couches.js?v=45",
+  "/couches.html", "/fiche.html", "/assets/couches.js?v=46",
   // La marque : complete pour l'en-tete, REDUITE pour l'onglet — a 16 pixels
   // l'emboitement (Haiti dans la boucle, la boucle dans la loupe) devient une
   // tache, et c'est une contrainte de l'emboitement, pas un reglage a trouver.

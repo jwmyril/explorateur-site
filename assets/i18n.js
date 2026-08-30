@@ -81,7 +81,12 @@
     const li = document.createElement("li");
     li.className = "lang-select";
     const btn = document.createElement("button");
-    btn.type = "button"; btn.className = "lang-current"; btn.textContent = "🌐 FR";
+    btn.type = "button"; btn.className = "lang-current";
+    // L'etiquette doit partir de la langue COURANTE, pas de "FR".
+    // apply() la met a jour, mais il s'execute AVANT que ce bouton
+    // existe : ecrite en dur, elle restait donc a FR sur une page
+    // anglaise, kreyol ou espagnole. Constate le 30/08/2026.
+    btn.textContent = "🌐 " + (document.documentElement.lang || DEFAULT).toUpperCase();
     btn.setAttribute("aria-label", "Langue / Lang");
     const menu = document.createElement("div");
     menu.className = "lang-menu";

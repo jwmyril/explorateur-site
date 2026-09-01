@@ -59,7 +59,7 @@ footer a,main a.lien{color:#1550b8}
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/fiche.html" />
   <script>window.ATM_LANG_FORCE = "ht"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/fiche.html", "ht": "https://explorateur.atmart.ltd/ht/fiche.html", "en": "https://explorateur.atmart.ltd/en/fiche.html", "es": "https://explorateur.atmart.ltd/es/fiche.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-9RT7XFx/kCLMl+U0mQRFMpEHjDQKb9eZ7cJ5rHf+Wyk=' 'sha256-I4ZnsspwuYPAj3mJDYcTyr7P2y3CmiIx8nmqgyVDOSU=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-fhgxv73E/xv8LO6HuTXw9GA3mbcOqLCRHUCTk5sCS/U='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-8oFabRhHx/krEfUrdi61UPhMgaVdJWrJJWmJ0Mprspw=' 'sha256-9RT7XFx/kCLMl+U0mQRFMpEHjDQKb9eZ7cJ5rHf+Wyk=' 'sha256-I4ZnsspwuYPAj3mJDYcTyr7P2y3CmiIx8nmqgyVDOSU=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -204,6 +204,16 @@ footer a,main a.lien{color:#1550b8}
     }).catch(function () { return false; });
   }
 
+  /* LA RACINE DU SITE, VUE DEPUIS CETTE PAGE.
+     `/ht/fiche.html` demandait `data/leger/…` en relatif, qui résout en
+     `/ht/data/leger/…` — inexistant. L'édition légère, faite pour les
+     connexions lentes, répondait donc une erreur à trois lecteurs sur
+     quatre. On remonte d'un cran quand la page vit sous un préfixe de
+     langue ; un chemin absolu marcherait aussi, mais casserait le jour où
+     le site serait servi sous un sous-chemin — et `build_langues.py`
+     applique déjà cette règle-là aux styles et aux scripts. */
+  var RACINE = /^\/(ht|en|es)\//.test(location.pathname) ? "../" : "";
+
   function charger(u, essais) {
     essais = essais === undefined ? 2 : essais;
     return fetch(u).then(function (r) {
@@ -305,7 +315,7 @@ footer a,main a.lien{color:#1550b8}
     d.hidden = false;
     d.innerHTML = '<p class="note">Chargement de la fiche…</p>';
     $("#recherche").hidden = true;
-    charger("data/leger/" + id + ".json")
+    charger(RACINE + "data/leger/" + id + ".json")
       .then(afficherFiche)
       .catch(function () {
         echec(d, "La fiche n'a pas pu être chargée.", function () { ouvrir(id); });
@@ -333,7 +343,7 @@ footer a,main a.lien{color:#1550b8}
     var faits = 0;
     return index.reduce(function (ch, c) {
       return ch.then(function () {
-        return cache.match("data/leger/" + c.i + ".json")
+        return cache.match(RACINE + "data/leger/" + c.i + ".json")
           .then(function (r) { if (r) faits++; });
       });
     }, Promise.resolve()).then(function () { return faits; });
@@ -390,7 +400,7 @@ footer a,main a.lien{color:#1550b8}
     function suivante() {
       var c = reste.shift();
       if (!c) return Promise.resolve();
-      return cache.add("data/leger/" + c.i + ".json")
+      return cache.add(RACINE + "data/leger/" + c.i + ".json")
         .catch(function () { rates++; })
         .then(function () {
           faits++;
@@ -411,7 +421,7 @@ footer a,main a.lien{color:#1550b8}
   function demarrer() {
     var id = (location.search.match(/[?&]c=([A-Za-z0-9\-]+)/) || [])[1];
     if (id) return ouvrir(id);
-    charger("data/leger/communes.json").then(function (data) {
+    charger(RACINE + "data/leger/communes.json").then(function (data) {
       index = data;
       var q = $("#q");
       q.addEventListener("input", function () { afficherResultats(chercher(q.value)); });

@@ -1,0 +1,33 @@
+# Ce que GitHub Pages publie, et ce qu'il garde pour nous.
+#
+# GITHUB PAGES FAIT TOURNER JEKYLL, QU'ON LUI EN DEMANDE OU NON. Ce fichier
+# ne l'active pas : il le corrige. Sans lui, Jekyll applique deux règles par
+# défaut que personne n'a choisies ici, et les deux ont fait des dégâts.
+#
+# 1. IL ÉCARTE TOUT CE QUI COMMENCE PAR UN POINT. `.well-known/security.txt`
+#    est dans le dépôt depuis le 19/08 et répondait 404 en production, alors
+#    que `conditions.html` annonce cette politique de divulgation dans les
+#    quatre langues. Une personne qui trouve une faille lisait la promesse et
+#    tombait sur une page d'erreur. Le contrôle maison disait « ok » parce
+#    qu'il vérifiait le disque, pas le réseau — c'est la même leçon que
+#    partout ailleurs ici : ce qui n'est pas mesuré là où ça compte n'est pas
+#    vérifié.
+#
+# 2. IL PUBLIE TOUT LE RESTE. Une note de travail interne se retrouvait servie
+#    en 200 et indexable, pendant qu'un contrôle affirmait « aucun brouillon
+#    dans le répertoire publié ».
+#
+# La règle : ce qui est dans le dépôt pour travailler reste dans le dépôt ;
+# ce qui est publié est ce qu'on a décidé de publier. Rien n'est supprimé.
+
+include:
+  - ".well-known"
+
+exclude:
+  # Note de travail interne — elle a sa place dans le dépôt, pas sur le web.
+  - "NOTES-VERIFICATION.md"
+  # Le banc d'essai et l'aperçu du logo : des outils de fabrication. L'aperçu
+  # portait en outre les 13 seules images sans texte alternatif du site, sans
+  # noindex ni canonical — publiés, ils polluaient l'index et l'audit.
+  - "tests"
+  - ".claude"

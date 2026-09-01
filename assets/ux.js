@@ -10,7 +10,15 @@
     if (!liste.id) liste.id = "nav-liste";
     bouton.setAttribute("aria-expanded", "false");
     bouton.setAttribute("aria-controls", liste.id);
+    /* EN DUR, ce libellé restait français sur les pages ht/en/es :
+       ux.js est `defer`, donc il passe APRÈS i18n.js et l'écrase.
+       On pose le repère et on redemande la traduction de ce seul
+       bouton — `traduire()` existe pour les fragments tardifs. */
     bouton.setAttribute("aria-label", "Menu principal");
+    bouton.setAttribute("data-i18n-aria", "nv.menu");
+    try { window.ATM_I18N && window.ATM_I18N.traduire
+          && window.ATM_I18N.traduire(bouton.parentNode || bouton); }
+    catch (e) { /* le français reste, c'est le repli correct */ }
     var maj = function () {
       bouton.setAttribute("aria-expanded",
         liste.classList.contains("open") ? "true" : "false");

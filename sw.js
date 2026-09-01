@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v122";
+const CACHE = "explorateur-v123";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -15,17 +15,19 @@ const DV = "?d=2026-08-27a";   // doit suivre le DV de assets/modules/explorateu
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=35", "/assets/data.css?v=46", "/assets/modules/explorateur.js?v=40",
+  "/assets/style.css?v=35", "/assets/data.css?v=47", "/assets/modules/explorateur.js?v=40",
   "/assets/modules/etat.js?v=35",
   "/assets/modules/explorateur-i18n.js?v=35",
   "/assets/modules/explorateur-carte.js?v=35",
   "/assets/modules/explorateur-fiche.js?v=35",
   "/assets/modules/explorateur-recherche.js?v=35",
   "/assets/modules/explorateur-comparaison.js?v=35",
-  // Le rapport de territoire : sans lui au precache, le bouton « Rapport de
-  // la commune » ne repondrait pas hors connexion, alors que les treize
-  // couches qu'il assemble, elles, sont deja en cache.
-  "/assets/modules/explorateur-rapport.js?v=21",
+  // `explorateur-rapport.js` a été RETIRÉ du précache le 01/09/2026 :
+  // aucun fichier du site ne l'importe — la seule mention hors d'ici
+  // est un commentaire. Nous précachions 30 Ko pour tenir une promesse
+  // (« le bouton Rapport répond hors connexion ») qu'aucun bouton ne
+  // réclamait. Le fichier reste sur le disque ; c'est son transport
+  // qui cesse.
   "/couches.html", "/fiche.html", "/assets/couches.js?v=46",
   // La marque : complete pour l'en-tete, REDUITE pour l'onglet — a 16 pixels
   // l'emboitement (Haiti dans la boucle, la boucle dans la loupe) devient une

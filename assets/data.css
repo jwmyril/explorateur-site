@@ -753,7 +753,10 @@ html[lang="fr"] .x-partiel { display: none; }
 .x-vue { font: inherit; font-size: 0.86rem; min-height: 44px; padding: 0.4rem 0.9rem;
          border: 1px solid var(--border-fort); background: var(--surface); color: var(--ink-dim);
          border-radius: 999px; cursor: pointer; }
-.x-vue:hover { border-color: var(--navy); color: var(--navy); }
+/* `--navy` est un alias du FOND depuis la refonte des jetons : ce
+   survol peignait le texte couleur papier, 1,00:1. `--ink` est le
+   jeton de texte, celui qu'utilise `.x-vue.actif` juste dessous. */
+.x-vue:hover { border-color: var(--ink); color: var(--ink); }
 .x-vue.actif { background: var(--ink); border-color: var(--ink); color: var(--fond); }
 .x-vues small { color: var(--ink-dim); font-size: 0.8rem; margin-left: 0.3rem; }
 @media (max-width: 480px) { .x-vues small { width: 100%; margin: 0.2rem 0 0; } }

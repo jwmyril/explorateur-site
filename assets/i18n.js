@@ -4,6 +4,10 @@
 (function () {
   const TOUTES = { fr: "Français", ht: "Kreyòl", en: "English", es: "Español" };
   const DEFAULT = "fr";
+  // LE NUMÉRO DES DICTIONNAIRES. Il suit celui de ce fichier : les deux
+  // partent ensemble, puisqu'une clé nouvelle ici et sa traduction là-bas
+  // sont une seule et même livraison. À monter dès qu'un `<lg>.json` change.
+  const DICO_V = 21;
   // Une page dont la traduction n'est pas complete declare window.ATM_LANGUES.
   // Mieux vaut du francais entier qu'un menu traduit au-dessus de contenus
   // restes en francais : l'utilisateur croirait la page traduite.
@@ -37,7 +41,17 @@
     if (!LANGS[lang]) lang = DEFAULT;
     let dict = {};
     if (lang !== DEFAULT) {
-      try { dict = await fetch(base + "assets/i18n/" + lang + ".json", { cache: "no-cache" }).then((r) => r.json()); }
+      /* LE DICTIONNAIRE PORTE SON NUMÉRO DANS SON ADRESSE, comme tout le
+         reste du site. `cache: "no-cache"` ne suffisait pas, et c'est une
+         panne qui l'a montré : le service worker répond au CACHE D'ABORD
+         pour tout ce qui n'est pas une navigation, donc il sert sa copie
+         sans jamais consulter le réseau — l'option, qui ne parle qu'au
+         cache HTTP du navigateur, n'était jamais atteinte.
+         Conséquence mesurée le 01/09 : les traductions livrées le 30/08
+         n'atteignaient aucun lecteur déjà venu. C'est la récidive exacte du
+         défaut des marqueurs de données, quatre jours après sa correction.
+         Ce numéro suit celui de i18n.js : les deux changent ensemble. */
+      try { dict = await fetch(base + "assets/i18n/" + lang + ".json?v=" + DICO_V, { cache: "no-cache" }).then((r) => r.json()); }
       catch (e) { dict = {}; }
     }
     dictCourant = dict; langCourante = lang;

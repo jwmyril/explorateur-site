@@ -11,7 +11,7 @@ const CACHE = "explorateur-v123";
    prix d'un forfait compte a l'octet. La lecture, elle, passe par
    `caches.match`, qui interroge tous les caches — rien d'autre a changer. */
 const GARDE = "explorateur-communes";
-const DV = "?d=2026-09-04a";   // doit suivre le DV de assets/modules/explorateur.js
+const DV = "?d=2026-09-04b";   // doit suivre le DV de assets/modules/explorateur.js
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",

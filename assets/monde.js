@@ -36,7 +36,7 @@
   /* LA RACINE, VUE DEPUIS CETTE PAGE. `/ht/index.html` demanderait sinon
      `/ht/data/…`, qui n'existe pas — c'est le défaut PF-1. */
   var RACINE = /^\/(ht|en|es)\//.test(location.pathname) ? "../" : "";
-  var DV = "?d=2026-09-04a";
+  var DV = "?d=2026-09-04b";
   var FICHIER = RACINE + "data/atmart_comparaison_monde.json" + DV;
   var PAUSE = 6000;
   var LENT = window.matchMedia

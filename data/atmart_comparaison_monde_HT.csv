@@ -1,4 +1,20 @@
 ﻿indicateur_id,libelle,unite,sens,iso3,pays,valeur,annee,rang_mondial_haiti,pays_compares,mediane_mondiale,source_id,date_extraction
+SP.POP.TOTL,Population,habitants,neutre,HTI,Haïti,11906095.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,KNA,St. Kitts and Nevis,46922.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,DMA,Dominica,65871.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,ATG,Antigua and Barbuda,94209.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,VCT,St. Vincent and the Grenadines,99924.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,GRD,Grenada,117303.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,LCA,St. Lucia,180149.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,BRB,Barbados,282623.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,BHS,Bahamas  The,403033.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,BLZ,Belize,422924.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,SUR,Suriname,639850.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,GUY,Guyana,835986.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,TTO,Trinidad and Tobago,1367764.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,JAM,Jamaica,2837077.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,CUB,Cuba,10937203.0,2025,,217,6549143.0,SRC-015,2026-09-04
+SP.POP.TOTL,Population,habitants,neutre,DOM,Dominican Republic,11520487.0,2025,,217,6549143.0,SRC-015,2026-09-04
 SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,HTI,Haïti,65.12,2024,190,217,74.71,SRC-015,2026-09-04
 SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,CUB,Cuba,78.26,2024,190,217,74.71,SRC-015,2026-09-04
 SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,ATG,Antigua and Barbuda,77.77,2024,190,217,74.71,SRC-015,2026-09-04

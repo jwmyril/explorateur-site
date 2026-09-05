@@ -15,7 +15,7 @@ const DV = "?d=2026-09-04a";   // doit suivre le DV de assets/modules/explorateu
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=35", "/assets/data.css?v=48", "/assets/modules/explorateur.js?v=41",
+  "/assets/style.css?v=35", "/assets/data.css?v=50", "/assets/modules/explorateur.js?v=41",
   "/assets/modules/etat.js?v=35",
   "/assets/modules/explorateur-i18n.js?v=35",
   "/assets/modules/explorateur-carte.js?v=35",

@@ -53,7 +53,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="manifest" href="/manifest.webmanifest" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=48" />
+  <link rel="stylesheet" href="../assets/data.css?v=50" />
 <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
 {
@@ -139,6 +139,18 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <button class="x-lien" data-id="HTC-0311">Cap-Haïtien</button>
     </p>
     <p class="x-preuve" data-i18n="xp.preuve">Sous enstitisyonèl · Ane referans yo parèt · Rezilta ou ka telechaje</p>
+    <aside id="mo-vignette" class="mo-vignette" hidden
+           aria-labelledby="mo-vignette-t">
+      <p class="mo-eyebrow" id="mo-vignette-t" data-i18n="mo.titre">Ayiti nan lemonn</p>
+      <div class="mo-scene" aria-live="polite" aria-atomic="true"></div>
+      <div class="mo-pied">
+        <button type="button" class="mo-fl" data-pas="-1"
+                aria-label="Endikatè anvan an" data-i18n-aria="mo.prec">‹</button>
+        <span class="mo-points" aria-hidden="true"></span>
+        <button type="button" class="mo-fl" data-pas="1"
+                aria-label="Endikatè k ap vini an" data-i18n-aria="mo.suiv">›</button>
+      </div>
+    </aside>
     <p class="x-compte" id="x-compte">chargement…</p>
     <div aria-live="polite" class="x-sr" id="x-annonce"></div>
   </div>
@@ -297,7 +309,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   window.ATM_EXPLORATEUR = Object.assign({ dir: "../data/", base: "../" }, {});
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
-<script src="../assets/i18n.js?v=23"></script>
+<script src="../assets/i18n.js?v=24"></script>
 <script type="module" src="../assets/modules/explorateur.js?v=41"></script>
 <script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
 if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>
@@ -305,6 +317,6 @@ if("serviceWorker" in navigator && location.hostname !== "localhost" && location
 <script src="../assets/ux.js?v=2" defer></script>
 <script src="../assets/pwa.js?v=2" defer></script>
 <script src="../assets/theme.js?v=3" defer></script>
-<script src="../assets/monde.js?v=1" defer></script>
+<script src="../assets/monde.js?v=2" defer></script>
 </body>
 </html>

@@ -13,6 +13,123 @@
  },
  "indicateurs": [
   {
+   "code": "SP.POP.TOTL",
+   "libelle": {
+    "fr": "Population",
+    "ht": "Konbyen moun ki nan peyi a",
+    "en": "Population",
+    "es": "Población"
+   },
+   "unite": {
+    "fr": "habitants",
+    "ht": "moun",
+    "en": "people",
+    "es": "habitantes"
+   },
+   "sens": "neutre",
+   "haiti": {
+    "v": 11906095.0,
+    "an": 2025
+   },
+   "monde": {
+    "pays": 217,
+    "rang": null,
+    "mediane": 6549143.0
+   },
+   "voisins": [
+    {
+     "iso": "KNA",
+     "nom": "St. Kitts and Nevis",
+     "v": 46922.0,
+     "an": 2025
+    },
+    {
+     "iso": "DMA",
+     "nom": "Dominica",
+     "v": 65871.0,
+     "an": 2025
+    },
+    {
+     "iso": "ATG",
+     "nom": "Antigua and Barbuda",
+     "v": 94209.0,
+     "an": 2025
+    },
+    {
+     "iso": "VCT",
+     "nom": "St. Vincent and the Grenadines",
+     "v": 99924.0,
+     "an": 2025
+    },
+    {
+     "iso": "GRD",
+     "nom": "Grenada",
+     "v": 117303.0,
+     "an": 2025
+    },
+    {
+     "iso": "LCA",
+     "nom": "St. Lucia",
+     "v": 180149.0,
+     "an": 2025
+    },
+    {
+     "iso": "BRB",
+     "nom": "Barbados",
+     "v": 282623.0,
+     "an": 2025
+    },
+    {
+     "iso": "BHS",
+     "nom": "Bahamas, The",
+     "v": 403033.0,
+     "an": 2025
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 422924.0,
+     "an": 2025
+    },
+    {
+     "iso": "SUR",
+     "nom": "Suriname",
+     "v": 639850.0,
+     "an": 2025
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 835986.0,
+     "an": 2025
+    },
+    {
+     "iso": "TTO",
+     "nom": "Trinidad and Tobago",
+     "v": 1367764.0,
+     "an": 2025
+    },
+    {
+     "iso": "JAM",
+     "nom": "Jamaica",
+     "v": 2837077.0,
+     "an": 2025
+    },
+    {
+     "iso": "CUB",
+     "nom": "Cuba",
+     "v": 10937203.0,
+     "an": 2025
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 11520487.0,
+     "an": 2025
+    }
+   ]
+  },
+  {
    "code": "SP.DYN.LE00.IN",
    "libelle": {
     "fr": "Espérance de vie à la naissance",

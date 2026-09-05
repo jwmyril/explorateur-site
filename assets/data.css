@@ -1563,3 +1563,56 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
 @media (prefers-reduced-motion: reduce) {
   .mo-box > summary::before { transition: none; }
 }
+
+/* ── Vignette « Haïti dans le monde » ────────────────────────────────────
+   En haut à DROITE de l'en-tête sur grand écran, en pleine largeur sous le
+   titre quand la place manque. Le point de bascule est 900 px : au-dessous,
+   la vignette flottante mangerait la ligne du titre, et c'est le titre qui
+   doit gagner — quelqu'un arrive ici pour chercher une commune, pas pour
+   lire un classement. */
+.hero > .container { position: relative; }
+/* SUR MOBILE ELLE VIENT APRÈS LA RECHERCHE, et c'est délibéré : quelqu'un
+   arrive ici pour chercher une commune, pas pour lire un classement. Placée
+   avant le titre, elle repoussait le champ de recherche d'un écran. L'ordre
+   du DOM la met donc en dernier ; le positionnement absolu la ramène en haut
+   à droite dès qu'il y a la place. */
+.mo-vignette {
+  border: 1px solid var(--border); border-radius: 6px;
+  background: var(--card); padding: .85rem .95rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  margin: 0 auto 1.4rem; max-width: 22rem; text-align: left;
+}
+.mo-eyebrow {
+  font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-dim); margin: 0 0 .45rem;
+}
+.mo-scene { min-height: 6.2rem; }
+.mo-quoi { font-size: .82rem; color: var(--ink-dim); margin: 0 0 .15rem;
+  line-height: 1.3; }
+.mo-chiffre { font-size: 1.9rem; font-weight: 700; line-height: 1.1;
+  margin: 0; font-variant-numeric: tabular-nums; }
+.mo-unite { font-size: .72rem; font-weight: 400; color: var(--ink-dim);
+  margin-left: .35rem; }
+.mo-rang, .mo-rd { font-size: .8rem; margin: .2rem 0 0; }
+.mo-rang { color: var(--accent-fort); font-weight: 600; }
+.mo-rd { color: var(--ink-dim); }
+.mo-an { font-size: .68rem; color: var(--ink-dim); margin: .35rem 0 0; }
+.mo-pied { display: flex; align-items: center; justify-content: space-between;
+  gap: .5rem; margin-top: .5rem; }
+.mo-fl { border: 1px solid var(--border); background: transparent;
+  color: var(--ink); border-radius: 4px; min-width: 30px; min-height: 30px;
+  font-size: 1rem; line-height: 1; cursor: pointer; }
+.mo-fl:hover { border-color: var(--ink); }
+.mo-fl:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.mo-points { display: flex; gap: 4px; flex: 1; justify-content: center; }
+.mo-points i { width: 5px; height: 5px; border-radius: 50%;
+  background: var(--border); display: block; }
+.mo-points i.on { background: var(--accent); }
+
+@media (min-width: 900px) {
+  .mo-vignette {
+    position: absolute; top: 0; right: 1.25rem; width: 17.5rem;
+    margin: 0; z-index: 2;
+  }
+  .hero h1, .hero .lead { max-width: calc(100% - 19.5rem); }
+}

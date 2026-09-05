@@ -7,7 +7,7 @@
   // LE NUMÉRO DES DICTIONNAIRES. Il suit celui de ce fichier : les deux
   // partent ensemble, puisqu'une clé nouvelle ici et sa traduction là-bas
   // sont une seule et même livraison. À monter dès qu'un `<lg>.json` change.
-  const DICO_V = 23;
+  const DICO_V = 24;
   // Une page dont la traduction n'est pas complete declare window.ATM_LANGUES.
   // Mieux vaut du francais entier qu'un menu traduit au-dessus de contenus
   // restes en francais : l'utilisateur croirait la page traduite.

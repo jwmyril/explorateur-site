@@ -1545,3 +1545,21 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
   background: var(--surface-2); border-left: 3px solid var(--accent);
   padding: 0.6rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.7rem 0; }
 .card .sv-val { font-size: 0.86rem; }
+
+/* ── Haïti dans le monde ─────────────────────────────────────────────────
+   Un encart replié : le style reste celui des boîtes du site, on n'invente
+   pas une seconde grammaire visuelle pour une section de plus. */
+.mo-box > summary { cursor: pointer; font-weight: 600; list-style: none;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem .8rem; }
+.mo-box > summary::-webkit-details-marker { display: none; }
+.mo-box > summary::before { content: "▸"; color: var(--accent);
+  font-weight: 400; transition: transform .15s ease; display: inline-block; }
+.mo-box[open] > summary::before { transform: rotate(90deg); }
+.mo-box > summary small { font-weight: 400; color: var(--ink-dim); }
+.mo-box > summary:focus-visible { outline: 2px solid var(--focus);
+  outline-offset: 3px; border-radius: 3px; }
+.mo-box #mo-corps { margin-top: 1.1rem; }
+.mo-box .mo-u { color: var(--ink-dim); font-weight: 400; }
+@media (prefers-reduced-motion: reduce) {
+  .mo-box > summary::before { transition: none; }
+}

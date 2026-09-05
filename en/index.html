@@ -53,7 +53,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="manifest" href="/manifest.webmanifest" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=35" />
-  <link rel="stylesheet" href="../assets/data.css?v=47" />
+  <link rel="stylesheet" href="../assets/data.css?v=48" />
 <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
 {
@@ -75,7 +75,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </script>
 <!-- /JSON-LD -->
 
-      <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/index.html", "ht": "https://explorateur.atmart.ltd/ht/index.html", "en": "https://explorateur.atmart.ltd/en/index.html", "es": "https://explorateur.atmart.ltd/es/index.html"};</script>
+  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/index.html", "ht": "https://explorateur.atmart.ltd/ht/index.html", "en": "https://explorateur.atmart.ltd/en/index.html", "es": "https://explorateur.atmart.ltd/es/index.html"};</script>
   <link rel="canonical" href="https://explorateur.atmart.ltd/en/index.html" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/index.html" />
   <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/index.html" />
@@ -229,6 +229,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <p data-i18n-html="xp.box_p1">It shows <b>the information currently documented by Atmart Data</b> — not everything that exists about a commune. Everything runs in your browser: four public files and one map outline, no application server, no account, no advertising tracker. An <b>anonymous and aggregated</b> audience measurement counts uses (a search happened) without ever knowing who or what — no cookie, no identifier, no IP address kept, and the text you type never leaves your browser: <a href="/donnees-confiance.html#mesure">full method</a>. What you see, you can download as is from the <a href="datasets.html">catalogue</a> and recompute yourself.</p>
       <p data-i18n-html="xp.box_p2">The <b>commune is the most detailed territorial level of the public edition</b>. Communal sections, populated places and detailed polygons are available in the <a href="donnees-pack-geo-haiti.html">Haiti Geo Pack</a>. Definitions, methods and quality statuses are set out on the <a href="/donnees-backbone.html#statuts">Backbone</a> page.</p>
     </div>
+
+    <details id="mo-boite" class="d-box mo-box" style="margin-top:2.6rem">
+      <summary>
+        <span data-i18n="mo.titre">Haiti in the world</span>
+        <small data-i18n="mo.sous">Compare Haiti with the world and its Caribbean neighbours — click to open</small>
+      </summary>
+      <div id="mo-corps"></div>
+    </details>
   </div>
 </section>
 
@@ -289,13 +297,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   window.ATM_EXPLORATEUR = Object.assign({ dir: "../data/", base: "../" }, {});
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
-<script src="../assets/i18n.js?v=21"></script>
-<script type="module" src="../assets/modules/explorateur.js?v=40"></script>
+<script src="../assets/i18n.js?v=23"></script>
+<script type="module" src="../assets/modules/explorateur.js?v=41"></script>
 <script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
 if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>
 <script src="../assets/mesure.js?v=2" defer></script>
 <script src="../assets/ux.js?v=2" defer></script>
 <script src="../assets/pwa.js?v=2" defer></script>
 <script src="../assets/theme.js?v=3" defer></script>
+<script src="../assets/monde.js?v=1" defer></script>
 </body>
 </html>

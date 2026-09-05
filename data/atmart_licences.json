@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 126
+  "fichiers": 128
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -26,6 +26,8 @@
    "atmart_caisses_populaires_HT.csv",
    "atmart_communes_regions_enquete.json",
    "atmart_communes_regions_enquete_HT.csv",
+   "atmart_comparaison_monde.json",
+   "atmart_comparaison_monde_HT.csv",
    "atmart_concordance.json",
    "atmart_concordance_HT.csv",
    "atmart_couche_bassins_HT.geojson",
@@ -323,6 +325,20 @@
     "SRC-014"
    ],
    "attribution": "LAPOP Lab / Center for Global Democracy, Vanderbilt University"
+  },
+  "atmart_comparaison_monde.json": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-015"
+   ],
+   "attribution": "Banque mondiale"
+  },
+  "atmart_comparaison_monde_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-015"
+   ],
+   "attribution": "Banque mondiale"
   },
   "atmart_concordance.json": {
    "licence": "CC BY 4.0",

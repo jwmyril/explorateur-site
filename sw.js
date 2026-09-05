@@ -11,11 +11,11 @@ const CACHE = "explorateur-v123";
    prix d'un forfait compte a l'octet. La lecture, elle, passe par
    `caches.match`, qui interroge tous les caches — rien d'autre a changer. */
 const GARDE = "explorateur-communes";
-const DV = "?d=2026-08-27a";   // doit suivre le DV de assets/modules/explorateur.js
+const DV = "?d=2026-09-04a";   // doit suivre le DV de assets/modules/explorateur.js
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=35", "/assets/data.css?v=47", "/assets/modules/explorateur.js?v=40",
+  "/assets/style.css?v=35", "/assets/data.css?v=48", "/assets/modules/explorateur.js?v=41",
   "/assets/modules/etat.js?v=35",
   "/assets/modules/explorateur-i18n.js?v=35",
   "/assets/modules/explorateur-carte.js?v=35",
@@ -28,7 +28,7 @@ const CORE = [
   // (« le bouton Rapport répond hors connexion ») qu'aucun bouton ne
   // réclamait. Le fichier reste sur le disque ; c'est son transport
   // qui cesse.
-  "/couches.html", "/fiche.html", "/assets/couches.js?v=46",
+  "/couches.html", "/fiche.html", "/assets/couches.js?v=47",
   // La marque : complete pour l'en-tete, REDUITE pour l'onglet — a 16 pixels
   // l'emboitement (Haiti dans la boucle, la boucle dans la loupe) devient une
   // tache, et c'est une contrainte de l'emboitement, pas un reglage a trouver.

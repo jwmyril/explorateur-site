@@ -54,7 +54,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <meta name="theme-color" content="#0e2240" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/" />
   <link rel="stylesheet" href="assets/style.css?v=35" />
-  <link rel="stylesheet" href="assets/data.css?v=47" />
+  <link rel="stylesheet" href="assets/data.css?v=48" />
 <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
 {
@@ -228,6 +228,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <p data-i18n-html="xp.box_p1">Il affiche <b>les informations actuellement documentées par Atmart Data</b> — pas tout ce qui existe sur une commune. Tout tourne dans votre navigateur : quatre fichiers publics et un contour cartographique, aucun serveur d'application, aucun compte, aucun traceur publicitaire. Une mesure d'audience <b>anonyme et agrégée</b> compte les usages (une recherche a eu lieu) sans jamais savoir qui ni quoi — pas de cookie, pas d'identifiant, pas d'adresse IP conservée, et le texte tapé ne quitte jamais votre navigateur : <a href="donnees-confiance.html#mesure">méthode complète</a>. Ce que vous voyez, vous pouvez le télécharger tel quel depuis le <a href="datasets.html">catalogue</a> et le recalculer vous-même.</p>
       <p data-i18n-html="xp.box_p2">La <b>commune est le niveau territorial le plus détaillé de l’édition publique</b>. Les sections communales, les localités et les polygones détaillés sont disponibles dans le <a href="donnees-pack-geo-haiti.html">Pack Géo Haïti</a>. Les définitions, méthodes et statuts de qualité sont exposés sur la page <a href="donnees-backbone.html#statuts">Backbone</a>.</p>
     </div>
+
+    <details id="mo-boite" class="d-box mo-box" style="margin-top:2.6rem">
+      <summary>
+        <span data-i18n="mo.titre">Haïti dans le monde</span>
+        <small data-i18n="mo.sous">Comparer Haïti au monde et à ses voisins des Caraïbes — cliquez pour ouvrir</small>
+      </summary>
+      <div id="mo-corps"></div>
+    </details>
   </div>
 </section>
 
@@ -288,13 +296,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   window.ATM_EXPLORATEUR = {};
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
-<script src="assets/i18n.js?v=21"></script>
-<script type="module" src="assets/modules/explorateur.js?v=40"></script>
+<script src="assets/i18n.js?v=23"></script>
+<script type="module" src="assets/modules/explorateur.js?v=41"></script>
 <script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
 if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>
 <script src="assets/mesure.js?v=2" defer></script>
 <script src="assets/ux.js?v=2" defer></script>
 <script src="assets/pwa.js?v=2" defer></script>
 <script src="assets/theme.js?v=3" defer></script>
+<script src="assets/monde.js?v=1" defer></script>
 </body>
 </html>

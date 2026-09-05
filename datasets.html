@@ -22,7 +22,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="assets/style.css?v=35" />
-  <link rel="stylesheet" href="assets/data.css?v=47" />
+  <link rel="stylesheet" href="assets/data.css?v=48" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/datasets.html" />
   <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
@@ -2254,7 +2254,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <span class="tag" data-i18n="ds.t_free">Gratuit</span>
   <h3 data-i18n-html="ds.c24_h">Infrastructures par commune</h3>
   <p data-i18n-html="ds.c24_p">Ce que chaque commune compte en équipements, famille par famille. Une ligne par commune et par type, avec sa source et son millésime — de quoi comparer des territoires sans confondre ce qui est compté et ce qui est estimé.</p>
-  <p class="price" data-i18n-html="ds.c24_pr">Gratuit <small>CSV • <span data-mf="prd_014_lignes">2 118</span> lignes • <span data-mf="prd_014_colonnes">8</span> colonnes</small></p>
+  <p class="price" data-i18n-html="ds.c24_pr">Gratuit <small>CSV • <span data-mf="prd_014_lignes">1 899</span> lignes • <span data-mf="prd_014_colonnes">8</span> colonnes</small></p>
   <p class="meta" data-i18n-html="ds.c24_meta">🏗 Infrastructures • millésime et source déclarés ligne par ligne</p>
   <a href="data/atmart_infrastructures_communes_HT.csv" class="btn btn-primary" download data-i18n="ds.dl">Télécharger gratuitement</a>
 </div>
@@ -2452,6 +2452,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </div>
 <div class="card" data-cat="gratuit">
   <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd206_h">Haïti dans le monde — rang mondial et voisins des Caraïbes</h3>
+  <p data-i18n-html="ds.prd206_p">OÙ SE SITUE HAÏTI, ET PAR RAPPORT À QUI. Onze indicateurs de la Banque mondiale, chacun avec le rang d'Haïti parmi tous les pays qui déclarent, la médiane mondiale, et la valeur de quinze voisins des Caraïbes — la République dominicaine en tête, puisque c'est l'autre moitié de la même île. UN RANG DÉPEND DE QUI DÉCLARE, et c'est la limite à ne pas perdre de vue : un pays qui ne publie rien n'est pas dernier, il est ABSENT du classement. Le nombre de pays comparés est donc écrit pour chaque indicateur, et il change de l'un à l'autre. Chaque valeur porte l'année à laquelle elle se rapporte, qui n'est pas la même partout : on retient la plus récente de chaque pays sur dix ans plutôt que d'imposer une année où beaucoup n'auraient rien à dire. Le fichier se rafraîchit sans que personne le retape, et il porte sa date de relevé.</p>
+  <p class="price" data-i18n-html="ds.prd206_pr">Gratuit <small>163 lignes • 13 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd206_meta">💰 Économie • Sources : Banque mondiale — World Development Indicators (SRC-015) • niveau de confiance A • CC BY 4.0 — Banque mondiale, Open Data</p>
+  <a href="data/atmart_comparaison_monde_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
   <h3 data-i18n-html="ds.prd053_h">Haïti et République dominicaine — seize questions posées à l'identique</h3>
   <p data-i18n-html="ds.prd053_p">LA PREMIÈRE COMPARAISON CARAÏBE DE L'EXPLORATEUR, et elle porte sur les deux pays d'une même île. Seize questions identiques en 2023, onze écarts établis. QUATRE RÉSULTATS QUI FRAPPENT : l'intention d'émigrer sépare les deux pays de 39 points (78,5 contre 39,7) ; la confiance dans le chef du gouvernement les sépare de 39 points EN SENS INVERSE (13,0 contre 51,8) ; les Haïtiens font PLUS confiance à leur police que les Dominicains à la leur (58,6 contre 32,8) ; et on leur demande huit fois moins souvent des pots-de-vin (2,4 contre 18,8). En revanche la victimation criminelle est presque identique (25,4 contre 24,2) et l'écart n'est PAS établi. L'AVERTISSEMENT COMMANDE TOUTE LECTURE : Haïti a été enquêtée PAR TÉLÉPHONE, la République dominicaine EN FACE-À-FACE. Un écart mêle donc une différence de pays et une différence d'instrument — on ne dit pas la même chose à un enquêteur venu chez soi qu'à une voix au téléphone. Ce produit indique où regarder, pas ce qu'il faut conclure.</p>
   <p class="price" data-i18n-html="ds.prd053_pr">Gratuit <small>16 lignes • 21 colonnes</small></p>
@@ -2574,7 +2582,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <span class="tag" data-i18n="ds.t_free">Gratuit</span>
   <h3 data-i18n-html="ds.prd036_h">Licence de chaque fichier publié</h3>
   <p data-i18n-html="ds.prd036_p">Une ligne par fichier du site : sa licence de sortie, les sources dont elle découle, l'attribution à porter et la raison. IL N'Y A PAS UNE LICENCE MAIS PLUSIEURS, et c'est le point : onze fichiers sortent sous ODbL parce qu'ils dérivent d'OpenStreetMap, dont le partage à l'identique se transmet aux bases dérivées redistribuées ; d'autres ne relèvent d'aucune licence, l'article 5 du décret haïtien du 12/10/2005 excluant du droit d'auteur les textes officiels et les simples données. Annoncer CC BY partout aurait autorisé à tort ; annoncer ODbL partout aurait interdit sans raison. Le tableau se recalcule à chaque passage depuis le registre des sources.</p>
-  <p class="price" data-i18n-html="ds.prd036_pr">Gratuit <small>126 lignes • 8 colonnes</small></p>
+  <p class="price" data-i18n-html="ds.prd036_pr">Gratuit <small>128 lignes • 8 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd036_meta">📐 Méthode • Sources : Registre des sources et passeports juridiques d'Atmart • niveau de confiance A • CC BY 4.0</p>
   <a href="data/atmart_licences_donnees_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
@@ -2776,7 +2784,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </script>
 <script src="assets/mesure.js?v=2" defer></script>
 <script src="assets/ux.js?v=2" defer></script>
-<script src="assets/i18n.js?v=21"></script>
+<script src="assets/i18n.js?v=23"></script>
 <script src="assets/theme.js?v=3" defer></script>
 <script src="assets/vues.js?v=1"></script>
 </body>

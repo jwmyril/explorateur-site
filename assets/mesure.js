@@ -11,11 +11,38 @@
   var POINT = "https://atmart-chat.atmartllc.workers.dev/ev";
   var dernier = {};
 
+  /* La langue etait ecrite en dur a « fr ». Le site a QUATRE langues (en/, es/,
+     ht/) et le compteur de langue est GLOBAL : chaque page kreyol de
+     l'Explorateur etait comptee comme francaise, y compris dans les
+     statistiques de Suite 360. On la lit maintenant sur la page. */
+  function langue() {
+    var l = (document.documentElement.getAttribute("lang") || "").toLowerCase().slice(0, 2);
+    return (l === "ht" || l === "fr" || l === "en" || l === "es") ? l : "fr";
+  }
+
+  /* La provenance valait « ref » ou rien : impossible d'en tirer si un lecteur
+     vient de LinkedIn ou d'une recherche. On garde le nom du domaine — jamais
+     l'adresse complete, qui pourrait porter une requete. */
+  function provenance() {
+    try {
+      var u = new URLSearchParams(location.search).get("utm_source");
+      if (u) return u.toLowerCase().slice(0, 32);
+      if (!document.referrer) return "direct";
+      var h = new URL(document.referrer).hostname.replace(/^www\./, "");
+      if (h === location.hostname) return "";
+      var b = h.split(".");
+      return (b.length > 2 ? b[b.length - 2] : b[0]).slice(0, 32);
+    } catch (e) { return "direct"; }
+  }
+
   function envoyer(nom) {
     var t = Date.now();
     if (dernier[nom] && t - dernier[nom] < 5000) return;   /* anti-rafale */
     dernier[nom] = t;
-    var corps = JSON.stringify({ name: nom, lang: "fr", src: document.referrer ? "ref" : "" });
+    /* « app » : la dimension qui manquait. Le prefixe xpl_ tenait lieu de
+       separation entre applications ; a six sites il ne tient plus. */
+    var corps = JSON.stringify({ app: "xpl", name: nom, lang: langue(),
+                                 src: provenance(), page: location.pathname });
     try {
       /* « text/plain » et non « application/json » : sendBeacon envoie
          toujours avec les identifiants, et un type JSON declenche alors un

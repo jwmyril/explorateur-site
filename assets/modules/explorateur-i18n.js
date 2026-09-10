@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=37";
+import { S } from "./etat.js?v=38";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { CFG, DIR, DV, charger, dico, parseCSV } = A;
@@ -80,10 +80,21 @@ export default function (A) {
     boiteAvis.hidden = false;
   }
 
-  /* Pour les contrôles et pour qui veut savoir : ce qui est retombé, ici. */
+  /* Pour les contrôles et pour qui veut savoir : ce qui est retombé, ici.
+     ====================================================================
+     EXPOSÉ AU NAVIGATEUR, ET C'EST UTILE PLUTÔT QUE BAVARD. Le contrôle de
+     l'atelier ne relève que les `T("phrase littérale")` : il ne voit pas les
+     `T(NIVEAU[x])`, `T(STATUT[y])`, `T(normInfo.nom)` — des phrases rangées
+     dans des tables et passées par variable. Il a donc annoncé 100 % de
+     couverture le 10/09 pendant que le bandeau, lui, s'affichait encore.
+     Le bandeau avait raison : il mesure ce qui arrive à l'écran, le contrôle
+     mesure ce qu'il sait lire.
+     `window.ATM_I18N_RETOMBEES()` rend la liste exacte, sur la page ouverte.
+     C'est ainsi qu'on trouve ce qu'aucun balayage statique ne trouvera. */
   function retombees() {
     return { nombre: nRetombees, phrases: Object.keys(RETOMBEES) };
   }
+  try { window.ATM_I18N_RETOMBEES = retombees; } catch (e) { /* hors DOM */ }
   /* Une phrase a variables reste une seule unite de traduction : le traducteur
      voit la phrase entiere et peut deplacer les variables selon sa grammaire. */
   function TF(t, vars) { return substituer(T(t), vars); }

@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=38";
+import { S } from "./etat.js?v=39";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { CFG, DIR, DV, charger, dico, parseCSV } = A;
@@ -83,7 +83,8 @@ export default function (A) {
   /* Pour les contrôles et pour qui veut savoir : ce qui est retombé, ici.
      ====================================================================
      EXPOSÉ AU NAVIGATEUR, ET C'EST UTILE PLUTÔT QUE BAVARD. Le contrôle de
-     l'atelier ne relève que les `T("phrase littérale")` : il ne voit pas les
+     l'atelier ne relève que les appels dont l'argument est écrit
+     en toutes lettres sur place ; il ne voit pas les
      `T(NIVEAU[x])`, `T(STATUT[y])`, `T(normInfo.nom)` — des phrases rangées
      dans des tables et passées par variable. Il a donc annoncé 100 % de
      couverture le 10/09 pendant que le bandeau, lui, s'affichait encore.

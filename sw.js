@@ -15,13 +15,13 @@ const DV = "?d=2026-09-10c";   // doit suivre le DV de assets/modules/explorateu
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=36", "/assets/data.css?v=52", "/assets/modules/explorateur.js?v=46",
-  "/assets/modules/etat.js?v=38",
-  "/assets/modules/explorateur-i18n.js?v=38",
-  "/assets/modules/explorateur-carte.js?v=38",
-  "/assets/modules/explorateur-fiche.js?v=38",
-  "/assets/modules/explorateur-recherche.js?v=38",
-  "/assets/modules/explorateur-comparaison.js?v=38",
+  "/assets/style.css?v=36", "/assets/data.css?v=52", "/assets/modules/explorateur.js?v=47",
+  "/assets/modules/etat.js?v=39",
+  "/assets/modules/explorateur-i18n.js?v=39",
+  "/assets/modules/explorateur-carte.js?v=39",
+  "/assets/modules/explorateur-fiche.js?v=39",
+  "/assets/modules/explorateur-recherche.js?v=39",
+  "/assets/modules/explorateur-comparaison.js?v=39",
   // `explorateur-rapport.js` a été RETIRÉ du précache le 01/09/2026 :
   // aucun fichier du site ne l'importe — la seule mention hors d'ici
   // est un commentaire. Nous précachions 30 Ko pour tenir une promesse

@@ -1,0 +1,17 @@
+{
+  "name": "@atmart/explorateur-services",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test test/domain.test.ts",
+    "dev": "wrangler dev --local",
+    "types": "wrangler types src/worker-configuration.d.ts",
+    "deploy:dry": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3",
+    "wrangler": "4.123.0"
+  }
+}

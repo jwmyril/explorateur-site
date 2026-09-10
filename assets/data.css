@@ -1628,3 +1628,14 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
   outline-offset: 3px; border-radius: 3px; }
 .k-tableau[open] > summary { margin-bottom: .7rem; }
 .k-tableau .x-tableau { max-height: 26rem; overflow: auto; }
+
+/* ── L'avis de traduction incomplète ─────────────────────────────────────
+   MESURÉ, PAS DÉCLARÉ : il apparaît quand une phrase est réellement retombée
+   en français à l'écran, et il disparaît de lui-même le jour où plus rien ne
+   manque. Aucune constante à tenir à jour, donc aucune qui puisse mentir.
+   Il ne se ferme pas : le masquer reviendrait à cacher le mélange. */
+.x-avis-langue {
+  margin: 0 0 .9rem; padding: .55rem .8rem; font-size: .86rem;
+  color: var(--ink); background: var(--sur-accent, rgba(244,162,97,.10));
+  border: 1px solid var(--amber); border-radius: 6px; line-height: 1.5;
+}

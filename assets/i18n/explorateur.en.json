@@ -257,6 +257,7 @@
   "other": "Download the {n} indicators for {nom} (CSV)"
  },
  "Une case vide n'est pas un zéro. Chaque ligne indique pourquoi la donnée manque et ce qui la débloquerait.": "An empty cell is not a zero. Each row states why the data is missing and what would unlock it.",
+ "Une partie de cette page n'est pas encore traduite et reste en français. Nous y travaillons.": "Part of this page is not translated yet and remains in French. We are working on it.",
  "Une source qui couvre les 140 communes affiche son nombre sans dénominateur. Toute autre case porte le rapport, parce que c'est le rapport qui compte.": "A source covering all 140 communes shows its count without a denominator. Every other cell carries the ratio, because the ratio is what matters.",
  "Une série historique est publiée à part : {lien} — 14 140 relevés de prix de détail, 240 mois de janvier 2005 à juillet 2025. Le PAM n'y tire pas un échantillon de communes : il tient un réseau sentinelle d'un marché urbain principal par département, dans 9 départements sur 10. Ce sont des prix de ville, et la première série temporelle du backbone.": "A historical series is published separately: {lien} — 14,140 retail price readings, 240 months from January 2005 to July 2025. The WFP does not draw a sample of communes: it runs a sentinel network of one main urban market per department, in 9 departments out of 10. These are city prices, and the backbone's first time series.",
  "Valeur agrégée par Atmart": "Value aggregated by Atmart",

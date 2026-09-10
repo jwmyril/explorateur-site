@@ -6,7 +6,7 @@
    d'où il vient ni ce qu'il ne couvre pas. */
 (function () {
   "use strict";
-  var DV = "?d=2026-09-10a";
+  var DV = "?d=2026-09-10b";
   var $ = function (s) { return document.querySelector(s); };
   var fmtN = function (v) { return (+v).toLocaleString("fr-FR"); };
 

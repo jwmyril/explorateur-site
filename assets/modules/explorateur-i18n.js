@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=36";
+import { S } from "./etat.js?v=37";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { CFG, DIR, DV, charger, dico, parseCSV } = A;
@@ -20,11 +20,69 @@ export default function (A) {
     });
     return t;
   }
+  /* CE QUI RETOMBE EN FRANÇAIS SE COMPTE, ET SE DIT.
+     ================================================
+     Une clef absente du dictionnaire ne casse rien : `T()` rend la phrase
+     française. C'est justement le danger — la page se présente comme
+     traduite tout en restant à moitié française, et rien ne le signale. Au
+     10/09/2026, 164 phrases du moteur manquaient dans les trois langues, et
+     la fiche kreyòl affichait « Rapport de la commune (PDF) » au milieu du
+     kreyòl.
+     On tient donc le compte de ce qui est réellement retombé, à l'écran, sur
+     cette page-là. Le bandeau qui en découle est MESURÉ, pas déclaré : il
+     apparaît exactement quand quelque chose n'a pas été traduit, et il
+     disparaît tout seul le jour où plus rien ne manque — sans qu'aucune
+     constante ne soit à mettre à jour, donc sans qu'aucune ne puisse mentir. */
+  var RETOMBEES = Object.create(null);
+  var nRetombees = 0;
+
   function T(t) {
     if (S.LANG === "fr" || !t) return t;
     var v = S.DICO[t];
-    if (v == null) return t;
+    if (v == null) {
+      if (!RETOMBEES[t]) { RETOMBEES[t] = 1; nRetombees += 1; annoncerRetombees(); }
+      return t;
+    }
     return typeof v === "string" ? v : (v.other || v.one || t);
+  }
+
+  /* Le bandeau est discret et honnête : il ne s'excuse pas, il informe. Il ne
+     se ferme pas non plus — le masquer reviendrait à cacher le mélange, ce
+     qui est exactement ce qu'on refuse. */
+  var boiteAvis = null;
+  var enTrain = false;
+  function annoncerRetombees() {
+    /* SANS CE VERROU, LA RÉCURSION EST CERTAINE : la phrase du bandeau passe
+       elle-même par `T()`, et si elle manque au dictionnaire — ce qui est le
+       cas le jour où on l'ajoute — elle se déclare retombée, ce qui rappelle
+       cette fonction, indéfiniment. */
+    if (enTrain || typeof document === "undefined") return;
+    enTrain = true;
+    try { peindreAvis(); } finally { enTrain = false; }
+  }
+
+  function peindreAvis() {
+    if (!boiteAvis) {
+      boiteAvis = document.getElementById("x-avis-langue");
+      if (!boiteAvis) {
+        var hote = document.querySelector(".x-barre") || document.body;
+        boiteAvis = document.createElement("p");
+        boiteAvis.id = "x-avis-langue";
+        boiteAvis.className = "x-avis-langue";
+        boiteAvis.setAttribute("role", "status");
+        hote.parentNode.insertBefore(boiteAvis, hote);
+      }
+    }
+    /* La phrase vit dans le dictionnaire comme les autres. Si elle-même
+       manque, elle s'affiche en français — ce qui reste vrai et lisible. */
+    boiteAvis.textContent = T("Une partie de cette page n'est pas encore "
+      + "traduite et reste en français. Nous y travaillons.");
+    boiteAvis.hidden = false;
+  }
+
+  /* Pour les contrôles et pour qui veut savoir : ce qui est retombé, ici. */
+  function retombees() {
+    return { nombre: nRetombees, phrases: Object.keys(RETOMBEES) };
   }
   /* Une phrase a variables reste une seule unite de traduction : le traducteur
      voit la phrase entiere et peut deplacer les variables selon sa grammaire. */
@@ -135,5 +193,5 @@ export default function (A) {
       .then(function () { return chargerLibelles(S.LANG); });
   }
 
-  Object.assign(A, {LOCALE, BASE, substituer, T, TF, formePlurielle, TN, ordinal, deNom, LIB, UNITES, libCharge, chargerLibelles, nomT, nomSecond, libelle, uniteL, chargerLangue});
+  Object.assign(A, {LOCALE, BASE, substituer, T, TF, formePlurielle, TN, ordinal, deNom, LIB, UNITES, libCharge, chargerLibelles, nomT, nomSecond, libelle, uniteL, chargerLangue, retombees});
 }

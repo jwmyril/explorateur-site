@@ -257,6 +257,7 @@
   "other": "Descargar los {n} indicadores de {nom} (CSV)"
  },
  "Une case vide n'est pas un zéro. Chaque ligne indique pourquoi la donnée manque et ce qui la débloquerait.": "Una casilla vacía no es un cero. Cada fila indica por qué falta el dato y qué lo desbloquearía.",
+ "Une partie de cette page n'est pas encore traduite et reste en français. Nous y travaillons.": "Una parte de esta página aún no está traducida y sigue en francés. Estamos trabajando en ello.",
  "Une source qui couvre les 140 communes affiche son nombre sans dénominateur. Toute autre case porte le rapport, parce que c'est le rapport qui compte.": "Una fuente que cubre las 140 comunas muestra su número sin denominador. Cualquier otra celda lleva la razón, porque es la razón lo que cuenta.",
  "Une série historique est publiée à part : {lien} — 14 140 relevés de prix de détail, 240 mois de janvier 2005 à juillet 2025. Le PAM n'y tire pas un échantillon de communes : il tient un réseau sentinelle d'un marché urbain principal par département, dans 9 départements sur 10. Ce sont des prix de ville, et la première série temporelle du backbone.": "Una serie histórica se publica aparte: {lien} — 14 140 registros de precios minoristas, 240 meses de enero de 2005 a julio de 2025. El PMA no extrae una muestra de comunas: mantiene una red centinela de un mercado urbano principal por departamento, en 9 departamentos de 10. Son precios de ciudad, y la primera serie temporal del backbone.",
  "Valeur agrégée par Atmart": "Valor agregado por Atmart",

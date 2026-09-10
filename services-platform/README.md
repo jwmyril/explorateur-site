@@ -16,7 +16,7 @@ Les routes publiques `/api/v1/services`, `/api/v1/scenarios/evaluate` et `/api/v
 ```powershell
 npm install
 npm run types
-npx wrangler d1 migrations apply atmart-explorateur-services --local
+npx wrangler d1 migrations apply atmart-explorateur-services-dev --local
 npm test
 npm run dev
 ```
@@ -45,4 +45,4 @@ npm run dev
 
 ## Avant le déploiement
 
-Créer les ressources D1 et R2, remplacer l'identifiant D1 local, générer les types, choisir l'authentification et le paiement, puis tester en environnement `staging`. Ne pas déployer la configuration actuelle en production.
+Les ressources de développement existent dans Cloudflare : D1 `atmart-explorateur-services-dev` et R2 privé `atmart-explorateur-private-dev`. Il reste à restaurer l'authentification Wrangler, appliquer la migration distante, choisir l'authentification et le paiement, puis tester un Worker de préproduction. Ne pas utiliser ces ressources comme production.

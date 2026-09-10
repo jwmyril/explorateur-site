@@ -11,15 +11,15 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "atmart-explorateur-services",
-      "database_id": "local-placeholder",
+      "database_name": "atmart-explorateur-services-dev",
+      "database_id": "b1befda1-69cd-4bb9-8b71-a5e2a0cb9f54",
       "migrations_dir": "migrations"
     }
   ],
   "r2_buckets": [
     {
       "binding": "PRIVATE_FILES",
-      "bucket_name": "atmart-explorateur-private"
+      "bucket_name": "atmart-explorateur-private-dev"
     }
   ],
   "observability": {

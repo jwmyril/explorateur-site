@@ -35,12 +35,45 @@ export default function (A) {
      constante ne soit à mettre à jour, donc sans qu'aucune ne puisse mentir. */
   var RETOMBEES = Object.create(null);
   var nRetombees = 0;
+  /* DEUX MALADIES, PAS UNE — et le 10/09/2026 le bandeau les a confondues.
+     Une phrase absente du dictionnaire peut l'être pour deux raisons
+     opposées. Ou bien elle n'a jamais été traduite, et la page est
+     réellement à moitié française : c'est ce que le bandeau doit dire. Ou
+     bien elle est DÉJÀ traduite et repasse par `T()` une seconde fois — le
+     kreyòl est alors présenté au dictionnaire comme s'il était français, ne
+     s'y trouve pas, et retombe sur lui-même. L'écran reste juste ; c'est le
+     compteur qui a tort.
+     On les sépare en regardant si la phrase est une VALEUR du dictionnaire.
+     Si elle l'est, elle est déjà dans la langue de la page : on la range à
+     part, on ne l'annonce pas au lecteur — mais on la garde, parce qu'une
+     traduction de traduction est un défaut du code, et qu'il fallait la
+     fiche kreyòl de Pòtoprens pour trouver les deux premières. */
+  var DOUBLES = Object.create(null);
+  var nDoubles = 0;
+  var valeurs = null, valeursPour = null;
+
+  function dejaTraduite(t) {
+    if (valeursPour !== S.DICO) {
+      valeurs = Object.create(null);
+      valeursPour = S.DICO;
+      Object.keys(S.DICO).forEach(function (k) {
+        var v = S.DICO[k];
+        if (typeof v === "string") valeurs[v] = 1;
+        else if (v) { if (v.one) valeurs[v.one] = 1; if (v.other) valeurs[v.other] = 1; }
+      });
+    }
+    return valeurs[t] === 1;
+  }
 
   function T(t) {
     if (S.LANG === "fr" || !t) return t;
     var v = S.DICO[t];
     if (v == null) {
-      if (!RETOMBEES[t]) { RETOMBEES[t] = 1; nRetombees += 1; annoncerRetombees(); }
+      if (dejaTraduite(t)) {
+        if (!DOUBLES[t]) { DOUBLES[t] = 1; nDoubles += 1; }
+      } else if (!RETOMBEES[t]) {
+        RETOMBEES[t] = 1; nRetombees += 1; annoncerRetombees();
+      }
       return t;
     }
     return typeof v === "string" ? v : (v.other || v.one || t);
@@ -93,7 +126,8 @@ export default function (A) {
      `window.ATM_I18N_RETOMBEES()` rend la liste exacte, sur la page ouverte.
      C'est ainsi qu'on trouve ce qu'aucun balayage statique ne trouvera. */
   function retombees() {
-    return { nombre: nRetombees, phrases: Object.keys(RETOMBEES) };
+    return { nombre: nRetombees, phrases: Object.keys(RETOMBEES),
+             doubles: Object.keys(DOUBLES) };
   }
   try { window.ATM_I18N_RETOMBEES = retombees; } catch (e) { /* hors DOM */ }
   /* Une phrase a variables reste une seule unite de traduction : le traducteur

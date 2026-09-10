@@ -994,7 +994,7 @@ import { S } from "./etat.js?v=39";
      mais l'ordre de cette liste doit continuer de se lire comme l'ordre des
      dépendances. */
   for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison", "rapport"]) {
-    (await import("./explorateur-" + m + ".js?v=39")).default(A);
+    (await import("./explorateur-" + m + ".js?v=40")).default(A);
   }
 
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);

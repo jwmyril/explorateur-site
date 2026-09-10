@@ -33,9 +33,14 @@ export default function (A) {
              "IND-ACC-001", "IND-ACC-003"],
       lecture: T("Combien de personnes à servir, où elles vivent, et quels équipements sont recensés en face."),
       resume: function (r, s) {
+        /* PAS DE `T()` ICI : `TF()` traduit deja son premier argument. Le
+           mettre deux fois traduisait la traduction — en kreyol, la phrase
+           kreyol repassait par le dictionnaire, n'y figurait pas comme CLE,
+           et retombait. Le rendu restait juste par accident ; le compteur,
+           lui, declarait la page a moitie francaise. */
         return TF(s.nAbsents > 1
-          ? T("Profil administratif de {n}. {phrase} Les données disponibles couvrent {themes}. {absents} indicateurs restent à documenter sur cette commune.")
-          : T("Profil administratif de {n}. {phrase} Les données disponibles couvrent {themes}. {absents} indicateur reste à documenter sur cette commune."),
+          ? "Profil administratif de {n}. {phrase} Les données disponibles couvrent {themes}. {absents} indicateurs restent à documenter sur cette commune."
+          : "Profil administratif de {n}. {phrase} Les données disponibles couvrent {themes}. {absents} indicateur reste à documenter sur cette commune.",
           { n: esc(nomT(r)), phrase: s.phrase, themes: s.themes, absents: s.absents });
       },
       actions: [[T("Comparer aux communes voisines"), "#comparer"],
@@ -962,9 +967,15 @@ export default function (A) {
     }
 
     /* Les actions de l'usage choisi, plus les deux qui valent pour tous. */
+    /* LES ETIQUETTES RESTENT EN FRANCAIS ICI, et c'est voulu : la boucle
+       d'affichage plus bas les passe a `T()`. Les traduire des maintenant
+       revenait a traduire deux fois — la seconde fois, la phrase presentee
+       au dictionnaire etait deja kreyol, donc absente, donc comptee comme
+       « non traduite » alors que l'ecran, lui, etait juste. Les entrees de
+       `o.actions` suivent la meme regle depuis toujours. */
     var actions = (o.actions || []).concat([
-      [T("Ce qui reste à documenter"), "#lacunes"],
-      [T("Financer une donnée manquante"),
+      ["Ce qui reste à documenter", "#lacunes"],
+      ["Financer une donnée manquante",
        lienParrainage((manques[0] || {}).id, r)]]);
     var vues = {};
     h.push('<div class="x-actions x-actions-sec">' + actions.filter(function (a) {

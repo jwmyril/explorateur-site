@@ -27,7 +27,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
-  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-fiches.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-fiches.html", "en": "https://explorateur.atmart.ltd/en/donnees-fiches.html", "es": "https://explorateur.atmart.ltd/es/donnees-fiches.html"};</script>
+  <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-solutions.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-solutions.html", "en": "https://explorateur.atmart.ltd/en/donnees-solutions.html", "es": "https://explorateur.atmart.ltd/es/donnees-solutions.html"};</script>
   <link rel="canonical" href="https://explorateur.atmart.ltd/ht/donnees-fiches.html" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/donnees-fiches.html" />
   <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-fiches.html" />
@@ -36,7 +36,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/donnees-fiches.html" />
   <script>window.ATM_LANG_FORCE = "ht"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/donnees-fiches.html", "ht": "https://explorateur.atmart.ltd/ht/donnees-fiches.html", "en": "https://explorateur.atmart.ltd/en/donnees-fiches.html", "es": "https://explorateur.atmart.ltd/es/donnees-fiches.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-5J0lbfNlAoYhsooHTa4h4hJk9ncm2ijwLigxrO//qiY=' 'sha256-BK3FZ/TIzzg29r+VSfb96lnTPTErgqSd+tu0iPZ9u6U=' 'sha256-M4YqxYMQrV2a23prc8NS82uyWcnTEU1TE9fTOYo3OxE=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-5J0lbfNlAoYhsooHTa4h4hJk9ncm2ijwLigxrO//qiY=' 'sha256-BK3FZ/TIzzg29r+VSfb96lnTPTErgqSd+tu0iPZ9u6U=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-NDtJj80B1jg40mEpySlWSJz9mx16mlgJImsRlPk2N+I=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -78,472 +78,473 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <p class="fd-avis" data-i18n="fd.avis">Fich sa yo se MACHIN ki fè yo apati fichye ki pibliye yo : chif konplè yo rekonte chak fwa, yo pa janm kopye nan yon nòt. Se sa ki fè yo pa yon depliyan — epi se kè prestasyon « Atmart Verifye » a.</p>
 </div></section>
 <section><div class="container">
-<details class="fd-f"><summary class="fd-s"><h2>Écoles déclarées au MENFP, confrontées à OpenStreetMap</h2></summary><div class="fd-c">
-<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
-<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
-<h3>1. Bases : contact, diffusion, accès</h3>
+<details class="fd-f"><summary class="fd-s"><h2 data-i18n-html="Écoles déclarées au MENFP, confrontées à OpenStreetMap">Lekòl ki deklare nan MENFP, konpare ak OpenStreetMap</h2></summary><div class="fd-c">
+<p class="fd-it" data-i18n-html="Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.">Fich dokimantasyon — modèl « Datasheets for Datasets » (Gebru et al.), vèsyon Aether Transparency Working Group, Atmart Data adapte l pou done ki rezime pa teritwa.</p>
+<p class="fd-avis" data-i18n-html="**Cette fiche est GÉNÉRÉE depuis le fichier publié.** Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche."><b>Se fichye ki pibliye a ki FÈ fich sa a.</b> Chak fwa nou lanse l, li rekonte konbyen done ki la ; li pa kopye anyen nan yon nòt. Yon fich ki vin fo ak tan pi mal pase pa gen fich ditou.</p>
+<h3 data-i18n-html="1. Bases : contact, diffusion, accès">1. Baz yo : kontak, difizyon, aksè</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Nom du jeu</td><td>Écoles déclarées au ministère, confrontées aux écoles cartographiées</td></tr>
-<tr><td>Fichier</td><td><code>atmart_ecoles_declarees.json</code></td></tr>
-<tr><td>Millésime</td><td>2024-2025</td></tr>
-<tr><td>Responsable</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
-<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
-<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_ecoles_declarees.json">https://explorateur.atmart.ltd/data/atmart_ecoles_declarees.json</a></td></tr>
+<tr><td data-i18n-html="Nom du jeu">Non jeu done a</td><td>Écoles déclarées au ministère, confrontées aux écoles cartographiées</td></tr>
+<tr><td data-i18n-html="Fichier">Fichye</td><td><code>atmart_ecoles_declarees.json</code></td></tr>
+<tr><td data-i18n-html="Millésime">Ane referans</td><td>2024-2025</td></tr>
+<tr><td data-i18n-html="Responsable">Responsab</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
+<tr><td data-i18n-html="Qui peut y accéder">Kiyès ki ka jwenn li</td><td data-i18n-html="tout le monde, sans compte">tout moun, san kont</td></tr>
+<tr><td data-i18n-html="Comment">Kijan</td><td><a href="https://explorateur.atmart.ltd/data/atmart_ecoles_declarees.json">https://explorateur.atmart.ltd/data/atmart_ecoles_declarees.json</a></td></tr>
 </tbody></table></div>
-<h3>2. Contenu</h3>
+<h3 data-i18n-html="2. Contenu">2. Kontni</h3>
 <ul>
-<li><b>Ce que représente chaque entrée</b> : une commune.</li>
-<li><b>Nombre d'entrées</b> : 140.</li>
-<li><b>Source d'origine</b> : MENFP — Direction de la planification et de la coopération externe (DPCE) (registres déclarés) ; OpenStreetMap — extrait HOT du 6 août 2026 (écoles vues)</li>
+<li data-i18n-html="**Ce que représente chaque entrée** : une commune."><b>Sa chak liy reprezante</b> : yon komin.</li>
+<li data-i18n-html="**Nombre d'entrées** : {n}." data-i18n-vars='{&quot;n&quot;: &quot;140&quot;}'><b>Konbyen liy</b> : {n}.</li>
+<li data-i18n-html="**Source d'origine** : {src}" data-i18n-vars='{&quot;src&quot;: &quot;MENFP — Direction de la planification et de la coopération externe (DPCE) (registres déclarés) ; OpenStreetMap — extrait HOT du 6 août 2026 (écoles vues)&quot;}'><b>Sous orijinal</b> : {src}</li>
 </ul>
-<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<h3 data-i18n-html="3. Complétude — MESURÉE, pas déclarée">3. Konbyen done ki la — NOU MEZIRE L, nou pa deklare l</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Entrées portant une mesure</td><td><b>140 sur 140</b> (100 %)</td></tr>
-<tr><td>Critère de comptage</td><td>champ « t » non vide</td></tr>
+<tr><td data-i18n-html="Entrées portant une mesure">Liy ki gen yon mezi</td><td data-i18n-html="**{avec} sur {total}** ({pct} %)" data-i18n-vars='{&quot;avec&quot;: &quot;140&quot;, &quot;total&quot;: &quot;140&quot;, &quot;pct&quot;: &quot;100&quot;}'><b>{avec} sou {total}</b> ({pct} %)</td></tr>
+<tr><td data-i18n-html="Critère de comptage">Kritè pou konte a</td><td data-i18n-html="champ « {champ} » non vide" data-i18n-vars='{&quot;champ&quot;: &quot;t&quot;}'>chan « {champ} » ki pa vid</td></tr>
 </tbody></table></div>
-<p>Toutes les entrées portent une mesure. <b>Cela ne veut pas dire que les valeurs sont justes</b> : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.</p>
-<h3>4. Concordance avec d'autres sources</h3>
-<p>Ce jeu est <b>confrontable</b> : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :</p>
+<p data-i18n-html="Toutes les entrées portent une mesure. **Cela ne veut pas dire que les valeurs sont justes** : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.">Tout liy yo gen yon mezi. <b>Sa pa vle di chif yo bon</b> : nou mezire si gen yon chif, nou pa mezire si chif la kòrèk. Gade seksyon 4.</p>
+<h3 data-i18n-html="4. Concordance avec d'autres sources">4. Èske lòt sous yo dakò</h3>
+<p data-i18n-html="Ce jeu est **confrontable** : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :">Nou ka <b>konpare</b> jeu done sa a : gen yon lòt sous ki mezire menm bagay la yon lòt jan. Men rezilta konparezon an, sou 140 komin yo :</p>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>État</td><td>Communes</td></tr>
-<tr><td>concordant</td><td>19</td></tr>
-<tr><td>ecart_modere</td><td>33</td></tr>
-<tr><td>desaccord</td><td>80</td></tr>
-<tr><td>invérifiable</td><td>8</td></tr>
+<tr><td data-i18n-html="État">Eta</td><td data-i18n-html="Communes">Komin</td></tr>
+<tr><td data-i18n-html="concordant">yo dakò</td><td>19</td></tr>
+<tr><td data-i18n-html="écart modéré">ti diferans</td><td>33</td></tr>
+<tr><td data-i18n-html="fort désaccord">gwo dezakò</td><td>80</td></tr>
+<tr><td data-i18n-html="invérifiable">nou pa ka verifye l</td><td>8</td></tr>
 </tbody></table></div>
-<p><b>Plus de trois entrées sur dix sont en fort désaccord avec l'autre source.</b> Ce jeu ne doit pas être employé seul pour une décision : la confrontation fait partie de la lecture.</p>
-<h3>5. Usages prévus, et usages inappropriés</h3>
-<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
-<p><b>Inapproprié</b> :</p>
+<p data-i18n-html="**Plus de trois entrées sur dix sont en fort désaccord avec l'autre source.** Ce jeu ne doit pas être employé seul pour une décision : la confrontation fait partie de la lecture."><b>Plis pase twa liy sou dis nan gwo dezakò ak lòt sous la.</b> Pa pran desizyon ak jeu done sa a pou kont li : konparezon an fè pati lekti a.</p>
+<h3 data-i18n-html="5. Usages prévus, et usages inappropriés">5. Sa li fèt pou li, ak sa li pa fèt pou li</h3>
+<p data-i18n-html="**Prévu** : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime."><b>Sa li fèt pou li</b> : sitiye yon teritwa, konpare komin, prepare yon dyagnostik, bay yon rapò done ansanm ak non sous la ak ane a.</p>
+<p data-i18n-html="**Inapproprié** :"><b>Sa li pa fèt pou li</b> :</p>
 <ul>
-<li>traiter une absence comme un zéro ;</li>
-<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
-<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+<li data-i18n-html="traiter une absence comme un zéro ;">pran yon absans pou yon zewo ;</li>
+<li data-i18n-html="comparer deux communes documentées par des millésimes différents sans le dire ;">konpare de komin ki dokimante nan de ane diferan san di sa ;</li>
+<li data-i18n-html="en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.">tire yon konklizyon sou moun : jeu done sa a se yon rezime pa teritwa, li pa janm desann sou yon moun.</li>
 </ul>
-<h3>6. Qualité des données — ce que le producteur signale</h3>
+<h3 data-i18n-html="6. Qualité des données — ce que le producteur signale">6. Kalite done yo — sa moun ki bay yo siyale</h3>
 <ul>
-<li>Registre = ce qui est DÉCLARÉ au ministère, pas ce qui est vu sur le terrain. Une école fermée mais non radiée y figure ; une école jamais recensée n'y figure pas.</li>
-<li>Comptage = codes CIE DISTINCTS. Des blocs de pages entières sont matériellement répétés dans certains registres ; 643 lignes d'établissement en double ont été écartées. Les deux cas les plus lourds : Artibonite pages 52 à 70 du PDF (257 lignes reprises des pages 47 à 52) et Nord pages 106 à 110 (66 lignes de Cap-Haïtien et de Limonade réimprimées au milieu de Ranquitte). La colonne controle porte le décompte commune par commune.</li>
-<li>Conséquence du point précédent : le nombre publié pour Ranquitte (Nord) ne repose que sur les lignes qui portent réellement son code. Si sa liste a été partiellement écrasée à l'impression, le registre ne permet pas de le savoir — on ne comble pas ce trou.</li>
-<li>Le secteur vient du 7e chiffre du CIE, porté par chaque ligne, et non de l'en-tête « SECTEUR PUBLIC / NON PUBLIC », absent ou erroné par endroits (132 lignes en divergence).</li>
-<li>page_pdf_debut est le numéro de page du PDF, qui ne coïncide pas avec le numéro imprimé en pied de page.</li>
-<li>Aucune donnée personnelle (téléphone, fondateur) n'est publiée.</li>
-<li>Aucune valeur départementale n'a été redescendue à la commune ; une commune absente du registre a un champ vide, jamais zéro.</li>
-<li>6 entités du registre n'ont pas de correspondant dans le référentiel territorial (communes récentes ou non reprises par la couche CNIGS) : elles sont publiées sans atmart_geo_id plutôt qu'écartées.</li>
-<li>Déclaré et vu ne mesurent pas la même chose : le registre compte ce qui est inscrit au ministère, la carte compte ce qui a été relevé par un contributeur. Leur écart décrit l'état de l'information, pas le nombre réel d'écoles.</li>
-<li>Le comptage cartographié additionne école, collège et préscolaire ; il écarte l'université, absente du registre.</li>
-<li>Une commune sans chiffre déclaré n'est pas une commune sans école : elle est absente du registre extrait.</li>
+<li data-i18n-html="Registre = ce qui est DÉCLARÉ au ministère, pas ce qui est vu sur le terrain. Une école fermée mais non radiée y figure ; une école jamais recensée n'y figure pas.">Rejis la se sa ki DEKLARE nan ministè a, se pa sa yo wè sou teren an. Yon lekòl ki fèmen men yo pa retire nan lis la ap la ; yon lekòl yo pa janm konte p ap la.</li>
+<li data-i18n-html="Comptage = codes CIE DISTINCTS. Des blocs de pages entières sont matériellement répétés dans certains registres ; 643 lignes d'établissement en double ont été écartées. Les deux cas les plus lourds : Artibonite pages 52 à 70 du PDF (257 lignes reprises des pages 47 à 52) et Nord pages 106 à 110 (66 lignes de Cap-Haïtien et de Limonade réimprimées au milieu de Ranquitte). La colonne controle porte le décompte commune par commune.">Konte a fèt sou kòd CIE ki DIFERAN youn ak lòt. Nan kèk rejis, gen blòk paj antye ki repete ; nou mete 643 liy etablisman ki an doub sou kote. De ka ki pi lou yo : Latibonit paj 52 rive 70 nan PDF la (257 liy ki soti nan paj 47 rive 52) ak Nò paj 106 rive 110 (66 liy Okap ak Limonad yo reenprime nan mitan Ranquitte). Kolòn controle a bay kont lan komin pa komin.</li>
+<li data-i18n-html="Conséquence du point précédent : le nombre publié pour Ranquitte (Nord) ne repose que sur les lignes qui portent réellement son code. Si sa liste a été partiellement écrasée à l'impression, le registre ne permet pas de le savoir — on ne comble pas ce trou.">Sa ki soti nan pwen anwo a : chif nou pibliye pou Ranquitte (Nò) chita sèlman sou liy ki pote kòd pa l vre. Si yon pati nan lis li a te efase lè yo t ap enprime, rejis la pa pèmèt nou konnen sa — nou pa bouche twou sa a.</li>
+<li data-i18n-html="Le secteur vient du 7e chiffre du CIE, porté par chaque ligne, et non de l'en-tête « SECTEUR PUBLIC / NON PUBLIC », absent ou erroné par endroits (132 lignes en divergence).">Sektè a soti nan 7yèm chif kòd CIE a, ki sou chak liy, se pa nan tit « SECTEUR PUBLIC / NON PUBLIC » la, ki manke oswa ki fo kote pa kote (132 liy pa dakò).</li>
+<li data-i18n-html="page_pdf_debut est le numéro de page du PDF, qui ne coïncide pas avec le numéro imprimé en pied de page.">page_pdf_debut se nimewo paj PDF la, li pa menm ak nimewo yo enprime anba paj la.</li>
+<li data-i18n-html="Aucune donnée personnelle (téléphone, fondateur) n'est publiée.">Nou pa pibliye okenn done pèsonèl (telefòn, moun ki fonde a).</li>
+<li data-i18n-html="Aucune valeur départementale n'a été redescendue à la commune ; une commune absente du registre a un champ vide, jamais zéro.">Nou pa pran okenn chif depatmantal pou nou desann li sou komin ; yon komin ki pa nan rejis la gen yon chan vid, li pa janm gen zewo.</li>
+<li data-i18n-html="6 entités du registre n'ont pas de correspondant dans le référentiel territorial (communes récentes ou non reprises par la couche CNIGS) : elles sont publiées sans atmart_geo_id plutôt qu'écartées.">6 antite nan rejis la pa gen parèy yo nan referansyèl teritoryal la (komin ki fèk fèt oswa kouch CNIGS la pa gen yo) : nou pibliye yo san atmart_geo_id olye nou jete yo.</li>
+<li data-i18n-html="Déclaré et vu ne mesurent pas la même chose : le registre compte ce qui est inscrit au ministère, la carte compte ce qui a été relevé par un contributeur. Leur écart décrit l'état de l'information, pas le nombre réel d'écoles.">Sa ki deklare ak sa yo wè pa mezire menm bagay : rejis la konte sa ki enskri nan ministè a, kat la konte sa yon kontribitè te make. Diferans ki genyen ant yo a di nan ki eta enfòmasyon an ye, li pa di konbyen lekòl ki genyen vre.</li>
+<li data-i18n-html="Le comptage cartographié additionne école, collège et préscolaire ; il écarte l'université, absente du registre.">Konte sou kat la met ansanm lekòl, kolèj ak preskolè ; li kite inivèsite deyò, paske li pa nan rejis la.</li>
+<li data-i18n-html="Une commune sans chiffre déclaré n'est pas une commune sans école : elle est absente du registre extrait.">Yon komin ki pa gen chif deklare se pa yon komin ki san lekòl : li pa nan rejis nou soti a, se tou.</li>
 </ul>
-<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
-<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<h3 data-i18n-html="7. Ce que ce jeu NE PERMET PAS de conclure">7. Sa jeu done sa a PA PÈMÈT ou konkli</h3>
+<p data-i18n-html="Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.">Se Atmart ki mete seksyon sa a : li pa nan modèl orijinal la, epi se li menm okenn pwodiktè pa ranpli poukont li.</p>
 <ul>
-<li>Le nombre d'écoles ne dit rien du <b>nombre d'élèves</b>, de la qualité, ni du niveau enseigné.</li>
-<li>L'écart entre déclaré et cartographié mesure l'état de la <b>cartographie</b>, pas le nombre réel d'écoles.</li>
+<li data-i18n-html="Le nombre d'écoles ne dit rien du **nombre d'élèves**, de la qualité, ni du niveau enseigné.">Kantite lekòl pa di anyen sou <b>konbyen elèv</b> ki genyen, sou kalite a, ni sou nivo yo anseye a.</li>
+<li data-i18n-html="L'écart entre déclaré et cartographié mesure l'état de la **cartographie**, pas le nombre réel d'écoles.">Diferans ant sa ki deklare ak sa ki sou kat la mezire nan ki eta <b>kat la</b> ye, li pa mezire konbyen lekòl ki genyen vre.</li>
 </ul>
-<h3>8. Vie privée</h3>
-<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
-<h3>9. Passeport juridique</h3>
+<h3 data-i18n-html="8. Vie privée">8. Vi prive</h3>
+<p data-i18n-html="**Aucune donnée personnelle.** Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc **sans objet** — et non « non renseignées »."><b>Pa gen okenn done pèsonèl.</b> Jeu done sa a se yon rezime pa komin ; pa gen moun ou ka rekonèt ladan l, ni dirèkteman ni endirèkteman, epi pa gen okenn sèy difizyon ki nesesè. Konsa kesyon 24 rive 27 nan modèl Aether la (konsantman, done sansib, analiz enpak) <b>pa konsène nou</b> — yo pa « san repons ».</p>
+<h3 data-i18n-html="9. Passeport juridique">9. Paspò jiridik</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Passeport</td><td>PSP-043</td></tr>
-<tr><td>Producteur</td><td>MENFP / SIGEEE — Ministère de l'Éducation nationale</td></tr>
-<tr><td>Licence</td><td>Décret du 12 octobre 2005 sur le droit d'auteur, art. 5 : les textes officiels administratifs et les « simples données » sont exclus de la protection</td></tr>
-<tr><td>Statut juridique</td><td>OUVERTE_AVEC_ATTRIBUTION</td></tr>
-<tr><td>Redistribution</td><td>Oui pour les données ; NON pour la mise en forme des rapports</td></tr>
-<tr><td>Usage commercial</td><td>Oui — les faits ne sont pas appropriables</td></tr>
-<tr><td>Publiable librement</td><td>OUI</td></tr>
-<tr><td>Utilisable en prestation payante</td><td>OUI — les données ; pas la mise en forme</td></tr>
-<tr><td>Vérifié par / le</td><td>Décret haïtien du 12/10/2005 (WIPO Lex), art. 5 — analysé le 17/08/2026 — 2026-08-17</td></tr>
+<tr><td data-i18n-html="Passeport">Paspò</td><td>PSP-043</td></tr>
+<tr><td data-i18n-html="Producteur">Moun ki bay done a</td><td>MENFP / SIGEEE — Ministère de l'Éducation nationale</td></tr>
+<tr><td data-i18n-html="Licence">Lisans</td><td>Décret du 12 octobre 2005 sur le droit d'auteur, art. 5 : les textes officiels administratifs et les « simples données » sont exclus de la protection</td></tr>
+<tr><td data-i18n-html="Statut juridique">Estati jiridik</td><td>OUVERTE_AVEC_ATTRIBUTION</td></tr>
+<tr><td data-i18n-html="Redistribution">Redistribisyon</td><td data-i18n-html="Oui pour les données ; NON pour la mise en forme des rapports">Wi pou done yo ; NON pou fason rapò yo prezante</td></tr>
+<tr><td data-i18n-html="Usage commercial">Itilizasyon komèsyal</td><td data-i18n-html="Oui — les faits ne sont pas appropriables">Wi — pèsonn pa ka met men sou yon reyalite</td></tr>
+<tr><td data-i18n-html="Publiable librement">Nou ka pibliye l lib</td><td data-i18n-html="OUI">WI</td></tr>
+<tr><td data-i18n-html="Utilisable en prestation payante">Nou ka sèvi ak li nan yon travay peye</td><td data-i18n-html="OUI — les données ; pas la mise en forme">WI — done yo ; pa fason yo prezante a</td></tr>
+<tr><td data-i18n-html="Vérifié par / le">Kiyès ki verifye l / ki lè</td><td>Décret haïtien du 12/10/2005 (WIPO Lex), art. 5 — analysé le 17/08/2026 — 2026-08-17</td></tr>
 </tbody></table></div>
-<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<h3 data-i18n-html="10. Sections du modèle Aether sans objet ici, et pourquoi">10. Seksyon modèl Aether la ki pa konsène nou isit, ak poukisa</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
-<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
-<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
-<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+<tr><td data-i18n-html="Question du modèle">Kesyon modèl la</td><td data-i18n-html="Pourquoi elle ne s'applique pas">Poukisa li pa konsène nou</td></tr>
+<tr><td data-i18n-html="Découpages entraînement / validation / test">Divizyon antrènman / validasyon / tès</td><td data-i18n-html="ce jeu n'entraîne aucun modèle ; il décrit un territoire">jeu done sa a pa antrene okenn modèl ; li dekri yon teritwa</td></tr>
+<tr><td data-i18n-html="Groupes démographiques et leur répartition">Gwoup demografik ak jan yo reparti</td><td data-i18n-html="agrégat territorial, aucune personne, aucune variable démographique individuelle">rezime pa teritwa, pa gen moun, pa gen okenn varyab demografik sou yon moun</td></tr>
+<tr><td data-i18n-html="Consentement des personnes concernées">Konsantman moun ki konsène yo</td><td data-i18n-html="aucune personne concernée">pa gen moun ki konsène</td></tr>
 </tbody></table></div>
-<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-it" data-i18n-html="Fiche générée le {date} par `build_datasheets.py`. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié." data-i18n-vars='{&quot;date&quot;: &quot;18/08/2026&quot;}'>Fich la fèt {date} ak <code>build_datasheets.py</code>. Pou mete l ajou : relanse script la — li rekalkile tèt li sou fichye ki pibliye a.</p>
 <p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/ecoles_declarees.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
 </div></details>
-<details class="fd-f"><summary class="fd-s"><h2>Établissements de santé déclarés au MSPP</h2></summary><div class="fd-c">
-<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
-<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
-<h3>1. Bases : contact, diffusion, accès</h3>
+<details class="fd-f"><summary class="fd-s"><h2 data-i18n-html="Établissements de santé déclarés au MSPP">Etablisman sante ki deklare nan MSPP</h2></summary><div class="fd-c">
+<p class="fd-it" data-i18n-html="Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.">Fich dokimantasyon — modèl « Datasheets for Datasets » (Gebru et al.), vèsyon Aether Transparency Working Group, Atmart Data adapte l pou done ki rezime pa teritwa.</p>
+<p class="fd-avis" data-i18n-html="**Cette fiche est GÉNÉRÉE depuis le fichier publié.** Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche."><b>Se fichye ki pibliye a ki FÈ fich sa a.</b> Chak fwa nou lanse l, li rekonte konbyen done ki la ; li pa kopye anyen nan yon nòt. Yon fich ki vin fo ak tan pi mal pase pa gen fich ditou.</p>
+<h3 data-i18n-html="1. Bases : contact, diffusion, accès">1. Baz yo : kontak, difizyon, aksè</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Nom du jeu</td><td>Établissements de santé déclarés au ministère, confrontés à ceux que la carte montre</td></tr>
-<tr><td>Fichier</td><td><code>atmart_sante_declaree.json</code></td></tr>
-<tr><td>Millésime</td><td>relevé du 17/08/2026</td></tr>
-<tr><td>Responsable</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
-<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
-<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_sante_declaree.json">https://explorateur.atmart.ltd/data/atmart_sante_declaree.json</a></td></tr>
+<tr><td data-i18n-html="Nom du jeu">Non jeu done a</td><td>Établissements de santé déclarés au ministère, confrontés à ceux que la carte montre</td></tr>
+<tr><td data-i18n-html="Fichier">Fichye</td><td><code>atmart_sante_declaree.json</code></td></tr>
+<tr><td data-i18n-html="Millésime">Ane referans</td><td>relevé du 17/08/2026</td></tr>
+<tr><td data-i18n-html="Responsable">Responsab</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
+<tr><td data-i18n-html="Qui peut y accéder">Kiyès ki ka jwenn li</td><td data-i18n-html="tout le monde, sans compte">tout moun, san kont</td></tr>
+<tr><td data-i18n-html="Comment">Kijan</td><td><a href="https://explorateur.atmart.ltd/data/atmart_sante_declaree.json">https://explorateur.atmart.ltd/data/atmart_sante_declaree.json</a></td></tr>
 </tbody></table></div>
-<h3>2. Contenu</h3>
+<h3 data-i18n-html="2. Contenu">2. Kontni</h3>
 <ul>
-<li><b>Ce que représente chaque entrée</b> : une commune.</li>
-<li><b>Nombre d'entrées</b> : 139.</li>
-<li><b>Source d'origine</b> : MSPP — Carte sanitaire (cartesanitaire.sisnu.net, point d'entrée public de l'outil officiel) ; OpenStreetMap — extrait Humanitarian OpenStreetMap Team du 6 août 2026</li>
+<li data-i18n-html="**Ce que représente chaque entrée** : une commune."><b>Sa chak liy reprezante</b> : yon komin.</li>
+<li data-i18n-html="**Nombre d'entrées** : {n}." data-i18n-vars='{&quot;n&quot;: &quot;139&quot;}'><b>Konbyen liy</b> : {n}.</li>
+<li data-i18n-html="**Source d'origine** : {src}" data-i18n-vars='{&quot;src&quot;: &quot;MSPP — Carte sanitaire (cartesanitaire.sisnu.net, point d'entrée public de l'outil officiel) ; OpenStreetMap — extrait Humanitarian OpenStreetMap Team du 6 août 2026&quot;}'><b>Sous orijinal</b> : {src}</li>
 </ul>
-<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<h3 data-i18n-html="3. Complétude — MESURÉE, pas déclarée">3. Konbyen done ki la — NOU MEZIRE L, nou pa deklare l</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Entrées portant une mesure</td><td><b>139 sur 139</b> (100 %)</td></tr>
-<tr><td>Critère de comptage</td><td>champ « t » non vide</td></tr>
+<tr><td data-i18n-html="Entrées portant une mesure">Liy ki gen yon mezi</td><td data-i18n-html="**{avec} sur {total}** ({pct} %)" data-i18n-vars='{&quot;avec&quot;: &quot;139&quot;, &quot;total&quot;: &quot;139&quot;, &quot;pct&quot;: &quot;100&quot;}'><b>{avec} sou {total}</b> ({pct} %)</td></tr>
+<tr><td data-i18n-html="Critère de comptage">Kritè pou konte a</td><td data-i18n-html="champ « {champ} » non vide" data-i18n-vars='{&quot;champ&quot;: &quot;t&quot;}'>chan « {champ} » ki pa vid</td></tr>
 </tbody></table></div>
-<p>Toutes les entrées portent une mesure. <b>Cela ne veut pas dire que les valeurs sont justes</b> : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.</p>
-<h3>4. Concordance avec d'autres sources</h3>
-<p>Ce jeu est <b>confrontable</b> : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :</p>
+<p data-i18n-html="Toutes les entrées portent une mesure. **Cela ne veut pas dire que les valeurs sont justes** : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.">Tout liy yo gen yon mezi. <b>Sa pa vle di chif yo bon</b> : nou mezire si gen yon chif, nou pa mezire si chif la kòrèk. Gade seksyon 4.</p>
+<h3 data-i18n-html="4. Concordance avec d'autres sources">4. Èske lòt sous yo dakò</h3>
+<p data-i18n-html="Ce jeu est **confrontable** : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :">Nou ka <b>konpare</b> jeu done sa a : gen yon lòt sous ki mezire menm bagay la yon lòt jan. Men rezilta konparezon an, sou 140 komin yo :</p>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>État</td><td>Communes</td></tr>
-<tr><td>concordant</td><td>67</td></tr>
-<tr><td>ecart_modere</td><td>51</td></tr>
-<tr><td>desaccord</td><td>20</td></tr>
-<tr><td>invérifiable</td><td>2</td></tr>
+<tr><td data-i18n-html="État">Eta</td><td data-i18n-html="Communes">Komin</td></tr>
+<tr><td data-i18n-html="concordant">yo dakò</td><td>67</td></tr>
+<tr><td data-i18n-html="écart modéré">ti diferans</td><td>51</td></tr>
+<tr><td data-i18n-html="fort désaccord">gwo dezakò</td><td>20</td></tr>
+<tr><td data-i18n-html="invérifiable">nou pa ka verifye l</td><td>2</td></tr>
 </tbody></table></div>
-<h3>5. Usages prévus, et usages inappropriés</h3>
-<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
-<p><b>Inapproprié</b> :</p>
+<h3 data-i18n-html="5. Usages prévus, et usages inappropriés">5. Sa li fèt pou li, ak sa li pa fèt pou li</h3>
+<p data-i18n-html="**Prévu** : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime."><b>Sa li fèt pou li</b> : sitiye yon teritwa, konpare komin, prepare yon dyagnostik, bay yon rapò done ansanm ak non sous la ak ane a.</p>
+<p data-i18n-html="**Inapproprié** :"><b>Sa li pa fèt pou li</b> :</p>
 <ul>
-<li>traiter une absence comme un zéro ;</li>
-<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
-<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+<li data-i18n-html="traiter une absence comme un zéro ;">pran yon absans pou yon zewo ;</li>
+<li data-i18n-html="comparer deux communes documentées par des millésimes différents sans le dire ;">konpare de komin ki dokimante nan de ane diferan san di sa ;</li>
+<li data-i18n-html="en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.">tire yon konklizyon sou moun : jeu done sa a se yon rezime pa teritwa, li pa janm desann sou yon moun.</li>
 </ul>
-<h3>6. Qualité des données — ce que le producteur signale</h3>
+<h3 data-i18n-html="6. Qualité des données — ce que le producteur signale">6. Kalite done yo — sa moun ki bay yo siyale</h3>
 <ul>
-<li>Registre = ce qui est DÉCLARÉ et enregistré au ministère, pas ce qui fonctionne. Un établissement fermé mais non radié y figure ; un dispensaire jamais enregistré n'y figure pas.</li>
-<li>La Carte sanitaire s'appuie sur l'évaluation de la prestation des services (EPSSS), conduite tous les cinq ans : entre deux campagnes, ouvertures et fermetures n'y entrent pas.</li>
-<li>Déclaré et vu ne mesurent pas la même chose. Leur écart décrit l'état de l'information sur un territoire, jamais le nombre réel d'établissements qui s'y trouvent.</li>
-<li>Le comptage cartographié additionne hôpital, clinique, centre de santé et dispensaire ; il écarte la pharmacie et le cabinet dentaire, que le registre ne recense pas de la même façon.</li>
-<li>Une commune absente du registre n'est pas une commune sans établissement : elle est absente du registre extrait.</li>
-<li>Aucun nom d'établissement n'est publié ici : le comptage suffit à la fiche, la liste nominative reste chez son producteur.</li>
+<li data-i18n-html="Registre = ce qui est DÉCLARÉ et enregistré au ministère, pas ce qui fonctionne. Un établissement fermé mais non radié y figure ; un dispensaire jamais enregistré n'y figure pas.">Rejis la se sa ki DEKLARE epi anrejistre nan ministè a, se pa sa k ap mache vre. Yon etablisman ki fèmen men yo pa retire nan lis la ap la ; yon dispansè yo pa janm anrejistre p ap la.</li>
+<li data-i18n-html="La Carte sanitaire s'appuie sur l'évaluation de la prestation des services (EPSSS), conduite tous les cinq ans : entre deux campagnes, ouvertures et fermetures n'y entrent pas.">Kat sanitè a chita sou evalyasyon sèvis yo (EPSSS), yo fè l chak senk an : ant de kanpay, sa ki louvri ak sa ki fèmen pa antre ladan l.</li>
+<li data-i18n-html="Déclaré et vu ne mesurent pas la même chose. Leur écart décrit l'état de l'information sur un territoire, jamais le nombre réel d'établissements qui s'y trouvent.">Sa ki deklare ak sa yo wè pa mezire menm bagay. Diferans ki genyen ant yo a di nan ki eta enfòmasyon an ye sou yon teritwa, li pa janm di konbyen etablisman ki la vre.</li>
+<li data-i18n-html="Le comptage cartographié additionne hôpital, clinique, centre de santé et dispensaire ; il écarte la pharmacie et le cabinet dentaire, que le registre ne recense pas de la même façon.">Konte sou kat la met ansanm lopital, klinik, sant sante ak dispansè ; li kite deyò famasi ak kabinè dantis, paske rejis la pa konte yo menm jan.</li>
+<li data-i18n-html="Une commune absente du registre n'est pas une commune sans établissement : elle est absente du registre extrait.">Yon komin ki pa nan rejis la se pa yon komin ki san etablisman : li pa nan rejis nou soti a, se tou.</li>
+<li data-i18n-html="Aucun nom d'établissement n'est publié ici : le comptage suffit à la fiche, la liste nominative reste chez son producteur.">Nou pa pibliye non okenn etablisman isit : konte a ase pou fich la, lis ak non yo rete lakay moun ki bay li a.</li>
 </ul>
-<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
-<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<h3 data-i18n-html="7. Ce que ce jeu NE PERMET PAS de conclure">7. Sa jeu done sa a PA PÈMÈT ou konkli</h3>
+<p data-i18n-html="Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.">Se Atmart ki mete seksyon sa a : li pa nan modèl orijinal la, epi se li menm okenn pwodiktè pa ranpli poukont li.</p>
 <ul>
-<li>Le nombre d'établissements ne dit rien de leur <b>capacité</b>, de leur personnel, ni de leurs heures d'ouverture.</li>
-<li>Un établissement <b>déclaré</b> peut être fermé ; un établissement <b>cartographié</b> peut être un cabinet privé fermé depuis des années.</li>
-<li>Aucune conclusion sur l'accès : deux communes à cinq établissements n'ont pas le même accès si l'une est montagneuse.</li>
+<li data-i18n-html="Le nombre d'établissements ne dit rien de leur **capacité**, de leur personnel, ni de leurs heures d'ouverture.">Kantite etablisman pa di anyen sou <b>kapasite</b> yo, sou anplwaye yo, ni sou lè yo louvri.</li>
+<li data-i18n-html="Un établissement **déclaré** peut être fermé ; un établissement **cartographié** peut être un cabinet privé fermé depuis des années.">Yon etablisman ki <b>deklare</b> ka fèmen ; yon etablisman ki <b>sou kat la</b> ka yon kabinè prive ki fèmen depi lontan.</li>
+<li data-i18n-html="Aucune conclusion sur l'accès : deux communes à cinq établissements n'ont pas le même accès si l'une est montagneuse.">Pa gen konklizyon sou aksè : de komin ki gen senk etablisman chak pa gen menm aksè si youn nan yo nan mòn.</li>
 </ul>
-<h3>8. Vie privée</h3>
-<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
-<h3>9. Passeport juridique</h3>
+<h3 data-i18n-html="8. Vie privée">8. Vi prive</h3>
+<p data-i18n-html="**Aucune donnée personnelle.** Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc **sans objet** — et non « non renseignées »."><b>Pa gen okenn done pèsonèl.</b> Jeu done sa a se yon rezime pa komin ; pa gen moun ou ka rekonèt ladan l, ni dirèkteman ni endirèkteman, epi pa gen okenn sèy difizyon ki nesesè. Konsa kesyon 24 rive 27 nan modèl Aether la (konsantman, done sansib, analiz enpak) <b>pa konsène nou</b> — yo pa « san repons ».</p>
+<h3 data-i18n-html="9. Passeport juridique">9. Paspò jiridik</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Passeport</td><td>PSP-048</td></tr>
-<tr><td>Producteur</td><td>Ministère de la Santé publique et de la Population (MSPP)</td></tr>
-<tr><td>Licence</td><td>Données publiques haïtiennes — décret du 12/10/2005, art. 5 (textes administratifs et simples données hors protection)</td></tr>
-<tr><td>Statut juridique</td><td>OUVERTE_VALIDEE</td></tr>
-<tr><td>Redistribution</td><td>Oui — hors protection</td></tr>
-<tr><td>Usage commercial</td><td>Oui — hors protection</td></tr>
-<tr><td>Publiable librement</td><td>OUI — registre public d'établissements de santé, publié par le ministère pour consultation</td></tr>
-<tr><td>Utilisable en prestation payante</td><td>OUI — aucune restriction commerciale sur un registre administratif</td></tr>
-<tr><td>Vérifié par / le</td><td>Atmart Data — 17/08/2026, décret du 12/10/2005 art. 5 — 2026-08-17</td></tr>
+<tr><td data-i18n-html="Passeport">Paspò</td><td>PSP-048</td></tr>
+<tr><td data-i18n-html="Producteur">Moun ki bay done a</td><td>Ministère de la Santé publique et de la Population (MSPP)</td></tr>
+<tr><td data-i18n-html="Licence">Lisans</td><td>Données publiques haïtiennes — décret du 12/10/2005, art. 5 (textes administratifs et simples données hors protection)</td></tr>
+<tr><td data-i18n-html="Statut juridique">Estati jiridik</td><td>OUVERTE_VALIDEE</td></tr>
+<tr><td data-i18n-html="Redistribution">Redistribisyon</td><td data-i18n-html="Oui — hors protection">Wi — li pa pwoteje</td></tr>
+<tr><td data-i18n-html="Usage commercial">Itilizasyon komèsyal</td><td data-i18n-html="Oui — hors protection">Wi — li pa pwoteje</td></tr>
+<tr><td data-i18n-html="Publiable librement">Nou ka pibliye l lib</td><td data-i18n-html="OUI — registre public d'établissements de santé, publié par le ministère pour consultation">WI — rejis piblik etablisman sante, ministè a pibliye l pou moun konsilte l</td></tr>
+<tr><td data-i18n-html="Utilisable en prestation payante">Nou ka sèvi ak li nan yon travay peye</td><td data-i18n-html="OUI — aucune restriction commerciale sur un registre administratif">WI — pa gen okenn restriksyon komèsyal sou yon rejis administratif</td></tr>
+<tr><td data-i18n-html="Vérifié par / le">Kiyès ki verifye l / ki lè</td><td>Atmart Data — 17/08/2026, décret du 12/10/2005 art. 5 — 2026-08-17</td></tr>
 </tbody></table></div>
-<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<h3 data-i18n-html="10. Sections du modèle Aether sans objet ici, et pourquoi">10. Seksyon modèl Aether la ki pa konsène nou isit, ak poukisa</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
-<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
-<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
-<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+<tr><td data-i18n-html="Question du modèle">Kesyon modèl la</td><td data-i18n-html="Pourquoi elle ne s'applique pas">Poukisa li pa konsène nou</td></tr>
+<tr><td data-i18n-html="Découpages entraînement / validation / test">Divizyon antrènman / validasyon / tès</td><td data-i18n-html="ce jeu n'entraîne aucun modèle ; il décrit un territoire">jeu done sa a pa antrene okenn modèl ; li dekri yon teritwa</td></tr>
+<tr><td data-i18n-html="Groupes démographiques et leur répartition">Gwoup demografik ak jan yo reparti</td><td data-i18n-html="agrégat territorial, aucune personne, aucune variable démographique individuelle">rezime pa teritwa, pa gen moun, pa gen okenn varyab demografik sou yon moun</td></tr>
+<tr><td data-i18n-html="Consentement des personnes concernées">Konsantman moun ki konsène yo</td><td data-i18n-html="aucune personne concernée">pa gen moun ki konsène</td></tr>
 </tbody></table></div>
-<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-it" data-i18n-html="Fiche générée le {date} par `build_datasheets.py`. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié." data-i18n-vars='{&quot;date&quot;: &quot;18/08/2026&quot;}'>Fich la fèt {date} ak <code>build_datasheets.py</code>. Pou mete l ajou : relanse script la — li rekalkile tèt li sou fichye ki pibliye a.</p>
 <p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/sante_declaree.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
 </div></details>
-<details class="fd-f"><summary class="fd-s"><h2>Concordance des sources par commune</h2></summary><div class="fd-c">
-<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
-<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
-<h3>1. Bases : contact, diffusion, accès</h3>
+<details class="fd-f"><summary class="fd-s"><h2 data-i18n-html="Concordance des sources par commune">Èske sous yo dakò, komin pa komin</h2></summary><div class="fd-c">
+<p class="fd-it" data-i18n-html="Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.">Fich dokimantasyon — modèl « Datasheets for Datasets » (Gebru et al.), vèsyon Aether Transparency Working Group, Atmart Data adapte l pou done ki rezime pa teritwa.</p>
+<p class="fd-avis" data-i18n-html="**Cette fiche est GÉNÉRÉE depuis le fichier publié.** Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche."><b>Se fichye ki pibliye a ki FÈ fich sa a.</b> Chak fwa nou lanse l, li rekonte konbyen done ki la ; li pa kopye anyen nan yon nòt. Yon fich ki vin fo ak tan pi mal pase pa gen fich ditou.</p>
+<h3 data-i18n-html="1. Bases : contact, diffusion, accès">1. Baz yo : kontak, difizyon, aksè</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Nom du jeu</td><td>Concordance des sources, commune par commune</td></tr>
-<tr><td>Fichier</td><td><code>atmart_concordance.json</code></td></tr>
-<tr><td>Millésime</td><td>voir « source »</td></tr>
-<tr><td>Responsable</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
-<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
-<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_concordance.json">https://explorateur.atmart.ltd/data/atmart_concordance.json</a></td></tr>
+<tr><td data-i18n-html="Nom du jeu">Non jeu done a</td><td>Concordance des sources, commune par commune</td></tr>
+<tr><td data-i18n-html="Fichier">Fichye</td><td><code>atmart_concordance.json</code></td></tr>
+<tr><td data-i18n-html="Millésime">Ane referans</td><td data-i18n-html="voir « source »">gade « sous »</td></tr>
+<tr><td data-i18n-html="Responsable">Responsab</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
+<tr><td data-i18n-html="Qui peut y accéder">Kiyès ki ka jwenn li</td><td data-i18n-html="tout le monde, sans compte">tout moun, san kont</td></tr>
+<tr><td data-i18n-html="Comment">Kijan</td><td><a href="https://explorateur.atmart.ltd/data/atmart_concordance.json">https://explorateur.atmart.ltd/data/atmart_concordance.json</a></td></tr>
 </tbody></table></div>
-<h3>2. Contenu</h3>
+<h3 data-i18n-html="2. Contenu">2. Kontni</h3>
 <ul>
-<li><b>Ce que représente chaque entrée</b> : une commune.</li>
-<li><b>Nombre d'entrées</b> : 140.</li>
-<li><b>Source d'origine</b> : MSPP et OpenStreetMap (santé) ; MENFP et OpenStreetMap (écoles) ; IHSI, UNFPA/OCHA et WorldPop (population)</li>
+<li data-i18n-html="**Ce que représente chaque entrée** : une commune."><b>Sa chak liy reprezante</b> : yon komin.</li>
+<li data-i18n-html="**Nombre d'entrées** : {n}." data-i18n-vars='{&quot;n&quot;: &quot;140&quot;}'><b>Konbyen liy</b> : {n}.</li>
+<li data-i18n-html="**Source d'origine** : {src}" data-i18n-vars='{&quot;src&quot;: &quot;MSPP et OpenStreetMap (santé) ; MENFP et OpenStreetMap (écoles) ; IHSI, UNFPA/OCHA et WorldPop (population)&quot;}'><b>Sous orijinal</b> : {src}</li>
 </ul>
-<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<h3 data-i18n-html="3. Complétude — MESURÉE, pas déclarée">3. Konbyen done ki la — NOU MEZIRE L, nou pa deklare l</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Entrées portant une mesure</td><td><b>140 sur 140</b> (100 %)</td></tr>
-<tr><td>Critère de comptage</td><td>champ « n » non vide</td></tr>
+<tr><td data-i18n-html="Entrées portant une mesure">Liy ki gen yon mezi</td><td data-i18n-html="**{avec} sur {total}** ({pct} %)" data-i18n-vars='{&quot;avec&quot;: &quot;140&quot;, &quot;total&quot;: &quot;140&quot;, &quot;pct&quot;: &quot;100&quot;}'><b>{avec} sou {total}</b> ({pct} %)</td></tr>
+<tr><td data-i18n-html="Critère de comptage">Kritè pou konte a</td><td data-i18n-html="champ « {champ} » non vide" data-i18n-vars='{&quot;champ&quot;: &quot;n&quot;}'>chan « {champ} » ki pa vid</td></tr>
 </tbody></table></div>
-<p>Toutes les entrées portent une mesure. <b>Cela ne veut pas dire que les valeurs sont justes</b> : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.</p>
-<h3>4. Concordance avec d'autres sources</h3>
-<p><b>Aucune autre source ne mesure le même objet</b> dans le périmètre d'Atmart. Ce jeu est donc INVÉRIFIABLE en l'état — ce qui n'est pas un défaut de qualité, mais une limite de ce qu'on peut affirmer. Une seconde source serait la première amélioration à chercher.</p>
-<h3>5. Usages prévus, et usages inappropriés</h3>
-<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
-<p><b>Inapproprié</b> :</p>
+<p data-i18n-html="Toutes les entrées portent une mesure. **Cela ne veut pas dire que les valeurs sont justes** : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.">Tout liy yo gen yon mezi. <b>Sa pa vle di chif yo bon</b> : nou mezire si gen yon chif, nou pa mezire si chif la kòrèk. Gade seksyon 4.</p>
+<h3 data-i18n-html="4. Concordance avec d'autres sources">4. Èske lòt sous yo dakò</h3>
+<p data-i18n-html="**Aucune autre source ne mesure le même objet** dans le périmètre d'Atmart. Ce jeu est donc INVÉRIFIABLE en l'état — ce qui n'est pas un défaut de qualité, mais une limite de ce qu'on peut affirmer. Une seconde source serait la première amélioration à chercher."><b>Pa gen okenn lòt sous ki mezire menm bagay la</b> nan sa Atmart genyen. Konsa nou PA KA VERIFYE jeu done sa a jan li ye a — se pa yon defo nan kalite l, se yon limit sou sa nou ka di. Premye bagay pou chèche se yon dezyèm sous.</p>
+<h3 data-i18n-html="5. Usages prévus, et usages inappropriés">5. Sa li fèt pou li, ak sa li pa fèt pou li</h3>
+<p data-i18n-html="**Prévu** : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime."><b>Sa li fèt pou li</b> : sitiye yon teritwa, konpare komin, prepare yon dyagnostik, bay yon rapò done ansanm ak non sous la ak ane a.</p>
+<p data-i18n-html="**Inapproprié** :"><b>Sa li pa fèt pou li</b> :</p>
 <ul>
-<li>traiter une absence comme un zéro ;</li>
-<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
-<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+<li data-i18n-html="traiter une absence comme un zéro ;">pran yon absans pou yon zewo ;</li>
+<li data-i18n-html="comparer deux communes documentées par des millésimes différents sans le dire ;">konpare de komin ki dokimante nan de ane diferan san di sa ;</li>
+<li data-i18n-html="en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.">tire yon konklizyon sou moun : jeu done sa a se yon rezime pa teritwa, li pa janm desann sou yon moun.</li>
 </ul>
-<h3>6. Qualité des données — ce que le producteur signale</h3>
+<h3 data-i18n-html="6. Qualité des données — ce que le producteur signale">6. Kalite done yo — sa moun ki bay yo siyale</h3>
 <ul>
-<li>CET INDICE NE NOTE PAS LES TERRITOIRES. Une commune en « fort désaccord » n'est pas une commune mal équipée : c'est une commune sur laquelle nos sources se contredisent. Il mesure l'état de l'information, jamais celui du terrain.</li>
-<li>Un désaccord ne dit pas QUELLE source se trompe. Sur Gressier, c'est la projection officielle qui est aberrante et le satellite qui s'accorde avec l'IHSI — l'inverse de ce qu'on supposerait.</li>
-<li>« Invérifiable » n'est pas « fiable » : c'est une famille où une seule source existe, donc où rien ne peut être confronté. C'est souvent plus inquiétant qu'un désaccord visible.</li>
-<li>Les seuils 1,5 et 3 sont un choix d'Atmart, publié pour être discuté : le produit détaillé permet de recalculer autrement.</li>
-<li>Aucune source n'est corrigée, aucune moyenne n'est faite : la moyenne d'un chiffre vrai et d'un chiffre faux est un troisième chiffre faux, avec l'autorité d'un calcul.</li>
+<li data-i18n-html="CET INDICE NE NOTE PAS LES TERRITOIRES. Une commune en « fort désaccord » n'est pas une commune mal équipée : c'est une commune sur laquelle nos sources se contredisent. Il mesure l'état de l'information, jamais celui du terrain.">ENDIS SA A PA BAY TERITWA YO NÒT. Yon komin ki nan « gwo dezakò » se pa yon komin ki mal ekipe : se yon komin kote sous nou yo kontredi youn lòt. Li mezire eta enfòmasyon an, li pa janm mezire eta teren an.</li>
+<li data-i18n-html="Un désaccord ne dit pas QUELLE source se trompe. Sur Gressier, c'est la projection officielle qui est aberrante et le satellite qui s'accorde avec l'IHSI — l'inverse de ce qu'on supposerait.">Yon dezakò pa di KI SOUS ki nan erè. Sou Gresye, se pwojeksyon ofisyèl la ki dwòl epi se satelit la ki dakò ak IHSI — kontrè sa yon moun ta sipoze.</li>
+<li data-i18n-html="« Invérifiable » n'est pas « fiable » : c'est une famille où une seule source existe, donc où rien ne peut être confronté. C'est souvent plus inquiétant qu'un désaccord visible.">« Nou pa ka verifye l » pa vle di « nou ka fye l » : se yon fanmi kote gen yon sèl sous, donk pa gen anyen pou konpare. Souvan sa pi enkyetan pase yon dezakò ou wè.</li>
+<li data-i18n-html="Les seuils 1,5 et 3 sont un choix d'Atmart, publié pour être discuté : le produit détaillé permet de recalculer autrement.">Se Atmart ki chwazi sèy 1,5 ak 3 yo, epi nou pibliye chwa a pou moun ka diskite l : pwodui detaye a pèmèt rekalkile yon lòt jan.</li>
+<li data-i18n-html="Aucune source n'est corrigée, aucune moyenne n'est faite : la moyenne d'un chiffre vrai et d'un chiffre faux est un troisième chiffre faux, avec l'autorité d'un calcul.">Nou pa korije okenn sous, nou pa fè okenn mwayèn : mwayèn yon chif ki vre ak yon chif ki fo bay yon twazyèm chif ki fo, men ki gen lè yon kalkil serye.</li>
 </ul>
-<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
-<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<h3 data-i18n-html="7. Ce que ce jeu NE PERMET PAS de conclure">7. Sa jeu done sa a PA PÈMÈT ou konkli</h3>
+<p data-i18n-html="Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.">Se Atmart ki mete seksyon sa a : li pa nan modèl orijinal la, epi se li menm okenn pwodiktè pa ranpli poukont li.</p>
 <ul>
-<li>Les valeurs décrivent un <b>état mesuré</b>, jamais une prévision.</li>
-<li>Aucune causalité ne se lit ici : deux grandeurs corrélées sur 140 communes ne se commandent pas l'une l'autre.</li>
+<li data-i18n-html="Les valeurs décrivent un **état mesuré**, jamais une prévision.">Chif yo dekri yon <b>eta yo mezire</b>, yo pa janm yon previzyon.</li>
+<li data-i18n-html="Aucune causalité ne se lit ici : deux grandeurs corrélées sur 140 communes ne se commandent pas l'une l'autre.">Pa gen okenn kòz ou ka li isit : de bagay ki mache ansanm sou 140 komin pa vle di youn ap kòmande lòt la.</li>
 </ul>
-<h3>8. Vie privée</h3>
-<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
-<h3>9. Passeport juridique</h3>
+<h3 data-i18n-html="8. Vie privée">8. Vi prive</h3>
+<p data-i18n-html="**Aucune donnée personnelle.** Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc **sans objet** — et non « non renseignées »."><b>Pa gen okenn done pèsonèl.</b> Jeu done sa a se yon rezime pa komin ; pa gen moun ou ka rekonèt ladan l, ni dirèkteman ni endirèkteman, epi pa gen okenn sèy difizyon ki nesesè. Konsa kesyon 24 rive 27 nan modèl Aether la (konsantman, done sansib, analiz enpak) <b>pa konsène nou</b> — yo pa « san repons ».</p>
+<h3 data-i18n-html="9. Passeport juridique">9. Paspò jiridik</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Passeport</td><td>PSP-049</td></tr>
-<tr><td>Producteur</td><td>Atmart Data</td></tr>
-<tr><td>Licence</td><td>CC BY 4.0 — attribution « Atmart Data, Explorateur Haïti » ; les sources confrontées gardent chacune leur propre licence</td></tr>
-<tr><td>Statut juridique</td><td>OUVERTE_AVEC_ATTRIBUTION</td></tr>
-<tr><td>Redistribution</td><td>Oui</td></tr>
-<tr><td>Usage commercial</td><td>Oui</td></tr>
-<tr><td>Publiable librement</td><td>OUI — production Atmart sur des sources ouvertes, aucune restriction héritée</td></tr>
-<tr><td>Utilisable en prestation payante</td><td>OUI — c'est le socle de la prestation « Atmart Vérifié »</td></tr>
-<tr><td>Vérifié par / le</td><td>Atmart Data — 18/08/2026, production propre sur sources ouvertes (MSPP décret 12/10/2005 art. 5, MENFP idem, OSM ODbL, IHSI, UNFPA CC BY-IGO, WorldPop CC BY 4.0) — 2026-08-18</td></tr>
+<tr><td data-i18n-html="Passeport">Paspò</td><td>PSP-049</td></tr>
+<tr><td data-i18n-html="Producteur">Moun ki bay done a</td><td>Atmart Data</td></tr>
+<tr><td data-i18n-html="Licence">Lisans</td><td>CC BY 4.0 — attribution « Atmart Data, Explorateur Haïti » ; les sources confrontées gardent chacune leur propre licence</td></tr>
+<tr><td data-i18n-html="Statut juridique">Estati jiridik</td><td>OUVERTE_AVEC_ATTRIBUTION</td></tr>
+<tr><td data-i18n-html="Redistribution">Redistribisyon</td><td data-i18n-html="Oui">Wi</td></tr>
+<tr><td data-i18n-html="Usage commercial">Itilizasyon komèsyal</td><td data-i18n-html="Oui">Wi</td></tr>
+<tr><td data-i18n-html="Publiable librement">Nou ka pibliye l lib</td><td data-i18n-html="OUI — production Atmart sur des sources ouvertes, aucune restriction héritée">WI — se Atmart ki fè l sou sous ki ouvè, li pa eritye okenn restriksyon</td></tr>
+<tr><td data-i18n-html="Utilisable en prestation payante">Nou ka sèvi ak li nan yon travay peye</td><td data-i18n-html="OUI — c'est le socle de la prestation « Atmart Vérifié »">WI — se sa ki chita anba prestasyon « Atmart Verifye » a</td></tr>
+<tr><td data-i18n-html="Vérifié par / le">Kiyès ki verifye l / ki lè</td><td>Atmart Data — 18/08/2026, production propre sur sources ouvertes (MSPP décret 12/10/2005 art. 5, MENFP idem, OSM ODbL, IHSI, UNFPA CC BY-IGO, WorldPop CC BY 4.0) — 2026-08-18</td></tr>
 </tbody></table></div>
-<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<h3 data-i18n-html="10. Sections du modèle Aether sans objet ici, et pourquoi">10. Seksyon modèl Aether la ki pa konsène nou isit, ak poukisa</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
-<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
-<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
-<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+<tr><td data-i18n-html="Question du modèle">Kesyon modèl la</td><td data-i18n-html="Pourquoi elle ne s'applique pas">Poukisa li pa konsène nou</td></tr>
+<tr><td data-i18n-html="Découpages entraînement / validation / test">Divizyon antrènman / validasyon / tès</td><td data-i18n-html="ce jeu n'entraîne aucun modèle ; il décrit un territoire">jeu done sa a pa antrene okenn modèl ; li dekri yon teritwa</td></tr>
+<tr><td data-i18n-html="Groupes démographiques et leur répartition">Gwoup demografik ak jan yo reparti</td><td data-i18n-html="agrégat territorial, aucune personne, aucune variable démographique individuelle">rezime pa teritwa, pa gen moun, pa gen okenn varyab demografik sou yon moun</td></tr>
+<tr><td data-i18n-html="Consentement des personnes concernées">Konsantman moun ki konsène yo</td><td data-i18n-html="aucune personne concernée">pa gen moun ki konsène</td></tr>
 </tbody></table></div>
-<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-it" data-i18n-html="Fiche générée le {date} par `build_datasheets.py`. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié." data-i18n-vars='{&quot;date&quot;: &quot;18/08/2026&quot;}'>Fich la fèt {date} ak <code>build_datasheets.py</code>. Pou mete l ajou : relanse script la — li rekalkile tèt li sou fichye ki pibliye a.</p>
 <p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/concordance.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
 </div></details>
-<details class="fd-f"><summary class="fd-s"><h2>Temps d'accès aux services par la route</h2></summary><div class="fd-c">
-<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
-<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
-<h3>1. Bases : contact, diffusion, accès</h3>
+<details class="fd-f"><summary class="fd-s"><h2 data-i18n-html="Temps d'accès aux services par la route">Konbyen tan sa pran pou rive nan sèvis yo sou wout</h2></summary><div class="fd-c">
+<p class="fd-it" data-i18n-html="Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.">Fich dokimantasyon — modèl « Datasheets for Datasets » (Gebru et al.), vèsyon Aether Transparency Working Group, Atmart Data adapte l pou done ki rezime pa teritwa.</p>
+<p class="fd-avis" data-i18n-html="**Cette fiche est GÉNÉRÉE depuis le fichier publié.** Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche."><b>Se fichye ki pibliye a ki FÈ fich sa a.</b> Chak fwa nou lanse l, li rekonte konbyen done ki la ; li pa kopye anyen nan yon nòt. Yon fich ki vin fo ak tan pi mal pase pa gen fich ditou.</p>
+<h3 data-i18n-html="1. Bases : contact, diffusion, accès">1. Baz yo : kontak, difizyon, aksè</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Nom du jeu</td><td>Temps d'accès par la route, par commune</td></tr>
-<tr><td>Fichier</td><td><code>atmart_acces_routier.json</code></td></tr>
-<tr><td>Millésime</td><td>voir « source »</td></tr>
-<tr><td>Responsable</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
-<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
-<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_acces_routier.json">https://explorateur.atmart.ltd/data/atmart_acces_routier.json</a></td></tr>
+<tr><td data-i18n-html="Nom du jeu">Non jeu done a</td><td>Temps d'accès par la route, par commune</td></tr>
+<tr><td data-i18n-html="Fichier">Fichye</td><td><code>atmart_acces_routier.json</code></td></tr>
+<tr><td data-i18n-html="Millésime">Ane referans</td><td data-i18n-html="voir « source »">gade « sous »</td></tr>
+<tr><td data-i18n-html="Responsable">Responsab</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
+<tr><td data-i18n-html="Qui peut y accéder">Kiyès ki ka jwenn li</td><td data-i18n-html="tout le monde, sans compte">tout moun, san kont</td></tr>
+<tr><td data-i18n-html="Comment">Kijan</td><td><a href="https://explorateur.atmart.ltd/data/atmart_acces_routier.json">https://explorateur.atmart.ltd/data/atmart_acces_routier.json</a></td></tr>
 </tbody></table></div>
-<h3>2. Contenu</h3>
+<h3 data-i18n-html="2. Contenu">2. Kontni</h3>
 <ul>
-<li><b>Ce que représente chaque entrée</b> : une commune.</li>
-<li><b>Nombre d'entrées</b> : 140.</li>
-<li><b>Source d'origine</b> : OpenStreetMap — extrait Humanitarian OpenStreetMap Team du 6 août 2026 (routes, santé, écoles, points d'intérêt) ; marchés suivis : PAM via OCHA HDX, relevé du 13 août 2026</li>
+<li data-i18n-html="**Ce que représente chaque entrée** : une commune."><b>Sa chak liy reprezante</b> : yon komin.</li>
+<li data-i18n-html="**Nombre d'entrées** : {n}." data-i18n-vars='{&quot;n&quot;: &quot;140&quot;}'><b>Konbyen liy</b> : {n}.</li>
+<li data-i18n-html="**Source d'origine** : {src}" data-i18n-vars='{&quot;src&quot;: &quot;OpenStreetMap — extrait Humanitarian OpenStreetMap Team du 6 août 2026 (routes, santé, écoles, points d'intérêt) ; marchés suivis : PAM via OCHA HDX, relevé du 13 août 2026&quot;}'><b>Sous orijinal</b> : {src}</li>
 </ul>
-<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<h3 data-i18n-html="3. Complétude — MESURÉE, pas déclarée">3. Konbyen done ki la — NOU MEZIRE L, nou pa deklare l</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Entrées portant une mesure</td><td><b>140 sur 140</b> (100 %)</td></tr>
-<tr><td>Critère de comptage</td><td>toutes les entrées portent une mesure</td></tr>
+<tr><td data-i18n-html="Entrées portant une mesure">Liy ki gen yon mezi</td><td data-i18n-html="**{avec} sur {total}** ({pct} %)" data-i18n-vars='{&quot;avec&quot;: &quot;140&quot;, &quot;total&quot;: &quot;140&quot;, &quot;pct&quot;: &quot;100&quot;}'><b>{avec} sou {total}</b> ({pct} %)</td></tr>
+<tr><td data-i18n-html="Critère de comptage">Kritè pou konte a</td><td data-i18n-html="toutes les entrées portent une mesure">tout liy yo gen yon mezi</td></tr>
 </tbody></table></div>
-<p>Toutes les entrées portent une mesure. <b>Cela ne veut pas dire que les valeurs sont justes</b> : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.</p>
-<h3>4. Concordance avec d'autres sources</h3>
-<p><b>Aucune autre source ne mesure le même objet</b> dans le périmètre d'Atmart. Ce jeu est donc INVÉRIFIABLE en l'état — ce qui n'est pas un défaut de qualité, mais une limite de ce qu'on peut affirmer. Une seconde source serait la première amélioration à chercher.</p>
-<h3>5. Usages prévus, et usages inappropriés</h3>
-<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
-<p><b>Inapproprié</b> :</p>
+<p data-i18n-html="Toutes les entrées portent une mesure. **Cela ne veut pas dire que les valeurs sont justes** : la complétude mesure la présence d'un chiffre, jamais sa justesse. Voir la section 4.">Tout liy yo gen yon mezi. <b>Sa pa vle di chif yo bon</b> : nou mezire si gen yon chif, nou pa mezire si chif la kòrèk. Gade seksyon 4.</p>
+<h3 data-i18n-html="4. Concordance avec d'autres sources">4. Èske lòt sous yo dakò</h3>
+<p data-i18n-html="**Aucune autre source ne mesure le même objet** dans le périmètre d'Atmart. Ce jeu est donc INVÉRIFIABLE en l'état — ce qui n'est pas un défaut de qualité, mais une limite de ce qu'on peut affirmer. Une seconde source serait la première amélioration à chercher."><b>Pa gen okenn lòt sous ki mezire menm bagay la</b> nan sa Atmart genyen. Konsa nou PA KA VERIFYE jeu done sa a jan li ye a — se pa yon defo nan kalite l, se yon limit sou sa nou ka di. Premye bagay pou chèche se yon dezyèm sous.</p>
+<h3 data-i18n-html="5. Usages prévus, et usages inappropriés">5. Sa li fèt pou li, ak sa li pa fèt pou li</h3>
+<p data-i18n-html="**Prévu** : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime."><b>Sa li fèt pou li</b> : sitiye yon teritwa, konpare komin, prepare yon dyagnostik, bay yon rapò done ansanm ak non sous la ak ane a.</p>
+<p data-i18n-html="**Inapproprié** :"><b>Sa li pa fèt pou li</b> :</p>
 <ul>
-<li>traiter une absence comme un zéro ;</li>
-<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
-<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+<li data-i18n-html="traiter une absence comme un zéro ;">pran yon absans pou yon zewo ;</li>
+<li data-i18n-html="comparer deux communes documentées par des millésimes différents sans le dire ;">konpare de komin ki dokimante nan de ane diferan san di sa ;</li>
+<li data-i18n-html="en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.">tire yon konklizyon sou moun : jeu done sa a se yon rezime pa teritwa, li pa janm desann sou yon moun.</li>
 </ul>
-<h3>6. Qualité des données — ce que le producteur signale</h3>
+<h3 data-i18n-html="6. Qualité des données — ce que le producteur signale">6. Kalite done yo — sa moun ki bay yo siyale</h3>
 <ul>
-<li>Temps en CONDITIONS NORMALES. L'état de la chaussée, la saison des pluies, les barrages routiers, les embouteillages et l'insécurité n'entrent PAS dans le calcul. Le chiffre est un plancher optimiste, jamais une prévision de trajet.</li>
-<li>Un établissement cartographié n'est pas un établissement fonctionnel : OSM enregistre un bâtiment vu, pas un service rendu. « L'hôpital est à 22 minutes » ne dit rien du personnel, des médicaments ni des horaires.</li>
-<li>OpenStreetMap est contributif : une commune peu cartographiée a peu de routes ET peu de destinations, ce qui allonge ses temps ou les rend incalculables. C'est un défaut de la carte, pas du territoire.</li>
-<li>Aucune liaison maritime n'entre dans le calcul. Les communes insulaires (La Tortue, Île à Vache, La Gonâve) n'ont pas de temps vers le continent — et ne doivent pas en avoir.</li>
-<li>Les sens uniques sont ignorés et le dernier tronçon jusqu'à la porte n'est pas compté : deux biais supplémentaires, tous deux dans le sens de l'optimisme.</li>
-<li>La famille « hôpital » suit l'étiquetage OSM, qui en Haïti range sous ce mot beaucoup de dispensaires et de centres de santé. Elle est plus large que le mot ne le suggère.</li>
-<li>Les coordonnées des marchés suivis par le PAM sont publiées au centième de degré, soit environ un kilomètre de précision.</li>
-<li>Le barème liste des classes rapides (autoroute, voie express) qui n'existent nulle part en Haïti : la vitesse la plus élevée réellement appliquée est celle des routes primaires.</li>
+<li data-i18n-html="Temps en CONDITIONS NORMALES. L'état de la chaussée, la saison des pluies, les barrages routiers, les embouteillages et l'insécurité n'entrent PAS dans le calcul. Le chiffre est un plancher optimiste, jamais une prévision de trajet.">Tan an kalkile nan KONDISYON NÒMAL. Eta wout la, sezon lapli, barikad, blokis ak ensekirite PA antre nan kalkil la. Chif la se yon minimòm ki optimis, li pa janm yon previzyon vwayaj.</li>
+<li data-i18n-html="Un établissement cartographié n'est pas un établissement fonctionnel : OSM enregistre un bâtiment vu, pas un service rendu. « L'hôpital est à 22 minutes » ne dit rien du personnel, des médicaments ni des horaires.">Yon etablisman ki sou kat la se pa yon etablisman k ap fonksyone : OSM make yon bilding yo wè, li pa make yon sèvis yo bay. « Lopital la a 22 minit » pa di anyen sou anplwaye, sou medikaman, ni sou lè yo louvri.</li>
+<li data-i18n-html="OpenStreetMap est contributif : une commune peu cartographiée a peu de routes ET peu de destinations, ce qui allonge ses temps ou les rend incalculables. C'est un défaut de la carte, pas du territoire.">Se moun ki bati OpenStreetMap : yon komin ki gen tikras bagay sou kat la gen tikras wout EPI tikras kote pou ale, sa fè tan yo vin pi long oswa nou pa ka kalkile yo. Se kat la ki manke, se pa teritwa a.</li>
+<li data-i18n-html="Aucune liaison maritime n'entre dans le calcul. Les communes insulaires (La Tortue, Île à Vache, La Gonâve) n'ont pas de temps vers le continent — et ne doivent pas en avoir.">Pa gen okenn wout sou lanmè nan kalkil la. Komin ki sou zile (Latòti, Ilavach, Lagonav) pa gen tan pou rive sou gwo tè a — epi yo pa dwe gen youn.</li>
+<li data-i18n-html="Les sens uniques sont ignorés et le dernier tronçon jusqu'à la porte n'est pas compté : deux biais supplémentaires, tous deux dans le sens de l'optimisme.">Nou pa konte sans inik yo, epi dènye bout wout la jouk nan pòt la pa konte non plis : de lòt bagay ki fè chif la parèt pi bon pase sa li ye.</li>
+<li data-i18n-html="La famille « hôpital » suit l'étiquetage OSM, qui en Haïti range sous ce mot beaucoup de dispensaires et de centres de santé. Elle est plus large que le mot ne le suggère.">Fanmi « lopital » la swiv jan OSM etikte bagay yo, e ann Ayiti anpil dispansè ak sant sante antre anba mo sa a. Li pi laj pase sa mo a fè w panse.</li>
+<li data-i18n-html="Les coordonnées des marchés suivis par le PAM sont publiées au centième de degré, soit environ un kilomètre de précision.">Kowòdone mache PAM ap swiv yo pibliye nan santyèm degre, sa vle di anviwon yon kilomèt presizyon.</li>
+<li data-i18n-html="Le barème liste des classes rapides (autoroute, voie express) qui n'existent nulle part en Haïti : la vitesse la plus élevée réellement appliquée est celle des routes primaires.">Barèm nan gen klas wout rapid (otowout, vwa eksprès) ki pa egziste okenn kote ann Ayiti : vitès ki pi wo yo aplike vre a se sa wout prensipal yo.</li>
 </ul>
-<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
-<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<h3 data-i18n-html="7. Ce que ce jeu NE PERMET PAS de conclure">7. Sa jeu done sa a PA PÈMÈT ou konkli</h3>
+<p data-i18n-html="Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.">Se Atmart ki mete seksyon sa a : li pa nan modèl orijinal la, epi se li menm okenn pwodiktè pa ranpli poukont li.</p>
 <ul>
-<li>Les valeurs décrivent un <b>état mesuré</b>, jamais une prévision.</li>
-<li>Aucune causalité ne se lit ici : deux grandeurs corrélées sur 140 communes ne se commandent pas l'une l'autre.</li>
+<li data-i18n-html="Les valeurs décrivent un **état mesuré**, jamais une prévision.">Chif yo dekri yon <b>eta yo mezire</b>, yo pa janm yon previzyon.</li>
+<li data-i18n-html="Aucune causalité ne se lit ici : deux grandeurs corrélées sur 140 communes ne se commandent pas l'une l'autre.">Pa gen okenn kòz ou ka li isit : de bagay ki mache ansanm sou 140 komin pa vle di youn ap kòmande lòt la.</li>
 </ul>
-<h3>8. Vie privée</h3>
-<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
-<h3>9. Passeport juridique</h3>
+<h3 data-i18n-html="8. Vie privée">8. Vi prive</h3>
+<p data-i18n-html="**Aucune donnée personnelle.** Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc **sans objet** — et non « non renseignées »."><b>Pa gen okenn done pèsonèl.</b> Jeu done sa a se yon rezime pa komin ; pa gen moun ou ka rekonèt ladan l, ni dirèkteman ni endirèkteman, epi pa gen okenn sèy difizyon ki nesesè. Konsa kesyon 24 rive 27 nan modèl Aether la (konsantman, done sansib, analiz enpak) <b>pa konsène nou</b> — yo pa « san repons ».</p>
+<h3 data-i18n-html="9. Passeport juridique">9. Paspò jiridik</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Passeport</td><td>PSP-024</td></tr>
-<tr><td>Producteur</td><td>OpenStreetMap Contributors</td></tr>
-<tr><td>Licence</td><td>ODbL 1.0</td></tr>
-<tr><td>Statut juridique</td><td>OUVERTE_AVEC_PARTAGE_IDENTIQUE</td></tr>
-<tr><td>Redistribution</td><td>Oui</td></tr>
-<tr><td>Usage commercial</td><td>Oui</td></tr>
-<tr><td>Publiable librement</td><td>OUI</td></tr>
-<tr><td>Utilisable en prestation payante</td><td>OUI — sous ODbL</td></tr>
-<tr><td>Vérifié par / le</td><td>WebFetch page Geofabrik 17/08/2026 — 2026-08-17</td></tr>
+<tr><td data-i18n-html="Passeport">Paspò</td><td>PSP-024</td></tr>
+<tr><td data-i18n-html="Producteur">Moun ki bay done a</td><td>OpenStreetMap Contributors</td></tr>
+<tr><td data-i18n-html="Licence">Lisans</td><td>ODbL 1.0</td></tr>
+<tr><td data-i18n-html="Statut juridique">Estati jiridik</td><td>OUVERTE_AVEC_PARTAGE_IDENTIQUE</td></tr>
+<tr><td data-i18n-html="Redistribution">Redistribisyon</td><td data-i18n-html="Oui">Wi</td></tr>
+<tr><td data-i18n-html="Usage commercial">Itilizasyon komèsyal</td><td data-i18n-html="Oui">Wi</td></tr>
+<tr><td data-i18n-html="Publiable librement">Nou ka pibliye l lib</td><td data-i18n-html="OUI">WI</td></tr>
+<tr><td data-i18n-html="Utilisable en prestation payante">Nou ka sèvi ak li nan yon travay peye</td><td data-i18n-html="OUI — sous ODbL">WI — anba ODbL</td></tr>
+<tr><td data-i18n-html="Vérifié par / le">Kiyès ki verifye l / ki lè</td><td>WebFetch page Geofabrik 17/08/2026 — 2026-08-17</td></tr>
 </tbody></table></div>
-<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<h3 data-i18n-html="10. Sections du modèle Aether sans objet ici, et pourquoi">10. Seksyon modèl Aether la ki pa konsène nou isit, ak poukisa</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
-<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
-<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
-<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+<tr><td data-i18n-html="Question du modèle">Kesyon modèl la</td><td data-i18n-html="Pourquoi elle ne s'applique pas">Poukisa li pa konsène nou</td></tr>
+<tr><td data-i18n-html="Découpages entraînement / validation / test">Divizyon antrènman / validasyon / tès</td><td data-i18n-html="ce jeu n'entraîne aucun modèle ; il décrit un territoire">jeu done sa a pa antrene okenn modèl ; li dekri yon teritwa</td></tr>
+<tr><td data-i18n-html="Groupes démographiques et leur répartition">Gwoup demografik ak jan yo reparti</td><td data-i18n-html="agrégat territorial, aucune personne, aucune variable démographique individuelle">rezime pa teritwa, pa gen moun, pa gen okenn varyab demografik sou yon moun</td></tr>
+<tr><td data-i18n-html="Consentement des personnes concernées">Konsantman moun ki konsène yo</td><td data-i18n-html="aucune personne concernée">pa gen moun ki konsène</td></tr>
 </tbody></table></div>
-<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-it" data-i18n-html="Fiche générée le {date} par `build_datasheets.py`. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié." data-i18n-vars='{&quot;date&quot;: &quot;18/08/2026&quot;}'>Fich la fèt {date} ak <code>build_datasheets.py</code>. Pou mete l ajou : relanse script la — li rekalkile tèt li sou fichye ki pibliye a.</p>
 <p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/acces_routier.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
 </div></details>
-<details class="fd-f"><summary class="fd-s"><h2>Population — trois sources confrontées</h2></summary><div class="fd-c">
-<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
-<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
-<h3>1. Bases : contact, diffusion, accès</h3>
+<details class="fd-f"><summary class="fd-s"><h2 data-i18n-html="Population — trois sources confrontées">Popilasyon — twa sous yo konpare</h2></summary><div class="fd-c">
+<p class="fd-it" data-i18n-html="Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.">Fich dokimantasyon — modèl « Datasheets for Datasets » (Gebru et al.), vèsyon Aether Transparency Working Group, Atmart Data adapte l pou done ki rezime pa teritwa.</p>
+<p class="fd-avis" data-i18n-html="**Cette fiche est GÉNÉRÉE depuis le fichier publié.** Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche."><b>Se fichye ki pibliye a ki FÈ fich sa a.</b> Chak fwa nou lanse l, li rekonte konbyen done ki la ; li pa kopye anyen nan yon nòt. Yon fich ki vin fo ak tan pi mal pase pa gen fich ditou.</p>
+<h3 data-i18n-html="1. Bases : contact, diffusion, accès">1. Baz yo : kontak, difizyon, aksè</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Nom du jeu</td><td>Population — trois sources confrontées</td></tr>
-<tr><td>Fichier</td><td><code>atmart_population_trois_sources.json</code></td></tr>
-<tr><td>Millésime</td><td>voir « source »</td></tr>
-<tr><td>Responsable</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
-<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
-<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_population_trois_sources.json">https://explorateur.atmart.ltd/data/atmart_population_trois_sources.json</a></td></tr>
+<tr><td data-i18n-html="Nom du jeu">Non jeu done a</td><td data-i18n-html="Population — trois sources confrontées">Popilasyon — twa sous yo konpare</td></tr>
+<tr><td data-i18n-html="Fichier">Fichye</td><td><code>atmart_population_trois_sources.json</code></td></tr>
+<tr><td data-i18n-html="Millésime">Ane referans</td><td data-i18n-html="voir « source »">gade « sous »</td></tr>
+<tr><td data-i18n-html="Responsable">Responsab</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
+<tr><td data-i18n-html="Qui peut y accéder">Kiyès ki ka jwenn li</td><td data-i18n-html="tout le monde, sans compte">tout moun, san kont</td></tr>
+<tr><td data-i18n-html="Comment">Kijan</td><td><a href="https://explorateur.atmart.ltd/data/atmart_population_trois_sources.json">https://explorateur.atmart.ltd/data/atmart_population_trois_sources.json</a></td></tr>
 </tbody></table></div>
-<h3>2. Contenu</h3>
+<h3 data-i18n-html="2. Contenu">2. Kontni</h3>
 <ul>
-<li><b>Ce que représente chaque entrée</b> : une commune.</li>
-<li><b>Nombre d'entrées</b> : 140.</li>
-<li><b>Source d'origine</b> : IHSI 2024 · UNFPA/OCHA COD-PS 2024 · WorldPop 2020</li>
+<li data-i18n-html="**Ce que représente chaque entrée** : une commune."><b>Sa chak liy reprezante</b> : yon komin.</li>
+<li data-i18n-html="**Nombre d'entrées** : {n}." data-i18n-vars='{&quot;n&quot;: &quot;140&quot;}'><b>Konbyen liy</b> : {n}.</li>
+<li data-i18n-html="**Source d'origine** : {src}" data-i18n-vars='{&quot;src&quot;: &quot;IHSI 2024 · UNFPA/OCHA COD-PS 2024 · WorldPop 2020&quot;}'><b>Sous orijinal</b> : {src}</li>
 </ul>
-<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<h3 data-i18n-html="3. Complétude — MESURÉE, pas déclarée">3. Konbyen done ki la — NOU MEZIRE L, nou pa deklare l</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Entrées portant une mesure</td><td><b>139 sur 140</b> (99 %)</td></tr>
-<tr><td>Critère de comptage</td><td>champ « i » non vide</td></tr>
+<tr><td data-i18n-html="Entrées portant une mesure">Liy ki gen yon mezi</td><td data-i18n-html="**{avec} sur {total}** ({pct} %)" data-i18n-vars='{&quot;avec&quot;: &quot;139&quot;, &quot;total&quot;: &quot;140&quot;, &quot;pct&quot;: &quot;99&quot;}'><b>{avec} sou {total}</b> ({pct} %)</td></tr>
+<tr><td data-i18n-html="Critère de comptage">Kritè pou konte a</td><td data-i18n-html="champ « {champ} » non vide" data-i18n-vars='{&quot;champ&quot;: &quot;i&quot;}'>chan « {champ} » ki pa vid</td></tr>
 </tbody></table></div>
-<p><b>1 entrée(s) sans mesure.</b> Ce ne sont pas des zéros : la source ne les couvre pas. Toute lecture qui les traiterait comme des zéros serait fausse — et c'est l'erreur la plus fréquente sur ce genre de jeu.</p>
-<h3>4. Concordance avec d'autres sources</h3>
-<p>Ce jeu est <b>confrontable</b> : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :</p>
+<p data-i18n-html="**{n} entrée(s) sans mesure.** Ce ne sont pas des zéros : la source ne les couvre pas. Toute lecture qui les traiterait comme des zéros serait fausse — et c'est l'erreur la plus fréquente sur ce genre de jeu." data-i18n-vars='{&quot;n&quot;: &quot;1&quot;}'><b>{n} liy san mezi.</b> Se pa zewo : sous la pa kouvri yo. Nenpòt lekti ki ta pran yo pou zewo ap fo — epi se erè sa a ki pi souvan rive ak kalite done sa a.</p>
+<h3 data-i18n-html="4. Concordance avec d'autres sources">4. Èske lòt sous yo dakò</h3>
+<p data-i18n-html="Ce jeu est **confrontable** : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :">Nou ka <b>konpare</b> jeu done sa a : gen yon lòt sous ki mezire menm bagay la yon lòt jan. Men rezilta konparezon an, sou 140 komin yo :</p>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>État</td><td>Communes</td></tr>
-<tr><td>concordant</td><td>99</td></tr>
-<tr><td>ecart_modere</td><td>37</td></tr>
-<tr><td>desaccord</td><td>4</td></tr>
+<tr><td data-i18n-html="État">Eta</td><td data-i18n-html="Communes">Komin</td></tr>
+<tr><td data-i18n-html="concordant">yo dakò</td><td>99</td></tr>
+<tr><td data-i18n-html="écart modéré">ti diferans</td><td>37</td></tr>
+<tr><td data-i18n-html="fort désaccord">gwo dezakò</td><td>4</td></tr>
 </tbody></table></div>
-<h3>5. Usages prévus, et usages inappropriés</h3>
-<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
-<p><b>Inapproprié</b> :</p>
+<h3 data-i18n-html="5. Usages prévus, et usages inappropriés">5. Sa li fèt pou li, ak sa li pa fèt pou li</h3>
+<p data-i18n-html="**Prévu** : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime."><b>Sa li fèt pou li</b> : sitiye yon teritwa, konpare komin, prepare yon dyagnostik, bay yon rapò done ansanm ak non sous la ak ane a.</p>
+<p data-i18n-html="**Inapproprié** :"><b>Sa li pa fèt pou li</b> :</p>
 <ul>
-<li>traiter une absence comme un zéro ;</li>
-<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
-<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+<li data-i18n-html="traiter une absence comme un zéro ;">pran yon absans pou yon zewo ;</li>
+<li data-i18n-html="comparer deux communes documentées par des millésimes différents sans le dire ;">konpare de komin ki dokimante nan de ane diferan san di sa ;</li>
+<li data-i18n-html="en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.">tire yon konklizyon sou moun : jeu done sa a se yon rezime pa teritwa, li pa janm desann sou yon moun.</li>
 </ul>
-<h3>6. Qualité des données — ce que le producteur signale</h3>
+<h3 data-i18n-html="6. Qualité des données — ce que le producteur signale">6. Kalite done yo — sa moun ki bay yo siyale</h3>
 <ul>
-<li>Trois méthodes, trois chiffres. On ne les moyenne pas et on n'en supprime aucun : un écart important signale un endroit où les méthodes ne s'accordent pas, ce qui mérite d'être su.</li>
+<li data-i18n-html="Trois méthodes, trois chiffres. On ne les moyenne pas et on n'en supprime aucun : un écart important signale un endroit où les méthodes ne s'accordent pas, ce qui mérite d'être su.">Twa metòd, twa chif. Nou pa fè mwayèn yo epi nou pa retire okenn : lè gen yon gwo diferans, sa vle di metòd yo pa dakò nan kote sa a, epi sa merite konnen.</li>
 </ul>
-<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
-<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<h3 data-i18n-html="7. Ce que ce jeu NE PERMET PAS de conclure">7. Sa jeu done sa a PA PÈMÈT ou konkli</h3>
+<p data-i18n-html="Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.">Se Atmart ki mete seksyon sa a : li pa nan modèl orijinal la, epi se li menm okenn pwodiktè pa ranpli poukont li.</p>
 <ul>
-<li>Trois estimations ne font pas un recensement. Haïti n'en a pas conduit depuis 2003 ; toute valeur récente est une estimation.</li>
-<li>Un désaccord entre sources ne désigne pas la source fautive.</li>
+<li data-i18n-html="Trois estimations ne font pas un recensement. Haïti n'en a pas conduit depuis 2003 ; toute valeur récente est une estimation.">Twa estimasyon pa fè yon resansman. Ayiti pa fè youn depi 2003 ; tout chif ki resan se yon estimasyon.</li>
+<li data-i18n-html="Un désaccord entre sources ne désigne pas la source fautive.">Lè sous yo pa dakò, sa pa di kilès nan yo ki nan erè.</li>
 </ul>
-<h3>8. Vie privée</h3>
-<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
-<h3>9. Passeport juridique</h3>
+<h3 data-i18n-html="8. Vie privée">8. Vi prive</h3>
+<p data-i18n-html="**Aucune donnée personnelle.** Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc **sans objet** — et non « non renseignées »."><b>Pa gen okenn done pèsonèl.</b> Jeu done sa a se yon rezime pa komin ; pa gen moun ou ka rekonèt ladan l, ni dirèkteman ni endirèkteman, epi pa gen okenn sèy difizyon ki nesesè. Konsa kesyon 24 rive 27 nan modèl Aether la (konsantman, done sansib, analiz enpak) <b>pa konsène nou</b> — yo pa « san repons ».</p>
+<h3 data-i18n-html="9. Passeport juridique">9. Paspò jiridik</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Passeport</td><td>PSP-044</td></tr>
-<tr><td>Producteur</td><td>IHSI — Institut haïtien de statistique et d'informatique</td></tr>
-<tr><td>Licence</td><td>Décret du 12 octobre 2005 sur le droit d'auteur, art. 5 : les textes officiels administratifs et les « simples données » sont exclus de la protection</td></tr>
-<tr><td>Statut juridique</td><td>OUVERTE_AVEC_ATTRIBUTION</td></tr>
-<tr><td>Redistribution</td><td>Oui pour les données ; NON pour la mise en forme des rapports</td></tr>
-<tr><td>Usage commercial</td><td>Oui — les faits ne sont pas appropriables</td></tr>
-<tr><td>Publiable librement</td><td>OUI</td></tr>
-<tr><td>Utilisable en prestation payante</td><td>OUI — les données ; pas la mise en forme</td></tr>
-<tr><td>Vérifié par / le</td><td>Décret haïtien du 12/10/2005 (WIPO Lex), art. 5 — analysé le 17/08/2026 — 2026-08-17</td></tr>
+<tr><td data-i18n-html="Passeport">Paspò</td><td>PSP-044</td></tr>
+<tr><td data-i18n-html="Producteur">Moun ki bay done a</td><td>IHSI — Institut haïtien de statistique et d'informatique</td></tr>
+<tr><td data-i18n-html="Licence">Lisans</td><td>Décret du 12 octobre 2005 sur le droit d'auteur, art. 5 : les textes officiels administratifs et les « simples données » sont exclus de la protection</td></tr>
+<tr><td data-i18n-html="Statut juridique">Estati jiridik</td><td>OUVERTE_AVEC_ATTRIBUTION</td></tr>
+<tr><td data-i18n-html="Redistribution">Redistribisyon</td><td data-i18n-html="Oui pour les données ; NON pour la mise en forme des rapports">Wi pou done yo ; NON pou fason rapò yo prezante</td></tr>
+<tr><td data-i18n-html="Usage commercial">Itilizasyon komèsyal</td><td data-i18n-html="Oui — les faits ne sont pas appropriables">Wi — pèsonn pa ka met men sou yon reyalite</td></tr>
+<tr><td data-i18n-html="Publiable librement">Nou ka pibliye l lib</td><td data-i18n-html="OUI">WI</td></tr>
+<tr><td data-i18n-html="Utilisable en prestation payante">Nou ka sèvi ak li nan yon travay peye</td><td data-i18n-html="OUI — les données ; pas la mise en forme">WI — done yo ; pa fason yo prezante a</td></tr>
+<tr><td data-i18n-html="Vérifié par / le">Kiyès ki verifye l / ki lè</td><td>Décret haïtien du 12/10/2005 (WIPO Lex), art. 5 — analysé le 17/08/2026 — 2026-08-17</td></tr>
 </tbody></table></div>
-<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<h3 data-i18n-html="10. Sections du modèle Aether sans objet ici, et pourquoi">10. Seksyon modèl Aether la ki pa konsène nou isit, ak poukisa</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
-<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
-<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
-<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+<tr><td data-i18n-html="Question du modèle">Kesyon modèl la</td><td data-i18n-html="Pourquoi elle ne s'applique pas">Poukisa li pa konsène nou</td></tr>
+<tr><td data-i18n-html="Découpages entraînement / validation / test">Divizyon antrènman / validasyon / tès</td><td data-i18n-html="ce jeu n'entraîne aucun modèle ; il décrit un territoire">jeu done sa a pa antrene okenn modèl ; li dekri yon teritwa</td></tr>
+<tr><td data-i18n-html="Groupes démographiques et leur répartition">Gwoup demografik ak jan yo reparti</td><td data-i18n-html="agrégat territorial, aucune personne, aucune variable démographique individuelle">rezime pa teritwa, pa gen moun, pa gen okenn varyab demografik sou yon moun</td></tr>
+<tr><td data-i18n-html="Consentement des personnes concernées">Konsantman moun ki konsène yo</td><td data-i18n-html="aucune personne concernée">pa gen moun ki konsène</td></tr>
 </tbody></table></div>
-<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-it" data-i18n-html="Fiche générée le {date} par `build_datasheets.py`. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié." data-i18n-vars='{&quot;date&quot;: &quot;18/08/2026&quot;}'>Fich la fèt {date} ak <code>build_datasheets.py</code>. Pou mete l ajou : relanse script la — li rekalkile tèt li sou fichye ki pibliye a.</p>
 <p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/population_trois_sources.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
 </div></details>
-<details class="fd-f"><summary class="fd-s"><h2>Équipements santé et écoles cartographiés (OpenStreetMap)</h2></summary><div class="fd-c">
-<p class="fd-it">Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.</p>
-<p class="fd-avis"><b>Cette fiche est GÉNÉRÉE depuis le fichier publié.</b> Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche.</p>
-<h3>1. Bases : contact, diffusion, accès</h3>
+<details class="fd-f"><summary class="fd-s"><h2 data-i18n-html="Équipements santé et écoles cartographiés (OpenStreetMap)">Etablisman sante ak lekòl ki sou kat la (OpenStreetMap)</h2></summary><div class="fd-c">
+<p class="fd-it" data-i18n-html="Fiche de documentation — modèle « Datasheets for Datasets » (Gebru et al.), version Aether Transparency Working Group, adaptée par Atmart Data aux agrégats territoriaux.">Fich dokimantasyon — modèl « Datasheets for Datasets » (Gebru et al.), vèsyon Aether Transparency Working Group, Atmart Data adapte l pou done ki rezime pa teritwa.</p>
+<p class="fd-avis" data-i18n-html="**Cette fiche est GÉNÉRÉE depuis le fichier publié.** Les chiffres de complétude sont recomptés à chaque exécution, jamais recopiés d'une note. Une fiche qui vieillit mal est pire qu'une absence de fiche."><b>Se fichye ki pibliye a ki FÈ fich sa a.</b> Chak fwa nou lanse l, li rekonte konbyen done ki la ; li pa kopye anyen nan yon nòt. Yon fich ki vin fo ak tan pi mal pase pa gen fich ditou.</p>
+<h3 data-i18n-html="1. Bases : contact, diffusion, accès">1. Baz yo : kontak, difizyon, aksè</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Nom du jeu</td><td>Équipements santé et écoles cartographiés (OpenStreetMap)</td></tr>
-<tr><td>Fichier</td><td><code>atmart_equipements_hot.json</code></td></tr>
-<tr><td>Millésime</td><td>voir « source »</td></tr>
-<tr><td>Responsable</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
-<tr><td>Qui peut y accéder</td><td>tout le monde, sans compte</td></tr>
-<tr><td>Comment</td><td><a href="https://explorateur.atmart.ltd/data/atmart_equipements_hot.json">https://explorateur.atmart.ltd/data/atmart_equipements_hot.json</a></td></tr>
+<tr><td data-i18n-html="Nom du jeu">Non jeu done a</td><td data-i18n-html="Équipements santé et écoles cartographiés (OpenStreetMap)">Etablisman sante ak lekòl ki sou kat la (OpenStreetMap)</td></tr>
+<tr><td data-i18n-html="Fichier">Fichye</td><td><code>atmart_equipements_hot.json</code></td></tr>
+<tr><td data-i18n-html="Millésime">Ane referans</td><td data-i18n-html="voir « source »">gade « sous »</td></tr>
+<tr><td data-i18n-html="Responsable">Responsab</td><td>Atmart Data — jeanmyril@atmart.ltd</td></tr>
+<tr><td data-i18n-html="Qui peut y accéder">Kiyès ki ka jwenn li</td><td data-i18n-html="tout le monde, sans compte">tout moun, san kont</td></tr>
+<tr><td data-i18n-html="Comment">Kijan</td><td><a href="https://explorateur.atmart.ltd/data/atmart_equipements_hot.json">https://explorateur.atmart.ltd/data/atmart_equipements_hot.json</a></td></tr>
 </tbody></table></div>
-<h3>2. Contenu</h3>
+<h3 data-i18n-html="2. Contenu">2. Kontni</h3>
 <ul>
-<li><b>Ce que représente chaque entrée</b> : une commune.</li>
-<li><b>Nombre d'entrées</b> : 140.</li>
-<li><b>Source d'origine</b> : OpenStreetMap, extrait Humanitarian OpenStreetMap Team du 6 août 2026</li>
+<li data-i18n-html="**Ce que représente chaque entrée** : une commune."><b>Sa chak liy reprezante</b> : yon komin.</li>
+<li data-i18n-html="**Nombre d'entrées** : {n}." data-i18n-vars='{&quot;n&quot;: &quot;140&quot;}'><b>Konbyen liy</b> : {n}.</li>
+<li data-i18n-html="**Source d'origine** : {src}" data-i18n-vars='{&quot;src&quot;: &quot;OpenStreetMap, extrait Humanitarian OpenStreetMap Team du 6 août 2026&quot;}'><b>Sous orijinal</b> : {src}</li>
 </ul>
-<h3>3. Complétude — MESURÉE, pas déclarée</h3>
+<h3 data-i18n-html="3. Complétude — MESURÉE, pas déclarée">3. Konbyen done ki la — NOU MEZIRE L, nou pa deklare l</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Entrées portant une mesure</td><td><b>139 sur 140</b> (99 %)</td></tr>
-<tr><td>Critère de comptage</td><td>champ « s » non vide</td></tr>
+<tr><td data-i18n-html="Entrées portant une mesure">Liy ki gen yon mezi</td><td data-i18n-html="**{avec} sur {total}** ({pct} %)" data-i18n-vars='{&quot;avec&quot;: &quot;139&quot;, &quot;total&quot;: &quot;140&quot;, &quot;pct&quot;: &quot;99&quot;}'><b>{avec} sou {total}</b> ({pct} %)</td></tr>
+<tr><td data-i18n-html="Critère de comptage">Kritè pou konte a</td><td data-i18n-html="champ « {champ} » non vide" data-i18n-vars='{&quot;champ&quot;: &quot;s&quot;}'>chan « {champ} » ki pa vid</td></tr>
 </tbody></table></div>
-<p><b>1 entrée(s) sans mesure.</b> Ce ne sont pas des zéros : la source ne les couvre pas. Toute lecture qui les traiterait comme des zéros serait fausse — et c'est l'erreur la plus fréquente sur ce genre de jeu.</p>
-<h3>4. Concordance avec d'autres sources</h3>
-<p>Ce jeu est <b>confrontable</b> : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :</p>
+<p data-i18n-html="**{n} entrée(s) sans mesure.** Ce ne sont pas des zéros : la source ne les couvre pas. Toute lecture qui les traiterait comme des zéros serait fausse — et c'est l'erreur la plus fréquente sur ce genre de jeu." data-i18n-vars='{&quot;n&quot;: &quot;1&quot;}'><b>{n} liy san mezi.</b> Se pa zewo : sous la pa kouvri yo. Nenpòt lekti ki ta pran yo pou zewo ap fo — epi se erè sa a ki pi souvan rive ak kalite done sa a.</p>
+<h3 data-i18n-html="4. Concordance avec d'autres sources">4. Èske lòt sous yo dakò</h3>
+<p data-i18n-html="Ce jeu est **confrontable** : une autre source mesure le même objet par une méthode différente. Résultat de la confrontation, sur les 140 communes :">Nou ka <b>konpare</b> jeu done sa a : gen yon lòt sous ki mezire menm bagay la yon lòt jan. Men rezilta konparezon an, sou 140 komin yo :</p>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>État</td><td>Communes</td></tr>
-<tr><td>concordant</td><td>67</td></tr>
-<tr><td>ecart_modere</td><td>51</td></tr>
-<tr><td>desaccord</td><td>20</td></tr>
-<tr><td>invérifiable</td><td>2</td></tr>
+<tr><td data-i18n-html="État">Eta</td><td data-i18n-html="Communes">Komin</td></tr>
+<tr><td data-i18n-html="concordant">yo dakò</td><td>67</td></tr>
+<tr><td data-i18n-html="écart modéré">ti diferans</td><td>51</td></tr>
+<tr><td data-i18n-html="fort désaccord">gwo dezakò</td><td>20</td></tr>
+<tr><td data-i18n-html="invérifiable">nou pa ka verifye l</td><td>2</td></tr>
 </tbody></table></div>
-<h3>5. Usages prévus, et usages inappropriés</h3>
-<p><b>Prévu</b> : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime.</p>
-<p><b>Inapproprié</b> :</p>
+<h3 data-i18n-html="5. Usages prévus, et usages inappropriés">5. Sa li fèt pou li, ak sa li pa fèt pou li</h3>
+<p data-i18n-html="**Prévu** : situer un territoire, comparer des communes, préparer un diagnostic, alimenter un rapport en citant la source et le millésime."><b>Sa li fèt pou li</b> : sitiye yon teritwa, konpare komin, prepare yon dyagnostik, bay yon rapò done ansanm ak non sous la ak ane a.</p>
+<p data-i18n-html="**Inapproprié** :"><b>Sa li pa fèt pou li</b> :</p>
 <ul>
-<li>traiter une absence comme un zéro ;</li>
-<li>comparer deux communes documentées par des millésimes différents sans le dire ;</li>
-<li>en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.</li>
+<li data-i18n-html="traiter une absence comme un zéro ;">pran yon absans pou yon zewo ;</li>
+<li data-i18n-html="comparer deux communes documentées par des millésimes différents sans le dire ;">konpare de komin ki dokimante nan de ane diferan san di sa ;</li>
+<li data-i18n-html="en tirer une conclusion sur des personnes : ce jeu est un agrégat territorial et ne descend jamais à l'individu.">tire yon konklizyon sou moun : jeu done sa a se yon rezime pa teritwa, li pa janm desann sou yon moun.</li>
 </ul>
-<h3>6. Qualité des données — ce que le producteur signale</h3>
+<h3 data-i18n-html="6. Qualité des données — ce que le producteur signale">6. Kalite done yo — sa moun ki bay yo siyale</h3>
 <ul>
-<li>OpenStreetMap est une base contributive : sa couverture suit les cartographes, pas le terrain. Une commune peu cartographiée paraît sous-équipée — c'est un défaut de la carte, pas du territoire.</li>
+<li data-i18n-html="OpenStreetMap est une base contributive : sa couverture suit les cartographes, pas le terrain. Une commune peu cartographiée paraît sous-équipée — c'est un défaut de la carte, pas du territoire.">OpenStreetMap se yon baz kote moun kontribye : sa ki ladan l depann de moun k ap fè kat la, se pa de teren an. Yon komin ki gen tikras bagay sou kat la sanble li manke ekipman — se kat la ki manke, se pa teritwa a.</li>
 </ul>
-<h3>7. Ce que ce jeu NE PERMET PAS de conclure</h3>
-<p>Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.</p>
+<h3 data-i18n-html="7. Ce que ce jeu NE PERMET PAS de conclure">7. Sa jeu done sa a PA PÈMÈT ou konkli</h3>
+<p data-i18n-html="Section ajoutée par Atmart : elle n'existe pas dans le modèle d'origine, et c'est celle qu'aucun producteur ne remplit spontanément.">Se Atmart ki mete seksyon sa a : li pa nan modèl orijinal la, epi se li menm okenn pwodiktè pa ranpli poukont li.</p>
 <ul>
-<li>Le nombre d'établissements ne dit rien de leur <b>capacité</b>, de leur personnel, ni de leurs heures d'ouverture.</li>
-<li>Un établissement <b>déclaré</b> peut être fermé ; un établissement <b>cartographié</b> peut être un cabinet privé fermé depuis des années.</li>
-<li>Aucune conclusion sur l'accès : deux communes à cinq établissements n'ont pas le même accès si l'une est montagneuse.</li>
+<li data-i18n-html="Le nombre d'établissements ne dit rien de leur **capacité**, de leur personnel, ni de leurs heures d'ouverture.">Kantite etablisman pa di anyen sou <b>kapasite</b> yo, sou anplwaye yo, ni sou lè yo louvri.</li>
+<li data-i18n-html="Un établissement **déclaré** peut être fermé ; un établissement **cartographié** peut être un cabinet privé fermé depuis des années.">Yon etablisman ki <b>deklare</b> ka fèmen ; yon etablisman ki <b>sou kat la</b> ka yon kabinè prive ki fèmen depi lontan.</li>
+<li data-i18n-html="Aucune conclusion sur l'accès : deux communes à cinq établissements n'ont pas le même accès si l'une est montagneuse.">Pa gen konklizyon sou aksè : de komin ki gen senk etablisman chak pa gen menm aksè si youn nan yo nan mòn.</li>
 </ul>
-<h3>8. Vie privée</h3>
-<p><b>Aucune donnée personnelle.</b> Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc <b>sans objet</b> — et non « non renseignées ».</p>
-<h3>9. Passeport juridique</h3>
+<h3 data-i18n-html="8. Vie privée">8. Vi prive</h3>
+<p data-i18n-html="**Aucune donnée personnelle.** Ce jeu est un agrégat par commune ; aucune personne n'y est identifiable, directement ou indirectement, et aucun seuil de diffusion n'est requis. Les questions 24 à 27 du modèle Aether (consentement, données sensibles, analyse d'impact) sont donc **sans objet** — et non « non renseignées »."><b>Pa gen okenn done pèsonèl.</b> Jeu done sa a se yon rezime pa komin ; pa gen moun ou ka rekonèt ladan l, ni dirèkteman ni endirèkteman, epi pa gen okenn sèy difizyon ki nesesè. Konsa kesyon 24 rive 27 nan modèl Aether la (konsantman, done sansib, analiz enpak) <b>pa konsène nou</b> — yo pa « san repons ».</p>
+<h3 data-i18n-html="9. Passeport juridique">9. Paspò jiridik</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Passeport</td><td>PSP-024</td></tr>
-<tr><td>Producteur</td><td>OpenStreetMap Contributors</td></tr>
-<tr><td>Licence</td><td>ODbL 1.0</td></tr>
-<tr><td>Statut juridique</td><td>OUVERTE_AVEC_PARTAGE_IDENTIQUE</td></tr>
-<tr><td>Redistribution</td><td>Oui</td></tr>
-<tr><td>Usage commercial</td><td>Oui</td></tr>
-<tr><td>Publiable librement</td><td>OUI</td></tr>
-<tr><td>Utilisable en prestation payante</td><td>OUI — sous ODbL</td></tr>
-<tr><td>Vérifié par / le</td><td>WebFetch page Geofabrik 17/08/2026 — 2026-08-17</td></tr>
+<tr><td data-i18n-html="Passeport">Paspò</td><td>PSP-024</td></tr>
+<tr><td data-i18n-html="Producteur">Moun ki bay done a</td><td>OpenStreetMap Contributors</td></tr>
+<tr><td data-i18n-html="Licence">Lisans</td><td>ODbL 1.0</td></tr>
+<tr><td data-i18n-html="Statut juridique">Estati jiridik</td><td>OUVERTE_AVEC_PARTAGE_IDENTIQUE</td></tr>
+<tr><td data-i18n-html="Redistribution">Redistribisyon</td><td data-i18n-html="Oui">Wi</td></tr>
+<tr><td data-i18n-html="Usage commercial">Itilizasyon komèsyal</td><td data-i18n-html="Oui">Wi</td></tr>
+<tr><td data-i18n-html="Publiable librement">Nou ka pibliye l lib</td><td data-i18n-html="OUI">WI</td></tr>
+<tr><td data-i18n-html="Utilisable en prestation payante">Nou ka sèvi ak li nan yon travay peye</td><td data-i18n-html="OUI — sous ODbL">WI — anba ODbL</td></tr>
+<tr><td data-i18n-html="Vérifié par / le">Kiyès ki verifye l / ki lè</td><td>WebFetch page Geofabrik 17/08/2026 — 2026-08-17</td></tr>
 </tbody></table></div>
-<h3>10. Sections du modèle Aether sans objet ici, et pourquoi</h3>
+<h3 data-i18n-html="10. Sections du modèle Aether sans objet ici, et pourquoi">10. Seksyon modèl Aether la ki pa konsène nou isit, ak poukisa</h3>
 <div class="x-tabwrap"><table class="fd-t"><tbody>
-<tr><td>Question du modèle</td><td>Pourquoi elle ne s'applique pas</td></tr>
-<tr><td>Découpages entraînement / validation / test</td><td>ce jeu n'entraîne aucun modèle ; il décrit un territoire</td></tr>
-<tr><td>Groupes démographiques et leur répartition</td><td>agrégat territorial, aucune personne, aucune variable démographique individuelle</td></tr>
-<tr><td>Consentement des personnes concernées</td><td>aucune personne concernée</td></tr>
+<tr><td data-i18n-html="Question du modèle">Kesyon modèl la</td><td data-i18n-html="Pourquoi elle ne s'applique pas">Poukisa li pa konsène nou</td></tr>
+<tr><td data-i18n-html="Découpages entraînement / validation / test">Divizyon antrènman / validasyon / tès</td><td data-i18n-html="ce jeu n'entraîne aucun modèle ; il décrit un territoire">jeu done sa a pa antrene okenn modèl ; li dekri yon teritwa</td></tr>
+<tr><td data-i18n-html="Groupes démographiques et leur répartition">Gwoup demografik ak jan yo reparti</td><td data-i18n-html="agrégat territorial, aucune personne, aucune variable démographique individuelle">rezime pa teritwa, pa gen moun, pa gen okenn varyab demografik sou yon moun</td></tr>
+<tr><td data-i18n-html="Consentement des personnes concernées">Konsantman moun ki konsène yo</td><td data-i18n-html="aucune personne concernée">pa gen moun ki konsène</td></tr>
 </tbody></table></div>
-<p class="fd-it">Fiche générée le 18/08/2026 par <code>build_datasheets.py</code>. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié.</p>
+<p class="fd-it" data-i18n-html="Fiche générée le {date} par `build_datasheets.py`. Pour la mettre à jour : relancer le script — elle se recalcule sur le fichier publié." data-i18n-vars='{&quot;date&quot;: &quot;18/08/2026&quot;}'>Fich la fèt {date} ak <code>build_datasheets.py</code>. Pou mete l ajou : relanse script la — li rekalkile tèt li sou fichye ki pibliye a.</p>
 <p class="fd-dl"><a class="btn btn-outline" href="../assets/fiches/equipements_hot.docx" download><span data-i18n="fd.dl">Telechaje fich sa a (.docx)</span></a></p>
 </div></details>
 <p class="x-note" data-i18n-html="fd.contact">Pou fè odite yon seri done : <a href="donnees-services.html">Atmart Verifye</a> oswa <a href="mailto:sales@atmart.ltd">sales@atmart.ltd</a>.</p>
 </div></section>
+<!-- fiches-empreinte: 89acacc171e04de2 -->
 
 <footer>
   <div class="container">
@@ -606,7 +607,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <script src="../assets/formulaire.js?v=2"></script>
 <script src="../assets/mesure.js?v=4" defer></script>
 <script src="../assets/ux.js?v=2" defer></script>
-<script src="../assets/i18n.js?v=25"></script>
+<script src="../assets/i18n.js?v=26"></script>
 <script src="../assets/theme.js?v=3" defer></script>
 <script src="../assets/vues.js?v=1"></script>
 </body>

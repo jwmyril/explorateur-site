@@ -7,7 +7,7 @@
   // LE NUMÉRO DES DICTIONNAIRES. Il suit celui de ce fichier : les deux
   // partent ensemble, puisqu'une clé nouvelle ici et sa traduction là-bas
   // sont une seule et même livraison. À monter dès qu'un `<lg>.json` change.
-  const DICO_V = 25;
+  const DICO_V = 26;
   // Une page dont la traduction n'est pas complete declare window.ATM_LANGUES.
   // Mieux vaut du francais entier qu'un menu traduit au-dessus de contenus
   // restes en francais : l'utilisateur croirait la page traduite.
@@ -56,8 +56,27 @@
     }
     dictCourant = dict; langCourante = lang;
     const val = (key, fb) => (lang === DEFAULT ? fb : (dict[key] != null ? dict[key] : fb));
-    document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = val(el.dataset.i18n, orig.get(el)); });
-    document.querySelectorAll("[data-i18n-html]").forEach((el) => { el.innerHTML = val(el.dataset.i18nHtml, orig.get(el)); });
+    /* UNE PHRASE À VARIABLES RESTE UNE SEULE UNITÉ DE TRADUCTION.
+       ========================================================
+       Les fiches de documentation écrivent « 1 entrée sans mesure » sur un
+       jeu et « 83 » sur un autre. Prendre la ligne rendue pour clé donnerait
+       une clé par jeu et par rechargement des données — donc une traduction
+       qui ne sert qu'une fois, et une page qui redevient française au premier
+       recomptage. La clé est donc le GABARIT, « {n} entrée(s) sans mesure »,
+       et les valeurs voyagent à côté dans `data-i18n-vars`. Le traducteur
+       voit la phrase entière et place les variables selon sa grammaire.
+       Sans traduction, rien ne se substitue : le français d'origine, déjà
+       dans la page avec ses vrais chiffres, reste tel quel. */
+    const poser = (el, texte) => {
+      const brut = el.getAttribute("data-i18n-vars");
+      if (!brut) return texte;
+      let vars;
+      try { vars = JSON.parse(brut); } catch (e) { return texte; }
+      Object.keys(vars).forEach((k) => { texte = texte.split("{" + k + "}").join(vars[k]); });
+      return texte;
+    };
+    document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = poser(el, val(el.dataset.i18n, orig.get(el))); });
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => { el.innerHTML = poser(el, val(el.dataset.i18nHtml, orig.get(el))); });
     document.querySelectorAll("[data-i18n-ph]").forEach((el) => { el.setAttribute("placeholder", val(el.dataset.i18nPh, orig.get(el))); });
     document.querySelectorAll("[data-i18n-aria]").forEach((el) => { el.setAttribute("aria-label", val(el.dataset.i18nAria, orig.get(el))); });
     document.querySelectorAll("[data-i18n-content]").forEach((el) => { el.setAttribute("content", val(el.dataset.i18nContent, orig.get(el))); });

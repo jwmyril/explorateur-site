@@ -171,7 +171,17 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       son millésime et sa limite</strong> — un aplat sans provenance n'est pas une donnée.
       Cliquez une commune pour ouvrir sa fiche complète.
     </p>
-<p class="x-partiel" data-i18n="pg.partiel">Le contenu détaillé de cette page est encore en français : sa traduction est en cours.</p>
+<!-- La bannière « traduction en cours » a été RETIRÉE le 10/09/2026 : elle
+     n'était plus vraie. Mesure de `verif_banniere.py` : 97 % du texte de
+     cette page porte une clef que les trois dictionnaires connaissent. Un
+     avertissement qui annonce un défaut corrigé use la confiance aussi
+     sûrement qu'un défaut caché — le lecteur qui vérifie une fois et ne
+     trouve rien cesse de croire les suivants. La phrase reste dans les
+     dictionnaires (`pg.partiel`) : six pages la portent encore à juste
+     titre, entre 3 % et 36 % de couverture. -->
+<!-- Texte retiré, gardé ici pour qu'il se relise et se remette d'un geste :
+     <p class="x-partiel" data-i18n="pg.partiel">Le contenu détaillé de cette
+     page est encore en français : sa traduction est en cours.</p> -->
     <div class="k-barre">
       <label for="k-choix"><b>Couche</b></label>
       <select id="k-choix"></select>
@@ -279,7 +289,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <script src="assets/mesure.js?v=4" defer></script>
 <script src="assets/ux.js?v=2" defer></script>
 <script src="assets/pwa.js?v=2" defer></script>
-<script src="assets/i18n.js?v=25"></script>
+<script src="assets/i18n.js?v=26"></script>
 <script src="assets/theme.js?v=3" defer></script>
 </body>
 </html>

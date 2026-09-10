@@ -852,7 +852,10 @@ figure.tuto-fig figcaption { padding: 0.7rem 1rem; font-size: 0.85rem; color: va
 .shelf:first-of-type{margin-top:1.4rem}
 .shelf-head{border-left:4px solid #2ec4b6;padding-left:0.9rem;margin-bottom:1.1rem}
 .shelf-head h2{margin:0 0 0.2rem;font-size:1.3rem}
-.shelf-head p{margin:0;color:#9db2c7;font-size:0.9rem;max-width:720px}
+/* `#9db2c7` etait choisi pour le fond sombre de Lojik360 : sur le blanc du
+   theme clair il tombe a 2,18:1, la ou WCAG demande 4,5. Mesure le
+   10/09/2026 sur le DOM rendu, pas lu dans la feuille. */
+.shelf-head p{margin:0;color:var(--ink-dim);font-size:0.9rem;max-width:720px}
 #shelf-paid .shelf-head{border-left-color:#f4a261}
 /* ---- carte data art ---- */
 .art-card{grid-column:1/-1;display:grid;grid-template-columns:minmax(200px,300px) 1fr;
@@ -868,18 +871,18 @@ figure.tuto-fig figcaption { padding: 0.7rem 1rem; font-size: 0.85rem; color: va
 /* ---- pourquoi payant : comparatif ---- */
 .why{background:rgba(244,162,97,0.06);border:1px solid rgba(244,162,97,0.28);
   border-radius:14px;padding:1.2rem 1.3rem;margin-bottom:1.3rem}
-.why-lead{margin:0 0 0.9rem;font-family:"Space Grotesk",sans-serif;font-size:1.05rem;color:#fff}
+.why-lead{margin:0 0 0.9rem;font-family:"Space Grotesk",sans-serif;font-size:1.05rem;color:var(--ink)}
 .why-tab{width:100%;border-collapse:collapse;font-size:0.88rem}
 .why-tab th,.why-tab td{text-align:left;padding:0.55rem 0.7rem;vertical-align:top;
-  border-bottom:1px solid rgba(255,255,255,0.07)}
-.why-tab thead th{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:#9db2c7;
-  border-bottom:1px solid rgba(255,255,255,0.16)}
-.why-tab thead th:nth-child(3){color:#f4a261}
-.why-tab td:first-child{color:#9db2c7;width:24%}
-.why-tab td:nth-child(2){color:#8fa6bd;width:30%}
-.why-tab td:nth-child(3){color:#e8d5c4}
+  border-bottom:1px solid var(--border)}
+.why-tab thead th{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-dim);
+  border-bottom:1px solid var(--border-fort)}
+.why-tab thead th:nth-child(3){color:var(--amber)}
+.why-tab td:first-child{color:var(--ink-dim);width:24%}
+.why-tab td:nth-child(2){color:var(--ink-dim);width:30%}
+.why-tab td:nth-child(3){color:var(--ink)}
 .why-tab tbody tr:last-child td{border-bottom:0}
-.why-note{margin:0.9rem 0 0;font-size:0.86rem;color:#9db2c7;line-height:1.6;font-style:italic}
+.why-note{margin:0.9rem 0 0;font-size:0.86rem;color:var(--ink-dim);line-height:1.6;font-style:italic}
 @media(max-width:640px){
   .why-tab thead{display:none}
   .why-tab tr{display:block;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08)}

@@ -2,7 +2,7 @@
    Le code est celui d'explorateur.js, déplacé verbatim : seules les
    variables réassignées ont pris le préfixe S. de l'état partagé.
    A porte les fonctions des autres modules. */
-import { S } from "./etat.js?v=35";
+import { S } from "./etat.js?v=36";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
   const { SITE, T, TF, TN, aggEntite, communesDe, enfantsDe, esc, nb, nomT, parId, rang } = A;
@@ -125,8 +125,19 @@ export default function (A) {
     if (couche) {
       formes += couche.map(function (f) {
         var id = f.properties.atmart_geo_id, k = rang(id);
+        /* PAS DE `tabindex` ICI, ET C'EST UNE CORRECTION. Ces chemins
+           vivent dans un `<svg role="img">`, qui élague tout son sous-arbre
+           pour un lecteur d'écran : leurs `<title>` ne sont jamais annoncés.
+           Les rendre focalisables promettait donc 140 cibles muettes — le
+           focus traversait la carte sans qu'aucune forme ne s'active, Entrée
+           et Espace ne faisant rien puisque le seul gestionnaire est un
+           `click` délégué. Un arrêt de tabulation qui ne mène nulle part est
+           pire qu'aucun.
+           Le clic à la souris est inchangé, et l'équivalent textuel est
+           l'onglet Classement, que le nom accessible de la carte nomme
+           désormais. */
         return '<path class="x-zone' + (k ? " x-zone-" + k : "") + '" d="' +
-          trace(f.geometry) + '" data-id="' + esc(id) + '" tabindex="0" role="button">' +
+          trace(f.geometry) + '" data-id="' + esc(id) + '">' +
           "<title>" + esc(f.properties.nom_fr) + "</title></path>";
       }).join("");
     }
@@ -165,11 +176,17 @@ export default function (A) {
       : TN({ one: "sa commune", other: "ses {n} communes" }, nFam, { n: nFam });
     /* Texte alternatif de la carte : une phrase entière par cas, jamais un
        assemblage — un lecteur d'écran lit une phrase, pas des morceaux. */
-    var alt = commune
+    /* UN NOM ACCESSIBLE QUI DECRIT UNE IMAGE INEXPLORABLE NE SERT A RIEN.
+       Celui-ci dit donc aussi OU trouver la meme information sous une forme
+       qu'on peut lire, trier et exporter : l'onglet Classement. Il existait
+       depuis toujours et n'etait nomme nulle part depuis la carte. */
+    var alt = (commune
       ? TF("{nom} est située sur la carte d'Haïti, avec {famille}.",
            { nom: nomT(r), famille: libFam, n: nFam })
       : TF("{nom} sur la carte d'Haïti : {famille} sont mises en évidence.",
-           { nom: nomT(r), famille: libFam, n: nFam });
+           { nom: nomT(r), famille: libFam, n: nFam }))
+      + " " + T("Les mêmes chiffres se lisent en tableau dans l'onglet "
+                + "Classement, qui se trie et s'exporte.");
 
     var bascule = (S.polyDep && S.polyCom) ?
       '<div class="x-carte-niv" role="group" aria-label="' +
@@ -191,9 +208,9 @@ export default function (A) {
       T("géométrie complète, au mètre") + "</a></p>" +
       '<p class="x-note">' +
       (cadreSur
-        ? TF("Carte cadrée sur {dep} : à l'échelle du pays, une commune de cette taille serait illisible. Cliquez un territoire pour ouvrir sa fiche.",
+        ? TF("Carte cadrée sur {dep} : à l'échelle du pays, une commune de cette taille serait illisible. Ouvrez la fiche d\'un territoire en cliquant dessus, ou retrouvez tous les chiffres en tableau dans l\'onglet Classement.",
              { dep: nomT(departementDe(r) || r) })
-        : T("Contours d'affichage du CNIGS, simplifiés pour la lecture à l'échelle du pays. Cliquez un territoire pour ouvrir sa fiche.")) +
+        : T("Contours d'affichage du CNIGS, simplifiés pour la lecture à l'échelle du pays. Ouvrez la fiche d\'un territoire en cliquant dessus, ou retrouvez tous les chiffres en tableau dans l\'onglet Classement.")) +
       "</p></div>";
   }
 

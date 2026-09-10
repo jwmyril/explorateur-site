@@ -5,7 +5,7 @@
    Aucun compteur n'est écrit en dur : tout est compté depuis les fichiers. */
 /* SANS NUMÉRO DE VERSION, ET C'EST OBLIGATOIRE.
    Le navigateur identifie un module par son URL COMPLÈTE, requête comprise :
-   "./etat.js" et "./etat.js?v=35" sont deux modules distincts, chacun avec
+   "./etat.js?v=36" et "./etat.js?v=36" sont deux modules distincts, chacun avec
    son propre objet S. LES SEPT FICHIERS DOIVENT DONC PORTER LA MÊME CHAÎNE,
    à la lettre près, et la liste CORE du service worker avec eux.
 
@@ -15,7 +15,7 @@
    et « 0 indicateurs documentés sur 0 » alors que les 4 200 valeurs étaient
    chargées. Le correctif d'alors a réaligné QUATRE fichiers sur sept.
 
-   LES TROIS AUTRES — carte, comparaison, i18n — importaient "./etat.js" tout
+   LES TROIS AUTRES — carte, comparaison, i18n — importaient "./etat.js?v=36" tout
    court, et personne ne l'a vu pendant neuf jours, parce que la panne était
    cette fois SILENCIEUSE : `etat.js` déclare `LANG: "fr"`, si bien que les
    quatre fichiers versionnés lisaient toujours « français » pendant que
@@ -26,7 +26,7 @@
    voit ; un défaut qui la rend seulement française ne se voit pas.
 
    Les sept sont réalignés le 26/08/2026. */
-import { S } from "./etat.js?v=35";
+import { S } from "./etat.js?v=36";
 
 (async function () {
   "use strict";
@@ -994,7 +994,7 @@ import { S } from "./etat.js?v=35";
      mais l'ordre de cette liste doit continuer de se lire comme l'ordre des
      dépendances. */
   for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison", "rapport"]) {
-    (await import("./explorateur-" + m + ".js?v=35")).default(A);
+    (await import("./explorateur-" + m + ".js?v=36")).default(A);
   }
 
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);

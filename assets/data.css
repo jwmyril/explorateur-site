@@ -1616,3 +1616,15 @@ p .btn, li .btn, .x-note .btn { min-height: 0; }
   }
   .hero h1, .hero .lead { max-width: calc(100% - 19.5rem); }
 }
+
+/* ── Le tableau de la carte (AC-3) ───────────────────────────────────────
+   Replié par défaut : il ne mange pas la page pour qui lit la carte, et il
+   existe pour qui ne le peut pas. `<summary>` est nativement focalisable et
+   s'actionne à Entrée comme à Espace. */
+.k-tableau { margin: .9rem 0 0; }
+.k-tableau > summary { cursor: pointer; font-size: .9rem; color: var(--ink-dim);
+  display: inline-flex; align-items: center; gap: .4rem; }
+.k-tableau > summary:focus-visible { outline: 2px solid var(--focus);
+  outline-offset: 3px; border-radius: 3px; }
+.k-tableau[open] > summary { margin-bottom: .7rem; }
+.k-tableau .x-tableau { max-height: 26rem; overflow: auto; }

@@ -21,8 +21,8 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#0e2240" />
-  <link rel="stylesheet" href="assets/style.css?v=35" />
-  <link rel="stylesheet" href="assets/data.css?v=50" />
+  <link rel="stylesheet" href="assets/style.css?v=36" />
+  <link rel="stylesheet" href="assets/data.css?v=51" />
   <link rel="canonical" href="https://explorateur.atmart.ltd/couches.html" />
   <link rel="preload" href="data/haiti_communes_simplifie.geojson?d=2026-09-10a" as="fetch" crossorigin="anonymous" />
   <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/couches.html" />
@@ -189,6 +189,10 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <p id="k-legende"></p>
     <p id="k-source"></p>
     <p id="k-limite"></p>
+    <details id="k-tableau" class="k-tableau">
+      <summary data-i18n="kc.tab_ouvrir">Lire la carte en tableau</summary>
+      <div id="k-tableau-corps"></div>
+    </details>
     <div id="as-hote"></div>
     <p class="x-note" style="margin-top:1rem">
       <!-- CHAQUE MORCEAU PORTE SA CLÉ, y compris le texte de chaque lien.
@@ -264,7 +268,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   </div>
 </footer>
 
-<script src="assets/couches.js?v=48"></script>
+<script src="assets/couches.js?v=49"></script>
 <script src="assets/assistant.js?v=1" defer></script>
 <script>
   (function () {
@@ -275,7 +279,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <script src="assets/mesure.js?v=4" defer></script>
 <script src="assets/ux.js?v=2" defer></script>
 <script src="assets/pwa.js?v=2" defer></script>
-<script src="assets/i18n.js?v=24"></script>
+<script src="assets/i18n.js?v=25"></script>
 <script src="assets/theme.js?v=3" defer></script>
 </body>
 </html>

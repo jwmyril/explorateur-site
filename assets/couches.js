@@ -1824,10 +1824,67 @@
     derniereCarte = l.join(String.fromCharCode(10));
   }
 
+  /* LE NOM DE LA COUCHE AFFICHEE, tel que le lecteur vient de le choisir.
+     On le prend dans le selecteur plutot que dans les metadonnees : c'est
+     exactement ce qui est a l'ecran, et ca reste juste meme si un libelle
+     change ailleurs. */
+  function nomCouche() {
+    var s = $("#k-choix");
+    var o = s && s.options[s.selectedIndex];
+    return (o && o.textContent.trim()) || T("cette couche");
+  }
+
+  /* LE TABLEAU SE CONSTRUIT DEPUIS LE SVG PEINT, jamais a cote. Chaque
+     chemin porte deja `<title>nom — valeur unite</title>` : en le relisant,
+     le tableau ne PEUT pas diverger de la carte. Meme doctrine que
+     `couverture()`, qui compte les classes rendues au lieu de croire la
+     couche sur parole. */
+  function tableauDeLaCarte() {
+    var hote = $("#k-tableau-corps");
+    if (!hote) return;
+    var zones = document.querySelectorAll("#k-carte .k-com");
+    if (!zones.length) { hote.innerHTML = ""; return; }
+    var titre = T("Valeurs de la couche") + " : " + nomCouche();
+    var l = ['<div class="x-tableau" tabindex="0" role="region" aria-label="'
+             + esc(titre) + '">'];
+    l.push("<table><caption>" + esc(titre) + "</caption><thead><tr>");
+    l.push('<th scope="col">' + esc(T("Commune")) + "</th>");
+    l.push('<th scope="col">' + esc(T("Valeur")) + "</th>");
+    l.push("</tr></thead><tbody>");
+    var vides = 0;
+    Array.prototype.forEach.call(zones, function (z) {
+      var t = z.querySelector("title");
+      var brut = t ? t.textContent : "";
+      var coupe = brut.indexOf(" — ");
+      var nom = coupe > -1 ? brut.slice(0, coupe) : brut;
+      var val = coupe > -1 ? brut.slice(coupe + 3) : "";
+      if (z.classList.contains("k-vide")) vides++;
+      l.push('<tr><th scope="row">' + esc(nom) + "</th>" +
+             '<td class="num">' + esc(val) + "</td></tr>");
+    });
+    l.push("</tbody></table></div>");
+    /* On redit ici ce que la carte dit en gris, parce qu'un lecteur qui
+       n'ouvre que le tableau n'a pas vu la carte. */
+    if (vides) {
+      l.push('<p class="x-note">' +
+             esc(TF("{n} commune(s) ne portent aucune valeur pour cette "
+                    + "couche : c'est une absence documentée, pas un zéro.",
+                    { n: vides })) + "</p>");
+    }
+    hote.innerHTML = l.join("");
+  }
+
   function dessiner(svgCorps, legende, meta, faits) {
+    /* UNE IMAGE SANS NOM N'EST RIEN POUR QUI NE LA VOIT PAS. Le `role="img"`
+       elague tout le sous-arbre : sans `aria-label`, la carte etait annoncee
+       comme une image anonyme, et les 140 `<title>` restaient muets. */
     $("#k-carte").innerHTML =
-      '<svg viewBox="0 0 ' + L + " " + H + '" role="img" preserveAspectRatio="xMidYMid meet">' +
+      '<svg viewBox="0 0 ' + L + " " + H + '" role="img" aria-label="' +
+      esc(T("Carte d'Haïti") + " : " + nomCouche() + ". "
+          + T("Les mêmes valeurs se lisent en tableau sous la carte.")) +
+      '" preserveAspectRatio="xMidYMid meet">' +
       svgCorps + "</svg>";
+    tableauDeLaCarte();
     $("#k-legende").innerHTML = legende;
     $("#k-source").textContent = T("Source : ") + T(meta.source);
     $("#k-limite").textContent = T("Limite : ") + limiteDe(meta);

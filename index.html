@@ -36,7 +36,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <meta property="og:site_name" content="Explorateur Haïti" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:url" content="https://explorateur.atmart.ltd/" />
-  <meta property="og:title" content="Explorateur Haïti — les 140 communes, chiffrées, datées, sourcées" />
+  <meta property="og:title" data-i18n-content="xp.og_title" content="Explorateur Haïti — les 140 communes, chiffrées, datées, sourcées" />
   <meta property="og:description" data-i18n-content="xp.og_desc" content="66 indicateurs, 7 967 observations, 59 sources — et 1 120 absences documentées. Comparez deux territoires, exportez, vérifiez chaque chiffre à sa source. Sans compte, sans cookie, sans traceur publicitaire." />
   <meta property="og:image" content="https://explorateur.atmart.ltd/assets/brand/partage-1200x627.png" />
   <meta property="og:image:width" content="1200" />
@@ -45,7 +45,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <meta name="author" content="Jean Wisner Myril" />
   <meta property="article:author" content="https://www.linkedin.com/in/jean-wisner-myril-economist-statistician/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Explorateur Haïti — les 140 communes, chiffrées, datées, sourcées" />
+  <meta name="twitter:title" data-i18n-content="xp.og_title" content="Explorateur Haïti — les 140 communes, chiffrées, datées, sourcées" />
   <meta name="twitter:description" data-i18n-content="xp.tw_desc" content="66 indicateurs, 7 967 observations, 59 sources — et 1 120 absences documentées. Sans compte, sans cookie, sans traceur publicitaire." />
   <meta name="twitter:image" content="https://explorateur.atmart.ltd/assets/brand/partage-1200x627.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,7 +76,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </script>
 <!-- /JSON-LD -->
 
-  <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/index.html" />
+    <link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/index.html" />
   <link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/index.html" />
   <link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/index.html" />
   <link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/index.html" />
@@ -308,7 +308,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   window.ATM_EXPLORATEUR = {};
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
-<script src="assets/i18n.js?v=28"></script>
+<script src="assets/i18n.js?v=29"></script>
 <script type="module" src="assets/modules/explorateur.js?v=50"></script>
 <script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
 if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>

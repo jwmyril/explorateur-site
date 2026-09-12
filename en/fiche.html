@@ -12,8 +12,8 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ma commune — édition légère | Explorateur Haïti</title>
-<meta name="description" content="Les chiffres d'une commune d'Haïti en 26 Ko : version texte de l'Explorateur, faite pour les connexions lentes. Chaque valeur porte sa source, son millésime et sa couverture." />
+<title data-i18n="pg.fiche.title">My commune — light edition | Haiti Explorer</title>
+<meta name="description" data-i18n-content="pg.fiche.desc" content="The figures of one Haitian commune in 26 KB: text version of the Explorer, made for slow connections. Every value carries its source, its year and its coverage." />
 <meta name="theme-color" content="#0e2240" />
 <link rel="icon" href="../assets/brand/explorateur.ico" sizes="any" />
 <style>
@@ -93,15 +93,15 @@ footer a,main a.lien{color:#1550b8}
 </header>
 
 <main>
-  <h1 id="titre">Ma commune</h1>
-  <p class="sous" id="sous">Cherchez votre commune : la fiche s'affiche en quelques kilooctets.</p>
+  <h1 id="titre" data-i18n="pg.fiche.h1">My commune</h1>
+  <p class="sous" id="sous" data-i18n="pg.fiche.sous">Find your commune: the sheet appears in a few kilobytes.</p>
 
   <div id="recherche">
-    <label for="q">Nom de la commune</label>
+    <label for="q" data-i18n="pg.fiche.label">Name of the commune</label>
     <input id="q" type="search" autocomplete="off" placeholder="Léogâne, Gonaïves, Pòtoprens…"
            aria-describedby="aide" />
     <p class="sous" id="aide" style="font-size:.82rem;margin:.4rem 0 0">
-      Tapez les premières lettres — les noms en kreyòl fonctionnent aussi.
+      <span data-i18n="pg.fiche.aide">Type the first letters — Kreyòl names work as well.</span>
     </p>
     <ul id="res"></ul>
     <div id="garder" hidden></div>

@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v127";
+const CACHE = "explorateur-v129";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -11,24 +11,24 @@ const CACHE = "explorateur-v127";
    prix d'un forfait compte a l'octet. La lecture, elle, passe par
    `caches.match`, qui interroge tous les caches — rien d'autre a changer. */
 const GARDE = "explorateur-communes";
-const DV = "?d=2026-09-10e";   // doit suivre le DV de assets/modules/explorateur.js
+const DV = "?d=2026-09-12a";   // doit suivre le DV de assets/modules/explorateur.js
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=36", "/assets/data.css?v=52", "/assets/modules/explorateur.js?v=50",
+  "/assets/style.css?v=36", "/assets/data.css?v=52", "/assets/modules/explorateur.js?v=51",
   "/assets/modules/etat.js?v=39",
-  "/assets/modules/explorateur-i18n.js?v=40",
-  "/assets/modules/explorateur-carte.js?v=40",
-  "/assets/modules/explorateur-fiche.js?v=40",
-  "/assets/modules/explorateur-recherche.js?v=40",
-  "/assets/modules/explorateur-comparaison.js?v=40",
+  "/assets/modules/explorateur-i18n.js?v=41",
+  "/assets/modules/explorateur-carte.js?v=41",
+  "/assets/modules/explorateur-fiche.js?v=41",
+  "/assets/modules/explorateur-recherche.js?v=41",
+  "/assets/modules/explorateur-comparaison.js?v=41",
   // `explorateur-rapport.js` a été RETIRÉ du précache le 01/09/2026 :
   // aucun fichier du site ne l'importe — la seule mention hors d'ici
   // est un commentaire. Nous précachions 30 Ko pour tenir une promesse
   // (« le bouton Rapport répond hors connexion ») qu'aucun bouton ne
   // réclamait. Le fichier reste sur le disque ; c'est son transport
   // qui cesse.
-  "/couches.html", "/fiche.html", "/assets/couches.js?v=53",
+  "/couches.html", "/fiche.html", "/assets/couches.js?v=54",
   // La marque : complete pour l'en-tete, REDUITE pour l'onglet — a 16 pixels
   // l'emboitement (Haiti dans la boucle, la boucle dans la loupe) devient une
   // tache, et c'est une contrainte de l'emboitement, pas un reglage a trouver.

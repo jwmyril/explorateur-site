@@ -5,7 +5,42 @@
 import { S } from "./etat.js?v=39";
 export default function (A) {
   /* Ce que ce module reçoit des autres — calculé, jamais listé à la main. */
-  const { $, ADMIN, DIR, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, sansAccent, situation, valeurBrute } = A;
+  const { $, ADMIN, DIR, F, LOCALE, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, T, TF, THEME, TN, agreger, annoncer, blocCarte, charger, communesDe, couverture, deNom, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, libelle, lienParrainage, liste, nb, nomSecond, nomT, ordinal, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, sansAccent, situation, valeurBrute } = A;
+
+  /* UN NOMBRE S'ÉCRIT DANS LA LANGUE DE LA PAGE — Y COMPRIS EN FRANÇAIS.
+     ==================================================================
+     Six blocs de cette fiche posaient leurs valeurs telles que le fichier
+     les porte : « 1491.8 mm », « -1.3 % », « 68666 empreintes », « 17.477 %
+     du territoire ». Point décimal anglo-saxon et aucun séparateur de
+     milliers, sur la page FRANÇAISE — donc le défaut n'était même pas un
+     défaut de traduction : c'était du JSON affiché brut. Les mêmes blocs
+     échappaient à `T()` et à `fmt()` ; une seule origine, deux symptômes.
+
+     POURQUOI PAS `fmt()` ICI. `fmt()` arrondit à deux décimales. Sur « 0,011 %
+     du territoire est en eau permanente », deux décimales rendent « 0,01 % »
+     — on perdrait un chiffre qui porte le sens, et arrondir une mesure pour
+     l'afficher est une façon discrète de la changer. Ce formateur-ci ne
+     touche QUE les séparateurs : il garde autant de décimales que la valeur
+     en porte, plafonnées à trois, parce qu'une surface mesurée à 30 mètres
+     de résolution n'a pas quatre décimales de kilomètre carré. */
+  function loc(v, dec) {
+    var n = parseFloat(String(v).replace(",", "."));
+    if (v == null || v === "" || isNaN(n)) return v;
+    if (dec == null) {
+      var s = String(v), i = s.indexOf(".");
+      dec = i < 0 ? 0 : Math.min(s.length - i - 1, 3);
+    }
+    return n.toLocaleString(LOCALE[S.LANG] || "fr-FR",
+                            { minimumFractionDigits: 0,
+                              maximumFractionDigits: dec });
+  }
+  /* Le signe se pose APRÈS le formatage : « +1 234,5 », jamais « 1 +234,5 ».
+     Un écart sans son signe se lit à l'envers une fois sur deux. */
+  function locSigne(v) {
+    var n = parseFloat(String(v).replace(",", "."));
+    if (isNaN(n)) return v;
+    return (n > 0 ? "+" : "") + loc(v);
+  }
   /* Six usages plutôt que sept profils : chacun réordonne les thèmes, choisit
      les indicateurs qu'il met en premier, change le résumé et propose des
      actions différentes.
@@ -1286,13 +1321,13 @@ export default function (A) {
     h.push('<p class="x-note">' + TF(
       "Il tombe en moyenne {n} mm par an sur cette commune ({normale}). " +
       "En {a}, il en est tombé {c} mm, soit {ec} % par rapport à la normale.",
-      { n: esc(d.n), normale: esc(m.normale || ""), a: esc(d.a),
-        c: esc(d.c), ec: esc(d.ec > 0 ? "+" + d.ec : d.ec) }) + "</p>");
+      { n: esc(loc(d.n)), normale: esc(m.normale || ""), a: esc(d.a),
+        c: esc(loc(d.c)), ec: esc(locSigne(d.ec)) }) + "</p>");
     h.push('<p class="x-note">' + TF(
       "{ms} mois sur {mo} observés depuis 1981 ont été très secs, soit {ps} % — " +
       "un mois est dit très sec quand il tombe sous le cinquième le plus sec " +
       "des mois de son propre calendrier.",
-      { ms: esc(d.ms), mo: esc(d.mo), ps: esc(d.ps) }) + "</p>");
+      { ms: esc(loc(d.ms)), mo: esc(loc(d.mo)), ps: esc(loc(d.ps)) }) + "</p>");
     if (d.mode === "pixel_du_centroide") {
       h.push('<p class="x-limite">' + T(
         "Cette commune est plus petite que la maille de la mesure (environ " +
@@ -1343,10 +1378,10 @@ export default function (A) {
     var h = ["<h3>" + T("Occupation du sol") + "</h3>"];
     h.push('<p class="x-note">' + TF(
       "Sur les {km2} km² de la commune, mesurés au satellite en {an} :",
-      { km2: esc(d.km2), an: esc(m.millesime || "") }) + "</p>");
+      { km2: esc(loc(d.km2)), an: esc(m.millesime || "") }) + "</p>");
     h.push('<ul class="x-liste-sol">');
     cles.forEach(function (c) {
-      h.push("<li><b>" + esc(d.p[c]) + " %</b> " + esc(noms[c] || c) +
+      h.push("<li><b>" + esc(loc(d.p[c])) + " %</b> " + esc(T(noms[c] || c)) +
              '<span class="x-barre" style="width:' + Math.min(100, d.p[c]) +
              '%"></span></li>');
     });
@@ -1389,8 +1424,8 @@ export default function (A) {
     h.push('<p class="x-note">' + TF(
       "Le satellite estime {m} habitants en 2020 ; la source officielle en " +
       "compte {o}. Écart : {e} %.",
-      { m: esc(d.m), o: esc(d.o || "—"), e: esc(ec > 0 ? "+" + d.e : d.e) }) +
-      "</p>");
+      { m: esc(loc(d.m)), o: esc(d.o == null ? "—" : loc(d.o)),
+        e: esc(locSigne(d.e)) }) + "</p>");
     if (Math.abs(ec) >= 25) {
       h.push('<p class="x-limite">' + T(
         "Les deux méthodes divergent nettement ici. Ni l'une ni l'autre n'est " +
@@ -1448,14 +1483,16 @@ export default function (A) {
     }
     h.push('<p class="x-note">' + TF(
       "pH {ph} — sol {reaction}. Carbone organique {soc} g/kg.",
-      { ph: esc(d.ph), reaction: esc(d.reaction), soc: esc(d.soc_g_kg) }) + "</p>");
+      { ph: esc(loc(d.ph)), reaction: esc(T(d.reaction)),
+        soc: esc(loc(d.soc_g_kg)) }) + "</p>");
     h.push('<ul class="x-liste-sol">');
     [["argile", d.argile], ["sable", d.sable], ["limon", d.limon]].forEach(function (p) {
-      h.push("<li><b>" + esc(p[1]) + " %</b> " + T(p[0]) +
+      h.push("<li><b>" + esc(loc(p[1])) + " %</b> " + T(p[0]) +
              '<span class="x-barre" style="width:' + Math.min(100, p[1]) + '%"></span></li>');
     });
     h.push("</ul>");
-    h.push('<p class="x-note">' + TF("Texture dominante : {t}.", { t: esc(d.texture) }) + "</p>");
+    h.push('<p class="x-note">' + TF("Texture dominante : {t}.",
+                                     { t: esc(T(d.texture)) }) + "</p>");
     if (d.fiab === "partielle") {
       h.push('<p class="x-limite">' + TF(
         "La prédiction couvre {c} % de la commune : l'eau et le bâti dense en " +
@@ -1576,12 +1613,12 @@ export default function (A) {
       h.push('<p class="x-note">' + TF(
         "{pp} % du territoire est en eau permanente et {ps} % en eau " +
         "saisonnière, soit {km2} km² d'eau au total.",
-        { pp: esc(d.pp), ps: esc(d.ps),
-          km2: esc(Math.round((d.kp + d.ks) * 100) / 100) }) + "</p>");
+        { pp: esc(loc(d.pp)), ps: esc(loc(d.ps)),
+          km2: esc(loc(Math.round((d.kp + d.ks) * 100) / 100)) }) + "</p>");
       h.push('<ul class="x-liste-sol">');
       [["eau permanente", d.pp], ["eau saisonnière", d.ps]].forEach(function (p) {
         if (p[1] > 0) {
-          h.push("<li><b>" + esc(p[1]) + " %</b> " + T(p[0]) +
+          h.push("<li><b>" + esc(loc(p[1])) + " %</b> " + T(p[0]) +
                  '<span class="x-barre" style="width:' + Math.min(100, p[1] * 3) +
                  '%"></span></li>');
         }
@@ -1640,7 +1677,7 @@ export default function (A) {
     if (d.ghi_moyen) {
       h.push('<p class="x-note">' + TF(
         "Irradiation globale reçue : {ghi} kWh par m² et par an.",
-        { ghi: esc(d.ghi_moyen) }) + "</p>");
+        { ghi: esc(loc(d.ghi_moyen)) }) + "</p>");
     }
     h.push('<p class="x-limite">' + T(
       "Ce chiffre sort d'un modèle météorologique, pas d'une étude de " +
@@ -1692,13 +1729,14 @@ export default function (A) {
     h.push('<p class="x-note">' + TF(
       "{nb} empreintes de bâtiments sont détectées, soit {dens} par km² et " +
       "{part} % du territoire couvert. Surface moyenne : {moy} m².",
-      { nb: esc(d.nb), dens: esc(d.dens), part: esc(d.part), moy: esc(d.moy) }) +
-      "</p>");
+      { nb: esc(loc(d.nb)), dens: esc(loc(d.dens)), part: esc(loc(d.part)),
+        moy: esc(loc(d.moy)) }) + "</p>");
     if (d.sous) {
       h.push('<p class="x-note">' + TF(
         "{sous} détections supplémentaires ont été écartées, sous le seuil de " +
         "confiance de {seuil} retenu.",
-        { sous: esc(d.sous), seuil: esc(m.seuil_confiance || "0,75") }) + "</p>");
+        { sous: esc(loc(d.sous)),
+        seuil: esc(loc(m.seuil_confiance || 0.75)) }) + "</p>");
     }
     h.push('<p class="x-limite">' + T(
       "Une empreinte n'est ni un ménage, ni un commerce, ni un logement " +
@@ -1784,9 +1822,14 @@ export default function (A) {
   /* Afficher une précision qu'on n'a pas est une façon discrète de mentir
      sur la qualité de la donnée : une surface mesurée à 30 mètres de
      résolution n'a pas quatre décimales de kilomètre carré. */
+  /* ⚠️ LA VIRGULE ÉTAIT CODÉE EN DUR, donc juste en français et fausse
+     partout ailleurs : « 34,2 km² » s'affichait tel quel sur la page
+     anglaise, où l'on écrit « 34.2 ». On arrondit ici, on laisse `loc()`
+     choisir les séparateurs de la langue. */
   function arr(v, n) {
     var x = parseFloat(v);
-    return isNaN(x) ? v : x.toFixed(n).replace(/\.?0+$/, "").replace(".", ",");
+    if (isNaN(x)) return v;
+    return loc(parseFloat(x.toFixed(n)), n);
   }
 
   /* ---------------------------------------------------------- projets de la Banque mondiale citant ce territoire

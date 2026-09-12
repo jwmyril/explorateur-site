@@ -46,7 +46,7 @@ import { S } from "./etat.js?v=39";
   /* Version des donnees. A incrementer des qu'un fichier de data/ est
      regenere : sinon le cache du navigateur sert l'ancien fichier et
      l'interface affiche du perime sans le savoir. */
-  var DV = "?d=2026-09-10e";
+  var DV = "?d=2026-09-12a";
   var F = {
     terr: DIR + (ADMIN ? "atmart_referentiel_territoire_HT.csv"
                        : "atmart_referentiel_territoire_base_HT.csv"),
@@ -994,7 +994,7 @@ import { S } from "./etat.js?v=39";
      mais l'ordre de cette liste doit continuer de se lire comme l'ordre des
      dépendances. */
   for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison", "rapport"]) {
-    (await import("./explorateur-" + m + ".js?v=40")).default(A);
+    (await import("./explorateur-" + m + ".js?v=41")).default(A);
   }
 
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);

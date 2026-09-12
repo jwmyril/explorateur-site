@@ -41,12 +41,26 @@
     if (v && vues.indexOf(v) < 0) vues.push(v);
   });
 
+  /* CE FICHIER PARLAIT TROP TÔT, ET PERSONNE NE POUVAIT LE VOIR.
+     ===========================================================
+     `i18n.js` charge son dictionnaire par le réseau. Ce script-ci, lui, est
+     synchrone : il fabriquait ses boutons pendant que le dictionnaire était
+     encore en route, `T()` rendait donc le français — et comme les boutons
+     naissaient sans attribut de traduction, `apply()` ne les reprenait pas
+     ensuite. Mesuré le 12/09/2026 sur `/ht/conditions.html` : cinq onglets
+     français au milieu d'une page kreyòl, sur la page JURIDIQUE, alors que
+     les six traductions existaient depuis toujours.
+     Deux corrections, parce qu'il fallait les deux : le bouton porte
+     maintenant sa clef, donc `apply()` le voit et le contrôle aussi ; et on
+     repeint à l'événement de langue, pour le cas où le lecteur change de
+     langue sans recharger. */
   var boutons = {};
-  function poser(v, libelle, tout) {
+  function poser(v, cle, tout) {
     var b = document.createElement("button");
     b.type = "button";
     b.className = "vue-btn" + (tout ? " vue-tout" : "");
-    b.textContent = libelle;
+    b.textContent = T(cle);
+    b.setAttribute("data-i18n", cle);
     b.setAttribute("data-va", v);
     b.setAttribute("aria-pressed", "false");
     b.addEventListener("click", function () { montrer(v, true); });
@@ -56,9 +70,20 @@
 
   vues.forEach(function (v) {
     var s = document.querySelector('[data-vue="' + v + '"]');
-    poser(v, T(s.getAttribute("data-vue-nom") || v), false);
+    poser(v, s.getAttribute("data-vue-nom") || v, false);
   });
-  poser("*", T("Tout afficher"), true);
+  poser("*", "Tout afficher", true);
+
+  /* La langue arrive, ou change : on relit le dictionnaire. `apply()` traite
+     déjà `[data-i18n]`, mais un onglet dont la clef manquerait resterait
+     français sans que ce fichier le sache — on repasse donc par `T()`, qui
+     compte ce qui retombe. */
+  document.addEventListener("atmart:lang", function () {
+    Object.keys(boutons).forEach(function (k) {
+      var cle = boutons[k].getAttribute("data-i18n");
+      if (cle) boutons[k].textContent = T(cle);
+    });
+  });
 
   function montrer(v, retenir) {
     sections.forEach(function (s) {

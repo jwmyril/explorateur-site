@@ -27,8 +27,15 @@ npm run dev
 |---|---|---|---|
 | GET | `/api/v1/health` | public | état du service |
 | GET | `/api/v1/services` | public | frontière gratuit et payant |
+| GET | `/api/v1/pricing` | public | tarifs proposés en USD |
+| POST | `/api/v1/auth/request-link` | public | envoyer un lien de connexion par courriel |
+| POST | `/api/v1/auth/verify` | public | échanger un lien à usage unique contre une session |
 | POST | `/api/v1/scenarios/evaluate` | public | scénario non enregistré |
 | POST | `/api/v1/audits/preview` | public | audit limité, sans conservation |
+| POST | `/api/v1/billing/checkout` | connecté | obtenir le lien Payhip du service |
+| POST | `/api/v1/payhip/webhook` | Payhip | activer ou retirer les droits après signature vérifiée |
+| POST | `/api/v1/billing/stripe-checkout` | connecté | solution Stripe directe de repli |
+| POST | `/api/v1/stripe/webhook` | Stripe | activer ou retirer les droits après signature vérifiée |
 | POST | `/api/v1/reports` | payant | créer une commande de rapport |
 | POST | `/api/v1/scenarios` | payant | calculer et enregistrer un scénario |
 | POST | `/api/v1/audits` | payant | exécuter et conserver un audit |
@@ -41,7 +48,14 @@ npm run dev
 - Les données d'audit ont une date de suppression dès leur création.
 - CORS autorise uniquement le domaine public et les serveurs locaux.
 - Les réponses privées utilisent `Cache-Control: no-store`.
-- Le paiement n'est pas simulé : un droit est activé seulement après confirmation vérifiée d'un fournisseur réel.
+- Les liens de connexion expirent après 15 minutes et ne sont utilisables qu'une fois.
+- Le paiement n'est pas simulé : un droit est activé seulement après un webhook Payhip ou Stripe signé.
+- L'adresse utilisée lors du paiement Payhip doit être celle du compte Atmart connecté.
+- Les événements Payhip sans utilisateur correspondant sont conservés comme `pending_user` sans ouvrir d'accès.
+
+Le secret `PAYHIP_API_KEY` doit être ajouté avec `wrangler secret put PAYHIP_API_KEY`. Il ne doit jamais apparaître dans un fichier du dépôt ou dans une conversation. Chaque valeur publique `PAYHIP_PRODUCT_*` peut contenir l'identifiant numérique ou, de préférence, le code court situé après `/b/` dans le lien Payhip; `PAYHIP_URL_*` contient le lien complet correspondant.
+
+Dans Payhip, configurer l'URL `/api/v1/payhip/webhook` dans **Settings → Developer** et activer `paid`, `refunded`, `subscription.created` et `subscription.deleted`. Stripe direct reste disponible comme solution de repli; ses secrets suivent la même règle.
 
 ## Avant le déploiement
 

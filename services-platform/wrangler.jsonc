@@ -2,12 +2,34 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "atmart-explorateur-services",
   "main": "src/index.ts",
-  "compatibility_date": "2026-09-10",
+  "compatibility_date": "2026-08-18",
   "compatibility_flags": ["nodejs_compat"],
   "vars": {
     "ENVIRONMENT": "development",
-    "PUBLIC_EXPLORER_URL": "https://explorateur.atmart.ltd"
+    "PUBLIC_EXPLORER_URL": "https://explorateur.atmart.ltd",
+    "APP_URL": "https://atmart-explorateur-services.atmartllc.workers.dev",
+    "AUTH_FROM_EMAIL": "connexion@atmart.ltd",
+    "STRIPE_SECRET_KEY": "dev_not_configured",
+    "STRIPE_WEBHOOK_SECRET": "dev_not_configured",
+    "STRIPE_PRICE_REPORTS": "price_configure_reports",
+    "STRIPE_PRICE_SCENARIOS": "price_configure_scenarios",
+    "STRIPE_PRICE_DATA_QUALITY": "price_configure_data_quality",
+    "STRIPE_PRICE_INSTANCES": "price_configure_instances"
+    ,"PAYHIP_PRODUCT_REPORTS": "GuWHr"
+    ,"PAYHIP_PRODUCT_SCENARIOS": "k9usC"
+    ,"PAYHIP_PRODUCT_DATA_QUALITY": "feFy7"
+    ,"PAYHIP_PRODUCT_INSTANCES": "iU18s"
+    ,"PAYHIP_URL_REPORTS": "https://payhip.com/b/GuWHr"
+    ,"PAYHIP_URL_SCENARIOS": "https://payhip.com/b/k9usC"
+    ,"PAYHIP_URL_DATA_QUALITY": "https://payhip.com/b/feFy7"
+    ,"PAYHIP_URL_INSTANCES": "https://payhip.com/b/iU18s"
   },
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "allowed_sender_addresses": ["connexion@atmart.ltd"]
+    }
+  ],
   "d1_databases": [
     {
       "binding": "DB",

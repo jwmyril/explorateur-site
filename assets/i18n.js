@@ -7,7 +7,7 @@
   // LE NUMÉRO DES DICTIONNAIRES. Il suit celui de ce fichier : les deux
   // partent ensemble, puisqu'une clé nouvelle ici et sa traduction là-bas
   // sont une seule et même livraison. À monter dès qu'un `<lg>.json` change.
-  const DICO_V = 27;
+  const DICO_V = 28;
   // Une page dont la traduction n'est pas complete declare window.ATM_LANGUES.
   // Mieux vaut du francais entier qu'un menu traduit au-dessus de contenus
   // restes en francais : l'utilisateur croirait la page traduite.
@@ -35,6 +35,9 @@
   /* Dernier dictionnaire appliqué, gardé pour les fragments qui
      arrivent après coup — voir window.ATM_I18N.traduire(). */
   let dictCourant = {}, langCourante = DEFAULT;
+  /* Vrai dès qu'`apply()` a fini : sert à distinguer « il n'y a pas de
+     traduction » de « on a demandé avant qu'elle soit là ». */
+  let dictPose = false;
 
   async function apply(lang) {
     const demande = lang;
@@ -54,7 +57,18 @@
       try { dict = await fetch(base + "assets/i18n/" + lang + ".json?v=" + DICO_V, { cache: "no-cache" }).then((r) => r.json()); }
       catch (e) { dict = {}; }
     }
-    dictCourant = dict; langCourante = lang;
+    dictCourant = dict; langCourante = lang; dictPose = true;
+    /* UN ÉLÉMENT NÉ APRÈS `capture()` N'AVAIT PAS D'ORIGINAL, ET LE PERDAIT.
+       `capture()` photographie le français au chargement. Un bouton fabriqué
+       ensuite par un script n'y figure pas : `orig.get(el)` rendait
+       `undefined`, et en français — où la valeur de repli EST le résultat —
+       le texte du bouton devenait littéralement « undefined ». On photographie
+       donc à la première rencontre, ce qui rend sûr de marquer un élément
+       créé en cours de route. */
+    const source = (el, lire) => {
+      if (!orig.has(el)) orig.set(el, lire(el));
+      return orig.get(el);
+    };
     const val = (key, fb) => (lang === DEFAULT ? fb : (dict[key] != null ? dict[key] : fb));
     /* UNE PHRASE À VARIABLES RESTE UNE SEULE UNITÉ DE TRADUCTION.
        ========================================================
@@ -75,11 +89,11 @@
       Object.keys(vars).forEach((k) => { texte = texte.split("{" + k + "}").join(vars[k]); });
       return texte;
     };
-    document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = poser(el, val(el.dataset.i18n, orig.get(el))); });
-    document.querySelectorAll("[data-i18n-html]").forEach((el) => { el.innerHTML = poser(el, val(el.dataset.i18nHtml, orig.get(el))); });
-    document.querySelectorAll("[data-i18n-ph]").forEach((el) => { el.setAttribute("placeholder", val(el.dataset.i18nPh, orig.get(el))); });
-    document.querySelectorAll("[data-i18n-aria]").forEach((el) => { el.setAttribute("aria-label", val(el.dataset.i18nAria, orig.get(el))); });
-    document.querySelectorAll("[data-i18n-content]").forEach((el) => { el.setAttribute("content", val(el.dataset.i18nContent, orig.get(el))); });
+    document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = poser(el, val(el.dataset.i18n, source(el, (x) => x.textContent))); });
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => { el.innerHTML = poser(el, val(el.dataset.i18nHtml, source(el, (x) => x.innerHTML))); });
+    document.querySelectorAll("[data-i18n-ph]").forEach((el) => { el.setAttribute("placeholder", val(el.dataset.i18nPh, source(el, (x) => x.getAttribute("placeholder")))); });
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => { el.setAttribute("aria-label", val(el.dataset.i18nAria, source(el, (x) => x.getAttribute("aria-label")))); });
+    document.querySelectorAll("[data-i18n-content]").forEach((el) => { el.setAttribute("content", val(el.dataset.i18nContent, source(el, (x) => x.getAttribute("content")))); });
     document.documentElement.lang = lang;
     relierExplorateur(lang);
     // Si la page a ramene la langue au francais faute de traduction complete,
@@ -216,9 +230,43 @@
   /* Traduire une CHAÎNE construite en JavaScript. La clé est la phrase
      française elle-même, comme dans le moteur : une chaîne sans traduction
      s'affiche alors en français lisible, jamais en identifiant technique. */
+  /* CE QUI RETOMBE EN FRANÇAIS SE COMPTE ICI AUSSI.
+     ===============================================
+     Le moteur de l'Explorateur tient ce compte depuis le 10/09 ; les pages,
+     elles, ne le tenaient pas — et le 12/09 la page « Conditions » affichait
+     ses cinq onglets en français au milieu du kreyòl. Les six traductions
+     EXISTAIENT. La cause n'était pas un dictionnaire troué mais un MOMENT :
+     `vues.js` fabrique ses boutons pendant que `apply()` attend encore son
+     dictionnaire, donc `texte()` rendait le français, et les boutons, sans
+     attribut, n'étaient repris par personne ensuite.
+     Aucun contrôle de l'atelier ne pouvait voir cela : le texte n'existe pas
+     dans le HTML, il naît à l'écran. Un compteur, lui, le voit — et il voit
+     les DEUX causes, la clef absente comme l'appel trop tôt. C'est la leçon
+     du bandeau du moteur, appliquée aux pages. */
+  var RETOMBEES = Object.create(null);
+  var nRetombees = 0;
   window.ATM_I18N.texte = function (fr) {
     if (langCourante === DEFAULT) return fr;
-    return dictCourant[fr] != null ? dictCourant[fr] : fr;
+    if (dictCourant[fr] != null) return dictCourant[fr];
+    if (fr && !RETOMBEES[fr]) { RETOMBEES[fr] = 1; nRetombees += 1; }
+    return fr;
+  };
+  /* Appelé AVANT que la langue soit posée, `texte()` ne peut rien rendre
+     d'autre que du français sans pouvoir le signaler : `langCourante` vaut
+     encore « fr ». On garde donc trace de ces appels-là séparément — ce sont
+     eux qui trahissent un script qui parle trop tôt. */
+  var TROP_TOT = Object.create(null);
+  var nTropTot = 0;
+  const texteNu = window.ATM_I18N.texte;
+  window.ATM_I18N.texte = function (fr) {
+    if (langCourante === DEFAULT && !dictPose && fr) {
+      if (!TROP_TOT[fr]) { TROP_TOT[fr] = 1; nTropTot += 1; }
+    }
+    return texteNu(fr);
+  };
+  window.ATM_I18N_PAGE_RETOMBEES = function () {
+    return { nombre: nRetombees, phrases: Object.keys(RETOMBEES),
+             avant_la_langue: Object.keys(TROP_TOT) };
   };
 
   window.ATM_I18N.traduire = function (racine) {

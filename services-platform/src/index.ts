@@ -1,4 +1,8 @@
 import { auditRows, evaluateScenario, type ServiceId } from "./domain";
+import { authenticate, AuthError, requestMagicLink, verifyMagicLink } from "./auth";
+import { PRICE_OFFERS } from "./catalog";
+import { BillingError, createCheckout, processStripeWebhook } from "./stripe";
+import { PayhipError, payhipCheckout, processPayhipWebhook } from "./payhip";
 
 const SERVICE_CATALOG = [
   { id: "reports", name: "Atmart Rapports", free: "Fiche Atmart standard", paid: "Rapports personnalisés, marque blanche et lots" },
@@ -6,11 +10,6 @@ const SERVICE_CATALOG = [
   { id: "data_quality", name: "Atmart Data Quality", free: "Règles et démonstration locale", paid: "Audit des données privées, rapport et validation" },
   { id: "instances", name: "Atmart Instances", free: "Explorateur public", paid: "Espace privé, rôles, données client et marque blanche" },
 ] as const;
-
-interface AuthContext {
-  userId: string;
-  organizationId: string;
-}
 
 export default {
   async fetch(request, env): Promise<Response> {
@@ -23,6 +22,27 @@ export default {
       }
       if (request.method === "GET" && url.pathname === "/api/v1/services") {
         return json({ dataAccess: "free", services: SERVICE_CATALOG }, 200, request);
+      }
+      if (request.method === "GET" && url.pathname === "/api/v1/pricing") {
+        return json({ currency: "USD", taxesIncluded: false, dataAccess: "free", offers: PRICE_OFFERS.map(publicOffer) }, 200, request);
+      }
+      if (request.method === "POST" && url.pathname === "/api/v1/auth/request-link") {
+        const body = asRecord(await readJson(request, 10_000));
+        await requestMagicLink(body.email, env);
+        return json({ accepted: true, message: "Si cette adresse est valide, un lien de connexion a été envoyé." }, 202, request);
+      }
+      if (request.method === "POST" && url.pathname === "/api/v1/auth/verify") {
+        const body = asRecord(await readJson(request, 10_000));
+        const session = await verifyMagicLink(body.token, env);
+        return json({ session }, 200, request);
+      }
+      if (request.method === "POST" && url.pathname === "/api/v1/stripe/webhook") {
+        await processStripeWebhook(request, env);
+        return json({ received: true }, 200, request);
+      }
+      if (request.method === "POST" && url.pathname === "/api/v1/payhip/webhook") {
+        await processPayhipWebhook(request, env);
+        return json({ received: true }, 200, request);
       }
       if (request.method === "POST" && url.pathname === "/api/v1/scenarios/evaluate") {
         const body = await readJson(request, 250_000);
@@ -37,6 +57,22 @@ export default {
       }
 
       const auth = await authenticate(request, env.DB);
+      if (request.method === "POST" && url.pathname === "/api/v1/billing/checkout") {
+        const body = asRecord(await readJson(request, 10_000));
+        const offerId = requiredString(body.offerId, "offerId", 80);
+        const user = await env.DB.prepare("SELECT email FROM users WHERE id = ? LIMIT 1").bind(auth.userId).first<{ email: string }>();
+        if (!user) throw new HttpError(401, "user_missing", "Utilisateur introuvable.");
+        const checkout = payhipCheckout(offerId, env);
+        return json({ checkout, instruction: `Utilisez ${user.email} sur Payhip afin d'activer automatiquement le service.` }, 200, request);
+      }
+      if (request.method === "POST" && url.pathname === "/api/v1/billing/stripe-checkout") {
+        const body = asRecord(await readJson(request, 10_000));
+        const offerId = requiredString(body.offerId, "offerId", 80);
+        const user = await env.DB.prepare("SELECT email FROM users WHERE id = ? LIMIT 1").bind(auth.userId).first<{ email: string }>();
+        if (!user) throw new HttpError(401, "user_missing", "Utilisateur introuvable.");
+        const checkout = await createCheckout({ offerId, organizationId: auth.organizationId, userId: auth.userId, email: user.email }, env);
+        return json({ checkout, provider: "stripe-fallback" }, 201, request);
+      }
       if (request.method === "POST" && url.pathname === "/api/v1/reports") {
         await requireEntitlement(env.DB, auth.organizationId, "reports");
         const body = asRecord(await readJson(request, 100_000));
@@ -87,36 +123,22 @@ export default {
       }
       return json({ error: { code: "not_found", message: "Route introuvable." } }, 404, request);
     } catch (error) {
-      const known = error instanceof HttpError ? error : new HttpError(500, "internal_error", "Une erreur interne est survenue.");
+      const known = error instanceof HttpError ? error
+        : error instanceof PayhipError ? new HttpError(error.status, error.code, error.message)
+        : error instanceof BillingError ? new HttpError(error.status, error.code, error.message)
+        : error instanceof AuthError ? new HttpError(401, "authentication_failed", error.message)
+        : new HttpError(500, "internal_error", "Une erreur interne est survenue.");
       console.error(JSON.stringify({ level: "error", code: known.code, path: url.pathname, status: known.status }));
       return json({ error: { code: known.code, message: known.message } }, known.status, request);
     }
   },
 } satisfies ExportedHandler<Env>;
 
-async function authenticate(request: Request, db: D1Database): Promise<AuthContext> {
-  const authorization = request.headers.get("authorization") ?? "";
-  if (!authorization.startsWith("Bearer ")) throw new HttpError(401, "authentication_required", "Authentification requise.");
-  const token = authorization.slice(7).trim();
-  if (token.length < 24) throw new HttpError(401, "token_invalid", "Jeton invalide.");
-  const hash = await sha256(token);
-  const row = await db.prepare(
-    "SELECT t.user_id AS userId, m.organization_id AS organizationId FROM api_tokens t JOIN memberships m ON m.user_id = t.user_id WHERE t.token_hash = ? AND t.revoked_at IS NULL AND (t.expires_at IS NULL OR t.expires_at > CURRENT_TIMESTAMP) LIMIT 1"
-  ).bind(hash).first<AuthContext>();
-  if (!row) throw new HttpError(401, "token_invalid", "Jeton invalide ou expiré.");
-  return row;
-}
-
 async function requireEntitlement(db: D1Database, organizationId: string, service: ServiceId): Promise<void> {
   const row = await db.prepare(
     "SELECT status FROM entitlements WHERE organization_id = ? AND service = ? AND status IN ('trial', 'active') AND (expires_at IS NULL OR expires_at > CURRENT_TIMESTAMP)"
   ).bind(organizationId, service).first<{ status: string }>();
   if (!row) throw new HttpError(403, "service_not_available", "Ce service payant n'est pas actif pour cette organisation.");
-}
-
-async function sha256(value: string): Promise<string> {
-  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
-  return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("");
 }
 
 async function readJson(request: Request, maxBytes: number): Promise<unknown> {
@@ -198,6 +220,11 @@ function json(value: unknown, status: number, request: Request): Response {
   headers.set("cache-control", "no-store");
   headers.set("x-content-type-options", "nosniff");
   return new Response(JSON.stringify(value), { status, headers });
+}
+
+function publicOffer(offer: (typeof PRICE_OFFERS)[number]): Omit<typeof offer, "stripePriceEnv" | "payhipProductEnv" | "payhipUrlEnv"> {
+  const { stripePriceEnv: _stripePriceEnv, payhipProductEnv: _payhipProductEnv, payhipUrlEnv: _payhipUrlEnv, ...visible } = offer;
+  return visible;
 }
 
 class HttpError extends Error {

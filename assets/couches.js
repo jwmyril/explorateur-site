@@ -1026,9 +1026,9 @@
   /* --------------------------------------------------------------- rendus */
   function fondCommunes(classe) {
     return communes.features.map(function (f) {
-      return '<path class="' + classe + '" data-pcode="' + f.properties.pcode +
-        '" data-id="' + f.properties.atmart_geo_id + '" d="' + chemin(f.geometry) +
-        '"><title>' + f.properties.nom_fr + "</title></path>";
+      return '<path class="' + classe + '" data-pcode="' + esc(f.properties.pcode) +
+        '" data-id="' + esc(f.properties.atmart_geo_id) + '" d="' + chemin(f.geometry) +
+        '"><title>' + esc(f.properties.nom_fr) + "</title></path>";
     }).join("");
   }
 
@@ -1379,10 +1379,10 @@
       var doc = v !== undefined;
       if (!doc) nonDoc++;
       /* PAS DE `data-id` QUAND LA MAILLE N'A PAS DE FICHE : le clic ne mene alors nulle part, au lieu d'ouvrir une page vide. Le survol continue de lire le nom et la valeur dans le <title>. */
-      return '<path class="k-com' + (doc ? "" : " k-vide") + '"' + (maille.fiche ? ' data-id="' + p.atmart_geo_id + '"' : "") + ' fill="' +
-        (doc ? teinte(v, bas, max, couche.rampe, couche.courbe) : nonDocumente()) + '" d="' + chemin(f.geometry) + '"><title>' + p.nom_fr +
-        (doc ? " — " + fmtN(v) + " " + T(agg.unite)
-             : " — " + T("non documenté")) + "</title></path>";
+      return '<path class="k-com' + (doc ? "" : " k-vide") + '"' + (maille.fiche ? ' data-id="' + esc(p.atmart_geo_id) + '"' : "") + ' fill="' +
+        (doc ? teinte(v, bas, max, couche.rampe, couche.courbe) : nonDocumente()) + '" d="' + chemin(f.geometry) + '"><title>' + esc(p.nom_fr) +
+        (doc ? " — " + fmtN(v) + " " + esc(T(agg.unite))
+             : " — " + esc(T("non documenté"))) + "</title></path>";
     }).join("");
     var leg = '<span class="k-grad k-grad-' + (couche.rampe || "alerte") + '"></span> ' +
               (agg.min !== undefined ? fmtN(agg.min) : "0") + " → " + fmtN(max) + " " + T(agg.unite) +
@@ -1516,7 +1516,8 @@
       }
       var c = IPC_COULEURS[phase] || nonDocumente();
       return '<path class="k-dep" fill="' + c + '" d="' + chemin(f.geometry) +
-        '"><title>' + p.nom_fr + (phase ? " — phase majoritaire " + phase : " — hors zones publiées") +
+        '"><title>' + esc(p.nom_fr) +
+        (phase ? " — phase majoritaire " + esc(phase) : " — hors zones publiées") +
         "</title></path>";
     }).join("");
     svg += nomsDepartements();
@@ -1598,9 +1599,10 @@
     classes.forEach(function (cl, i) { couleur[cl] = PALETTE_CL[i % PALETTE_CL.length]; });
     var svg = communes.features.map(function (f) {
       var p = f.properties, m = meilleur[p.pcode];
-      return '<path class="k-com" data-id="' + p.atmart_geo_id + '" fill="' +
+      return '<path class="k-com" data-id="' + esc(p.atmart_geo_id) + '" fill="' +
         (m ? couleur[m.cl] : nonDocumente()) + '" d="' + chemin(f.geometry) + '"><title>' +
-        p.nom_fr + (m ? " — " + m.cl + " (" + m.v + " %)" : " — non couvert") +
+        esc(p.nom_fr) +
+        (m ? " — " + esc(m.cl) + " (" + esc(m.v) + " %)" : " — non couvert") +
         "</title></path>";
     }).join("");
     var leg = classes.map(function (cl) {
@@ -1641,7 +1643,7 @@
     return departements.features.map(function (f) {
       var c = centroide(f.geometry);
       return '<text class="k-nom-dep" x="' + proj.x(c[0]).toFixed(1) + '" y="' +
-        proj.y(c[1]).toFixed(1) + '">' + f.properties.nom_fr + "</text>";
+        proj.y(c[1]).toFixed(1) + '">' + esc(f.properties.nom_fr) + "</text>";
     }).join("");
   }
 

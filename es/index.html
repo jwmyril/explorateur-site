@@ -48,8 +48,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <meta name="twitter:title" data-i18n-content="xp.og_title" content="Explorador de Haití — las 140 comunas, con cifras, fechas y fuentes" />
   <meta name="twitter:description" data-i18n-content="xp.tw_desc" content="66 indicadores, 7 967 observaciones, 59 fuentes — y 1 120 ausencias documentadas. Sin cuenta, sin cookies, sin rastreadores publicitarios." />
   <meta name="twitter:image" content="https://explorateur.atmart.ltd/assets/brand/partage-1200x627.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/polices.css?v=1" />
   <link rel="manifest" href="/manifest.webmanifest" />
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=36" />
@@ -84,7 +83,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/index.html" />
   <script>window.ATM_LANG_FORCE = "es"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/index.html", "ht": "https://explorateur.atmart.ltd/ht/index.html", "en": "https://explorateur.atmart.ltd/en/index.html", "es": "https://explorateur.atmart.ltd/es/index.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-9+CQEeEs8jqe35XsAirqV0cslxUV8R5PZ5Z9Zl0VEfY=' 'sha256-A3QFttpDhgL2NMJqkYQLsIKK0JCeZSk2zfuPXFLSd4s=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-eXGHFBg0CK+yShc0Hd+P0zUOlvqclbsVwEpEaShTyoo=' 'sha256-h2GltGjbI4WnMPNJY+nGcg4wdD799XolPZ/CuiR5I+Q=' 'sha256-k/mngXq/pMo0Z7M1B/5mrJlr13h+3Ae2+VbIrud0SUw=' 'sha256-w0QPlsIM+V8ycXXRy7DhRYr8+rjYrVC8iuUNWOaHPPo='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-9+CQEeEs8jqe35XsAirqV0cslxUV8R5PZ5Z9Zl0VEfY=' 'sha256-A3QFttpDhgL2NMJqkYQLsIKK0JCeZSk2zfuPXFLSd4s=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-eXGHFBg0CK+yShc0Hd+P0zUOlvqclbsVwEpEaShTyoo=' 'sha256-h2GltGjbI4WnMPNJY+nGcg4wdD799XolPZ/CuiR5I+Q=' 'sha256-k/mngXq/pMo0Z7M1B/5mrJlr13h+3Ae2+VbIrud0SUw=' 'sha256-w0QPlsIM+V8ycXXRy7DhRYr8+rjYrVC8iuUNWOaHPPo='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -309,7 +308,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   window.ATM_EXPLORATEUR = Object.assign({ dir: "../data/", base: "../" }, {});
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
-<script src="../assets/i18n.js?v=29"></script>
+<script src="../assets/i18n.js?v=30"></script>
 <script type="module" src="../assets/modules/explorateur.js?v=51"></script>
 <script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
 if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>

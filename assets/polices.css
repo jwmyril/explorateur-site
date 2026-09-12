@@ -1,0 +1,53 @@
+/* Polices hébergées ici — posées le 12/09/2026 par build_polices.py.
+
+   POURQUOI ELLES NE VIENNENT PLUS DE GOOGLE. Chaque visiteur y
+   envoyait son adresse IP et la page consultée, y compris celui qui
+   ouvrait « Conditions » pour savoir ce qu'on sait de lui — et nos
+   textes ne nommaient pas Google parmi les sous-traitants. Les 560
+   pages communales, elles, n'appelaient personne : la maison servait
+   deux régimes de vie privée selon la page, donc aucun n'avait été
+   décidé.
+
+   Polices variables : UN fichier par sous-ensemble porte toutes les
+   graisses. Seuls `latin` et `latin-ext` sont pris — nos quatre
+   langues n'écrivent ni en cyrillique, ni en grec, ni en vietnamien.
+
+   Inter et Space Grotesk — SIL Open Font License 1.1, voir
+   polices/LICENCE-OFL.txt. Ce fichier est ENGENDRÉ : le modifier à
+   la main se perd au prochain build. */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('polices/inter-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('polices/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('polices/space-grotesk-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('polices/space-grotesk-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

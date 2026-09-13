@@ -1,0 +1,164 @@
+﻿indicateur_id,libelle,unite,sens,iso3,pays,valeur,annee,rang_mondial_haiti,pays_compares,mediane_mondiale,source_id,date_extraction
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,HTI,Haïti,65.12,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,CUB,Cuba,78.26,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,ATG,Antigua and Barbuda,77.77,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,BRB,Barbados,76.33,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,GRD,Grenada,75.37,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,BHS,Bahamas  The,74.71,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,DOM,Dominican Republic,73.87,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,SUR,Suriname,73.76,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,BLZ,Belize,73.74,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,TTO,Trinidad and Tobago,73.62,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,LCA,St. Lucia,72.85,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,KNA,St. Kitts and Nevis,72.28,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,JAM,Jamaica,71.61,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,VCT,St. Vincent and the Grenadines,71.38,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,DMA,Dominica,71.29,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.LE00.IN,Espérance de vie à la naissance,ans,haut,GUY,Guyana,70.32,2024,190,217,74.71,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,HTI,Haïti,39.0,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,CUB,Cuba,6.8,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,ATG,Antigua and Barbuda,7.0,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,BRB,Barbados,9.1,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,VCT,St. Vincent and the Grenadines,10.2,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,BLZ,Belize,10.8,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,BHS,Bahamas  The,11.1,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,KNA,St. Kitts and Nevis,13.9,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,SUR,Suriname,14.8,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,LCA,St. Lucia,15.8,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,JAM,Jamaica,16.4,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,GRD,Grenada,16.4,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,TTO,Trinidad and Tobago,17.0,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,GUY,Guyana,23.2,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,DOM,Dominican Republic,27.7,2024,170,196,12.5,SRC-015,2026-09-04
+SP.DYN.IMRT.IN,Mortalité infantile,pour 1 000 naissances vivantes,bas,DMA,Dominica,33.3,2024,170,196,12.5,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,HTI,Haïti,328.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,CUB,Cuba,35.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,BRB,Barbados,35.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,ATG,Antigua and Barbuda,35.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,DMA,Dominica,36.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,LCA,St. Lucia,44.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,GRD,Grenada,48.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,TTO,Trinidad and Tobago,54.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,VCT,St. Vincent and the Grenadines,56.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,BLZ,Belize,67.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,KNA,St. Kitts and Nevis,74.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,GUY,Guyana,75.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,BHS,Bahamas  The,76.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,SUR,Suriname,84.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,DOM,Dominican Republic,124.0,2023,172,194,47.0,SRC-015,2026-09-04
+SH.STA.MMRT,Mortalité maternelle,pour 100 000 naissances,bas,JAM,Jamaica,130.0,2023,172,194,47.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,HTI,Haïti,53.9,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,CUB,Cuba,100.0,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,TTO,Trinidad and Tobago,100.0,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,BHS,Bahamas  The,100.0,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,BRB,Barbados,100.0,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,LCA,St. Lucia,100.0,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,DMA,Dominica,100.0,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,ATG,Antigua and Barbuda,100.0,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,KNA,St. Kitts and Nevis,100.0,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,VCT,St. Vincent and the Grenadines,100.0,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,BLZ,Belize,99.6,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,DOM,Dominican Republic,99.5,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,SUR,Suriname,99.0,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,JAM,Jamaica,97.7,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,GRD,Grenada,95.6,2024,195,215,100.0,SRC-015,2026-09-04
+EG.ELC.ACCS.ZS,Accès à l'électricité,% de la population,haut,GUY,Guyana,93.0,2024,195,215,100.0,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,HTI,Haïti,29.11,2024,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,ATG,Antigua and Barbuda,99.61,2024,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,BRB,Barbados,98.09,2024,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,KNA,St. Kitts and Nevis,94.95,2017,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,CUB,Cuba,94.77,2024,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,TTO,Trinidad and Tobago,94.18,2024,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,BHS,Bahamas  The,93.71,2019,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,GRD,Grenada,92.62,2024,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,JAM,Jamaica,91.63,2024,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,GUY,Guyana,91.31,2024,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,DOM,Dominican Republic,90.12,2024,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,SUR,Suriname,90.0,2024,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,VCT,St. Vincent and the Grenadines,89.7,2018,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,BLZ,Belize,84.3,2024,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,LCA,St. Lucia,83.36,2022,198,214,93.66,SRC-015,2026-09-04
+SH.STA.BASS.ZS,Accès à un assainissement de base,% de la population,haut,DMA,Dominica,80.37,2017,198,214,93.66,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,HTI,Haïti,47.86,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,BHS,Bahamas  The,92.47,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,DOM,Dominican Republic,91.0,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,JAM,Jamaica,90.11,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,SUR,Suriname,87.4,2023,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,GUY,Guyana,83.0,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,TTO,Trinidad and Tobago,82.16,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,DMA,Dominica,82.05,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,BLZ,Belize,80.01,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,KNA,St. Kitts and Nevis,76.88,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,VCT,St. Vincent and the Grenadines,76.19,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,ATG,Antigua and Barbuda,72.73,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,CUB,Cuba,70.48,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,BRB,Barbados,70.36,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,GRD,Grenada,70.16,2024,162,208,81.58,SRC-015,2026-09-04
+IT.NET.USER.ZS,Personnes utilisant Internet,% de la population,haut,LCA,St. Lucia,68.21,2024,162,208,81.58,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,HTI,Haïti,2694.19,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,BHS,Bahamas  The,39455.45,2024,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,GUY,Guyana,32413.79,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,BRB,Barbados,28364.82,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,KNA,St. Kitts and Nevis,25223.03,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,ATG,Antigua and Barbuda,24819.25,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,TTO,Trinidad and Tobago,18967.27,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,LCA,St. Lucia,14745.82,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,VCT,St. Vincent and the Grenadines,12561.77,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,GRD,Grenada,12106.88,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,DOM,Dominican Republic,11059.21,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,DMA,Dominica,10989.04,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,CUB,Cuba,9605.28,2020,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,JAM,Jamaica,8002.92,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,BLZ,Belize,7865.48,2025,168,213,9605.28,SRC-015,2026-09-04
+NY.GDP.PCAP.CD,PIB par habitant,$ courants,haut,SUR,Suriname,7069.87,2025,168,213,9605.28,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,HTI,Haïti,16.95,2024,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,BHS,Bahamas  The,0.42,2024,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,TTO,Trinidad and Tobago,0.77,2025,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,ATG,Antigua and Barbuda,0.94,2025,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,BRB,Barbados,1.46,2017,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,LCA,St. Lucia,2.35,2025,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,GUY,Guyana,3.22,2023,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,GRD,Grenada,3.35,2025,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,KNA,St. Kitts and Nevis,3.36,2025,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,BLZ,Belize,3.72,2025,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,SUR,Suriname,3.89,2025,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,DMA,Dominica,5.48,2025,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,VCT,St. Vincent and the Grenadines,7.04,2025,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,DOM,Dominican Republic,9.74,2025,,187,2.31,SRC-015,2026-09-04
+BX.TRF.PWKR.DT.GD.ZS,Transferts des migrants reçus,% du PIB,neutre,JAM,Jamaica,16.19,2024,,187,2.31,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,HTI,Haïti,12.26,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,SUR,Suriname,94.45,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,GUY,Guyana,87.09,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,VCT,St. Vincent and the Grenadines,73.18,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,DMA,Dominica,63.83,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,JAM,Jamaica,56.19,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,BLZ,Belize,54.52,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,GRD,Grenada,52.06,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,BHS,Bahamas  The,50.94,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,DOM,Dominican Republic,44.99,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,TTO,Trinidad and Tobago,44.24,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,KNA,St. Kitts and Nevis,42.31,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,LCA,St. Lucia,34.05,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,CUB,Cuba,31.23,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,ATG,Antigua and Barbuda,18.01,2023,151,214,31.08,SRC-015,2026-09-04
+AG.LND.FRST.ZS,Surface forestière,% du territoire,haut,BRB,Barbados,14.65,2023,151,214,31.08,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,HTI,Haïti,28.64,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,BHS,Bahamas  The,0.41,2024,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,GRD,Grenada,0.61,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,VCT,St. Vincent and the Grenadines,0.82,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,BRB,Barbados,0.85,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,TTO,Trinidad and Tobago,0.99,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,BLZ,Belize,1.06,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,ATG,Antigua and Barbuda,1.37,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,LCA,St. Lucia,2.03,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,DMA,Dominica,2.53,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,GUY,Guyana,3.33,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,KNA,St. Kitts and Nevis,3.56,2023,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,DOM,Dominican Republic,3.87,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,JAM,Jamaica,4.0,2025,182,190,3.06,SRC-015,2026-09-04
+FP.CPI.TOTL.ZG,Inflation  prix à la consommation,% par an,bas,SUR,Suriname,9.21,2025,182,190,3.06,SRC-015,2026-09-04
+SE.ADT.LITR.ZS,Alphabétisation des adultes,% des 15 ans et plus,haut,HTI,Haïti,68.01,2017,100,119,92.01,SRC-015,2026-09-04
+SE.ADT.LITR.ZS,Alphabétisation des adultes,% des 15 ans et plus,haut,CUB,Cuba,97.65,2019,100,119,92.01,SRC-015,2026-09-04
+SE.ADT.LITR.ZS,Alphabétisation des adultes,% des 15 ans et plus,haut,DOM,Dominican Republic,94.03,2024,100,119,92.01,SRC-015,2026-09-04
+SE.ADT.LITR.ZS,Alphabétisation des adultes,% des 15 ans et plus,haut,BLZ,Belize,87.88,2022,100,119,92.01,SRC-015,2026-09-04
+SE.ADT.LITR.ZS,Alphabétisation des adultes,% des 15 ans et plus,haut,GUY,Guyana,85.64,2020,100,119,92.01,SRC-015,2026-09-04

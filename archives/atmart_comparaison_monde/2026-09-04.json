@@ -1,0 +1,1225 @@
+{
+ "meta": {
+  "titre": "Haïti comparée au monde et aux Caraïbes",
+  "source": "Banque mondiale — World Development Indicators",
+  "source_id": "SRC-015",
+  "licence": "CC BY 4.0 (Banque mondiale, Open Data)",
+  "date_extraction": "2026-09-04",
+  "fenetre": "2015:2025",
+  "methode": "Pour chaque pays, la valeur la plus récente disponible dans la fenêtre. Les années peuvent donc différer d'un pays à l'autre : chacune est écrite à côté de sa valeur. Les agrégats de la Banque mondiale (Monde, régions, groupes de revenu) sont écartés du classement — ce ne sont pas des pays, et les compter fausserait le rang.",
+  "limite": "Un rang mondial dépend de qui déclare. Un pays qui ne publie rien n'est pas dans le classement, il n'est pas dernier. Le nombre de pays comparés est donc écrit pour chaque indicateur, et il change de l'un à l'autre.",
+  "voisins_pourquoi": "La Banque mondiale n'a pas de région « Caraïbes » : elle range Haïti avec le Brésil et le Mexique. La liste des voisins est donc écrite à la main — États insulaires souverains, plus Belize, Guyana et Suriname, membres de la CARICOM et comparables par la taille.",
+  "indicateurs_ecartes": []
+ },
+ "indicateurs": [
+  {
+   "code": "SP.DYN.LE00.IN",
+   "libelle": {
+    "fr": "Espérance de vie à la naissance",
+    "ht": "Konbyen tan yon moun ap viv",
+    "en": "Life expectancy at birth",
+    "es": "Esperanza de vida al nacer"
+   },
+   "unite": {
+    "fr": "ans",
+    "ht": "ane",
+    "en": "years",
+    "es": "años"
+   },
+   "sens": "haut",
+   "haiti": {
+    "v": 65.12,
+    "an": 2024
+   },
+   "monde": {
+    "pays": 217,
+    "rang": 190,
+    "mediane": 74.71
+   },
+   "voisins": [
+    {
+     "iso": "CUB",
+     "nom": "Cuba",
+     "v": 78.26,
+     "an": 2024
+    },
+    {
+     "iso": "ATG",
+     "nom": "Antigua and Barbuda",
+     "v": 77.77,
+     "an": 2024
+    },
+    {
+     "iso": "BRB",
+     "nom": "Barbados",
+     "v": 76.33,
+     "an": 2024
+    },
+    {
+     "iso": "GRD",
+     "nom": "Grenada",
+     "v": 75.37,
+     "an": 2024
+    },
+    {
+     "iso": "BHS",
+     "nom": "Bahamas, The",
+     "v": 74.71,
+     "an": 2024
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 73.87,
+     "an": 2024
+    },
+    {
+     "iso": "SUR",
+     "nom": "Suriname",
+     "v": 73.76,
+     "an": 2024
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 73.74,
+     "an": 2024
+    },
+    {
+     "iso": "TTO",
+     "nom": "Trinidad and Tobago",
+     "v": 73.62,
+     "an": 2024
+    },
+    {
+     "iso": "LCA",
+     "nom": "St. Lucia",
+     "v": 72.85,
+     "an": 2024
+    },
+    {
+     "iso": "KNA",
+     "nom": "St. Kitts and Nevis",
+     "v": 72.28,
+     "an": 2024
+    },
+    {
+     "iso": "JAM",
+     "nom": "Jamaica",
+     "v": 71.61,
+     "an": 2024
+    },
+    {
+     "iso": "VCT",
+     "nom": "St. Vincent and the Grenadines",
+     "v": 71.38,
+     "an": 2024
+    },
+    {
+     "iso": "DMA",
+     "nom": "Dominica",
+     "v": 71.29,
+     "an": 2024
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 70.32,
+     "an": 2024
+    }
+   ]
+  },
+  {
+   "code": "SP.DYN.IMRT.IN",
+   "libelle": {
+    "fr": "Mortalité infantile",
+    "ht": "Timoun ki mouri anvan yo gen 1 an",
+    "en": "Infant mortality",
+    "es": "Mortalidad infantil"
+   },
+   "unite": {
+    "fr": "pour 1 000 naissances vivantes",
+    "ht": "pou chak 1 000 tibebe ki fèt vivan",
+    "en": "per 1,000 live births",
+    "es": "por 1 000 nacidos vivos"
+   },
+   "sens": "bas",
+   "haiti": {
+    "v": 39.0,
+    "an": 2024
+   },
+   "monde": {
+    "pays": 196,
+    "rang": 170,
+    "mediane": 12.5
+   },
+   "voisins": [
+    {
+     "iso": "CUB",
+     "nom": "Cuba",
+     "v": 6.8,
+     "an": 2024
+    },
+    {
+     "iso": "ATG",
+     "nom": "Antigua and Barbuda",
+     "v": 7.0,
+     "an": 2024
+    },
+    {
+     "iso": "BRB",
+     "nom": "Barbados",
+     "v": 9.1,
+     "an": 2024
+    },
+    {
+     "iso": "VCT",
+     "nom": "St. Vincent and the Grenadines",
+     "v": 10.2,
+     "an": 2024
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 10.8,
+     "an": 2024
+    },
+    {
+     "iso": "BHS",
+     "nom": "Bahamas, The",
+     "v": 11.1,
+     "an": 2024
+    },
+    {
+     "iso": "KNA",
+     "nom": "St. Kitts and Nevis",
+     "v": 13.9,
+     "an": 2024
+    },
+    {
+     "iso": "SUR",
+     "nom": "Suriname",
+     "v": 14.8,
+     "an": 2024
+    },
+    {
+     "iso": "LCA",
+     "nom": "St. Lucia",
+     "v": 15.8,
+     "an": 2024
+    },
+    {
+     "iso": "JAM",
+     "nom": "Jamaica",
+     "v": 16.4,
+     "an": 2024
+    },
+    {
+     "iso": "GRD",
+     "nom": "Grenada",
+     "v": 16.4,
+     "an": 2024
+    },
+    {
+     "iso": "TTO",
+     "nom": "Trinidad and Tobago",
+     "v": 17.0,
+     "an": 2024
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 23.2,
+     "an": 2024
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 27.7,
+     "an": 2024
+    },
+    {
+     "iso": "DMA",
+     "nom": "Dominica",
+     "v": 33.3,
+     "an": 2024
+    }
+   ]
+  },
+  {
+   "code": "SH.STA.MMRT",
+   "libelle": {
+    "fr": "Mortalité maternelle",
+    "ht": "Manman ki mouri lè y ap akouche",
+    "en": "Maternal mortality",
+    "es": "Mortalidad materna"
+   },
+   "unite": {
+    "fr": "pour 100 000 naissances",
+    "ht": "pou chak 100 000 nesans",
+    "en": "per 100,000 live births",
+    "es": "por 100 000 nacimientos"
+   },
+   "sens": "bas",
+   "haiti": {
+    "v": 328.0,
+    "an": 2023
+   },
+   "monde": {
+    "pays": 194,
+    "rang": 172,
+    "mediane": 47.0
+   },
+   "voisins": [
+    {
+     "iso": "CUB",
+     "nom": "Cuba",
+     "v": 35.0,
+     "an": 2023
+    },
+    {
+     "iso": "BRB",
+     "nom": "Barbados",
+     "v": 35.0,
+     "an": 2023
+    },
+    {
+     "iso": "ATG",
+     "nom": "Antigua and Barbuda",
+     "v": 35.0,
+     "an": 2023
+    },
+    {
+     "iso": "DMA",
+     "nom": "Dominica",
+     "v": 36.0,
+     "an": 2023
+    },
+    {
+     "iso": "LCA",
+     "nom": "St. Lucia",
+     "v": 44.0,
+     "an": 2023
+    },
+    {
+     "iso": "GRD",
+     "nom": "Grenada",
+     "v": 48.0,
+     "an": 2023
+    },
+    {
+     "iso": "TTO",
+     "nom": "Trinidad and Tobago",
+     "v": 54.0,
+     "an": 2023
+    },
+    {
+     "iso": "VCT",
+     "nom": "St. Vincent and the Grenadines",
+     "v": 56.0,
+     "an": 2023
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 67.0,
+     "an": 2023
+    },
+    {
+     "iso": "KNA",
+     "nom": "St. Kitts and Nevis",
+     "v": 74.0,
+     "an": 2023
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 75.0,
+     "an": 2023
+    },
+    {
+     "iso": "BHS",
+     "nom": "Bahamas, The",
+     "v": 76.0,
+     "an": 2023
+    },
+    {
+     "iso": "SUR",
+     "nom": "Suriname",
+     "v": 84.0,
+     "an": 2023
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 124.0,
+     "an": 2023
+    },
+    {
+     "iso": "JAM",
+     "nom": "Jamaica",
+     "v": 130.0,
+     "an": 2023
+    }
+   ]
+  },
+  {
+   "code": "EG.ELC.ACCS.ZS",
+   "libelle": {
+    "fr": "Accès à l'électricité",
+    "ht": "Moun ki gen kouran lakay yo",
+    "en": "Access to electricity",
+    "es": "Acceso a la electricidad"
+   },
+   "unite": {
+    "fr": "% de la population",
+    "ht": "% popilasyon an",
+    "en": "% of population",
+    "es": "% de la población"
+   },
+   "sens": "haut",
+   "haiti": {
+    "v": 53.9,
+    "an": 2024
+   },
+   "monde": {
+    "pays": 215,
+    "rang": 195,
+    "mediane": 100.0
+   },
+   "voisins": [
+    {
+     "iso": "CUB",
+     "nom": "Cuba",
+     "v": 100.0,
+     "an": 2024
+    },
+    {
+     "iso": "TTO",
+     "nom": "Trinidad and Tobago",
+     "v": 100.0,
+     "an": 2024
+    },
+    {
+     "iso": "BHS",
+     "nom": "Bahamas, The",
+     "v": 100.0,
+     "an": 2024
+    },
+    {
+     "iso": "BRB",
+     "nom": "Barbados",
+     "v": 100.0,
+     "an": 2024
+    },
+    {
+     "iso": "LCA",
+     "nom": "St. Lucia",
+     "v": 100.0,
+     "an": 2024
+    },
+    {
+     "iso": "DMA",
+     "nom": "Dominica",
+     "v": 100.0,
+     "an": 2024
+    },
+    {
+     "iso": "ATG",
+     "nom": "Antigua and Barbuda",
+     "v": 100.0,
+     "an": 2024
+    },
+    {
+     "iso": "KNA",
+     "nom": "St. Kitts and Nevis",
+     "v": 100.0,
+     "an": 2024
+    },
+    {
+     "iso": "VCT",
+     "nom": "St. Vincent and the Grenadines",
+     "v": 100.0,
+     "an": 2024
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 99.6,
+     "an": 2024
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 99.5,
+     "an": 2024
+    },
+    {
+     "iso": "SUR",
+     "nom": "Suriname",
+     "v": 99.0,
+     "an": 2024
+    },
+    {
+     "iso": "JAM",
+     "nom": "Jamaica",
+     "v": 97.7,
+     "an": 2024
+    },
+    {
+     "iso": "GRD",
+     "nom": "Grenada",
+     "v": 95.6,
+     "an": 2024
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 93.0,
+     "an": 2024
+    }
+   ]
+  },
+  {
+   "code": "SH.STA.BASS.ZS",
+   "libelle": {
+    "fr": "Accès à un assainissement de base",
+    "ht": "Moun ki gen yon twalèt ki pwòp",
+    "en": "Access to basic sanitation",
+    "es": "Acceso a saneamiento básico"
+   },
+   "unite": {
+    "fr": "% de la population",
+    "ht": "% popilasyon an",
+    "en": "% of population",
+    "es": "% de la población"
+   },
+   "sens": "haut",
+   "haiti": {
+    "v": 29.11,
+    "an": 2024
+   },
+   "monde": {
+    "pays": 214,
+    "rang": 198,
+    "mediane": 93.66
+   },
+   "voisins": [
+    {
+     "iso": "ATG",
+     "nom": "Antigua and Barbuda",
+     "v": 99.61,
+     "an": 2024
+    },
+    {
+     "iso": "BRB",
+     "nom": "Barbados",
+     "v": 98.09,
+     "an": 2024
+    },
+    {
+     "iso": "KNA",
+     "nom": "St. Kitts and Nevis",
+     "v": 94.95,
+     "an": 2017
+    },
+    {
+     "iso": "CUB",
+     "nom": "Cuba",
+     "v": 94.77,
+     "an": 2024
+    },
+    {
+     "iso": "TTO",
+     "nom": "Trinidad and Tobago",
+     "v": 94.18,
+     "an": 2024
+    },
+    {
+     "iso": "BHS",
+     "nom": "Bahamas, The",
+     "v": 93.71,
+     "an": 2019
+    },
+    {
+     "iso": "GRD",
+     "nom": "Grenada",
+     "v": 92.62,
+     "an": 2024
+    },
+    {
+     "iso": "JAM",
+     "nom": "Jamaica",
+     "v": 91.63,
+     "an": 2024
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 91.31,
+     "an": 2024
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 90.12,
+     "an": 2024
+    },
+    {
+     "iso": "SUR",
+     "nom": "Suriname",
+     "v": 90.0,
+     "an": 2024
+    },
+    {
+     "iso": "VCT",
+     "nom": "St. Vincent and the Grenadines",
+     "v": 89.7,
+     "an": 2018
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 84.3,
+     "an": 2024
+    },
+    {
+     "iso": "LCA",
+     "nom": "St. Lucia",
+     "v": 83.36,
+     "an": 2022
+    },
+    {
+     "iso": "DMA",
+     "nom": "Dominica",
+     "v": 80.37,
+     "an": 2017
+    }
+   ]
+  },
+  {
+   "code": "IT.NET.USER.ZS",
+   "libelle": {
+    "fr": "Personnes utilisant Internet",
+    "ht": "Moun ki sèvi ak entènèt",
+    "en": "People using the Internet",
+    "es": "Personas que usan Internet"
+   },
+   "unite": {
+    "fr": "% de la population",
+    "ht": "% popilasyon an",
+    "en": "% of population",
+    "es": "% de la población"
+   },
+   "sens": "haut",
+   "haiti": {
+    "v": 47.86,
+    "an": 2024
+   },
+   "monde": {
+    "pays": 208,
+    "rang": 162,
+    "mediane": 81.58
+   },
+   "voisins": [
+    {
+     "iso": "BHS",
+     "nom": "Bahamas, The",
+     "v": 92.47,
+     "an": 2024
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 91.0,
+     "an": 2024
+    },
+    {
+     "iso": "JAM",
+     "nom": "Jamaica",
+     "v": 90.11,
+     "an": 2024
+    },
+    {
+     "iso": "SUR",
+     "nom": "Suriname",
+     "v": 87.4,
+     "an": 2023
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 83.0,
+     "an": 2024
+    },
+    {
+     "iso": "TTO",
+     "nom": "Trinidad and Tobago",
+     "v": 82.16,
+     "an": 2024
+    },
+    {
+     "iso": "DMA",
+     "nom": "Dominica",
+     "v": 82.05,
+     "an": 2024
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 80.01,
+     "an": 2024
+    },
+    {
+     "iso": "KNA",
+     "nom": "St. Kitts and Nevis",
+     "v": 76.88,
+     "an": 2024
+    },
+    {
+     "iso": "VCT",
+     "nom": "St. Vincent and the Grenadines",
+     "v": 76.19,
+     "an": 2024
+    },
+    {
+     "iso": "ATG",
+     "nom": "Antigua and Barbuda",
+     "v": 72.73,
+     "an": 2024
+    },
+    {
+     "iso": "CUB",
+     "nom": "Cuba",
+     "v": 70.48,
+     "an": 2024
+    },
+    {
+     "iso": "BRB",
+     "nom": "Barbados",
+     "v": 70.36,
+     "an": 2024
+    },
+    {
+     "iso": "GRD",
+     "nom": "Grenada",
+     "v": 70.16,
+     "an": 2024
+    },
+    {
+     "iso": "LCA",
+     "nom": "St. Lucia",
+     "v": 68.21,
+     "an": 2024
+    }
+   ]
+  },
+  {
+   "code": "NY.GDP.PCAP.CD",
+   "libelle": {
+    "fr": "PIB par habitant",
+    "ht": "Richès peyi a divize pou chak moun",
+    "en": "GDP per capita",
+    "es": "PIB per cápita"
+   },
+   "unite": {
+    "fr": "$ courants",
+    "ht": "dola jodi a",
+    "en": "current US$",
+    "es": "US$ corrientes"
+   },
+   "sens": "haut",
+   "haiti": {
+    "v": 2694.19,
+    "an": 2025
+   },
+   "monde": {
+    "pays": 213,
+    "rang": 168,
+    "mediane": 9605.28
+   },
+   "voisins": [
+    {
+     "iso": "BHS",
+     "nom": "Bahamas, The",
+     "v": 39455.45,
+     "an": 2024
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 32413.79,
+     "an": 2025
+    },
+    {
+     "iso": "BRB",
+     "nom": "Barbados",
+     "v": 28364.82,
+     "an": 2025
+    },
+    {
+     "iso": "KNA",
+     "nom": "St. Kitts and Nevis",
+     "v": 25223.03,
+     "an": 2025
+    },
+    {
+     "iso": "ATG",
+     "nom": "Antigua and Barbuda",
+     "v": 24819.25,
+     "an": 2025
+    },
+    {
+     "iso": "TTO",
+     "nom": "Trinidad and Tobago",
+     "v": 18967.27,
+     "an": 2025
+    },
+    {
+     "iso": "LCA",
+     "nom": "St. Lucia",
+     "v": 14745.82,
+     "an": 2025
+    },
+    {
+     "iso": "VCT",
+     "nom": "St. Vincent and the Grenadines",
+     "v": 12561.77,
+     "an": 2025
+    },
+    {
+     "iso": "GRD",
+     "nom": "Grenada",
+     "v": 12106.88,
+     "an": 2025
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 11059.21,
+     "an": 2025
+    },
+    {
+     "iso": "DMA",
+     "nom": "Dominica",
+     "v": 10989.04,
+     "an": 2025
+    },
+    {
+     "iso": "CUB",
+     "nom": "Cuba",
+     "v": 9605.28,
+     "an": 2020
+    },
+    {
+     "iso": "JAM",
+     "nom": "Jamaica",
+     "v": 8002.92,
+     "an": 2025
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 7865.48,
+     "an": 2025
+    },
+    {
+     "iso": "SUR",
+     "nom": "Suriname",
+     "v": 7069.87,
+     "an": 2025
+    }
+   ]
+  },
+  {
+   "code": "BX.TRF.PWKR.DT.GD.ZS",
+   "libelle": {
+    "fr": "Transferts des migrants reçus",
+    "ht": "Lajan dyaspora a voye",
+    "en": "Remittances received",
+    "es": "Remesas recibidas"
+   },
+   "unite": {
+    "fr": "% du PIB",
+    "ht": "% richès peyi a",
+    "en": "% of GDP",
+    "es": "% del PIB"
+   },
+   "sens": "neutre",
+   "haiti": {
+    "v": 16.95,
+    "an": 2024
+   },
+   "monde": {
+    "pays": 187,
+    "rang": null,
+    "mediane": 2.31
+   },
+   "voisins": [
+    {
+     "iso": "BHS",
+     "nom": "Bahamas, The",
+     "v": 0.42,
+     "an": 2024
+    },
+    {
+     "iso": "TTO",
+     "nom": "Trinidad and Tobago",
+     "v": 0.77,
+     "an": 2025
+    },
+    {
+     "iso": "ATG",
+     "nom": "Antigua and Barbuda",
+     "v": 0.94,
+     "an": 2025
+    },
+    {
+     "iso": "BRB",
+     "nom": "Barbados",
+     "v": 1.46,
+     "an": 2017
+    },
+    {
+     "iso": "LCA",
+     "nom": "St. Lucia",
+     "v": 2.35,
+     "an": 2025
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 3.22,
+     "an": 2023
+    },
+    {
+     "iso": "GRD",
+     "nom": "Grenada",
+     "v": 3.35,
+     "an": 2025
+    },
+    {
+     "iso": "KNA",
+     "nom": "St. Kitts and Nevis",
+     "v": 3.36,
+     "an": 2025
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 3.72,
+     "an": 2025
+    },
+    {
+     "iso": "SUR",
+     "nom": "Suriname",
+     "v": 3.89,
+     "an": 2025
+    },
+    {
+     "iso": "DMA",
+     "nom": "Dominica",
+     "v": 5.48,
+     "an": 2025
+    },
+    {
+     "iso": "VCT",
+     "nom": "St. Vincent and the Grenadines",
+     "v": 7.04,
+     "an": 2025
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 9.74,
+     "an": 2025
+    },
+    {
+     "iso": "JAM",
+     "nom": "Jamaica",
+     "v": 16.19,
+     "an": 2024
+    }
+   ]
+  },
+  {
+   "code": "AG.LND.FRST.ZS",
+   "libelle": {
+    "fr": "Surface forestière",
+    "ht": "Tè ki gen pyebwa sou li",
+    "en": "Forest area",
+    "es": "Superficie forestal"
+   },
+   "unite": {
+    "fr": "% du territoire",
+    "ht": "% teritwa a",
+    "en": "% of land area",
+    "es": "% del territorio"
+   },
+   "sens": "haut",
+   "haiti": {
+    "v": 12.26,
+    "an": 2023
+   },
+   "monde": {
+    "pays": 214,
+    "rang": 151,
+    "mediane": 31.08
+   },
+   "voisins": [
+    {
+     "iso": "SUR",
+     "nom": "Suriname",
+     "v": 94.45,
+     "an": 2023
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 87.09,
+     "an": 2023
+    },
+    {
+     "iso": "VCT",
+     "nom": "St. Vincent and the Grenadines",
+     "v": 73.18,
+     "an": 2023
+    },
+    {
+     "iso": "DMA",
+     "nom": "Dominica",
+     "v": 63.83,
+     "an": 2023
+    },
+    {
+     "iso": "JAM",
+     "nom": "Jamaica",
+     "v": 56.19,
+     "an": 2023
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 54.52,
+     "an": 2023
+    },
+    {
+     "iso": "GRD",
+     "nom": "Grenada",
+     "v": 52.06,
+     "an": 2023
+    },
+    {
+     "iso": "BHS",
+     "nom": "Bahamas, The",
+     "v": 50.94,
+     "an": 2023
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 44.99,
+     "an": 2023
+    },
+    {
+     "iso": "TTO",
+     "nom": "Trinidad and Tobago",
+     "v": 44.24,
+     "an": 2023
+    },
+    {
+     "iso": "KNA",
+     "nom": "St. Kitts and Nevis",
+     "v": 42.31,
+     "an": 2023
+    },
+    {
+     "iso": "LCA",
+     "nom": "St. Lucia",
+     "v": 34.05,
+     "an": 2023
+    },
+    {
+     "iso": "CUB",
+     "nom": "Cuba",
+     "v": 31.23,
+     "an": 2023
+    },
+    {
+     "iso": "ATG",
+     "nom": "Antigua and Barbuda",
+     "v": 18.01,
+     "an": 2023
+    },
+    {
+     "iso": "BRB",
+     "nom": "Barbados",
+     "v": 14.65,
+     "an": 2023
+    }
+   ]
+  },
+  {
+   "code": "FP.CPI.TOTL.ZG",
+   "libelle": {
+    "fr": "Inflation, prix à la consommation",
+    "ht": "Chèrte lavi, pri nan mache a",
+    "en": "Inflation, consumer prices",
+    "es": "Inflación, precios al consumidor"
+   },
+   "unite": {
+    "fr": "% par an",
+    "ht": "% pa ane",
+    "en": "% per year",
+    "es": "% anual"
+   },
+   "sens": "bas",
+   "haiti": {
+    "v": 28.64,
+    "an": 2025
+   },
+   "monde": {
+    "pays": 190,
+    "rang": 182,
+    "mediane": 3.06
+   },
+   "voisins": [
+    {
+     "iso": "BHS",
+     "nom": "Bahamas, The",
+     "v": 0.41,
+     "an": 2024
+    },
+    {
+     "iso": "GRD",
+     "nom": "Grenada",
+     "v": 0.61,
+     "an": 2025
+    },
+    {
+     "iso": "VCT",
+     "nom": "St. Vincent and the Grenadines",
+     "v": 0.82,
+     "an": 2025
+    },
+    {
+     "iso": "BRB",
+     "nom": "Barbados",
+     "v": 0.85,
+     "an": 2025
+    },
+    {
+     "iso": "TTO",
+     "nom": "Trinidad and Tobago",
+     "v": 0.99,
+     "an": 2025
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 1.06,
+     "an": 2025
+    },
+    {
+     "iso": "ATG",
+     "nom": "Antigua and Barbuda",
+     "v": 1.37,
+     "an": 2025
+    },
+    {
+     "iso": "LCA",
+     "nom": "St. Lucia",
+     "v": 2.03,
+     "an": 2025
+    },
+    {
+     "iso": "DMA",
+     "nom": "Dominica",
+     "v": 2.53,
+     "an": 2025
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 3.33,
+     "an": 2025
+    },
+    {
+     "iso": "KNA",
+     "nom": "St. Kitts and Nevis",
+     "v": 3.56,
+     "an": 2023
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 3.87,
+     "an": 2025
+    },
+    {
+     "iso": "JAM",
+     "nom": "Jamaica",
+     "v": 4.0,
+     "an": 2025
+    },
+    {
+     "iso": "SUR",
+     "nom": "Suriname",
+     "v": 9.21,
+     "an": 2025
+    }
+   ]
+  },
+  {
+   "code": "SE.ADT.LITR.ZS",
+   "libelle": {
+    "fr": "Alphabétisation des adultes",
+    "ht": "Granmoun ki konn li ak ekri",
+    "en": "Adult literacy",
+    "es": "Alfabetización de adultos"
+   },
+   "unite": {
+    "fr": "% des 15 ans et plus",
+    "ht": "% moun 15 an ak plis",
+    "en": "% of ages 15 and above",
+    "es": "% de 15 años y más"
+   },
+   "sens": "haut",
+   "haiti": {
+    "v": 68.01,
+    "an": 2017
+   },
+   "monde": {
+    "pays": 119,
+    "rang": 100,
+    "mediane": 92.01
+   },
+   "voisins": [
+    {
+     "iso": "CUB",
+     "nom": "Cuba",
+     "v": 97.65,
+     "an": 2019
+    },
+    {
+     "iso": "DOM",
+     "nom": "Dominican Republic",
+     "v": 94.03,
+     "an": 2024
+    },
+    {
+     "iso": "BLZ",
+     "nom": "Belize",
+     "v": 87.88,
+     "an": 2022
+    },
+    {
+     "iso": "GUY",
+     "nom": "Guyana",
+     "v": 85.64,
+     "an": 2020
+    }
+   ]
+  }
+ ]
+}

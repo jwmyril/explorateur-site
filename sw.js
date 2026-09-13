@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v130";
+const CACHE = "explorateur-v131";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -11,11 +11,11 @@ const CACHE = "explorateur-v130";
    prix d'un forfait compte a l'octet. La lecture, elle, passe par
    `caches.match`, qui interroge tous les caches — rien d'autre a changer. */
 const GARDE = "explorateur-communes";
-const DV = "?d=2026-09-12a";   // doit suivre le DV de assets/modules/explorateur.js
+const DV = "?d=2026-09-13a";   // doit suivre le DV de assets/modules/explorateur.js
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=36", "/assets/data.css?v=52", "/assets/modules/explorateur.js?v=51",
+  "/assets/style.css?v=36", "/assets/data.css?v=52", "/assets/modules/explorateur.js?v=52",
   "/assets/modules/etat.js?v=39",
   "/assets/modules/explorateur-i18n.js?v=41",
   "/assets/modules/explorateur-carte.js?v=41",
@@ -28,7 +28,7 @@ const CORE = [
   // (« le bouton Rapport répond hors connexion ») qu'aucun bouton ne
   // réclamait. Le fichier reste sur le disque ; c'est son transport
   // qui cesse.
-  "/couches.html", "/fiche.html", "/assets/couches.js?v=55",
+  "/couches.html", "/fiche.html", "/assets/couches.js?v=56",
   // La marque : complete pour l'en-tete, REDUITE pour l'onglet — a 16 pixels
   // l'emboitement (Haiti dans la boucle, la boucle dans la loupe) devient une
   // tache, et c'est une contrainte de l'emboitement, pas un reglage a trouver.

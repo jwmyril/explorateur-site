@@ -6,7 +6,7 @@
    d'où il vient ni ce qu'il ne couvre pas. */
 (function () {
   "use strict";
-  var DV = "?d=2026-09-13b";
+  var DV = "?d=2026-09-13c";
   var $ = function (s) { return document.querySelector(s); };
   var fmtN = function (v) { return (+v).toLocaleString("fr-FR"); };
 
@@ -1116,6 +1116,29 @@
     return p.length === 2 ? T(p[0]) + " " + p[1] : T(s || "");
   }
 
+  /* « COMMUNE — 1 OBJETS » dans l'infobulle de la carte (DO-4). Cette page
+     n'a pas le moteur, donc pas son accord : on lit la MÊME table que lui et
+     que les pages communales, `explorateur.unites.json`, écrite par l'atelier.
+     La légende, elle, garde le pluriel à juste titre : elle affiche une plage,
+     « 0 → 73 objets ». Sans le fichier, on garde le pluriel publié. */
+  var SINGULIERS = {};
+  try {
+    fetch("assets/i18n/explorateur.unites.json" + DV, { cache: "no-cache" })
+      .then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (j) { SINGULIERS = j || {}; })
+      .catch(function () {});
+  } catch (e) { /* pas de fetch : pluriel publié */ }
+  function uniteN(u, n) {
+    var lg = document.documentElement.lang || "fr";
+    var forme = (SINGULIERS[u] || {})[lg];
+    // Mêmes règles que `formePlurielle` dans le moteur : le français met le
+    // singulier sous 2, l'anglais et l'espagnol pour 1 exactement, le kreyòl
+    // n'accorde jamais.
+    var sing = lg === "fr" ? Math.abs(n) < 2
+             : (lg === "en" || lg === "es") ? Math.abs(n) === 1 : false;
+    return forme && sing ? forme : T(u);
+  }
+
   function TF(fr, vars) {
     var s = T(fr);
     Object.keys(vars || {}).forEach(function (k) {
@@ -1381,7 +1404,7 @@
       /* PAS DE `data-id` QUAND LA MAILLE N'A PAS DE FICHE : le clic ne mene alors nulle part, au lieu d'ouvrir une page vide. Le survol continue de lire le nom et la valeur dans le <title>. */
       return '<path class="k-com' + (doc ? "" : " k-vide") + '"' + (maille.fiche ? ' data-id="' + esc(p.atmart_geo_id) + '"' : "") + ' fill="' +
         (doc ? teinte(v, bas, max, couche.rampe, couche.courbe) : nonDocumente()) + '" d="' + chemin(f.geometry) + '"><title>' + esc(p.nom_fr) +
-        (doc ? " — " + fmtN(v) + " " + esc(T(agg.unite))
+        (doc ? " — " + fmtN(v) + " " + esc(uniteN(agg.unite, v))
              : " — " + esc(T("non documenté"))) + "</title></path>";
     }).join("");
     var leg = '<span class="k-grad k-grad-' + (couche.rampe || "alerte") + '"></span> ' +

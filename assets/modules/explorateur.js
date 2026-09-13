@@ -46,7 +46,7 @@ import { S } from "./etat.js?v=39";
   /* Version des donnees. A incrementer des qu'un fichier de data/ est
      regenere : sinon le cache du navigateur sert l'ancien fichier et
      l'interface affiche du perime sans le savoir. */
-  var DV = "?d=2026-09-13b";
+  var DV = "?d=2026-09-13c";
   var F = {
     terr: DIR + (ADMIN ? "atmart_referentiel_territoire_HT.csv"
                        : "atmart_referentiel_territoire_base_HT.csv"),
@@ -106,10 +106,15 @@ import { S } from "./etat.js?v=39";
   function fmt(v, u) {
     var n = nb(v);
     if (n === null) return esc(v) || "—";
-    var s = (Math.round(n * 100) / 100).toLocaleString(A.LOCALE[S.LANG]);
+    var arrondi = Math.round(n * 100) / 100;
+    var s = arrondi.toLocaleString(A.LOCALE[S.LANG]);
     if (u === "%") return s + " %";
     if (!u || u === "nombre") return s;
-    return s + " " + esc(A.uniteL(u));
+    /* L'unité s'accorde au chiffre AFFICHÉ, pas au chiffre brut : 0,996
+       s'affiche « 1 » et doit se lire « 1 objet ». Les exports, eux, gardent
+       l'unité du référentiel telle quelle — dans une colonne de CSV, c'est une
+       métadonnée, pas une phrase. */
+    return s + " " + esc(A.uniteN ? A.uniteN(u, arrondi) : A.uniteL(u));
   }
   /* La date suit la langue : 31/07/2026 en francais et en creole,
      7/31/2026 en anglais, 31/7/2026 en espagnol. */
@@ -994,7 +999,7 @@ import { S } from "./etat.js?v=39";
      mais l'ordre de cette liste doit continuer de se lire comme l'ordre des
      dépendances. */
   for (const m of ["i18n", "carte", "fiche", "recherche", "comparaison", "rapport"]) {
-    (await import("./explorateur-" + m + ".js?v=41")).default(A);
+    (await import("./explorateur-" + m + ".js?v=42")).default(A);
   }
 
   var liste = [F.terr, F.vals, F.dico].concat(F.orgs ? [F.orgs] : []);

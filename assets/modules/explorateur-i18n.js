@@ -229,15 +229,47 @@ export default function (A) {
     return UNITES[u + "|" + S.LANG] || T(u);
   }
 
+  /* « 1 STATIONS AUTORISÉES » (DO-4). L'unité sortait toujours au pluriel,
+     quel que soit le chiffre posé devant. La règle d'accord existait déjà
+     plus haut (`formePlurielle`) ; il manquait le singulier des unités, que
+     le référentiel ne porte pas et qu'aucune règle ne déduit — « lieux »
+     donne « lieu », « places of worship recorded » n'accorde que son premier
+     nom. Il vient de `explorateur.unites.json`, écrit par l'atelier depuis la
+     MÊME table que les pages statiques : une page communale et la fiche
+     interactive accordent le même chiffre de la même façon.
+     Sans le fichier, on garde le pluriel publié — lisible, jamais vide. */
+  var SINGULIERS = {};
+  var unitesChargees = null;
+  function chargerUnites() {
+    if (!unitesChargees) {
+      unitesChargees = fetch(BASE + "assets/i18n/explorateur.unites.json" + DV,
+                             { cache: "no-cache" })
+        .then(function (r) { return r.ok ? r.json() : {}; })
+        .then(function (j) { SINGULIERS = j || {}; })
+        .catch(function () { SINGULIERS = {}; });
+    }
+    return unitesChargees;
+  }
+  function uniteN(u, n) {
+    var publiee = uniteL(u);
+    var forme = (SINGULIERS[u] || {})[S.LANG];
+    if (!forme || n == null || isNaN(n)) return publiee;
+    return formePlurielle(n) === "one" ? forme : publiee;
+  }
+
   function chargerLangue(l) {
     S.LANG = LOCALE[l] ? l : "fr";
-    if (S.LANG === "fr") { S.DICO = {}; return Promise.resolve(); }
+    /* Le français aussi a besoin des singuliers : « 1 objets » était faux
+       dans toutes les langues qui accordent. */
+    var unites = chargerUnites();
+    if (S.LANG === "fr") { S.DICO = {}; return unites; }
     return fetch(BASE + "assets/i18n/explorateur." + S.LANG + ".json" + DV, { cache: "no-cache" })
       .then(function (r) { return r.ok ? r.json() : {}; })
       .then(function (j) { S.DICO = j || {}; })
       .catch(function () { S.DICO = {}; })   /* dictionnaire absent : on reste en francais */
+      .then(function () { return unites; })
       .then(function () { return chargerLibelles(S.LANG); });
   }
 
-  Object.assign(A, {LOCALE, BASE, substituer, T, TF, formePlurielle, TN, ordinal, deNom, LIB, UNITES, libCharge, chargerLibelles, nomT, nomSecond, libelle, uniteL, chargerLangue, retombees});
+  Object.assign(A, {LOCALE, BASE, substituer, T, TF, formePlurielle, TN, ordinal, deNom, LIB, UNITES, libCharge, chargerLibelles, nomT, nomSecond, libelle, uniteL, uniteN, chargerLangue, retombees});
 }

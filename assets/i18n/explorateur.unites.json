@@ -1,0 +1,202 @@
+{
+ "bâtiments": {
+  "en": "building",
+  "es": "edificio",
+  "fr": "bâtiment"
+ },
+ "caisses y ayant un siège ou un comptoir": {
+  "en": "credit union with a head office or a counter here",
+  "es": "caja con una sede o un mostrador aquí",
+  "fr": "caisse y ayant un siège ou un comptoir"
+ },
+ "dépendants / 100 personnes de 15-64 ans": {
+  "en": "dependant / 100 people aged 15-64",
+  "es": "dependiente / 100 personas de 15-64 años",
+  "fr": "dépendant / 100 personnes de 15-64 ans"
+ },
+ "empreintes détectées": {
+  "en": "detected footprint",
+  "es": "huella detectada",
+  "fr": "empreinte détectée"
+ },
+ "enfants par femme, 15 à 49 ans": {
+  "en": "child per woman, aged 15 to 49",
+  "es": "hijo por mujer, de 15 a 49 años",
+  "fr": "enfant par femme, 15 à 49 ans"
+ },
+ "familles sur 3": {
+  "en": "family out of 3",
+  "es": "familia de 3",
+  "fr": "famille sur 3"
+ },
+ "familles à vérifier sur 3": {
+  "en": "family to check out of 3",
+  "es": "familia por verificar de 3",
+  "fr": "famille à vérifier sur 3"
+ },
+ "fois plus cher qu'en 2005": {
+  "en": "time dearer than in 2005",
+  "es": "vez más caro que en 2005",
+  "fr": "fois plus cher qu'en 2005"
+ },
+ "gourdes la marmite": {
+  "en": "gourde per marmite",
+  "es": "gourde por marmite",
+  "fr": "gourde la marmite"
+ },
+ "habitants": {
+  "en": "inhabitant",
+  "es": "habitante",
+  "fr": "habitant"
+ },
+ "habitants / km²": {
+  "en": "inhabitant / km²",
+  "es": "habitante / km²",
+  "fr": "habitant / km²"
+ },
+ "hommes / 100 femmes": {
+  "en": "man / 100 women",
+  "es": "hombre / 100 mujeres",
+  "fr": "homme / 100 femmes"
+ },
+ "km cartographiés (tous types)": {
+  "en": "km mapped (all types)",
+  "es": "km cartografiado (todos los tipos)",
+  "fr": "km cartographié (tous types)"
+ },
+ "lieux de culte cartographiés": {
+  "en": "place of worship mapped",
+  "es": "lugar de culto cartografiado",
+  "fr": "lieu de culte cartographié"
+ },
+ "lieux de culte relevés": {
+  "en": "place of worship recorded",
+  "es": "lugar de culto registrado",
+  "fr": "lieu de culte relevé"
+ },
+ "lieux de culte vodou cartographiés": {
+  "en": "vodou place of worship mapped",
+  "es": "lugar de culto vudú cartografiado",
+  "fr": "lieu de culte vodou cartographié"
+ },
+ "localités / 100 km²": {
+  "en": "locality / 100 km²",
+  "es": "localidad / 100 km²",
+  "fr": "localité / 100 km²"
+ },
+ "millions de dollars reçus": {
+  "en": "million dollars received",
+  "es": "millón de dólares recibidos",
+  "fr": "million de dollars reçus"
+ },
+ "minutes": {
+  "en": "minute",
+  "es": "minuto",
+  "fr": "minute"
+ },
+ "minutes de route (médiane des habitants)": {
+  "en": "minute by road (median of inhabitants)",
+  "es": "minuto por carretera (mediana de habitantes)",
+  "fr": "minute de route (médiane des habitants)"
+ },
+ "objets": {
+  "en": "object",
+  "es": "objeto",
+  "fr": "objet"
+ },
+ "personnes déplacées présentes": {
+  "en": "displaced person present",
+  "es": "persona desplazada presente",
+  "fr": "personne déplacée présente"
+ },
+ "points d'indice": {
+  "en": "index point",
+  "es": "punto de índice",
+  "fr": "point d'indice"
+ },
+ "points de paiement": {
+  "en": "payout point",
+  "es": "punto de pago",
+  "fr": "point de paiement"
+ },
+ "points de service": {
+  "en": "service point",
+  "es": "punto de servicio",
+  "fr": "point de service"
+ },
+ "radios communautaires repérées": {
+  "en": "community radio station identified",
+  "es": "radio comunitaria identificada",
+  "fr": "radio communautaire repérée"
+ },
+ "stations autorisées": {
+  "en": "licensed station",
+  "es": "emisora autorizada",
+  "fr": "station autorisée"
+ },
+ "systèmes depuis 1851": {
+  "en": "system since 1851",
+  "es": "sistema desde 1851",
+  "fr": "système depuis 1851"
+ },
+ "séismes depuis 1911": {
+  "en": "earthquake since 1911",
+  "es": "sismo desde 1911",
+  "fr": "séisme depuis 1911"
+ },
+ "écoles / 10 000 jeunes": {
+  "en": "school / 10,000 young people",
+  "es": "escuela / 10 000 jóvenes",
+  "fr": "école / 10 000 jeunes"
+ },
+ "écoles cartographiées": {
+  "en": "mapped school",
+  "es": "escuela cartografiada",
+  "fr": "école cartographiée"
+ },
+ "écoles déclarées": {
+  "en": "declared school",
+  "es": "escuela declarada",
+  "fr": "école déclarée"
+ },
+ "établissements": {
+  "en": "establishment",
+  "es": "establecimiento",
+  "fr": "établissement"
+ },
+ "établissements / 10 000 hab.": {
+  "en": "facility / 10,000 inhab.",
+  "es": "establecimiento / 10 000 hab.",
+  "fr": "établissement / 10 000 hab."
+ },
+ "établissements cartographiés": {
+  "en": "mapped facility",
+  "es": "establecimiento cartografiado",
+  "fr": "établissement cartographié"
+ },
+ "établissements cartographiés (hôtels, auberges, locations)": {
+  "en": "mapped establishment (hotels, guest houses, rentals)",
+  "es": "establecimiento cartografiado (hoteles, casas de huéspedes, alquileres)",
+  "fr": "établissement cartographié (hôtels, auberges, locations)"
+ },
+ "établissements classés par le ministère": {
+  "en": "establishment classified by the ministry",
+  "es": "establecimiento clasificado por el ministerio",
+  "fr": "établissement classé par le ministère"
+ },
+ "établissements déclarés": {
+  "en": "declared facility",
+  "es": "establecimiento declarado",
+  "fr": "établissement déclaré"
+ },
+ "établissements publics déclarés": {
+  "en": "declared public facility",
+  "es": "establecimiento público declarado",
+  "fr": "établissement public déclaré"
+ },
+ "événements rapportés": {
+  "en": "reported event",
+  "es": "evento reportado",
+  "fr": "événement rapporté"
+ }
+}

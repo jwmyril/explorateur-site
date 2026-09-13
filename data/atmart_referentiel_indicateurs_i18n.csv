@@ -1,19 +1,19 @@
 ﻿indicateur_id,langue,champ,valeur
-IND-ACC-001,en,comparabilite,Comparable if the network and the method do not change.
+IND-ACC-001,en,comparabilite,"Comparable between communes for the same extract of the road network; over time, only if the network and the method do not change."
 IND-ACC-001,en,definition,Median travel time from inhabited localities to the nearest health facility.
 IND-ACC-001,en,limites_connues,The OSM network is under ODbL: incompatible with a proprietary Atmart licence without share-alike.
 IND-ACC-001,en,methode_calcul,"Isochrone computation on the road network from each locality, then a population-weighted median."
 IND-ACC-001,en,nom,Travel time to the nearest health centre
 IND-ACC-001,en,sens_interpretation,"Low = accessible service. This is the hardest indicator to reproduce, hence the most differentiating."
 IND-ACC-001,en,unite,minutes
-IND-ACC-001,es,comparabilite,Comparable si la red y el método no cambian.
+IND-ACC-001,es,comparabilite,"Comparable entre comunas para un mismo extracto de la red vial; en el tiempo, solo si la red y el método no cambian."
 IND-ACC-001,es,definition,Tiempo de trayecto mediano desde las localidades habitadas hasta el establecimiento de salud más cercano.
 IND-ACC-001,es,limites_connues,La red OSM está bajo ODbL: incompatible con una licencia Atmart propietaria sin compartir-igual.
 IND-ACC-001,es,methode_calcul,"Cálculo de isócronas sobre la red viaria desde cada localidad, y después mediana ponderada por la población."
 IND-ACC-001,es,nom,Tiempo de acceso al centro de salud más cercano
 IND-ACC-001,es,sens_interpretation,Bajo = servicio accesible. Es el indicador más difícil de reproducir y por tanto el más diferenciador.
 IND-ACC-001,es,unite,minutos
-IND-ACC-001,ht,comparabilite,Konparab si rezo a ak metòd la pa chanje.
+IND-ACC-001,ht,comparabilite,"Nou ka konpare komin yo pou menm ekstrè rezo wout la ; pou konpare ak lòt ane, fòk rezo a ak metòd la pa chanje."
 IND-ACC-001,ht,definition,Tan medyàn pou soti nan kote moun rete yo rive nan etablisman sante ki pi pre a.
 IND-ACC-001,ht,limites_connues,Rezo OSM la anba lisans ODbL : li pa konpatib ak yon lisans Atmart pwopriyetè san pataj alidantik.
 IND-ACC-001,ht,methode_calcul,"Kalkil izokwòn sou rezo wout la depi chak lokalite, apre sa medyàn pondere pa popilasyon an."
@@ -97,7 +97,7 @@ IND-AGR-001,es,methode_calcul,Parte de los píxeles de WorldCover clasificados c
 IND-AGR-001,es,nom,Parte del territorio en cultivos
 IND-AGR-001,es,sens_interpretation,Alto = más tierras cultivadas
 IND-AGR-001,es,unite,% de la superficie comunal
-IND-AGR-001,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-AGR-001,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
 IND-AGR-001,ht,definition,Pati nan sifas komin nan satelit la klase kòm tè yo travay.
 IND-AGR-001,ht,limites_connues,"SATELIT LA WÈ YON KOUVÈTI, SE PA YON EKSPLWATASYON : li pa di ni sa yo plante, ni kiyès ki plante l, ni si rekòt la fèt. Yon pasèl ki an repo lè imaj la pran soti nan konte a. JADEN KREYÒL YO, ki mele pyebwa ak manje, souvan klase kòm pyebwa oswa touf olye ke jaden : endikatè sa a bese agrikilti ayisyen an pa estrikti, e fòk nou di sa anvan nou konpare de komin."
 IND-AGR-001,ht,methode_calcul,Pati piksèl WorldCover yo klase « tè kiltive » nan kontou komin nan.
@@ -118,7 +118,7 @@ IND-BAT-001,es,methode_calcul,Recuento de huellas de Open Buildings cuyo centroi
 IND-BAT-001,es,nom,Edificios detectados
 IND-BAT-001,es,sens_interpretation,Alto = más construcciones detectadas
 IND-BAT-001,es,unite,edificios
-IND-BAT-001,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-BAT-001,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
 IND-BAT-001,ht,definition,Konbyen anprent bilding satelit la detekte nan komin nan.
 IND-BAT-001,ht,limites_connues,"YON BILDING YO DETEKTE SE PA YON KAY : depo, lekòl, hanga ak abri konte menm jan, e de kay kole ka fè yon sèl. DETEKSYON AN DEPANN DE IMAJ LA : anba gwo pyebwa, yon tèt kay an pay pa parèt — komin ki gen anpil pyebwa konte mwens, e se pa paske gen mwens konstriksyon."
 IND-BAT-001,ht,methode_calcul,Konte anprent Open Buildings yo ki gen sant yo nan kontou komin nan.
@@ -139,7 +139,7 @@ IND-BAT-002,es,methode_calcul,Superficie total de las huellas dividida por el n�
 IND-BAT-002,es,nom,Superficie media de un edificio
 IND-BAT-002,es,sens_interpretation,"Neutro — dice el tipo de edificación, no su calidad"
 IND-BAT-002,es,unite,m² por edificio
-IND-BAT-002,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-BAT-002,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
 IND-BAT-002,ht,definition,Sifas atè mwayèn anprent yo detekte nan komin nan.
 IND-BAT-002,ht,limites_connues,"CHIF SA A PA DI ANYEN SOU KONFÒ NI SOU SOLIDITE. Yon mwayèn wo ka soti nan kèk depo menm jan ak nan gwo kay ; yon mwayèn ba, nan yon abita sere ak ti pasèl. Li sèvi pou distenge FÒM bilding ant komin, pa janm pou klase yo."
 IND-BAT-002,ht,methode_calcul,Sifas total anprent yo divize pa kantite anprent nan komin nan.
@@ -202,7 +202,7 @@ IND-EAU-001,es,methode_calcul,Parte de los píxeles de Global Surface Water clas
 IND-EAU-001,es,nom,Parte del territorio con agua permanente
 IND-EAU-001,es,sens_interpretation,Neutro — ni bueno ni malo
 IND-EAU-001,es,unite,% de la superficie comunal
-IND-EAU-001,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-EAU-001,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
 IND-EAU-001,ht,definition,Pati nan sifas komin nan ki kouvri ak dlo ki la tout ane a.
 IND-EAU-001,ht,limites_connues,"DLO SOU SIFAS LA SE PA DLO POU BWÈ, e se pa aksè ak dlo non plis : yon lak sale konte, yon nap anba tè pa konte. PATI SEZONYÈ A PA KONTE ISIT — souvan li pi gwo, e se li ki fè inondasyon. Yon chif wo ka vle di yon resous kou yon danje, e endikatè sa a pa chwazi ant de yo."
 IND-EAU-001,ht,methode_calcul,Pati piksèl Global Surface Water yo klase kòm dlo pèmanan nan kontou komin nan.
@@ -1042,7 +1042,7 @@ IND-SAN-002,es,methode_calcul,Establecimientos con estatus «Público» ÷ total
 IND-SAN-002,es,nom,Proporción de establecimientos de salud públicos
 IND-SAN-002,es,sens_interpretation,"Neutro: describe la estructura de la oferta, no su calidad."
 IND-SAN-002,es,unite,%
-IND-SAN-002,ht,comparabilite,Konparab ant komin ki nan menm ane referans.
+IND-SAN-002,ht,comparabilite,Konparab ant komin ki gen menm ane referans lan.
 IND-SAN-002,ht,definition,Pòsyon etablisman sante ki gen estati leta.
 IND-SAN-002,ht,limites_connues,Estati « Mikst » pa konte kòm leta.
 IND-SAN-002,ht,methode_calcul,Etablisman ki gen estati « Public » ÷ total ki resanse × 100.

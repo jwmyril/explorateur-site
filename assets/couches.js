@@ -6,7 +6,7 @@
    d'où il vient ni ce qu'il ne couvre pas. */
 (function () {
   "use strict";
-  var DV = "?d=2026-09-13c";
+  var DV = "?d=2026-09-13d";
   var $ = function (s) { return document.querySelector(s); };
   var fmtN = function (v) { return (+v).toLocaleString("fr-FR"); };
 
@@ -324,7 +324,7 @@
                  unite: "stations autorisées" };
       },
       source: "CONATEL — liste des stations de radiodiffusion autorisées 2023-2024 ; rattachement communal par Atmart, passeport PSP-069",
-      limite: "CE SONT LES STATIONS AUTORISÉES, pas toutes celles qui émettent : une commune sans station n'est pas une commune sans radio, c'est une commune sans station licenciée. 807 stations rattachées à 80 communes — 665 radios FM, 8 radios AM, 134 télévisions. 13 stations restent hors rattachement parce que le document nomme une localité et non une commune (Fonds-Parisien, Liancourt), une île qui en compte deux (La Gonâve) ou deux communes à la fois (« GONAIVES/ST MARC »). LE DOCUMENT SE CONTREDIT EN TROIS ENDROITS : ses en-têtes annoncent 36 radios aux Nippes, 20 télévisions au Nord et 18 au Sud quand ses tableaux en contiennent 35, 19 et 17 — et son propre récapitulatif final donne 19 pour le Nord, contredisant son en-tête. Nous publions le contenu des tableaux." },
+      limite: "CE SONT LES STATIONS AUTORISÉES, pas toutes celles qui émettent : une commune sans station n'est pas une commune sans radio, c'est une commune sans station licenciée. 793 stations rattachées à 80 communes — 654 radios FM, 7 radios AM, 132 télévisions. 13 stations restent hors rattachement parce que le document nomme une localité et non une commune (Fonds-Parisien, Liancourt), une île qui en compte deux (La Gonâve) ou deux communes à la fois (« GONAIVES/ST MARC »). LE DOCUMENT SE CONTREDIT EN TROIS ENDROITS : ses en-têtes annoncent 36 radios aux Nippes, 20 télévisions au Nord et 18 au Sud quand ses tableaux en contiennent 35, 19 et 17 — et son propre récapitulatif final donne 19 pour le Nord, contredisant son en-tête. Nous publions le contenu des tableaux." },
     { id: "medias_communautaires", nom: "Radios communautaires repérées (CONATEL)", type: "choroplethe",
       csv: "data/atmart_medias_communes_HT.csv", pcode: "pcode_commune",
       courbe: "lineaire",

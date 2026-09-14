@@ -1,15 +1,18 @@
-/* Offres professionnelles de l'Explorateur */
+/* Offres professionnelles de l'Explorateur
+   Les couleurs lisent les RÔLES du thème (style.css), jamais les alias
+   hérités : --navy vaut désormais le fond de page, et les titres et les
+   prix des offres s'écrivaient en blanc sur des cartes blanches (14/09/2026). */
 .sv-offres{background:linear-gradient(180deg,rgba(9,139,132,.07),transparent)}
 .sv-offres-grille{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin-top:1.75rem}
-.sv-offre{display:flex;flex-direction:column;padding:1.5rem;border:1px solid var(--border,#d6e1e5);border-radius:18px;background:var(--card,#fff);box-shadow:0 12px 32px rgba(14,34,64,.07)}
-.sv-offre h3{margin:.15rem 0 .65rem;color:var(--navy,#0e2240)}
-.sv-offre-type{margin:0;color:#087f78;font-size:.78rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
-.sv-offre-prix{display:flex;align-items:baseline;gap:.65rem;margin:1rem 0 .65rem;color:var(--navy,#0e2240)}
+.sv-offre{display:flex;flex-direction:column;padding:1.5rem;border:1px solid var(--border);border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:var(--ombre)}
+.sv-offre h3{margin:.15rem 0 .65rem;color:var(--ink)}
+.sv-offre-type{margin:0;color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.sv-offre-prix{display:flex;align-items:baseline;gap:.65rem;margin:1rem 0 .65rem;color:var(--ink)}
 .sv-offre-prix strong{font-size:1.55rem}
-.sv-offre-prix span{color:var(--muted,#64748b);font-size:.86rem}
+.sv-offre-prix span{color:var(--ink-dim);font-size:.86rem}
 .sv-offre ul{margin:.25rem 0 1.25rem;padding-left:1.2rem}
 .sv-offre li{margin:.35rem 0}
 .sv-offre-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:auto}
 .sv-offre-actions .btn{flex:1 1 9rem;text-align:center}
-.sv-offres-note{margin:1.5rem 0 0;padding:1rem 1.15rem;border-left:4px solid #078c83;background:rgba(9,139,132,.08)}
+.sv-offres-note{margin:1.5rem 0 0;padding:1rem 1.15rem;border-left:4px solid var(--accent);background:rgba(9,139,132,.08);color:var(--ink)}
 @media(max-width:760px){.sv-offres-grille{grid-template-columns:1fr}.sv-offre{padding:1.15rem}}

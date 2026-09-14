@@ -22,6 +22,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <meta name="theme-color" content="#0e2240" />
   <link rel="stylesheet" href="../assets/style.css?v=36" />
   <link rel="stylesheet" href="../assets/data.css?v=52" />
+  <link rel="stylesheet" href="../assets/services.css?v=2" />
   <script>
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
@@ -76,8 +77,85 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <p class="lead" style="max-width:60ch" data-i18n="sv.lead">The Haiti Explorer is free, account-free and tracker-free, and will stay that way. What is charged here is not access to the data: it is the work that makes it reliable, documented and usable — and the guarantee that it will still exist next year.</p>
 
     <div class="sv-promesse">
-      <p data-i18n="sv.promesse"><b>A rule that is not negotiable.</b> No engagement makes public data less accessible. What one client funds benefits everyone: a gap filled for them is filled for all, and published the same day.</p>
+      <p data-i18n-html="sv.promesse"><b>A rule that is not negotiable.</b> No engagement makes public data less accessible. What one client funds benefits everyone: a gap filled for them is filled for all, and published the same day.</p>
     </div>
+  </div>
+</section>
+
+<!-- ============================================================ OFFRES EN LIGNE -->
+<section id="services-en-ligne" class="sv-offres">
+  <div class="container">
+    <p class="sv-pilier" data-i18n="sv.ol_sur">Online services</p>
+    <h2 data-i18n="sv.ol_h">Four services, clear prices</h2>
+    <p class="lead" data-i18n="sv.ol_lead">The Explorer's public data stays free. You pay only for the analysis, the tailoring, the support and the professional deliverables.</p>
+
+    <div class="sv-offres-grille">
+      <article class="sv-offre">
+        <p class="sv-offre-type" data-i18n="sv.ol_t_rapport">Report</p>
+        <h3 data-i18n="sv.ol_terr_h">Atmart Territorial Report</h3>
+        <p data-i18n="sv.ol_terr_p">A portrait of the territory in its context — its gaps, its priorities — with recommendations you can act on directly.</p>
+        <p class="sv-offre-prix"><strong>149 USD</strong><span data-i18n="sv.ol_unique">one-time payment</span></p>
+        <ul>
+          <li data-i18n="sv.ol_terr_1">Executive summary and territorial portrait</li>
+          <li data-i18n="sv.ol_terr_2">Priority matrix</li>
+          <li data-i18n="sv.ol_terr_3">Sources, limits and tables used</li>
+        </ul>
+        <div class="sv-offre-actions">
+          <a class="btn btn-primary" href="https://payhip.com/b/GuWHr" target="_blank" rel="noopener" data-i18n="sv.ol_commander">Order</a>
+          <a class="btn btn-outline" href="../assets/rapports/rapport-territorial-atmart.pdf" target="_blank" data-i18n="sv.ol_pdf">View the PDF sheet</a>
+        </div>
+      </article>
+
+      <article class="sv-offre">
+        <p class="sv-offre-type" data-i18n="sv.ol_t_audit">Audit</p>
+        <h3 data-i18n="sv.ol_diag_h">Atmart Diagnostic Report</h3>
+        <p data-i18n="sv.ol_diag_p">A diagnosis of the completeness, consistency and risks in your data files and processes.</p>
+        <p class="sv-offre-prix"><strong>249 USD</strong><span data-i18n="sv.ol_unique">one-time payment</span></p>
+        <ul>
+          <li data-i18n="sv.ol_diag_1">Quality scorecard</li>
+          <li data-i18n="sv.ol_diag_2">Register of proven anomalies</li>
+          <li data-i18n="sv.ol_diag_3">Prioritised correction plan</li>
+        </ul>
+        <div class="sv-offre-actions">
+          <a class="btn btn-primary" href="https://payhip.com/b/feFy7" target="_blank" rel="noopener" data-i18n="sv.ol_commander">Order</a>
+          <a class="btn btn-outline" href="../assets/rapports/rapport-diagnostic-atmart.pdf" target="_blank" data-i18n="sv.ol_pdf">View the PDF sheet</a>
+        </div>
+      </article>
+
+      <article class="sv-offre">
+        <p class="sv-offre-type" data-i18n="sv.ol_t_equipe">Team subscription</p>
+        <h3 data-i18n="sv.ol_scen_h">Atmart Scenario Simulator</h3>
+        <p data-i18n="sv.ol_scen_p">Compare transparent assumptions — their results, their costs and their uncertainties — before you decide.</p>
+        <p class="sv-offre-prix"><strong data-i18n="sv.ol_scen_prix">99 USD/month</strong><span data-i18n="sv.ol_scen_u">cancel any month</span></p>
+        <ul>
+          <li data-i18n="sv.ol_scen_1">One active use case per month</li>
+          <li data-i18n="sv.ol_scen_2">Table of assumptions and sensitivities</li>
+          <li data-i18n="sv.ol_scen_3">Exports and a monthly review</li>
+        </ul>
+        <div class="sv-offre-actions">
+          <a class="btn btn-primary" href="https://payhip.com/b/k9usC" target="_blank" rel="noopener" data-i18n="sv.ol_abonner">Subscribe</a>
+          <a class="btn btn-outline" href="../assets/rapports/rapport-scenarios-atmart.pdf" target="_blank" data-i18n="sv.ol_pdf">View the PDF sheet</a>
+        </div>
+      </article>
+
+      <article class="sv-offre">
+        <p class="sv-offre-type" data-i18n="sv.ol_t_inst">Institutional subscription</p>
+        <h3 data-i18n="sv.ol_inst_h">Atmart Institutional Instance</h3>
+        <p data-i18n="sv.ol_inst_p">An Explorer environment configured for your users, your internal data and your governance rules.</p>
+        <p class="sv-offre-prix"><strong data-i18n="sv.ol_inst_prix">249 USD/month</strong><span data-i18n="sv.ol_inst_u">standard scope</span></p>
+        <ul>
+          <li data-i18n="sv.ol_inst_1">Dedicated instance and visual identity</li>
+          <li data-i18n="sv.ol_inst_2">Accounts, roles and controlled access</li>
+          <li data-i18n="sv.ol_inst_3">Documentation and priority support</li>
+        </ul>
+        <div class="sv-offre-actions">
+          <a class="btn btn-primary" href="https://payhip.com/b/iU18s" target="_blank" rel="noopener" data-i18n="sv.ol_abonner">Subscribe</a>
+          <a class="btn btn-outline" href="../assets/rapports/rapport-instance-institutionnelle-atmart.pdf" target="_blank" data-i18n="sv.ol_pdf">View the PDF sheet</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="sv-offres-note" data-i18n-html="sv.ol_note"><strong>Atmart principle:</strong> buying a service creates no exclusive access to public data. The payment covers the professional work delivered around that data.</p>
   </div>
 </section>
 
@@ -93,20 +171,20 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <article class="sv-c">
         <h3 data-i18n="sv.parr_h">Sponsorships</h3>
         <p data-i18n="sv.parr_p">Open a dataset, adopt a vintage, fill a gap, maintain a layer. The sponsor is named on the dataset sheet, with the date — and gains no exclusivity: the data is public from the day it is published.</p>
-        <p class="sv-quoi" data-i18n="sv.parr_q"><b>What makes this measurable:</b> the map « Where our information is weakest » names the communes where a sponsorship truly changes something. Today, 8 communes have two data families out of three in disagreement or unverifiable.</p>
+        <p class="sv-quoi" data-i18n-html="sv.parr_q"><b>What makes this measurable:</b> the map « Where our information is weakest » names the communes where a sponsorship truly changes something. Today, 8 communes have two data families out of three in disagreement or unverifiable.</p>
         <a class="btn btn-outline" href="donnees-parrainage.html" data-i18n="sv.parr_a">See sponsorable datasets</a>
       </article>
 
       <article class="sv-c">
         <h3 data-i18n="sv.presta_h">Engagements</h3>
         <p data-i18n="sv.presta_p">Territorial diagnosis, quality assurance, reference harmonisation, accessibility, risk analysis, siting studies, dashboards.</p>
-        <p class="sv-quoi" data-i18n="sv.presta_q"><b>What sets this work apart:</b> every deliverable states what it does not allow you to conclude. A report with no « limits » section is not a short report, it is an incomplete one.</p>
+        <p class="sv-quoi" data-i18n-html="sv.presta_q"><b>What sets this work apart:</b> every deliverable states what it does not allow you to conclude. A report with no « limits » section is not a short report, it is an incomplete one.</p>
       </article>
 
       <article class="sv-c sv-phare">
         <h3 data-i18n="sv.verif_h">Atmart Verified</h3>
         <p data-i18n="sv.verif_p">Audit of a dataset: provenance, quality, geocoding, internal consistency, consent, licence and documentation. The deliverable is a sheet following « Datasheets for Datasets » (Gebru et al.), Aether version, adapted to territorial data.</p>
-        <p class="sv-quoi" data-i18n="sv.verif_q"><b>What exists nowhere else:</b> completeness is <em>recounted from the file</em> at every generation, never copied from a note. And four sections are added to the original model — measured completeness, agreement between sources, legal passport, and « what this dataset does not allow you to conclude », the one no producer fills in spontaneously.</p>
+        <p class="sv-quoi" data-i18n-html="sv.verif_q"><b>What exists nowhere else:</b> completeness is <em>recounted from the file</em> at every generation, never copied from a note. And four sections are added to the original model — measured completeness, agreement between sources, legal passport, and « what this dataset does not allow you to conclude », the one no producer fills in spontaneously.</p>
         <p class="sv-liens"><a class="btn btn-outline" href="donnees-fiches.html" data-i18n="sv.verif_voir">Read six sheets already produced</a> <a class="btn btn-primary" href="mailto:sales@atmart.ltd?subject=Atmart%20V%C3%A9rifi%C3%A9" data-i18n="sv.verif_a">Have a dataset audited</a></p>
       </article>
 
@@ -122,7 +200,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 
       <article class="sv-c">
         <h3 data-i18n="sv.acti_h">Rapid activation</h3>
-        <p data-i18n="sv.acti_p">Annual preparation before the cyclone season, and post-disaster response. Every activation produces a <b>public-interest report</b>: what one actor funds in an emergency stays readable by all.</p>
+        <p data-i18n-html="sv.acti_p">Annual preparation before the cyclone season, and post-disaster response. Every activation produces a <b>public-interest report</b>: what one actor funds in an emergency stays readable by all.</p>
       </article>
 
     </div>
@@ -310,11 +388,11 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       </li>
       <li>
         <h3 data-i18n="sv.infra_h">Infrastructure programmes</h3>
-        <p data-i18n="sv.infra_p">Apply <b>only after eligibility is confirmed</b>, and with a vendor exit plan written in advance. A dependency taken on without an exit is a permanent dependency.</p>
+        <p data-i18n-html="sv.infra_p">Apply <b>only after eligibility is confirmed</b>, and with a vendor exit plan written in advance. A dependency taken on without an exit is a permanent dependency.</p>
       </li>
       <li>
         <h3 data-i18n="sv.carib_h">Caribbean replication</h3>
-        <p data-i18n="sv.carib_p">To be assessed <b>after</b> the Haitian core proves sustainable. Expanding before being sustainable multiplies a fragility.</p>
+        <p data-i18n-html="sv.carib_p">To be assessed <b>after</b> the Haitian core proves sustainable. Expanding before being sustainable multiplies a fragility.</p>
       </li>
     </ol>
   </div>
@@ -398,7 +476,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <script src="../assets/formulaire.js?v=2"></script>
 <script src="../assets/mesure.js?v=4" defer></script>
 <script src="../assets/ux.js?v=2" defer></script>
-<script src="../assets/i18n.js?v=31"></script>
+<script src="../assets/i18n.js?v=32"></script>
 <script src="../assets/theme.js?v=3" defer></script>
 </body>
 </html>

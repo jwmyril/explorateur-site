@@ -99,7 +99,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <li><a href="/couches.html" data-i18n="nv.cartes_h">Mapas temáticos</a></li>
       <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Servicios y alianzas</span></span>
         <ul class="nav-sub">
-          <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnósticos y servicios <small>precio bajo petición</small></a></li>
+          <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnósticos y servicios <small>precios publicados o presupuesto</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Soluciones y licencias <small>empresas, ONG, administraciones</small></a></li>
           <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Patrocinar un conjunto de datos <small>instituciones y empresas</small></a></li>
         </ul>
@@ -308,7 +308,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   window.ATM_EXPLORATEUR = Object.assign({ dir: "../data/", base: "../" }, {});
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
-<script src="../assets/i18n.js?v=33"></script>
+<script src="../assets/i18n.js?v=34"></script>
 <script type="module" src="../assets/modules/explorateur.js?v=55"></script>
 <script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
 if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>

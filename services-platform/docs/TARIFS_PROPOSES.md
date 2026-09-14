@@ -1,5 +1,25 @@
 # Tarifs proposés pour les services Explorateur Haïti
 
+## Tarifs publiés — ce qui fait foi (14/09/2026)
+
+La grille ci-dessous est la **proposition de départ**, conservée telle quelle.
+Les prix réellement affichés sur `donnees-services.html`, confirmés par Atmart
+le 14/09/2026, sont ceux-ci ; en cas d'écart, ce tableau l'emporte.
+
+| Service publié | Prix | Unité | Commande |
+|---|---:|---|---|
+| Rapport territorial Atmart | 149 USD | paiement unique | Payhip |
+| Rapport diagnostic Atmart | 249 USD | paiement unique | Payhip |
+| Simulateur de scénarios Atmart | 99 USD | par mois | Payhip |
+| Instance institutionnelle Atmart | 249 USD | par mois | Payhip |
+| Atmart Vérifié | 199 USD | par jeu standard | courriel (sales@atmart.ltd) |
+| Cartographie sur mesure Atmart | 129 USD | par carte standard | courriel |
+| Harmonisation de référentiels Atmart | 299 USD | périmètre standard | courriel |
+| Formation et accompagnement Atmart | 249 USD | jusqu'à 10 participants | courriel |
+| Activation rapide Atmart | 499 USD | par activation standard | courriel |
+
+Les diagnostics territoriaux sur mesure restent chiffrés au devis.
+
 ## Canal de vente recommandé
 
 Payhip est le canal principal pour les quatre offres. Le forfait Payhip Free convient au pilote; sa commission doit être suivie séparément des frais du processeur de paiement. Stripe direct reste une solution de repli technique.
@@ -33,7 +53,7 @@ Les prix portent sur la personnalisation, l'automatisation, l'espace privé, le 
 | Aperçu | Gratuit | Audit limité, sans conservation |
 | Audit complet | 249 USD par fichier | Profilage, anomalies, rapport et table de corrections |
 | Audit avec validation humaine | À partir de 750 USD | Revue analyste, réunion et plan de correction |
-| Atmart Vérifié | À partir de 1 500 USD | Protocole formel, corrections contrôlées et attestation limitée dans le temps |
+| Atmart Vérifié | À partir de 1 500 USD — *non retenu : publié à 199 USD par jeu standard le 14/09/2026, sans corrections ni attestation* | Protocole formel, corrections contrôlées et attestation limitée dans le temps |
 
 ## 4 Atmart Instances
 

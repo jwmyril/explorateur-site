@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v140";
+const CACHE = "explorateur-v142";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -28,19 +28,17 @@ const CORE = [
   // (« le bouton Rapport répond hors connexion ») qu'aucun bouton ne
   // réclamait. Le fichier reste sur le disque ; c'est son transport
   // qui cesse.
-  "/couches.html", "/fiche.html", "/assets/couches.js?v=59",
-  // La marque : complete pour l'en-tete, REDUITE pour l'onglet — a 16 pixels
-  // l'emboitement (Haiti dans la boucle, la boucle dans la loupe) devient une
-  // tache, et c'est une contrainte de l'emboitement, pas un reglage a trouver.
-  "/assets/brand/explorateur-mark.svg",
+  "/fiche.html",
+  // PF-5 (16/09/2026) : 266 Ko imposes au premier visiteur, dont 191 Ko
+  // d'icones d'application et 178 Ko pour la marque complete. La marque
+  // complete n'est plus affichee nulle part (l'en-tete porte la version
+  // reduite depuis le 14/09) ; les icones, c'est le NAVIGATEUR qui les
+  // telecharge au moment ou l'on installe l'application — les precacher
+  // faisait payer l'installation a ceux qui ne la demandent pas. La page de
+  // cartes, elle, attend le prechargement (APRES) au lieu de l'installation.
   "/assets/brand/explorateur-mark-mini.svg",
-  "/assets/pwa.js?v=2",
+  "/assets/pwa.js?v=3",
   "/assets/brand/explorateur.ico", "/assets/brand/explorateur-32.png",
-  "/assets/brand/apple-touch-icon.png",
-  // Icones de l'application installee : Android et Chrome exigent 192 et 512,
-  // et les versions « maskable » evitent que le lanceur rogne le logo.
-  "/assets/brand/icone-192.png", "/assets/brand/icone-512.png",
-  "/assets/brand/icone-192-maskable.png", "/assets/brand/icone-512-maskable.png",
   // L'index des 140 communes de l'edition legere : 10 Ko qui rendent la
   // RECHERCHE possible sans reseau. Les fiches, elles, se mettent en cache a
   // mesure qu'on les ouvre — precacher les 140 (700 Ko) rallongerait
@@ -55,9 +53,16 @@ const DATA = [
   // precache pour son poids suppose, motif qui ne tenait plus une fois
   // mesure. Hors connexion, une fiche sans pyramide est une fiche amputee.
   "/data/atmart_pyramide_ages_HT.csv",
-  "/data/atmart_prix_marches_HT.csv",
+  // PF-3 (16/09/2026) : les prix de marche (153 Ko compresses) sortent du
+  // prechargement. La page les annonce « a la demande » ; les prendre d'office
+  // sur un forfait paye au megaoctet contredisait ce qu'elle dit. Ils entrent
+  // au cache a leur premiere lecture, comme tout le reste.
   "/data/haiti_contour_simplifie.geojson",
-].map((u) => u + DV);
+].map((u) => u + DV).concat([
+  // La page de cartes : utile hors ligne a qui l'a deja voulue, pas a
+  // l'installation d'un visiteur qui ne l'a pas ouverte.
+  "/couches.html", "/assets/couches.js?v=59",
+]);
 
 /* A L'INSTALLATION, ON NE PREND QUE LE NOYAU.
    Mesure du 16/08 sur une premiere visite : DOM pret a 8,0 s et chargement
@@ -80,8 +85,12 @@ let donneesFaites = false;
 self.addEventListener("message", (e) => {
   if (!e.data || e.data.type !== "precharger" || donneesFaites) return;
   donneesFaites = true;
+  // PF-6 : l'edition legere DANS LA LANGUE du lecteur, pour que le filet
+  // hors connexion ne le renvoie pas vers la version francaise.
+  const lg = /^(ht|en|es)$/.test(e.data.langue || "") ? e.data.langue : null;
+  const liste = lg ? DATA.concat(["/" + lg + "/fiche.html"]) : DATA;
   e.waitUntil(caches.open(CACHE).then((c) =>
-    Promise.all(DATA.map((u) => c.add(u).catch(() => null)))
+    Promise.all(liste.map((u) => c.add(u).catch(() => null)))
   ));
 });
 
@@ -96,11 +105,19 @@ self.addEventListener("activate", (e) => {
    lecteur peut CHERCHER et LIRE sa commune sans reseau. On la sert quand la
    navigation visait une fiche ; la page d'excuse reste pour le reste, et
    elle-meme pointe vers l'edition legere. */
+/* PF-6 (16/09/2026) : le filet etait monolingue. /ht/… tombait sur l'edition
+   legere et la page d'excuse FRANCAISES. Il reconnait maintenant le prefixe
+   de langue : edition legere de la langue si elle est gardee, sinon la
+   francaise ; la page d'excuse, unique, prend la langue de l'adresse. */
 function filet(url, requete) {
-  const versUneFiche = /^\/(index\.html)?$/.test(url.pathname) ||
-                       url.pathname.startsWith("/fiche") ||
+  const m = url.pathname.match(/^\/(ht|en|es)(\/.*)$/);
+  const lg = m ? m[1] : null;
+  const chemin = m ? m[2] : url.pathname;
+  const versUneFiche = /^\/(index\.html)?$/.test(chemin) ||
+                       chemin.startsWith("/fiche") ||
                        url.searchParams.has("id") || url.searchParams.has("c");
   return caches.match(requete)
+    .then((c) => c || (versUneFiche && lg ? caches.match("/" + lg + "/fiche.html") : null))
     .then((c) => c || (versUneFiche ? caches.match("/fiche.html") : null))
     .then((c) => c || caches.match("/hors-connexion.html"));
 }

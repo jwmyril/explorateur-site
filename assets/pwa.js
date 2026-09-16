@@ -118,8 +118,18 @@
      gamme, le rendu n'est pas fini quand l'événement part. */
   window.addEventListener("load", function () {
     setTimeout(function () {
+      /* PF-3 (16/09/2026) : le prechargement partait sans regarder la
+         connexion. Un lecteur qui a demande a economiser ses donnees, ou dont
+         la liaison est en 2G, ne paie pas d'avance des visites qu'il ne fera
+         peut-etre pas : chaque fichier entrera au cache a sa premiere
+         lecture, comme pour tout le monde. */
+      var cx = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      if (cx && (cx.saveData || /(^|-)2g$/.test(cx.effectiveType || ""))) return;
       if (navigator.serviceWorker && navigator.serviceWorker.controller) {
-        navigator.serviceWorker.controller.postMessage({ type: "precharger" });
+        navigator.serviceWorker.controller.postMessage({
+          type: "precharger",
+          langue: (document.documentElement.lang || "fr").slice(0, 2)
+        });
       }
     }, 2000);
   });

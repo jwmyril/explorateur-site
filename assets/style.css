@@ -284,7 +284,7 @@ section { padding: 3.5rem 0; }
   background: var(--navy); border: 1px solid var(--border); border-radius: 999px;
   padding: 0.65rem 1.2rem; color: var(--ink); min-width: 280px; font-family: var(--font-body);
 }
-.newsletter-form input:focus { outline: none; border-color: var(--teal); }
+.newsletter-form input:focus { border-color: var(--teal); }
 
 /* ===== Footer ===== */
 footer { border-top: 1px solid var(--border); padding: 2.5rem 0; margin-top: 2rem; }
@@ -306,7 +306,7 @@ footer a, footer p { color: var(--ink-dim); font-size: 0.88rem; }
   flex: 1; background: transparent; border: none; padding: 0.9rem 1.4rem;
   color: var(--ink); font-size: 1rem; font-family: var(--font-body);
 }
-.search-form input:focus { outline: none; }
+.search-form input:focus:not(:focus-visible) { outline: none; }
 .search-form button {
   background: var(--teal); color: var(--navy); border: none; padding: 0 1.6rem;
   font-weight: 700; font-size: 1rem; cursor: pointer; font-family: var(--font-body);
@@ -664,7 +664,7 @@ figure.tuto-fig figcaption { padding: 0.7rem 1rem; font-size: 0.85rem; color: va
 .acp-typing{opacity:.6;font-size:1.2rem;letter-spacing:.15em}
 .acp-form{display:flex;gap:.5rem;padding:.7rem;border-top:1px solid var(--border)}
 .acp-input{flex:1;background:var(--navy);border:1px solid var(--border);border-radius:10px;color:var(--ink);padding:.55rem .7rem;font-size:.92rem;font-family:inherit}
-.acp-input:focus{outline:none;border-color:var(--teal)}
+.acp-input:focus{border-color:var(--teal)}
 .acp-send{background:var(--teal);color:var(--navy);border:none;border-radius:10px;padding:0 1rem;font-weight:600;cursor:pointer}
 .acp-send:hover{background:var(--amber)}
 .acp-disc{padding:.4rem 1rem .7rem;color:var(--ink-dim);font-size:.7rem;text-align:center}
@@ -924,5 +924,10 @@ footer li a { display: inline-block; padding: 0.3rem 0; min-height: 24px; }
 .lien-evitement { position: absolute; left: -9999px; top: 0; z-index: 999;
   background: var(--ink); color: var(--fond); padding: 0.6rem 1rem; border-radius: 0 0 8px 0; }
 .lien-evitement:focus { left: 0; }
+/* AC-10 (14/09/2026) : un tableau qui défile doit pouvoir être atteint et
+   défilé au clavier. ux.js rend focalisables les conteneurs qui débordent
+   réellement ; cet anneau les montre. */
+.x-tabwrap:focus-visible, .r-tabwrap:focus-visible, .d-tab-wrap:focus-visible,
+.d-preview:focus-visible, .x-tableau:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 /* Sous-menu ouvert au clavier (focus dans le groupe) — même rendu qu'au survol. */
 .nav-grp.nav-ouvert .nav-sub { display: block; }

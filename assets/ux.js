@@ -63,4 +63,53 @@
       }, 0);
     });
   });
+
+  /* Les tableaux qui défilent (AC-10, 14/09/2026). Un conteneur à
+     overflow-x ne se défile pas au clavier s'il ne peut pas recevoir le
+     focus — c'est le cas des WebView Android anciennes et de Firefox, le parc
+     visé. Seuls les conteneurs qui DÉBORDENT deviennent focalisables : un
+     arrêt de tabulation sur un tableau qui tient dans l'écran ne sert à rien.
+     Le nom vient du tableau lui-même (légende, sinon titre qui le précède),
+     déjà traduit par la page. Un <summary> de <details> vaut titre. Les tableaux du moteur arrivent après le
+     chargement : on réexamine à chaque ajout et à chaque redimensionnement. */
+  var CONTENEURS = ".x-tabwrap, .r-tabwrap, .d-tab-wrap, .d-preview, .x-tableau";
+  var nomDe = function (c) {
+    var cap = c.querySelector("caption");
+    if (cap && cap.textContent.trim()) return cap.textContent.trim();
+    var n = c;
+    while (n) {
+      var p = n.previousElementSibling;
+      while (p) {
+        if (/^(H[2-5]|SUMMARY)$/.test(p.tagName)) return p.textContent.trim();
+        var h = p.querySelector && p.querySelector("h2, h3, h4, h5");
+        if (h && !p.contains(c)) return h.textContent.trim();
+        p = p.previousElementSibling;
+      }
+      n = n.parentElement;
+      if (!n || n === document.body) break;
+    }
+    return "";
+  };
+  var examiner = function () {
+    document.querySelectorAll(CONTENEURS).forEach(function (c) {
+      var deborde = c.scrollWidth > c.clientWidth + 1;
+      if (deborde) {
+        if (!c.hasAttribute("tabindex")) { c.setAttribute("tabindex", "0"); c.dataset.uxFocus = "1"; }
+        if (!c.hasAttribute("role")) c.setAttribute("role", "region");
+        if (!c.hasAttribute("aria-label") && !c.hasAttribute("aria-labelledby")) {
+          var nom = nomDe(c);
+          if (nom) c.setAttribute("aria-label", nom);
+        }
+      } else if (c.dataset.uxFocus === "1") {
+        c.removeAttribute("tabindex"); delete c.dataset.uxFocus;
+      }
+    });
+  };
+  var attente = null;
+  var plus_tard = function () { clearTimeout(attente); attente = setTimeout(examiner, 150); };
+  plus_tard();
+  window.addEventListener("resize", plus_tard);
+  if (window.MutationObserver) {
+    new MutationObserver(plus_tard).observe(document.body, { childList: true, subtree: true });
+  }
 })();

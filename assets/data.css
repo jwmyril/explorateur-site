@@ -151,7 +151,7 @@
   width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 10px;
   color: var(--ink); padding: 0.6rem 0.75rem; font-family: var(--font-body); font-size: 0.92rem;
 }
-.d-form input:focus, .d-form select:focus, .d-form textarea:focus { outline: none; border-color: var(--teal); }
+.d-form input:focus, .d-form select:focus, .d-form textarea:focus { border-color: var(--teal); }
 .d-form button { margin-top: 1.1rem; }
 
 @media (max-width: 860px) {
@@ -217,7 +217,11 @@ a.sys-card:hover { transform: translateY(-2px); border-color: var(--teal); }
   width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 999px;
   color: var(--ink); padding: 0.95rem 1.4rem; font-family: var(--font-body); font-size: 1.02rem;
 }
-.x-barre input:focus { outline: none; border-color: var(--teal); }
+/* AC-11 (14/09/2026) : `outline: none` ici battait l'anneau global, dont la
+   spécificité est nulle — le champ de recherche principal n'avait qu'une
+   bordure de 1 px pour dire qu'il avait le focus. On garde la bordure et on
+   laisse l'anneau `:focus-visible` faire son travail. */
+.x-barre input:focus { border-color: var(--teal); }
 .x-compte { text-align: center; color: var(--ink-dim); font-size: 0.82rem; margin-top: 0.6rem; }
 
 #x-resultats, #x-comp-res {

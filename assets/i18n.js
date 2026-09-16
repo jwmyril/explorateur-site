@@ -7,7 +7,7 @@
   // LE NUMÉRO DES DICTIONNAIRES. Il suit celui de ce fichier : les deux
   // partent ensemble, puisqu'une clé nouvelle ici et sa traduction là-bas
   // sont une seule et même livraison. À monter dès qu'un `<lg>.json` change.
-  const DICO_V = 35;
+  const DICO_V = 36;
   // Une page dont la traduction n'est pas complete declare window.ATM_LANGUES.
   // Mieux vaut du francais entier qu'un menu traduit au-dessus de contenus
   // restes en francais : l'utilisateur croirait la page traduite.
@@ -158,8 +158,25 @@
       });
       menu.appendChild(o);
     });
-    btn.addEventListener("click", (e) => { e.stopPropagation(); menu.classList.toggle("open"); });
-    document.addEventListener("click", () => menu.classList.remove("open"));
+    // AC-12 (14/09/2026) : le menu de langues ne disait pas s'il était ouvert,
+    // et Échap ne le refermait pas — alors que le menu ☰ et la recherche le
+    // font. Il dit son état, désigne ce qu'il ouvre, et rend le focus.
+    menu.id = "lang-menu";
+    btn.setAttribute("aria-controls", menu.id);
+    btn.setAttribute("aria-expanded", "false");
+    const ouvrir = (oui) => {
+      menu.classList.toggle("open", oui);
+      btn.setAttribute("aria-expanded", oui ? "true" : "false");
+    };
+    btn.addEventListener("click", (e) => { e.stopPropagation(); ouvrir(!menu.classList.contains("open")); });
+    document.addEventListener("click", () => ouvrir(false));
+    li.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && menu.classList.contains("open")) {
+        ouvrir(false);
+        btn.focus();
+        e.stopPropagation();
+      }
+    });
     li.appendChild(btn); li.appendChild(menu); nav.appendChild(li);
   }
 

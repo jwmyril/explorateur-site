@@ -71,15 +71,15 @@ footer a,main a.lien{color:#1550b8}
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Explorateur Haïti</a></li>
       <li><a href="couches.html" data-i18n="nv.cartes_h">Cartes thématiques</a></li>
-      <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services &amp; partenariats</span></span>
-        <ul class="nav-sub">
+      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-serv"><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services &amp; partenariats</span></button>
+        <ul class="nav-sub" id="nav-sub-serv">
           <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnostics &amp; prestations <small>tarifs publiés ou sur devis</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
           <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parrainer un jeu de données <small>institutions &amp; entreprises</small></a></li>
         </ul>
       </li>
-      <li class="nav-grp"><span><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Ressources</span></span>
-        <ul class="nav-sub">
+      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-res"><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Ressources</span></button>
+        <ul class="nav-sub" id="nav-sub-res">
           <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue des jeux de données <small>données &amp; guides</small></a></li>
           <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fiches de documentation <small>complétude, sources, limites</small></a></li>
           <li><a href="donnees.html" data-i18n-html="nv.comment">Comment ça marche <small>méthode, sources, système</small></a></li>

@@ -681,14 +681,17 @@ figure.tuto-fig figcaption { padding: 0.7rem 1rem; font-size: 0.85rem; color: va
 
 /* ---- nav groupee (menus deroulants) ---- */
 .nav-grp { position: relative; }
-.nav-grp > span { color: var(--ink-dim); font-size: 0.95rem; font-weight: 500; cursor: pointer; display: inline-block; padding: 0.4rem 0; }
-.nav-grp:hover > span { color: var(--ink); }
+/* AC-4 (14/09/2026) : le déclencheur est un <button>. C'était un <span> : sur grand écran, ses liens (display:none) n'étaient jamais atteignables au clavier. */
+.nav-grp > .nav-grp-btn { background: none; border: 0; font: inherit; color: var(--ink-dim); font-size: 0.95rem; font-weight: 500; cursor: pointer; display: inline-block; padding: 0.4rem 0; }
+.nav-grp > .nav-grp-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+.nav-grp:hover > .nav-grp-btn, .nav-grp > .nav-grp-btn[aria-expanded="true"] { color: var(--ink); }
 .nav-sub { display: none; position: absolute; top: 100%; left: -0.6rem; min-width: 240px; background: var(--surface); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 0.5rem 0; list-style: none; z-index: 60; box-shadow: 0 12px 30px rgba(0,0,0,0.45); }
-.nav-grp:hover .nav-sub, .nav-grp:focus-within .nav-sub { display: block; }
+.nav-grp:hover .nav-sub { display: block; }
+/* Plus de :focus-within ici : il gardait le sous-menu ouvert après un second clic sur le bouton, qui annonçait pourtant « replié ». L'état ouvert au clavier est porté par .nav-ouvert (ux.js). */
 .nav-sub li a { display: block; padding: 0.5rem 1rem; font-size: 0.9rem; }
 .nav-sub li a small { display: block; color: var(--ink-dim); font-size: 0.72rem; font-weight: 400; }
 @media (max-width: 860px) {
-  .nav-grp > span { display: block; font-weight: 700; color: var(--ink); padding: 0.3rem 0 0.1rem; }
+  .nav-grp > .nav-grp-btn { display: block; font-weight: 700; color: var(--ink); padding: 0.3rem 0 0.1rem; cursor: default; }
   .nav-sub { display: block; position: static; background: none; border: none; box-shadow: none; padding: 0 0 0 0.9rem; min-width: 0; }
 }
 

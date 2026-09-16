@@ -40,6 +40,9 @@ th{font-size:.78rem;color:var(--doux);text-transform:uppercase;
 td.val{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
 td.an{white-space:nowrap;color:var(--doux)}
 td.src{color:var(--doux);font-size:.82rem}
+tbody th{font-size:.92rem;color:var(--encre);text-transform:none;letter-spacing:0;font-weight:400}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.legende .st{margin:0 .2rem 0 0}
 .st{display:inline-block;font-size:.68rem;font-weight:700;line-height:1;
     padding:.16rem .3rem;border-radius:4px;background:var(--puce);
     color:var(--lien);margin-left:.3rem;vertical-align:.08em}
@@ -70,11 +73,11 @@ footer a{color:var(--lien)}
    source — précisément sur l'appareil où on lit le plus. Une colonne cachée
    ne se voit pas manquer ; c'est pour cela qu'il fallait la retirer. */
 @media (max-width:34rem){
-  table,tbody,tr,td{display:block;width:100%}
+  table,tbody,tr,td,tbody th{display:block;width:100%}
   thead{position:absolute;left:-9999px}
   tr{padding:.55rem 0;border-bottom:1px solid var(--trait)}
   td{border:0;padding:0}
-  td:first-child{font-weight:600}
+  tbody th{font-weight:600;padding:0;border:0}
   td.val{display:inline-block;margin:.15rem .6rem .15rem 0}
   td.an{display:inline-block;font-size:.85rem}
   td.src{font-size:.78rem;line-height:1.4}

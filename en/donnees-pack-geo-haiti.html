@@ -20,7 +20,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <meta name="description" data-i18n-content="pg.packgeo.desc" content="All of Haiti's administrative divisions with GPS coordinates and OCHA p-codes: 570 communal sections, 140 chief towns, 10,945 populated places, 3 GeoJSON files ready for Power BI and QGIS. $29, free sample." />
   <link rel="stylesheet" href="../assets/polices.css?v=1" />
   <meta name="theme-color" content="#0e2240" />
-  <link rel="stylesheet" href="../assets/style.css?v=36" />
+  <link rel="stylesheet" href="../assets/style.css?v=37" />
   <link rel="stylesheet" href="../assets/data.css?v=52" />
   <!-- JSON-LD engendré par build_jsonld.py — ne pas éditer à la main -->
 <script type="application/ld+json">
@@ -103,15 +103,15 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Haiti Explorer</a></li>
       <li><a href="/couches.html" data-i18n="nv.cartes_h">Thematic maps</a></li>
-      <li class="nav-grp"><span><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services & partnerships</span></span>
-        <ul class="nav-sub">
+      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-serv"><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services & partnerships</span></button>
+        <ul class="nav-sub" id="nav-sub-serv">
           <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnostics &amp; engagements <small>listed prices or quote</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>companies, NGOs, administrations</small></a></li>
           <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Sponsor a dataset <small>institutions &amp; companies</small></a></li>
         </ul>
       </li>
-      <li class="nav-grp"><span><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Resources</span></span>
-        <ul class="nav-sub">
+      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-res"><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Resources</span></button>
+        <ul class="nav-sub" id="nav-sub-res">
           <li><a href="datasets.html" data-i18n-html="nv.cat">Dataset catalogue <small>data &amp; guides</small></a></li>
           <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Documentation sheets</a></li>
           <li><a href="donnees.html" data-i18n-html="nv.comment">How it works <small>method, sources, system</small></a></li>
@@ -122,6 +122,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     </ul>
   </nav>
 </header>
+<main>
 
 <section id="contenu" style="padding:2.5rem 0 0">
   <div class="container">
@@ -251,6 +252,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -301,7 +303,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   })();
 </script>
 <script src="../assets/mesure.js?v=4" defer></script>
-<script src="../assets/ux.js?v=2" defer></script>
+<script src="../assets/ux.js?v=3" defer></script>
 <script src="../assets/i18n.js?v=35"></script>
 <script src="../assets/theme.js?v=3" defer></script>
 </body>

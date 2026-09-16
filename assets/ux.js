@@ -32,12 +32,34 @@
       }
     });
   }
-  /* Les sous-menus au clavier : ouvrir un groupe au focus d'un de ses liens. */
+  /* Les sous-menus au clavier (AC-4, 14/09/2026). L'ancienne version ouvrait
+     le groupe au focus d'un de ses liens — or ces liens étaient dans un
+     display:none, donc jamais focalisables : le déclencheur ne se produisait
+     jamais sur grand écran. Le déclencheur est désormais un <button> ; il
+     ouvre et ferme, dit son état, et Échap referme en rendant le focus. */
   document.querySelectorAll(".nav-grp").forEach(function (g) {
-    g.addEventListener("focusin", function () { g.classList.add("nav-ouvert"); });
+    var btn = g.querySelector(".nav-grp-btn");
+    var sous = g.querySelector(".nav-sub");
+    var etat = function (ouvert) {
+      g.classList.toggle("nav-ouvert", ouvert);
+      if (btn) btn.setAttribute("aria-expanded", ouvert ? "true" : "false");
+    };
+    if (btn && sous) {
+      btn.setAttribute("aria-expanded", "false");
+      btn.addEventListener("click", function () {
+        etat(!g.classList.contains("nav-ouvert"));
+      });
+      g.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && g.classList.contains("nav-ouvert")) {
+          etat(false);
+          btn.focus();
+          e.stopPropagation();
+        }
+      });
+    }
     g.addEventListener("focusout", function () {
       setTimeout(function () {
-        if (!g.contains(document.activeElement)) g.classList.remove("nav-ouvert");
+        if (!g.contains(document.activeElement)) etat(false);
       }, 0);
     });
   });

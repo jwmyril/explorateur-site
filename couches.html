@@ -126,6 +126,18 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
 
+<!-- partage : build_langues.py -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Explorateur Haïti" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://explorateur.atmart.ltd/couches.html" />
+<meta property="og:title" data-i18n-content="pg.couches.title" content="Couches — cartes d'utilité publique | Explorateur Haïti" />
+<meta property="og:description" data-i18n-content="pg.couches.desc" content="Cartes des couches d'utilité publique sur Haïti : aléa d'inondation et bassins versants (CNIGS), occupation du sol, conflits, déplacés, insécurité alimentaire (IPC), points d'eau, stations-service, banques, routes et tous les indicateurs Atmart. Chaque couche porte sa source, sa licence et ses limites." />
+<meta property="og:image" content="https://explorateur.atmart.ltd/assets/brand/partage-1200x627.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="627" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- /partage -->
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -256,6 +268,12 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
           <li><a href="donnees-systeme.html" data-i18n="ft.carte">La carte du système</a></li>
           <li><a href="donnees-confiance.html" data-i18n="ft.conf">Confiance &amp; méthode</a></li>
           <li><a href="archives.html" data-i18n="ft.arch">Archives &amp; citation</a></li>
+          <!-- ED-8 (17/09/2026) : trois pages sans chemin depuis la navigation —
+               l'index des 564 fiches communales, le registre des sources et le
+               Pack Géo, le produit payant. -->
+          <li><a href="commune/index.html" data-i18n="ft.communes">Les 140 communes</a></li>
+          <li><a href="donnees-registres.html" data-i18n="ft.registres">Registre des sources</a></li>
+          <li><a href="donnees-pack-geo-haiti.html" data-i18n="ft.pack">Pack Géo Haïti</a></li>
         </ul>
       </div>
       <div>
@@ -290,7 +308,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 <script src="assets/mesure.js?v=4" defer></script>
 <script src="assets/ux.js?v=4" defer></script>
 <script src="assets/pwa.js?v=3" defer></script>
-<script src="assets/i18n.js?v=38"></script>
+<script src="assets/i18n.js?v=39"></script>
 <script src="assets/theme.js?v=3" defer></script>
 </body>
 </html>

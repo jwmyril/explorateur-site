@@ -3,9 +3,11 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://explorateur.atmart.ltd/archives.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/conditions.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/conditions.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/conditions.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/conditions.html"/>
@@ -13,9 +15,11 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/couches.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/datasets.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/datasets.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/datasets.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/datasets.html"/>
@@ -23,9 +27,11 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-backbone.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-campus.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-campus.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-campus.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-campus.html"/>
@@ -33,9 +39,11 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-confiance.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-fiches.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-fiches.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-fiches.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-fiches.html"/>
@@ -43,6 +51,7 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-pack-geo-haiti.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-pack-geo-haiti.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-pack-geo-haiti.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-pack-geo-haiti.html"/>
@@ -50,6 +59,7 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-parrainage.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-parrainage.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-parrainage.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-parrainage.html"/>
@@ -57,9 +67,11 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-registres.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-services.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-services.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-services.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-services.html"/>
@@ -67,6 +79,7 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-solutions.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees-solutions.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees-solutions.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees-solutions.html"/>
@@ -74,9 +87,11 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees-systeme.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/donnees.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/donnees.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/donnees.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/donnees.html"/>
@@ -84,6 +99,7 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/fiche.html</loc>
+    <lastmod>2026-09-16</lastmod>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/fiche.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/fiche.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/fiche.html"/>
@@ -91,6 +107,7 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/</loc>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/index.html"/>
@@ -98,101 +115,134 @@
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/ht/conditions.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/ht/datasets.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/ht/donnees-campus.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/ht/donnees-fiches.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/ht/donnees-pack-geo-haiti.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/ht/donnees-parrainage.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/ht/donnees-services.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/ht/donnees-solutions.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/ht/donnees.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/ht/fiche.html</loc>
+    <lastmod>2026-09-16</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/ht/index.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/en/conditions.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/en/datasets.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/en/donnees-campus.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/en/donnees-fiches.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/en/donnees-pack-geo-haiti.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/en/donnees-parrainage.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/en/donnees-services.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/en/donnees-solutions.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/en/donnees.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/en/fiche.html</loc>
+    <lastmod>2026-09-16</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/en/index.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/conditions.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/datasets.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/donnees-campus.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/donnees-fiches.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/donnees-pack-geo-haiti.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/donnees-parrainage.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/donnees-services.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/donnees-solutions.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/donnees.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/fiche.html</loc>
+    <lastmod>2026-09-16</lastmod>
   </url>
   <url>
     <loc>https://explorateur.atmart.ltd/es/index.html</loc>
+    <lastmod>2026-09-17</lastmod>
   </url>
 </urlset>

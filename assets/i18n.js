@@ -7,7 +7,7 @@
   // LE NUMÉRO DES DICTIONNAIRES. Il suit celui de ce fichier : les deux
   // partent ensemble, puisqu'une clé nouvelle ici et sa traduction là-bas
   // sont une seule et même livraison. À monter dès qu'un `<lg>.json` change.
-  const DICO_V = 41;
+  const DICO_V = 42;
   // Une page dont la traduction n'est pas complete declare window.ATM_LANGUES.
   // Mieux vaut du francais entier qu'un menu traduit au-dessus de contenus
   // restes en francais : l'utilisateur croirait la page traduite.
@@ -54,7 +54,15 @@
          n'atteignaient aucun lecteur déjà venu. C'est la récidive exacte du
          défaut des marqueurs de données, quatre jours après sa correction.
          Ce numéro suit celui de i18n.js : les deux changent ensemble. */
-      try { dict = await fetch(base + "assets/i18n/" + lang + ".json?v=" + DICO_V, { cache: "no-cache" }).then((r) => r.json()); }
+      /* PF-4 (17/09/2026) : UNE PAGE DÉJÀ ÉCRITE DANS SA LANGUE n'a pas besoin
+         du dictionnaire entier pour se réécrire à l'identique. build_langues.py
+         la marque `data-cuite`, et build_dico_cuit.py ne garde dans
+         `<langue>.cuit.json` que ce que les scripts fabriquent à l'écran, plus
+         toute clé dont il ne peut pas prouver que la page la montre déjà.
+         Une clé absente laisse l'élément tel qu'il est : cuit. Dans une autre
+         langue que la sienne, la page lit le dictionnaire complet. */
+      const cuit = lang === window.ATM_LANG_FORCE && document.documentElement.getAttribute("data-cuite") === lang;
+      try { dict = await fetch(base + "assets/i18n/" + lang + (cuit ? ".cuit" : "") + ".json?v=" + DICO_V, { cache: "no-cache" }).then((r) => r.json()); }
       catch (e) { dict = {}; }
     }
     dictCourant = dict; langCourante = lang; dictPose = true;

@@ -362,6 +362,20 @@
       },
       source: "OpenStreetMap via Overpass — © contributeurs OSM ; rattachement communal par Atmart, passeport PSP-068",
       limite: "CE N'EST PAS UN RECENSEMENT DES LIEUX DE CULTE, C'EST L'ÉTAT DE LEUR CARTOGRAPHIE. Une commune pâle est bien plus probablement une commune que personne n'a levée qu'une commune peu pratiquante — 121 communes sur 140 portent au moins un point, et les 19 autres ne sont pas des communes sans église. 3 142 objets rattachés : 2 533 chrétiens, 279 vodou, 12 spiritualistes, 4 musulmans, 12 d'une autre religion déclarée, et 302 SANS AUCUNE ÉTIQUETTE de religion — ceux-là ne sont rangés dans aucune famille, parce que les compter comme chrétiens « puisque c'est probable en Haïti » remplacerait une observation par une supposition. L'extraction porte sur un rectangle qui mord sur la République dominicaine ; 32 objets ont été écartés par le rattachement aux contours communaux." },
+    /* LES POINTS, À CÔTÉ DU DÉCOMPTE (DO-10, 17/09/2026). Le fichier des
+       2 643 lieux nommés était publié depuis le 24/08 sans qu'aucune couche
+       ne le lise. La couleur porte la famille déclarée par la cartographie ;
+       « religion non renseignée » est une famille de lecture, pas une
+       supposition — un point sans étiquette n'est rangé nulle part ailleurs. */
+    { id: "lieux_culte_points", nom: "Lieux de culte nommés (OpenStreetMap)", type: "points",
+      geojson: "data/atmart_couche_lieux_culte_HT.geojson",
+      classes: { chretien: { c: "#3a86ff", l: "Chrétien" },
+                 vodou: { c: "#d62828", l: "Vodou" },
+                 spiritualiste: { c: "#8338ec", l: "Spiritualiste" },
+                 musulman: { c: "#2a9d8f", l: "Musulman" },
+                 autre: { c: "#f4a261", l: "Autre religion déclarée" },
+                 non_renseigne: { c: "#8d99ae", l: "Religion non renseignée" } },
+      prop: "famille" },
     { id: "lieux_culte_vodou", nom: "Lieux de culte vodou cartographiés (OpenStreetMap)", type: "choroplethe",
       csv: "data/atmart_lieux_culte_communes_HT.csv", pcode: "pcode_commune",
       courbe: "lineaire",
@@ -1682,7 +1696,7 @@
          alors que la réponse était dans le fichier qu'il venait de
          télécharger. Un nom d'enseigne ne se traduit pas — c'est un nom
          propre — mais son TYPE, lui, passe par T(). */
-      var nom = f.properties.e || f.properties.n || "";
+      var nom = f.properties.e || f.properties.n || f.properties.nom || "";
       var titre = (nom ? esc(nom) + " — " : "") + esc(T(cl.l || ""));
       return '<circle r="2.6" fill="' + cl.c + '" fill-opacity="0.75" cx="' +
         proj.x(c[0]).toFixed(1) + '" cy="' + proj.y(c[1]).toFixed(1) + '">' +
@@ -1714,7 +1728,7 @@
       var p = f.properties || {};
       var k = p[couche.prop] || "";
       parCl[k] = (parCl[k] || 0) + 1;
-      var nom = p.e || p.n || "";
+      var nom = p.e || p.n || p.nom || "";
       if (nom) parNom[nom] = (parNom[nom] || 0) + 1;
       else sansNom++;
     });
@@ -2072,7 +2086,7 @@
                         seule ferait prendre une absence de contributeur pour
                         une absence de pratique. */
                      ["Lieux de culte — ce que la carte en montre",
-                      ["lieux_culte", "lieux_culte_vodou"]],
+                      ["lieux_culte", "lieux_culte_vodou", "lieux_culte_points"]],
                      /* LES RÉSULTATS EN QUATRE GROUPES, PAS EN UN SEUL.
                         Ils étaient deux cartes le 25/08 et ils sont vingt le
                         26 : une liste de vingt entrées sous un seul intitulé

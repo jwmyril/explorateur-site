@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v147";
+const CACHE = "explorateur-v148";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -61,7 +61,7 @@ const DATA = [
 ].map((u) => u + DV).concat([
   // La page de cartes : utile hors ligne a qui l'a deja voulue, pas a
   // l'installation d'un visiteur qui ne l'a pas ouverte.
-  "/couches.html", "/assets/couches.js?v=60",
+  "/couches.html", "/assets/couches.js?v=61",
 ]);
 
 /* A L'INSTALLATION, ON NE PREND QUE LE NOYAU.

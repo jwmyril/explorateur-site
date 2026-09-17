@@ -1300,7 +1300,7 @@
       /* PAS DE `jeu()` : ces polygones ne sont pas charges au demarrage. La
          maille les apporte par fichier, ce qui est precisement ce que la
          generalisation devait permettre. */
-      fichier: "data/haiti_regions_enquete_simplifie.geojson",
+      fichier: "assets/carte/haiti_regions_enquete_simplifie.geojson",
       gris: function (n) {
         return TF("{n} région(s) d'enquête en gris : non documenté, jamais zéro", { n: n });
       },
@@ -1323,7 +1323,7 @@
     departement: {
       fiche: false,
       jeu: function () { return departements; },
-      fichier: "data/haiti_departements_simplifie.geojson",
+      fichier: "assets/carte/haiti_departements_simplifie.geojson",
       gris: function (n) {
         return TF("{n} département(s) en gris : non documenté, jamais zéro", { n: n });
       },
@@ -2016,8 +2016,8 @@
     });
   }
 
-  Promise.all([charger("data/haiti_communes_simplifie.geojson"),
-               charger("data/haiti_departements_simplifie.geojson")])
+  Promise.all([charger("assets/carte/haiti_communes_simplifie.geojson"),
+               charger("assets/carte/haiti_departements_simplifie.geojson")])
     .then(function (t) {
       communes = JSON.parse(t[0]);
       departements = JSON.parse(t[1]);

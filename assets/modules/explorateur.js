@@ -38,6 +38,10 @@ import { S } from "./etat.js?v=39";
   var CFG = window.ATM_EXPLORATEUR || {};
   var ADMIN = !!CFG.admin;
   var DIR = CFG.dir || "data/";
+  /* PF-9 (16/09/2026) : la carte dessine des COPIES arrondies à 3 décimales
+     (assets/carte/, build_cartes_affichage.py). Les fichiers de data/ restent
+     intacts pour qui les télécharge. */
+  var CARTE = CFG.carte || DIR.replace(/data\/$/, "assets/carte/");
   /* Racine du site Atmart pour les liens editoriaux (catalogue, backbone,
      Pack Geo, parrainage). Vide sur atmart.ltd ; le site autonome
      explorateur.atmart.ltd passe CFG.site="https://atmart.ltd/" pour que
@@ -1017,7 +1021,7 @@ import { S } from "./etat.js?v=39";
       throw err;
     }
     /* Le contour est un agrement : s'il manque, la fiche s'affiche sans carte. */
-    return charger(CFG.contour || DIR + "haiti_contour_simplifie.geojson")
+    return charger(CFG.contour || CARTE + "haiti_contour_simplifie.geojson")
       .then(function (t) { return JSON.parse(t); })
       .then(function (g) {
         if (g) S.contour = g.features[0].geometry.coordinates;
@@ -1027,10 +1031,10 @@ import { S } from "./etat.js?v=39";
          national : s'ils manquent, la carte retombe sur les bulles. */
       .then(function () {
         return Promise.all([
-          charger(DIR + "haiti_departements_simplifie.geojson")
+          charger(CARTE + "haiti_departements_simplifie.geojson")
             .then(function (x) { S.polyDep = JSON.parse(x).features; })
             .catch(function () { S.polyDep = null; }),
-          charger(DIR + "haiti_communes_simplifie.geojson")
+          charger(CARTE + "haiti_communes_simplifie.geojson")
             .then(function (x) { S.polyCom = JSON.parse(x).features; })
             .catch(function () { S.polyCom = null; })
         ]);

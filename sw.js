@@ -3,7 +3,7 @@
    addAll, qui annule tout au premier manquant), et bump du nom de cache a
    CHAQUE modification d'un fichier servi — sinon les habitues gardent
    l'ancienne version sans le savoir. */
-const CACHE = "explorateur-v142";
+const CACHE = "explorateur-v144";
 /* Les fiches que le lecteur a explicitement demande a garder (bouton de
    l'edition legere) vivent dans un cache A PART, et ce cache n'est JAMAIS
    purge au changement de version : sinon chaque mise en ligne effacerait
@@ -15,7 +15,7 @@ const DV = "?d=2026-09-13d";   // doit suivre le DV de assets/modules/explorateu
 
 const CORE = [
   "/", "/index.html", "/hors-connexion.html", "/manifest.webmanifest",
-  "/assets/style.css?v=38", "/assets/data.css?v=53", "/assets/modules/explorateur.js?v=55",
+  "/assets/style.css?v=39", "/assets/data.css?v=53", "/assets/modules/explorateur.js?v=56",
   "/assets/modules/etat.js?v=39",
   "/assets/modules/explorateur-i18n.js?v=42",
   "/assets/modules/explorateur-carte.js?v=42",
@@ -57,11 +57,11 @@ const DATA = [
   // prechargement. La page les annonce « a la demande » ; les prendre d'office
   // sur un forfait paye au megaoctet contredisait ce qu'elle dit. Ils entrent
   // au cache a leur premiere lecture, comme tout le reste.
-  "/data/haiti_contour_simplifie.geojson",
+  "/assets/carte/haiti_contour_simplifie.geojson",
 ].map((u) => u + DV).concat([
   // La page de cartes : utile hors ligne a qui l'a deja voulue, pas a
   // l'installation d'un visiteur qui ne l'a pas ouverte.
-  "/couches.html", "/assets/couches.js?v=59",
+  "/couches.html", "/assets/couches.js?v=60",
 ]);
 
 /* A L'INSTALLATION, ON NE PREND QUE LE NOYAU.

@@ -958,6 +958,16 @@ import { S } from "./etat.js?v=39";
      la main serait fausse au premier ajout de fonction, et fausse en silence. */
   Object.assign(A, { $, ADMIN, CFG, DIR, DV, F, NATURE_PERIODE, NIVEAU, QUALITE, REGLE, SITE, STATUT, STATUT_IND, THEME, aggEntite, agreger, annoncer, charger, communesDe, couverture, dico, enfantsDe, esc, fmt, jour, libCouverture, libFraicheur, lienParrainage, liste, nb, orgsCom, orgsSec, parId, parIndicateur, parseCSV, rang, sansAccent, situation });
 
+  /* CH-7 (17/09/2026) : LE CALCUL DOIT ÊTRE JOUABLE SANS ÉCRAN.
+     Les 87 assertions du moteur ne tournaient qu'à la main, dans un
+     navigateur : personne ne les jouait avant une poussée. Le banc sans
+     navigateur (`tests/sans-navigateur.mjs`) a besoin du registre des
+     fonctions et de l'état des données — rien d'autre.
+     Il n'est offert qu'à une page qui a posé `window.ATM_BANC` AVANT de
+     charger le moteur. Aucune page publique ne le fait : sur le site, cette
+     ligne ne s'exécute jamais. */
+  if (window.ATM_BANC) { window.ATM_BANC.A = A; window.ATM_BANC.S = S; }
+
   /* Un rapport où la moitié des sections manque parce qu'elles étaient
      repliées à l'écran serait un piège : on ouvre tout avant de composer les
      pages, et on rend ensuite au lecteur l'état qu'il avait choisi. */

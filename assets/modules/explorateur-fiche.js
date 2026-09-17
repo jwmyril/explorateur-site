@@ -2916,6 +2916,18 @@ export default function (A) {
     return VUES[v] ? v : "court";
   }
 
+  /* LA CARTE N'EST PAS RESERVEE AUX COMMUNES (decision Atmart du 17/09/2026).
+     La refonte en sept categories du 17/08 a range la carte dans une
+     categorie, et les categories ne se rendent que sur une commune : les
+     fiches de departement, d'arrondissement et du pays ont donc perdu leur
+     carte ce jour-la, sans que personne le voie pendant un mois — l'assertion
+     qui le verifiait n'etait jouable qu'a la main, dans un navigateur.
+     Elle revient ici, au meme rang qu'ailleurs : avant l'agregat, et soumise
+     au meme reglage de longueur de fiche que tous les autres blocs. */
+  function carteDeNiveau(r) {
+    return montrer("carte") ? blocCarte(r) : "";
+  }
+
   function montrer(bloc) {
     var v = VUES[vueCourante()];
     return !v.b || v.b[bloc] === 1;
@@ -2990,8 +3002,8 @@ export default function (A) {
          niveau), puis le même agrégat que pour un département. Pas de bloc
          technique : l'entité est synthétique, ses métadonnées sont celles de
          ses sources, affichées repère par repère. */
-      h.push(blocNat(), agregat(r), blocPyramide(r));
-    } else h.push(agregat(r), blocCredits(r), blocPyramide(r));   /* le budget est voté À CE NIVEAU */
+      h.push(blocNat(), carteDeNiveau(r), agregat(r), blocPyramide(r));
+    } else h.push(carteDeNiveau(r), agregat(r), blocCredits(r), blocPyramide(r));   /* le budget est voté À CE NIVEAU */
     /* Ces quatre-là sont DÉJÀ posés par les catégories sur une commune : on
        ne les ajoute qu'aux autres niveaux, sans quoi ils paraîtraient deux
        fois — et deux fois le même bloc, c'est deux fois la même source

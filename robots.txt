@@ -4,3 +4,5 @@ Allow: /
 Sitemap: https://explorateur.atmart.ltd/sitemap.xml
 
 Sitemap: https://explorateur.atmart.ltd/sitemap-communes.xml
+
+Sitemap: https://explorateur.atmart.ltd/sitemap-indicateurs.xml

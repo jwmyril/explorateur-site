@@ -1,0 +1,61 @@
+/* Feuille des pages d'indicateur — engendrée par build_pages_indicateurs.py.
+   S'ajoute à commune.css : mêmes couleurs, mêmes deux thèmes. */
+main.ind{max-width:62rem}
+.question{font-size:1.75rem;line-height:1.25;margin:.4rem 0 .3rem;text-wrap:balance}
+.sous{color:var(--doux);font-size:.92rem;margin:0 0 1rem}
+.onglets{display:flex;gap:.25rem;border-bottom:1px solid var(--trait);margin:1rem 0 0}
+.onglets button{font:inherit;font-size:.95rem;padding:.6rem 1rem;min-height:44px;cursor:pointer;
+  border:1px solid transparent;border-bottom:0;border-radius:8px 8px 0 0;background:none;color:var(--doux)}
+.onglets button[aria-selected="true"]{background:var(--boite);border-color:var(--trait);color:var(--encre);
+  font-weight:600}
+.onglets button:focus-visible,.puces button:focus-visible,.outils a:focus-visible,.outils button:focus-visible,
+th button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.vue{background:var(--boite);border:1px solid var(--trait);border-top:0;border-radius:0 0 10px 10px;
+  padding:.8rem;min-height:18rem}
+.vue svg{display:block;width:100%;height:auto}
+.choix{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:.8rem 0}
+.choix label{font-size:.85rem;color:var(--doux);margin-right:.2rem}
+.choix input{font:inherit;padding:.45rem .6rem;border:1px solid var(--trait);border-radius:8px;
+  background:var(--fond);color:var(--encre);min-width:14rem;min-height:40px}
+.puces{display:flex;flex-wrap:wrap;gap:.35rem;margin:.2rem 0}
+.puces button{font:inherit;font-size:.85rem;padding:.3rem .55rem;border:1px solid var(--trait);
+  border-radius:999px;background:var(--fond);color:var(--encre);cursor:pointer;min-height:32px}
+.puces button::after{content:" ×";color:var(--doux)}
+.lienbtn{font:inherit;font-size:.85rem;background:none;border:0;color:var(--lien);cursor:pointer;
+  text-decoration:underline;padding:.3rem 0}
+.outils{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0}
+.outils a,.outils button{font:inherit;font-size:.88rem;padding:.5rem .8rem;border:1px solid var(--trait);
+  border-radius:8px;background:var(--fond);color:var(--lien);text-decoration:none;cursor:pointer;min-height:40px}
+.outils [aria-live]{align-self:center;font-size:.85rem;color:var(--doux)}
+.barre{fill:var(--accent);opacity:.35}
+.barre.choisie{opacity:1}
+.barre.signal{fill:var(--doux)}
+.etiq{font-size:12px;fill:var(--encre)}
+.etiq.doux{fill:var(--doux)}
+.med{stroke:var(--encre);stroke-dasharray:4 3;stroke-width:1}
+.zone{stroke:var(--fond);stroke-width:.6;cursor:pointer}
+.zone.choisie{stroke:var(--encre);stroke-width:2}
+.legende-carte{display:flex;flex-wrap:wrap;gap:.6rem;font-size:.8rem;color:var(--doux);margin:.5rem 0 0}
+.legende-carte i{display:inline-block;width:.9rem;height:.9rem;border-radius:2px;vertical-align:-.15rem;
+  margin-right:.25rem}
+.tab-outils{display:flex;justify-content:flex-end;margin:.2rem 0 .5rem}
+.tab-outils input{font:inherit;padding:.4rem .6rem;border:1px solid var(--trait);border-radius:8px;
+  background:var(--fond);color:var(--encre);min-height:40px}
+.table-defile{overflow-x:auto;max-height:32rem;overflow-y:auto}
+th button{font:inherit;background:none;border:0;padding:0;color:inherit;cursor:pointer;
+  text-transform:inherit;letter-spacing:inherit}
+tr.choisie th,tr.choisie td{background:var(--puce)}
+tr.cachee{display:none}
+.sig{font-size:.72rem;color:var(--doux);margin-left:.35rem}
+.gratuit{border-left-color:var(--trait);font-size:.9rem}
+dl.fiche{display:grid;grid-template-columns:minmax(8rem,12rem) 1fr;gap:.4rem 1rem;font-size:.92rem}
+dl.fiche dt{color:var(--doux);font-weight:600}
+dl.fiche dd{margin:0}
+ul.cartes{list-style:none;padding:0;display:grid;gap:.8rem}
+ul.cartes a{display:block;padding:1rem;border:1px solid var(--trait);border-radius:10px;
+  text-decoration:none;color:var(--encre)}
+ul.cartes a:hover,ul.cartes a:focus{border-color:var(--accent);background:var(--puce)}
+ul.cartes b{display:block;font-size:1.1rem;color:var(--lien)}
+@media (max-width:40rem){dl.fiche{grid-template-columns:1fr}.question{font-size:1.4rem}
+  .choix input{min-width:0;width:100%}}
+@media (prefers-reduced-motion:no-preference){.barre,.zone{transition:opacity .2s}}

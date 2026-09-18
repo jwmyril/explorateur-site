@@ -37,12 +37,15 @@
 
 # Python
 import json, urllib.request
-v = json.load(urllib.request.urlopen(&quot;https://explorateur.atmart.ltd/api/v1/indicateurs/IND-POP-002.json&quot;, timeout=30))
+req = urllib.request.Request(&quot;https://explorateur.atmart.ltd/api/v1/indicateurs/IND-POP-002.json&quot;,
+                             headers={&quot;User-Agent&quot;: &quot;mon-projet/1.0&quot;})
+v = json.load(urllib.request.urlopen(req, timeout=30))
 print(v[&quot;valeurs&quot;][0])
 
 // JavaScript
 fetch(&quot;https://explorateur.atmart.ltd/api/v1/territoires.json&quot;).then(r =&gt; r.json()).then(console.log);</code></pre>
-<h2>Si w itilize l anpil</h2><p>Fichye yo pa gen limit. Si w bezwen rele yo trè souvan oswa mete yo nan yon pwodwi, ekri sales@atmart.ltd : kle ak limit pou sa ap vini sou yon sèvis apa, san nou pa retire anyen nan API gratis sa a.</p>
+<h2>Kaye pou aprann</h2><p>De kaye pran adrès sa yo etap pa etap : teritwa yo, yon endikatè, yon medyàn pa depatman ak limit ou dwe site yo.</p><ul><li><a href="../../api/carnets/explorateur-api.ipynb" download>Kaye Python (Jupyter)</a></li><li><a href="../../api/carnets/explorateur-api.R" download>Script R</a></li></ul>
+<h2>Si w itilize l anpil</h2><p>Bay pwogram ou a yon non nan antèt User-Agent la (pa egzanp « mon-projet/1.0 ») : pa-dife sit la refize (erè 403) demann ki pote non otomatik kèk bibliyotèk, tankou urllib Python. requests, R, curl ak navigatè yo pase san w pa bezwen regle anyen.</p><p>Fichye yo pa gen limit. Si w bezwen rele yo trè souvan oswa mete yo nan yon pwodwi, ekri sales@atmart.ltd : kle ak limit pou sa ap vini sou yon sèvis apa, san nou pa retire anyen nan API gratis sa a.</p>
 <h2>Kijan pou site l ak lisans</h2><p>Site « Atmart Data, Explorateur Haïti » ak sous ki ekri nan chak valè. Lisans pou reitilize chak seri done se lisans sous li ; li ekri nan rejis sous yo. <a href="../../ht/donnees-registres.html">Rejis sous yo</a></p>
 <section class="nl-bloc" aria-labelledby="nl-titre"><h2 id="nl-titre" class="nl-titre">Resevwa nouvo done yo</h2><p class="nl-texte">Yon lèt chak fwa nouvo done oswa nouvo analiz parèt. Adrès ou a pa sèvi pou okenn lòt bagay.</p><form class="nl-form" novalidate><label for="nl-courriel">Adrès imèl ou</label><span class="nl-ligne"><input id="nl-courriel" type="email" name="email" required autocomplete="email" inputmode="email" /><button type="submit">Enskri</button></span></form><p class="nl-etat" role="status" hidden><span class="nl-ok" hidden>Nou pran l : w ap resevwa pwochen lèt la.</span><span class="nl-err" hidden>Enskripsyon an pa pase. Eseye ankò, oswa ekri sales@atmart.ltd.</span></p><p class="nl-vie"><a href="../../ht/conditions.html#confidentialite">Vi prive</a></p><script src="../../assets/newsletter.js?v=1" defer></script></section>
 </main>

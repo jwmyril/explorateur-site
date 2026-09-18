@@ -37,12 +37,15 @@
 
 # Python
 import json, urllib.request
-v = json.load(urllib.request.urlopen(&quot;https://explorateur.atmart.ltd/api/v1/indicateurs/IND-POP-002.json&quot;, timeout=30))
+req = urllib.request.Request(&quot;https://explorateur.atmart.ltd/api/v1/indicateurs/IND-POP-002.json&quot;,
+                             headers={&quot;User-Agent&quot;: &quot;mon-projet/1.0&quot;})
+v = json.load(urllib.request.urlopen(req, timeout=30))
 print(v[&quot;valeurs&quot;][0])
 
 // JavaScript
 fetch(&quot;https://explorateur.atmart.ltd/api/v1/territoires.json&quot;).then(r =&gt; r.json()).then(console.log);</code></pre>
-<h2>Heavy use</h2><p>The files are served without quotas. For very frequent calls or product integration, write to sales@atmart.ltd: dedicated keys and quotas will come on a separate service, without removing anything from this free API.</p>
+<h2>Notebooks to learn</h2><p>Two notebooks walk through these addresses step by step: territories, one indicator, a median by department and the limits to quote.</p><ul><li><a href="../../api/carnets/explorateur-api.ipynb" download>Python notebook (Jupyter)</a></li><li><a href="../../api/carnets/explorateur-api.R" download>R script</a></li></ul>
+<h2>Heavy use</h2><p>Identify your program with a User-Agent header (for example “my-project/1.0”): the site's firewall refuses (error 403) requests carrying the default identifier of some libraries, including Python's urllib. requests, R, curl and browsers work without any setting.</p><p>The files are served without quotas. For very frequent calls or product integration, write to sales@atmart.ltd: dedicated keys and quotas will come on a separate service, without removing anything from this free API.</p>
 <h2>Citation and licence</h2><p>Cite “Atmart Data, Haiti Explorer” and the source given in each value. The reuse licence of each dataset is that of its source; it is given in the source register. <a href="../../en/donnees-registres.html">Source register</a></p>
 <section class="nl-bloc" aria-labelledby="nl-titre"><h2 id="nl-titre" class="nl-titre">Get new data by e-mail</h2><p class="nl-texte">A letter when new data or analyses come out. Your address is used for nothing else.</p><form class="nl-form" novalidate><label for="nl-courriel">Your e-mail address</label><span class="nl-ligne"><input id="nl-courriel" type="email" name="email" required autocomplete="email" inputmode="email" /><button type="submit">Subscribe</button></span></form><p class="nl-etat" role="status" hidden><span class="nl-ok" hidden>Done: you will receive the next letter.</span><span class="nl-err" hidden>Sign-up failed. Try again, or write to sales@atmart.ltd.</span></p><p class="nl-vie"><a href="../../en/conditions.html#confidentialite">Privacy</a></p><script src="../../assets/newsletter.js?v=1" defer></script></section>
 </main>

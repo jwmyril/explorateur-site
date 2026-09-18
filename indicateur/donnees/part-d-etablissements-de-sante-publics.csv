@@ -1,0 +1,15 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-SAN-002,HTC-0311,HT0311,Cap-Haïtien,Kap Ayisyen,Nord,47.1,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0544,HT0544,Desdunes,Dedin,Artibonite,75.0,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0541,HT0541,Dessalines,Desalin,Artibonite,16.7,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0512,HT0512,Ennery,Ènri,Artibonite,46.4,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0511,HT0511,Gonaïves,Gonayiv,Artibonite,36.2,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0543,HT0543,Grande Saline,Grand Salin,Artibonite,66.7,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0611,HT0611,Hinche,Ench,Centre,32.7,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0533,HT0533,La Chapelle,Lachapèl,Artibonite,0.0,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0552,HT0552,Marmelade,Mamelad,Artibonite,16.7,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0612,HT0612,Maïssade,Mayisad,Centre,41.7,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,36.5,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0531,HT0531,Saint-Marc,Sen Mak,Artibonite,49.1,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0613,HT0613,Thomonde,Tomond,Centre,45.8,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07
+IND-SAN-002,HTC-0532,HT0532,Verrettes,Vèrèt,Artibonite,31.5,%,2023,A,A,OCHA Haïti — établissements de santé (2023),v1.2026.07

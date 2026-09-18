@@ -1,0 +1,10 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-PRX-001,HTC-0311,HT0311,Cap-Haïtien,Kap Ayisyen,Nord,616.36,gourdes la marmite,2024,A,B,PAM (WFP) via OCHA HDX (CC BY-IGO 3.0) — moyennes calculées par Atmart,v1.2026.08
+IND-PRX-001,HTC-0511,HT0511,Gonaïves,Gonayiv,Artibonite,494.32,gourdes la marmite,2024,A,B,PAM (WFP) via OCHA HDX (CC BY-IGO 3.0) — moyennes calculées par Atmart,v1.2026.08
+IND-PRX-001,HTC-0611,HT0611,Hinche,Ench,Centre,487.95,gourdes la marmite,2024,A,B,PAM (WFP) via OCHA HDX (CC BY-IGO 3.0) — moyennes calculées par Atmart,v1.2026.08
+IND-PRX-001,HTC-0211,HT0211,Jacmel,Jakmèl,Sud-Est,653.4,gourdes la marmite,2024,A,B,PAM (WFP) via OCHA HDX (CC BY-IGO 3.0) — moyennes calculées par Atmart,v1.2026.08
+IND-PRX-001,HTC-0811,HT0811,Jérémie,Jeremi,Grande'Anse,290.89,gourdes la marmite,2024,A,B,PAM (WFP) via OCHA HDX (CC BY-IGO 3.0) — moyennes calculées par Atmart,v1.2026.08
+IND-PRX-001,HTC-0711,HT0711,Les Cayes,Okay,Sud,410.28,gourdes la marmite,2024,A,B,PAM (WFP) via OCHA HDX (CC BY-IGO 3.0) — moyennes calculées par Atmart,v1.2026.08
+IND-PRX-001,HTC-0421,HT0421,Ouanaminthe,Wanament,Nord-Est,700.0,gourdes la marmite,2024,A,B,PAM (WFP) via OCHA HDX (CC BY-IGO 3.0) — moyennes calculées par Atmart,v1.2026.08
+IND-PRX-001,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,503.7,gourdes la marmite,2024,A,B,PAM (WFP) via OCHA HDX (CC BY-IGO 3.0) — moyennes calculées par Atmart,v1.2026.08
+IND-PRX-001,HTC-0911,HT0911,Port-de-Paix,Pòdpè,Nord-Ouest,555.52,gourdes la marmite,2024,A,B,PAM (WFP) via OCHA HDX (CC BY-IGO 3.0) — moyennes calculées par Atmart,v1.2026.08

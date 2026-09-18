@@ -1,0 +1,53 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-TOU-009,HTC-0321,HT0321,Acul du Nord,Akil dinò,Nord,3.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0821,HT0821,Anse d'Hainault,Ansdeno,Grande'Anse,7.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0151,HT0151,Anse à Galets,Ansa galè ,Ouest,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0922,HT0922,Anse-à-Foleur,Ansafolè,Nord-Ouest,2.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0234,HT0234,Anse-à-Pître,Ansapit,Sud-Est,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-1021,HT1021,Anse-à-Veau,Ansavo,Nippes,3.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0731,HT0731,Aquin,Aken,Sud,5.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0141,HT0141,Arcahaie,Akayè,Ouest,10.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0723,HT0723,Arniquet,Anikè,Sud,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0221,HT0221,Bainet,Benè,Sud-Est,5.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-1031,HT1031,Baradères,Baradè,Nippes,2.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0362,HT0362,Bas Limbé,Ba Lenbe,Nord,5.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0813,HT0813,Bonbon,Trou Bonbon,Grande'Anse,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0351,HT0351,Borgne,Bòn,Nord,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0311,HT0311,Cap-Haïtien,Kap Ayisyen,Nord,7.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0434,HT0434,Caracol,Karakòl,Nord-Est,2.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0113,HT0113,Carrefour,Kafou,Ouest,4.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0213,HT0213,Cayes-Jacmel,Kay Jakmèl,Sud-Est,3.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0751,HT0751,Chardonnières,Chadonyè,Sud,2.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0117,HT0117,Cité Soleil,Site Solèy,Ouest,4.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0131,HT0131,Croix-Des-Bouquets,Kwadèboukè,Ouest,2.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0741,HT0741,Côteaux,Okoto,Sud,2.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0222,HT0222,Côtes de Fer,Kòtdefè,Sud-Est,12.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0822,HT0822,Dame Marie,Dam Mari,Grande'Anse,3.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0541,HT0541,Dessalines,Desalin,Artibonite,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0412,HT0412,Ferrier,Ferye,Nord-Est,3.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0411,HT0411,Fort-Liberté,Fòlibète,Nord-Est,3.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0543,HT0543,Grande Saline,Grand Salin,Artibonite,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0116,HT0116,Gressier,Gresye,Ouest,2.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0611,HT0611,Hinche,Ench,Centre,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0211,HT0211,Jacmel,Jakmèl,Sud-Est,18.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0811,HT0811,Jérémie,Jeremi,Grande'Anse,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0711,HT0711,Les Cayes,Okay,Sud,8.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0313,HT0313,Limonade,Limonad,Nord,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-1011,HT1011,Miragoâne,Miragwàn,Nippes,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0931,HT0931,Môle Saint Nicolas,Mòl Sen Nikola,Nord-Ouest,3.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0834,HT0834,Pestel,Pestèl,Grande'Anse,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0122,HT0122,Petit-Goâve,Tigwav,Ouest,3.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-1012,HT1012,Petite Rivière de Nippes,Ti Rivyè Nip,Nippes,2.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0322,HT0322,Plaine du Nord,Plèn dinò,Nord,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0152,HT0152,Pointe à Raquette,Pwent a Rakèt,Ouest,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0352,HT0352,Port-Margot,Pòmago,Nord,3.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0721,HT0721,Port-Salut,Pò Sali,Sud,2.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0911,HT0911,Port-de-Paix,Pòdpè,Nord-Ouest,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0722,HT0722,Saint Jean du Sud,Sen Jan disid.,Sud,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0732,HT0732,Saint Louis du Sud,Sen Lwi disid,Sud,2.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0531,HT0531,Saint-Marc,Sen Mak,Artibonite,6.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0551,HT0551,Saint-Michel de l'Attalaye,Sen Michèl Latalay,Artibonite,2.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0433,HT0433,Terrier Rouge,Tèrye rouj,Nord-Est,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0132,HT0132,Thomazeau,Tomazo,Ouest,1.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-009,HTC-0716,HT0716,Île à Vache,Ilavach,Sud,6.0,objets,2026,A,B,OpenStreetMap via Overpass — © contributeurs OSM (ODbL),v1.2026.08

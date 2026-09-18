@@ -1,0 +1,40 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-TOU-005,HTC-0922,HT0922,Anse-à-Foleur,Ansafolè,Nord-Ouest,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0731,HT0731,Aquin,Aken,Sud,2.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0141,HT0141,Arcahaie,Akayè,Ouest,4.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0714,HT0714,Camp-Perrin,Kanperen,Sud,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0311,HT0311,Cap-Haïtien,Kap Ayisyen,Nord,14.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0113,HT0113,Carrefour,Kafou,Ouest,5.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0131,HT0131,Croix-Des-Bouquets,Kwadèboukè,Ouest,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0741,HT0741,Côteaux,Okoto,Sud,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0222,HT0222,Côtes de Fer,Kòtdefè,Sud-Est,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0112,HT0112,Delmas,Dèlma,Ouest,15.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0541,HT0541,Dessalines,Desalin,Artibonite,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0512,HT0512,Ennery,Ènri,Artibonite,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0511,HT0511,Gonaïves,Gonayiv,Artibonite,6.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0123,HT0123,Grand-Goâve,Gran Gwav,Ouest,2.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0116,HT0116,Gressier,Gresye,Ouest,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0521,HT0521,Gros Morne,Gro Mòn,Artibonite,2.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0611,HT0611,Hinche,Ench,Centre,2.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0211,HT0211,Jacmel,Jakmèl,Sud-Est,6.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0811,HT0811,Jérémie,Jeremi,Grande'Anse,4.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0115,HT0115,Kenscoff,Kenskòf,Ouest,4.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0214,HT0214,La Vallée,Lavale,Sud-Est,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0711,HT0711,Les Cayes,Okay,Sud,8.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0121,HT0121,Léogâne,Leyogàn,Ouest,5.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0212,HT0212,Marigot,Marigo,Sud-Est,2.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-1011,HT1011,Miragoâne,Miragwàn,Nippes,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0621,HT0621,Mirebalais,Mibalè,Centre,3.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0931,HT0931,Môle Saint Nicolas,Mòl Sen Nikola,Nord-Ouest,2.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0421,HT0421,Ouanaminthe,Wanament,Nord-Est,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0122,HT0122,Petit-Goâve,Tigwav,Ouest,4.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-1012,HT1012,Petite Rivière de Nippes,Ti Rivyè Nip,Nippes,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0721,HT0721,Port-Salut,Pò Sali,Sud,6.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,10.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0114,HT0114,Pétion-Ville,Petyonvil,Ouest,24.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0921,HT0921,Saint-Louis du Nord,Sen Lwi dinò,Nord-Ouest,1.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0531,HT0531,Saint-Marc,Sen Mak,Artibonite,6.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0118,HT0118,Tabarre,Taba,Ouest,16.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0712,HT0712,Torbeck,Tòbèk,Sud,2.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0532,HT0532,Verrettes,Vèrèt,Artibonite,3.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08
+IND-TOU-005,HTC-0716,HT0716,Île à Vache,Ilavach,Sud,2.0,établissements,2015,A,B,Ministère du Tourisme et des Industries créatives (MTIC) — agrégat recalculé par Atmart,v1.2026.08

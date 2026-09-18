@@ -1,0 +1,31 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-TOU-008,HTC-0731,HT0731,Aquin,Aken,Sud,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0141,HT0141,Arcahaie,Akayè,Ouest,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0932,HT0932,Baie de Henne,Bèdeyèn,Nord-Ouest,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0714,HT0714,Camp-Perrin,Kanperen,Sud,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0311,HT0311,Cap-Haïtien,Kap Ayisyen,Nord,6.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0113,HT0113,Carrefour,Kafou,Ouest,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0733,HT0733,Cavaillon,Kavayon,Sud,2.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0213,HT0213,Cayes-Jacmel,Kay Jakmèl,Sud-Est,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0131,HT0131,Croix-Des-Bouquets,Kwadèboukè,Ouest,18.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0112,HT0112,Delmas,Dèlma,Ouest,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0412,HT0412,Ferrier,Ferye,Nord-Est,5.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0411,HT0411,Fort-Liberté,Fòlibète,Nord-Est,4.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0511,HT0511,Gonaïves,Gonayiv,Artibonite,3.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0211,HT0211,Jacmel,Jakmèl,Sud-Est,14.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0934,HT0934,Jean Rabel,Jan Rabèl,Nord-Ouest,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0711,HT0711,Les Cayes,Okay,Sud,6.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0313,HT0313,Limonade,Limonad,Nord,10.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0121,HT0121,Léogâne,Leyogàn,Ouest,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0621,HT0621,Mirebalais,Mibalè,Centre,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0421,HT0421,Ouanaminthe,Wanament,Nord-Est,9.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,7.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0114,HT0114,Pétion-Ville,Petyonvil,Ouest,4.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0312,HT0312,Quartier Morin,Katye Moren,Nord,7.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0531,HT0531,Saint-Marc,Sen Mak,Artibonite,3.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0551,HT0551,Saint-Michel de l'Attalaye,Sen Michèl Latalay,Artibonite,2.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0118,HT0118,Tabarre,Taba,Ouest,3.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0433,HT0433,Terrier Rouge,Tèrye rouj,Nord-Est,3.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0132,HT0132,Thomazeau,Tomazo,Ouest,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0431,HT0431,Trou du Nord,Twou dinò,Nord-Est,3.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-008,HTC-0532,HT0532,Verrettes,Vèrèt,Artibonite,1.0,établissements,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08

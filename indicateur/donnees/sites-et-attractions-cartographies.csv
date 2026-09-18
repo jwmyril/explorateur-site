@@ -1,0 +1,47 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-TOU-002,HTC-0523,HT0523,Anse Rouge,Ans Rouj,Artibonite,2.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0731,HT0731,Aquin,Aken,Sud,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0141,HT0141,Arcahaie,Akayè,Ouest,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0723,HT0723,Arniquet,Anikè,Sud,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0932,HT0932,Baie de Henne,Bèdeyèn,Nord-Ouest,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0833,HT0833,Beaumont,Bomon,Grande'Anse,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0623,HT0623,Boucan Carré,Boukan Kare,Centre,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0714,HT0714,Camp-Perrin,Kanperen,Sud,2.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0311,HT0311,Cap-Haïtien,Kap Ayisyen,Nord,6.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0113,HT0113,Carrefour,Kafou,Ouest,6.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0614,HT0614,Cerca Carvajal,Sèka Kavajal,Centre,2.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0751,HT0751,Chardonnières,Chadonyè,Sud,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0131,HT0131,Croix-Des-Bouquets,Kwadèboukè,Ouest,5.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0741,HT0741,Côteaux,Okoto,Sud,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0222,HT0222,Côtes de Fer,Kòtdefè,Sud-Est,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0112,HT0112,Delmas,Dèlma,Ouest,3.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0541,HT0541,Dessalines,Desalin,Artibonite,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0342,HT0342,Dondon,Dondon,Nord,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-1013,HT1013,Fonds des Nègres,Fon dènèg,Nippes,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0135,HT0135,Fonds-Verrettes,Fonvèrèt,Ouest,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0411,HT0411,Fort-Liberté,Fòlibète,Nord-Est,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0511,HT0511,Gonaïves,Gonayiv,Artibonite,5.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0123,HT0123,Grand-Goâve,Gran Gwav,Ouest,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0611,HT0611,Hinche,Ench,Centre,5.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0211,HT0211,Jacmel,Jakmèl,Sud-Est,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0811,HT0811,Jérémie,Jeremi,Grande'Anse,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0115,HT0115,Kenscoff,Kenskòf,Ouest,2.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0631,HT0631,Lascahobas,Laskawobas,Centre,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0711,HT0711,Les Cayes,Okay,Sud,11.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0361,HT0361,Limbé,Lenbe,Nord,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0122,HT0122,Petit-Goâve,Tigwav,Ouest,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0322,HT0322,Plaine du Nord,Plèn dinò,Nord,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,30.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0911,HT0911,Port-de-Paix,Pòdpè,Nord-Ouest,3.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0114,HT0114,Pétion-Ville,Petyonvil,Ouest,13.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0312,HT0312,Quartier Morin,Katye Moren,Nord,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0832,HT0832,Roseaux,Rozo,Grande'Anse,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0732,HT0732,Saint Louis du Sud,Sen Lwi disid,Sud,2.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0921,HT0921,Saint-Louis du Nord,Sen Lwi dinò,Nord-Ouest,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0531,HT0531,Saint-Marc,Sen Mak,Artibonite,12.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0551,HT0551,Saint-Michel de l'Attalaye,Sen Michèl Latalay,Artibonite,2.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0622,HT0622,Saut d'Eau,Sodo,Centre,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0118,HT0118,Tabarre,Taba,Ouest,6.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0132,HT0132,Thomazeau,Tomazo,Ouest,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0532,HT0532,Verrettes,Vèrèt,Artibonite,1.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08
+IND-TOU-002,HTC-0716,HT0716,Île à Vache,Ilavach,Sud,2.0,objets,2026,A,B,OpenStreetMap via HOT — © contributeurs OSM (ODbL),v1.2026.08

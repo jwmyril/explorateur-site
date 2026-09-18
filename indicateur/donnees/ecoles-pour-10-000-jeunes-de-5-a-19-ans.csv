@@ -1,0 +1,50 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-EDU-010,HTC-0812,HT0812,Abricots,Abriko,Grande'Anse,23.67,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0821,HT0821,Anse d'Hainault,Ansdeno,Grande'Anse,28.41,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-1021,HT1021,Anse-à-Veau,Ansavo,Nippes,72.84,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0731,HT0731,Aquin,Aken,Sud,64.2,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-1024,HT1024,Arnaud,Ano,Nippes,48.74,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0723,HT0723,Arniquet,Anikè,Sud,32.4,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-1031,HT1031,Baradères,Baradè,Nippes,49.32,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0833,HT0833,Beaumont,Bomon,Grande'Anse,40.27,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0813,HT0813,Bonbon,Trou Bonbon,Grande'Anse,20.17,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0714,HT0714,Camp-Perrin,Kanperen,Sud,53.72,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0733,HT0733,Cavaillon,Kavayon,Sud,90.11,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0815,HT0815,Chambellan,Chanbelan,Grande'Anse,25.01,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0713,HT0713,Chantal,Chantal,Sud,28.92,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0751,HT0751,Chardonnières,Chadonyè,Sud,69.43,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0117,HT0117,Cité Soleil,Site Solèy,Ouest,35.41,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0831,HT0831,Corail,Koray,Grande'Anse,37.88,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0131,HT0131,Croix-Des-Bouquets,Kwadèboukè,Ouest,55.29,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0741,HT0741,Côteaux,Okoto,Sud,67.69,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0822,HT0822,Dame Marie,Dam Mari,Grande'Anse,37.67,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0112,HT0112,Delmas,Dèlma,Ouest,7.72,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-1013,HT1013,Fonds des Nègres,Fon dènèg,Nippes,74.06,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0133,HT0133,Ganthier,Gantye,Ouest,9.69,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-1032,HT1032,Grand-Boucan,Gran Boukan,Nippes,47.96,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0811,HT0811,Jérémie,Jeremi,Grande'Anse,56.4,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-1023,HT1023,L'Asile,Lazil,Nippes,61.26,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0752,HT0752,Les Anglais,Anglè yo,Sud,26.25,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0711,HT0711,Les Cayes,Okay,Sud,50.84,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0823,HT0823,Les Irois,Lèziwa,Grande'Anse,44.18,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0715,HT0715,Maniche,Manich,Sud,43.13,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-1011,HT1011,Miragoâne,Miragwàn,Nippes,82.52,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0814,HT0814,Moron,Mowon,Grande'Anse,32.84,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-1014,HT1014,Paillant,Payan,Nippes,70.42,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0834,HT0834,Pestel,Pestèl,Grande'Anse,48.36,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-1022,HT1022,Petit Trou de Nippes,Ti Trou Nip,Nippes,42.19,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-1012,HT1012,Petite Rivière de Nippes,Ti Rivyè Nip,Nippes,49.28,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-1025,HT1025,Plaisance du Sud,Plezans Disid,Nippes,48.54,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0721,HT0721,Port-Salut,Pò Sali,Sud,154.28,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,8.86,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0742,HT0742,Port-à-Piment,Pòtapiman,Sud,19.52,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0114,HT0114,Pétion-Ville,Petyonvil,Ouest,1.71,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0743,HT0743,Roche à Bâteau,Ròcha Bato,Sud,34.45,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0832,HT0832,Roseaux,Rozo,Grande'Anse,57.17,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0722,HT0722,Saint Jean du Sud,Sen Jan disid.,Sud,39.4,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0732,HT0732,Saint Louis du Sud,Sen Lwi disid,Sud,36.37,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0118,HT0118,Tabarre,Taba,Ouest,19.57,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0132,HT0132,Thomazeau,Tomazo,Ouest,14.37,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0753,HT0753,Tiburon,Tibiwon,Sud,32.82,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0712,HT0712,Torbeck,Tòbèk,Sud,31.04,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08
+IND-EDU-010,HTC-0716,HT0716,Île à Vache,Ilavach,Sud,42.32,écoles / 10 000 jeunes,2022,E,B,OCHA Haïti — institutions scolaires (2022),v1.2026.08

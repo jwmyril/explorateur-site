@@ -1,0 +1,15 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-SAN-010,HTC-0311,HT0311,Cap-Haïtien,Kap Ayisyen,Nord,2.24,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0544,HT0544,Desdunes,Dedin,Artibonite,1.06,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0541,HT0541,Dessalines,Desalin,Artibonite,7.12,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0512,HT0512,Ennery,Ènri,Artibonite,5.33,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0511,HT0511,Gonaïves,Gonayiv,Artibonite,2.19,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0543,HT0543,Grande Saline,Grand Salin,Artibonite,1.27,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0611,HT0611,Hinche,Ench,Centre,3.19,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0533,HT0533,La Chapelle,Lachapèl,Artibonite,0.61,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0552,HT0552,Marmelade,Mamelad,Artibonite,1.51,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0612,HT0612,Maïssade,Mayisad,Centre,3.05,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,1.36,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0531,HT0531,Saint-Marc,Sen Mak,Artibonite,3.84,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0613,HT0613,Thomonde,Tomond,Centre,2.82,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08
+IND-SAN-010,HTC-0532,HT0532,Verrettes,Vèrèt,Artibonite,4.98,établissements / 10 000 hab.,2023,E,B,OCHA Haïti — établissements de santé (2023),v1.2026.08

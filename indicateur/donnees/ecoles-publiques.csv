@@ -1,0 +1,50 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-EDU-003,HTC-0812,HT0812,Abricots,Abriko,Grande'Anse,6,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0821,HT0821,Anse d'Hainault,Ansdeno,Grande'Anse,13,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-1021,HT1021,Anse-à-Veau,Ansavo,Nippes,26,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0731,HT0731,Aquin,Aken,Sud,28,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-1024,HT1024,Arnaud,Ano,Nippes,11,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0723,HT0723,Arniquet,Anikè,Sud,11,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-1031,HT1031,Baradères,Baradè,Nippes,19,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0833,HT0833,Beaumont,Bomon,Grande'Anse,21,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0813,HT0813,Bonbon,Trou Bonbon,Grande'Anse,4,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0714,HT0714,Camp-Perrin,Kanperen,Sud,15,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0733,HT0733,Cavaillon,Kavayon,Sud,14,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0815,HT0815,Chambellan,Chanbelan,Grande'Anse,6,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0713,HT0713,Chantal,Chantal,Sud,13,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0751,HT0751,Chardonnières,Chadonyè,Sud,21,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0117,HT0117,Cité Soleil,Site Solèy,Ouest,15,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0831,HT0831,Corail,Koray,Grande'Anse,9,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0131,HT0131,Croix-Des-Bouquets,Kwadèboukè,Ouest,12,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0741,HT0741,Côteaux,Okoto,Sud,17,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0822,HT0822,Dame Marie,Dam Mari,Grande'Anse,14,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0112,HT0112,Delmas,Dèlma,Ouest,11,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-1013,HT1013,Fonds des Nègres,Fon dènèg,Nippes,14,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0133,HT0133,Ganthier,Gantye,Ouest,3,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-1032,HT1032,Grand-Boucan,Gran Boukan,Nippes,5,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0811,HT0811,Jérémie,Jeremi,Grande'Anse,88,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-1023,HT1023,L'Asile,Lazil,Nippes,33,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0752,HT0752,Les Anglais,Anglè yo,Sud,7,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0711,HT0711,Les Cayes,Okay,Sud,44,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0823,HT0823,Les Irois,Lèziwa,Grande'Anse,12,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0715,HT0715,Maniche,Manich,Sud,10,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-1011,HT1011,Miragoâne,Miragwàn,Nippes,28,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0814,HT0814,Moron,Mowon,Grande'Anse,21,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-1014,HT1014,Paillant,Payan,Nippes,9,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0834,HT0834,Pestel,Pestèl,Grande'Anse,25,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-1022,HT1022,Petit Trou de Nippes,Ti Trou Nip,Nippes,11,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-1012,HT1012,Petite Rivière de Nippes,Ti Rivyè Nip,Nippes,13,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-1025,HT1025,Plaisance du Sud,Plezans Disid,Nippes,17,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0721,HT0721,Port-Salut,Pò Sali,Sud,32,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,28,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0742,HT0742,Port-à-Piment,Pòtapiman,Sud,6,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0114,HT0114,Pétion-Ville,Petyonvil,Ouest,5,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0743,HT0743,Roche à Bâteau,Ròcha Bato,Sud,11,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0832,HT0832,Roseaux,Rozo,Grande'Anse,17,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0722,HT0722,Saint Jean du Sud,Sen Jan disid.,Sud,12,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0732,HT0732,Saint Louis du Sud,Sen Lwi disid,Sud,12,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0118,HT0118,Tabarre,Taba,Ouest,3,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0132,HT0132,Thomazeau,Tomazo,Ouest,1,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0753,HT0753,Tiburon,Tibiwon,Sud,12,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0712,HT0712,Torbeck,Tòbèk,Sud,23,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07
+IND-EDU-003,HTC-0716,HT0716,Île à Vache,Ilavach,Sud,5,nombre,2022,A,C,OCHA Haïti — institutions scolaires (2022),v1.2026.07

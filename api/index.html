@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<script>(function(){try{var v=localStorage.getItem("atmart_apparence"),d=v==="sombre"||(v!=="clair"&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"light");}catch(e){}})();</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>API publique v1 | Atmart Data</title>
+<meta name="description" content="Les données de l'Explorateur Haïti en JSON : territoires, indicateurs et valeurs par commune. Gratuite, sans clé, versionnée." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://explorateur.atmart.ltd/api/index.html" />
+<meta property="og:title" content="API publique v1 | Atmart Data" />
+<meta property="og:description" content="Les données de l'Explorateur Haïti en JSON : territoires, indicateurs et valeurs par commune. Gratuite, sans clé, versionnée." />
+<meta property="og:image" content="https://explorateur.atmart.ltd/assets/brand/partage-1200x627.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="../assets/brand/explorateur.ico" sizes="any" />
+<link rel="stylesheet" href="../assets/commune.css?v=cc9af900" />
+<link rel="canonical" href="https://explorateur.atmart.ltd/api/index.html" />
+<link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/api/index.html" />
+<link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/api/index.html" />
+<link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/api/index.html" />
+<link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/api/index.html" />
+<link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/api/index.html" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebAPI","name":"API publique de l'Explorateur Haïti","description":"Les données de l'Explorateur Haïti en JSON : territoires, indicateurs et valeurs par commune. Gratuite, sans clé, versionnée.","inLanguage":"fr","url":"https://explorateur.atmart.ltd/api/index.html","documentation":"https://explorateur.atmart.ltd/api/index.html","isAccessibleForFree":true,"provider":{"@type":"Organization","name":"Atmart Data"}}</script>
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-azG7466GJG3N2tXaD2JbpfL3ct3SwpojTiusVJSI1dw=' 'sha256-souEUwHNIxdMZYiRrYRDXP50kmQExQV1XtdKKmQked4='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+</head>
+<body>
+<header><span class="langues"><a href="../api/index.html" aria-current="true" hreflang="fr">Français</a> <a href="../ht/api/index.html" hreflang="ht">Kreyòl</a> <a href="../en/api/index.html" hreflang="en">English</a> <a href="../es/api/index.html" hreflang="es">Español</a></span><a href="../index.html">Explorateur Haïti</a></header>
+<main>
+<h1>API publique de l'Explorateur Haïti</h1>
+<p class="chapeau">Toutes les données de l'Explorateur, en fichiers JSON servis comme le site : gratuites, sans clé et sans inscription. Chaque valeur porte sa source, son année et son statut.</p>
+<h2>Ce que la v1 garantit</h2><ul><li>Une adresse de /api/v1/ ne change pas de forme : un champ peut s'ajouter, aucun ne disparaît ni ne change de nom.</li><li>Ce qui casserait un programme existant ira en /api/v2/, et la v1 restera servie.</li><li>Les valeurs sont celles des fichiers publiés, à l'identique ; une valeur absente vaut null, jamais zéro.</li></ul>
+<h2>Adresses</h2><table><thead><tr><th scope="col">Adresse</th><th scope="col">Contenu</th></tr></thead><tbody><tr><td><a href="https://explorateur.atmart.ltd/api/v1/index.json"><code>/api/v1/index.json</code></a></td><td>Version, date de mise à jour et liste des adresses</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/territoires.json"><code>/api/v1/territoires.json</code></a></td><td>Les 192 territoires : pays, départements, arrondissements, communes</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/indicateurs.json"><code>/api/v1/indicateurs.json</code></a></td><td>Les 66 indicateurs : noms, unités, définitions et limites en 4 langues</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/indicateurs/IND-POP-001.json"><code>/api/v1/indicateurs/IND-POP-001.json</code></a></td><td>Les valeurs d'un indicateur, commune par commune</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/communes/HT0111.json"><code>/api/v1/communes/HT0111.json</code></a></td><td>Toutes les valeurs d'une commune (par code, ex. HT0111)</td></tr></tbody></table>
+<h2>Exemples</h2><pre style="overflow-x:auto;background:var(--boite);padding:1rem;border-radius:8px"><code>curl -s https://explorateur.atmart.ltd/api/v1/communes/HT0111.json
+
+# Python
+import json, urllib.request
+v = json.load(urllib.request.urlopen(&quot;https://explorateur.atmart.ltd/api/v1/indicateurs/IND-POP-002.json&quot;, timeout=30))
+print(v[&quot;valeurs&quot;][0])
+
+// JavaScript
+fetch(&quot;https://explorateur.atmart.ltd/api/v1/territoires.json&quot;).then(r =&gt; r.json()).then(console.log);</code></pre>
+<h2>Usage intensif</h2><p>Les fichiers sont servis sans quota. Pour des appels très fréquents ou une intégration dans un produit, écrivez à sales@atmart.ltd : des clés et des quotas dédiés arriveront sur un service séparé, sans rien retirer de cette API gratuite.</p>
+<h2>Citation et licence</h2><p>Citez « Atmart Data, Explorateur Haïti » et la source indiquée dans chaque valeur. La licence de réutilisation de chaque jeu est celle de sa source ; elle est indiquée dans le registre des sources. <a href="../donnees-registres.html">Registre des sources</a></p>
+<section class="nl-bloc" aria-labelledby="nl-titre"><h2 id="nl-titre" class="nl-titre">Recevoir les nouvelles données</h2><p class="nl-texte">Une lettre quand de nouvelles données ou analyses paraissent. Votre adresse ne sert qu'à cela.</p><form class="nl-form" novalidate><label for="nl-courriel">Votre adresse courriel</label><span class="nl-ligne"><input id="nl-courriel" type="email" name="email" required autocomplete="email" inputmode="email" /><button type="submit">S'inscrire</button></span></form><p class="nl-etat" role="status" hidden><span class="nl-ok" hidden>C'est noté : vous recevrez la prochaine lettre.</span><span class="nl-err" hidden>L'inscription n'a pas abouti. Réessayez, ou écrivez à sales@atmart.ltd.</span></p><p class="nl-vie"><a href="../conditions.html#confidentialite">Confidentialité</a></p><script src="../assets/newsletter.js?v=1" defer></script></section>
+</main>
+<footer><p>Documentation engendrée par build_api.py depuis les fichiers publiés.</p></footer>
+</body>
+</html>

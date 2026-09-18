@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<script>(function(){try{var v=localStorage.getItem("atmart_apparence"),d=v==="sombre"||(v!=="clair"&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"light");}catch(e){}})();</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>API piblik v1 | Atmart Data</title>
+<meta name="description" content="Done Eksploratè Ayiti a an JSON : teritwa, endikatè ak valè pa komin. Gratis, san kle, ak vèsyon." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://explorateur.atmart.ltd/ht/api/index.html" />
+<meta property="og:title" content="API piblik v1 | Atmart Data" />
+<meta property="og:description" content="Done Eksploratè Ayiti a an JSON : teritwa, endikatè ak valè pa komin. Gratis, san kle, ak vèsyon." />
+<meta property="og:image" content="https://explorateur.atmart.ltd/assets/brand/partage-1200x627.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="../../assets/brand/explorateur.ico" sizes="any" />
+<link rel="stylesheet" href="../../assets/commune.css?v=cc9af900" />
+<link rel="canonical" href="https://explorateur.atmart.ltd/ht/api/index.html" />
+<link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/api/index.html" />
+<link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/api/index.html" />
+<link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/api/index.html" />
+<link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/api/index.html" />
+<link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/api/index.html" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebAPI","name":"API piblik Eksploratè Ayiti a","description":"Done Eksploratè Ayiti a an JSON : teritwa, endikatè ak valè pa komin. Gratis, san kle, ak vèsyon.","inLanguage":"ht","url":"https://explorateur.atmart.ltd/ht/api/index.html","documentation":"https://explorateur.atmart.ltd/ht/api/index.html","isAccessibleForFree":true,"provider":{"@type":"Organization","name":"Atmart Data"}}</script>
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-azG7466GJG3N2tXaD2JbpfL3ct3SwpojTiusVJSI1dw=' 'sha256-v+v/SpEvm0rDeytRQH6UoSZsyYpm0OBsJOFvB0hGyvk='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+</head>
+<body>
+<header><span class="langues"><a href="../../api/index.html" hreflang="fr">Français</a> <a href="../../ht/api/index.html" aria-current="true" hreflang="ht">Kreyòl</a> <a href="../../en/api/index.html" hreflang="en">English</a> <a href="../../es/api/index.html" hreflang="es">Español</a></span><a href="../../ht/index.html">Eksploratè Ayiti</a></header>
+<main>
+<h1>API piblik Eksploratè Ayiti a</h1>
+<p class="chapeau">Tout done Eksploratè a, nan fichye JSON sit la bay dirèkteman : gratis, san kle, san w pa bezwen enskri. Chak valè gen sous li, ane li ak estati li.</p>
+<h2>Sa v1 an garanti</h2><ul><li>Yon adrès nan /api/v1/ pa chanje fòm : nou ka ajoute yon chan, men okenn chan p ap disparèt ni chanje non.</li><li>Sa ki ta kase yon pwogram ki deja la ap ale nan /api/v2/, e v1 an ap rete disponib.</li><li>Valè yo se menm valè ki nan fichye nou pibliye yo ; yon valè ki manke se null, li pa janm zewo.</li></ul>
+<h2>Adrès yo</h2><table><thead><tr><th scope="col">Adrès</th><th scope="col">Sa ki ladan l</th></tr></thead><tbody><tr><td><a href="https://explorateur.atmart.ltd/api/v1/index.json"><code>/api/v1/index.json</code></a></td><td>Vèsyon, dat mizajou ak lis adrès yo</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/territoires.json"><code>/api/v1/territoires.json</code></a></td><td>192 teritwa yo : peyi, depatman, awondisman, komin</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/indicateurs.json"><code>/api/v1/indicateurs.json</code></a></td><td>66 endikatè yo : non, inite, definisyon ak limit an 4 lang</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/indicateurs/IND-POP-001.json"><code>/api/v1/indicateurs/IND-POP-001.json</code></a></td><td>Valè yon endikatè, komin pa komin</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/communes/HT0111.json"><code>/api/v1/communes/HT0111.json</code></a></td><td>Tout valè yon komin (pa kòd, egzanp HT0111)</td></tr></tbody></table>
+<h2>Egzanp</h2><pre style="overflow-x:auto;background:var(--boite);padding:1rem;border-radius:8px"><code>curl -s https://explorateur.atmart.ltd/api/v1/communes/HT0111.json
+
+# Python
+import json, urllib.request
+v = json.load(urllib.request.urlopen(&quot;https://explorateur.atmart.ltd/api/v1/indicateurs/IND-POP-002.json&quot;, timeout=30))
+print(v[&quot;valeurs&quot;][0])
+
+// JavaScript
+fetch(&quot;https://explorateur.atmart.ltd/api/v1/territoires.json&quot;).then(r =&gt; r.json()).then(console.log);</code></pre>
+<h2>Si w itilize l anpil</h2><p>Fichye yo pa gen limit. Si w bezwen rele yo trè souvan oswa mete yo nan yon pwodwi, ekri sales@atmart.ltd : kle ak limit pou sa ap vini sou yon sèvis apa, san nou pa retire anyen nan API gratis sa a.</p>
+<h2>Kijan pou site l ak lisans</h2><p>Site « Atmart Data, Explorateur Haïti » ak sous ki ekri nan chak valè. Lisans pou reitilize chak seri done se lisans sous li ; li ekri nan rejis sous yo. <a href="../../ht/donnees-registres.html">Rejis sous yo</a></p>
+<section class="nl-bloc" aria-labelledby="nl-titre"><h2 id="nl-titre" class="nl-titre">Resevwa nouvo done yo</h2><p class="nl-texte">Yon lèt chak fwa nouvo done oswa nouvo analiz parèt. Adrès ou a pa sèvi pou okenn lòt bagay.</p><form class="nl-form" novalidate><label for="nl-courriel">Adrès imèl ou</label><span class="nl-ligne"><input id="nl-courriel" type="email" name="email" required autocomplete="email" inputmode="email" /><button type="submit">Enskri</button></span></form><p class="nl-etat" role="status" hidden><span class="nl-ok" hidden>Nou pran l : w ap resevwa pwochen lèt la.</span><span class="nl-err" hidden>Enskripsyon an pa pase. Eseye ankò, oswa ekri sales@atmart.ltd.</span></p><p class="nl-vie"><a href="../../ht/conditions.html#confidentialite">Vi prive</a></p><script src="../../assets/newsletter.js?v=1" defer></script></section>
+</main>
+<footer><p>Dokiman sa a fèt otomatikman pa build_api.py apati fichye nou pibliye yo.</p></footer>
+</body>
+</html>

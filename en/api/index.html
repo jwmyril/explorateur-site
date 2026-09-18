@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var v=localStorage.getItem("atmart_apparence"),d=v==="sombre"||(v!=="clair"&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"light");}catch(e){}})();</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Public API v1 | Atmart Data</title>
+<meta name="description" content="Haiti Explorer data in JSON: territories, indicators and values by commune. Free, keyless, versioned." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://explorateur.atmart.ltd/en/api/index.html" />
+<meta property="og:title" content="Public API v1 | Atmart Data" />
+<meta property="og:description" content="Haiti Explorer data in JSON: territories, indicators and values by commune. Free, keyless, versioned." />
+<meta property="og:image" content="https://explorateur.atmart.ltd/assets/brand/partage-1200x627.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="../../assets/brand/explorateur.ico" sizes="any" />
+<link rel="stylesheet" href="../../assets/commune.css?v=cc9af900" />
+<link rel="canonical" href="https://explorateur.atmart.ltd/en/api/index.html" />
+<link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/api/index.html" />
+<link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/api/index.html" />
+<link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/api/index.html" />
+<link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/api/index.html" />
+<link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/api/index.html" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebAPI","name":"Haiti Explorer public API","description":"Haiti Explorer data in JSON: territories, indicators and values by commune. Free, keyless, versioned.","inLanguage":"en","url":"https://explorateur.atmart.ltd/en/api/index.html","documentation":"https://explorateur.atmart.ltd/en/api/index.html","isAccessibleForFree":true,"provider":{"@type":"Organization","name":"Atmart Data"}}</script>
+<!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-IxBu0LOaO2LLN39W0rwQbEmWFnkJkXX0rmDVbq9EydA=' 'sha256-azG7466GJG3N2tXaD2JbpfL3ct3SwpojTiusVJSI1dw='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<!-- /Sécurité -->
+</head>
+<body>
+<header><span class="langues"><a href="../../api/index.html" hreflang="fr">Français</a> <a href="../../ht/api/index.html" hreflang="ht">Kreyòl</a> <a href="../../en/api/index.html" aria-current="true" hreflang="en">English</a> <a href="../../es/api/index.html" hreflang="es">Español</a></span><a href="../../en/index.html">Haiti Explorer</a></header>
+<main>
+<h1>Haiti Explorer public API</h1>
+<p class="chapeau">All the Explorer data, as JSON files served like the site: free, with no key and no sign-up. Every value carries its source, year and status.</p>
+<h2>What v1 guarantees</h2><ul><li>An address under /api/v1/ keeps its shape: a field may be added, none is removed or renamed.</li><li>Anything that would break an existing program goes to /api/v2/, and v1 stays served.</li><li>Values are those of the published files, unchanged; a missing value is null, never zero.</li></ul>
+<h2>Endpoints</h2><table><thead><tr><th scope="col">Address</th><th scope="col">Content</th></tr></thead><tbody><tr><td><a href="https://explorateur.atmart.ltd/api/v1/index.json"><code>/api/v1/index.json</code></a></td><td>Version, update date and list of endpoints</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/territoires.json"><code>/api/v1/territoires.json</code></a></td><td>The 192 territories: country, departments, arrondissements, communes</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/indicateurs.json"><code>/api/v1/indicateurs.json</code></a></td><td>The 66 indicators: names, units, definitions and limits in 4 languages</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/indicateurs/IND-POP-001.json"><code>/api/v1/indicateurs/IND-POP-001.json</code></a></td><td>The values of one indicator, commune by commune</td></tr><tr><td><a href="https://explorateur.atmart.ltd/api/v1/communes/HT0111.json"><code>/api/v1/communes/HT0111.json</code></a></td><td>All values of one commune (by code, e.g. HT0111)</td></tr></tbody></table>
+<h2>Examples</h2><pre style="overflow-x:auto;background:var(--boite);padding:1rem;border-radius:8px"><code>curl -s https://explorateur.atmart.ltd/api/v1/communes/HT0111.json
+
+# Python
+import json, urllib.request
+v = json.load(urllib.request.urlopen(&quot;https://explorateur.atmart.ltd/api/v1/indicateurs/IND-POP-002.json&quot;, timeout=30))
+print(v[&quot;valeurs&quot;][0])
+
+// JavaScript
+fetch(&quot;https://explorateur.atmart.ltd/api/v1/territoires.json&quot;).then(r =&gt; r.json()).then(console.log);</code></pre>
+<h2>Heavy use</h2><p>The files are served without quotas. For very frequent calls or product integration, write to sales@atmart.ltd: dedicated keys and quotas will come on a separate service, without removing anything from this free API.</p>
+<h2>Citation and licence</h2><p>Cite “Atmart Data, Haiti Explorer” and the source given in each value. The reuse licence of each dataset is that of its source; it is given in the source register. <a href="../../en/donnees-registres.html">Source register</a></p>
+<section class="nl-bloc" aria-labelledby="nl-titre"><h2 id="nl-titre" class="nl-titre">Get new data by e-mail</h2><p class="nl-texte">A letter when new data or analyses come out. Your address is used for nothing else.</p><form class="nl-form" novalidate><label for="nl-courriel">Your e-mail address</label><span class="nl-ligne"><input id="nl-courriel" type="email" name="email" required autocomplete="email" inputmode="email" /><button type="submit">Subscribe</button></span></form><p class="nl-etat" role="status" hidden><span class="nl-ok" hidden>Done: you will receive the next letter.</span><span class="nl-err" hidden>Sign-up failed. Try again, or write to sales@atmart.ltd.</span></p><p class="nl-vie"><a href="../../en/conditions.html#confidentialite">Privacy</a></p><script src="../../assets/newsletter.js?v=1" defer></script></section>
+</main>
+<footer><p>Documentation generated by build_api.py from the published files.</p></footer>
+</body>
+</html>

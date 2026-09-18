@@ -2,6 +2,10 @@
 "communes": {
 "HT0111": {
 "i15": 474403,
+"m15_cartel": 13.58,
+"m15_nuls": 7.21,
+"m15_pv": 82.85,
+"m15_tot": 72035,
 "p06_bn": 5.31,
 "p06_partiel": true,
 "p06_pv": 94.77,
@@ -10,6 +14,10 @@
 },
 "HT0112": {
 "i15": 306454,
+"m15_cartel": 21.16,
+"m15_nuls": 4.9,
+"m15_pv": 87.26,
+"m15_tot": 46985,
 "p06_bn": 4.11,
 "p06_partiel": true,
 "p06_pv": 93.59,
@@ -18,6 +26,10 @@
 },
 "HT0113": {
 "i15": 296802,
+"m15_cartel": 23.32,
+"m15_nuls": 6.1,
+"m15_pv": 90.45,
+"m15_tot": 46753,
 "p06_bn": 6.46,
 "p06_partiel": true,
 "p06_pv": 96.3,
@@ -26,6 +38,10 @@
 },
 "HT0114": {
 "i15": 266123,
+"m15_cartel": 14.56,
+"m15_nuls": 6.53,
+"m15_pv": 90.47,
+"m15_tot": 44751,
 "p06_bn": 6.13,
 "p06_partiel": true,
 "p06_pv": 93.61,
@@ -42,6 +58,10 @@
 },
 "HT0116": {
 "i15": 50647,
+"m15_cartel": 11.88,
+"m15_nuls": 7.75,
+"m15_pv": 74.14,
+"m15_tot": 10793,
 "p06_bn": 8.86,
 "p06_partiel": true,
 "p06_pv": 98.41,
@@ -50,6 +70,10 @@
 },
 "HT0117": {
 "i15": 125326,
+"m15_cartel": 7.59,
+"m15_nuls": 4.04,
+"m15_pv": 75.89,
+"m15_tot": 34337,
 "p06_bn": 5.35,
 "p06_partiel": true,
 "p06_pv": 94.84,
@@ -58,6 +82,10 @@
 },
 "HT0118": {
 "i15": 103479,
+"m15_cartel": 10.46,
+"m15_nuls": 4.9,
+"m15_pv": 84.03,
+"m15_tot": 17353,
 "p06_bn": 6.11,
 "p06_partiel": true,
 "p06_pv": 97.44,
@@ -66,6 +94,10 @@
 },
 "HT0121": {
 "i15": 107852,
+"m15_cartel": 38.64,
+"m15_nuls": 7.19,
+"m15_pv": 95.74,
+"m15_tot": 30244,
 "p06_bn": 12.7,
 "p06_partiel": true,
 "p06_pv": 98.77,
@@ -74,6 +106,10 @@
 },
 "HT0122": {
 "i15": 88335,
+"m15_cartel": 18.66,
+"m15_nuls": 4.97,
+"m15_pv": 92.89,
+"m15_tot": 28079,
 "p06_bn": 15.58,
 "p06_partiel": true,
 "p06_pv": 97.04,
@@ -82,6 +118,10 @@
 },
 "HT0123": {
 "i15": 34674,
+"m15_cartel": 40.92,
+"m15_nuls": 6.09,
+"m15_pv": 91.86,
+"m15_tot": 13755,
 "p06_bn": 15.27,
 "p06_partiel": true,
 "p06_pv": 93.65,
@@ -98,6 +138,10 @@
 },
 "HT0132": {
 "i15": 31881,
+"m15_cartel": 16.36,
+"m15_nuls": 5.59,
+"m15_pv": 85.53,
+"m15_tot": 9583,
 "p06_bn": 17.95,
 "p06_partiel": true,
 "p06_pv": 97.96,
@@ -106,6 +150,10 @@
 },
 "HT0133": {
 "i15": 47018,
+"m15_cartel": 30.37,
+"m15_nuls": 3.87,
+"m15_pv": 90.83,
+"m15_tot": 15181,
 "p06_bn": 13.18,
 "p06_partiel": true,
 "p06_pv": 95.89,
@@ -122,6 +170,10 @@
 },
 "HT0135": {
 "i15": 26488,
+"m15_cartel": 22.78,
+"m15_nuls": 17.91,
+"m15_pv": 100.0,
+"m15_tot": 9122,
 "p06_bn": 16.51,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -130,6 +182,10 @@
 },
 "HT0141": {
 "i15": 74691,
+"m15_cartel": 15.89,
+"m15_nuls": 9.32,
+"m15_pv": 84.39,
+"m15_tot": 14661,
 "p06_bn": 14.29,
 "p06_partiel": true,
 "p06_pv": 92.11,
@@ -138,6 +194,10 @@
 },
 "HT0142": {
 "i15": 47008,
+"m15_cartel": 23.24,
+"m15_nuls": 5.14,
+"m15_pv": 90.0,
+"m15_tot": 12842,
 "p06_bn": 11.43,
 "p06_partiel": true,
 "p06_pv": 98.59,
@@ -146,6 +206,10 @@
 },
 "HT0151": {
 "i15": 33622,
+"m15_cartel": 26.15,
+"m15_nuls": 6.29,
+"m15_pv": 87.34,
+"m15_tot": 10708,
 "p06_bn": 11.08,
 "p06_partiel": true,
 "p06_pv": 76.92,
@@ -154,6 +218,10 @@
 },
 "HT0152": {
 "i15": 16695,
+"m15_cartel": 10.87,
+"m15_nuls": 4.83,
+"m15_pv": 90.24,
+"m15_tot": 6436,
 "p06_bn": 14.91,
 "p06_partiel": true,
 "p06_pv": 95.24,
@@ -161,19 +229,35 @@
 "p06_val": 3978
 },
 "HT0211": {
-"i15": 96326
+"i15": 96326,
+"m15_cartel": 16.07,
+"m15_nuls": 8.98,
+"m15_pv": 97.38,
+"m15_tot": 32456
 },
 "HT0212": {
-"i15": 33933
+"i15": 33933,
+"m15_cartel": 21.93,
+"m15_nuls": 17.01,
+"m15_pv": 95.24,
+"m15_tot": 12476
 },
 "HT0213": {
 "i15": 23414
 },
 "HT0214": {
-"i15": 16606
+"i15": 16606,
+"m15_cartel": 18.75,
+"m15_nuls": 8.12,
+"m15_pv": 100.0,
+"m15_tot": 7552
 },
 "HT0221": {
-"i15": 39927
+"i15": 39927,
+"m15_cartel": 29.06,
+"m15_nuls": 19.04,
+"m15_pv": 95.05,
+"m15_tot": 13102
 },
 "HT0222": {
 "i15": 25696
@@ -191,13 +275,25 @@
 "i15": 16411
 },
 "HT0311": {
-"i15": 169536
+"i15": 169536,
+"m15_cartel": 16.62,
+"m15_nuls": 4.87,
+"m15_pv": 91.86,
+"m15_tot": 40899
 },
 "HT0312": {
-"i15": 16744
+"i15": 16744,
+"m15_cartel": 20.38,
+"m15_nuls": 6.05,
+"m15_pv": 92.68,
+"m15_tot": 6116
 },
 "HT0313": {
-"i15": 24432
+"i15": 24432,
+"m15_cartel": 18.11,
+"m15_nuls": 8.58,
+"m15_pv": 96.55,
+"m15_tot": 10496
 },
 "HT0321": {
 "i15": 34532
@@ -206,13 +302,21 @@
 "i15": 25236
 },
 "HT0323": {
-"i15": 20667
+"i15": 20667,
+"m15_cartel": 18.88,
+"m15_nuls": 5.73,
+"m15_pv": 94.0,
+"m15_tot": 8597
 },
 "HT0331": {
 "i15": 25487
 },
 "HT0332": {
-"i15": 11190
+"i15": 11190,
+"m15_cartel": 35.38,
+"m15_nuls": 5.43,
+"m15_pv": 76.67,
+"m15_tot": 3482
 },
 "HT0341": {
 "i15": 24901
@@ -230,7 +334,11 @@
 "i15": 5370
 },
 "HT0351": {
-"i15": 22979
+"i15": 22979,
+"m15_cartel": 34.92,
+"m15_nuls": 3.78,
+"m15_pv": 69.49,
+"m15_tot": 6637
 },
 "HT0352": {
 "i15": 23158
@@ -257,6 +365,10 @@
 },
 "HT0412": {
 "i15": 8511,
+"m15_cartel": 31.02,
+"m15_nuls": 6.13,
+"m15_pv": 90.91,
+"m15_tot": 4962,
 "p06_bn": 17.75,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -265,6 +377,10 @@
 },
 "HT0413": {
 "i15": 6500,
+"m15_cartel": 28.21,
+"m15_nuls": 6.0,
+"m15_pv": 100.0,
+"m15_tot": 3681,
 "p06_bn": 24.0,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -313,6 +429,10 @@
 },
 "HT0433": {
 "i15": 15845,
+"m15_cartel": 20.75,
+"m15_nuls": 2.33,
+"m15_pv": 94.74,
+"m15_tot": 7993,
 "p06_bn": 9.98,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -345,6 +465,10 @@
 },
 "HT0443": {
 "i15": 13589,
+"m15_cartel": 44.0,
+"m15_nuls": 7.7,
+"m15_pv": 94.12,
+"m15_tot": 5711,
 "p06_bn": 28.5,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -353,6 +477,10 @@
 },
 "HT0511": {
 "i15": 166501,
+"m15_cartel": 30.06,
+"m15_nuls": 3.47,
+"m15_pv": 91.32,
+"m15_tot": 30512,
 "p06_bn": 5.83,
 "p06_partiel": true,
 "p06_pv": 99.6,
@@ -376,10 +504,18 @@
 "p06_val": 8444
 },
 "HT0521": {
-"i15": 62729
+"i15": 62729,
+"m15_cartel": 15.28,
+"m15_nuls": 6.2,
+"m15_pv": 93.24,
+"m15_tot": 11880
 },
 "HT0522": {
 "i15": 11734,
+"m15_cartel": 43.93,
+"m15_nuls": 1.91,
+"m15_pv": 93.75,
+"m15_tot": 6184,
 "p06_bn": 13.47,
 "p06_partiel": true,
 "p06_pv": 90.91,
@@ -388,6 +524,10 @@
 },
 "HT0523": {
 "i15": 18798,
+"m15_cartel": 33.73,
+"m15_nuls": 3.07,
+"m15_pv": 85.42,
+"m15_tot": 7857,
 "p06_bn": 20.57,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -396,6 +536,10 @@
 },
 "HT0531": {
 "i15": 128376,
+"m15_cartel": 10.04,
+"m15_nuls": 3.77,
+"m15_pv": 91.0,
+"m15_tot": 26821,
 "p06_bn": 6.41,
 "p06_partiel": true,
 "p06_pv": 96.12,
@@ -412,6 +556,10 @@
 },
 "HT0533": {
 "i15": 13887,
+"m15_cartel": 41.19,
+"m15_nuls": 2.57,
+"m15_pv": 93.94,
+"m15_tot": 6541,
 "p06_bn": 16.38,
 "p06_partiel": true,
 "p06_pv": 43.48,
@@ -420,6 +568,10 @@
 },
 "HT0541": {
 "i15": 64425,
+"m15_cartel": 29.17,
+"m15_nuls": 2.42,
+"m15_pv": 86.18,
+"m15_tot": 10264,
 "p06_bn": 5.6,
 "p06_partiel": true,
 "p06_pv": 78.05,
@@ -428,6 +580,10 @@
 },
 "HT0542": {
 "i15": 69968,
+"m15_cartel": 14.31,
+"m15_nuls": 4.56,
+"m15_pv": 87.27,
+"m15_tot": 18611,
 "p06_bn": 12.77,
 "p06_partiel": true,
 "p06_pv": 94.44,
@@ -435,10 +591,18 @@
 "p06_val": 18039
 },
 "HT0543": {
-"i15": 11449
+"i15": 11449,
+"m15_cartel": 19.85,
+"m15_nuls": 3.68,
+"m15_pv": 86.21,
+"m15_tot": 3619
 },
 "HT0544": {
-"i15": 16406
+"i15": 16406,
+"m15_cartel": 21.77,
+"m15_nuls": 2.78,
+"m15_pv": 92.11,
+"m15_tot": 6757
 },
 "HT0551": {
 "i15": 58696,
@@ -450,6 +614,10 @@
 },
 "HT0552": {
 "i15": 17339,
+"m15_cartel": 23.49,
+"m15_nuls": 14.08,
+"m15_pv": 58.14,
+"m15_tot": 4390,
 "p06_bn": 6.92,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -458,6 +626,10 @@
 },
 "HT0611": {
 "i15": 71529,
+"m15_cartel": 26.4,
+"m15_nuls": 7.39,
+"m15_pv": 96.89,
+"m15_tot": 20989,
 "p06_bn": 13.78,
 "p06_partiel": true,
 "p06_pv": 99.03,
@@ -498,6 +670,10 @@
 },
 "HT0622": {
 "i15": 25559,
+"m15_cartel": 33.83,
+"m15_nuls": 14.74,
+"m15_pv": 88.71,
+"m15_tot": 8732,
 "p06_bn": 30.56,
 "p06_partiel": true,
 "p06_pv": 90.48,
@@ -506,6 +682,10 @@
 },
 "HT0623": {
 "i15": 24202,
+"m15_cartel": 23.55,
+"m15_nuls": 12.78,
+"m15_pv": 93.44,
+"m15_tot": 9243,
 "p06_bn": 25.57,
 "p06_partiel": true,
 "p06_pv": 97.62,
@@ -522,6 +702,10 @@
 },
 "HT0632": {
 "i15": 38629,
+"m15_cartel": 23.25,
+"m15_nuls": 9.24,
+"m15_pv": 96.77,
+"m15_tot": 14109,
 "p06_bn": 25.48,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -554,6 +738,10 @@
 },
 "HT0711": {
 "i15": 108907,
+"m15_cartel": 42.34,
+"m15_nuls": 4.7,
+"m15_pv": 95.53,
+"m15_tot": 27037,
 "p06_bn": 5.54,
 "p06_partiel": true,
 "p06_pv": 98.14,
@@ -578,6 +766,10 @@
 },
 "HT0714": {
 "i15": 28315,
+"m15_cartel": 18.82,
+"m15_nuls": 8.47,
+"m15_pv": 96.92,
+"m15_tot": 11033,
 "p06_bn": 16.64,
 "p06_partiel": true,
 "p06_pv": 87.5,
@@ -594,6 +786,10 @@
 },
 "HT0716": {
 "i15": 7091,
+"m15_cartel": 27.25,
+"m15_nuls": 5.54,
+"m15_pv": 88.24,
+"m15_tot": 3842,
 "p06_bn": 13.04,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -602,6 +798,10 @@
 },
 "HT0721": {
 "i15": 17049,
+"m15_cartel": 22.37,
+"m15_nuls": 4.11,
+"m15_pv": 100.0,
+"m15_tot": 9333,
 "p06_bn": 6.29,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -610,6 +810,10 @@
 },
 "HT0722": {
 "i15": 13134,
+"m15_cartel": 23.95,
+"m15_nuls": 5.71,
+"m15_pv": 91.18,
+"m15_tot": 6482,
 "p06_bn": 9.5,
 "p06_partiel": true,
 "p06_pv": 94.44,
@@ -634,6 +838,10 @@
 },
 "HT0732": {
 "i15": 37476,
+"m15_cartel": 18.84,
+"m15_nuls": 7.63,
+"m15_pv": 87.78,
+"m15_tot": 13951,
 "p06_bn": 21.19,
 "p06_partiel": true,
 "p06_pv": 96.49,
@@ -658,6 +866,10 @@
 },
 "HT0742": {
 "i15": 10377,
+"m15_cartel": 40.73,
+"m15_nuls": 3.41,
+"m15_pv": 100.0,
+"m15_tot": 5452,
 "p06_bn": 18.15,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -690,6 +902,10 @@
 },
 "HT0753": {
 "i15": 12431,
+"m15_cartel": 33.66,
+"m15_nuls": 13.81,
+"m15_pv": 87.88,
+"m15_tot": 6373,
 "p06_bn": 21.78,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -706,6 +922,10 @@
 },
 "HT0812": {
 "i15": 16920,
+"m15_cartel": 27.5,
+"m15_nuls": 5.96,
+"m15_pv": 97.67,
+"m15_tot": 9053,
 "p06_bn": 20.57,
 "p06_partiel": true,
 "p06_pv": 93.75,
@@ -722,6 +942,10 @@
 },
 "HT0814": {
 "i15": 18350,
+"m15_cartel": 42.28,
+"m15_nuls": 5.82,
+"m15_pv": 100.0,
+"m15_tot": 5311,
 "p06_bn": 18.58,
 "p06_partiel": true,
 "p06_pv": 93.94,
@@ -738,6 +962,10 @@
 },
 "HT0821": {
 "i15": 14791,
+"m15_cartel": 35.59,
+"m15_nuls": 9.76,
+"m15_pv": 83.78,
+"m15_tot": 7420,
 "p06_bn": 19.62,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -746,6 +974,10 @@
 },
 "HT0822": {
 "i15": 17424,
+"m15_cartel": 45.54,
+"m15_nuls": 7.03,
+"m15_pv": 95.74,
+"m15_tot": 10130,
 "p06_bn": 17.84,
 "p06_partiel": true,
 "p06_pv": 96.88,
@@ -770,6 +1002,10 @@
 },
 "HT0832": {
 "i15": 14830,
+"m15_cartel": 20.61,
+"m15_nuls": 9.09,
+"m15_pv": 97.56,
+"m15_tot": 7051,
 "p06_bn": 22.15,
 "p06_partiel": true,
 "p06_pv": 93.55,
@@ -842,6 +1078,10 @@
 },
 "HT0931": {
 "i15": 15671,
+"m15_cartel": 29.22,
+"m15_nuls": 7.65,
+"m15_pv": 89.74,
+"m15_tot": 8070,
 "p06_bn": 15.72,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -866,6 +1106,10 @@
 },
 "HT0934": {
 "i15": 50922,
+"m15_cartel": 18.55,
+"m15_nuls": 3.95,
+"m15_pv": 93.5,
+"m15_tot": 18688,
 "p06_bn": 7.22,
 "p06_partiel": true,
 "p06_pv": 98.96,
@@ -890,6 +1134,10 @@
 },
 "HT1013": {
 "i15": 27028,
+"m15_cartel": 19.02,
+"m15_nuls": 12.83,
+"m15_pv": 87.69,
+"m15_tot": 9403,
 "p06_bn": 19.75,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -898,6 +1146,10 @@
 },
 "HT1014": {
 "i15": 13050,
+"m15_cartel": 23.57,
+"m15_nuls": 13.35,
+"m15_pv": 100.0,
+"m15_tot": 6135,
 "p06_bn": 18.06,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -906,6 +1158,10 @@
 },
 "HT1021": {
 "i15": 14008,
+"m15_cartel": 21.23,
+"m15_nuls": 10.55,
+"m15_pv": 94.12,
+"m15_tot": 6077,
 "p06_bn": 21.28,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -930,6 +1186,10 @@
 },
 "HT1024": {
 "i15": 12839,
+"m15_cartel": 29.96,
+"m15_nuls": 14.02,
+"m15_pv": 80.65,
+"m15_tot": 5058,
 "p06_bn": 28.27,
 "p06_partiel": true,
 "p06_pv": 95.24,
@@ -946,6 +1206,10 @@
 },
 "HT1031": {
 "i15": 17240,
+"m15_cartel": 17.27,
+"m15_nuls": 13.99,
+"m15_pv": 90.91,
+"m15_tot": 7170,
 "p06_bn": 25.64,
 "p06_partiel": true,
 "p06_pv": 100.0,
@@ -962,11 +1226,16 @@
 }
 },
 "meta": {
-"attribution": "Conseil électoral provisoire (CEP), Inscription des électeurs, avril 2015 ; Conseil électoral provisoire (CEP), système EIS — résumés de la présidentielle du 7 février 2006",
+"attribution": "Conseil électoral provisoire (CEP), Inscription des électeurs, avril 2015 ; Conseil électoral provisoire (CEP), système EIS — résumés de la présidentielle du 7 février 2006 ; Conseil électoral provisoire (CEP), Élections municipales du 25 octobre 2015, résultats définitifs",
 "date_extraction": "2026-09-18",
 "inscrits_2015_total": 5835295,
 "licence": "Tous droits réservés (CEP) — republication gratuite avec citation, décision Atmart du 18/09/2026",
-"passeport": "PSP-079 à PSP-080",
+"municipales_2015": {
+"communes": 66,
+"document": "66 pages sur 69 annoncées",
+"saisie": "manuelle, contrôlée par le pourcentage imprimé et relue"
+},
+"passeport": "PSP-079 à PSP-081",
 "presidentielle_2006": {
 "absents": "Nord et Sud-Est non archivés, et 3 autres communes",
 "communes": 108,
@@ -984,7 +1253,8 @@
 "reserve": "Résumés EIS du CEP, parfois imprimés avant le traitement de tous les procès-verbaux (« données partielles ») ; aucune participation 2006 n'est calculée faute d'inscrits 2006 par commune.",
 "sources": {
 "SRC-068": "Conseil électoral provisoire (CEP), Inscription des électeurs, avril 2015",
-"SRC-069": "Conseil électoral provisoire (CEP), système EIS — résumés de la présidentielle du 7 février 2006"
+"SRC-069": "Conseil électoral provisoire (CEP), système EIS — résumés de la présidentielle du 7 février 2006",
+"SRC-070": "Conseil électoral provisoire (CEP), Élections municipales du 25 octobre 2015, résultats définitifs"
 }
 }
 }

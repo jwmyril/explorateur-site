@@ -377,6 +377,90 @@ IND-ELE-004,ht,methode_calcul,"Pwosè-vèbal yo trete ÷ pwosè-vèbal yo tann �
 IND-ELE-004,ht,nom,"Pwosè-vèbal yo te trete, eleksyon prezidansyèl 2006"
 IND-ELE-004,ht,sens_interpretation,Wo = rezime a pi konplè
 IND-ELE-004,ht,unite,%
+IND-ELE-005,en,comparabilite,"Comparable between the 66 published communes, at a similar share of included tally sheets; neither with 2006 nor relative to a population."
+IND-ELE-005,en,definition,"Total number of ballots (choices expressed, “no candidate” and spoiled) counted for the election of the mayor, municipal elections of 25 October 2015, CEP final results."
+IND-ELE-005,en,limites_connues,"ONLY 66 COMMUNES OUT OF 140: the folder published by the CEP is titled “66 Communes”, and its page footers announce 69 pages — three are missing. The other communes are not at zero: their page was not published. THE PAGES ARE SCANS, keyed in by hand by Atmart; each page is checked against its own printed percentage, and tally sheets and spoiled ballots were read twice. Only INCLUDED tally sheets are counted (see the neighbouring indicator). NO TURNOUT RATE is published: tally sheets not included are missing from the numerator, and the April 2015 list is not that of 25 October."
+IND-ELE-005,en,methode_calcul,"Choices expressed + “no candidate” + spoiled ballots, read on the commune's page of the CEP final results (scan keyed in by hand, checked against the printed percentage and re-read)."
+IND-ELE-005,en,nom,"Votes counted, 2015 municipal elections"
+IND-ELE-005,en,sens_interpretation,"Neutral — a count, not a performance"
+IND-ELE-005,en,unite,votes
+IND-ELE-005,es,comparabilite,"Comparable entre las 66 comunas publicadas, con una proporción parecida de actas incluidas; ni con 2006 ni en relación con una población."
+IND-ELE-005,es,definition,"Número total de papeletas (opciones expresadas, «ningún candidato» y nulas) contadas para la elección del alcalde, municipales del 25 de octubre de 2015, resultados definitivos del CEP."
+IND-ELE-005,es,limites_connues,"SOLO 66 COMUNAS DE 140: la carpeta publicada por el CEP se titula «66 Communes», y sus pies de página anuncian 69 páginas — faltan tres. Las demás comunas no están en cero: su página no se publicó. LAS PÁGINAS SON ESCANEOS, capturados a mano por Atmart; cada página se comprueba con su propio porcentaje impreso, y las actas y los votos nulos se leyeron dos veces. Solo cuentan las actas INCLUIDAS (ver el indicador vecino). NO SE PUBLICA NINGUNA TASA DE PARTICIPACIÓN: faltan en el numerador las actas no incluidas, y la lista de abril de 2015 no es la del 25 de octubre."
+IND-ELE-005,es,methode_calcul,"Opciones expresadas + «ningún candidato» + votos nulos, leídos en la página de la comuna de los resultados definitivos del CEP (escaneo capturado a mano, comprobado con el porcentaje impreso y releído)."
+IND-ELE-005,es,nom,"Votos contados, elecciones municipales de 2015"
+IND-ELE-005,es,sens_interpretation,"Neutro — un recuento, no un desempeño"
+IND-ELE-005,es,unite,votos
+IND-ELE-005,ht,comparabilite,"Nou ka konpare 66 komin ki pibliye yo, si pòsyon pwosè-vèbal ki antre yo prèske menm ; pa ak 2006, ni sou kantite moun ki rete nan komin nan."
+IND-ELE-005,ht,definition,"Konbyen bilten (chwa, « okenn kandida » ak nil) yo te konte pou eleksyon majistra, minisipal 25 oktòb 2015, rezilta definitif CEP la."
+IND-ELE-005,ht,limites_connues,"66 KOMIN SOU 140 SÈLMAN : dosye CEP la pibliye a rele « 66 Communes », e anba paj yo di gen 69 paj — twa manke. Lòt komin yo pa zewo : paj yo pa t pibliye. PAJ YO SE ESKAN, Atmart antre yo alamen ; nou verifye chak paj ak pousantaj ki enprime sou li, e nou li pwosè-vèbal yo ak vòt nil yo de fwa. Se sèlman pwosè-vèbal ki ANTRE yo ki konte (gade endikatè bò kote a). NOU PA PIBLIYE OKENN TO PATISIPASYON : pwosè-vèbal ki pa antre yo manke, e lis avril 2015 la pa menm ak sa 25 oktòb la."
+IND-ELE-005,ht,methode_calcul,"Chwa + « okenn kandida » + vòt nil, nou li yo sou paj komin nan nan rezilta definitif CEP la (eskan nou antre alamen, verifye ak pousantaj ki enprime a epi reli)."
+IND-ELE-005,ht,nom,"Vòt yo konte, eleksyon minisipal 2015"
+IND-ELE-005,ht,sens_interpretation,"Net — se yon kantite, se pa yon rezilta ki bon oswa ki move"
+IND-ELE-005,ht,unite,vòt
+IND-ELE-006,en,comparabilite,Comparable between the 66 published communes for the same election; a gap mostly reflects the number of competing lists.
+IND-ELE-006,en,definition,"Share of valid votes (choices expressed and “no candidate”) won by the slate elected to the town hall, municipal elections of 25 October 2015."
+IND-ELE-006,en,limites_connues,"ONE ROUND, FIRST PAST THE POST: a slate can win with a small share of the vote when lists are numerous. The figure measures how dispersed the vote was, not the legitimacy or the work of the elected team. ONLY 66 COMMUNES OUT OF 140: the folder published by the CEP is titled “66 Communes”, and its page footers announce 69 pages — three are missing. The other communes are not at zero: their page was not published. THE PAGES ARE SCANS, keyed in by hand by Atmart; each page is checked against its own printed percentage, and tally sheets and spoiled ballots were read twice. Only INCLUDED tally sheets are counted (see the neighbouring indicator)."
+IND-ELE-006,en,methode_calcul,"Winning slate's votes ÷ (choices expressed + “no candidate”) × 100, as printed; the recomputed value must match the CEP percentage within 0.01 point, or the entry is refused."
+IND-ELE-006,en,nom,"Winning slate's share, 2015 municipal elections"
+IND-ELE-006,en,sens_interpretation,"Neutral — a low score means a dispersed vote, not a bad mayor"
+IND-ELE-006,en,unite,%
+IND-ELE-006,es,comparabilite,Comparable entre las 66 comunas publicadas para una misma elección; una diferencia refleja sobre todo el número de listas en competencia.
+IND-ELE-006,es,definition,"Proporción de los votos válidos (opciones expresadas y «ningún candidato») obtenida por la lista electa a la alcaldía, municipales del 25 de octubre de 2015."
+IND-ELE-006,es,limites_connues,"UNA SOLA VUELTA, POR MAYORÍA RELATIVA: una lista puede ganar con una parte pequeña de los votos cuando hay muchas listas. La cifra mide la dispersión del voto, no la legitimidad ni el trabajo del equipo electo. SOLO 66 COMUNAS DE 140: la carpeta publicada por el CEP se titula «66 Communes», y sus pies de página anuncian 69 páginas — faltan tres. Las demás comunas no están en cero: su página no se publicó. LAS PÁGINAS SON ESCANEOS, capturados a mano por Atmart; cada página se comprueba con su propio porcentaje impreso, y las actas y los votos nulos se leyeron dos veces. Solo cuentan las actas INCLUIDAS (ver el indicador vecino)."
+IND-ELE-006,es,methode_calcul,"Votos de la lista electa ÷ (opciones expresadas + «ningún candidato») × 100, tal como se imprimió; el cálculo rehecho debe coincidir con el porcentaje del CEP a 0,01 punto, o la captura se rechaza."
+IND-ELE-006,es,nom,"Porcentaje de la lista electa, municipales de 2015"
+IND-ELE-006,es,sens_interpretation,"Neutro — un porcentaje bajo indica un voto disperso, no un mal alcalde"
+IND-ELE-006,es,unite,%
+IND-ELE-006,ht,comparabilite,Nou ka konpare 66 komin ki pibliye yo pou menm eleksyon an ; yon diferans montre sitou konbyen lis ki te konkoure.
+IND-ELE-006,ht,definition,"Pòsyon vòt valab (chwa ak « okenn kandida ») katèl ki te genyen meri a te pran, eleksyon minisipal 25 oktòb 2015."
+IND-ELE-006,ht,limites_connues,"YON SÈL TOU, SE SA KI PRAN PLIS VWA A KI GENYEN : yon katèl ka genyen ak yon ti pòsyon vwa lè gen anpil lis. Chif la montre kijan vòt la te gaye, li pa mezire lejitimite ni travay ekip ki te genyen an. 66 KOMIN SOU 140 SÈLMAN : dosye CEP la pibliye a rele « 66 Communes », e anba paj yo di gen 69 paj — twa manke. Lòt komin yo pa zewo : paj yo pa t pibliye. PAJ YO SE ESKAN, Atmart antre yo alamen ; nou verifye chak paj ak pousantaj ki enprime sou li, e nou li pwosè-vèbal yo ak vòt nil yo de fwa. Se sèlman pwosè-vèbal ki ANTRE yo ki konte (gade endikatè bò kote a)."
+IND-ELE-006,ht,methode_calcul,"Vwa katèl ki genyen an ÷ (chwa + « okenn kandida ») × 100, jan li enprime ; kalkil nou refè a dwe bay menm pousantaj ak CEP la a 0,01 pwen pre, sinon nou refize done a."
+IND-ELE-006,ht,nom,"Pòsyon vwa katèl ki te genyen an, eleksyon minisipal 2015"
+IND-ELE-006,ht,sens_interpretation,"Net — yon ti pòsyon montre vòt la te gaye, se pa yon move majistra"
+IND-ELE-006,ht,unite,%
+IND-ELE-007,en,comparabilite,"Comparable between the 66 published communes; not with 2006, where blank and spoiled ballots are added together."
+IND-ELE-007,en,definition,"Share of spoiled ballots among all ballots counted for the election of the mayor, municipal elections of 25 October 2015."
+IND-ELE-007,en,limites_connues,"The “no candidate” vote is a VALID choice in 2015 and is not counted here. ONLY 66 COMMUNES OUT OF 140: the folder published by the CEP is titled “66 Communes”, and its page footers announce 69 pages — three are missing. The other communes are not at zero: their page was not published. THE PAGES ARE SCANS, keyed in by hand by Atmart; each page is checked against its own printed percentage, and tally sheets and spoiled ballots were read twice. Only INCLUDED tally sheets are counted (see the neighbouring indicator)."
+IND-ELE-007,en,methode_calcul,Spoiled ballots ÷ all ballots counted × 100.
+IND-ELE-007,en,nom,"Spoiled ballots, 2015 municipal elections"
+IND-ELE-007,en,sens_interpretation,Neutral — a spoiled ballot may be an error or a refusal
+IND-ELE-007,en,unite,%
+IND-ELE-007,es,comparabilite,"Comparable entre las 66 comunas publicadas; no con 2006, donde se suman votos en blanco y nulos."
+IND-ELE-007,es,definition,"Proporción de votos nulos entre todas las papeletas contadas para la elección del alcalde, municipales del 25 de octubre de 2015."
+IND-ELE-007,es,limites_connues,"El voto «ningún candidato» es una opción VÁLIDA en 2015 y no se cuenta aquí. SOLO 66 COMUNAS DE 140: la carpeta publicada por el CEP se titula «66 Communes», y sus pies de página anuncian 69 páginas — faltan tres. Las demás comunas no están en cero: su página no se publicó. LAS PÁGINAS SON ESCANEOS, capturados a mano por Atmart; cada página se comprueba con su propio porcentaje impreso, y las actas y los votos nulos se leyeron dos veces. Solo cuentan las actas INCLUIDAS (ver el indicador vecino)."
+IND-ELE-007,es,methode_calcul,Votos nulos ÷ total de papeletas contadas × 100.
+IND-ELE-007,es,nom,"Votos nulos, municipales de 2015"
+IND-ELE-007,es,sens_interpretation,Neutro — un voto nulo puede ser un error o un rechazo
+IND-ELE-007,es,unite,%
+IND-ELE-007,ht,comparabilite,"Nou ka konpare 66 komin ki pibliye yo ; pa ak 2006, kote nou te mete blan ak nil ansanm."
+IND-ELE-007,ht,definition,"Pòsyon bilten nil nan tout bilten yo te konte pou eleksyon majistra, minisipal 25 oktòb 2015."
+IND-ELE-007,ht,limites_connues,"Vòt « okenn kandida » a se yon chwa VALAB an 2015, li pa konte isit la. 66 KOMIN SOU 140 SÈLMAN : dosye CEP la pibliye a rele « 66 Communes », e anba paj yo di gen 69 paj — twa manke. Lòt komin yo pa zewo : paj yo pa t pibliye. PAJ YO SE ESKAN, Atmart antre yo alamen ; nou verifye chak paj ak pousantaj ki enprime sou li, e nou li pwosè-vèbal yo ak vòt nil yo de fwa. Se sèlman pwosè-vèbal ki ANTRE yo ki konte (gade endikatè bò kote a)."
+IND-ELE-007,ht,methode_calcul,Vòt nil ÷ tout bilten yo konte × 100.
+IND-ELE-007,ht,nom,"Bilten nil, eleksyon minisipal 2015"
+IND-ELE-007,ht,sens_interpretation,Net — yon bilten nil ka yon erè oswa yon refi
+IND-ELE-007,ht,unite,%
+IND-ELE-008,en,comparabilite,"Comparable between the 66 published communes, for the same final results."
+IND-ELE-008,en,definition,"Share of polling-station tally sheets included in the mayor's final results, municipal elections of 25 October 2015."
+IND-ELE-008,en,limites_connues,"THIS IS NOT A MEASURE OF THE QUALITY OF THE VOTE: a tally sheet not included may have been set aside by the tabulation centre or never arrived; the document does not say why. It only says what share of polling stations counts in the other figures. ONLY 66 COMMUNES OUT OF 140: the folder published by the CEP is titled “66 Communes”, and its page footers announce 69 pages — three are missing. The other communes are not at zero: their page was not published. THE PAGES ARE SCANS, keyed in by hand by Atmart; each page is checked against its own printed percentage, and tally sheets and spoiled ballots were read twice. Only INCLUDED tally sheets are counted (see the neighbouring indicator)."
+IND-ELE-008,en,methode_calcul,"Tally sheets included ÷ tally sheets expected × 100, as printed at the top of the page."
+IND-ELE-008,en,nom,"Tally sheets included, 2015 municipal elections"
+IND-ELE-008,en,sens_interpretation,High = more complete result
+IND-ELE-008,en,unite,%
+IND-ELE-008,es,comparabilite,"Comparable entre las 66 comunas publicadas, para los mismos resultados definitivos."
+IND-ELE-008,es,definition,"Proporción de actas de mesa incluidas en los resultados definitivos del alcalde, municipales del 25 de octubre de 2015."
+IND-ELE-008,es,limites_connues,"NO ES UNA MEDIDA DE LA CALIDAD DEL VOTO: un acta no incluida pudo ser descartada por el centro de tabulación o no llegar nunca; el documento no dice por qué. Solo dice qué parte de las mesas cuenta en las demás cifras. SOLO 66 COMUNAS DE 140: la carpeta publicada por el CEP se titula «66 Communes», y sus pies de página anuncian 69 páginas — faltan tres. Las demás comunas no están en cero: su página no se publicó. LAS PÁGINAS SON ESCANEOS, capturados a mano por Atmart; cada página se comprueba con su propio porcentaje impreso, y las actas y los votos nulos se leyeron dos veces. Solo cuentan las actas INCLUIDAS (ver el indicador vecino)."
+IND-ELE-008,es,methode_calcul,"Actas incluidas ÷ actas esperadas × 100, tal como figuran en la cabecera de la página."
+IND-ELE-008,es,nom,"Actas incluidas, municipales de 2015"
+IND-ELE-008,es,sens_interpretation,Alto = resultado más completo
+IND-ELE-008,es,unite,%
+IND-ELE-008,ht,comparabilite,"Nou ka konpare 66 komin ki pibliye yo, pou menm rezilta definitif yo."
+IND-ELE-008,ht,definition,"Pòsyon pwosè-vèbal biwo vòt ki antre nan rezilta definitif majistra yo, minisipal 25 oktòb 2015."
+IND-ELE-008,ht,limites_connues,"SA PA MEZIRE SI VÒT LA TE BYEN FÈT : yon pwosè-vèbal ki pa antre ka sant tabilasyon an te mete l sou kote, oswa li pa t janm rive ; dokiman an pa di poukisa. Li di sèlman ki pòsyon biwo vòt ki konte nan lòt chif yo. 66 KOMIN SOU 140 SÈLMAN : dosye CEP la pibliye a rele « 66 Communes », e anba paj yo di gen 69 paj — twa manke. Lòt komin yo pa zewo : paj yo pa t pibliye. PAJ YO SE ESKAN, Atmart antre yo alamen ; nou verifye chak paj ak pousantaj ki enprime sou li, e nou li pwosè-vèbal yo ak vòt nil yo de fwa. Se sèlman pwosè-vèbal ki ANTRE yo ki konte (gade endikatè bò kote a)."
+IND-ELE-008,ht,methode_calcul,"Pwosè-vèbal ki antre ÷ pwosè-vèbal yo tann × 100, jan yo enprime anlè paj la."
+IND-ELE-008,ht,nom,"Pwosè-vèbal ki antre, eleksyon minisipal 2015"
+IND-ELE-008,ht,sens_interpretation,Wo = rezilta a pi konplè
+IND-ELE-008,ht,unite,%
 IND-ENE-001,en,comparabilite,"Comparable between communes, but the gap is small across Haiti: a ranking would exaggerate differences the resource does not carry."
 IND-ENE-001,en,definition,"Photovoltaic output expected from a one-kilowatt-peak installation over a year, averaged across the commune's pixels."
 IND-ENE-001,en,limites_connues,"IT IS A RESOURCE, NOT EQUIPMENT: this figure says what a panel would produce, not what is installed. Differences between communes are small in a country this small and this sunny — a ranking on this indicator separates values that sit within a few per cent of each other. Relief matters more than latitude: the shadow of the mornes makes the difference, and it is averaged here over the whole commune."

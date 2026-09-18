@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 133
+  "fichiers": 134
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -154,6 +154,7 @@
    "atmart_deplaces_HT.csv",
    "atmart_elections.json",
    "atmart_inscrits_2015_communes_HT.csv",
+   "atmart_municipales_2015_communes_HT.csv",
    "atmart_presidentielle_2006_communes_HT.csv",
    "atmart_presidentielle_2006_resume_HT.csv",
    "atmart_retours_forces.json",
@@ -483,7 +484,8 @@
    "licence": "sous réserve",
    "sources": [
     "SRC-068",
-    "SRC-069"
+    "SRC-069",
+    "SRC-070"
    ],
    "attribution": "CEP — Conseil électoral provisoire"
   },
@@ -694,6 +696,13 @@
     "SRC-001"
    ],
    "attribution": "CNIGS / UN OCHA"
+  },
+  "atmart_municipales_2015_communes_HT.csv": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-070"
+   ],
+   "attribution": "CEP — Conseil électoral provisoire"
   },
   "atmart_occupation_sol.json": {
    "licence": "CC BY 4.0",

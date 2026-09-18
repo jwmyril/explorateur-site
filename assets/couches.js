@@ -6,7 +6,7 @@
    d'où il vient ni ce qu'il ne couvre pas. */
 (function () {
   "use strict";
-  var DV = "?d=2026-09-18a";
+  var DV = "?d=2026-09-18b";
   var $ = function (s) { return document.querySelector(s); };
   var fmtN = function (v) { return (+v).toLocaleString("fr-FR"); };
 
@@ -378,6 +378,22 @@
       },
       source: "CEP — résumés EIS de la présidentielle du 7 février 2006 (archive Internet Archive) ; rattachement communal par Atmart, passeport PSP-080",
       limite: "PREMIER TOUR DU 7 FÉVRIER 2006, résumés imprimés le 20 février, parfois avant la fin du dépouillement. C'est la part AVANT la répartition nationale des bulletins blancs entre les candidats, décidée ensuite par le CEP et contestée : les résumés communaux ne la font pas. Un bulletin blanc est un choix, un nul peut être une erreur de remplissage. 32 communes sans résumé archivé — tout le Nord et le Sud-Est, Gros Morne, Grande Saline et Desdunes — restent en blanc, jamais à zéro ; Bombardopolis est écartée : son résumé déclare zéro blanc et zéro nul sur 10 procès-verbaux traités, ce qui tient de la saisie, pas du vote." },
+    { id: "cartel_2015", nom: "Score du cartel élu, municipales 2015 (CEP)", type: "choroplethe",
+      csv: "data/atmart_municipales_2015_communes_HT.csv", pcode: "pcode_commune",
+      courbe: "lineaire",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          var v = +r.cartel_elu_pct;
+          if (v > 0) m[r.pcode_commune] = v;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("25 octobre 2015"),
+                 unite: "% des votes valides" };
+      },
+      source: "CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP) ; pages scannées saisies par Atmart, passeport PSP-081",
+      limite: "UN SEUL TOUR, À LA MAJORITÉ RELATIVE : la part des voix du cartel élu dit combien le vote était dispersé, pas la légitimité ni le travail de l'équipe élue — un cartel a pu gagner avec moins d'une voix sur dix quand les listes étaient nombreuses. Aucun parti n'est coloré : la carte montre un score, jamais une couleur politique ; le nom du cartel élu se lit dans le fichier. 66 COMMUNES SUR 140 : le CEP n'a publié que ces pages (son dossier en annonce 69, trois manquent) ; les autres communes restent en blanc, jamais à zéro. Les pages sont des scans saisis à la main par Atmart, chacun contrôlé par son propre pourcentage imprimé." },
     /* LES LIEUX DE CULTE, en deux cartes et non une.
 
        Le total répond à « où la carte voit-elle des lieux de culte ? ». Le
@@ -2147,7 +2163,7 @@
                        "emploi_femmes"]],
                      ["Transferts — où l'argent arrive et où on le touche", ["transferts_dep", "points_transfert"]],
                      ["Élections — documents du CEP",
-                      ["inscrits_2015", "blancs_nuls_2006"]],
+                      ["inscrits_2015", "blancs_nuls_2006", "cartel_2015"]],
                      ["Médias — stations autorisées",
                       ["medias", "medias_communautaires"]],
                      /* Le tourisme a son groupe et non une place dans

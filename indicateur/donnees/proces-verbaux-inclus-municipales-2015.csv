@@ -1,0 +1,67 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-ELE-008,HTC-0812,HT0812,Abricots,Abriko,Grande'Anse,97.67,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0523,HT0523,Anse Rouge,Ans Rouj,Artibonite,85.42,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0821,HT0821,Anse d'Hainault,Ansdeno,Grande'Anse,83.78,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0151,HT0151,Anse à Galets,Ansa galè ,Ouest,87.34,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-1021,HT1021,Anse-à-Veau,Ansavo,Nippes,94.12,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0141,HT0141,Arcahaie,Akayè,Ouest,84.39,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-1024,HT1024,Arnaud,Ano,Nippes,80.65,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0332,HT0332,Bahon,Baron,Nord,76.67,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0221,HT0221,Bainet,Benè,Sud-Est,95.05,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-1031,HT1031,Baradères,Baradè,Nippes,90.91,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0632,HT0632,Belladère,Beladè,Centre,96.77,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0351,HT0351,Borgne,Bòn,Nord,69.49,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0623,HT0623,Boucan Carré,Boukan Kare,Centre,93.44,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0142,HT0142,Cabaret,Kabarè,Ouest,90.0,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0714,HT0714,Camp-Perrin,Kanperen,Sud,96.92,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0311,HT0311,Cap-Haïtien,Kap Ayisyen,Nord,91.86,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0113,HT0113,Carrefour,Kafou,Ouest,90.45,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0117,HT0117,Cité Soleil,Site Solèy,Ouest,75.89,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0822,HT0822,Dame Marie,Dam Mari,Grande'Anse,95.74,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0112,HT0112,Delmas,Dèlma,Ouest,87.26,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0544,HT0544,Desdunes,Dedin,Artibonite,92.11,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0541,HT0541,Dessalines,Desalin,Artibonite,86.18,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0412,HT0412,Ferrier,Ferye,Nord-Est,90.91,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-1013,HT1013,Fonds des Nègres,Fon dènèg,Nippes,87.69,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0135,HT0135,Fonds-Verrettes,Fonvèrèt,Ouest,100.0,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0133,HT0133,Ganthier,Gantye,Ouest,90.83,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0511,HT0511,Gonaïves,Gonayiv,Artibonite,91.32,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0123,HT0123,Grand-Goâve,Gran Gwav,Ouest,91.86,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0543,HT0543,Grande Saline,Grand Salin,Artibonite,86.21,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0116,HT0116,Gressier,Gresye,Ouest,74.14,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0521,HT0521,Gros Morne,Gro Mòn,Artibonite,93.24,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0611,HT0611,Hinche,Ench,Centre,96.89,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0211,HT0211,Jacmel,Jakmèl,Sud-Est,97.38,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0934,HT0934,Jean Rabel,Jan Rabèl,Nord-Ouest,93.5,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0533,HT0533,La Chapelle,Lachapèl,Artibonite,93.94,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0214,HT0214,La Vallée,Lavale,Sud-Est,100.0,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0711,HT0711,Les Cayes,Okay,Sud,95.53,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0313,HT0313,Limonade,Limonad,Nord,96.55,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0121,HT0121,Léogâne,Leyogàn,Ouest,95.74,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0212,HT0212,Marigot,Marigo,Sud-Est,95.24,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0552,HT0552,Marmelade,Mamelad,Artibonite,58.14,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0323,HT0323,Milot,Milo,Nord,94.0,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0443,HT0443,Mombin Crochu,Monben Krochi,Nord-Est,94.12,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0814,HT0814,Moron,Mowon,Grande'Anse,100.0,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0931,HT0931,Môle Saint Nicolas,Mòl Sen Nikola,Nord-Ouest,89.74,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-1014,HT1014,Paillant,Payan,Nippes,100.0,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0413,HT0413,Perches,Pèch,Nord-Est,100.0,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0122,HT0122,Petit-Goâve,Tigwav,Ouest,92.89,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0542,HT0542,Petite Rivière de l'Artibonite,Ti Rivyè Latibonit,Artibonite,87.27,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0152,HT0152,Pointe à Raquette,Pwent a Rakèt,Ouest,90.24,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0721,HT0721,Port-Salut,Pò Sali,Sud,100.0,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,82.85,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0742,HT0742,Port-à-Piment,Pòtapiman,Sud,100.0,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0114,HT0114,Pétion-Ville,Petyonvil,Ouest,90.47,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0312,HT0312,Quartier Morin,Katye Moren,Nord,92.68,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0832,HT0832,Roseaux,Rozo,Grande'Anse,97.56,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0722,HT0722,Saint Jean du Sud,Sen Jan disid.,Sud,91.18,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0732,HT0732,Saint Louis du Sud,Sen Lwi disid,Sud,87.78,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0531,HT0531,Saint-Marc,Sen Mak,Artibonite,91.0,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0622,HT0622,Saut d'Eau,Sodo,Centre,88.71,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0118,HT0118,Tabarre,Taba,Ouest,84.03,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0522,HT0522,Terre Neuve,Tènèv,Artibonite,93.75,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0433,HT0433,Terrier Rouge,Tèrye rouj,Nord-Est,94.74,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0132,HT0132,Thomazeau,Tomazo,Ouest,85.53,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0753,HT0753,Tiburon,Tibiwon,Sud,87.88,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08
+IND-ELE-008,HTC-0716,HT0716,Île à Vache,Ilavach,Sud,88.24,%,2015,A,B,"CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP, saisie Atmart)",v1.2026.08

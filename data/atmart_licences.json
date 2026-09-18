@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 134
+  "fichiers": 136
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -152,6 +152,8 @@
   ],
   "sous réserve": [
    "atmart_deplaces_HT.csv",
+   "atmart_deputes_2015_candidats_HT.csv",
+   "atmart_deputes_2015_circonscriptions_HT.csv",
    "atmart_elections.json",
    "atmart_inscrits_2015_communes_HT.csv",
    "atmart_municipales_2015_communes_HT.csv",
@@ -454,6 +456,20 @@
    ],
    "attribution": "OIM — Displacement Tracking Matrix (via HDX)"
   },
+  "atmart_deputes_2015_candidats_HT.csv": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-071"
+   ],
+   "attribution": "Election Passport — David Lublin, American University"
+  },
+  "atmart_deputes_2015_circonscriptions_HT.csv": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-071"
+   ],
+   "attribution": "Election Passport — David Lublin, American University"
+  },
   "atmart_diaspora_destinations.json": {
    "licence": "CC BY 4.0",
    "sources": [
@@ -485,9 +501,10 @@
    "sources": [
     "SRC-068",
     "SRC-069",
-    "SRC-070"
+    "SRC-070",
+    "SRC-071"
    ],
-   "attribution": "CEP — Conseil électoral provisoire"
+   "attribution": "CEP — Conseil électoral provisoire ; Election Passport — David Lublin, American University"
   },
   "atmart_enquete_fiche.json": {
    "licence": "CC BY 4.0",

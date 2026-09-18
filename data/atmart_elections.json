@@ -1,6 +1,11 @@
 {
 "communes": {
 "HT0111": {
+"d15_circ": "PORT-AU-PRINCE (1ere) / PORT-AU-PRINCE (2eme) / PORT-AU-PRINCE (3eme)",
+"d15_cps": 36.67,
+"d15_partagee": false,
+"d15_pv": 84.06,
+"d15_sieges": 3,
 "i15": 474403,
 "m15_cartel": 13.58,
 "m15_nuls": 7.21,
@@ -13,6 +18,11 @@
 "p06_val": 170705
 },
 "HT0112": {
+"d15_circ": "DELMAS",
+"d15_cps": 33.0,
+"d15_partagee": false,
+"d15_pv": 71.2,
+"d15_sieges": 1,
 "i15": 306454,
 "m15_cartel": 21.16,
 "m15_nuls": 4.9,
@@ -25,6 +35,11 @@
 "p06_val": 125601
 },
 "HT0113": {
+"d15_circ": "CARREFOUR",
+"d15_cps": 31.0,
+"d15_partagee": false,
+"d15_pv": 88.51,
+"d15_sieges": 1,
 "i15": 296802,
 "m15_cartel": 23.32,
 "m15_nuls": 6.1,
@@ -37,6 +52,11 @@
 "p06_val": 95231
 },
 "HT0114": {
+"d15_circ": "PETION-VILLE",
+"d15_cps": 30.0,
+"d15_partagee": false,
+"d15_pv": 96.66,
+"d15_sieges": 1,
 "i15": 266123,
 "m15_cartel": 14.56,
 "m15_nuls": 6.53,
@@ -49,6 +69,11 @@
 "p06_val": 92124
 },
 "HT0115": {
+"d15_circ": "KENSCOFF",
+"d15_cps": 12.0,
+"d15_partagee": false,
+"d15_pv": 90.59,
+"d15_sieges": 1,
 "i15": 36913,
 "p06_bn": 22.79,
 "p06_partiel": true,
@@ -57,6 +82,11 @@
 "p06_val": 12123
 },
 "HT0116": {
+"d15_circ": "GRESSIER",
+"d15_cps": 20.0,
+"d15_partagee": false,
+"d15_pv": 91.38,
+"d15_sieges": 1,
 "i15": 50647,
 "m15_cartel": 11.88,
 "m15_nuls": 7.75,
@@ -69,6 +99,11 @@
 "p06_val": 13555
 },
 "HT0117": {
+"d15_circ": "CITE SOLEIL",
+"d15_cps": 35.0,
+"d15_partagee": false,
+"d15_pv": 75.18,
+"d15_sieges": 1,
 "i15": 125326,
 "m15_cartel": 7.59,
 "m15_nuls": 4.04,
@@ -81,6 +116,11 @@
 "p06_val": 29529
 },
 "HT0118": {
+"d15_circ": "TABARRE",
+"d15_cps": 18.0,
+"d15_partagee": false,
+"d15_pv": 94.54,
+"d15_sieges": 1,
 "i15": 103479,
 "m15_cartel": 10.46,
 "m15_nuls": 4.9,
@@ -93,6 +133,11 @@
 "p06_val": 32738
 },
 "HT0121": {
+"d15_circ": "LEOGANE",
+"d15_cps": 7.0,
+"d15_partagee": false,
+"d15_pv": 91.86,
+"d15_sieges": 1,
 "i15": 107852,
 "m15_cartel": 38.64,
 "m15_nuls": 7.19,
@@ -105,6 +150,11 @@
 "p06_val": 35756
 },
 "HT0122": {
+"d15_circ": "PETIT-GOAVE",
+"d15_cps": 13.0,
+"d15_partagee": false,
+"d15_pv": 91.0,
+"d15_sieges": 1,
 "i15": 88335,
 "m15_cartel": 18.66,
 "m15_nuls": 4.97,
@@ -117,6 +167,11 @@
 "p06_val": 25774
 },
 "HT0123": {
+"d15_circ": "GRAND-GOAVE",
+"d15_cps": 10.0,
+"d15_partagee": false,
+"d15_pv": 88.37,
+"d15_sieges": 1,
 "i15": 34674,
 "m15_cartel": 40.92,
 "m15_nuls": 6.09,
@@ -129,6 +184,11 @@
 "p06_val": 10146
 },
 "HT0131": {
+"d15_circ": "CROIX DES BOUQUETS",
+"d15_cps": 33.0,
+"d15_partagee": false,
+"d15_pv": 86.78,
+"d15_sieges": 1,
 "i15": 215199,
 "p06_bn": 7.36,
 "p06_partiel": false,
@@ -137,6 +197,11 @@
 "p06_val": 58911
 },
 "HT0132": {
+"d15_circ": "THOMAZEAU",
+"d15_cps": 19.0,
+"d15_partagee": false,
+"d15_pv": 93.42,
+"d15_sieges": 1,
 "i15": 31881,
 "m15_cartel": 16.36,
 "m15_nuls": 5.59,
@@ -149,6 +214,11 @@
 "p06_val": 7278
 },
 "HT0133": {
+"d15_circ": "FONDS-VERRETTES/GANTHIER",
+"d15_cps": 14.0,
+"d15_partagee": true,
+"d15_pv": 86.83,
+"d15_sieges": 1,
 "i15": 47018,
 "m15_cartel": 30.37,
 "m15_nuls": 3.87,
@@ -161,6 +231,11 @@
 "p06_val": 13389
 },
 "HT0134": {
+"d15_circ": "CORNILLON",
+"d15_cps": 7.0,
+"d15_partagee": false,
+"d15_pv": 92.96,
+"d15_sieges": 1,
 "i15": 29685,
 "p06_bn": 20.36,
 "p06_partiel": true,
@@ -169,6 +244,11 @@
 "p06_val": 8917
 },
 "HT0135": {
+"d15_circ": "FONDS-VERRETTES/GANTHIER",
+"d15_cps": 14.0,
+"d15_partagee": true,
+"d15_pv": 86.83,
+"d15_sieges": 1,
 "i15": 26488,
 "m15_cartel": 22.78,
 "m15_nuls": 17.91,
@@ -181,6 +261,11 @@
 "p06_val": 4441
 },
 "HT0141": {
+"d15_circ": "ARCAHAIE",
+"d15_cps": 16.0,
+"d15_partagee": false,
+"d15_pv": 91.33,
+"d15_sieges": 1,
 "i15": 74691,
 "m15_cartel": 15.89,
 "m15_nuls": 9.32,
@@ -193,6 +278,11 @@
 "p06_val": 18029
 },
 "HT0142": {
+"d15_circ": "CABARET",
+"d15_cps": 12.0,
+"d15_partagee": false,
+"d15_pv": 94.55,
+"d15_sieges": 1,
 "i15": 47008,
 "m15_cartel": 23.24,
 "m15_nuls": 5.14,
@@ -205,6 +295,11 @@
 "p06_val": 15477
 },
 "HT0151": {
+"d15_circ": "ANSE A GALETS",
+"d15_cps": 12.0,
+"d15_partagee": false,
+"d15_pv": 84.81,
+"d15_sieges": 1,
 "i15": 33622,
 "m15_cartel": 26.15,
 "m15_nuls": 6.29,
@@ -217,6 +312,11 @@
 "p06_val": 8228
 },
 "HT0152": {
+"d15_circ": "POINTE A RAQUETTE",
+"d15_cps": 9.0,
+"d15_partagee": false,
+"d15_pv": 73.17,
+"d15_sieges": 1,
 "i15": 16695,
 "m15_cartel": 10.87,
 "m15_nuls": 4.83,
@@ -229,6 +329,11 @@
 "p06_val": 3978
 },
 "HT0211": {
+"d15_circ": "JACMEL",
+"d15_cps": 24.0,
+"d15_partagee": false,
+"d15_pv": 95.63,
+"d15_sieges": 1,
 "i15": 96326,
 "m15_cartel": 16.07,
 "m15_nuls": 8.98,
@@ -236,6 +341,11 @@
 "m15_tot": 32456
 },
 "HT0212": {
+"d15_circ": "MARIGOT",
+"d15_cps": 14.0,
+"d15_partagee": false,
+"d15_pv": 96.43,
+"d15_sieges": 1,
 "i15": 33933,
 "m15_cartel": 21.93,
 "m15_nuls": 17.01,
@@ -243,9 +353,19 @@
 "m15_tot": 12476
 },
 "HT0213": {
+"d15_circ": "CAYES JACMEL",
+"d15_cps": 11.0,
+"d15_partagee": false,
+"d15_pv": 89.47,
+"d15_sieges": 1,
 "i15": 23414
 },
 "HT0214": {
+"d15_circ": "LA VALLEE DE JACMEL",
+"d15_cps": 15.0,
+"d15_partagee": false,
+"d15_pv": 95.0,
+"d15_sieges": 1,
 "i15": 16606,
 "m15_cartel": 18.75,
 "m15_nuls": 8.12,
@@ -253,6 +373,11 @@
 "m15_tot": 7552
 },
 "HT0221": {
+"d15_circ": "BAINET",
+"d15_cps": 9.0,
+"d15_partagee": false,
+"d15_pv": 98.02,
+"d15_sieges": 1,
 "i15": 39927,
 "m15_cartel": 29.06,
 "m15_nuls": 19.04,
@@ -260,21 +385,51 @@
 "m15_tot": 13102
 },
 "HT0222": {
+"d15_circ": "COTE-DE-FER",
+"d15_cps": 8.0,
+"d15_partagee": false,
+"d15_pv": 89.55,
+"d15_sieges": 1,
 "i15": 25696
 },
 "HT0231": {
+"d15_circ": "BELLE-ANSE",
+"d15_cps": 11.0,
+"d15_partagee": false,
+"d15_pv": 80.49,
+"d15_sieges": 1,
 "i15": 32596
 },
 "HT0232": {
+"d15_circ": "GRAND-GOSIER",
+"d15_cps": 11.0,
+"d15_partagee": false,
+"d15_pv": 80.95,
+"d15_sieges": 1,
 "i15": 8323
 },
 "HT0233": {
+"d15_circ": "THIOTTE",
+"d15_cps": 8.0,
+"d15_partagee": false,
+"d15_pv": 80.43,
+"d15_sieges": 1,
 "i15": 19023
 },
 "HT0234": {
+"d15_circ": "ANSE-A-PITRE",
+"d15_cps": 7.0,
+"d15_partagee": false,
+"d15_pv": 92.5,
+"d15_sieges": 1,
 "i15": 16411
 },
 "HT0311": {
+"d15_circ": "CAP-HAITIEN",
+"d15_cps": 33.0,
+"d15_partagee": false,
+"d15_pv": 93.45,
+"d15_sieges": 1,
 "i15": 169536,
 "m15_cartel": 16.62,
 "m15_nuls": 4.87,
@@ -282,6 +437,11 @@
 "m15_tot": 40899
 },
 "HT0312": {
+"d15_circ": "QUARTIER  MORIN",
+"d15_cps": 9.0,
+"d15_partagee": false,
+"d15_pv": 95.12,
+"d15_sieges": 1,
 "i15": 16744,
 "m15_cartel": 20.38,
 "m15_nuls": 6.05,
@@ -289,6 +449,11 @@
 "m15_tot": 6116
 },
 "HT0313": {
+"d15_circ": "LIMONADE",
+"d15_cps": 12.0,
+"d15_partagee": false,
+"d15_pv": 94.83,
+"d15_sieges": 1,
 "i15": 24432,
 "m15_cartel": 18.11,
 "m15_nuls": 8.58,
@@ -296,12 +461,27 @@
 "m15_tot": 10496
 },
 "HT0321": {
+"d15_circ": "ACUL DU NORD",
+"d15_cps": 18.0,
+"d15_partagee": false,
+"d15_pv": 96.43,
+"d15_sieges": 1,
 "i15": 34532
 },
 "HT0322": {
+"d15_circ": "PLAINE DU NORD/MILOT",
+"d15_cps": 15.0,
+"d15_partagee": true,
+"d15_pv": 91.07,
+"d15_sieges": 1,
 "i15": 25236
 },
 "HT0323": {
+"d15_circ": "PLAINE DU NORD/MILOT",
+"d15_cps": 15.0,
+"d15_partagee": true,
+"d15_pv": 91.07,
+"d15_sieges": 1,
 "i15": 20667,
 "m15_cartel": 18.88,
 "m15_nuls": 5.73,
@@ -309,9 +489,19 @@
 "m15_tot": 8597
 },
 "HT0331": {
+"d15_circ": "GRANDE RIVIERE DU NORD/BAHON",
+"d15_cps": 12.0,
+"d15_partagee": true,
+"d15_pv": 98.92,
+"d15_sieges": 1,
 "i15": 25487
 },
 "HT0332": {
+"d15_circ": "GRANDE RIVIERE DU NORD/BAHON",
+"d15_cps": 12.0,
+"d15_partagee": true,
+"d15_pv": 98.92,
+"d15_sieges": 1,
 "i15": 11190,
 "m15_cartel": 35.38,
 "m15_nuls": 5.43,
@@ -319,21 +509,51 @@
 "m15_tot": 3482
 },
 "HT0341": {
+"d15_circ": "SAINT RAPHAEL",
+"d15_cps": 12.0,
+"d15_partagee": false,
+"d15_pv": 98.31,
+"d15_sieges": 1,
 "i15": 24901
 },
 "HT0342": {
+"d15_circ": "DONDON",
+"d15_cps": 11.0,
+"d15_partagee": false,
+"d15_pv": 100.0,
+"d15_sieges": 1,
 "i15": 16950
 },
 "HT0343": {
+"d15_circ": "PIGNON/RANQUITTE/LA VICTOIRE",
+"d15_cps": 7.0,
+"d15_partagee": true,
+"d15_pv": 91.11,
+"d15_sieges": 1,
 "i15": 10556
 },
 "HT0344": {
+"d15_circ": "PIGNON/RANQUITTE/LA VICTOIRE",
+"d15_cps": 7.0,
+"d15_partagee": true,
+"d15_pv": 91.11,
+"d15_sieges": 1,
 "i15": 20351
 },
 "HT0345": {
+"d15_circ": "PIGNON/RANQUITTE/LA VICTOIRE",
+"d15_cps": 7.0,
+"d15_partagee": true,
+"d15_pv": 91.11,
+"d15_sieges": 1,
 "i15": 5370
 },
 "HT0351": {
+"d15_circ": "BORGNE",
+"d15_cps": 11.0,
+"d15_partagee": false,
+"d15_pv": 79.66,
+"d15_sieges": 1,
 "i15": 22979,
 "m15_cartel": 34.92,
 "m15_nuls": 3.78,
@@ -341,21 +561,51 @@
 "m15_tot": 6637
 },
 "HT0352": {
+"d15_circ": "PORT MARGOT",
+"d15_cps": 14.0,
+"d15_partagee": false,
+"d15_pv": 98.25,
+"d15_sieges": 1,
 "i15": 23158
 },
 "HT0361": {
+"d15_circ": "LIMBE",
+"d15_cps": 16.0,
+"d15_partagee": true,
+"d15_pv": 81.02,
+"d15_sieges": 1,
 "i15": 43379
 },
 "HT0362": {
+"d15_circ": "LIMBE",
+"d15_cps": 16.0,
+"d15_partagee": true,
+"d15_pv": 81.02,
+"d15_sieges": 1,
 "i15": 13748
 },
 "HT0371": {
+"d15_circ": "PLAISANCE",
+"d15_cps": 15.0,
+"d15_partagee": false,
+"d15_pv": 97.53,
+"d15_sieges": 1,
 "i15": 32368
 },
 "HT0372": {
+"d15_circ": "PILATE",
+"d15_cps": 14.0,
+"d15_partagee": false,
+"d15_pv": 90.77,
+"d15_sieges": 1,
 "i15": 24918
 },
 "HT0411": {
+"d15_circ": "FORT-LIBERTE",
+"d15_cps": 15.0,
+"d15_partagee": false,
+"d15_pv": 89.66,
+"d15_sieges": 1,
 "i15": 23069,
 "p06_bn": 7.88,
 "p06_partiel": true,
@@ -364,6 +614,11 @@
 "p06_val": 7923
 },
 "HT0412": {
+"d15_circ": "FERRIER/LES PERCHES",
+"d15_cps": 13.0,
+"d15_partagee": true,
+"d15_pv": 84.62,
+"d15_sieges": 1,
 "i15": 8511,
 "m15_cartel": 31.02,
 "m15_nuls": 6.13,
@@ -376,6 +631,11 @@
 "p06_val": 3314
 },
 "HT0413": {
+"d15_circ": "FERRIER/LES PERCHES",
+"d15_cps": 13.0,
+"d15_partagee": true,
+"d15_pv": 84.62,
+"d15_sieges": 1,
 "i15": 6500,
 "m15_cartel": 28.21,
 "m15_nuls": 6.0,
@@ -388,6 +648,11 @@
 "p06_val": 2324
 },
 "HT0421": {
+"d15_circ": "OUANAMINTHE",
+"d15_cps": 12.0,
+"d15_partagee": false,
+"d15_pv": 98.03,
+"d15_sieges": 1,
 "i15": 65594,
 "p06_bn": 12.53,
 "p06_partiel": true,
@@ -396,6 +661,11 @@
 "p06_val": 16221
 },
 "HT0422": {
+"d15_circ": "MONT-ORGANISE/CAPOTILLE",
+"d15_cps": 5.0,
+"d15_partagee": true,
+"d15_pv": 88.33,
+"d15_sieges": 1,
 "i15": 12166,
 "p06_bn": 25.86,
 "p06_partiel": true,
@@ -404,6 +674,11 @@
 "p06_val": 3386
 },
 "HT0423": {
+"d15_circ": "MONT-ORGANISE/CAPOTILLE",
+"d15_cps": 5.0,
+"d15_partagee": true,
+"d15_pv": 88.33,
+"d15_sieges": 1,
 "i15": 10756,
 "p06_bn": 30.41,
 "p06_partiel": true,
@@ -412,6 +687,11 @@
 "p06_val": 3554
 },
 "HT0431": {
+"d15_circ": "TROU-DU-NORD/CARACOL",
+"d15_cps": 8.0,
+"d15_partagee": true,
+"d15_pv": 97.85,
+"d15_sieges": 1,
 "i15": 33399,
 "p06_bn": 18.33,
 "p06_partiel": true,
@@ -420,6 +700,11 @@
 "p06_val": 9300
 },
 "HT0432": {
+"d15_circ": "SAINTE-SUZANNE",
+"d15_cps": 7.0,
+"d15_partagee": false,
+"d15_pv": 94.74,
+"d15_sieges": 1,
 "i15": 14211,
 "p06_bn": 26.26,
 "p06_partiel": true,
@@ -428,6 +713,11 @@
 "p06_val": 5404
 },
 "HT0433": {
+"d15_circ": "TERRIER-ROUGE",
+"d15_cps": 11.0,
+"d15_partagee": false,
+"d15_pv": 73.68,
+"d15_sieges": 1,
 "i15": 15845,
 "m15_cartel": 20.75,
 "m15_nuls": 2.33,
@@ -440,6 +730,11 @@
 "p06_val": 6945
 },
 "HT0434": {
+"d15_circ": "TROU-DU-NORD/CARACOL",
+"d15_cps": 8.0,
+"d15_partagee": true,
+"d15_pv": 97.85,
+"d15_sieges": 1,
 "i15": 4888,
 "p06_bn": 9.45,
 "p06_partiel": true,
@@ -448,6 +743,11 @@
 "p06_val": 2222
 },
 "HT0441": {
+"d15_circ": "VALLIERES/CARICE",
+"d15_cps": 8.0,
+"d15_partagee": true,
+"d15_pv": 91.49,
+"d15_sieges": 1,
 "i15": 8957,
 "p06_bn": 21.39,
 "p06_partiel": true,
@@ -456,6 +756,11 @@
 "p06_val": 2675
 },
 "HT0442": {
+"d15_circ": "VALLIERES/CARICE",
+"d15_cps": 8.0,
+"d15_partagee": true,
+"d15_pv": 91.49,
+"d15_sieges": 1,
 "i15": 9594,
 "p06_bn": 16.4,
 "p06_partiel": true,
@@ -464,6 +769,11 @@
 "p06_val": 3460
 },
 "HT0443": {
+"d15_circ": "MOMBIN CROCHU",
+"d15_cps": 5.0,
+"d15_partagee": false,
+"d15_pv": 91.49,
+"d15_sieges": 1,
 "i15": 13589,
 "m15_cartel": 44.0,
 "m15_nuls": 7.7,
@@ -476,6 +786,11 @@
 "p06_val": 3557
 },
 "HT0511": {
+"d15_circ": "GONAIVES",
+"d15_cps": 24.0,
+"d15_partagee": false,
+"d15_pv": 92.63,
+"d15_sieges": 1,
 "i15": 166501,
 "m15_cartel": 30.06,
 "m15_nuls": 3.47,
@@ -488,6 +803,11 @@
 "p06_val": 55289
 },
 "HT0512": {
+"d15_circ": "ENNERY",
+"d15_cps": 2.0,
+"d15_partagee": false,
+"d15_pv": 69.09,
+"d15_sieges": 1,
 "i15": 21412,
 "p06_bn": 14.23,
 "p06_partiel": true,
@@ -496,6 +816,11 @@
 "p06_val": 8681
 },
 "HT0513": {
+"d15_circ": "L'ESTERE",
+"d15_cps": 19.0,
+"d15_partagee": false,
+"d15_pv": 70.91,
+"d15_sieges": 1,
 "i15": 21544,
 "p06_bn": 4.82,
 "p06_partiel": true,
@@ -504,6 +829,11 @@
 "p06_val": 8444
 },
 "HT0521": {
+"d15_circ": "GROS-MORNE",
+"d15_cps": 9.0,
+"d15_partagee": false,
+"d15_pv": 93.92,
+"d15_sieges": 1,
 "i15": 62729,
 "m15_cartel": 15.28,
 "m15_nuls": 6.2,
@@ -511,6 +841,11 @@
 "m15_tot": 11880
 },
 "HT0522": {
+"d15_circ": "TERRE-NEUVE",
+"d15_cps": 5.0,
+"d15_partagee": false,
+"d15_pv": 84.38,
+"d15_sieges": 1,
 "i15": 11734,
 "m15_cartel": 43.93,
 "m15_nuls": 1.91,
@@ -523,6 +858,11 @@
 "p06_val": 4176
 },
 "HT0523": {
+"d15_circ": "L'ANSE ROUGE",
+"d15_cps": 15.0,
+"d15_partagee": false,
+"d15_pv": 87.5,
+"d15_sieges": 1,
 "i15": 18798,
 "m15_cartel": 33.73,
 "m15_nuls": 3.07,
@@ -535,6 +875,11 @@
 "p06_val": 6556
 },
 "HT0531": {
+"d15_circ": "SAINT MARC",
+"d15_cps": 22.0,
+"d15_partagee": false,
+"d15_pv": 95.67,
+"d15_sieges": 1,
 "i15": 128376,
 "m15_cartel": 10.04,
 "m15_nuls": 3.77,
@@ -547,6 +892,11 @@
 "p06_val": 37526
 },
 "HT0532": {
+"d15_circ": "VERRETTES",
+"d15_cps": 14.0,
+"d15_partagee": false,
+"d15_pv": 99.38,
+"d15_sieges": 1,
 "i15": 69003,
 "p06_bn": 6.58,
 "p06_partiel": true,
@@ -555,6 +905,11 @@
 "p06_val": 22727
 },
 "HT0533": {
+"d15_circ": "LA CHAPELLE",
+"d15_cps": 8.0,
+"d15_partagee": false,
+"d15_pv": 66.67,
+"d15_sieges": 1,
 "i15": 13887,
 "m15_cartel": 41.19,
 "m15_nuls": 2.57,
@@ -567,6 +922,11 @@
 "p06_val": 1756
 },
 "HT0541": {
+"d15_circ": "DESSALINES",
+"d15_cps": 8.0,
+"d15_partagee": false,
+"d15_pv": 69.08,
+"d15_sieges": 1,
 "i15": 64425,
 "m15_cartel": 29.17,
 "m15_nuls": 2.42,
@@ -579,6 +939,11 @@
 "p06_val": 19016
 },
 "HT0542": {
+"d15_circ": "PETITE RIVIERE DE L'ARTIBONITE",
+"d15_cps": 27.0,
+"d15_partagee": false,
+"d15_pv": 93.94,
+"d15_sieges": 1,
 "i15": 69968,
 "m15_cartel": 14.31,
 "m15_nuls": 4.56,
@@ -591,6 +956,11 @@
 "p06_val": 18039
 },
 "HT0543": {
+"d15_circ": "GRANDE-SALINE",
+"d15_cps": 8.0,
+"d15_partagee": false,
+"d15_pv": 86.21,
+"d15_sieges": 1,
 "i15": 11449,
 "m15_cartel": 19.85,
 "m15_nuls": 3.68,
@@ -598,6 +968,11 @@
 "m15_tot": 3619
 },
 "HT0544": {
+"d15_circ": "DESDUNES",
+"d15_cps": 6.0,
+"d15_partagee": false,
+"d15_pv": 94.74,
+"d15_sieges": 1,
 "i15": 16406,
 "m15_cartel": 21.77,
 "m15_nuls": 2.78,
@@ -605,6 +980,11 @@
 "m15_tot": 6757
 },
 "HT0551": {
+"d15_circ": "SAINT-MICHEL",
+"d15_cps": 11.0,
+"d15_partagee": false,
+"d15_pv": 83.57,
+"d15_sieges": 1,
 "i15": 58696,
 "p06_bn": 21.05,
 "p06_partiel": true,
@@ -613,6 +993,11 @@
 "p06_val": 14395
 },
 "HT0552": {
+"d15_circ": "MARMELADE",
+"d15_cps": 14.0,
+"d15_partagee": false,
+"d15_pv": 93.02,
+"d15_sieges": 1,
 "i15": 17339,
 "m15_cartel": 23.49,
 "m15_nuls": 14.08,
@@ -625,6 +1010,11 @@
 "p06_val": 9463
 },
 "HT0611": {
+"d15_circ": "HINCHE",
+"d15_cps": 17.0,
+"d15_partagee": false,
+"d15_pv": 90.68,
+"d15_sieges": 1,
 "i15": 71529,
 "m15_cartel": 26.4,
 "m15_nuls": 7.39,
@@ -637,6 +1027,11 @@
 "p06_val": 18772
 },
 "HT0612": {
+"d15_circ": "MAISSADE",
+"d15_cps": 15.0,
+"d15_partagee": false,
+"d15_pv": 90.0,
+"d15_sieges": 1,
 "i15": 29394,
 "p06_bn": 25.4,
 "p06_partiel": true,
@@ -645,6 +1040,11 @@
 "p06_val": 8202
 },
 "HT0613": {
+"d15_circ": "THOMONDE",
+"d15_cps": 8.0,
+"d15_partagee": false,
+"d15_pv": 90.91,
+"d15_sieges": 1,
 "i15": 22687,
 "p06_bn": 12.36,
 "p06_partiel": true,
@@ -653,6 +1053,11 @@
 "p06_val": 7583
 },
 "HT0614": {
+"d15_circ": "CERCA-CARVAJAL/QUARTIER DE LOS PALIS",
+"d15_cps": 5.0,
+"d15_partagee": false,
+"d15_pv": 66.67,
+"d15_sieges": 1,
 "i15": 13855,
 "p06_bn": 17.85,
 "p06_partiel": true,
@@ -661,6 +1066,11 @@
 "p06_val": 4206
 },
 "HT0621": {
+"d15_circ": "MIREBALAIS",
+"d15_cps": 14.0,
+"d15_partagee": false,
+"d15_pv": 83.85,
+"d15_sieges": 1,
 "i15": 56162,
 "p06_bn": 20.6,
 "p06_partiel": true,
@@ -669,6 +1079,11 @@
 "p06_val": 13339
 },
 "HT0622": {
+"d15_circ": "SAUT-D'EAU",
+"d15_cps": 8.0,
+"d15_partagee": false,
+"d15_pv": 90.32,
+"d15_sieges": 1,
 "i15": 25559,
 "m15_cartel": 33.83,
 "m15_nuls": 14.74,
@@ -681,6 +1096,11 @@
 "p06_val": 5229
 },
 "HT0623": {
+"d15_circ": "BOUCAN CARRE",
+"d15_cps": 17.0,
+"d15_partagee": false,
+"d15_pv": 91.8,
+"d15_sieges": 1,
 "i15": 24202,
 "m15_cartel": 23.55,
 "m15_nuls": 12.78,
@@ -693,6 +1113,11 @@
 "p06_val": 5060
 },
 "HT0631": {
+"d15_circ": "LASCAHOBAS",
+"d15_cps": 12.0,
+"d15_partagee": false,
+"d15_pv": 88.89,
+"d15_sieges": 1,
 "i15": 34856,
 "p06_bn": 22.3,
 "p06_partiel": true,
@@ -701,6 +1126,11 @@
 "p06_val": 9791
 },
 "HT0632": {
+"d15_circ": "BELLADERE",
+"d15_cps": 8.0,
+"d15_partagee": false,
+"d15_pv": 94.62,
+"d15_sieges": 1,
 "i15": 38629,
 "m15_cartel": 23.25,
 "m15_nuls": 9.24,
@@ -713,6 +1143,11 @@
 "p06_val": 10147
 },
 "HT0633": {
+"d15_circ": "SAVANETTE/QUARTIER BAPTISTE",
+"d15_cps": 6.0,
+"d15_partagee": false,
+"d15_pv": 97.87,
+"d15_sieges": 1,
 "i15": 20140,
 "p06_bn": 23.39,
 "p06_partiel": true,
@@ -721,6 +1156,11 @@
 "p06_val": 4861
 },
 "HT0641": {
+"d15_circ": "CERCA-LA-SOURCE",
+"d15_cps": 10.0,
+"d15_partagee": false,
+"d15_pv": 76.27,
+"d15_sieges": 1,
 "i15": 26054,
 "p06_bn": 13.45,
 "p06_partiel": true,
@@ -729,6 +1169,11 @@
 "p06_val": 7733
 },
 "HT0642": {
+"d15_circ": "THOMASSIQUE",
+"d15_cps": 7.0,
+"d15_partagee": false,
+"d15_pv": 89.06,
+"d15_sieges": 1,
 "i15": 28077,
 "p06_bn": 15.58,
 "p06_partiel": true,
@@ -737,6 +1182,11 @@
 "p06_val": 7159
 },
 "HT0711": {
+"d15_circ": "LES CAYES/ILE-A-VACHE",
+"d15_cps": 25.0,
+"d15_partagee": true,
+"d15_pv": 92.4,
+"d15_sieges": 1,
 "i15": 108907,
 "m15_cartel": 42.34,
 "m15_nuls": 4.7,
@@ -749,6 +1199,11 @@
 "p06_val": 39699
 },
 "HT0712": {
+"d15_circ": "TORBECK/CHANTAL",
+"d15_cps": 22.0,
+"d15_partagee": true,
+"d15_pv": 89.06,
+"d15_sieges": 1,
 "i15": 37277,
 "p06_bn": 8.79,
 "p06_partiel": true,
@@ -757,6 +1212,11 @@
 "p06_val": 12904
 },
 "HT0713": {
+"d15_circ": "TORBECK/CHANTAL",
+"d15_cps": 22.0,
+"d15_partagee": true,
+"d15_pv": 89.06,
+"d15_sieges": 1,
 "i15": 17692,
 "p06_bn": 16.67,
 "p06_partiel": true,
@@ -765,6 +1225,11 @@
 "p06_val": 3453
 },
 "HT0714": {
+"d15_circ": "CAMP-PERRIN/MANICHE",
+"d15_cps": 12.0,
+"d15_partagee": true,
+"d15_pv": 81.25,
+"d15_sieges": 1,
 "i15": 28315,
 "m15_cartel": 18.82,
 "m15_nuls": 8.47,
@@ -777,6 +1242,11 @@
 "p06_val": 8218
 },
 "HT0715": {
+"d15_circ": "CAMP-PERRIN/MANICHE",
+"d15_cps": 12.0,
+"d15_partagee": true,
+"d15_pv": 81.25,
+"d15_sieges": 1,
 "i15": 12029,
 "p06_bn": 17.73,
 "p06_partiel": true,
@@ -785,6 +1255,11 @@
 "p06_val": 3322
 },
 "HT0716": {
+"d15_circ": "LES CAYES/ILE-A-VACHE",
+"d15_cps": 25.0,
+"d15_partagee": true,
+"d15_pv": 92.4,
+"d15_sieges": 1,
 "i15": 7091,
 "m15_cartel": 27.25,
 "m15_nuls": 5.54,
@@ -797,6 +1272,11 @@
 "p06_val": 2935
 },
 "HT0721": {
+"d15_circ": "PORT-SALUT",
+"d15_cps": 7.0,
+"d15_partagee": false,
+"d15_pv": 81.82,
+"d15_sieges": 1,
 "i15": 17049,
 "m15_cartel": 22.37,
 "m15_nuls": 4.11,
@@ -809,6 +1289,11 @@
 "p06_val": 5643
 },
 "HT0722": {
+"d15_circ": "SAINT JEAN DU SUD/ARNIQUET",
+"d15_cps": 13.0,
+"d15_partagee": true,
+"d15_pv": 93.44,
+"d15_sieges": 1,
 "i15": 13134,
 "m15_cartel": 23.95,
 "m15_nuls": 5.71,
@@ -821,6 +1306,11 @@
 "p06_val": 4375
 },
 "HT0723": {
+"d15_circ": "SAINT JEAN DU SUD/ARNIQUET",
+"d15_cps": 13.0,
+"d15_partagee": true,
+"d15_pv": 93.44,
+"d15_sieges": 1,
 "i15": 11510,
 "p06_bn": 9.32,
 "p06_partiel": true,
@@ -829,6 +1319,11 @@
 "p06_val": 3416
 },
 "HT0731": {
+"d15_circ": "AQUIN",
+"d15_cps": 14.0,
+"d15_partagee": false,
+"d15_pv": 82.61,
+"d15_sieges": 1,
 "i15": 47495,
 "p06_bn": 15.65,
 "p06_partiel": true,
@@ -837,6 +1332,11 @@
 "p06_val": 14434
 },
 "HT0732": {
+"d15_circ": "SAINT-LOUIS-DU-SUD",
+"d15_cps": 24.0,
+"d15_partagee": false,
+"d15_pv": 78.89,
+"d15_sieges": 1,
 "i15": 37476,
 "m15_cartel": 18.84,
 "m15_nuls": 7.63,
@@ -849,6 +1349,11 @@
 "p06_val": 11782
 },
 "HT0733": {
+"d15_circ": "CAVAILLON",
+"d15_cps": 16.0,
+"d15_partagee": false,
+"d15_pv": 79.45,
+"d15_sieges": 1,
 "i15": 30231,
 "p06_bn": 20.56,
 "p06_partiel": true,
@@ -857,6 +1362,11 @@
 "p06_val": 7626
 },
 "HT0741": {
+"d15_circ": "COTEAUX",
+"d15_cps": 5.0,
+"d15_partagee": false,
+"d15_pv": 77.78,
+"d15_sieges": 1,
 "i15": 10454,
 "p06_bn": 23.27,
 "p06_partiel": true,
@@ -865,6 +1375,11 @@
 "p06_val": 3758
 },
 "HT0742": {
+"d15_circ": "PORT-A-PIMENT",
+"d15_cps": 7.0,
+"d15_partagee": false,
+"d15_pv": 96.15,
+"d15_sieges": 1,
 "i15": 10377,
 "m15_cartel": 40.73,
 "m15_nuls": 3.41,
@@ -877,6 +1392,11 @@
 "p06_val": 3189
 },
 "HT0743": {
+"d15_circ": "ROCHE-A-BATEAU",
+"d15_cps": 7.0,
+"d15_partagee": false,
+"d15_pv": 85.71,
+"d15_sieges": 1,
 "i15": 10842,
 "p06_bn": 18.85,
 "p06_partiel": true,
@@ -885,6 +1405,11 @@
 "p06_val": 4202
 },
 "HT0751": {
+"d15_circ": "CHARDONNIERES/LES ANGLAIS",
+"d15_cps": 15.0,
+"d15_partagee": true,
+"d15_pv": 90.41,
+"d15_sieges": 1,
 "i15": 12873,
 "p06_bn": 22.69,
 "p06_partiel": true,
@@ -893,6 +1418,11 @@
 "p06_val": 3993
 },
 "HT0752": {
+"d15_circ": "CHARDONNIERES/LES ANGLAIS",
+"d15_cps": 15.0,
+"d15_partagee": true,
+"d15_pv": 90.41,
+"d15_sieges": 1,
 "i15": 15828,
 "p06_bn": 27.48,
 "p06_partiel": true,
@@ -901,6 +1431,11 @@
 "p06_val": 4091
 },
 "HT0753": {
+"d15_circ": "TIBURON",
+"d15_cps": 9.0,
+"d15_partagee": false,
+"d15_pv": 84.85,
+"d15_sieges": 1,
 "i15": 12431,
 "m15_cartel": 33.66,
 "m15_nuls": 13.81,
@@ -913,6 +1448,11 @@
 "p06_val": 4673
 },
 "HT0811": {
+"d15_circ": "JEREMIE",
+"d15_cps": 19.0,
+"d15_partagee": false,
+"d15_pv": 96.49,
+"d15_sieges": 1,
 "i15": 72364,
 "p06_bn": 13.96,
 "p06_partiel": true,
@@ -921,6 +1461,11 @@
 "p06_val": 23473
 },
 "HT0812": {
+"d15_circ": "ABRICOTS/BONBON",
+"d15_cps": 14.0,
+"d15_partagee": true,
+"d15_pv": 98.41,
+"d15_sieges": 1,
 "i15": 16920,
 "m15_cartel": 27.5,
 "m15_nuls": 5.96,
@@ -933,6 +1478,11 @@
 "p06_val": 5362
 },
 "HT0813": {
+"d15_circ": "ABRICOTS/BONBON",
+"d15_cps": 14.0,
+"d15_partagee": true,
+"d15_pv": 98.41,
+"d15_sieges": 1,
 "i15": 8049,
 "p06_bn": 20.95,
 "p06_partiel": true,
@@ -941,6 +1491,11 @@
 "p06_val": 2279
 },
 "HT0814": {
+"d15_circ": "MORON/CHAMBELLAN",
+"d15_cps": 7.0,
+"d15_partagee": true,
+"d15_pv": 92.21,
+"d15_sieges": 1,
 "i15": 18350,
 "m15_cartel": 42.28,
 "m15_nuls": 5.82,
@@ -953,6 +1508,11 @@
 "p06_val": 5794
 },
 "HT0815": {
+"d15_circ": "MORON/CHAMBELLAN",
+"d15_cps": 7.0,
+"d15_partagee": true,
+"d15_pv": 92.21,
+"d15_sieges": 1,
 "i15": 13444,
 "p06_bn": 18.95,
 "p06_partiel": true,
@@ -961,6 +1521,11 @@
 "p06_val": 2541
 },
 "HT0821": {
+"d15_circ": "ANSE-D'HAINAULT/LES IROIS",
+"d15_cps": 7.0,
+"d15_partagee": true,
+"d15_pv": 70.77,
+"d15_sieges": 1,
 "i15": 14791,
 "m15_cartel": 35.59,
 "m15_nuls": 9.76,
@@ -973,6 +1538,11 @@
 "p06_val": 6189
 },
 "HT0822": {
+"d15_circ": "DAME-MARIE",
+"d15_cps": 7.0,
+"d15_partagee": false,
+"d15_pv": 87.23,
+"d15_sieges": 1,
 "i15": 17424,
 "m15_cartel": 45.54,
 "m15_nuls": 7.03,
@@ -985,6 +1555,11 @@
 "p06_val": 8061
 },
 "HT0823": {
+"d15_circ": "ANSE-D'HAINAULT/LES IROIS",
+"d15_cps": 7.0,
+"d15_partagee": true,
+"d15_pv": 70.77,
+"d15_sieges": 1,
 "i15": 11243,
 "p06_bn": 19.22,
 "p06_partiel": true,
@@ -993,6 +1568,11 @@
 "p06_val": 3795
 },
 "HT0831": {
+"d15_circ": "CORAIL",
+"d15_cps": 7.0,
+"d15_partagee": false,
+"d15_pv": 75.86,
+"d15_sieges": 1,
 "i15": 15378,
 "p06_bn": 20.88,
 "p06_partiel": true,
@@ -1001,6 +1581,11 @@
 "p06_val": 5396
 },
 "HT0832": {
+"d15_circ": "ROSEAUX",
+"d15_cps": 14.0,
+"d15_partagee": false,
+"d15_pv": 100.0,
+"d15_sieges": 1,
 "i15": 14830,
 "m15_cartel": 20.61,
 "m15_nuls": 9.09,
@@ -1013,6 +1598,11 @@
 "p06_val": 5513
 },
 "HT0833": {
+"d15_circ": "BEAUMON",
+"d15_cps": 3.0,
+"d15_partagee": false,
+"d15_pv": 97.22,
+"d15_sieges": 1,
 "i15": 10522,
 "p06_bn": 31.51,
 "p06_partiel": true,
@@ -1021,6 +1611,11 @@
 "p06_val": 2997
 },
 "HT0834": {
+"d15_circ": "PESTEL",
+"d15_cps": 10.0,
+"d15_partagee": false,
+"d15_pv": 96.55,
+"d15_sieges": 1,
 "i15": 23624,
 "p06_bn": 10.6,
 "p06_partiel": true,
@@ -1029,6 +1624,11 @@
 "p06_val": 9036
 },
 "HT0911": {
+"d15_circ": "PORT-DE-PAIX",
+"d15_cps": 19.0,
+"d15_partagee": false,
+"d15_pv": 96.68,
+"d15_sieges": 1,
 "i15": 104080,
 "p06_bn": 7.28,
 "p06_partiel": true,
@@ -1037,6 +1637,11 @@
 "p06_val": 29210
 },
 "HT0912": {
+"d15_circ": "LA TORTUE",
+"d15_cps": 7.0,
+"d15_partagee": false,
+"d15_pv": 77.27,
+"d15_sieges": 1,
 "i15": 19273,
 "p06_bn": 10.79,
 "p06_partiel": true,
@@ -1045,6 +1650,11 @@
 "p06_val": 5757
 },
 "HT0913": {
+"d15_circ": "BASSIN-BLEU",
+"d15_cps": 8.0,
+"d15_partagee": false,
+"d15_pv": 97.83,
+"d15_sieges": 1,
 "i15": 18752,
 "p06_bn": 24.59,
 "p06_partiel": true,
@@ -1053,6 +1663,11 @@
 "p06_val": 6004
 },
 "HT0914": {
+"d15_circ": "CHANSOLME",
+"d15_cps": 6.0,
+"d15_partagee": false,
+"d15_pv": 79.17,
+"d15_sieges": 1,
 "i15": 9316,
 "p06_bn": 14.63,
 "p06_partiel": true,
@@ -1061,6 +1676,11 @@
 "p06_val": 3285
 },
 "HT0921": {
+"d15_circ": "SAINT LOUIS NORD",
+"d15_cps": 17.0,
+"d15_partagee": false,
+"d15_pv": 94.83,
+"d15_sieges": 1,
 "i15": 50374,
 "p06_bn": 10.5,
 "p06_partiel": true,
@@ -1069,6 +1689,11 @@
 "p06_val": 15926
 },
 "HT0922": {
+"d15_circ": "ANSE-A-FOLEUR",
+"d15_cps": 6.0,
+"d15_partagee": false,
+"d15_pv": 96.97,
+"d15_sieges": 1,
 "i15": 13465,
 "p06_bn": 14.02,
 "p06_partiel": true,
@@ -1077,6 +1702,11 @@
 "p06_val": 5017
 },
 "HT0931": {
+"d15_circ": "MOLE SAINT-NICOLAS",
+"d15_cps": 8.0,
+"d15_partagee": false,
+"d15_pv": 97.44,
+"d15_sieges": 1,
 "i15": 15671,
 "m15_cartel": 29.22,
 "m15_nuls": 7.65,
@@ -1089,6 +1719,11 @@
 "p06_val": 7467
 },
 "HT0932": {
+"d15_circ": "BOMBARDOPOLIS/BAIE DE HENNE",
+"d15_cps": 11.0,
+"d15_partagee": true,
+"d15_pv": 93.1,
+"d15_sieges": 1,
 "i15": 7679,
 "p06_bn": 9.55,
 "p06_partiel": true,
@@ -1097,6 +1732,11 @@
 "p06_val": 3525
 },
 "HT0933": {
+"d15_circ": "BOMBARDOPOLIS/BAIE DE HENNE",
+"d15_cps": 11.0,
+"d15_partagee": true,
+"d15_pv": 93.1,
+"d15_sieges": 1,
 "i15": 14331,
 "p06_bn_ecarte": "zéro blanc et zéro nul déclarés : saisie probable, valeur écartée",
 "p06_partiel": true,
@@ -1105,6 +1745,11 @@
 "p06_val": 1941
 },
 "HT0934": {
+"d15_circ": "JEAN-RABEL",
+"d15_cps": 14.0,
+"d15_partagee": false,
+"d15_pv": 94.31,
+"d15_sieges": 1,
 "i15": 50922,
 "m15_cartel": 18.55,
 "m15_nuls": 3.95,
@@ -1117,6 +1762,11 @@
 "p06_val": 19778
 },
 "HT1011": {
+"d15_circ": "MIRAGOANE",
+"d15_cps": 13.0,
+"d15_partagee": false,
+"d15_pv": 95.28,
+"d15_sieges": 1,
 "i15": 46084,
 "p06_bn": 18.3,
 "p06_partiel": true,
@@ -1125,6 +1775,11 @@
 "p06_val": 14053
 },
 "HT1012": {
+"d15_circ": "PETITE RIVIERE DE NIPPES/PAILLANT",
+"d15_cps": 10.0,
+"d15_partagee": true,
+"d15_pv": 94.29,
+"d15_sieges": 1,
 "i15": 15361,
 "p06_bn": 19.6,
 "p06_partiel": true,
@@ -1133,6 +1788,11 @@
 "p06_val": 5900
 },
 "HT1013": {
+"d15_circ": "FONDS DES NEGRES",
+"d15_cps": 13.0,
+"d15_partagee": false,
+"d15_pv": 100.0,
+"d15_sieges": 1,
 "i15": 27028,
 "m15_cartel": 19.02,
 "m15_nuls": 12.83,
@@ -1145,6 +1805,11 @@
 "p06_val": 7898
 },
 "HT1014": {
+"d15_circ": "PETITE RIVIERE DE NIPPES/PAILLANT",
+"d15_cps": 10.0,
+"d15_partagee": true,
+"d15_pv": 94.29,
+"d15_sieges": 1,
 "i15": 13050,
 "m15_cartel": 23.57,
 "m15_nuls": 13.35,
@@ -1157,6 +1822,11 @@
 "p06_val": 4723
 },
 "HT1021": {
+"d15_circ": "ANSE-A-VEAU/ARNAUD",
+"d15_cps": 14.0,
+"d15_partagee": true,
+"d15_pv": 89.23,
+"d15_sieges": 1,
 "i15": 14008,
 "m15_cartel": 21.23,
 "m15_nuls": 10.55,
@@ -1169,6 +1839,11 @@
 "p06_val": 4114
 },
 "HT1022": {
+"d15_circ": "PETIT TROU DE NIPPES/PLAISANCE DU SUD",
+"d15_cps": 7.0,
+"d15_partagee": true,
+"d15_pv": 86.89,
+"d15_sieges": 1,
 "i15": 13360,
 "p06_bn": 23.08,
 "p06_partiel": false,
@@ -1177,6 +1852,11 @@
 "p06_val": 4653
 },
 "HT1023": {
+"d15_circ": "L'ASILE",
+"d15_cps": 15.0,
+"d15_partagee": false,
+"d15_pv": 97.83,
+"d15_sieges": 1,
 "i15": 18632,
 "p06_bn": 15.8,
 "p06_partiel": true,
@@ -1185,6 +1865,11 @@
 "p06_val": 6525
 },
 "HT1024": {
+"d15_circ": "ANSE-A-VEAU/ARNAUD",
+"d15_cps": 14.0,
+"d15_partagee": true,
+"d15_pv": 89.23,
+"d15_sieges": 1,
 "i15": 12839,
 "m15_cartel": 29.96,
 "m15_nuls": 14.02,
@@ -1197,6 +1882,11 @@
 "p06_val": 3592
 },
 "HT1025": {
+"d15_circ": "PETIT TROU DE NIPPES/PLAISANCE DU SUD",
+"d15_cps": 7.0,
+"d15_partagee": true,
+"d15_pv": 86.89,
+"d15_sieges": 1,
 "i15": 10743,
 "p06_bn": 25.3,
 "p06_partiel": true,
@@ -1205,6 +1895,11 @@
 "p06_val": 3498
 },
 "HT1031": {
+"d15_circ": "BARADERES/GRAND BOUCAN",
+"d15_cps": 10.0,
+"d15_partagee": true,
+"d15_pv": 92.31,
+"d15_sieges": 1,
 "i15": 17240,
 "m15_cartel": 17.27,
 "m15_nuls": 13.99,
@@ -1217,6 +1912,11 @@
 "p06_val": 6466
 },
 "HT1032": {
+"d15_circ": "BARADERES/GRAND BOUCAN",
+"d15_cps": 10.0,
+"d15_partagee": true,
+"d15_pv": 92.31,
+"d15_sieges": 1,
 "i15": 2595,
 "p06_bn": 6.37,
 "p06_partiel": true,
@@ -1228,6 +1928,10 @@
 "meta": {
 "attribution": "Conseil électoral provisoire (CEP), Inscription des électeurs, avril 2015 ; Conseil électoral provisoire (CEP), système EIS — résumés de la présidentielle du 7 février 2006 ; Conseil électoral provisoire (CEP), Élections municipales du 25 octobre 2015, résultats définitifs",
 "date_extraction": "2026-09-18",
+"deputes_2015": {
+"maille": "circonscription : une valeur de circonscription est portée par chacune de ses communes ; Port-au-Prince compte 3 sièges",
+"source": "Election Passport (American University), SRC-071"
+},
 "inscrits_2015_total": 5835295,
 "licence": "Tous droits réservés (CEP) — republication gratuite avec citation, décision Atmart du 18/09/2026",
 "municipales_2015": {
@@ -1235,7 +1939,7 @@
 "document": "66 pages sur 69 annoncées",
 "saisie": "manuelle, contrôlée par le pourcentage imprimé et relue"
 },
-"passeport": "PSP-079 à PSP-081",
+"passeport": "PSP-079 à PSP-082",
 "presidentielle_2006": {
 "absents": "Nord et Sud-Est non archivés, et 3 autres communes",
 "communes": 108,

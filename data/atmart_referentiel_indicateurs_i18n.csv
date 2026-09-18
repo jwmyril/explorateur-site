@@ -461,6 +461,48 @@ IND-ELE-008,ht,methode_calcul,"Pwosè-vèbal ki antre ÷ pwosè-vèbal yo tann �
 IND-ELE-008,ht,nom,"Pwosè-vèbal ki antre, eleksyon minisipal 2015"
 IND-ELE-008,ht,sens_interpretation,Wo = rezilta a pi konplè
 IND-ELE-008,ht,unite,%
+IND-ELE-009,en,comparabilite,Comparable between constituencies for the same election; two communes of the same constituency carry the same value.
+IND-ELE-009,en,definition,"Number of candidates for the Chamber of Deputies, in the first round of 2015, per seat to be filled in the constituency the commune belongs to."
+IND-ELE-009,en,limites_connues,"THIS IS A CONSTITUENCY VALUE: several communes share a single deputy (“Pignon, Ranquitte, La Victoire”) and therefore carry the same value; Port-au-Prince elects three deputies, and its value combines its three constituencies. Election Passport data (American University), built from CEP results, which sometimes mix preliminary and final results. Candidates struck off by the CEP after the first round are counted: they were on the ballot."
+IND-ELE-009,en,methode_calcul,"Number of candidate rows for the constituency in the Election Passport file, divided by the number of seats (one per constituency; three for Port-au-Prince)."
+IND-ELE-009,en,nom,"Candidates per deputy seat, 2015"
+IND-ELE-009,en,sens_interpretation,"Neutral — a high number means a fragmented race, not a better choice"
+IND-ELE-009,en,unite,candidates per seat
+IND-ELE-009,es,comparabilite,Comparable entre circunscripciones para una misma elección; dos comunas de una misma circunscripción llevan el mismo valor.
+IND-ELE-009,es,definition,"Número de candidatos a la Cámara de Diputados, en la primera vuelta de 2015, por escaño a cubrir en la circunscripción de la comuna."
+IND-ELE-009,es,limites_connues,"ES UN VALOR DE CIRCUNSCRIPCIÓN: varias comunas comparten un solo diputado («Pignon, Ranquitte, La Victoire») y llevan por tanto el mismo valor; Port-au-Prince elige tres diputados y su valor reúne sus tres circunscripciones. Datos de Election Passport (American University), elaborados a partir de los resultados del CEP, que a veces mezclan resultados preliminares y definitivos. Se cuentan los candidatos excluidos por el CEP tras la primera vuelta: estaban en la papeleta."
+IND-ELE-009,es,methode_calcul,"Número de filas de candidatura de la circunscripción en el archivo de Election Passport, dividido por el número de escaños (uno por circunscripción; tres para Port-au-Prince)."
+IND-ELE-009,es,nom,"Candidatos por escaño de diputado, 2015"
+IND-ELE-009,es,sens_interpretation,"Neutro — un número alto indica una contienda fragmentada, no una mejor opción"
+IND-ELE-009,es,unite,candidatos por escaño
+IND-ELE-009,ht,comparabilite,Nou ka konpare sirkonskripsyon yo pou menm eleksyon an ; de komin nan menm sirkonskripsyon pote menm valè a.
+IND-ELE-009,ht,definition,"Konbyen kandida ki te konkoure pou Chanm depite a, nan premye tou 2015 la, pou chak plas ki te gen pou ranpli nan sirkonskripsyon komin nan."
+IND-ELE-009,ht,limites_connues,"SE YON VALÈ SIRKONSKRIPSYON : plizyè komin pataje yon sèl depite (« Pinyon, Rankit, Laviktwa ») e yo pote menm valè a ; Pòtoprens chwazi twa depite, valè li mete twa sirkonskripsyon li yo ansanm. Done Election Passport (Inivèsite Ameriken) fè apati rezilta CEP yo, ki konn mele rezilta pwovizwa ak rezilta definitif. Kandida CEP la te retire apre premye tou a konte : non yo te sou bilten an."
+IND-ELE-009,ht,methode_calcul,"Kantite liy kandida sirkonskripsyon an nan fichye Election Passport la, divize pa kantite plas (youn pou chak sirkonskripsyon ; twa pou Pòtoprens)."
+IND-ELE-009,ht,nom,"Kandida pou chak plas depite, 2015"
+IND-ELE-009,ht,sens_interpretation,"Net — anpil kandida montre konpetisyon an te gaye, se pa pi bon chwa"
+IND-ELE-009,ht,unite,kandida pou chak plas
+IND-ELE-010,en,comparabilite,Comparable between constituencies for the same round; two communes of the same constituency carry the same value.
+IND-ELE-010,en,definition,"Share of polling-station tally sheets included in the first-round results of the 2015 legislative elections, in the constituency the commune belongs to."
+IND-ELE-010,en,limites_connues,"THIS IS NOT A MEASURE OF THE QUALITY OF THE VOTE: a tally sheet not included may never have arrived or may have been set aside on suspicion of fraud — the source says so without specifying which. THIS IS A CONSTITUENCY VALUE: several communes share a single deputy (“Pignon, Ranquitte, La Victoire”) and therefore carry the same value; Port-au-Prince elects three deputies, and its value combines its three constituencies. Election Passport data (American University), built from CEP results, which sometimes mix preliminary and final results."
+IND-ELE-010,en,methode_calcul,"Tally sheets included ÷ tally sheets expected × 100, in the first round; when the file carries two values (preliminary and final), the most frequent one is used."
+IND-ELE-010,en,nom,"Tally sheets included, 2015 legislative elections (1st round)"
+IND-ELE-010,en,sens_interpretation,High = more complete result
+IND-ELE-010,en,unite,%
+IND-ELE-010,es,comparabilite,Comparable entre circunscripciones para una misma vuelta; dos comunas de una misma circunscripción llevan el mismo valor.
+IND-ELE-010,es,definition,"Proporción de actas de mesa incluidas en los resultados de la primera vuelta de las legislativas de 2015, en la circunscripción de la comuna."
+IND-ELE-010,es,limites_connues,"NO ES UNA MEDIDA DE LA CALIDAD DEL VOTO: un acta no incluida pudo no llegar nunca o ser descartada por sospecha de fraude — la fuente lo dice sin precisar cuál. ES UN VALOR DE CIRCUNSCRIPCIÓN: varias comunas comparten un solo diputado («Pignon, Ranquitte, La Victoire») y llevan por tanto el mismo valor; Port-au-Prince elige tres diputados y su valor reúne sus tres circunscripciones. Datos de Election Passport (American University), elaborados a partir de los resultados del CEP, que a veces mezclan resultados preliminares y definitivos."
+IND-ELE-010,es,methode_calcul,"Actas incluidas ÷ actas esperadas × 100, en la primera vuelta; cuando el archivo lleva dos valores (preliminar y definitivo), se toma el más frecuente."
+IND-ELE-010,es,nom,"Actas incluidas, legislativas de 2015 (1.ª vuelta)"
+IND-ELE-010,es,sens_interpretation,Alto = resultado más completo
+IND-ELE-010,es,unite,%
+IND-ELE-010,ht,comparabilite,Nou ka konpare sirkonskripsyon yo pou menm tou a ; de komin nan menm sirkonskripsyon pote menm valè a.
+IND-ELE-010,ht,definition,"Pòsyon pwosè-vèbal biwo vòt ki antre nan rezilta premye tou eleksyon lejislatif 2015 yo, nan sirkonskripsyon komin nan."
+IND-ELE-010,ht,limites_connues,"SA PA MEZIRE SI VÒT LA TE BYEN FÈT : yon pwosè-vèbal ki pa antre ka pa t janm rive, oswa yo ka te mete l sou kote paske yo te sispèk fwod — sous la di sa san li pa presize kilès. SE YON VALÈ SIRKONSKRIPSYON : plizyè komin pataje yon sèl depite (« Pinyon, Rankit, Laviktwa ») e yo pote menm valè a ; Pòtoprens chwazi twa depite, valè li mete twa sirkonskripsyon li yo ansanm. Done Election Passport (Inivèsite Ameriken) fè apati rezilta CEP yo, ki konn mele rezilta pwovizwa ak rezilta definitif."
+IND-ELE-010,ht,methode_calcul,"Pwosè-vèbal ki antre ÷ pwosè-vèbal yo tann × 100, nan premye tou a ; lè fichye a gen de valè (pwovizwa ak definitif), nou pran sa ki parèt pi souvan an."
+IND-ELE-010,ht,nom,"Pwosè-vèbal ki antre, lejislatif 2015 (premye tou)"
+IND-ELE-010,ht,sens_interpretation,Wo = rezilta a pi konplè
+IND-ELE-010,ht,unite,%
 IND-ENE-001,en,comparabilite,"Comparable between communes, but the gap is small across Haiti: a ranking would exaggerate differences the resource does not carry."
 IND-ENE-001,en,definition,"Photovoltaic output expected from a one-kilowatt-peak installation over a year, averaged across the commune's pixels."
 IND-ENE-001,en,limites_connues,"IT IS A RESOURCE, NOT EQUIPMENT: this figure says what a panel would produce, not what is installed. Differences between communes are small in a country this small and this sunny — a ranking on this indicator separates values that sit within a few per cent of each other. Relief matters more than latitude: the shadow of the mornes makes the difference, and it is averaged here over the whole commune."

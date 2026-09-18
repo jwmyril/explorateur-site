@@ -6,7 +6,7 @@
    d'où il vient ni ce qu'il ne couvre pas. */
 (function () {
   "use strict";
-  var DV = "?d=2026-09-18b";
+  var DV = "?d=2026-09-18c";
   var $ = function (s) { return document.querySelector(s); };
   var fmtN = function (v) { return (+v).toLocaleString("fr-FR"); };
 
@@ -394,6 +394,25 @@
       },
       source: "CEP — résultats définitifs des municipales du 25 octobre 2015 (dossier public du CEP) ; pages scannées saisies par Atmart, passeport PSP-081",
       limite: "UN SEUL TOUR, À LA MAJORITÉ RELATIVE : la part des voix du cartel élu dit combien le vote était dispersé, pas la légitimité ni le travail de l'équipe élue — un cartel a pu gagner avec moins d'une voix sur dix quand les listes étaient nombreuses. Aucun parti n'est coloré : la carte montre un score, jamais une couleur politique ; le nom du cartel élu se lit dans le fichier. 66 COMMUNES SUR 140 : le CEP n'a publié que ces pages (son dossier en annonce 69, trois manquent) ; les autres communes restent en blanc, jamais à zéro. Les pages sont des scans saisis à la main par Atmart, chacun contrôlé par son propre pourcentage imprimé." },
+    { id: "candidats_2015", nom: "Candidats par siège de député, 2015 (Election Passport)", type: "choroplethe",
+      csv: "data/atmart_deputes_2015_circonscriptions_HT.csv", pcode: "pcodes_communes",
+      agreger: function (rows) {
+        var m = {}, sieges = {};
+        rows.forEach(function (r) {
+          String(r.pcodes_communes || "").split(";").forEach(function (p) {
+            if (!p) return;
+            m[p] = (m[p] || 0) + (+r.candidats || 0);
+            sieges[p] = (sieges[p] || 0) + 1;
+          });
+        });
+        Object.keys(m).forEach(function (p) { m[p] = Math.round(100 * m[p] / sieges[p]) / 100; });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("premier tour, 2015"),
+                 unite: "candidats par siège" };
+      },
+      source: "Election Passport (David Lublin, American University), d'après les résultats du CEP ; circonscriptions rattachées aux communes par Atmart, passeport PSP-082",
+      limite: "UNE VALEUR DE CIRCONSCRIPTION, PEINTE SUR SES COMMUNES : quand deux ou trois communes partagent un député, elles ont la même couleur ; Port-au-Prince élit trois députés et porte la moyenne de ses trois circonscriptions. Un nombre élevé dit une compétition éclatée, pas un meilleur choix. Les candidats radiés par le CEP après le premier tour sont comptés. Aucun parti n'est coloré." },
     /* LES LIEUX DE CULTE, en deux cartes et non une.
 
        Le total répond à « où la carte voit-elle des lieux de culte ? ». Le
@@ -2163,7 +2182,7 @@
                        "emploi_femmes"]],
                      ["Transferts — où l'argent arrive et où on le touche", ["transferts_dep", "points_transfert"]],
                      ["Élections — documents du CEP",
-                      ["inscrits_2015", "blancs_nuls_2006", "cartel_2015"]],
+                      ["inscrits_2015", "blancs_nuls_2006", "cartel_2015", "candidats_2015"]],
                      ["Médias — stations autorisées",
                       ["medias", "medias_communautaires"]],
                      /* Le tourisme a son groupe et non une place dans

@@ -9,6 +9,11 @@
   "es": "caja con una sede o un mostrador aquí",
   "fr": "caisse y ayant un siège ou un comptoir"
  },
+ "candidats par siège": {
+  "en": "candidate per seat",
+  "es": "candidato por escaño",
+  "fr": "candidat par siège"
+ },
  "dépendants / 100 personnes de 15-64 ans": {
   "en": "dependant / 100 people aged 15-64",
   "es": "dependiente / 100 personas de 15-64 años",

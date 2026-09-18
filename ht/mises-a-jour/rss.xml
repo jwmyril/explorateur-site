@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Engendré par build_mises_a_jour.py depuis archives/journal.csv. -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Eksploratè Ayiti — Sa ki chanje nan done yo</title>
+  <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html</link>
+  <description>Sa ki chanje nan done Eksploratè Ayiti a, yon vèsyon apre lòt, ak dat la ak lyen chak vèsyon nou sere.</description>
+  <language>ht</language>
+  <atom:link href="https://explorateur.atmart.ltd/ht/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Sa ki chanje 17/09/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-09-17</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-09-17</guid>
+    <pubDate>Thu, 17 Sep 2026 12:00:00 +0000</pubDate>
+    <description>atmart_couche_lieux_culte_HT.geojson — nouvo vèsyon · 2 643 eleman · 18210b1c</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 13/09/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-09-13</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-09-13</guid>
+    <pubDate>Sun, 13 Sep 2026 12:00:00 +0000</pubDate>
+    <description>atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 1 386 liy · 393175c2; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 1 386 liy · 7511b750; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 66 liy · 861e953f; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 66 liy · dcf1b746; atmart_ecoles_declarees.json — nouvo vèsyon · 140 antre · e8989f65; atmart_caisses_communes_desservies_HT.csv — nouvo vèsyon · 71 liy · 354f6b1d</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 10/09/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-09-10</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-09-10</guid>
+    <pubDate>Thu, 10 Sep 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvo vèsyon · 5c5328c8</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 04/09/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-09-04</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-09-04</guid>
+    <pubDate>Fri, 04 Sep 2026 12:00:00 +0000</pubDate>
+    <description>Lisans chak fichye nou pibliye — nouvo vèsyon · 128 liy · 18bfccd7; atmart_licences.json — nouvo vèsyon · 652fc5e4; Ayiti nan lemonn — ki plas li genyen ak vwazen Karayib li yo — premye piblikasyon · 163 liy · fafb1ce0; Ayiti nan lemonn — ki plas li genyen ak vwazen Karayib li yo — premye piblikasyon · 179 liy · fe020f7f; atmart_comparaison_monde.json — premye piblikasyon · 11 antre · 9b4973b8; atmart_comparaison_monde.json — premye piblikasyon · 12 antre · e058577b</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 27/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-27</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-27</guid>
+    <pubDate>Thu, 27 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvo vèsyon · c69d2d7e; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 1 386 liy · e5f15114; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 66 liy · a99b2a26; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 7 967 liy · d2450a27</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 26/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-26</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-26</guid>
+    <pubDate>Wed, 26 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvo vèsyon · 16bf5eee; catalogue_manifest.json — nouvo vèsyon · 42f43f2a; atmart_series_nationales.json — nouvo vèsyon · 84 antre · ce19634f; Rezilta sante, edikasyon ak kondisyon lavi — EMMUS — nouvo vèsyon · 908 liy · c22b9297; atmart_resultats_emmus.json — nouvo vèsyon · 20 antre · 90c21b81; Rejis sous Atmart yo — nouvo vèsyon · 59 liy · 7759be97; Rejis sous Atmart yo — nouvo vèsyon · 59 liy · 2e72bfef; Ven an opinyon piblik — Ayiti ak Repiblik Dominikèn — premye piblikasyon · 253 liy · 2bf8e341; Ven an opinyon piblik — Ayiti ak Repiblik Dominikèn — premye piblikasyon · 1 494 liy · 489c67e1; Ven an opinyon piblik — Ayiti ak Repiblik Dominikèn — premye piblikasyon · 1 988 liy · 8b4f7662; atmart_opinion_serie.json — premye piblikasyon · f3e96d14; atmart_opinion_serie.json — premye piblikasyon · 9c5183b2; atmart_opinion_serie.json — premye piblikasyon · 5c496466; atmart_opinion_serie.json — premye piblikasyon · f775d779; Lisans chak fichye nou pibliye — nouvo vèsyon · 122 liy · 3eaf5b91; Lisans chak fichye nou pibliye — nouvo vèsyon · 120 liy · 3b24a8b7; Lisans chak fichye nou pibliye — nouvo vèsyon · 123 liy · 30f94672; Lisans chak fichye nou pibliye — nouvo vèsyon · 125 liy · 855aacc9; Lisans chak fichye nou pibliye — nouvo vèsyon · 126 liy · ba6a7c71; atmart_licences.json — nouvo vèsyon · a5567c6c; atmart_licences.json — nouvo vèsyon · 21dd57e9; atmart_licences.json — nouvo vèsyon · aa9be1be; atmart_licences.json — nouvo vèsyon · 981c4288; atmart_licences.json — nouvo vèsyon · 3491efa4; Baz rezilta ankèt yo — 2 132 endikatè pa rejyon — premye piblikasyon · 76 983 liy · c6e32b9f; Baz rezilta ankèt yo — 2 132 endikatè pa rejyon — premye piblikasyon · 2 132 liy · ecb73470; atmart_enquetes.json — premye piblikasyon · 2ed7eaeb; atmart_enquetes.json — premye piblikasyon · 579ac781; atmart_enquetes.json — premye piblikasyon · 22f1de57; atmart_enquete_fiche.json — premye piblikasyon · 140 antre · 32ed5ee5; Ki rejyon ankèt ki gen ki komin ladan l — premye piblikasyon · 140 liy · 45558154; atmart_communes_regions_enquete.json — premye piblikasyon · e16d8232</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 25/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-25</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-25</guid>
+    <pubDate>Tue, 25 Aug 2026 12:00:00 +0000</pubDate>
+    <description>haiti_regions_enquete_simplifie.geojson — premye piblikasyon · 11 eleman · 5af3297d; Lajan dyaspora a — kote li soti, kote li ale, mwa pa mwa — premye piblikasyon · 3 371 liy · ba3757ac; atmart_transferts_pays.json — premye piblikasyon · a7c63c3a; Kote lajan dyaspora a rive — depatman pa depatman — premye piblikasyon · 50 liy · e4d9ce38; Kote lajan dyaspora a rive — depatman pa depatman — premye piblikasyon · 50 liy · c9e06c75; atmart_transferts_departements.json — premye piblikasyon · 24516822; atmart_transferts_departements.json — premye piblikasyon · 0d6b9ab8; Rezilta sante, edikasyon ak kondisyon lavi — EMMUS — premye piblikasyon · 401 liy · 53725efe; atmart_resultats_emmus.json — premye piblikasyon · 9 antre · f75058e4; Rejis sous Atmart yo — nouvo vèsyon · 51 liy · 2d89953a; Rejis sous Atmart yo — nouvo vèsyon · 54 liy · af89b4c0; Rejis sous Atmart yo — nouvo vèsyon · 57 liy · 75ed2db2; Rejis sous Atmart yo — nouvo vèsyon · 57 liy · 1b8c42cd; Rejis sous Atmart yo — nouvo vèsyon · 58 liy · 98026398; Rejis sous Atmart yo — nouvo vèsyon · 59 liy · b40c91d4; Rejis sous Atmart yo — nouvo vèsyon · 59 liy · d21949c8; Kote ou ka al chèche yon transfè — komin pa komin — premye piblikasyon · 140 liy · 1d11bddd; atmart_points_transfert.json — premye piblikasyon · 140 antre · 206732d4; atmart_opinion_regions_HT.csv — premye piblikasyon · 358 liy · 1fc7a5b6; atmart_opinion_regions.json — premye piblikasyon · 512927ef; Sa Ayisyen yo di — ensekirite yo viv, enstitisyon, anvi pati — premye piblikasyon · 16 liy · b6134cbb; atmart_opinion_lapop.json — premye piblikasyon · 8433a53b; Fanmi ki ap viv sou transfè — depatman pa depatman — premye piblikasyon · 82 liy · 8960fda4; atmart_menages_transferts.json — premye piblikasyon · c7fc38f9; atmart_menages_transferts.json — premye piblikasyon · 2646c73a; Lisans chak fichye nou pibliye — nouvo vèsyon · 98 liy · b74f1dd4; Lisans chak fichye nou pibliye — nouvo vèsyon · 105 liy · 49fade56; Lisans chak fichye nou pibliye — nouvo vèsyon · 110 liy · 7a7ca31e; Lisans chak fichye nou pibliye — nouvo vèsyon · 111 liy · 2c4e89dc; Lisans chak fichye nou pibliye — nouvo vèsyon · 114 liy · aad58c4d; Lisans chak fichye nou pibliye — nouvo vèsyon · 116 liy · c2294cde; Lisans chak fichye nou pibliye — nouvo vèsyon · 118 liy · da2ecbc2; Lisans chak fichye nou pibliye — nouvo vèsyon · 120 liy · 81aa729d; atmart_licences.json — nouvo vèsyon · 2ecded26; atmart_licences.json — nouvo vèsyon · 879760d4; atmart_licences.json — nouvo vèsyon · a202ebed; atmart_licences.json — nouvo vèsyon · 07d5d8ee; atmart_licences.json — nouvo vèsyon · f71fc2aa; atmart_licences.json — nouvo vèsyon · 2a990ee6; atmart_licences.json — nouvo vèsyon · 27dc2cac; atmart_licences.json — nouvo vèsyon · 4e6313f1; Ayiti ak Repiblik Dominikèn — sèz kesyon yo poze menm jan — premye piblikasyon · 16 liy · d895a293; atmart_comparaison_haiti_rd.json — premye piblikasyon · 94a82020; Rezo bankè a ak dolarizasyon — gichè ayisyen an — premye piblikasyon · 838 liy · a12bce4a; Sistèm bankè ayisyen an — bilan, pèfòmans, teritwa — premye piblikasyon · 5 322 liy · cd3d2b9e; Sistèm bankè ayisyen an — bilan, pèfòmans, teritwa — premye piblikasyon · 192 liy · d44286f4; atmart_banques.json — premye piblikasyon · 82e7c293; Odyans nimerik ayisyen an — aksè ak platfòm — premye piblikasyon · 14 liy · 587bbc80; atmart_audience_numerique.json — premye piblikasyon · 43fbfd42; Lis tout kote yo peye transfè yo — premye piblikasyon · 1 632 liy · 972bba2d</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 24/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-24</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-24</guid>
+    <pubDate>Mon, 24 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Seri nasyonal Ayiti yo — nouvo vèsyon · 1 712 liy · 300c43f6; atmart_series_nationales.json — nouvo vèsyon · 79 antre · d622b77e; Rejis sous Atmart yo — nouvo vèsyon · 49 liy · 14c12b9c; Rejis sous Atmart yo — nouvo vèsyon · 50 liy · e1e9ea45; Rejis sous Atmart yo — nouvo vèsyon · 51 liy · 0de39c0d; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 1 134 liy · c3bbee63; atmart_medias_stations_HT.csv — premye piblikasyon · 806 liy · ce32ea99; Radyo ak televizyon ki gen otorizasyon, komin pa komin — premye piblikasyon · 80 liy · 3ad5153d; atmart_medias.json — premye piblikasyon · 80 antre · 88f04471; Kote moun al lapriyè, komin pa komin — premye piblikasyon · 121 liy · 96d0ec8b; atmart_lieux_culte.json — premye piblikasyon · 121 antre · b71c08f5; Lisans chak fichye nou pibliye — nouvo vèsyon · 93 liy · cc56bce3; Lisans chak fichye nou pibliye — nouvo vèsyon · 96 liy · 06378adf; atmart_licences.json — nouvo vèsyon · 3e6dd175; atmart_licences.json — nouvo vèsyon · bf06478b; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 6 306 liy · 63c8aea9; Enstitisyon finansye ki gen agreman, ak sa kat la pa montre — nouvo vèsyon · 31 liy · 93cd62c2; atmart_couche_lieux_culte_HT.geojson — premye piblikasyon · 2 643 eleman · 470cb272</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 23/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-23</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-23</guid>
+    <pubDate>Sun, 23 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvo vèsyon · 20f35ac7; Retou fòse nan peyi a — kote moun yo rive ak ki moun yo ye — premye piblikasyon · 4 liy · ab5915a0; atmart_retours_forces_HT.csv — premye piblikasyon · 22 liy · ae5ffc49; atmart_retours_forces.json — premye piblikasyon · 4 antre · 5962cf5e; Moun Etazini voye tounen — Ayiti ak Repiblik Dominikèn — premye piblikasyon · 364 liy · bd4cbc54; atmart_renvois_us_annuel.csv — premye piblikasyon · 32 liy · c49a1b72; atmart_renvois_us.json — premye piblikasyon · acfa9c47; Rejis sous Atmart yo — nouvo vèsyon · 47 liy · da6783a4; Rejis sous Atmart yo — nouvo vèsyon · 48 liy · e2d7d9e2; Rejis sous Atmart yo — nouvo vèsyon · 46 liy · dfc0fbfd; Lisans chak fichye nou pibliye — nouvo vèsyon · 87 liy · 9de549ee; Lisans chak fichye nou pibliye — nouvo vèsyon · 90 liy · 2ba87cae; Lisans chak fichye nou pibliye — nouvo vèsyon · 84 liy · 4a315725; atmart_licences.json — nouvo vèsyon · 1f110994; atmart_licences.json — nouvo vèsyon · 910f9157; atmart_licences.json — nouvo vèsyon · 3fbe2f7c; atmart_ecoles_declarees.json — nouvo vèsyon · 140 antre · 005daf8d; Dyaspora ayisyen an — kote yo rete — premye piblikasyon · 2 160 liy · c7907608; atmart_diaspora_destinations.json — premye piblikasyon · f2e91dca</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 22/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-22</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-22</guid>
+    <pubDate>Sat, 22 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Seri nasyonal Ayiti yo — nouvo vèsyon · 1 663 liy · 88f718d9; Rejis sous Atmart yo — nouvo vèsyon · 45 liy · 78b36711; Rejis ONG leta rekonèt NOUVO — nouvo vèsyon · 680 liy · 717da5cd; Pri manje debaz nan mache yo, 2005-2024 — nouvo vèsyon · 862 liy · 8cde6c96; atmart_prix_denrees.json — nouvo vèsyon · 9 antre · b915c68b; Lisans chak fichye nou pibliye — premye piblikasyon · 82 liy · 60f62aac; atmart_licences.json — premye piblikasyon · dd2d5ec0; Endis pri yo, pa rejyon ak pa komin — nouvo vèsyon · 140 liy · 5fdae7cf; atmart_ipc_regions_HT.csv — nouvo vèsyon · 20 liy · 9cc316c3; atmart_ipc_regions.json — nouvo vèsyon · 140 antre · 0708ba5f</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 21/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-21</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-21</guid>
+    <pubDate>Fri, 21 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvo vèsyon · c3081759; catalogue_manifest.json — nouvo vèsyon · c8d0a47f; catalogue_manifest.json — nouvo vèsyon · 198aa4f7; catalogue_manifest.json — nouvo vèsyon · 223df922; catalogue_manifest.json — nouvo vèsyon · 91edf9d9; catalogue_manifest.json — nouvo vèsyon · 83409071; catalogue_manifest.json — nouvo vèsyon · 18258eaa; catalogue_manifest.json — nouvo vèsyon · c3b7c956; Touris pa komin — kontaj — premye piblikasyon · 337 liy · 6bd15394; Touris pa komin — kontaj — premye piblikasyon · 412 liy · 37e82b4c; atmart_tourisme_communes.json — premye piblikasyon · 107 antre · cfda294e; atmart_tourisme_communes.json — premye piblikasyon · 115 antre · b2e5a01c; Seri nasyonal Ayiti yo — nouvo vèsyon · 1 585 liy · 1ac504f3; Seri nasyonal Ayiti yo — nouvo vèsyon · 1 663 liy · 17355485; atmart_series_nationales.json — nouvo vèsyon · 73 antre · fd4722f3; atmart_series_nationales.json — nouvo vèsyon · 76 antre · d74b4d26; Rejis sous Atmart yo — nouvo vèsyon · 37 liy · 67a8b1cf; Rejis sous Atmart yo — nouvo vèsyon · 38 liy · 10ecff39; Rejis sous Atmart yo — nouvo vèsyon · 38 liy · 00bab04c; Rejis sous Atmart yo — nouvo vèsyon · 38 liy · f084d106; Rejis sous Atmart yo — nouvo vèsyon · 39 liy · 4298b061; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 840 liy · 1575c9fb; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 861 liy · 93bf5785; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 945 liy · 14c297df; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 49 liy · b336ae0e; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 50 liy · 7f7b718c; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 54 liy · 601e9940; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 54 liy · d1471249; Pri manje debaz nan mache yo, 2005-2024 — premye piblikasyon · 862 liy · 0bb4ac2b; atmart_prix_denrees.json — premye piblikasyon · 9 antre · 3eb6e436; Endis pri yo, pa rejyon ak pa komin — premye piblikasyon · 140 liy · 643b69bc; atmart_ipc_regions_HT.csv — premye piblikasyon · 20 liy · 344f0f01; atmart_ipc_regions.json — premye piblikasyon · 140 antre · 99baa8da; atmart_ipc_regions.json — premye piblikasyon · 140 antre · c9db17ae; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 6 077 liy · cc5be17c; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 6 137 liy · 10296677; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 6 304 liy · 16a5d8ae; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 6 306 liy · 768589b5; atmart_hibiscus_non_rattachees_HT.csv — premye piblikasyon · 13 liy · a5342ea2; Etablisman ministè a klase (Hibiscus) — pa komin — premye piblikasyon · 39 liy · f4f79bd9; atmart_hibiscus_communes.json — premye piblikasyon · 39 antre · 043f8876; atmart_finance_cooperative_communes_HT.csv — premye piblikasyon · 32 liy · 682eed2c; atmart_finance_cooperative.json — premye piblikasyon · 26 antre · a54c87cf; Enstitisyon finansye ki gen agreman, ak sa kat la pa montre — premye piblikasyon · 26 liy · 13cc6692; Touris ki katògrafye — kouch pwen — premye piblikasyon · 2 695 eleman · 398a56ab; Touris ki katògrafye — kouch pwen — premye piblikasyon · 2 896 eleman · 53a2562c; Kès popilè ak mikwofinans ki katògrafye — premye piblikasyon · 43 eleman · 4a8177d7; Bank, gichè ak transfè — nouvo vèsyon · 474 eleman · ddf4796e; Kès popilè ki gen agreman, pa komin — premye piblikasyon · 58 liy · 53d3a4d7; atmart_caisses_populaires.json — premye piblikasyon · 47 antre · e78c3c0c; atmart_caisses_communes_desservies_HT.csv — premye piblikasyon · 71 liy · 7c003541</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 20/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-20</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-20</guid>
+    <pubDate>Thu, 20 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvo vèsyon · d6717625; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 41 liy · 334b5c00; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 5 598 liy · a54cb520</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 19/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-19</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-19</guid>
+    <pubDate>Wed, 19 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvo vèsyon · 9d82200d; Seri nasyonal Ayiti yo — nouvo vèsyon · 1 419 liy · 707a1edd; atmart_series_nationales.json — nouvo vèsyon · 63 antre · f2d50cde; Rejis sous Atmart yo — nouvo vèsyon · 36 liy · 2542c0b5</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 18/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-18</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-18</guid>
+    <pubDate>Tue, 18 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Seri nasyonal Ayiti yo — premye piblikasyon · 907 liy · 8ca7675a; atmart_series_nationales.json — premye piblikasyon · 34 antre · 1afbc859; Rejis sous Atmart yo — nouvo vèsyon · 36 liy · aabbf933; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · 938d99b6; atmart_couches_carte_HT.csv — nouvo vèsyon · 140 liy · 58c7d2af; atmart_concordance_HT.csv — premye piblikasyon · 140 liy · 43a771e0; atmart_concordance.json — premye piblikasyon · 140 antre · e63ccdca; atmart_concordance.json — premye piblikasyon · 140 antre · 0f843923</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 17/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-17</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-17</guid>
+    <pubDate>Mon, 17 Aug 2026 12:00:00 +0000</pubDate>
+    <description>atmart_urbanisation_communes.json — premye piblikasyon · 140 antre · e71472c3; atmart_sols_communes.json — premye piblikasyon · 140 antre · 47daf7ba; atmart_sols_communes.json — premye piblikasyon · 140 antre · 08a40e11; atmart_solaire_communes.json — premye piblikasyon · 140 antre · ecdf68de; atmart_solaire_communes.json — premye piblikasyon · 140 antre · aac3de49; atmart_seismes_communes.json — premye piblikasyon · 140 antre · a20ea2d3; atmart_sante_declaree.json — premye piblikasyon · 139 antre · 61772925; atmart_projets_national.json — premye piblikasyon · 15 antre · c17abc4f; atmart_projets_national.json — premye piblikasyon · 15 antre · 04298f28; atmart_population_trois_sources.json — premye piblikasyon · 140 antre · 35149368; atmart_population_modelisee.json — premye piblikasyon · 140 antre · c586a180; atmart_pluie_communes.json — premye piblikasyon · 140 antre · 8de3dd3b; atmart_occupation_sol.json — premye piblikasyon · 140 antre · 2b7460ed; atmart_equipements_hot.json — premye piblikasyon · 140 antre · 856cad05; atmart_ecoles_declarees.json — premye piblikasyon · 140 antre · e00b5486; atmart_ecoles_declarees.json — premye piblikasyon · 140 antre · a05792d6; atmart_eau_surface.json — premye piblikasyon · 140 antre · 55e6be90; atmart_cyclones_communes.json — premye piblikasyon · 140 antre · dd21091f; atmart_credits_departements.json — premye piblikasyon · 9b4e5e1d; atmart_couches_carte_HT.csv — premye piblikasyon · 140 liy · 8abd36f9; atmart_couches_carte_HT.csv — premye piblikasyon · 140 liy · 3343548f; atmart_batiments_communes.json — premye piblikasyon · 140 antre · 995e4a34; atmart_bassins_communes.json — premye piblikasyon · 140 antre · 19f53c6d; atmart_acces_routier.json — premye piblikasyon · 140 antre · b7a6787d</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 15/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-15</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-15</guid>
+    <pubDate>Sat, 15 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvo vèsyon · ca767ad7; Telekòm pa komin — kontaj — premye piblikasyon · 219 liy · 4ba2bfbe; Rejis sous Atmart yo — nouvo vèsyon · 36 liy · 6257387a; Enfrastrikti pa komin NOUVO — nouvo vèsyon · 2 118 liy · 2ea96630; Ekipman telekòm pa operatè — premye piblikasyon · 498 eleman · a6a2bf81</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 14/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-14</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-14</guid>
+    <pubDate>Fri, 14 Aug 2026 12:00:00 +0000</pubDate>
+    <description>haiti_departements_simplifie.geojson — premye piblikasyon · 10 eleman · 9824d2bc; haiti_communes_simplifie.geojson — premye piblikasyon · 140 eleman · e0162bfa; catalogue_manifest.json — nouvo vèsyon · a5f4ba2d; catalogue_manifest.json — nouvo vèsyon · 57b8c352; catalogue_manifest.json — nouvo vèsyon · 78ff3c79; catalogue_manifest.json — nouvo vèsyon · 69f98f46; catalogue_manifest.json — nouvo vèsyon · 207d1ece; catalogue_manifest.json — nouvo vèsyon · 6d859c9a; catalogue_manifest.json — nouvo vèsyon · 205d1762; catalogue_manifest.json — nouvo vèsyon · 2201ed96; catalogue_manifest.json — nouvo vèsyon · a9710c3a; catalogue_manifest.json — nouvo vèsyon · 94329fbb; Rejis sous Atmart yo — nouvo vèsyon · 24 liy · 7f4e695e; Rejis sous Atmart yo — nouvo vèsyon · 27 liy · dc0e529f; Rejis sous Atmart yo — nouvo vèsyon · 31 liy · 24ccfd0e; Rejis sous Atmart yo — nouvo vèsyon · 31 liy · f2c8b769; Rejis sous Atmart yo — nouvo vèsyon · 34 liy · 12c05a0e; Rejis sous Atmart yo — nouvo vèsyon · 35 liy · f856d7f2; Rejis ONG leta rekonèt NOUVO — premye piblikasyon · 680 liy · 723840f4; Rejis mache Ayiti yo NOUVO — premye piblikasyon · 182 liy · cff51300; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · 714ff55a; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · e27f4f22; Metye jiridik ak metye tè pa komin NOUVO — premye piblikasyon · 280 liy · aa950a5c; Prezans òganizasyon yo — kilès k ap travay kote NOUVO — premye piblikasyon · 1 457 liy · df802ea6; Okipasyon tè a pa komin — premye piblikasyon · 1 042 liy · af2f6010; Rejis mache Ayiti yo NOUVO — premye piblikasyon · 182 eleman · 78f14c70; Ensekirite alimentè — faz IPC yo — premye piblikasyon · 210 liy · c61678bc; Enfrastrikti pa komin NOUVO — premye piblikasyon · 1 895 liy · 2849b2f6; Enfrastrikti pa komin NOUVO — premye piblikasyon · 1 899 liy · fdf9d622; Repè bidjetè nasyonal NOUVO — premye piblikasyon · 2 liy · c1cbff8a; Moun ki deplase — premye piblikasyon · 150 liy · e7b7d870; Zòn inondab — premye piblikasyon · 134 eleman · 4436b48a; Bank, gichè ak transfè — premye piblikasyon · 474 eleman · 24856ba1; Pwen dlo — premye piblikasyon · 6 276 eleman · de7ffd9b; Estasyon gazolin — premye piblikasyon · 310 eleman · 4d9e435f; Basen vèsan — premye piblikasyon · 31 eleman · 12f15278; Konfli — evènman ak moun ki mouri, pa komin — premye piblikasyon · 4 368 liy · 1d728ff2; Pòsyon zòn inondab pa komin — premye piblikasyon · 140 liy · 9628ab5b; EXTRAIT_haiti_lieux_habites_geonames_gps.csv — premye piblikasyon · 10 liy · 428ff643; EXTRAIT_haiti_570_sections_communales_gps.csv — premye piblikasyon · 10 liy · f87eaa45; EXTRAIT_haiti_140_villes_chefs_lieux_gps.csv — premye piblikasyon · 10 liy · 122ecd58; EXTRAIT_geojson.md — premye piblikasyon · ecbe9838</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 13/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-13</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-13</guid>
+    <pubDate>Thu, 13 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — premye piblikasyon · 7352f327; catalogue_manifest.json — premye piblikasyon · b433dde7; Rejis sous Atmart yo — nouvo vèsyon · 22 liy · ee7fa77a; Rejis sous Atmart yo — nouvo vèsyon · 22 liy · 633a3f8a; Rejis sous Atmart yo — nouvo vèsyon · 22 liy · c7cf7e6f; Rejis sous Atmart yo — nouvo vèsyon · 23 liy · ec3eddd5; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 672 liy · 98ff3d79; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 672 liy · 69243d43; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 672 liy · e15bbaf0; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · 774903c1; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · f7a6410b; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · 4a8c0e75; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · 83c0d263; Pri nan mache yo — rezo santinèl NOUVO — premye piblikasyon · 14 140 liy · d7104087; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 4 060 liy · 14a33f6b; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 4 200 liy · 48c4d780; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 4 200 liy · 1fa80a80</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 12/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-12</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-12</guid>
+    <pubDate>Wed, 12 Aug 2026 12:00:00 +0000</pubDate>
+    <description>atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 3 780 liy · 9c1aad5a</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 11/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-11</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-11</guid>
+    <pubDate>Tue, 11 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Rejis sous Atmart yo — nouvo vèsyon · 13 liy · 450b7f8e; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 441 liy · 7a93aa0f; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 672 liy · c112c2c7; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 21 liy · 8f785039; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · 27d6f2ce; Piramid laj 140 komin yo NOUVO — premye piblikasyon · 7 140 liy · b64692e7; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 1 554 liy · 0ef7966b; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 3 094 liy · ee3bfc04</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 10/08/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-10</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-08-10</guid>
+    <pubDate>Mon, 10 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Rejis sous Atmart yo — nouvo vèsyon · 13 liy · f25c59f6; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 420 liy · 6fe94da1; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 20 liy · 94553e0b; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 1 414 liy · 5c9c7d56</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 31/07/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-07-31</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-07-31</guid>
+    <pubDate>Fri, 31 Jul 2026 12:00:00 +0000</pubDate>
+    <description>Transfè dyaspora a (2000–2025) — Ayiti + 7 peyi — premye piblikasyon · 26 liy · e38973a5; haiti_contour_simplifie.geojson — premye piblikasyon · 1 eleman · 15b281bc; Rejis sous Atmart yo — premye piblikasyon · 8 liy · c363c47c; Rejis sous Atmart yo — premye piblikasyon · 12 liy · 20c2c6a7; atmart_referentiel_territoire_base_HT.csv — premye piblikasyon · 192 liy · b4bb6eb0; atmart_referentiel_territoire_base_HT.csv — premye piblikasyon · 192 liy · d59beb9e; atmart_referentiel_temps_HT.csv — premye piblikasyon · 1 201 liy · e59b0c94; atmart_referentiel_indicateurs_i18n.csv — premye piblikasyon · 420 liy · f6d6c228; atmart_referentiel_indicateurs.csv — premye piblikasyon · 17 liy · 96a0e9cf; atmart_referentiel_indicateurs.csv — premye piblikasyon · 20 liy · 4fe6203a; atmart_millesimes_territoriaux.csv — premye piblikasyon · 192 liy · dabc3cfd; atmart_indicateurs_communes_HT.csv — premye piblikasyon · 1 197 liy · 79fdb038; atmart_indicateurs_communes_HT.csv — premye piblikasyon · 1 197 liy · 14b99d28; atmart_indicateurs_communes_HT.csv — premye piblikasyon · 1 274 liy · 555df151; LISEZMOI_transferts_diaspora.md — nouvo vèsyon · e5b253c8; Echantiyon — seksyon kominal Ayiti — nouvo vèsyon · 10 liy · f87eaa45</description>
+  </item>
+  <item>
+    <title>Sa ki chanje 12/06/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-06-12</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-06-12</guid>
+    <pubDate>Fri, 12 Jun 2026 12:00:00 +0000</pubDate>
+    <description>LISEZMOI_transferts_diaspora.md — premye piblikasyon · 01c4ae18; Echantiyon — seksyon kominal Ayiti — premye piblikasyon · 10 liy · d2425b67</description>
+  </item>
+</channel>
+</rss>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Engendré par build_mises_a_jour.py depuis archives/journal.csv. -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Explorador de Haití — Actualizaciones de los datos</title>
+  <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html</link>
+  <description>Lo que cambió en los datos del Explorador de Haití, versión por versión, con la fecha y el enlace a cada versión archivada.</description>
+  <language>es</language>
+  <atom:link href="https://explorateur.atmart.ltd/es/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Actualizaciones del 17/09/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-09-17</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-09-17</guid>
+    <pubDate>Thu, 17 Sep 2026 12:00:00 +0000</pubDate>
+    <description>atmart_couche_lieux_culte_HT.geojson — nueva versión · 2 643 entidades · 18210b1c</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 13/09/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-09-13</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-09-13</guid>
+    <pubDate>Sun, 13 Sep 2026 12:00:00 +0000</pubDate>
+    <description>atmart_referentiel_indicateurs_i18n.csv — nueva versión · 1 386 filas · 393175c2; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 1 386 filas · 7511b750; atmart_referentiel_indicateurs.csv — nueva versión · 66 filas · 861e953f; atmart_referentiel_indicateurs.csv — nueva versión · 66 filas · dcf1b746; atmart_ecoles_declarees.json — nueva versión · 140 entradas · e8989f65; atmart_caisses_communes_desservies_HT.csv — nueva versión · 71 filas · 354f6b1d</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 10/09/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-09-10</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-09-10</guid>
+    <pubDate>Thu, 10 Sep 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nueva versión · 5c5328c8</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 04/09/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-09-04</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-09-04</guid>
+    <pubDate>Fri, 04 Sep 2026 12:00:00 +0000</pubDate>
+    <description>La licencia de cada archivo publicado — nueva versión · 128 filas · 18bfccd7; atmart_licences.json — nueva versión · 652fc5e4; Haití en el mundo — puesto mundial y vecinos del Caribe — primera publicación · 163 filas · fafb1ce0; Haití en el mundo — puesto mundial y vecinos del Caribe — primera publicación · 179 filas · fe020f7f; atmart_comparaison_monde.json — primera publicación · 11 entradas · 9b4973b8; atmart_comparaison_monde.json — primera publicación · 12 entradas · e058577b</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 27/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-27</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-27</guid>
+    <pubDate>Thu, 27 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nueva versión · c69d2d7e; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 1 386 filas · e5f15114; atmart_referentiel_indicateurs.csv — nueva versión · 66 filas · a99b2a26; atmart_indicateurs_communes_HT.csv — nueva versión · 7 967 filas · d2450a27</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 26/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-26</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-26</guid>
+    <pubDate>Wed, 26 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nueva versión · 16bf5eee; catalogue_manifest.json — nueva versión · 42f43f2a; atmart_series_nationales.json — nueva versión · 84 entradas · ce19634f; Resultados de salud, educación y condiciones de vida — EMMUS — nueva versión · 908 filas · c22b9297; atmart_resultats_emmus.json — nueva versión · 20 entradas · 90c21b81; Registro de fuentes Atmart — nueva versión · 59 filas · 7759be97; Registro de fuentes Atmart — nueva versión · 59 filas · 2e72bfef; Veinte años de opinión pública — Haití y la República Dominicana — primera publicación · 253 filas · 2bf8e341; Veinte años de opinión pública — Haití y la República Dominicana — primera publicación · 1 494 filas · 489c67e1; Veinte años de opinión pública — Haití y la República Dominicana — primera publicación · 1 988 filas · 8b4f7662; atmart_opinion_serie.json — primera publicación · f3e96d14; atmart_opinion_serie.json — primera publicación · 9c5183b2; atmart_opinion_serie.json — primera publicación · 5c496466; atmart_opinion_serie.json — primera publicación · f775d779; La licencia de cada archivo publicado — nueva versión · 122 filas · 3eaf5b91; La licencia de cada archivo publicado — nueva versión · 120 filas · 3b24a8b7; La licencia de cada archivo publicado — nueva versión · 123 filas · 30f94672; La licencia de cada archivo publicado — nueva versión · 125 filas · 855aacc9; La licencia de cada archivo publicado — nueva versión · 126 filas · ba6a7c71; atmart_licences.json — nueva versión · a5567c6c; atmart_licences.json — nueva versión · 21dd57e9; atmart_licences.json — nueva versión · aa9be1be; atmart_licences.json — nueva versión · 981c4288; atmart_licences.json — nueva versión · 3491efa4; La base de resultados de encuesta — 2 132 indicadores por región — primera publicación · 76 983 filas · c6e32b9f; La base de resultados de encuesta — 2 132 indicadores por región — primera publicación · 2 132 filas · ecb73470; atmart_enquetes.json — primera publicación · 2ed7eaeb; atmart_enquetes.json — primera publicación · 579ac781; atmart_enquetes.json — primera publicación · 22f1de57; atmart_enquete_fiche.json — primera publicación · 140 entradas · 32ed5ee5; Qué región de encuesta contiene qué comuna — primera publicación · 140 filas · 45558154; atmart_communes_regions_enquete.json — primera publicación · e16d8232</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 25/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-25</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-25</guid>
+    <pubDate>Tue, 25 Aug 2026 12:00:00 +0000</pubDate>
+    <description>haiti_regions_enquete_simplifie.geojson — primera publicación · 11 entidades · 5af3297d; Remesas de la diáspora — origen, destino, mes a mes — primera publicación · 3 371 filas · ba3757ac; atmart_transferts_pays.json — primera publicación · a7c63c3a; Dónde llega el dinero de la diáspora — por departamento — primera publicación · 50 filas · e4d9ce38; Dónde llega el dinero de la diáspora — por departamento — primera publicación · 50 filas · c9e06c75; atmart_transferts_departements.json — primera publicación · 24516822; atmart_transferts_departements.json — primera publicación · 0d6b9ab8; Resultados de salud, educación y condiciones de vida — EMMUS — primera publicación · 401 filas · 53725efe; atmart_resultats_emmus.json — primera publicación · 9 entradas · f75058e4; Registro de fuentes Atmart — nueva versión · 51 filas · 2d89953a; Registro de fuentes Atmart — nueva versión · 54 filas · af89b4c0; Registro de fuentes Atmart — nueva versión · 57 filas · 75ed2db2; Registro de fuentes Atmart — nueva versión · 57 filas · 1b8c42cd; Registro de fuentes Atmart — nueva versión · 58 filas · 98026398; Registro de fuentes Atmart — nueva versión · 59 filas · b40c91d4; Registro de fuentes Atmart — nueva versión · 59 filas · d21949c8; Dónde se puede cobrar una remesa — por municipio — primera publicación · 140 filas · 1d11bddd; atmart_points_transfert.json — primera publicación · 140 entradas · 206732d4; atmart_opinion_regions_HT.csv — primera publicación · 358 filas · 1fc7a5b6; atmart_opinion_regions.json — primera publicación · 512927ef; Lo que dicen los haitianos — inseguridad vivida, instituciones, ganas de irse — primera publicación · 16 filas · b6134cbb; atmart_opinion_lapop.json — primera publicación · 8433a53b; Hogares que viven de las remesas — por departamento — primera publicación · 82 filas · 8960fda4; atmart_menages_transferts.json — primera publicación · c7fc38f9; atmart_menages_transferts.json — primera publicación · 2646c73a; La licencia de cada archivo publicado — nueva versión · 98 filas · b74f1dd4; La licencia de cada archivo publicado — nueva versión · 105 filas · 49fade56; La licencia de cada archivo publicado — nueva versión · 110 filas · 7a7ca31e; La licencia de cada archivo publicado — nueva versión · 111 filas · 2c4e89dc; La licencia de cada archivo publicado — nueva versión · 114 filas · aad58c4d; La licencia de cada archivo publicado — nueva versión · 116 filas · c2294cde; La licencia de cada archivo publicado — nueva versión · 118 filas · da2ecbc2; La licencia de cada archivo publicado — nueva versión · 120 filas · 81aa729d; atmart_licences.json — nueva versión · 2ecded26; atmart_licences.json — nueva versión · 879760d4; atmart_licences.json — nueva versión · a202ebed; atmart_licences.json — nueva versión · 07d5d8ee; atmart_licences.json — nueva versión · f71fc2aa; atmart_licences.json — nueva versión · 2a990ee6; atmart_licences.json — nueva versión · 27dc2cac; atmart_licences.json — nueva versión · 4e6313f1; Haití y la República Dominicana — dieciséis preguntas idénticas — primera publicación · 16 filas · d895a293; atmart_comparaison_haiti_rd.json — primera publicación · 94a82020; Red bancaria y dolarización — la ventanilla haitiana — primera publicación · 838 filas · a12bce4a; El sistema bancario haitiano — balance, desempeño, territorio — primera publicación · 5 322 filas · cd3d2b9e; El sistema bancario haitiano — balance, desempeño, territorio — primera publicación · 192 filas · d44286f4; atmart_banques.json — primera publicación · 82e7c293; La audiencia digital haitiana — acceso y plataformas — primera publicación · 14 filas · 587bbc80; atmart_audience_numerique.json — primera publicación · 43fbfd42; Directorio de puntos de pago de remesas — primera publicación · 1 632 filas · 972bba2d</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 24/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-24</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-24</guid>
+    <pubDate>Mon, 24 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Series nacionales de Haití — nueva versión · 1 712 filas · 300c43f6; atmart_series_nationales.json — nueva versión · 79 entradas · d622b77e; Registro de fuentes Atmart — nueva versión · 49 filas · 14c12b9c; Registro de fuentes Atmart — nueva versión · 50 filas · e1e9ea45; Registro de fuentes Atmart — nueva versión · 51 filas · 0de39c0d; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 1 134 filas · c3bbee63; atmart_medias_stations_HT.csv — primera publicación · 806 filas · ce32ea99; Radios y televisiones autorizadas, por comuna — primera publicación · 80 filas · 3ad5153d; atmart_medias.json — primera publicación · 80 entradas · 88f04471; Lugares de culto cartografiados, por comuna — primera publicación · 121 filas · 96d0ec8b; atmart_lieux_culte.json — primera publicación · 121 entradas · b71c08f5; La licencia de cada archivo publicado — nueva versión · 93 filas · cc56bce3; La licencia de cada archivo publicado — nueva versión · 96 filas · 06378adf; atmart_licences.json — nueva versión · 3e6dd175; atmart_licences.json — nueva versión · bf06478b; atmart_indicateurs_communes_HT.csv — nueva versión · 6 306 filas · 63c8aea9; Instituciones financieras autorizadas, y lo que el mapa no muestra — nueva versión · 31 filas · 93cd62c2; atmart_couche_lieux_culte_HT.geojson — primera publicación · 2 643 entidades · 470cb272</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 23/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-23</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-23</guid>
+    <pubDate>Sun, 23 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nueva versión · 20f35ac7; Retornos forzados a Haití — puntos de entrada y perfil — primera publicación · 4 filas · ab5915a0; atmart_retours_forces_HT.csv — primera publicación · 22 filas · ae5ffc49; atmart_retours_forces.json — primera publicación · 4 entradas · 5962cf5e; Expulsiones desde Estados Unidos — Haití y República Dominicana — primera publicación · 364 filas · bd4cbc54; atmart_renvois_us_annuel.csv — primera publicación · 32 filas · c49a1b72; atmart_renvois_us.json — primera publicación · acfa9c47; Registro de fuentes Atmart — nueva versión · 47 filas · da6783a4; Registro de fuentes Atmart — nueva versión · 48 filas · e2d7d9e2; Registro de fuentes Atmart — nueva versión · 46 filas · dfc0fbfd; La licencia de cada archivo publicado — nueva versión · 87 filas · 9de549ee; La licencia de cada archivo publicado — nueva versión · 90 filas · 2ba87cae; La licencia de cada archivo publicado — nueva versión · 84 filas · 4a315725; atmart_licences.json — nueva versión · 1f110994; atmart_licences.json — nueva versión · 910f9157; atmart_licences.json — nueva versión · 3fbe2f7c; atmart_ecoles_declarees.json — nueva versión · 140 entradas · 005daf8d; La diáspora haitiana — dónde vive — primera publicación · 2 160 filas · c7907608; atmart_diaspora_destinations.json — primera publicación · f2e91dca</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 22/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-22</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-22</guid>
+    <pubDate>Sat, 22 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Series nacionales de Haití — nueva versión · 1 663 filas · 88f718d9; Registro de fuentes Atmart — nueva versión · 45 filas · 78b36711; Registro de las ONG reconocidas NUEVO — nueva versión · 680 filas · 717da5cd; Precios de alimentos básicos por mercado, 2005-2024 — nueva versión · 862 filas · 8cde6c96; atmart_prix_denrees.json — nueva versión · 9 entradas · b915c68b; La licencia de cada archivo publicado — primera publicación · 82 filas · 60f62aac; atmart_licences.json — primera publicación · dd2d5ec0; Índice de precios al consumo, por región y comuna — nueva versión · 140 filas · 5fdae7cf; atmart_ipc_regions_HT.csv — nueva versión · 20 filas · 9cc316c3; atmart_ipc_regions.json — nueva versión · 140 entradas · 0708ba5f</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 21/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-21</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-21</guid>
+    <pubDate>Fri, 21 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nueva versión · c3081759; catalogue_manifest.json — nueva versión · c8d0a47f; catalogue_manifest.json — nueva versión · 198aa4f7; catalogue_manifest.json — nueva versión · 223df922; catalogue_manifest.json — nueva versión · 91edf9d9; catalogue_manifest.json — nueva versión · 83409071; catalogue_manifest.json — nueva versión · 18258eaa; catalogue_manifest.json — nueva versión · c3b7c956; Turismo por comuna — recuento — primera publicación · 337 filas · 6bd15394; Turismo por comuna — recuento — primera publicación · 412 filas · 37e82b4c; atmart_tourisme_communes.json — primera publicación · 107 entradas · cfda294e; atmart_tourisme_communes.json — primera publicación · 115 entradas · b2e5a01c; Series nacionales de Haití — nueva versión · 1 585 filas · 1ac504f3; Series nacionales de Haití — nueva versión · 1 663 filas · 17355485; atmart_series_nationales.json — nueva versión · 73 entradas · fd4722f3; atmart_series_nationales.json — nueva versión · 76 entradas · d74b4d26; Registro de fuentes Atmart — nueva versión · 37 filas · 67a8b1cf; Registro de fuentes Atmart — nueva versión · 38 filas · 10ecff39; Registro de fuentes Atmart — nueva versión · 38 filas · 00bab04c; Registro de fuentes Atmart — nueva versión · 38 filas · f084d106; Registro de fuentes Atmart — nueva versión · 39 filas · 4298b061; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 840 filas · 1575c9fb; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 861 filas · 93bf5785; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 945 filas · 14c297df; atmart_referentiel_indicateurs.csv — nueva versión · 49 filas · b336ae0e; atmart_referentiel_indicateurs.csv — nueva versión · 50 filas · 7f7b718c; atmart_referentiel_indicateurs.csv — nueva versión · 54 filas · 601e9940; atmart_referentiel_indicateurs.csv — nueva versión · 54 filas · d1471249; Precios de alimentos básicos por mercado, 2005-2024 — primera publicación · 862 filas · 0bb4ac2b; atmart_prix_denrees.json — primera publicación · 9 entradas · 3eb6e436; Índice de precios al consumo, por región y comuna — primera publicación · 140 filas · 643b69bc; atmart_ipc_regions_HT.csv — primera publicación · 20 filas · 344f0f01; atmart_ipc_regions.json — primera publicación · 140 entradas · 99baa8da; atmart_ipc_regions.json — primera publicación · 140 entradas · c9db17ae; atmart_indicateurs_communes_HT.csv — nueva versión · 6 077 filas · cc5be17c; atmart_indicateurs_communes_HT.csv — nueva versión · 6 137 filas · 10296677; atmart_indicateurs_communes_HT.csv — nueva versión · 6 304 filas · 16a5d8ae; atmart_indicateurs_communes_HT.csv — nueva versión · 6 306 filas · 768589b5; atmart_hibiscus_non_rattachees_HT.csv — primera publicación · 13 filas · a5342ea2; Establecimientos clasificados Hibiscus — por comuna — primera publicación · 39 filas · f4f79bd9; atmart_hibiscus_communes.json — primera publicación · 39 entradas · 043f8876; atmart_finance_cooperative_communes_HT.csv — primera publicación · 32 filas · 682eed2c; atmart_finance_cooperative.json — primera publicación · 26 entradas · a54c87cf; Instituciones financieras autorizadas, y lo que el mapa no muestra — primera publicación · 26 filas · 13cc6692; Oferta turística cartografiada — capa de puntos — primera publicación · 2 695 entidades · 398a56ab; Oferta turística cartografiada — capa de puntos — primera publicación · 2 896 entidades · 53a2562c; Cajas populares y microfinanzas cartografiadas — primera publicación · 43 entidades · 4a8177d7; Bancos, cajeros y transferencias — nueva versión · 474 entidades · ddf4796e; Cajas populares autorizadas, por comuna — primera publicación · 58 filas · 53d3a4d7; atmart_caisses_populaires.json — primera publicación · 47 entradas · e78c3c0c; atmart_caisses_communes_desservies_HT.csv — primera publicación · 71 filas · 7c003541</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 20/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-20</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-20</guid>
+    <pubDate>Thu, 20 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nueva versión · d6717625; atmart_referentiel_indicateurs.csv — nueva versión · 41 filas · 334b5c00; atmart_indicateurs_communes_HT.csv — nueva versión · 5 598 filas · a54cb520</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 19/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-19</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-19</guid>
+    <pubDate>Wed, 19 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nueva versión · 9d82200d; Series nacionales de Haití — nueva versión · 1 419 filas · 707a1edd; atmart_series_nationales.json — nueva versión · 63 entradas · f2d50cde; Registro de fuentes Atmart — nueva versión · 36 filas · 2542c0b5</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 18/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-18</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-18</guid>
+    <pubDate>Tue, 18 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Series nacionales de Haití — primera publicación · 907 filas · 8ca7675a; atmart_series_nationales.json — primera publicación · 34 entradas · 1afbc859; Registro de fuentes Atmart — nueva versión · 36 filas · aabbf933; atmart_referentiel_indicateurs.csv — nueva versión · 32 filas · 938d99b6; atmart_couches_carte_HT.csv — nueva versión · 140 filas · 58c7d2af; atmart_concordance_HT.csv — primera publicación · 140 filas · 43a771e0; atmart_concordance.json — primera publicación · 140 entradas · e63ccdca; atmart_concordance.json — primera publicación · 140 entradas · 0f843923</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 17/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-17</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-17</guid>
+    <pubDate>Mon, 17 Aug 2026 12:00:00 +0000</pubDate>
+    <description>atmart_urbanisation_communes.json — primera publicación · 140 entradas · e71472c3; atmart_sols_communes.json — primera publicación · 140 entradas · 47daf7ba; atmart_sols_communes.json — primera publicación · 140 entradas · 08a40e11; atmart_solaire_communes.json — primera publicación · 140 entradas · ecdf68de; atmart_solaire_communes.json — primera publicación · 140 entradas · aac3de49; atmart_seismes_communes.json — primera publicación · 140 entradas · a20ea2d3; atmart_sante_declaree.json — primera publicación · 139 entradas · 61772925; atmart_projets_national.json — primera publicación · 15 entradas · c17abc4f; atmart_projets_national.json — primera publicación · 15 entradas · 04298f28; atmart_population_trois_sources.json — primera publicación · 140 entradas · 35149368; atmart_population_modelisee.json — primera publicación · 140 entradas · c586a180; atmart_pluie_communes.json — primera publicación · 140 entradas · 8de3dd3b; atmart_occupation_sol.json — primera publicación · 140 entradas · 2b7460ed; atmart_equipements_hot.json — primera publicación · 140 entradas · 856cad05; atmart_ecoles_declarees.json — primera publicación · 140 entradas · e00b5486; atmart_ecoles_declarees.json — primera publicación · 140 entradas · a05792d6; atmart_eau_surface.json — primera publicación · 140 entradas · 55e6be90; atmart_cyclones_communes.json — primera publicación · 140 entradas · dd21091f; atmart_credits_departements.json — primera publicación · 9b4e5e1d; atmart_couches_carte_HT.csv — primera publicación · 140 filas · 8abd36f9; atmart_couches_carte_HT.csv — primera publicación · 140 filas · 3343548f; atmart_batiments_communes.json — primera publicación · 140 entradas · 995e4a34; atmart_bassins_communes.json — primera publicación · 140 entradas · 19f53c6d; atmart_acces_routier.json — primera publicación · 140 entradas · b7a6787d</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 15/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-15</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-15</guid>
+    <pubDate>Sat, 15 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nueva versión · ca767ad7; Telecomunicaciones por comuna — recuento — primera publicación · 219 filas · 4ba2bfbe; Registro de fuentes Atmart — nueva versión · 36 filas · 6257387a; Infraestructuras por comuna NUEVO — nueva versión · 2 118 filas · 2ea96630; Equipamiento de telecomunicaciones por operador — primera publicación · 498 entidades · a6a2bf81</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 14/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-14</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-14</guid>
+    <pubDate>Fri, 14 Aug 2026 12:00:00 +0000</pubDate>
+    <description>haiti_departements_simplifie.geojson — primera publicación · 10 entidades · 9824d2bc; haiti_communes_simplifie.geojson — primera publicación · 140 entidades · e0162bfa; catalogue_manifest.json — nueva versión · a5f4ba2d; catalogue_manifest.json — nueva versión · 57b8c352; catalogue_manifest.json — nueva versión · 78ff3c79; catalogue_manifest.json — nueva versión · 69f98f46; catalogue_manifest.json — nueva versión · 207d1ece; catalogue_manifest.json — nueva versión · 6d859c9a; catalogue_manifest.json — nueva versión · 205d1762; catalogue_manifest.json — nueva versión · 2201ed96; catalogue_manifest.json — nueva versión · a9710c3a; catalogue_manifest.json — nueva versión · 94329fbb; Registro de fuentes Atmart — nueva versión · 24 filas · 7f4e695e; Registro de fuentes Atmart — nueva versión · 27 filas · dc0e529f; Registro de fuentes Atmart — nueva versión · 31 filas · 24ccfd0e; Registro de fuentes Atmart — nueva versión · 31 filas · f2c8b769; Registro de fuentes Atmart — nueva versión · 34 filas · 12c05a0e; Registro de fuentes Atmart — nueva versión · 35 filas · f856d7f2; Registro de las ONG reconocidas NUEVO — primera publicación · 680 filas · 723840f4; Registro de los mercados de Haití NUEVO — primera publicación · 182 filas · cff51300; atmart_referentiel_indicateurs.csv — nueva versión · 32 filas · 714ff55a; atmart_referentiel_indicateurs.csv — nueva versión · 32 filas · e27f4f22; Profesiones jurídicas y catastrales por comuna NUEVO — primera publicación · 280 filas · aa950a5c; Presencia de las organizaciones — quién trabaja dónde NUEVO — primera publicación · 1 457 filas · df802ea6; Ocupación del suelo por comuna — primera publicación · 1 042 filas · af2f6010; Registro de los mercados de Haití NUEVO — primera publicación · 182 entidades · 78f14c70; Inseguridad alimentaria — fases CIF — primera publicación · 210 filas · c61678bc; Infraestructuras por comuna NUEVO — primera publicación · 1 895 filas · 2849b2f6; Infraestructuras por comuna NUEVO — primera publicación · 1 899 filas · fdf9d622; Referencias presupuestarias nacionales NUEVO — primera publicación · 2 filas · c1cbff8a; Desplazamientos de población — primera publicación · 150 filas · e7b7d870; Zonas inundables — primera publicación · 134 entidades · 4436b48a; Bancos, cajeros y transferencias — primera publicación · 474 entidades · 24856ba1; Puntos de agua — primera publicación · 6 276 entidades · de7ffd9b; Gasolineras — primera publicación · 310 entidades · 4d9e435f; Cuencas hidrográficas — primera publicación · 31 entidades · 12f15278; Conflictos — eventos y muertes por comuna — primera publicación · 4 368 filas · 1d728ff2; Proporción de zona inundable por comuna — primera publicación · 140 filas · 9628ab5b; EXTRAIT_haiti_lieux_habites_geonames_gps.csv — primera publicación · 10 filas · 428ff643; EXTRAIT_haiti_570_sections_communales_gps.csv — primera publicación · 10 filas · f87eaa45; EXTRAIT_haiti_140_villes_chefs_lieux_gps.csv — primera publicación · 10 filas · 122ecd58; EXTRAIT_geojson.md — primera publicación · ecbe9838</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 13/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-13</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-13</guid>
+    <pubDate>Thu, 13 Aug 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — primera publicación · 7352f327; catalogue_manifest.json — primera publicación · b433dde7; Registro de fuentes Atmart — nueva versión · 22 filas · ee7fa77a; Registro de fuentes Atmart — nueva versión · 22 filas · 633a3f8a; Registro de fuentes Atmart — nueva versión · 22 filas · c7cf7e6f; Registro de fuentes Atmart — nueva versión · 23 filas · ec3eddd5; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 672 filas · 98ff3d79; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 672 filas · 69243d43; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 672 filas · e15bbaf0; atmart_referentiel_indicateurs.csv — nueva versión · 32 filas · 774903c1; atmart_referentiel_indicateurs.csv — nueva versión · 32 filas · f7a6410b; atmart_referentiel_indicateurs.csv — nueva versión · 32 filas · 4a8c0e75; atmart_referentiel_indicateurs.csv — nueva versión · 32 filas · 83c0d263; Precios de los mercados — red centinela NUEVO — primera publicación · 14 140 filas · d7104087; atmart_indicateurs_communes_HT.csv — nueva versión · 4 060 filas · 14a33f6b; atmart_indicateurs_communes_HT.csv — nueva versión · 4 200 filas · 48c4d780; atmart_indicateurs_communes_HT.csv — nueva versión · 4 200 filas · 1fa80a80</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 12/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-12</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-12</guid>
+    <pubDate>Wed, 12 Aug 2026 12:00:00 +0000</pubDate>
+    <description>atmart_indicateurs_communes_HT.csv — nueva versión · 3 780 filas · 9c1aad5a</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 11/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-11</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-11</guid>
+    <pubDate>Tue, 11 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Registro de fuentes Atmart — nueva versión · 13 filas · 450b7f8e; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 441 filas · 7a93aa0f; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 672 filas · c112c2c7; atmart_referentiel_indicateurs.csv — nueva versión · 21 filas · 8f785039; atmart_referentiel_indicateurs.csv — nueva versión · 32 filas · 27d6f2ce; Pirámide de edades de las 140 comunas NUEVO — primera publicación · 7 140 filas · b64692e7; atmart_indicateurs_communes_HT.csv — nueva versión · 1 554 filas · 0ef7966b; atmart_indicateurs_communes_HT.csv — nueva versión · 3 094 filas · ee3bfc04</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 10/08/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-10</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-08-10</guid>
+    <pubDate>Mon, 10 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Registro de fuentes Atmart — nueva versión · 13 filas · f25c59f6; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 420 filas · 6fe94da1; atmart_referentiel_indicateurs.csv — nueva versión · 20 filas · 94553e0b; atmart_indicateurs_communes_HT.csv — nueva versión · 1 414 filas · 5c9c7d56</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 31/07/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-07-31</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-07-31</guid>
+    <pubDate>Fri, 31 Jul 2026 12:00:00 +0000</pubDate>
+    <description>Remesas de la diáspora (2000–2025) — Haití + 7 países — primera publicación · 26 filas · e38973a5; haiti_contour_simplifie.geojson — primera publicación · 1 entidades · 15b281bc; Registro de fuentes Atmart — primera publicación · 8 filas · c363c47c; Registro de fuentes Atmart — primera publicación · 12 filas · 20c2c6a7; atmart_referentiel_territoire_base_HT.csv — primera publicación · 192 filas · b4bb6eb0; atmart_referentiel_territoire_base_HT.csv — primera publicación · 192 filas · d59beb9e; atmart_referentiel_temps_HT.csv — primera publicación · 1 201 filas · e59b0c94; atmart_referentiel_indicateurs_i18n.csv — primera publicación · 420 filas · f6d6c228; atmart_referentiel_indicateurs.csv — primera publicación · 17 filas · 96a0e9cf; atmart_referentiel_indicateurs.csv — primera publicación · 20 filas · 4fe6203a; atmart_millesimes_territoriaux.csv — primera publicación · 192 filas · dabc3cfd; atmart_indicateurs_communes_HT.csv — primera publicación · 1 197 filas · 79fdb038; atmart_indicateurs_communes_HT.csv — primera publicación · 1 197 filas · 14b99d28; atmart_indicateurs_communes_HT.csv — primera publicación · 1 274 filas · 555df151; LISEZMOI_transferts_diaspora.md — nueva versión · e5b253c8; Muestra — secciones comunales de Haití — nueva versión · 10 filas · f87eaa45</description>
+  </item>
+  <item>
+    <title>Actualizaciones del 12/06/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-06-12</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-06-12</guid>
+    <pubDate>Fri, 12 Jun 2026 12:00:00 +0000</pubDate>
+    <description>LISEZMOI_transferts_diaspora.md — primera publicación · 01c4ae18; Muestra — secciones comunales de Haití — primera publicación · 10 filas · d2425b67</description>
+  </item>
+</channel>
+</rss>

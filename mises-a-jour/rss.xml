@@ -8,6 +8,13 @@
   <language>fr</language>
   <atom:link href="https://explorateur.atmart.ltd/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Mises à jour du 18/09/2026</title>
+    <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-09-18</link>
+    <guid isPermaLink="false">explorateur-maj-fr-2026-09-18</guid>
+    <pubDate>Fri, 18 Sep 2026 12:00:00 +0000</pubDate>
+    <description>Registre des sources Atmart — nouvelle version · 61 lignes · 9d5f68d7; atmart_referentiel_indicateurs_i18n.csv — nouvelle version · 1 470 lignes · 63c50a3b; atmart_referentiel_indicateurs.csv — nouvelle version · 70 lignes · 849645c0; atmart_presidentielle_2006_resume_HT.csv — première publication · 108 lignes · 8f67eb2d; atmart_presidentielle_2006_communes_HT.csv — première publication · 3 780 lignes · 6ce76786; Licence de chaque fichier publié — nouvelle version · 133 lignes · e05978e9; atmart_licences.json — nouvelle version · a3653384; Élections passées — inscrits 2015 et présidentielle 2006, par commune — première publication · 140 lignes · c5b898f0; atmart_indicateurs_communes_HT.csv — nouvelle version · 8 430 lignes · 3f46db10; atmart_elections.json — première publication · 140 entrées · b8505983</description>
+  </item>
+  <item>
     <title>Mises à jour du 17/09/2026</title>
     <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-09-17</link>
     <guid isPermaLink="false">explorateur-maj-fr-2026-09-17</guid>

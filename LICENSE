@@ -24,10 +24,10 @@ licence, les sources, l'attribution à porter et la raison. Le même
 contenu en JSON : data/atmart_licences.json. La provenance complète de
 chaque source : data/atmart_registre_sources.csv.
 
-RÉPARTITION AU 2026-09-04
+RÉPARTITION AU 2026-09-18
 --------------------------------------------------------------------------
   Accès complet et ouvert (World Data Center) — usage    1 fichier(s)
-  CC BY 4.0                                             83 fichier(s)
+  CC BY 4.0                                             84 fichier(s)
   CC BY 4.0 — transformation ou citation                14 fichier(s)
   CC BY-NC 4.0                                           1 fichier(s)
   CC BY-SA 4.0                                           1 fichier(s)
@@ -38,7 +38,7 @@ RÉPARTITION AU 2026-09-04
   ODbL 1.0                                              14 fichier(s)
   ODbL 1.0 pour OSM ; CC BY-IGO pour les marchés PAM     1 fichier(s)
   par ligne — voir la colonne « licence »                1 fichier(s)
-  sous réserve                                           4 fichier(s)
+  sous réserve                                           8 fichier(s)
   à déclarer                                             4 fichier(s)
 
 ATTRIBUTION MINIMALE, quelle que soit la licence :

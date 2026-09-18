@@ -144,6 +144,11 @@
   "es": "sismo desde 1911",
   "fr": "séisme depuis 1911"
  },
+ "votes": {
+  "en": "vote",
+  "es": "voto",
+  "fr": "vote"
+ },
  "écoles / 10 000 jeunes": {
   "en": "school / 10,000 young people",
   "es": "escuela / 10 000 jóvenes",
@@ -158,6 +163,11 @@
   "en": "declared school",
   "es": "escuela declarada",
   "fr": "école déclarée"
+ },
+ "électeurs inscrits": {
+  "en": "registered voter",
+  "es": "elector inscrito",
+  "fr": "électeur inscrit"
  },
  "établissements": {
   "en": "establishment",

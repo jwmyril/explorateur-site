@@ -6,7 +6,7 @@
    d'où il vient ni ce qu'il ne couvre pas. */
 (function () {
   "use strict";
-  var DV = "?d=2026-09-17a";
+  var DV = "?d=2026-09-18a";
   var $ = function (s) { return document.querySelector(s); };
   var fmtN = function (v) { return (+v).toLocaleString("fr-FR"); };
 
@@ -341,6 +341,43 @@
       },
       source: "CONATEL — liste des stations de radiodiffusion autorisées 2023-2024 ; repérage au type de propriétaire par Atmart, passeport PSP-069",
       limite: "11 RADIOS COMMUNAUTAIRES SEULEMENT SONT DÉTECTÉES, et c'est un PLANCHER. Le CONATEL ne les étiquette pas : on les reconnaît quand le propriétaire est une organisation de type associatif — association, collectif, konbit, coopérative, fédération, comité. Une radio communautaire enregistrée au nom d'une personne n'est pas détectée, et il y en a certainement. La règle se trompe donc par défaut, jamais par excès : mieux vaut en oublier que d'en inventer. À lire comme « au moins tant », jamais comme un décompte." },
+    /* LES ÉLECTIONS (18/09/2026) — documents du CEP retrouvés dans les
+       archives, republiés gratuitement avec citation (décision Atmart). Deux
+       cartes neutres : un effectif et une part de bulletins blancs et nuls.
+       AUCUNE carte par candidat ou par parti, et aucun taux de participation
+       2006 (pas d'inscrits 2006 par commune). */
+    { id: "inscrits_2015", nom: "Électeurs inscrits, avril 2015 (CEP)", type: "choroplethe",
+      csv: "data/atmart_inscrits_2015_communes_HT.csv", pcode: "pcode_commune",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          var v = +r.inscrits_avril_2015;
+          if (v > 0) m[r.pcode_commune] = v;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("avril 2015"),
+                 unite: "électeurs inscrits" };
+      },
+      source: "CEP — Inscription des électeurs, avril 2015 (archive Internet Archive) ; rattachement communal par Atmart, passeport PSP-079",
+      limite: "CE N'EST PAS UNE POPULATION : c'est la liste électorale d'avril 2015, que le CEP n'a pas épurée des personnes décédées ou parties. La mission d'experts électoraux de l'Union européenne estimait en 2016 qu'il fallait en radier 500 000 à 600 000, jusqu'à environ 10 % du fichier — l'excès n'est pas connu commune par commune. Document retrouvé dans les archives de l'Internet Archive, republié gratuitement avec citation ; la somme des communes a été vérifiée contre chaque total départemental et le total national." },
+    { id: "blancs_nuls_2006", nom: "Bulletins blancs et nuls, présidentielle 2006 (CEP)", type: "choroplethe",
+      csv: "data/atmart_presidentielle_2006_resume_HT.csv", pcode: "pcode_commune",
+      courbe: "lineaire",
+      agreger: function (rows) {
+        var m = {};
+        rows.forEach(function (r) {
+          var b = +r.votes_blancs || 0, n = +r.votes_nuls || 0, t = +r.total_votes || 0;
+          /* zéro blanc ET zéro nul : saisie, pas vote — écarté (Bombardopolis) */
+          if (t > 0 && (b + n) > 0) m[r.pcode_commune] = Math.round(1000 * (b + n) / t) / 10;
+        });
+        var vs = Object.keys(m).map(function (k) { return m[k]; });
+        return { valeurs: m, min: vs.length ? Math.min.apply(null, vs) : 0,
+                 periode: T("7 février 2006"),
+                 unite: "% des bulletins" };
+      },
+      source: "CEP — résumés EIS de la présidentielle du 7 février 2006 (archive Internet Archive) ; rattachement communal par Atmart, passeport PSP-080",
+      limite: "PREMIER TOUR DU 7 FÉVRIER 2006, résumés imprimés le 20 février, parfois avant la fin du dépouillement. C'est la part AVANT la répartition nationale des bulletins blancs entre les candidats, décidée ensuite par le CEP et contestée : les résumés communaux ne la font pas. Un bulletin blanc est un choix, un nul peut être une erreur de remplissage. 32 communes sans résumé archivé — tout le Nord et le Sud-Est, Gros Morne, Grande Saline et Desdunes — restent en blanc, jamais à zéro ; Bombardopolis est écartée : son résumé déclare zéro blanc et zéro nul sur 10 procès-verbaux traités, ce qui tient de la saisie, pas du vote." },
     /* LES LIEUX DE CULTE, en deux cartes et non une.
 
        Le total répond à « où la carte voit-elle des lieux de culte ? ». Le
@@ -2109,6 +2146,8 @@
                        "violence_conjugale", "decisions_femmes",
                        "emploi_femmes"]],
                      ["Transferts — où l'argent arrive et où on le touche", ["transferts_dep", "points_transfert"]],
+                     ["Élections — documents du CEP",
+                      ["inscrits_2015", "blancs_nuls_2006"]],
                      ["Médias — stations autorisées",
                       ["medias", "medias_communautaires"]],
                      /* Le tourisme a son groupe et non une place dans

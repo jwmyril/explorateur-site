@@ -293,6 +293,90 @@ IND-EDU-010,ht,methode_calcul,"IND-EDU-001 ÷ IND-POP-007 × 10 000. Bòn anwo d
 IND-EDU-010,ht,nom,Lekòl pou chak 10 000 jèn 5 a 19 an
 IND-EDU-010,ht,sens_interpretation,"Wo = anpil etablisman anrejistre parapò ak jèn 5 a 19 an yo. Li pa di anyen sou gwosè lekòl yo, sou eta yo, ni sou distans pou rive."
 IND-EDU-010,ht,unite,lekòl / 10 000 jèn
+IND-ELE-001,en,comparabilite,"Comparable between communes for the same count (April 2015); not as a measure of the adult population, since the list has not been cleaned."
+IND-ELE-001,en,definition,"Number of people on the commune's electoral list, according to the count published by the CEP in April 2015."
+IND-ELE-001,en,limites_connues,"A LIST IS NOT A POPULATION: the electoral roll, opened in 2005, has not been cleaned of people who died or left. In 2016 the European Union electoral expert mission estimated that 500,000 to 600,000 people should be removed, up to about 10% of the roll. The excess is not known commune by commune. It is also an April 2015 count: the list changed again before the 2015 and 2016 elections."
+IND-ELE-001,en,methode_calcul,"Reading of the CEP document “Voter registration (April 2015) — by department and by commune”. Each commune name is matched to the reference list; the sum of communes is checked against each department's stated total, and the sum of departments against the national total (5,835,295)."
+IND-ELE-001,en,nom,Registered voters (April 2015)
+IND-ELE-001,en,sens_interpretation,"Neutral — a count, not a performance"
+IND-ELE-001,en,unite,registered voters
+IND-ELE-001,es,comparabilite,"Comparable entre comunas para un mismo recuento (abril de 2015); no como medida de la población adulta, pues la lista no está depurada."
+IND-ELE-001,es,definition,"Número de personas en la lista electoral de la comuna, según el recuento publicado por el CEP en abril de 2015."
+IND-ELE-001,es,limites_connues,"UNA LISTA NO ES UNA POBLACIÓN: el padrón electoral, abierto en 2005, no se ha depurado de las personas fallecidas o que se marcharon. En 2016 la misión de expertos electorales de la Unión Europea estimaba que había que dar de baja a 500 000-600 000 personas, hasta cerca del 10 % del padrón. El exceso no se conoce comuna por comuna. Es además un recuento de abril de 2015: la lista volvió a cambiar antes de las elecciones de 2015 y 2016."
+IND-ELE-001,es,methode_calcul,"Lectura del documento del CEP «Inscripción de electores (abril de 2015) — por departamento y por comuna». Cada nombre de comuna se vincula al referencial; la suma de las comunas se comprueba con el total anunciado de cada departamento, y la de los departamentos con el total nacional (5 835 295)."
+IND-ELE-001,es,nom,Electores inscritos (abril de 2015)
+IND-ELE-001,es,sens_interpretation,"Neutro — un recuento, no un desempeño"
+IND-ELE-001,es,unite,electores inscritos
+IND-ELE-001,ht,comparabilite,"Nou ka konpare komin yo pou menm kont lan (avril 2015) ; men se pa kantite granmoun ki rete nan komin nan, paske yo pa t retire moun ki mouri oswa ki ale yo sou lis la."
+IND-ELE-001,ht,definition,"Konbyen moun ki sou lis elektoral komin nan, dapre kont CEP la pibliye an avril 2015."
+IND-ELE-001,ht,limites_connues,"YON LIS SE PA KANTITE MOUN KI RETE NAN KOMIN NAN : depi 2005, yo pa retire moun ki mouri oswa ki ale yo sou lis la. An 2016, misyon ekspè eleksyon Inyon ewopeyen an te estime fò t retire 500 000 a 600 000 moun, prèske 10 % lis la. Nou pa konnen konbyen sa fè nan chak komin. Se kont avril 2015 la tou : lis la te chanje ankò anvan eleksyon 2015 ak 2016 yo."
+IND-ELE-001,ht,methode_calcul,"Nou li dokiman CEP la « Enskripsyon elektè yo (avril 2015) — pa depatman ak pa komin ». Chak non komin ratache ak referansyèl la ; nou verifye total komin yo ak total chak depatman, e total depatman yo ak total nasyonal la (5 835 295)."
+IND-ELE-001,ht,nom,Moun ki enskri pou vote (avril 2015)
+IND-ELE-001,ht,sens_interpretation,"Net — se yon kantite, se pa yon rezilta ki bon oswa ki move"
+IND-ELE-001,ht,unite,moun ki enskri pou vote
+IND-ELE-002,en,comparabilite,"Comparable between the communes covered, at a similar stage of counting (see tally sheets processed); neither with 2015-2016 nor relative to a population."
+IND-ELE-002,en,definition,"Total number of ballots (valid, blank and spoiled) counted in the commune in the first round of the presidential election of 7 February 2006, according to the CEP's commune summary."
+IND-ELE-002,en,limites_connues,"SUMMARY PRINTED ON 20 FEBRUARY 2006, often before all tally sheets were processed: the share processed is given by the neighbouring indicator, and the final count may be slightly higher. NO TURNOUT RATE: registered voters by commune for 2006 have not been found, and dividing by 2015 registrations would produce a false rate. 32 communes have no value: the archive kept no summary for the Nord and Sud-Est, nor for Gros Morne, Grande Saline and Desdunes."
+IND-ELE-002,en,methode_calcul,"Reading of the CEP's EIS commune summary: the “Total Votes” line. Checks: candidate votes equal valid votes, and valid + blank + spoiled equal the total; for six departments out of seven, the sum of communes equals the department summary exactly."
+IND-ELE-002,en,nom,"Votes cast, 2006 presidential election"
+IND-ELE-002,en,sens_interpretation,"Neutral — a count, not a performance"
+IND-ELE-002,en,unite,votes
+IND-ELE-002,es,comparabilite,"Comparable entre las comunas cubiertas, con un avance de escrutinio parecido (ver actas procesadas); ni con 2015-2016 ni en relación con una población."
+IND-ELE-002,es,definition,"Número total de papeletas (válidas, en blanco y nulas) contadas en la comuna en la primera vuelta de la elección presidencial del 7 de febrero de 2006, según el resumen comunal del CEP."
+IND-ELE-002,es,limites_connues,"RESUMEN IMPRESO EL 20 DE FEBRERO DE 2006, a menudo antes de procesar todas las actas: la parte procesada la da el indicador vecino, y el recuento final puede ser algo mayor. NINGUNA TASA DE PARTICIPACIÓN: no se han encontrado los inscritos de 2006 por comuna, y dividir por los inscritos de 2015 fabricaría una tasa falsa. 32 comunas no tienen valor: el archivo no conservó ningún resumen del Norte y el Sudeste, ni de Gros Morne, Grande Saline y Desdunes."
+IND-ELE-002,es,methode_calcul,"Lectura del resumen comunal EIS del CEP: línea «Total Votes». Controles: los votos de los candidatos igualan los votos válidos, y válidos + blancos + nulos el total; en seis departamentos de siete, la suma de las comunas iguala exactamente el resumen departamental."
+IND-ELE-002,es,nom,"Votos emitidos, elección presidencial de 2006"
+IND-ELE-002,es,sens_interpretation,"Neutro — un recuento, no un desempeño"
+IND-ELE-002,es,unite,votos
+IND-ELE-002,ht,comparabilite,"Nou ka konpare komin ki gen done yo, si depouyman an te rive prèske menm kote (gade pwosè-vèbal yo trete) ; pa ak 2015-2016, ni sou kantite moun ki rete nan komin nan."
+IND-ELE-002,ht,definition,"Konbyen bilten (valab, blan ak nil) yo te konte nan komin nan nan premye tou eleksyon prezidansyèl 7 fevriye 2006 la, dapre rezime CEP la pou komin nan."
+IND-ELE-002,ht,limites_connues,"REZIME A TE ENPRIME 20 FEVRIYE 2006, souvan anvan yo te fin trete tout pwosè-vèbal yo : endikatè bò kote a bay pòsyon yo te trete, e kont final la ka yon ti jan pi wo. PA GEN TO PATISIPASYON : nou pa jwenn kantite moun ki te enskri an 2006 nan chak komin, e divize pa moun ki te enskri an 2015 ta bay yon to ki fo. 32 komin pa gen valè : achiv la pa kenbe okenn rezime pou Nò ak Sidès, ni pou Gwo Mòn, Grann Salin ak Dedin."
+IND-ELE-002,ht,methode_calcul,"Nou li rezime EIS CEP la pou komin nan : liy « Total Votes » la. Verifikasyon : vwa kandida yo egal vòt valab yo, e valab + blan + nil egal total la ; pou sis depatman sou sèt, total komin yo egal egzakteman rezime depatman an."
+IND-ELE-002,ht,nom,"Vòt yo konte, eleksyon prezidansyèl 2006"
+IND-ELE-002,ht,sens_interpretation,"Net — se yon kantite, se pa yon rezilta ki bon oswa ki move"
+IND-ELE-002,ht,unite,vòt
+IND-ELE-003,en,comparabilite,"Comparable between the communes covered, before the national distribution of blank ballots; not with the official national figure, which distributed them."
+IND-ELE-003,en,definition,Share of blank and spoiled ballots among all ballots counted in the commune in the first round of the presidential election of 7 February 2006.
+IND-ELE-003,en,limites_connues,"BLANK BALLOTS WERE AT THE HEART OF THE 2006 DISPUTE: at national level, the CEP distributed them among the candidates in proportion to their votes, which put the leader above 50%. The commune summaries do not make this distribution: this is the share BEFORE distribution. A blank ballot is a choice; a spoiled ballot may also be a filling error — both are added here because some summaries barely separate them. Summaries sometimes partial (see tally sheets processed); 32 communes without a value, and Bombardopolis set aside: its summary declares zero blank and zero spoiled ballots on 10 tally sheets, which reflects data entry, not the vote."
+IND-ELE-003,en,methode_calcul,"(blank votes + spoiled votes) ÷ total votes × 100, read from the CEP's commune summary."
+IND-ELE-003,en,nom,"Blank and spoiled ballots, 2006 presidential election"
+IND-ELE-003,en,sens_interpretation,"Neutral — a blank ballot is a choice, a spoiled ballot may be an error"
+IND-ELE-003,en,unite,%
+IND-ELE-003,es,comparabilite,"Comparable entre las comunas cubiertas, antes del reparto nacional de los votos en blanco; no con la cifra nacional oficial, que los repartió."
+IND-ELE-003,es,definition,Proporción de votos en blanco y nulos entre todas las papeletas contadas en la comuna en la primera vuelta de la elección presidencial del 7 de febrero de 2006.
+IND-ELE-003,es,limites_connues,"LOS VOTOS EN BLANCO ESTUVIERON EN EL CENTRO DE LA DISPUTA DE 2006: a nivel nacional, el CEP los repartió entre los candidatos en proporción a sus votos, lo que situó al primero por encima del 50 %. Los resúmenes comunales no hacen ese reparto: es la proporción ANTES del reparto. Un voto en blanco es una elección; un voto nulo también puede ser un error al rellenar — se suman aquí porque algunos resúmenes apenas los distinguen. Resúmenes a veces parciales (ver actas procesadas); 32 comunas sin valor, y Bombardopolis apartada: su resumen declara cero votos en blanco y cero nulos en 10 actas, lo que refleja la captura de datos, no el voto."
+IND-ELE-003,es,methode_calcul,"(votos en blanco + votos nulos) ÷ total de votos × 100, leídos en el resumen comunal del CEP."
+IND-ELE-003,es,nom,"Votos en blanco y nulos, elección presidencial de 2006"
+IND-ELE-003,es,sens_interpretation,"Neutro — un voto en blanco es una elección, un voto nulo puede ser un error"
+IND-ELE-003,es,unite,%
+IND-ELE-003,ht,comparabilite,"Nou ka konpare komin ki gen done yo, anvan yo te separe bilten blan yo nan nivo nasyonal ; pa ak chif nasyonal ofisyèl la, ki te separe yo."
+IND-ELE-003,ht,definition,Pòsyon bilten blan ak bilten nil nan tout bilten yo te konte nan komin nan nan premye tou eleksyon prezidansyèl 7 fevriye 2006 la.
+IND-ELE-003,ht,limites_connues,"BILTEN BLAN YO TE NAN MITAN KONTESTASYON 2006 LA : nan nivo nasyonal, CEP la te separe yo bay kandida yo selon kantite vwa chak moun, sa ki te fè premye a depase 50 %. Rezime komin yo pa fè separasyon sa a : se pòsyon an ANVAN separasyon an. Yon bilten blan se yon chwa ; yon bilten nil ka yon erè tou — nou mete de yo ansanm paske gen rezime ki prèske pa separe yo. Gen rezime ki pa t konplè (gade pwosè-vèbal yo trete) ; 32 komin pa gen valè, e nou mete Bonbadopolis sou kote : rezime li di zewo blan ak zewo nil sou 10 pwosè-vèbal, sa soti nan fason yo te antre done yo, pa nan vòt la."
+IND-ELE-003,ht,methode_calcul,"(vòt blan + vòt nil) ÷ tout vòt yo × 100, nou li yo nan rezime CEP la pou komin nan."
+IND-ELE-003,ht,nom,"Bilten blan ak bilten nil, eleksyon prezidansyèl 2006"
+IND-ELE-003,ht,sens_interpretation,"Net — yon bilten blan se yon chwa, yon bilten nil ka yon erè"
+IND-ELE-003,ht,unite,%
+IND-ELE-004,en,comparabilite,"Comparable between the communes covered, at the shared printing date (20 February 2006)."
+IND-ELE-004,en,definition,Share of polling-station tally sheets already processed by the CEP when the commune's 2006 presidential summary was printed.
+IND-ELE-004,en,limites_connues,"THIS IS NOT A MEASURE OF THE QUALITY OF THE VOTE, but of the state of counting on one date: a tally sheet not processed on 20 February may have been processed later, or set aside. It only says how complete the commune's other 2006 electoral figures are."
+IND-ELE-004,en,methode_calcul,"Tally sheets processed ÷ tally sheets expected × 100, as printed at the top of the CEP's commune summary."
+IND-ELE-004,en,nom,"Tally sheets processed, 2006 presidential election"
+IND-ELE-004,en,sens_interpretation,High = more complete summary
+IND-ELE-004,en,unite,%
+IND-ELE-004,es,comparabilite,"Comparable entre las comunas cubiertas, en la fecha de impresión común (20 de febrero de 2006)."
+IND-ELE-004,es,definition,Proporción de actas de mesa ya procesadas por el CEP cuando se imprimió el resumen comunal de la elección presidencial de 2006.
+IND-ELE-004,es,limites_connues,"NO ES UNA MEDIDA DE LA CALIDAD DEL VOTO, sino del estado del escrutinio en una fecha: un acta no procesada el 20 de febrero pudo procesarse después, o descartarse. Solo dice hasta qué punto están completas las demás cifras electorales de 2006 de la comuna."
+IND-ELE-004,es,methode_calcul,"Actas procesadas ÷ actas esperadas × 100, tal como figuran en la cabecera del resumen comunal del CEP."
+IND-ELE-004,es,nom,"Actas procesadas, elección presidencial de 2006"
+IND-ELE-004,es,sens_interpretation,Alto = resumen más completo
+IND-ELE-004,es,unite,%
+IND-ELE-004,ht,comparabilite,"Nou ka konpare komin ki gen done yo, paske tout rezime yo enprime menm jou a (20 fevriye 2006)."
+IND-ELE-004,ht,definition,Pòsyon pwosè-vèbal biwo vòt CEP la te gentan trete lè yo te enprime rezime eleksyon prezidansyèl 2006 la pou komin nan.
+IND-ELE-004,ht,limites_connues,"SA PA MEZIRE SI VÒT LA TE BYEN FÈT, se kote depouyman an te rive yon jou : yon pwosè-vèbal ki pa t trete 20 fevriye a ka te trete apre, oswa yo ka te mete l sou kote. Li di sèlman jis ki kote lòt chif eleksyon 2006 komin nan konplè."
+IND-ELE-004,ht,methode_calcul,"Pwosè-vèbal yo trete ÷ pwosè-vèbal yo tann × 100, jan yo enprime anlè rezime CEP la pou komin nan."
+IND-ELE-004,ht,nom,"Pwosè-vèbal yo te trete, eleksyon prezidansyèl 2006"
+IND-ELE-004,ht,sens_interpretation,Wo = rezime a pi konplè
+IND-ELE-004,ht,unite,%
 IND-ENE-001,en,comparabilite,"Comparable between communes, but the gap is small across Haiti: a ranking would exaggerate differences the resource does not carry."
 IND-ENE-001,en,definition,"Photovoltaic output expected from a one-kilowatt-peak installation over a year, averaged across the commune's pixels."
 IND-ENE-001,en,limites_connues,"IT IS A RESOURCE, NOT EQUIPMENT: this figure says what a panel would produce, not what is installed. Differences between communes are small in a country this small and this sunny — a ranking on this indicator separates values that sit within a few per cent of each other. Relief matters more than latitude: the shadow of the mornes makes the difference, and it is averaged here over the whole commune."

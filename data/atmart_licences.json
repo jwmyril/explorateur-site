@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 128
+  "fichiers": 133
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -80,6 +80,7 @@
    "atmart_resultats_emmus.json",
    "atmart_resultats_emmus_HT.csv",
    "atmart_sante_declaree.json",
+   "atmart_series_trimestrielles_HT.csv",
    "atmart_solaire_communes.json",
    "atmart_sols_communes.json",
    "atmart_transferts_departements.json",
@@ -151,6 +152,10 @@
   ],
   "sous réserve": [
    "atmart_deplaces_HT.csv",
+   "atmart_elections.json",
+   "atmart_inscrits_2015_communes_HT.csv",
+   "atmart_presidentielle_2006_communes_HT.csv",
+   "atmart_presidentielle_2006_resume_HT.csv",
    "atmart_retours_forces.json",
    "atmart_retours_forces_HT.csv",
    "atmart_retours_forces_points_HT.csv"
@@ -474,6 +479,14 @@
    ],
    "attribution": "MENFP — Direction de la planification et de la coopération externe (DPCE) ; application SIGEEE"
   },
+  "atmart_elections.json": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-068",
+    "SRC-069"
+   ],
+   "attribution": "CEP — Conseil électoral provisoire"
+  },
   "atmart_enquete_fiche.json": {
    "licence": "CC BY 4.0",
    "sources": [
@@ -569,6 +582,13 @@
     "SRC-036"
    ],
    "attribution": "Humanitarian OpenStreetMap Team (HOT) via HDX ; OpenCelliD (Unwired Labs) / GSMA / Ookla ; OpenStreetMap (contributeurs) via Overpass API ; OpenStreetMap via Overpass ; Water Point Data Exchange (WPdx) via HDX"
+  },
+  "atmart_inscrits_2015_communes_HT.csv": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-068"
+   ],
+   "attribution": "CEP — Conseil électoral provisoire"
   },
   "atmart_ipc_HT.csv": {
    "licence": "CC BY 4.0",
@@ -753,6 +773,20 @@
    ],
    "attribution": "OCHA Haïti (via HDX)"
   },
+  "atmart_presidentielle_2006_communes_HT.csv": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-069"
+   ],
+   "attribution": "CEP — Conseil électoral provisoire"
+  },
+  "atmart_presidentielle_2006_resume_HT.csv": {
+   "licence": "sous réserve",
+   "sources": [
+    "SRC-069"
+   ],
+   "attribution": "CEP — Conseil électoral provisoire"
+  },
   "atmart_prix_denrees.json": {
    "licence": "CC BY 4.0",
    "sources": [
@@ -930,6 +964,14 @@
     "SRC-ILOSTAT"
    ],
    "attribution": "Banque mondiale ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail"
+  },
+  "atmart_series_trimestrielles_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-056",
+    "SRC-060"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti ; U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
   },
   "atmart_solaire_communes.json": {
    "licence": "CC BY 4.0",

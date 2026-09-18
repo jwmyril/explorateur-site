@@ -8,3 +8,5 @@ Sitemap: https://explorateur.atmart.ltd/sitemap-communes.xml
 Sitemap: https://explorateur.atmart.ltd/sitemap-indicateurs.xml
 
 Sitemap: https://explorateur.atmart.ltd/sitemap-mises-a-jour.xml
+
+Sitemap: https://explorateur.atmart.ltd/sitemap-themes.xml

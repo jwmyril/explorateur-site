@@ -95,20 +95,44 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
     <button class="nav-toggle" aria-label="Menu" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Explorateur Haïti</a></li>
-      <li><a href="couches.html" data-i18n="nv.cartes_h">Cartes thématiques</a></li>
+      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-themes"><span data-i18n="nv.grp_themes">Thèmes</span></button>
+        <ul class="nav-sub" id="nav-sub-themes">
+          <li><a href="theme/population.html" data-i18n="nv.th_population">Population et territoire</a></li>
+          <li><a href="theme/sante.html" data-i18n="nv.th_sante">Santé</a></li>
+          <li><a href="theme/education.html" data-i18n="nv.th_education">Éducation</a></li>
+          <li><a href="theme/economie.html" data-i18n="nv.th_economie">Économie, prix et marchés</a></li>
+          <li><a href="theme/services.html" data-i18n="nv.th_services">Services et infrastructures</a></li>
+          <li><a href="theme/risques.html" data-i18n="nv.th_risques">Risques et sécurité</a></li>
+          <li><a href="theme/environnement.html" data-i18n="nv.th_environnement">Environnement et climat</a></li>
+          <li><a href="theme/mobilite.html" data-i18n="nv.th_mobilite">Mobilité et accès</a></li>
+          <li><a href="theme/gouvernance.html" data-i18n="nv.th_gouvernance">Gouvernance et société</a></li>
+          <li><a href="theme/index.html" data-i18n="nv.themes_tous">Tous les thèmes</a></li>
+        </ul>
+      </li>
+      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-donnees"><span data-i18n="nv.grp_donnees">Données</span></button>
+        <ul class="nav-sub" id="nav-sub-donnees">
+          <li><a href="couches.html" data-i18n="nv.cartes_h">Cartes thématiques</a></li>
+          <li><a href="indicateur/index.html" data-i18n="nv.indic">Indicateurs en questions</a></li>
+          <li><a href="commune/index.html" data-i18n="ft.communes">Les 140 communes</a></li>
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue des jeux de données <small>données &amp; guides</small></a></li>
+          <li><a href="api/index.html" data-i18n="ft.api">API publique</a></li>
+        </ul>
+      </li>
+      <li><a href="mises-a-jour/index.html" data-i18n="nv.maj">Mises à jour</a></li>
+      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-res"><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Ressources</span></button>
+        <ul class="nav-sub" id="nav-sub-res">
+          <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fiches de documentation <small>complétude, sources, limites</small></a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">Comment ça marche <small>méthode, sources, système</small></a></li>
+          <li><a href="donnees-registres.html" data-i18n="ft.registres">Registre des sources</a></li>
+          <li><a href="archives.html" data-i18n="ft.arch">Archives &amp; citation</a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+        </ul>
+      </li>
       <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-serv"><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services &amp; partenariats</span></button>
         <ul class="nav-sub" id="nav-sub-serv">
           <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Diagnostics &amp; prestations <small>tarifs publiés ou sur devis</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solutions &amp; licences <small>entreprises, ONG, administrations</small></a></li>
           <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parrainer un jeu de données <small>institutions &amp; entreprises</small></a></li>
-        </ul>
-      </li>
-      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-res"><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Ressources</span></button>
-        <ul class="nav-sub" id="nav-sub-res">
-          <li><a href="datasets.html" data-i18n-html="nv.cat">Catalogue des jeux de données <small>données &amp; guides</small></a></li>
-          <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fiches de documentation <small>complétude, sources, limites</small></a></li>
-          <li><a href="donnees.html" data-i18n-html="nv.comment">Comment ça marche <small>méthode, sources, système</small></a></li>
-          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>
@@ -319,7 +343,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   window.ATM_EXPLORATEUR = {};
   window.ATM_LANGUES = ["fr", "ht", "en", "es"];
 </script>
-<script src="assets/i18n.js?v=46"></script>
+<script src="assets/i18n.js?v=47"></script>
 <script type="module" src="assets/modules/explorateur.js?v=59"></script>
 <script>/* pas de SW en local : son precache sature le serveur de dev mono-thread */
 if("serviceWorker" in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1"){navigator.serviceWorker.register("/sw.js");}</script>

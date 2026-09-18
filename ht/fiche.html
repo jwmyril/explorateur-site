@@ -83,20 +83,44 @@ footer a,main a.lien{color:#1550b8}
     <button class="nav-toggle" aria-label="Meni" data-i18n-aria="nv.menu">☰</button>
     <ul class="nav-links">
       <li><a href="/" data-i18n="nv.expl_h">Eksploratè Ayiti</a></li>
-      <li><a href="/couches.html" data-i18n="nv.cartes_h">Kat tematik</a></li>
+      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-themes"><span data-i18n="nv.grp_themes">Tèm yo</span></button>
+        <ul class="nav-sub" id="nav-sub-themes">
+          <li><a href="theme/population.html" data-i18n="nv.th_population">Popilasyon ak teritwa</a></li>
+          <li><a href="theme/sante.html" data-i18n="nv.th_sante">Sante</a></li>
+          <li><a href="theme/education.html" data-i18n="nv.th_education">Edikasyon</a></li>
+          <li><a href="theme/economie.html" data-i18n="nv.th_economie">Ekonomi, pri ak mache</a></li>
+          <li><a href="theme/services.html" data-i18n="nv.th_services">Sèvis ak enfrastrikti</a></li>
+          <li><a href="theme/risques.html" data-i18n="nv.th_risques">Risk ak sekirite</a></li>
+          <li><a href="theme/environnement.html" data-i18n="nv.th_environnement">Anviwònman ak klima</a></li>
+          <li><a href="theme/mobilite.html" data-i18n="nv.th_mobilite">Deplasman ak aksè</a></li>
+          <li><a href="theme/gouvernance.html" data-i18n="nv.th_gouvernance">Gouvènans ak sosyete</a></li>
+          <li><a href="theme/index.html" data-i18n="nv.themes_tous">Tout tèm yo</a></li>
+        </ul>
+      </li>
+      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-donnees"><span data-i18n="nv.grp_donnees">Done</span></button>
+        <ul class="nav-sub" id="nav-sub-donnees">
+          <li><a href="/couches.html" data-i18n="nv.cartes_h">Kat tematik</a></li>
+          <li><a href="indicateur/index.html" data-i18n="nv.indic">Endikatè an kesyon</a></li>
+          <li><a href="commune/index.html" data-i18n="ft.communes">140 komin yo</a></li>
+          <li><a href="datasets.html" data-i18n-html="nv.cat">Katalòg seri done yo <small>done ak gid</small></a></li>
+          <li><a href="api/index.html" data-i18n="ft.api">API piblik la</a></li>
+        </ul>
+      </li>
+      <li><a href="mises-a-jour/index.html" data-i18n="nv.maj">Sa ki chanje</a></li>
+      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-res"><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Resous</span></button>
+        <ul class="nav-sub" id="nav-sub-res">
+          <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fich dokimantasyon</a></li>
+          <li><a href="donnees.html" data-i18n-html="nv.comment">Kijan sa mache <small>metòd, sous, sistèm</small></a></li>
+          <li><a href="/donnees-registres.html" data-i18n="ft.registres">Rejis sous yo</a></li>
+          <li><a href="/archives.html" data-i18n="ft.arch">Achiv ak sitasyon</a></li>
+          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>etidyan ak chèchè</small></a></li>
+        </ul>
+      </li>
       <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-serv"><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Sèvis ak patenarya</span></button>
         <ul class="nav-sub" id="nav-sub-serv">
           <li><a href="donnees-services.html" data-i18n-html="nv.serv_diag">Dyagnostik ak prestasyon <small>pri yo afiche, oswa sou devi</small></a></li>
           <li><a href="donnees-solutions.html" data-i18n-html="nv.sol">Solisyon ak lisans <small>antrepriz, ONG, administrasyon</small></a></li>
           <li><a href="donnees-parrainage.html" data-i18n-html="nv.parr">Parennen yon seri done <small>enstitisyon ak antrepriz</small></a></li>
-        </ul>
-      </li>
-      <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-res"><span aria-hidden="true">📚 </span><span data-i18n="nv.grp_res">Resous</span></button>
-        <ul class="nav-sub" id="nav-sub-res">
-          <li><a href="datasets.html" data-i18n-html="nv.cat">Katalòg seri done yo <small>done ak gid</small></a></li>
-          <li><a href="donnees-fiches.html" data-i18n-html="nv.fiches">Fich dokimantasyon</a></li>
-          <li><a href="donnees.html" data-i18n-html="nv.comment">Kijan sa mache <small>metòd, sous, sistèm</small></a></li>
-          <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>etidyan ak chèchè</small></a></li>
         </ul>
       </li>
       <li><a href="https://atmart.ltd/">Atmart&nbsp;→</a></li>

@@ -4,6 +4,11 @@
   "es": "sucursal bancaria",
   "fr": "agence bancaire"
  },
+ "ans": {
+  "en": "year",
+  "es": "año",
+  "fr": "an"
+ },
  "bâtiments": {
   "en": "building",
   "es": "edificio",
@@ -123,6 +128,11 @@
   "en": "object",
   "es": "objeto",
   "fr": "objet"
+ },
+ "organisations": {
+  "en": "organisation",
+  "es": "organización",
+  "fr": "organisation"
  },
  "personnes": {
   "en": "person",

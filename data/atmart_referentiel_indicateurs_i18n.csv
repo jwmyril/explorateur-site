@@ -272,6 +272,27 @@ IND-EAU-003,ht,methode_calcul,"Pwen « pa mache » divize pa tout pwen WPdx komi
 IND-EAU-003,ht,nom,Pòsyon pwen dlo yo relve ki pa mache
 IND-EAU-003,ht,sens_interpretation,Wo = plis pwen ki pa mache
 IND-EAU-003,ht,unite,%
+IND-EAU-005,en,comparabilite,Comparable between communes of at least 50 km²; says nothing about flow or available water.
+IND-EAU-005,en,definition,"Kilometres of rivers in the HydroRIVERS network within the commune, per square kilometre of commune."
+IND-EAU-005,en,limites_connues,"A COMPUTED NETWORK, NOT A SURVEY: HydroRIVERS derives rivers from a ~500 m terrain model and keeps only those whose upstream basin exceeds 10 km² — short ravines are missing, and a river channelled through a city is not always there. Published only for communes of at least 50 km²: below that, a single segment of a few kilometres makes the figure."
+IND-EAU-005,en,methode_calcul,Each HydroRIVERS segment is matched to the commune containing its middle vertex; sum of the published lengths (LENGTH_KM) ÷ area (IND-GEO-001).
+IND-EAU-005,en,nom,Density of the river network
+IND-EAU-005,en,sens_interpretation,High = denser river network
+IND-EAU-005,en,unite,km per km²
+IND-EAU-005,es,comparabilite,Comparable entre comunas de al menos 50 km²; no dice nada del caudal ni del agua disponible.
+IND-EAU-005,es,definition,"Kilómetros de ríos de la red HydroRIVERS en la comuna, por kilómetro cuadrado de comuna."
+IND-EAU-005,es,limites_connues,"UNA RED CALCULADA, NO RELEVADA: HydroRIVERS deriva los ríos de un modelo de terreno de ~500 m y solo conserva aquellos cuya cuenca aguas arriba supera 10 km² — faltan los barrancos cortos, y un río canalizado en la ciudad no siempre figura. Solo se publica para comunas de al menos 50 km²: por debajo, un solo tramo de pocos kilómetros hace la cifra."
+IND-EAU-005,es,methode_calcul,Cada tramo de HydroRIVERS se vincula a la comuna que contiene su vértice central; suma de las longitudes publicadas (LENGTH_KM) ÷ superficie (IND-GEO-001).
+IND-EAU-005,es,nom,Densidad de la red de ríos
+IND-EAU-005,es,sens_interpretation,Alto = red de ríos más densa
+IND-EAU-005,es,unite,km por km²
+IND-EAU-005,ht,comparabilite,Nou ka konpare komin ki gen omwen 50 km² ; li pa di anyen sou kantite dlo ki koule.
+IND-EAU-005,ht,definition,"Kilomèt rivyè rezo HydroRIVERS la ki nan komin nan, pou chak kilomèt kare komin nan."
+IND-EAU-005,ht,limites_connues,"SE YON REZO YO KALKILE, SE PA YON RELVE : HydroRIVERS tire rivyè yo nan yon modèl tè ~500 m, e li kenbe sèlman sa ki gen plis pase 10 km² basen anwo yo — ravin kout yo pa ladan l, e yon rivyè yo kanalize nan lavil pa toujou parèt. Nou pibliye l sèlman pou komin ki gen omwen 50 km² : pi piti, yon sèl moso rivyè kèk kilomèt fè tout chif la."
+IND-EAU-005,ht,methode_calcul,Nou mare chak moso rivyè HydroRIVERS ak komin kote pwen nan mitan l tonbe ; total longè yo (LENGTH_KM) divize pa sifas komin nan (IND-GEO-001).
+IND-EAU-005,ht,nom,Konbyen rivyè pou chak km²
+IND-EAU-005,ht,sens_interpretation,Wo = plis rivyè
+IND-EAU-005,ht,unite,km pou chak km²
 IND-EDU-001,en,comparabilite,"NOT comparable between departments: the source covers only Sud, Ouest, Nippes and Grande'Anse."
 IND-EDU-001,en,definition,Number of schools recorded.
 IND-EDU-001,en,limites_connues,"PARTIAL COVERAGE — 4 departments out of 10, 49 communes out of 140. A zero value means “not recorded”, never “no schools”."
@@ -1322,6 +1343,27 @@ IND-QUA-002,ht,methode_calcul,"Pou chak nan twa fanmi yo — sante, lekòl, popi
 IND-QUA-002,ht,nom,Fanmi done ki fèb oswa ki pa verifyab
 IND-QUA-002,ht,sens_interpretation,"Wo = enfòmasyon an mwens si, SE PA teritwa a ki mal ekipe"
 IND-QUA-002,ht,unite,fanmi sou 3
+IND-QUA-005,en,comparabilite,Comparable between communes with at least ten points.
+IND-QUA-005,en,definition,"Median age, in years, of the latest survey of the commune's water points in the Water Point Data Exchange, at the date of the extract (14/08/2026)."
+IND-QUA-005,en,limites_connues,"THE AGE OF THE DATA, NOT OF THE POINTS: it says how long it has been since anyone reported the state of the commune's water points. Three surveys out of four date from 2016. Computed only where at least ten points are recorded."
+IND-QUA-005,en,methode_calcul,"For each WPdx point matched to the commune, years between the survey date and 14/08/2026; median of the points, if the commune has at least ten."
+IND-QUA-005,en,nom,Age of water point surveys
+IND-QUA-005,en,sens_interpretation,High = older surveys
+IND-QUA-005,en,unite,years
+IND-QUA-005,es,comparabilite,Comparable entre comunas con al menos diez puntos.
+IND-QUA-005,es,definition,"Antigüedad mediana, en años, del último relevamiento de los puntos de agua de la comuna en el Water Point Data Exchange, a la fecha del extracto (14/08/2026)."
+IND-QUA-005,es,limites_connues,"LA ANTIGÜEDAD DEL DATO, NO DE LOS PUNTOS: indica cuánto tiempo hace que nadie declaró el estado de los puntos de agua de la comuna. Tres de cada cuatro relevamientos son de 2016. Solo se calcula donde hay al menos diez puntos registrados."
+IND-QUA-005,es,methode_calcul,"Para cada punto WPdx vinculado a la comuna, años entre la fecha del relevamiento y el 14/08/2026; mediana de los puntos, si la comuna tiene al menos diez."
+IND-QUA-005,es,nom,Antigüedad de los relevamientos de puntos de agua
+IND-QUA-005,es,sens_interpretation,Alto = relevamientos más antiguos
+IND-QUA-005,es,unite,años
+IND-QUA-005,ht,comparabilite,Nou ka konpare komin ki gen omwen dis pwen.
+IND-QUA-005,ht,definition,"Konbyen ane, an medyàn, depi dènye fwa yo te relve pwen dlo komin nan nan Water Point Data Exchange, nan dat ekstrè a (14/08/2026)."
+IND-QUA-005,ht,limites_connues,"SE LAJ DONE A, SE PA LAJ PWEN YO : li di depi konbyen tan pèsonn pa deklare eta pwen dlo komin nan. Twa relve sou kat se an 2016. Nou kalkile l sèlman kote ki gen omwen dis pwen."
+IND-QUA-005,ht,methode_calcul,"Pou chak pwen WPdx ki nan komin nan, konbyen ane ant dat relve a ak 14/08/2026 ; medyàn pwen yo, si komin nan gen omwen dis."
+IND-QUA-005,ht,nom,Laj relve pwen dlo yo
+IND-QUA-005,ht,sens_interpretation,Wo = relve yo pi ansyen
+IND-QUA-005,ht,unite,ane
 IND-RIS-001,en,comparabilite,Comparable between communes of the same reference year.
 IND-RIS-001,en,definition,"Number of earthquakes whose epicentre lies less than 100 km from the centre of the commune, since 1911."
 IND-RIS-001,en,limites_connues,"A count of PAST events is not a probabilistic hazard. The density of the measurement network has increased greatly: recent decades count better, not necessarily more."
@@ -1658,6 +1700,27 @@ IND-SEC-004,ht,methode_calcul,"Moun ki deplase (IND-SEC-003) divize pa popilasyo
 IND-SEC-004,ht,nom,Moun ki deplase pou chak 1 000 moun ki rete nan komin nan
 IND-SEC-004,ht,sens_interpretation,Wo = chay la pi lou konpare ak popilasyon an
 IND-SEC-004,ht,unite,pou 1 000 moun
+IND-SEC-005,en,comparabilite,Comparable between communes for the same 3W round; depends on what organisations report.
+IND-SEC-005,en,definition,"Number of distinct organisations reporting child protection, general protection or gender-based violence work in the commune, according to OCHA's 3W."
+IND-SEC-005,en,limites_connues,"A REPORTED OFFER, NOT A NEED OR A PREVALENCE: the 3W lists what organisations report to OCHA; an active organisation that does not report is missing. No gender-based violence data is published by commune: international rules protecting survivors forbid it."
+IND-SEC-005,en,methode_calcul,"Distinct organisations (by acronym) in the commune in atmart_presence_organisations_HT.csv, sectors “child protection”, “general protection” and “GBV”."
+IND-SEC-005,en,nom,Protection organisations reported
+IND-SEC-005,en,sens_interpretation,High = more organisations reported
+IND-SEC-005,en,unite,organisations
+IND-SEC-005,es,comparabilite,Comparable entre comunas para una misma ronda del 3W; depende de lo que declaran las organizaciones.
+IND-SEC-005,es,definition,"Número de organizaciones distintas que declaran actividades de protección de la infancia, protección general o lucha contra la violencia de género en la comuna, según el 3W de OCHA."
+IND-SEC-005,es,limites_connues,"UNA OFERTA DECLARADA, NO UNA NECESIDAD NI UNA PREVALENCIA: el 3W recoge lo que las organizaciones declaran a OCHA; una organización activa que no declara no figura. No se publica ningún dato de violencia de género por comuna: las normas internacionales de protección de las víctimas lo prohíben."
+IND-SEC-005,es,methode_calcul,"Organizaciones distintas (por sigla) de la comuna en atmart_presence_organisations_HT.csv, sectores «protección de la infancia», «protección general» y «VBG»."
+IND-SEC-005,es,nom,Organizaciones de protección declaradas
+IND-SEC-005,es,sens_interpretation,Alto = más organizaciones declaradas
+IND-SEC-005,es,unite,organizaciones
+IND-SEC-005,ht,comparabilite,Nou ka konpare komin yo pou menm relve 3W la ; sa depann de sa òganizasyon yo deklare.
+IND-SEC-005,ht,definition,"Konbyen òganizasyon diferan ki deklare bay OCHA (3W) yo fè pwoteksyon timoun, pwoteksyon jeneral oswa y ap goumen kont vyolans sou fanm ak tifi nan komin nan."
+IND-SEC-005,ht,limites_connues,"SE SA YO OFRI, SE PA BEZWEN AN NI KONBYEN KA KI GENYEN : 3W a konte sa òganizasyon yo deklare bay OCHA ; yon òganizasyon k ap travay men ki pa deklare pa ladan l. Pa gen chif sou vyolans sou fanm ak tifi pa komin ki pibliye : règ entènasyonal pou pwoteje viktim yo entèdi sa."
+IND-SEC-005,ht,methode_calcul,"Òganizasyon diferan (dapre sigle yo) nan komin nan, nan sektè « pwoteksyon timoun », « pwoteksyon jeneral » ak « VBG » fichye atmart_presence_organisations_HT.csv la."
+IND-SEC-005,ht,nom,Òganizasyon pwoteksyon ki deklare
+IND-SEC-005,ht,sens_interpretation,Wo = plis òganizasyon ki deklare
+IND-SEC-005,ht,unite,òganizasyon
 IND-SOC-001,en,comparabilite,Comparable between communes as the location of authorised stations' HEADQUARTERS — not as access to radio: a headquarters is not coverage.
 IND-SOC-001,en,definition,Number of radio stations holding a CONATEL licence whose registered seat is in the commune.
 IND-SOC-001,en,limites_connues,"IT IS AN ADMINISTRATIVE ACT, NOT AN OBSERVATION: a commune at zero has no LICENSED station, which is not the same as no station on air. It is the exact opposite of the contributive layers, where a zero would mean « nobody looked ». THE SEAT IS NOT THE COVERAGE: a station based in Port-au-Prince is heard far beyond it, and a commune without a station is not a commune without radio."

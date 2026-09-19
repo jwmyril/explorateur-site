@@ -8,6 +8,13 @@
   <language>ht</language>
   <atom:link href="https://explorateur.atmart.ltd/ht/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Sa ki chanje 19/09/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-09-19</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-09-19</guid>
+    <pubDate>Sat, 19 Sep 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvo vèsyon · 14205a31; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 1 827 liy · 67b628af; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 87 liy · 8f3a9a5c; atmart_licences_indicateurs_HT.csv — nouvo vèsyon · 87 liy · 3f1438ac; Lisans chak fichye nou pibliye — nouvo vèsyon · 137 liy · d461a3fd; atmart_licences.json — nouvo vèsyon · a05023a8; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 10 360 liy · d0cb575f</description>
+  </item>
+  <item>
     <title>Sa ki chanje 18/09/2026</title>
     <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-09-18</link>
     <guid isPermaLink="false">explorateur-maj-ht-2026-09-18</guid>

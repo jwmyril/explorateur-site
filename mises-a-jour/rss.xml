@@ -8,6 +8,13 @@
   <language>fr</language>
   <atom:link href="https://explorateur.atmart.ltd/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Mises à jour du 19/09/2026</title>
+    <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-09-19</link>
+    <guid isPermaLink="false">explorateur-maj-fr-2026-09-19</guid>
+    <pubDate>Sat, 19 Sep 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvelle version · 14205a31; atmart_referentiel_indicateurs_i18n.csv — nouvelle version · 1 827 lignes · 67b628af; atmart_referentiel_indicateurs.csv — nouvelle version · 87 lignes · 8f3a9a5c; atmart_licences_indicateurs_HT.csv — nouvelle version · 87 lignes · 3f1438ac; Licence de chaque fichier publié — nouvelle version · 137 lignes · d461a3fd; atmart_licences.json — nouvelle version · a05023a8; atmart_indicateurs_communes_HT.csv — nouvelle version · 10 360 lignes · d0cb575f</description>
+  </item>
+  <item>
     <title>Mises à jour du 18/09/2026</title>
     <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-09-18</link>
     <guid isPermaLink="false">explorateur-maj-fr-2026-09-18</guid>

@@ -83,6 +83,27 @@ IND-ACC-004,ht,methode_calcul,"Menm kalkil ak IND-ACC-001, destinasyon an se mac
 IND-ACC-004,ht,nom,Tan pou rive nan mache ki pi pre a
 IND-ACC-004,ht,sens_interpretation,Ba = pi bon aksè
 IND-ACC-004,ht,unite,minit
+IND-ACC-005,en,comparabilite,Comparable between communes with similar mapping; says nothing about road condition.
+IND-ACC-005,en,definition,"Kilometres of mapped drivable roads (classified and unclassified roads, streets, service roads, tracks) per square kilometre of commune."
+IND-ACC-005,en,limites_connues,"WHAT IS MAPPED, NOT WHAT EXISTS: OpenStreetMap is filled in by volunteers, and a low commune may simply be a poorly mapped one. Length can be mapped, road condition cannot: an impassable track counts as much as a paved road. Footpaths and pedestrian ways are not counted."
+IND-ACC-005,en,methode_calcul,Sum of the kilometres of the eight drivable classes (family “routes”) ÷ area of the commune (IND-GEO-001).
+IND-ACC-005,en,nom,Density of the drivable road network
+IND-ACC-005,en,sens_interpretation,High = denser network
+IND-ACC-005,en,unite,km per km²
+IND-ACC-005,es,comparabilite,Comparable entre comunas con cartografía similar; no dice nada del estado de las vías.
+IND-ACC-005,es,definition,"Kilómetros de vías transitables cartografiadas (carreteras clasificadas y no clasificadas, calles, vías de servicio, pistas) por kilómetro cuadrado de comuna."
+IND-ACC-005,es,limites_connues,"LO CARTOGRAFIADO, NO LO QUE EXISTE: OpenStreetMap lo completan voluntarios, y una comuna baja puede ser simplemente una comuna poco cartografiada. La longitud se cartografía, el estado de las vías no: una pista intransitable cuenta igual que una carretera asfaltada. No se cuentan senderos ni vías peatonales."
+IND-ACC-005,es,methode_calcul,Suma de los kilómetros de las ocho clases transitables (familia «routes») ÷ superficie de la comuna (IND-GEO-001).
+IND-ACC-005,es,nom,Densidad de la red vial transitable
+IND-ACC-005,es,sens_interpretation,Alto = red más densa
+IND-ACC-005,es,unite,km por km²
+IND-ACC-005,ht,comparabilite,Nou ka konpare komin yo si kat yo fèt menm jan ; li pa di anyen sou eta wout yo.
+IND-ACC-005,ht,definition,"Kilomèt wout machin ka pase ki sou kat la (wout klase ak wout ki pa klase, ri, wout sèvis, chemen tè) pou chak kilomèt kare komin nan."
+IND-ACC-005,ht,limites_connues,"SA KI SOU KAT LA, SE PA SA KI EGZISTE : se volontè ki ranpli OpenStreetMap, e yon komin ki gen ti chif ka se yon komin yo poko fè kat li byen. Nou ka mezire longè wout yo, men pa eta yo : yon chemen tè ki pa ka pase konte menm jan ak yon wout asfalte. Nou pa konte ti chemen ak wout pou moun a pye."
+IND-ACC-005,ht,methode_calcul,Nou adisyone kilomèt uit kalite wout machin ka pase yo (fanmi « routes ») epi nou divize pa sifas komin nan (IND-GEO-001).
+IND-ACC-005,ht,nom,Konbyen wout machin ka pase pou chak km²
+IND-ACC-005,ht,sens_interpretation,Wo = plis wout
+IND-ACC-005,ht,unite,km pou chak km²
 IND-AGR-001,en,comparabilite,Comparable between communes of the same reference year.
 IND-AGR-001,en,definition,Share of the commune's area classified as cropland by satellite observation.
 IND-AGR-001,en,limites_connues,"THE SATELLITE SEES A COVER, NOT A FARM: it says neither what is grown, nor by whom, nor whether the harvest took place. A plot lying fallow when the image was taken drops out of the count. THE CREOLE GARDEN, mixing trees and food crops, is often classified as trees or shrubs rather than cropland: this indicator structurally understates Haitian agriculture, and that must be said before comparing two communes."
@@ -209,6 +230,48 @@ IND-EAU-001,ht,methode_calcul,Pati piksèl Global Surface Water yo klase kòm dl
 IND-EAU-001,ht,nom,Pati nan teritwa a ki gen dlo tout ane a
 IND-EAU-001,ht,sens_interpretation,Nèt — ni bon ni move
 IND-EAU-001,ht,unite,% sifas komin nan
+IND-EAU-002,en,comparabilite,Hardly comparable: depends on whether projects reporting to WPdx were active.
+IND-EAU-002,en,definition,"Number of water points (wells, boreholes, protected springs, standpipes) recorded in the commune by organisations reporting to the Water Point Data Exchange."
+IND-EAU-002,en,limites_connues,"A RECORD, NOT A CENSUS: WPdx gathers what projects have reported, at different dates. A missing commune was not surveyed — it is not without water. The national system (DINEPA's SIEPA) counts far more points but does not publish them."
+IND-EAU-002,en,methode_calcul,"Sum of functional, non-functional and unknown-status WPdx points matched to the commune (family “eau_wpdx” in atmart_infrastructures_communes_HT.csv)."
+IND-EAU-002,en,nom,Recorded water points
+IND-EAU-002,en,sens_interpretation,High = more points recorded
+IND-EAU-002,en,unite,water points
+IND-EAU-002,es,comparabilite,Poco comparable: depende de la presencia de proyectos que declaran a WPdx.
+IND-EAU-002,es,definition,"Número de puntos de agua (pozos, perforaciones, manantiales protegidos, fuentes públicas) registrados en la comuna por las organizaciones que declaran al Water Point Data Exchange."
+IND-EAU-002,es,limites_connues,"UN REGISTRO, NO UN CENSO: WPdx reúne lo que los proyectos han declarado, en fechas distintas. Una comuna ausente no fue relevada: no está sin agua. El sistema nacional (SIEPA de la DINEPA) cuenta muchos más puntos pero no los publica."
+IND-EAU-002,es,methode_calcul,"Suma de los puntos WPdx funcionales, no funcionales y de estado desconocido vinculados a la comuna (familia «eau_wpdx» en atmart_infrastructures_communes_HT.csv)."
+IND-EAU-002,es,nom,Puntos de agua registrados
+IND-EAU-002,es,sens_interpretation,Alto = más puntos registrados
+IND-EAU-002,es,unite,puntos de agua
+IND-EAU-002,ht,comparabilite,Pa fasil pou konpare : sa depann si te gen pwojè ki deklare bay WPdx.
+IND-EAU-002,ht,definition,"Konbyen pwen dlo (pi, fòraj, sous yo amenaje, fontèn) òganizasyon ki deklare bay Water Point Data Exchange relve nan komin nan."
+IND-EAU-002,ht,limites_connues,"SE YON RELVE, SE PA YON RESANSMAN : WPdx rasanble sa pwojè yo te deklare, nan diferan dat. Yon komin ki pa parèt, se paske yo pa t relve l — sa pa vle di pa gen dlo. Sistèm nasyonal la (SIEPA DINEPA a) konte plis pwen anpil men li pa pibliye yo."
+IND-EAU-002,ht,methode_calcul,"Nou adisyone pwen WPdx ki mache, ki pa mache ak sa nou pa konnen eta yo ki nan komin nan (fanmi « eau_wpdx » nan atmart_infrastructures_communes_HT.csv)."
+IND-EAU-002,ht,nom,Pwen dlo yo relve
+IND-EAU-002,ht,sens_interpretation,Wo = plis pwen yo relve
+IND-EAU-002,ht,unite,pwen dlo
+IND-EAU-003,en,comparabilite,"Comparable between communes with at least ten points, with similar visit dates."
+IND-EAU-003,en,definition,Share of the commune's recorded water points whose last reported status is “non-functional”.
+IND-EAU-003,en,limites_connues,"THE STATUS IS AS OLD AS THE LAST VISIT, which may go back several years. Computed only where at least ten points are recorded: below that, a share cannot be read."
+IND-EAU-003,en,methode_calcul,"“Non-functional” points ÷ all WPdx points in the commune × 100, if the commune has at least ten."
+IND-EAU-003,en,nom,Share of recorded water points out of service
+IND-EAU-003,en,sens_interpretation,High = more points out of service
+IND-EAU-003,en,unite,%
+IND-EAU-003,es,comparabilite,Comparable entre comunas con al menos diez puntos y fechas de visita cercanas.
+IND-EAU-003,es,definition,Proporción de los puntos de agua registrados en la comuna cuyo último estado declarado es «no funcional».
+IND-EAU-003,es,limites_connues,"EL ESTADO TIENE LA EDAD DE SU ÚLTIMA VISITA, que puede remontarse a varios años. Solo se calcula donde hay al menos diez puntos registrados: por debajo, una proporción no se puede leer."
+IND-EAU-003,es,methode_calcul,"Puntos «no funcionales» ÷ todos los puntos WPdx de la comuna × 100, si la comuna tiene al menos diez."
+IND-EAU-003,es,nom,Proporción de puntos de agua registrados fuera de servicio
+IND-EAU-003,es,sens_interpretation,Alto = más puntos fuera de servicio
+IND-EAU-003,es,unite,%
+IND-EAU-003,ht,comparabilite,"Nou ka konpare komin ki gen omwen dis pwen, si yo te vizite yo nan menm epòk."
+IND-EAU-003,ht,definition,Pòsyon pwen dlo yo relve nan komin nan ki te « pa mache » dènye fwa yo te deklare eta yo.
+IND-EAU-003,ht,limites_connues,"ETA A GEN LAJ DÈNYE VIZIT LA, e sa ka fè plizyè ane. Nou kalkile l sèlman kote ki gen omwen dis pwen yo relve : anba dis, yon pòsyon pa vle di anyen."
+IND-EAU-003,ht,methode_calcul,"Pwen « pa mache » divize pa tout pwen WPdx komin nan, fwa 100, si komin nan gen omwen dis pwen."
+IND-EAU-003,ht,nom,Pòsyon pwen dlo yo relve ki pa mache
+IND-EAU-003,ht,sens_interpretation,Wo = plis pwen ki pa mache
+IND-EAU-003,ht,unite,%
 IND-EDU-001,en,comparabilite,"NOT comparable between departments: the source covers only Sud, Ouest, Nippes and Grande'Anse."
 IND-EDU-001,en,definition,Number of schools recorded.
 IND-EDU-001,en,limites_connues,"PARTIAL COVERAGE — 4 departments out of 10, 49 communes out of 140. A zero value means “not recorded”, never “no schools”."
@@ -524,6 +587,27 @@ IND-ENE-001,ht,methode_calcul,Mwayèn valè PVOUT Global Solar Atlas la sou tout
 IND-ENE-001,ht,nom,Potansyèl solèy la
 IND-ENE-001,ht,sens_interpretation,Wo = pi bon potansyèl
 IND-ENE-001,ht,unite,kWh pou chak kWc pa ane
+IND-ENE-002,en,comparabilite,Comparable between communes with similar mapping coverage.
+IND-ENE-002,en,definition,Number of fuel stations mapped in the commune.
+IND-ENE-002,en,limites_connues,"WHAT IS MAPPED, NOT WHAT EXISTS: OpenStreetMap is filled in by volunteers, and a low commune may simply be a poorly mapped one. A mapped station is not a supplied station: fuel shortages do not show on a map."
+IND-ENE-002,en,methode_calcul,Count of objects tagged fuel station matched to the commune (family “carburant”).
+IND-ENE-002,en,nom,Mapped fuel stations
+IND-ENE-002,en,sens_interpretation,High = more stations mapped
+IND-ENE-002,en,unite,fuel stations
+IND-ENE-002,es,comparabilite,Comparable entre comunas con una cartografía similar.
+IND-ENE-002,es,definition,Número de gasolineras cartografiadas en la comuna.
+IND-ENE-002,es,limites_connues,"LO CARTOGRAFIADO, NO LO QUE EXISTE: OpenStreetMap lo completan voluntarios, y una comuna baja puede ser simplemente una comuna poco cartografiada. Una gasolinera cartografiada no es una gasolinera abastecida: la escasez de combustible no se ve en un mapa."
+IND-ENE-002,es,methode_calcul,Recuento de los objetos etiquetados como gasolinera vinculados a la comuna (familia «carburant»).
+IND-ENE-002,es,nom,Gasolineras cartografiadas
+IND-ENE-002,es,sens_interpretation,Alto = más gasolineras cartografiadas
+IND-ENE-002,es,unite,gasolineras
+IND-ENE-002,ht,comparabilite,Nou ka konpare komin yo si kat yo fèt menm jan.
+IND-ENE-002,ht,definition,Konbyen ponp gazolin ki sou kat komin nan.
+IND-ENE-002,ht,limites_connues,"SA KI SOU KAT LA, SE PA SA KI EGZISTE : se volontè ki ranpli OpenStreetMap, e yon komin ki gen ti chif ka se yon komin yo poko fè kat li byen. Yon ponp ki sou kat la pa vle di li gen gaz : pa gen kat ki montre rate gaz."
+IND-ENE-002,ht,methode_calcul,Nou konte objè yo make ponp gazolin ki nan komin nan (fanmi « carburant »).
+IND-ENE-002,ht,nom,Ponp gazolin ki sou kat la
+IND-ENE-002,ht,sens_interpretation,Wo = plis ponp sou kat la
+IND-ENE-002,ht,unite,ponp gazolin
 IND-ENV-001,en,comparabilite,Comparable between communes of the same reference year.
 IND-ENV-001,en,definition,"Share of the commune's area classified as ""trees"" by satellite observation."
 IND-ENV-001,en,limites_connues,"Tree cover in the satellite's sense is not forest in the forestry sense: orchards, hedgerows and dense scrub are included. Compare it with the World Bank's national forest area, which gives an entirely different figure — two definitions, two methods."
@@ -608,6 +692,27 @@ IND-FIN-001,ht,methode_calcul,"Konte pwen sèvis anyè piblik operatè a, ratach
 IND-FIN-001,ht,nom,Kote yo ka touche transfè
 IND-FIN-001,ht,sens_interpretation,Wo = rezo pi sere
 IND-FIN-001,ht,unite,kote pou touche
+IND-FIN-002,en,comparabilite,Comparable between communes with similar mapping coverage.
+IND-FIN-002,en,definition,Number of bank branches mapped in the commune.
+IND-FIN-002,en,limites_connues,"WHAT IS MAPPED, NOT WHAT EXISTS: OpenStreetMap is filled in by volunteers, and a low commune may simply be a poorly mapped one. Credit unions and microfinance are not counted here; they have their own layer."
+IND-FIN-002,en,methode_calcul,"Count of objects tagged bank matched to the commune (family “finance”, sub-type “banque”)."
+IND-FIN-002,en,nom,Mapped bank branches
+IND-FIN-002,en,sens_interpretation,High = more branches mapped
+IND-FIN-002,en,unite,bank branches
+IND-FIN-002,es,comparabilite,Comparable entre comunas con una cartografía similar.
+IND-FIN-002,es,definition,Número de sucursales bancarias cartografiadas en la comuna.
+IND-FIN-002,es,limites_connues,"LO CARTOGRAFIADO, NO LO QUE EXISTE: OpenStreetMap lo completan voluntarios, y una comuna baja puede ser simplemente una comuna poco cartografiada. Las cajas populares y las microfinancieras no se cuentan aquí; tienen su propia capa."
+IND-FIN-002,es,methode_calcul,"Recuento de los objetos etiquetados como banco vinculados a la comuna (familia «finance», subtipo «banque»)."
+IND-FIN-002,es,nom,Sucursales bancarias cartografiadas
+IND-FIN-002,es,sens_interpretation,Alto = más sucursales cartografiadas
+IND-FIN-002,es,unite,sucursales bancarias
+IND-FIN-002,ht,comparabilite,Nou ka konpare komin yo si kat yo fèt menm jan.
+IND-FIN-002,ht,definition,Konbyen biwo bank ki sou kat komin nan.
+IND-FIN-002,ht,limites_connues,"SA KI SOU KAT LA, SE PA SA KI EGZISTE : se volontè ki ranpli OpenStreetMap, e yon komin ki gen ti chif ka se yon komin yo poko fè kat li byen. Nou pa konte kès popilè ak mikwofinans isit la ; yo gen pwòp kouch pa yo."
+IND-FIN-002,ht,methode_calcul,"Nou konte objè yo make bank ki nan komin nan (fanmi « finance », kalite « bank »)."
+IND-FIN-002,ht,nom,Bank ki sou kat la
+IND-FIN-002,ht,sens_interpretation,Wo = plis bank sou kat la
+IND-FIN-002,ht,unite,bank
 IND-GEO-001,en,comparabilite,Comparable as long as the administrative division does not change.
 IND-GEO-001,en,definition,Area of the territorial entity.
 IND-GEO-001,en,limites_connues,"The national total of the sections (26,942 km²) differs from the usual 27,750 km²: coastal tracing of the polygons."
@@ -1217,6 +1322,27 @@ IND-RIS-004,ht,methode_calcul,Vitès van maksimòm nan trajektwa IBTrACS yo ki p
 IND-RIS-004,ht,nom,Pi gwo van yon siklòn ki pase toupre
 IND-RIS-004,ht,sens_interpretation,Wo = te konnen yon siklòn pi vyolan
 IND-RIS-004,ht,unite,km/è
+IND-RIS-005,en,comparabilite,Comparable between communes for the same layer.
+IND-RIS-005,en,definition,Share of the commune's area lying in the flood-prone zones mapped by CNIGS.
+IND-RIS-005,en,limites_connues,"A MAPPED ZONE, NOT A PROBABILISTIC HAZARD: the layer states neither the return period nor the method. The share is estimated from sample points about 330 m apart: an order of magnitude."
+IND-RIS-005,en,methode_calcul,Column “pct_zone_inondable” of atmart_alea_inondation_communes_HT.csv: share of the points of a regular sample (~330 m) falling in a flood-prone zone.
+IND-RIS-005,en,nom,Share of the commune in a mapped flood-prone zone
+IND-RIS-005,en,sens_interpretation,High = more exposed territory
+IND-RIS-005,en,unite,%
+IND-RIS-005,es,comparabilite,Comparable entre comunas para la misma capa.
+IND-RIS-005,es,definition,Parte de la superficie comunal situada en las zonas inundables cartografiadas por el CNIGS.
+IND-RIS-005,es,limites_connues,"UNA ZONA CARTOGRAFIADA, NO UNA AMENAZA PROBABILÍSTICA: la capa no indica ni el periodo de retorno ni el método. La parte se estima con puntos separados unos 330 m: es un orden de magnitud."
+IND-RIS-005,es,methode_calcul,Columna «pct_zone_inondable» de atmart_alea_inondation_communes_HT.csv: parte de los puntos de una muestra regular (~330 m) que caen en una zona inundable.
+IND-RIS-005,es,nom,Parte de la comuna en zona inundable cartografiada
+IND-RIS-005,es,sens_interpretation,Alto = más territorio expuesto
+IND-RIS-005,es,unite,%
+IND-RIS-005,ht,comparabilite,Nou ka konpare komin yo pou menm kouch la.
+IND-RIS-005,ht,definition,Pòsyon sifas komin nan ki tonbe nan zòn CNIGS make ki ka inonde.
+IND-RIS-005,ht,limites_connues,"SE YON ZÒN YO MAKE SOU KAT, SE PA YON KALKIL RISK : kouch la pa di ni chak konbyen ane dlo ka monte konsa, ni ki metòd yo te itilize. Nou estime pòsyon an ak pwen ki separe anviwon 330 m : se yon lòd grandè."
+IND-RIS-005,ht,methode_calcul,Kolòn « pct_zone_inondable » nan atmart_alea_inondation_communes_HT.csv : pòsyon pwen yon echantiyon regilye (~330 m) ki tonbe nan yon zòn ki ka inonde.
+IND-RIS-005,ht,nom,Pòsyon komin nan ki nan zòn ki ka inonde
+IND-RIS-005,ht,sens_interpretation,Wo = plis teritwa ki ekspoze
+IND-RIS-005,ht,unite,%
 IND-SAN-001,en,comparabilite,NOT comparable between communes outside the covered area: the source covers only 14 communes out of 140.
 IND-SAN-001,en,definition,Number of operating health facilities recorded.
 IND-SAN-001,en,limites_connues,"PARTIAL COVERAGE — 14 communes (Artibonite, Centre, Nord, Ouest). An absent commune does not have zero facilities: it is not covered, hence status N. 2023 census."
@@ -1343,6 +1469,90 @@ IND-SAN-010,ht,methode_calcul,IND-SAN-001 ÷ IND-POP-001 × 10 000.
 IND-SAN-010,ht,nom,Etablisman sante pou chak 10 000 moun
 IND-SAN-010,ht,sens_interpretation,"Wo = anpil etablisman anrejistre parapò ak popilasyon an. Li li ansanm ak tan pou rive, yon rapò kominal pa ka kenbe sa."
 IND-SAN-010,ht,unite,etablisman / 10 000 moun
+IND-SEC-001,en,comparabilite,"Comparable between communes for the same period, where media coverage is similar."
+IND-SEC-001,en,definition,Number of political violence events and demonstrations reported by ACLED in the commune over the last twelve months available.
+IND-SEC-001,en,limites_connues,"REPORTED EVENTS, NOT ALL VIOLENCE: ACLED counts what media and its partners report. A poorly covered or inaccessible area may look calm. Many events are placed at the commune seat for lack of a better location. Non-commercial use (ACLED terms)."
+IND-SEC-001,en,methode_calcul,Sum of the “events” column of atmart_conflits_HT.csv over the file's last twelve months (09/2025 to 08/2026). A commune with no row counts as zero reported events.
+IND-SEC-001,en,nom,Reported political violence events (12 months)
+IND-SEC-001,en,sens_interpretation,High = more reported events
+IND-SEC-001,en,unite,events
+IND-SEC-001,es,comparabilite,"Comparable entre comunas para un mismo periodo, con una cobertura mediática similar."
+IND-SEC-001,es,definition,Número de eventos de violencia política y manifestaciones reportados por ACLED en la comuna durante los últimos doce meses disponibles.
+IND-SEC-001,es,limites_connues,"EVENTOS REPORTADOS, NO TODA LA VIOLENCIA: ACLED cuenta lo que señalan los medios y sus socios. Una zona poco cubierta o inaccesible puede parecer tranquila. Muchos eventos se ubican en la cabecera a falta de un lugar más preciso. Uso no comercial (condiciones de ACLED)."
+IND-SEC-001,es,methode_calcul,Suma de la columna «eventos» de atmart_conflits_HT.csv en los últimos doce meses del archivo (09/2025 a 08/2026). Una comuna sin filas vale cero eventos reportados.
+IND-SEC-001,es,nom,Eventos de violencia política reportados (12 meses)
+IND-SEC-001,es,sens_interpretation,Alto = más eventos reportados
+IND-SEC-001,es,unite,eventos
+IND-SEC-001,ht,comparabilite,"Nou ka konpare komin yo pou menm peryòd la, si medya yo kouvri yo menm jan."
+IND-SEC-001,ht,definition,Konbyen evènman vyolans politik ak manifestasyon ACLED rapòte nan komin nan pandan douz dènye mwa nou genyen yo.
+IND-SEC-001,ht,limites_connues,"SE EVÈNMAN YO RAPÒTE, SE PA TOUT VYOLANS LAN : ACLED konte sa medya ak patnè l yo siyale. Yon zòn ki pa kouvri byen oswa ki difisil pou rive ladan l ka sanble kalm. Anpil evènman make nan chèflye a paske yo pa konnen kote egzak la. Pa pou fè lajan (kondisyon ACLED)."
+IND-SEC-001,ht,methode_calcul,Nou adisyone kolòn « evènman » fichye atmart_conflits_HT.csv la pou douz dènye mwa yo (09/2025 rive 08/2026). Yon komin ki pa gen okenn liy vo zewo evènman yo rapòte.
+IND-SEC-001,ht,nom,Evènman vyolans politik yo rapòte (12 mwa)
+IND-SEC-001,ht,sens_interpretation,Wo = plis evènman yo rapòte
+IND-SEC-001,ht,unite,evènman
+IND-SEC-002,en,comparabilite,Comparable between communes for the same period; under-reporting is uneven.
+IND-SEC-002,en,definition,Number of deaths reported by ACLED in the commune's events over the last twelve months available.
+IND-SEC-002,en,limites_connues,"REPORTED DEATHS, OFTEN ESTIMATED: when sources disagree, ACLED keeps the most conservative estimate. The figure does not distinguish victims by status. Same under-reporting as events. Non-commercial use (ACLED terms)."
+IND-SEC-002,en,methode_calcul,Sum of the “deaths” column of atmart_conflits_HT.csv over the same twelve months.
+IND-SEC-002,en,nom,Reported deaths from political violence (12 months)
+IND-SEC-002,en,sens_interpretation,High = more reported deaths
+IND-SEC-002,en,unite,deaths
+IND-SEC-002,es,comparabilite,Comparable entre comunas para un mismo periodo; el subregistro es desigual.
+IND-SEC-002,es,definition,Número de muertes reportadas por ACLED en los eventos de la comuna durante los últimos doce meses disponibles.
+IND-SEC-002,es,limites_connues,"MUERTES REPORTADAS, A MENUDO ESTIMADAS: cuando las fuentes difieren, ACLED retiene la estimación más prudente. La cifra no distingue a las víctimas según su condición. Mismo subregistro que los eventos. Uso no comercial (condiciones de ACLED)."
+IND-SEC-002,es,methode_calcul,Suma de la columna «muertes» de atmart_conflits_HT.csv en los mismos doce meses.
+IND-SEC-002,es,nom,Muertes reportadas por violencia política (12 meses)
+IND-SEC-002,es,sens_interpretation,Alto = más muertes reportadas
+IND-SEC-002,es,unite,muertes
+IND-SEC-002,ht,comparabilite,Nou ka konpare komin yo pou menm peryòd la ; men se pa toupatou yo deklare tout moun ki mouri.
+IND-SEC-002,ht,definition,Konbyen moun ACLED rapòte ki mouri nan evènman ki te fèt nan komin nan pandan douz dènye mwa nou genyen yo.
+IND-SEC-002,ht,limites_connues,"SE MOUN YO RAPÒTE, SOUVAN SE YON ESTIMASYON : lè sous yo pa dakò, ACLED pran chif ki pi piti a. Chif la pa separe viktim yo dapre ki moun yo ye. Menm pwoblèm ak evènman yo : se pa tout sa ki rive ki rapòte. Pa pou fè lajan (kondisyon ACLED)."
+IND-SEC-002,ht,methode_calcul,Nou adisyone kolòn « moun ki mouri » fichye atmart_conflits_HT.csv la pou menm douz mwa yo.
+IND-SEC-002,ht,nom,Moun ki mouri nan vyolans politik yo rapòte (12 mwa)
+IND-SEC-002,ht,sens_interpretation,Wo = plis moun mouri yo rapòte
+IND-SEC-002,ht,unite,moun ki mouri
+IND-SEC-003,en,comparabilite,Comparable between communes covered by the same IOM round.
+IND-SEC-003,en,definition,"Number of internally displaced people present in the commune, in sites and host families, according to round 13 of IOM's Displacement Tracking Matrix."
+IND-SEC-003,en,limites_connues,"THIS IS THE HOST COMMUNE, NOT THE COMMUNE OF ORIGIN. IOM counts the sites and host communities it can reach: it is not an exhaustive register. A missing commune was not surveyed. Non-commercial use (IOM terms)."
+IND-SEC-003,en,methode_calcul,"Reading of the commune row (level 2) of atmart_deplaces_HT.csv, DTM round 13."
+IND-SEC-003,en,nom,Displaced people present
+IND-SEC-003,en,sens_interpretation,High = more displaced people hosted
+IND-SEC-003,en,unite,people
+IND-SEC-003,es,comparabilite,Comparable entre las comunas cubiertas por la misma ronda de la OIM.
+IND-SEC-003,es,definition,"Número de personas desplazadas internas presentes en la comuna, en sitios y familias de acogida, según la ronda 13 de la Matriz de Seguimiento de Desplazamientos de la OIM."
+IND-SEC-003,es,limites_connues,"ES LA COMUNA DE ACOGIDA, NO LA DE ORIGEN. La OIM cuenta los sitios y comunidades de acogida a los que puede llegar: no es un registro exhaustivo. Una comuna ausente no fue relevada. Uso no comercial (condiciones de la OIM)."
+IND-SEC-003,es,methode_calcul,"Lectura de la fila comunal (nivel 2) de atmart_deplaces_HT.csv, ronda 13 de la DTM."
+IND-SEC-003,es,nom,Personas desplazadas presentes
+IND-SEC-003,es,sens_interpretation,Alto = más personas desplazadas acogidas
+IND-SEC-003,es,unite,personas
+IND-SEC-003,ht,comparabilite,Nou ka konpare komin OIM te kouvri nan menm tou a.
+IND-SEC-003,ht,definition,"Konbyen moun ki te oblije kite kay yo ki rete nan komin nan, nan sit yo oswa lakay fanmi ki resevwa yo, dapre 13yèm tou matris swivi deplasman OIM lan."
+IND-SEC-003,ht,limites_connues,"SE KOMIN KI RESEVWA YO, SE PA KOMIN KOTE YO SOTI. OIM konte sit ak fanmi ki resevwa moun li kapab rive jwenn : se pa yon lis tout moun ki deplase. Yon komin ki pa parèt, se paske yo pa t relve l. Pa pou fè lajan (kondisyon OIM)."
+IND-SEC-003,ht,methode_calcul,"Nou li liy komin nan (nivo 2) nan fichye atmart_deplaces_HT.csv la, 13yèm tou DTM lan."
+IND-SEC-003,ht,nom,Moun ki deplase ki nan komin nan
+IND-SEC-003,ht,sens_interpretation,Wo = komin nan resevwa plis moun ki deplase
+IND-SEC-003,ht,unite,moun
+IND-SEC-004,en,comparabilite,"Comparable between covered communes, as an order of magnitude."
+IND-SEC-004,en,definition,"Internally displaced people present in the commune per 1,000 residents."
+IND-SEC-004,en,limites_connues,"The numerator (IOM, May 2026) and the denominator (COD-PS 2024 projection) are not from the same year, and the projection does not account for displacement itself. An order of magnitude, not an exact rate. Non-commercial use (IOM terms)."
+IND-SEC-004,en,methode_calcul,"Displaced people present (IND-SEC-003) ÷ population (IND-POP-001) × 1,000."
+IND-SEC-004,en,nom,"Displaced people per 1,000 residents"
+IND-SEC-004,en,sens_interpretation,High = heavier burden relative to population
+IND-SEC-004,en,unite,"per 1,000 residents"
+IND-SEC-004,es,comparabilite,"Comparable entre las comunas cubiertas, como orden de magnitud."
+IND-SEC-004,es,definition,Personas desplazadas internas presentes en la comuna por cada 1 000 habitantes.
+IND-SEC-004,es,limites_connues,"El numerador (OIM, mayo de 2026) y el denominador (proyección COD-PS 2024) no son del mismo año, y la proyección no tiene en cuenta los propios desplazamientos. Orden de magnitud, no una tasa exacta. Uso no comercial (condiciones de la OIM)."
+IND-SEC-004,es,methode_calcul,Personas desplazadas presentes (IND-SEC-003) ÷ población (IND-POP-001) × 1 000.
+IND-SEC-004,es,nom,Personas desplazadas por cada 1 000 habitantes
+IND-SEC-004,es,sens_interpretation,Alto = mayor carga en relación con la población
+IND-SEC-004,es,unite,por cada 1 000 habitantes
+IND-SEC-004,ht,comparabilite,"Nou ka konpare komin ki kouvri yo, men se yon lòd grandè."
+IND-SEC-004,ht,definition,Konbyen moun ki deplase ki nan komin nan pou chak 1 000 moun ki rete ladan l.
+IND-SEC-004,ht,limites_connues,"Chif moun ki deplase yo (OIM, me 2026) ak chif popilasyon an (pwojeksyon COD-PS 2024) pa soti nan menm ane, e pwojeksyon an pa konte deplasman yo menm. Se yon lòd grandè, se pa yon to egzak. Pa pou fè lajan (kondisyon OIM)."
+IND-SEC-004,ht,methode_calcul,"Moun ki deplase (IND-SEC-003) divize pa popilasyon (IND-POP-001), fwa 1 000."
+IND-SEC-004,ht,nom,Moun ki deplase pou chak 1 000 moun ki rete nan komin nan
+IND-SEC-004,ht,sens_interpretation,Wo = chay la pi lou konpare ak popilasyon an
+IND-SEC-004,ht,unite,pou 1 000 moun
 IND-SOC-001,en,comparabilite,Comparable between communes as the location of authorised stations' HEADQUARTERS — not as access to radio: a headquarters is not coverage.
 IND-SOC-001,en,definition,Number of radio stations holding a CONATEL licence whose registered seat is in the commune.
 IND-SOC-001,en,limites_connues,"IT IS AN ADMINISTRATIVE ACT, NOT AN OBSERVATION: a commune at zero has no LICENSED station, which is not the same as no station on air. It is the exact opposite of the contributive layers, where a zero would mean « nobody looked ». THE SEAT IS NOT THE COVERAGE: a station based in Port-au-Prince is heard far beyond it, and a commune without a station is not a commune without radio."
@@ -1406,6 +1616,27 @@ IND-SOC-003,ht,methode_calcul,"Konte objè OpenStreetMap ki make amenity=place_o
 IND-SOC-003,ht,nom,Kote yo priye ki sou kat la
 IND-SOC-003,ht,sens_interpretation,Wo = plis kote yo leve sou kat la
 IND-SOC-003,ht,unite,kote yo priye ki leve sou kat la
+IND-SOC-004,en,comparabilite,Comparable between communes with similar mapping; not as a measure of coverage.
+IND-SOC-004,en,definition,"Number of telecommunication sites (towers, antennas, relays) mapped in the commune, all operators."
+IND-SOC-004,en,limites_connues,"WHAT IS MAPPED, NOT WHAT EXISTS: OpenStreetMap is filled in by volunteers, and a low commune may simply be a poorly mapped one. A site is not coverage: one tower can serve several communes, and operators do not publish their coverage maps."
+IND-SOC-004,en,methode_calcul,"Count of communication sites matched to the commune, all operators (family “telecom”)."
+IND-SOC-004,en,nom,Mapped telecommunication sites
+IND-SOC-004,en,sens_interpretation,High = more sites mapped
+IND-SOC-004,en,unite,telecom sites
+IND-SOC-004,es,comparabilite,Comparable entre comunas con cartografía similar; no como medida de cobertura.
+IND-SOC-004,es,definition,"Número de sitios de telecomunicaciones (torres, antenas, repetidores) cartografiados en la comuna, todos los operadores."
+IND-SOC-004,es,limites_connues,"LO CARTOGRAFIADO, NO LO QUE EXISTE: OpenStreetMap lo completan voluntarios, y una comuna baja puede ser simplemente una comuna poco cartografiada. Un sitio no es cobertura: una sola torre puede servir a varias comunas, y los operadores no publican sus mapas de cobertura."
+IND-SOC-004,es,methode_calcul,"Recuento de los sitios de comunicación vinculados a la comuna, todos los operadores (familia «telecom»)."
+IND-SOC-004,es,nom,Sitios de telecomunicaciones cartografiados
+IND-SOC-004,es,sens_interpretation,Alto = más sitios cartografiados
+IND-SOC-004,es,unite,sitios de telecomunicaciones
+IND-SOC-004,ht,comparabilite,Nou ka konpare komin yo si kat yo fèt menm jan ; men se pa yon mezi siyal rezo a.
+IND-SOC-004,ht,definition,"Konbyen sit telekominikasyon (poto antèn, antèn, relè) ki sou kat komin nan, tout konpayi ansanm."
+IND-SOC-004,ht,limites_connues,"SA KI SOU KAT LA, SE PA SA KI EGZISTE : se volontè ki ranpli OpenStreetMap, e yon komin ki gen ti chif ka se yon komin yo poko fè kat li byen. Yon antèn pa vle di tout zòn nan gen siyal : yon sèl poto ka sèvi plizyè komin, e konpayi yo pa pibliye kat siyal yo."
+IND-SOC-004,ht,methode_calcul,"Nou konte sit kominikasyon yo ki nan komin nan, tout konpayi ansanm (fanmi « telecom »)."
+IND-SOC-004,ht,nom,Antèn ak relè telekominikasyon ki sou kat la
+IND-SOC-004,ht,sens_interpretation,Wo = plis antèn sou kat la
+IND-SOC-004,ht,unite,antèn ak relè
 IND-TOU-001,en,comparabilite,Comparable between communes within the same extract only: each new extract carries the mappers' work.
 IND-TOU-001,en,definition,Number of accommodation establishments recorded in the commune by contributory OpenStreetMap mapping.
 IND-TOU-001,en,limites_connues,"A COUNT OF ESTABLISHMENTS, NEVER A CAPACITY: of 643 accommodations, none states its number of beds and only thirteen their number of rooms. The survey follows contributors, hence towns: 81 of 140 communes carry at least one place to stay, the others are absent and not at zero. A mapped establishment is neither classified, nor licensed, nor necessarily open."

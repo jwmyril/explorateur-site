@@ -1,4 +1,9 @@
 {
+ "agences bancaires": {
+  "en": "bank branch",
+  "es": "sucursal bancaria",
+  "fr": "agence bancaire"
+ },
  "bâtiments": {
   "en": "building",
   "es": "edificio",
@@ -13,6 +18,11 @@
   "en": "candidate per seat",
   "es": "candidato por escaño",
   "fr": "candidat par siège"
+ },
+ "décès": {
+  "en": "death",
+  "es": "muerte",
+  "fr": "décès"
  },
  "dépendants / 100 personnes de 15-64 ans": {
   "en": "dependant / 100 people aged 15-64",
@@ -109,10 +119,20 @@
   "es": "objeto",
   "fr": "objet"
  },
+ "personnes": {
+  "en": "person",
+  "es": "persona",
+  "fr": "personne"
+ },
  "personnes déplacées présentes": {
   "en": "displaced person present",
   "es": "persona desplazada presente",
   "fr": "personne déplacée présente"
+ },
+ "points d'eau": {
+  "en": "water point",
+  "es": "punto de agua",
+  "fr": "point d'eau"
  },
  "points d'indice": {
   "en": "index point",
@@ -134,10 +154,20 @@
   "es": "radio comunitaria identificada",
   "fr": "radio communautaire repérée"
  },
+ "sites de télécommunication": {
+  "en": "telecom site",
+  "es": "sitio de telecomunicaciones",
+  "fr": "site de télécommunication"
+ },
  "stations autorisées": {
   "en": "licensed station",
   "es": "emisora autorizada",
   "fr": "station autorisée"
+ },
+ "stations-service": {
+  "en": "fuel station",
+  "es": "gasolinera",
+  "fr": "station-service"
  },
  "systèmes depuis 1851": {
   "en": "system since 1851",
@@ -208,6 +238,11 @@
   "en": "declared public facility",
   "es": "establecimiento público declarado",
   "fr": "établissement public déclaré"
+ },
+ "événements": {
+  "en": "event",
+  "es": "evento",
+  "fr": "événement"
  },
  "événements rapportés": {
   "en": "reported event",

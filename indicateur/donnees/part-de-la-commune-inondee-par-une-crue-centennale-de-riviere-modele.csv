@@ -1,0 +1,33 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-RIS-006,HTC-0913,HT0913,Bassin Bleu,Basenble,Nord-Ouest,0.88,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0632,HT0632,Belladère,Beladè,Centre,1.21,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0623,HT0623,Boucan Carré,Boukan Kare,Centre,1.4,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0311,HT0311,Cap-Haïtien,Kap Ayisyen,Nord,0.17,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0641,HT0641,Cerca La Source,Sèka Lasous,Centre,0.16,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0914,HT0914,Chamsolme,Chansòlm,Nord-Ouest,3.18,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0544,HT0544,Desdunes,Dedin,Artibonite,14.39,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0541,HT0541,Dessalines,Desalin,Artibonite,3.59,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0412,HT0412,Ferrier,Ferye,Nord-Est,8.21,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0133,HT0133,Ganthier,Gantye,Ouest,0.05,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0511,HT0511,Gonaïves,Gonayiv,Artibonite,0.58,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0331,HT0331,Grande Rivière Du Nord,Grann Rivyè dinò,Nord,0.44,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0543,HT0543,Grande Saline,Grand Salin,Artibonite,24.03,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0521,HT0521,Gros Morne,Gro Mòn,Artibonite,0.17,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0611,HT0611,Hinche,Ench,Centre,1.33,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0811,HT0811,Jérémie,Jeremi,Grande'Anse,0.58,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0513,HT0513,L'Estère,Lestè,Artibonite,1.61,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0533,HT0533,La Chapelle,Lachapèl,Artibonite,2.05,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0631,HT0631,Lascahobas,Laskawobas,Centre,0.24,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0313,HT0313,Limonade,Limonad,Nord,6.57,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0612,HT0612,Maïssade,Mayisad,Centre,1.18,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0621,HT0621,Mirebalais,Mibalè,Centre,0.76,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0542,HT0542,Petite Rivière de l'Artibonite,Ti Rivyè Latibonit,Artibonite,6.01,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0344,HT0344,Pignon,Piyon,Nord,0.29,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0911,HT0911,Port-de-Paix,Pòdpè,Nord-Ouest,0.74,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0312,HT0312,Quartier Morin,Katye Moren,Nord,7.57,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0832,HT0832,Roseaux,Rozo,Grande'Anse,0.01,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0531,HT0531,Saint-Marc,Sen Mak,Artibonite,2.0,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0622,HT0622,Saut d'Eau,Sodo,Centre,0.86,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0642,HT0642,Thomassique,Tomasik,Centre,1.7,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0613,HT0613,Thomonde,Tomond,Centre,3.15,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08
+IND-RIS-006,HTC-0532,HT0532,Verrettes,Vèrèt,Artibonite,6.75,%,2024,A,B,"JRC / Copernicus GloFAS — cartes mondiales d'aléa inondation v2.1.2 (CC BY 4.0), calcul Atmart",v1.2026.08

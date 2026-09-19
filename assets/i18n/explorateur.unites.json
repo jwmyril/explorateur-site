@@ -69,6 +69,11 @@
   "es": "habitante / km²",
   "fr": "habitant / km²"
  },
+ "hectares": {
+  "en": "hectare",
+  "es": "hectárea",
+  "fr": "hectare"
+ },
  "hommes / 100 femmes": {
   "en": "man / 100 women",
   "es": "hombre / 100 mujeres",

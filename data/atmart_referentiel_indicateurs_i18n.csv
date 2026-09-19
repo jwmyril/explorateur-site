@@ -671,6 +671,48 @@ IND-ENV-003,ht,methode_calcul,"Mwayèn total anyèl CHIRPS yo sou 1991-2020, pra
 IND-ENV-003,ht,nom,Lapli nòmal nan yon ane
 IND-ENV-003,ht,sens_interpretation,Ni bon ni move : li li ansanm ak agrikilti a ak risk la
 IND-ENV-003,ht,unite,mm pa ane
+IND-ENV-004,en,comparabilite,Comparable between communes over the same period; not as an annual series.
+IND-ENV-004,en,definition,Share of areas covered by trees in 2000 (canopy of at least 30%) where Landsat imagery saw that cover disappear between 2001 and 2025.
+IND-ENV-004,en,limites_connues,"NOT DEFORESTATION: loss also counts trees felled by a hurricane (Matthew, 2016), burned or cut in a rotation that regrows, and regrowth is not subtracted. Threshold: 30% canopy in 2000. The producer changed its algorithm in 2011-2015: we publish the total, never the year-by-year curve. Computed only for communes with at least 100 ha of tree cover in 2000."
+IND-ENV-004,en,methode_calcul,"30 m pixels of the commune polygon: those with 2000 canopy of at least 30% form the cover; among them, those with a loss year from 1 to 25 (2001-2025). Share = lost ÷ cover × 100."
+IND-ENV-004,en,nom,Share of 2000 tree cover lost (2001-2025)
+IND-ENV-004,en,sens_interpretation,High = more cover lost
+IND-ENV-004,en,unite,%
+IND-ENV-004,es,comparabilite,Comparable entre comunas en el mismo periodo; no como serie anual.
+IND-ENV-004,es,definition,Parte de las superficies cubiertas de árboles en 2000 (dosel de al menos 30 %) donde las imágenes Landsat vieron desaparecer esa cobertura entre 2001 y 2025.
+IND-ENV-004,es,limites_connues,"NO ES DEFORESTACIÓN: la pérdida cuenta también los árboles derribados por un huracán (Matthew, 2016), quemados o cortados en una rotación que rebrota, y el rebrote no se descuenta. Umbral: 30 % de dosel en 2000. El productor cambió de algoritmo en 2011-2015: publicamos el total, nunca la curva año por año. Solo se calcula para las comunas con al menos 100 ha de cobertura en 2000."
+IND-ENV-004,es,methode_calcul,"Píxeles de 30 m del polígono comunal: los que tenían en 2000 un dosel de al menos 30 % forman la cobertura; entre ellos, los que tienen un año de pérdida de 1 a 25 (2001-2025). Parte = perdidos ÷ cobertura × 100."
+IND-ENV-004,es,nom,Parte de la cobertura arbórea de 2000 perdida (2001-2025)
+IND-ENV-004,es,sens_interpretation,Alto = más cobertura perdida
+IND-ENV-004,es,unite,%
+IND-ENV-004,ht,comparabilite,Nou ka konpare komin yo sou menm peryòd la ; men se pa yon seri ane pa ane.
+IND-ENV-004,ht,definition,Pòsyon zòn ki te kouvri ak pyebwa an 2000 (omwen 30 % kouvèti fèy) kote imaj satelit Landsat yo montre pyebwa yo disparèt ant 2001 ak 2025.
+IND-ENV-004,ht,limites_connues,"SE PA YON DEBWAZMAN SÈLMAN : pèt la konte tou pyebwa yon siklòn kraze (Matthew, 2016), sa ki boule, oswa sa yo koupe nan yon woulman kote yo repouse, e nou pa retire sa ki repouse. Nou konte zòn ki te gen omwen 30 % kouvèti fèy an 2000. Pwodiktè a te chanje metòd li ant 2011 ak 2015 : nou pibliye total la, janm koub ane pa ane a. Nou kalkile l sèlman pou komin ki te gen omwen 100 ekta pyebwa an 2000."
+IND-ENV-004,ht,methode_calcul,"Pikselè 30 m nan poligòn komin nan : sa ki te gen omwen 30 % kouvèti fèy an 2000 fè kouvèti a ; nan mitan yo, sa ki gen yon ane pèt ant 1 ak 25 (2001-2025). Pòsyon = sa ki pèdi ÷ kouvèti a × 100."
+IND-ENV-004,ht,nom,Pòsyon kouvèti pyebwa 2000 yo ki pèdi (2001-2025)
+IND-ENV-004,ht,sens_interpretation,Wo = plis pyebwa pèdi
+IND-ENV-004,ht,unite,%
+IND-ENV-005,en,comparabilite,Depends on the commune's size and tree cover: compare the share instead (IND-ENV-004).
+IND-ENV-005,en,definition,"Area, in hectares, of pixels covered by trees in 2000 (canopy of at least 30%) where the cover disappeared between 2001 and 2025."
+IND-ENV-005,en,limites_connues,"NOT DEFORESTATION: loss also counts trees felled by a hurricane (Matthew, 2016), burned or cut in a rotation that regrows, and regrowth is not subtracted. Threshold: 30% canopy in 2000. The producer changed its algorithm in 2011-2015: we publish the total, never the year-by-year curve. A large wooded commune mechanically loses more hectares: to compare, read the share."
+IND-ENV-005,en,methode_calcul,Same mask; number of lost pixels × area of one pixel at the commune's latitude.
+IND-ENV-005,en,nom,Tree cover lost (2001-2025)
+IND-ENV-005,en,sens_interpretation,High = more cover lost
+IND-ENV-005,en,unite,hectares
+IND-ENV-005,es,comparabilite,Depende del tamaño y la cobertura arbórea de la comuna: mejor comparar la parte (IND-ENV-004).
+IND-ENV-005,es,definition,"Superficie, en hectáreas, de los píxeles cubiertos de árboles en 2000 (dosel de al menos 30 %) donde la cobertura desapareció entre 2001 y 2025."
+IND-ENV-005,es,limites_connues,"NO ES DEFORESTACIÓN: la pérdida cuenta también los árboles derribados por un huracán (Matthew, 2016), quemados o cortados en una rotación que rebrota, y el rebrote no se descuenta. Umbral: 30 % de dosel en 2000. El productor cambió de algoritmo en 2011-2015: publicamos el total, nunca la curva año por año. Una comuna grande y arbolada pierde mecánicamente más hectáreas: para comparar, leer la parte."
+IND-ENV-005,es,methode_calcul,Misma máscara; número de píxeles perdidos × superficie de un píxel a la latitud de la comuna.
+IND-ENV-005,es,nom,Cobertura arbórea perdida (2001-2025)
+IND-ENV-005,es,sens_interpretation,Alto = más cobertura perdida
+IND-ENV-005,es,unite,hectáreas
+IND-ENV-005,ht,comparabilite,Sa depann de gwosè komin nan ak konbyen pyebwa li te genyen : pito konpare pòsyon an (IND-ENV-004).
+IND-ENV-005,ht,definition,"Konbyen ekta, nan zòn ki te kouvri ak pyebwa an 2000 (omwen 30 % kouvèti fèy), kote pyebwa yo disparèt ant 2001 ak 2025."
+IND-ENV-005,ht,limites_connues,"SE PA YON DEBWAZMAN SÈLMAN : pèt la konte tou pyebwa yon siklòn kraze (Matthew, 2016), sa ki boule, oswa sa yo koupe nan yon woulman kote yo repouse, e nou pa retire sa ki repouse. Nou konte zòn ki te gen omwen 30 % kouvèti fèy an 2000. Pwodiktè a te chanje metòd li ant 2011 ak 2015 : nou pibliye total la, janm koub ane pa ane a. Yon gwo komin ki te gen anpil pyebwa ap pèdi plis ekta kanmenm : pou konpare, gade pòsyon an."
+IND-ENV-005,ht,methode_calcul,Menm mas la ; kantite pikselè ki pèdi × sifas yon pikselè nan latitid komin nan.
+IND-ENV-005,ht,nom,Pyebwa ki pèdi (2001-2025)
+IND-ENV-005,ht,sens_interpretation,Wo = plis pyebwa pèdi
+IND-ENV-005,ht,unite,ekta
 IND-FIN-001,en,comparabilite,Comparable between communes for the network of ONE operator out of six licensed: not for total access to transfers.
 IND-FIN-001,en,definition,"Number of counters where a remittance can be collected in the commune, for the operator that publishes its network."
 IND-FIN-001,en,limites_connues,"ONE OPERATOR ONLY IS COUNTED. Six remittance houses are licensed by the BRH; only one publishes its list in a usable form. The figure therefore describes the shape of ONE network, not total access to money — a commune at zero may well be served by a competitor. It remains the ONLY commune-level data that exists on remittances: the amounts do not go below the department."
@@ -818,6 +860,48 @@ IND-MAR-001,ht,methode_calcul,"Konte nan baz referans òganizasyon yo, kategori 
 IND-MAR-001,ht,nom,Mache yo swiv pou pri
 IND-MAR-001,ht,sens_interpretation,"Li mezire kouvèti swivi a, se pa aktivite komès la."
 IND-MAR-001,ht,unite,kantite
+IND-NIV-001,en,comparabilite,"Comparable between Haitian communes only, keeping the urban bias in mind; not with any other country."
+IND-NIV-001,en,definition,"Average, over the commune's 2.4 km cells, of the relative wealth index predicted by Meta and the University of California, Berkeley: 0 = national average, negative = poorer, positive = better off."
+IND-NIV-001,en,limites_connues,"A PREDICTION, NOT A MEASURE OF INCOME — AND IT CONFUSES DENSITY WITH WEALTH: the model reads satellite imagery, mobile connectivity and terrain. Cité Soleil thus comes out among the country's most “well-off” communes, because it is dense, built-up and connected. The scale is RELATIVE to Haiti (0 = national average): it cannot be compared with any other country. 2.4 km cells, 2021 estimates. Non-commercial use (CC BY-NC 4.0)."
+IND-NIV-001,en,methode_calcul,"Each cell of the Haiti file (4,784) is matched to the commune containing its centre; simple average of the cells, published if the commune has at least three."
+IND-NIV-001,en,nom,Relative wealth index (model)
+IND-NIV-001,en,sens_interpretation,High = better off according to the model
+IND-NIV-001,en,unite,index
+IND-NIV-001,es,comparabilite,"Comparable solo entre comunas de Haití, teniendo en cuenta el sesgo urbano; con ningún otro país."
+IND-NIV-001,es,definition,"Promedio, en las celdas de 2,4 km de la comuna, del índice de riqueza relativa predicho por Meta y la Universidad de California en Berkeley: 0 = promedio nacional, negativo = más pobre, positivo = más acomodado."
+IND-NIV-001,es,limites_connues,"UNA PREDICCIÓN, NO UNA MEDIDA DE LOS INGRESOS — Y CONFUNDE DENSIDAD CON RIQUEZA: el modelo lee imágenes satelitales, conectividad móvil y relieve. Así, Cité Soleil aparece entre las comunas más «acomodadas» del país, porque es densa, construida y conectada. La escala es RELATIVA a Haití (0 = promedio nacional): no se compara con ningún otro país. Celdas de 2,4 km, estimaciones de 2021. Uso no comercial (CC BY-NC 4.0)."
+IND-NIV-001,es,methode_calcul,"Cada celda del archivo de Haití (4 784) se vincula a la comuna que contiene su centro; promedio simple de las celdas, publicado si la comuna tiene al menos tres."
+IND-NIV-001,es,nom,Índice de riqueza relativa (modelo)
+IND-NIV-001,es,sens_interpretation,Alto = más acomodado según el modelo
+IND-NIV-001,es,unite,índice
+IND-NIV-001,ht,comparabilite,"Nou ka konpare komin Ayiti yo ant yo sèlman, men sonje modèl la favorize lavil ; pa ak okenn lòt peyi."
+IND-NIV-001,ht,definition,"Mwayèn endis richès relatif Meta ak inivèsite Berkeley prevwa pou selil 2,4 km komin nan : 0 = mwayèn peyi a, negatif = pi pòv, pozitif = pi alèz."
+IND-NIV-001,ht,limites_connues,"SE YON PREDIKSYON, SE PA YON MEZI SA MOUN FÈ KÒM LAJAN — E LI MELANJE DANSITE AK RICHÈS : modèl la li imaj satelit, koneksyon telefòn ak rilyèf la. Se konsa Site Solèy parèt pami komin ki pi « alèz » nan peyi a, paske li chaje moun, kay ak telefòn. Echèl la RELATIF pou Ayiti (0 = mwayèn peyi a) : nou pa ka konpare l ak okenn lòt peyi. Selil 2,4 km, estimasyon 2021. Pa pou fè lajan (CC BY-NC 4.0)."
+IND-NIV-001,ht,methode_calcul,"Nou mare chak selil nan fichye Ayiti a (4 784) ak komin kote mitan l tonbe ; mwayèn senp selil yo, nou pibliye l si komin nan gen omwen twa."
+IND-NIV-001,ht,nom,Endis richès relatif (modèl)
+IND-NIV-001,ht,sens_interpretation,Wo = pi alèz dapre modèl la
+IND-NIV-001,ht,unite,endis
+IND-NIV-002,en,comparabilite,Comparable between communes with at least six cells.
+IND-NIV-002,en,definition,"Standard deviation of the relative wealth index across the commune's 2.4 km cells: the higher it is, the more the commune mixes well-off and poor areas."
+IND-NIV-002,en,limites_connues,"A PREDICTION, NOT A MEASURE OF INCOME — AND IT CONFUSES DENSITY WITH WEALTH: the model reads satellite imagery, mobile connectivity and terrain. Cité Soleil thus comes out among the country's most “well-off” communes, because it is dense, built-up and connected. The scale is RELATIVE to Haiti (0 = national average): it cannot be compared with any other country. 2.4 km cells, 2021 estimates. Non-commercial use (CC BY-NC 4.0). A commune with fewer than six cells gives an unreliable spread."
+IND-NIV-002,en,methode_calcul,Population standard deviation of the values of the cells matched to the commune.
+IND-NIV-002,en,nom,Wealth gaps within the commune (model)
+IND-NIV-002,en,sens_interpretation,High = more unequal commune according to the model
+IND-NIV-002,en,unite,index
+IND-NIV-002,es,comparabilite,Comparable entre comunas con al menos seis celdas.
+IND-NIV-002,es,definition,"Desviación típica del índice de riqueza relativa entre las celdas de 2,4 km de la comuna: cuanto más alta, más mezcla la comuna zonas acomodadas y zonas pobres."
+IND-NIV-002,es,limites_connues,"UNA PREDICCIÓN, NO UNA MEDIDA DE LOS INGRESOS — Y CONFUNDE DENSIDAD CON RIQUEZA: el modelo lee imágenes satelitales, conectividad móvil y relieve. Así, Cité Soleil aparece entre las comunas más «acomodadas» del país, porque es densa, construida y conectada. La escala es RELATIVA a Haití (0 = promedio nacional): no se compara con ningún otro país. Celdas de 2,4 km, estimaciones de 2021. Uso no comercial (CC BY-NC 4.0). Una comuna con menos de seis celdas da una dispersión poco fiable."
+IND-NIV-002,es,methode_calcul,Desviación típica (poblacional) de los valores de las celdas vinculadas a la comuna.
+IND-NIV-002,es,nom,Brechas de riqueza dentro de la comuna (modelo)
+IND-NIV-002,es,sens_interpretation,Alto = comuna más desigual según el modelo
+IND-NIV-002,es,unite,índice
+IND-NIV-002,ht,comparabilite,Nou ka konpare komin ki gen omwen sis selil.
+IND-NIV-002,ht,definition,"Ekatip endis richès relatif la ant selil 2,4 km komin nan : pi li wo, se plis komin nan gen zòn ki alèz ak zòn ki pòv ansanm."
+IND-NIV-002,ht,limites_connues,"SE YON PREDIKSYON, SE PA YON MEZI SA MOUN FÈ KÒM LAJAN — E LI MELANJE DANSITE AK RICHÈS : modèl la li imaj satelit, koneksyon telefòn ak rilyèf la. Se konsa Site Solèy parèt pami komin ki pi « alèz » nan peyi a, paske li chaje moun, kay ak telefòn. Echèl la RELATIF pou Ayiti (0 = mwayèn peyi a) : nou pa ka konpare l ak okenn lòt peyi. Selil 2,4 km, estimasyon 2021. Pa pou fè lajan (CC BY-NC 4.0). Yon komin ki gen mwens pase sis selil bay yon ekatip nou pa ka fye."
+IND-NIV-002,ht,methode_calcul,Ekatip valè selil ki mare ak komin nan.
+IND-NIV-002,ht,nom,Diferans richès andedan komin nan (modèl)
+IND-NIV-002,ht,sens_interpretation,Wo = komin nan pi inegal dapre modèl la
+IND-NIV-002,ht,unite,endis
 IND-POP-001,en,comparabilite,A methodological break is likely between the 2003 census and recent estimates — to be flagged.
 IND-POP-001,en,definition,Estimated resident population of the territorial entity.
 IND-POP-001,en,limites_connues,"No fifth census: any recent value is an estimate, status E, never O."
@@ -1343,6 +1427,27 @@ IND-RIS-005,ht,methode_calcul,Kolòn « pct_zone_inondable » nan atmart_alea_in
 IND-RIS-005,ht,nom,Pòsyon komin nan ki nan zòn ki ka inonde
 IND-RIS-005,ht,sens_interpretation,Wo = plis teritwa ki ekspoze
 IND-RIS-005,ht,unite,%
+IND-RIS-006,en,comparabilite,Comparable between communes crossed by a river in the model; not with the others.
+IND-RIS-006,en,definition,Share of the commune's dry land that the Copernicus model predicts under water in a river flood that returns on average once every hundred years (a 1% chance each year).
+IND-RIS-006,en,limites_connues,"A GLOBAL MODEL, NOT AN OBSERVATION: it only simulates overflow from the rivers in its network — not flash floods in ravines, urban runoff or sea surges — on a terrain model that sees neither levees nor canals. Permanent water (lakes, lagoons) is removed. PUBLISHED ONLY WHERE THE MODEL SIMULATES A RIVER: 108 communes have no value, which does NOT mean they are safe — Gonaïves is one of them."
+IND-RIS-006,en,methode_calcul,"90 m pixels of the commune polygon, permanent water removed; share of those where the RP100 map shows a depth above zero."
+IND-RIS-006,en,nom,Share of the commune flooded by a 100-year river flood (model)
+IND-RIS-006,en,sens_interpretation,High = more exposed territory
+IND-RIS-006,en,unite,%
+IND-RIS-006,es,comparabilite,Comparable entre las comunas atravesadas por un río del modelo; no con las demás.
+IND-RIS-006,es,definition,Parte de la tierra firme de la comuna que el modelo de Copernicus prevé bajo el agua en una crecida de río que se repite en promedio una vez cada cien años (1 % de probabilidad cada año).
+IND-RIS-006,es,limites_connues,"UN MODELO MUNDIAL, NO UNA OBSERVACIÓN: solo simula el desbordamiento de los ríos de su red — ni las crecidas repentinas de los barrancos, ni la escorrentía urbana, ni la marea de tempestad — sobre un relieve que no ve diques ni canales. Se retiran las aguas permanentes (lagos, lagunas). SOLO SE PUBLICA DONDE EL MODELO SIMULA UN RÍO: 108 comunas no tienen valor, lo que NO significa que estén a salvo — Gonaïves es una de ellas."
+IND-RIS-006,es,methode_calcul,"Píxeles de 90 m del polígono comunal, sin aguas permanentes; parte de los que tienen en el mapa RP100 una profundidad mayor que cero."
+IND-RIS-006,es,nom,Parte de la comuna inundada por una crecida centenaria de río (modelo)
+IND-RIS-006,es,sens_interpretation,Alto = más territorio expuesto
+IND-RIS-006,es,unite,%
+IND-RIS-006,ht,comparabilite,Nou ka konpare komin kote modèl la gen yon rivyè ; pa ak lòt yo.
+IND-RIS-006,ht,definition,Pòsyon tè sèk komin nan modèl Copernicus la prevwa ki ta anba dlo lè yon rivyè debòde konsa yon fwa chak san an an mwayèn (1 % chans chak ane).
+IND-RIS-006,ht,limites_connues,"SE YON MODÈL POU TOUT LATÈ, SE PA YON OBSEVASYON : li kalkile sèlman lè rivyè ki nan rezo li yo debòde — pa lavalas ravin yo, pa dlo lapli ki kouri nan lavil, pa lanmè ki monte — sou yon rilyèf ki pa wè ni dig ni kanal. Nou retire dlo pèmanan yo (lak, lagon). NOU PIBLIYE L SÈLMAN KOTE MODÈL LA GEN YON RIVYÈ : 108 komin pa gen valè, sa PA vle di yo pa an danje — Gonayiv ladan yo."
+IND-RIS-006,ht,methode_calcul,"Pikselè 90 m nan poligòn komin nan, san dlo pèmanan yo ; pòsyon sa kat RP100 la bay yon fondè dlo ki plis pase zewo."
+IND-RIS-006,ht,nom,Pòsyon komin nan ki ta anba dlo nan yon inondasyon rivyè ki rive yon fwa chak san an (modèl)
+IND-RIS-006,ht,sens_interpretation,Wo = plis teritwa ki ekspoze
+IND-RIS-006,ht,unite,%
 IND-SAN-001,en,comparabilite,NOT comparable between communes outside the covered area: the source covers only 14 communes out of 140.
 IND-SAN-001,en,definition,Number of operating health facilities recorded.
 IND-SAN-001,en,limites_connues,"PARTIAL COVERAGE — 14 communes (Artibonite, Centre, Nord, Ouest). An absent commune does not have zero facilities: it is not covered, hence status N. 2023 census."

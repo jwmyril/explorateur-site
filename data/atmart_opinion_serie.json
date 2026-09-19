@@ -9,8 +9,8 @@
   "limite": "LE MODE DE COLLECTE CHANGE EN COURS DE SÉRIE : les vagues récentes sont téléphoniques, les anciennes en face-à-face. Une rupture entre deux points peut donc être un changement d'INSTRUMENT plutôt que d'opinion — chaque ligne porte son mode. LES RÉGIONS SONT LES STRATES DE TIRAGE, cinq en Haïti et quatre en République dominicaine ; elles ne se correspondent PAS d'un pays à l'autre et ne doivent jamais être appariées. UNE QUESTION N'EST ESTIMÉE QUE SI SON CODE FIGURE DANS LE QUESTIONNAIRE DE SA VAGUE, vérifié sur dix-sept questionnaires officiels ; ce contrôle ne détecte pas un changement de formulation à code constant. DEUX VAGUES DOMINICAINES SONT AUTO-PONDÉRÉES (2008, 2010) : leur note technique dit « Unweighted », et la colonne `ponderation` le porte sur chaque ligne. LA VAGUE DOMINICAINE DE 2006 EST ÉCARTÉE — son fichier contredit sa propre note technique sur l'effectif. LES ÉCHELLES SONT RAMENÉES À 0-100 PAR NOUS. LE MILIEU URBAIN/RURAL N'EXISTE QUE POUR LES VAGUES EN FACE-À-FACE : il vient du plan de sondage. Les vagues téléphoniques posent à la place une question à quatre modalités sur le lieu de vie, qui ne mesure pas la même chose et n'est donc pas reprise ici. USAGE COMMERCIAL INTERDIT par la licence.",
   "date_extraction": "2026-08-26"
  },
- "observations": 1988,
- "observations_nationales": 290,
+ "observations": 3948,
+ "observations_nationales": 575,
  "vagues": [
   2006,
   2008,
@@ -208,6 +208,6 @@
   "République dominicaine 2004 — aucun questionnaire n'a été relevé pour cette vague, donc aucune question ne peut être déclarée posée",
   "République dominicaine 2006 — le fichier compte 2 518 lignes quand sa note technique en annonce 1 519, et il n'a pas de variable d'unité primaire"
  ],
- "series_nationales_d_au_moins_quatre_points": 40,
- "series_nationales_totales": 48
+ "series_nationales_d_au_moins_quatre_points": 85,
+ "series_nationales_totales": 102
 }

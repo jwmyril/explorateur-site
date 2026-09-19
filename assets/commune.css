@@ -82,6 +82,23 @@ footer a{color:var(--lien)}
   td.an{display:inline-block;font-size:.85rem}
   td.src{font-size:.78rem;line-height:1.4}
 }
+/* Les tableaux d'opinion (build_pages_opinion.py) croisent domaines et
+   vagues : empilés, ils perdraient l'année de chaque valeur. Ils restent
+   donc des tableaux et défilent de côté dans leur propre boîte. */
+.defile{overflow-x:auto;margin:.3rem 0 1rem}
+table.op{min-width:28rem}
+table.op td.val,table.op td.an{text-align:right}
+table.op tr.tot th,table.op tr.tot td{font-weight:700}
+@media (max-width:34rem){
+  table.op{display:table}
+  table.op thead{position:static}
+  table.op tbody{display:table-row-group}
+  table.op tr{display:table-row;padding:0}
+  table.op td,table.op tbody th{display:table-cell;width:auto;padding:.35rem .3rem;
+    border-bottom:1px solid var(--trait)}
+  table.op td.val{display:table-cell;margin:0}
+  table.op td.an{display:table-cell;font-size:.85rem}
+}
 .nl-bloc{margin:2rem 0 0;padding:1.1rem 1.2rem;border:1px solid var(--trait,var(--border,#e6ecf2));
   border-radius:10px}
 .nl-titre{font-size:1.05rem;margin:0 0 .3rem;border:0;padding:0}

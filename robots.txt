@@ -12,3 +12,4 @@ Sitemap: https://explorateur.atmart.ltd/sitemap-mises-a-jour.xml
 Sitemap: https://explorateur.atmart.ltd/sitemap-themes.xml
 
 Sitemap: https://explorateur.atmart.ltd/sitemap-analyses.xml
+Sitemap: https://explorateur.atmart.ltd/sitemap-opinion.xml

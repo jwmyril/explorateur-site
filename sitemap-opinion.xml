@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Engendré par build_pages_opinion.py. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://explorateur.atmart.ltd/opinion/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/opinion/index.html"/>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/ht/opinion/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/opinion/index.html"/>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/en/opinion/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/opinion/index.html"/>
+  </url>
+  <url>
+    <loc>https://explorateur.atmart.ltd/es/opinion/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://explorateur.atmart.ltd/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://explorateur.atmart.ltd/ht/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://explorateur.atmart.ltd/en/opinion/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://explorateur.atmart.ltd/es/opinion/index.html"/>
+  </url>
+</urlset>

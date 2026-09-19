@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 136
+  "fichiers": 137
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -50,6 +50,7 @@
    "atmart_ipc_regions_communes_HT.csv",
    "atmart_licences.json",
    "atmart_licences_donnees_HT.csv",
+   "atmart_licences_indicateurs_HT.csv",
    "atmart_marches_HT.geojson",
    "atmart_medias.json",
    "atmart_medias_communes_HT.csv",
@@ -111,7 +112,11 @@
    "atmart_series_nationales_HT.csv"
   ],
   "CC BY-NC 4.0": [
-   "atmart_conflits_HT.csv"
+   "atmart_conflits_HT.csv",
+   "atmart_deplaces_HT.csv",
+   "atmart_retours_forces.json",
+   "atmart_retours_forces_HT.csv",
+   "atmart_retours_forces_points_HT.csv"
   ],
   "CC BY-SA 4.0": [
    "atmart_couche_eau_HT.geojson"
@@ -147,26 +152,24 @@
   "ODbL 1.0 pour OSM ; CC BY-IGO pour les marchés PAM": [
    "atmart_acces_routier.json"
   ],
+  "par indicateur (par ligne) — voir atmart_licences_indicateurs_HT.csv ; certaines sous réserve": [
+   "atmart_indicateurs_communes_HT.csv"
+  ],
   "par ligne — voir la colonne « licence »": [
    "atmart_infrastructures_communes_HT.csv"
   ],
   "sous réserve": [
-   "atmart_deplaces_HT.csv",
    "atmart_deputes_2015_candidats_HT.csv",
    "atmart_deputes_2015_circonscriptions_HT.csv",
    "atmart_elections.json",
    "atmart_inscrits_2015_communes_HT.csv",
    "atmart_municipales_2015_communes_HT.csv",
    "atmart_presidentielle_2006_communes_HT.csv",
-   "atmart_presidentielle_2006_resume_HT.csv",
-   "atmart_retours_forces.json",
-   "atmart_retours_forces_HT.csv",
-   "atmart_retours_forces_points_HT.csv"
+   "atmart_presidentielle_2006_resume_HT.csv"
   ],
   "à déclarer": [
    "atmart_couches_carte_HT.csv",
    "atmart_enquetes_resultats_HT.csv",
-   "atmart_indicateurs_communes_HT.csv",
    "haiti_regions_enquete_simplifie.geojson"
   ]
  },
@@ -450,7 +453,7 @@
    "attribution": "NOAA NCEI IBTrACS v04r01 — bassin Atlantique Nord"
   },
   "atmart_deplaces_HT.csv": {
-   "licence": "sous réserve",
+   "licence": "CC BY-NC 4.0",
    "sources": [
     "SRC-032"
    ],
@@ -580,9 +583,36 @@
    "attribution": "Ministère du Tourisme et des Industries créatives (MTIC)"
   },
   "atmart_indicateurs_communes_HT.csv": {
-   "licence": "à déclarer",
-   "sources": [],
-   "attribution": ""
+   "licence": "par indicateur (par ligne) — voir atmart_licences_indicateurs_HT.csv ; certaines sous réserve",
+   "sources": [
+    "PSP-024",
+    "PSP-025",
+    "PSP-026",
+    "PSP-028",
+    "PSP-029",
+    "PSP-030",
+    "PSP-036",
+    "PSP-038",
+    "PSP-039",
+    "SRC-001",
+    "SRC-002",
+    "SRC-003",
+    "SRC-009",
+    "SRC-010",
+    "SRC-011",
+    "SRC-013",
+    "SRC-028",
+    "SRC-051",
+    "SRC-052",
+    "SRC-058",
+    "SRC-065",
+    "SRC-068",
+    "SRC-069",
+    "SRC-070",
+    "SRC-071",
+    "SRC-ATM-001"
+   ],
+   "attribution": "Atmart Data ; CAM Transfer — maison de transfert agréée par la BRH ; CEP — Conseil électoral provisoire ; CNIGS / UN OCHA ; CONATEL — Conseil National des Télécommunications ; Election Passport — David Lublin, American University ; GeoNames ; Humanitarian OpenStreetMap Team (HOT) via HDX ; IHSI ; IHSI — Institut Haïtien de Statistique et d'Informatique ; Ministère du Tourisme et des Industries créatives (MTIC) ; OCHA Haïti ; PAM (WFP) ; UNFPA via OCHA HDX"
   },
   "atmart_indicateurs_national_HT.csv": {
    "licence": "CC BY 4.0",
@@ -645,6 +675,13 @@
    "attribution": "Atmart Data"
   },
   "atmart_licences_donnees_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-ATM-001"
+   ],
+   "attribution": "Atmart Data"
+  },
+  "atmart_licences_indicateurs_HT.csv": {
    "licence": "CC BY 4.0",
    "sources": [
     "SRC-ATM-001"
@@ -939,21 +976,21 @@
    "attribution": "The DHS Program (ICF International), financé par l'USAID"
   },
   "atmart_retours_forces.json": {
-   "licence": "sous réserve",
+   "licence": "CC BY-NC 4.0",
    "sources": [
     "SRC-055"
    ],
    "attribution": "OIM — Displacement Tracking Matrix, avec l'Office National de la Migration (ONM) et le Groupe d'appui aux rapatriés et aux réfugiés (GARR)"
   },
   "atmart_retours_forces_HT.csv": {
-   "licence": "sous réserve",
+   "licence": "CC BY-NC 4.0",
    "sources": [
     "SRC-055"
    ],
    "attribution": "OIM — Displacement Tracking Matrix, avec l'Office National de la Migration (ONM) et le Groupe d'appui aux rapatriés et aux réfugiés (GARR)"
   },
   "atmart_retours_forces_points_HT.csv": {
-   "licence": "sous réserve",
+   "licence": "CC BY-NC 4.0",
    "sources": [
     "SRC-055"
    ],

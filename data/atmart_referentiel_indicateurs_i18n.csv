@@ -629,6 +629,27 @@ IND-ENE-002,ht,methode_calcul,Nou konte objè yo make ponp gazolin ki nan komin 
 IND-ENE-002,ht,nom,Ponp gazolin ki sou kat la
 IND-ENE-002,ht,sens_interpretation,Wo = plis ponp sou kat la
 IND-ENE-002,ht,unite,ponp gazolin
+IND-ENE-003,en,comparabilite,Comparable between communes for the same observation year; not as an electrification rate.
+IND-ENE-003,en,definition,Share of the population of the commune's settlements living in a settlement where NASA's VIIRS satellites saw light at night between September 2022 and August 2023.
+IND-ENE-003,en,limites_connues,"LIGHT SEEN FROM SPACE, NOT ACCESS TO ELECTRICITY: the satellite sees outdoor lighting. It overestimates where generators run and misses home solar kits; a half-lit settlement counts in full. Nationally, 72% of residents live in a lit settlement, while the 2016-2017 DHS survey found 6% (Grand'Anse) to 88% (metropolitan area) of households connected, depending on the region. Population estimated by VIDA, not counted. Computed if the commune has at least three settlements."
+IND-ENE-003,en,methode_calcul,"Each DRE Atlas settlement (10,100) is matched to the commune containing its centre; population of settlements with “has_nightlight” true ÷ population of all the commune's settlements × 100."
+IND-ENE-003,en,nom,Share of the population living in a settlement lit at night
+IND-ENE-003,en,sens_interpretation,High = more residents in lit settlements
+IND-ENE-003,en,unite,%
+IND-ENE-003,es,comparabilite,Comparable entre comunas para el mismo año de observación; no como tasa de electrificación.
+IND-ENE-003,es,definition,Parte de la población de las localidades de la comuna que vive en una localidad donde los satélites VIIRS de la NASA vieron luz de noche entre septiembre de 2022 y agosto de 2023.
+IND-ENE-003,es,limites_connues,"LUZ VISTA DESDE EL CIELO, NO ACCESO A LA ELECTRICIDAD: el satélite ve el alumbrado exterior. Sobreestima donde funcionan generadores y no ve los kits solares domésticos; una localidad a medio iluminar cuenta entera. A escala nacional, el 72 % de los habitantes vive en una localidad iluminada, cuando la encuesta EMMUS de 2016-2017 hallaba, según la región, entre el 6 % (Grand'Anse) y el 88 % (área metropolitana) de hogares conectados. Población estimada por VIDA, no censada. Calculado si la comuna tiene al menos tres localidades."
+IND-ENE-003,es,methode_calcul,Cada localidad del DRE Atlas (10 100) se vincula a la comuna que contiene su centro; población de las localidades con «has_nightlight» verdadero ÷ población de todas las localidades de la comuna × 100.
+IND-ENE-003,es,nom,Parte de la población que vive en una localidad iluminada de noche
+IND-ENE-003,es,sens_interpretation,Alto = más habitantes en localidades iluminadas
+IND-ENE-003,es,unite,%
+IND-ENE-003,ht,comparabilite,Nou ka konpare komin yo pou menm ane obsèvasyon an ; men se pa yon to moun ki gen kouran.
+IND-ENE-003,ht,definition,Pòsyon moun nan lokalite komin nan ki rete nan yon lokalite kote satelit VIIRS NASA yo te wè limyè lannwit ant septanm 2022 ak out 2023.
+IND-ENE-003,ht,limites_connues,"SE LIMYÈ YO WÈ DEPI NAN SYÈL LA, SE PA MOUN KI GEN KOURAN : satelit la wè limyè deyò. Li konte twòp kote ki gen dèlko, e li pa wè ti sistèm solè moun gen lakay yo ; yon lokalite ki gen limyè sou mwatye kont nèt. Pou tout peyi a, 72 % moun rete nan yon lokalite ki gen limyè, pandan ankèt EMMUS 2016-2017 la te jwenn, dapre rejyon an, ant 6 % (Grandans) ak 88 % (zòn metwopolitèn) kay ki gen kouran. Se VIDA ki estime kantite moun yo, se pa yon resansman. Nou kalkile l si komin nan gen omwen twa lokalite."
+IND-ENE-003,ht,methode_calcul,"Nou mare chak lokalite DRE Atlas la (10 100) ak komin kote mitan l tonbe ; moun ki nan lokalite « has_nightlight » vre yo divize pa moun ki nan tout lokalite komin nan, fwa 100."
+IND-ENE-003,ht,nom,Pòsyon moun ki rete nan yon lokalite ki gen limyè lannwit
+IND-ENE-003,ht,sens_interpretation,Wo = plis moun nan lokalite ki gen limyè
+IND-ENE-003,ht,unite,%
 IND-ENV-001,en,comparabilite,Comparable between communes of the same reference year.
 IND-ENV-001,en,definition,"Share of the commune's area classified as ""trees"" by satellite observation."
 IND-ENV-001,en,limites_connues,"Tree cover in the satellite's sense is not forest in the forestry sense: orchards, hedgerows and dense scrub are included. Compare it with the World Bank's national forest area, which gives an entirely different figure — two definitions, two methods."
@@ -1616,6 +1637,27 @@ IND-SAN-010,ht,methode_calcul,IND-SAN-001 ÷ IND-POP-001 × 10 000.
 IND-SAN-010,ht,nom,Etablisman sante pou chak 10 000 moun
 IND-SAN-010,ht,sens_interpretation,"Wo = anpil etablisman anrejistre parapò ak popilasyon an. Li li ansanm ak tan pou rive, yon rapò kominal pa ka kenbe sa."
 IND-SAN-010,ht,unite,etablisman / 10 000 moun
+IND-SAN-011,en,comparabilite,Comparable between the 64 communes analysed at commune level; not with any other.
+IND-SAN-011,en,definition,"Phase assigned to the commune by Haiti's first IPC acute malnutrition analysis: 1 = acceptable, 2 = alert, 3 = serious, 4 = critical, 5 = extremely critical."
+IND-SAN-011,en,limites_connues,"A PHASE, NOT A RATE: it classifies the severity affecting at least 20% of children, based on the January-March 2023 SMART survey and other evidence. ONLY 64 COMMUNES HAVE A VALUE: the Ouest, Sud-Est, Nord-Est, Nord-Ouest and Nippes were analysed commune by commune; the Artibonite, Centre, Grande Anse, Nord and Sud were analysed as a whole, so their communes have no phase of their own. Plaisance du Sud and Grand-Boucan were analysed together. Current situation, not the projection."
+IND-SAN-011,en,methode_calcul,"Reading of the report's “For the current period” paragraph, which lists the communes in each phase; each name is matched to the reference list, and the total must come to 63 units (64 communes), otherwise the calculation stops."
+IND-SAN-011,en,nom,IPC acute malnutrition phase (Dec 2023 – May 2024)
+IND-SAN-011,en,sens_interpretation,High = more serious nutrition situation
+IND-SAN-011,en,unite,phase (1 to 5)
+IND-SAN-011,es,comparabilite,Comparable entre las 64 comunas analizadas a escala comunal; con ninguna otra.
+IND-SAN-011,es,definition,"Fase asignada a la comuna por el primer análisis IPC de la desnutrición aguda de Haití: 1 = aceptable, 2 = alerta, 3 = grave, 4 = crítica, 5 = extremadamente crítica."
+IND-SAN-011,es,limites_connues,"UNA FASE, NO UNA TASA: clasifica la gravedad que afecta al menos al 20 % de los niños, a partir de la encuesta SMART de enero-marzo de 2023 y otras pruebas. SOLO 64 COMUNAS TIENEN VALOR: el Oeste, el Sudeste, el Noreste, el Noroeste y Nippes se analizaron comuna por comuna; Artibonite, Centro, Grande Anse, Norte y Sur se analizaron en bloque, por lo que sus comunas no tienen fase propia. Plaisance du Sud y Grand-Boucan se analizaron juntas. Situación actual, no la proyección."
+IND-SAN-011,es,methode_calcul,"Lectura del párrafo «Para el periodo actual» del informe, que enumera las comunas de cada fase; cada nombre se vincula al referencial, y el total debe dar 63 unidades (64 comunas), si no el cálculo se detiene."
+IND-SAN-011,es,nom,Fase IPC de desnutrición aguda (dic. 2023 – may. 2024)
+IND-SAN-011,es,sens_interpretation,Alto = situación nutricional más grave
+IND-SAN-011,es,unite,fase (1 a 5)
+IND-SAN-011,ht,comparabilite,Nou ka konpare 64 komin yo te analize youn pa youn ; pa ak okenn lòt.
+IND-SAN-011,ht,definition,"Faz premye analiz IPC malnitrisyon egi Ayiti a bay komin nan : 1 = akseptab, 2 = alèt, 3 = grav, 4 = kritik, 5 = trè kritik."
+IND-SAN-011,ht,limites_connues,"SE YON FAZ, SE PA YON TO : li klase jan sitiyasyon an grav pou omwen 20 % timoun yo, dapre ankèt SMART janvye-mas 2023 ak lòt prèv. SÈLMAN 64 KOMIN GEN YON VALÈ : yo te analize Lwès, Sidès, Nòdès, Nòdwès ak Nip komin pa komin ; Latibonit, Sant, Grandans, Nò ak Sid yo te analize an blòk, kidonk komin yo pa gen pwòp faz pa yo. Yo te analize Plezans Disid ak Gran Boukan ansanm. Se sitiyasyon aktyèl la, se pa pwojeksyon an."
+IND-SAN-011,ht,methode_calcul,"Nou li paragraf « Pou peryòd aktyèl la » nan rapò a, ki bay lis komin chak faz ; nou mare chak non ak referansyèl la, e total la dwe bay 63 inite (64 komin), sinon kalkil la kanpe."
+IND-SAN-011,ht,nom,Faz IPC malnitrisyon egi (des. 2023 – me 2024)
+IND-SAN-011,ht,sens_interpretation,Wo = sitiyasyon nitrisyon an pi grav
+IND-SAN-011,ht,unite,faz (1 a 5)
 IND-SEC-001,en,comparabilite,"Comparable between communes for the same period, where media coverage is similar."
 IND-SEC-001,en,definition,Number of political violence events and demonstrations reported by ACLED in the commune over the last twelve months available.
 IND-SEC-001,en,limites_connues,"REPORTED EVENTS, NOT ALL VIOLENCE: ACLED counts what media and its partners report. A poorly covered or inaccessible area may look calm. Many events are placed at the commune seat for lack of a better location. Non-commercial use (ACLED terms)."

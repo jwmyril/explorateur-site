@@ -417,8 +417,8 @@ catalogue_manifest.json,2026-09-19,archives/catalogue_manifest/2026-09-19-5.json
 catalogue_manifest.json,2026-09-19,archives/catalogue_manifest/2026-09-19-6.json,26302cc278517c6c249ccc810537603dd4fccc6064f1ebf3c8288871ebbf8529,4170,156,,,2026-09-19,vitrine,bd529fd93e,non
 catalogue_manifest.json,2026-09-20,archives/catalogue_manifest/2026-09-20.json,d935b0d2160895ee384d3f1e6c256c7253e7829567ce1eb5ddd017d619f2b464,4170,156,,,2026-09-20,vitrine,160cc5d927,non
 catalogue_manifest.json,2026-09-20,archives/catalogue_manifest/2026-09-20-2.json,76bcfa49c5a445d7df389d7f8e42f6ea35b5c9c8252698bb4957565179c46d32,4170,156,,,2026-09-20,vitrine,77b5c94307,non
-catalogue_manifest.json,2026-09-20,archives/catalogue_manifest/2026-09-20-3.json,18c6e16a621b2cee43a0bb616a763f56a2158b24fda4f68f0a029a2df532f21a,4170,156,,,2026-09-20,vitrine,f47f5536e7,oui
-catalogue_manifest.json,2026-09-20,archives/catalogue_manifest/2026-09-20-4.json,de8f474465307ea40b83855218b9a41da43310b5f07069b072c8e2e9480090dd,4170,156,,,2026-09-20,vitrine,fc7bdc60a8,non
+catalogue_manifest.json,2026-09-20,archives/catalogue_manifest/2026-09-20-3.json,18c6e16a621b2cee43a0bb616a763f56a2158b24fda4f68f0a029a2df532f21a,4170,156,,,2026-09-20,vitrine,f47f5536e7,non
+catalogue_manifest.json,2026-09-20,archives/catalogue_manifest/2026-09-20-4.json,de8f474465307ea40b83855218b9a41da43310b5f07069b072c8e2e9480090dd,4170,156,,,2026-09-20,vitrine,fc7bdc60a8,oui
 haiti_communes_simplifie.geojson,2026-08-14,archives/haiti_communes_simplifie/2026-08-14.geojson,e0162bfa16e701a3f71804c6b7a574bf0a943801fc5687f065807b2cbb681e64,231716,1,140,entités,2026-08-14,vitrine,5eda4cfd6c,oui
 haiti_contour_simplifie.geojson,2026-07-31,archives/haiti_contour_simplifie/2026-07-31.geojson,15b281bc0d8b87827805908cc7e90d0a9a3ceb8541b866650c1ca19d3946c3c1,16785,0,1,entités,2026-07-31,vitrine,3f56418955,oui
 haiti_departements_simplifie.geojson,2026-08-14,archives/haiti_departements_simplifie/2026-08-14.geojson,9824d2bce124ac292ca1750e679368c7c7fca85eccf997f6e05f0cb1031f3aa2,42967,1,10,entités,2026-08-14,vitrine,5eda4cfd6c,oui

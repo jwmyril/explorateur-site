@@ -10,11 +10,11 @@
  "nombre_entites_territoriales": 11707,
  "nombre_sections_communales": 570,
  "nombre_localites": 10945,
- "nombre_indicateurs_definis": 105,
- "nombre_indicateurs_publics": 104,
- "nombre_indicateurs_avec_valeur": 104,
- "nombre_observations": 12555,
- "nombre_valeurs_sourcees": 11435,
+ "nombre_indicateurs_definis": 109,
+ "nombre_indicateurs_publics": 108,
+ "nombre_indicateurs_avec_valeur": 108,
+ "nombre_observations": 13115,
+ "nombre_valeurs_sourcees": 11995,
  "nombre_absences_documentees": 1120,
  "nombre_sources": 63,
  "nombre_sources_integrees": 48,
@@ -152,5 +152,5 @@
  "prd_027_colonnes": 12,
  "prd_055_intervalles": 371,
  "prd_027_series": 84,
- "empreinte": "02adc91afdf7e16c"
+ "empreinte": "da88323ff47ce84d"
 }

@@ -1112,6 +1112,69 @@ IND-NIV-003,ht,methode_calcul,"Chan FI_Class kouch « Recurrence of Food Insecur
 IND-NIV-003,ht,nom,Konbyen fwa grangou tounen nan depatman an
 IND-NIV-003,ht,sens_interpretation,Wo = grangou tounen pi souvan
 IND-NIV-003,ht,unite,klas (1 a 3)
+IND-NIV-004,en,comparabilite,"Depends on the size of the commune: to compare, read the share (IND-NIV-005)."
+IND-NIV-004,en,definition,"Number of people in the commune that OCHA estimates need humanitarian assistance in 2025, all forms of need together."
+IND-NIV-004,en,limites_connues,"A COORDINATION ESTIMATE, NOT A HEAD COUNT: OCHA and the sector clusters build the Overview each year from surveys, displacement records and expert judgement. It is revised between editions and the scope of the sectors changes: a rise can come from the method as much as from the situation. The figure covers the whole of 2025, not a given day. Control: the sum of the 140 communes equals to the unit the national total served by the same source. SECTORS DO NOT ADD UP: someone who needs both water and health care counts once here. It also depends on the size of the commune: to compare, read the share (IND-NIV-005)."
+IND-NIV-004,en,methode_calcul,"HDX HAPI, commune level: the intersectoral row, category « total », status INN, 2025 period. The sum of the 140 communes must equal the national figure."
+IND-NIV-004,en,nom,People in need (2025)
+IND-NIV-004,en,sens_interpretation,High = more people in need
+IND-NIV-004,en,unite,people
+IND-NIV-004,es,comparabilite,"Depende del tamaño de la comuna: para comparar, leer la parte (IND-NIV-005)."
+IND-NIV-004,es,definition,"Número de personas de la comuna que OCHA estima que necesitan ayuda humanitaria en 2025, todas las formas de necesidad juntas."
+IND-NIV-004,es,limites_connues,"UNA ESTIMACIóN DE COORDINACIÓN, NO UN RECUENTO: OCHA y los clústeres sectoriales elaboran el Panorama cada año a partir de encuestas, registros de desplazamiento y criterio experto. Se revisa entre ediciones y el alcance de los sectores cambia: un aumento puede venir del método tanto como de la situación. La cifra cubre todo 2025, no un día concreto. Control: la suma de las 140 comunas iguala a la unidad el total nacional servido por la misma fuente. LOS SECTORES NO SE SUMAN: quien necesita agua Y atención sanitaria cuenta una vez aquí. Depende también del tamaño de la comuna: para comparar, leer la parte (IND-NIV-005)."
+IND-NIV-004,es,methode_calcul,"HDX HAPI, nivel comunal: la fila intersectorial, categoría « total », estado INN, periodo 2025. La suma de las 140 comunas debe igualar la cifra nacional."
+IND-NIV-004,es,nom,Personas en necesidad (2025)
+IND-NIV-004,es,sens_interpretation,Alto = más personas en necesidad
+IND-NIV-004,es,unite,personas
+IND-NIV-004,ht,comparabilite,"Sa depann de gwosè komin nan : pou konpare, li pòsyon an (IND-NIV-005)."
+IND-NIV-004,ht,definition,"Konbyen moun nan komin nan OCHA estime ki bezwen èd imanitè an 2025, tout kalite bezwen ansanm."
+IND-NIV-004,ht,limites_connues,"SE YON ESTIMASYON KOWÒDINASYON AN FÈ, SE PA YON KONTAJ : chak ane OCHA ak gwoup sektè yo bati Apèsi a ak ankèt, ak done sou deplasman, ak sa espè yo di. Yo revize l chak edisyon, e sektè yo pa toujou menm : yon ogmantasyon ka soti nan metòd la otan ke nan sitiyasyon an. Chif la kouvri tout ane 2025 la, se pa yon jou presi. Kontwòl nou : total 140 komin yo bay egzakteman menm chif ak total nasyonal menm sous la sèvi. SEKTÈ YO PA ADISYONE : yon moun ki bezwen dlo AK swen konte yon sèl fwa isit la. Sa depann tou de gwosè komin nan : pou konpare, li pòsyon an (IND-NIV-005)."
+IND-NIV-004,ht,methode_calcul,"API HDX HAPI, nivo komin : sèl liy entèsektoryèl la, kategori « total », estati INN, peryòd 2025. Total 140 komin yo dwe bay menm chif ak total nasyonal la."
+IND-NIV-004,ht,nom,Moun ki bezwen èd (2025)
+IND-NIV-004,ht,sens_interpretation,Wo = plis moun ki bezwen èd
+IND-NIV-004,ht,unite,moun
+IND-NIV-005,en,comparabilite,"Comparable between communes within the same Overview; from one Overview to the next, the method and the scope of the sectors change."
+IND-NIV-005,en,definition,"Share of the commune's residents that OCHA estimates need humanitarian assistance in 2025, against the population the Overview itself uses."
+IND-NIV-005,en,limites_connues,"A COORDINATION ESTIMATE, NOT A HEAD COUNT: OCHA and the sector clusters build the Overview each year from surveys, displacement records and expert judgement. It is revised between editions and the scope of the sectors changes: a rise can come from the method as much as from the situation. The figure covers the whole of 2025, not a given day. Control: the sum of the 140 communes equals to the unit the national total served by the same source. THE DENOMINATOR IS THE OVERVIEW'S OWN, not the Explorateur's reference: both figures come from the same document. TWO COMMUNES HAVE NO VALUE — Anse-à-Pitre and Grand Gosier, on the Dominican border: need there exceeds the resident population because it counts people pushed back from the Dominican Republic."
+IND-NIV-005,en,methode_calcul,People in need ÷ the same Overview's population × 100. Not published where the ratio exceeds 100%.
+IND-NIV-005,en,nom,Share of the population in need (2025)
+IND-NIV-005,en,sens_interpretation,High = larger share in need
+IND-NIV-005,en,unite,%
+IND-NIV-005,es,comparabilite,"Comparable entre comunas dentro del mismo Panorama; de un Panorama a otro, el método y el alcance de los sectores cambian."
+IND-NIV-005,es,definition,"Parte de los habitantes de la comuna que OCHA estima que necesitan ayuda humanitaria en 2025, sobre la población que el propio Panorama utiliza."
+IND-NIV-005,es,limites_connues,"UNA ESTIMACIóN DE COORDINACIÓN, NO UN RECUENTO: OCHA y los clústeres sectoriales elaboran el Panorama cada año a partir de encuestas, registros de desplazamiento y criterio experto. Se revisa entre ediciones y el alcance de los sectores cambia: un aumento puede venir del método tanto como de la situación. La cifra cubre todo 2025, no un día concreto. Control: la suma de las 140 comunas iguala a la unidad el total nacional servido por la misma fuente. EL DENOMINADOR ES EL DEL PANORAMA, no el del referencial del Explorateur: ambas cifras vienen del mismo documento. DOS COMUNAS NO TIENEN VALOR — Anse-à-Pitre y Grand Gosier, en la frontera dominicana: allí la necesidad supera a la población residente porque cuenta a las personas devueltas desde la República Dominicana."
+IND-NIV-005,es,methode_calcul,Personas en necesidad ÷ población del mismo Panorama × 100. No se publica cuando la razón supera el 100 %.
+IND-NIV-005,es,nom,Parte de la población en necesidad (2025)
+IND-NIV-005,es,sens_interpretation,Alto = mayor parte en necesidad
+IND-NIV-005,es,unite,%
+IND-NIV-005,ht,comparabilite,"Nou ka konpare komin yo nan menm Apèsi a ; men de yon Apèsi a yon lòt, metòd la ak sektè yo chanje."
+IND-NIV-005,ht,definition,"Pòsyon moun nan komin nan OCHA estime ki bezwen èd imanitè an 2025, sou popilasyon Apèsi a menm kenbe."
+IND-NIV-005,ht,limites_connues,"SE YON ESTIMASYON KOWÒDINASYON AN FÈ, SE PA YON KONTAJ : chak ane OCHA ak gwoup sektè yo bati Apèsi a ak ankèt, ak done sou deplasman, ak sa espè yo di. Yo revize l chak edisyon, e sektè yo pa toujou menm : yon ogmantasyon ka soti nan metòd la otan ke nan sitiyasyon an. Chif la kouvri tout ane 2025 la, se pa yon jou presi. Kontwòl nou : total 140 komin yo bay egzakteman menm chif ak total nasyonal menm sous la sèvi. DENOMINATÈ A SE SA APÈSI A BAY, se pa referansyèl Explorateur la : de chif yo soti nan menm dokiman an. DE KOMIN PA GEN VALÈ — Ansapit ak Grangozye, sou fwontyè dominikèn nan : bezwen an depase popilasyon ki rete a paske li konte moun Repiblik Dominikèn voye tounen yo."
+IND-NIV-005,ht,methode_calcul,Moun ki bezwen èd ÷ popilasyon menm Apèsi a × 100. Nou pa pibliye l lè rapò a depase 100 %.
+IND-NIV-005,ht,nom,Pòsyon popilasyon an ki bezwen èd (2025)
+IND-NIV-005,ht,sens_interpretation,Wo = pi gwo pòsyon nan bezwen
+IND-NIV-005,ht,unite,%
+IND-NIV-006,en,comparabilite,"Depends on the size of the commune, and on what the plan sets out to do."
+IND-NIV-006,en,definition,Number of people in the commune the humanitarian response plan sets out to assist in 2025.
+IND-NIV-006,en,limites_connues,"A COORDINATION ESTIMATE, NOT A HEAD COUNT: OCHA and the sector clusters build the Overview each year from surveys, displacement records and expert judgement. It is revised between editions and the scope of the sectors changes: a rise can come from the method as much as from the situation. The figure covers the whole of 2025, not a given day. Control: the sum of the 140 communes equals to the unit the national total served by the same source. THIS IS NOT AID RECEIVED, NOR EVEN PROMISED: it is what the plan aims at, under access and funding constraints. Nationwide, 3.94 million people are targeted against 5.99 million in need — the gap measures what the response gives up covering."
+IND-NIV-006,en,methode_calcul,"Same selection, status TGT, with the same control against the national total."
+IND-NIV-006,en,nom,People targeted by the response plan (2025)
+IND-NIV-006,en,sens_interpretation,High = more people targeted
+IND-NIV-006,en,unite,people
+IND-NIV-006,es,comparabilite,Depende del tamaño de la comuna y de lo que el plan se propone hacer.
+IND-NIV-006,es,definition,Número de personas de la comuna a las que el plan de respuesta humanitaria se propone asistir en 2025.
+IND-NIV-006,es,limites_connues,"UNA ESTIMACIóN DE COORDINACIÓN, NO UN RECUENTO: OCHA y los clústeres sectoriales elaboran el Panorama cada año a partir de encuestas, registros de desplazamiento y criterio experto. Se revisa entre ediciones y el alcance de los sectores cambia: un aumento puede venir del método tanto como de la situación. La cifra cubre todo 2025, no un día concreto. Control: la suma de las 140 comunas iguala a la unidad el total nacional servido por la misma fuente. NO ES AYUDA RECIBIDA, NI SIQUIERA PROMETIDA: es lo que el plan se propone, bajo restricciones de acceso y financiación. En todo el país se apunta a 3,94 millones de personas frente a 5,99 millones en necesidad: la diferencia mide lo que la respuesta renuncia a cubrir."
+IND-NIV-006,es,methode_calcul,"Misma selección, estado TGT, con el mismo control contra el total nacional."
+IND-NIV-006,es,nom,Personas previstas por el plan de respuesta (2025)
+IND-NIV-006,es,sens_interpretation,Alto = más personas previstas
+IND-NIV-006,es,unite,personas
+IND-NIV-006,ht,comparabilite,"Sa depann de gwosè komin nan, ak sa plan an mete tèt li pou l fè."
+IND-NIV-006,ht,definition,Konbyen moun nan komin nan plan repons imanitè a mete tèt li pou l ede an 2025.
+IND-NIV-006,ht,limites_connues,"SE YON ESTIMASYON KOWÒDINASYON AN FÈ, SE PA YON KONTAJ : chak ane OCHA ak gwoup sektè yo bati Apèsi a ak ankèt, ak done sou deplasman, ak sa espè yo di. Yo revize l chak edisyon, e sektè yo pa toujou menm : yon ogmantasyon ka soti nan metòd la otan ke nan sitiyasyon an. Chif la kouvri tout ane 2025 la, se pa yon jou presi. Kontwòl nou : total 140 komin yo bay egzakteman menm chif ak total nasyonal menm sous la sèvi. SE PA ÈD MOUN RESEVWA, ni menm èd yo pwomèt : se sa plan an vize, anba kontrent aksè ak lajan. Nan tout peyi a, yo vize 3,94 milyon moun pou 5,99 milyon ki nan bezwen — diferans lan di sa repons lan pa pral kouvri."
+IND-NIV-006,ht,methode_calcul,"Menm seleksyon an, estati TGT, ak menm kontwòl la sou total nasyonal la."
+IND-NIV-006,ht,nom,Moun plan repons lan vize (2025)
+IND-NIV-006,ht,sens_interpretation,Wo = plis moun plan an vize
+IND-NIV-006,ht,unite,moun
 IND-POP-001,en,comparabilite,A methodological break is likely between the 2003 census and recent estimates — to be flagged.
 IND-POP-001,en,definition,Estimated resident population of the territorial entity.
 IND-POP-001,en,limites_connues,"No fifth census: any recent value is an estimate, status E, never O."

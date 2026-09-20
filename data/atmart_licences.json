@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 137
+  "fichiers": 136
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -81,7 +81,6 @@
    "atmart_resultats_emmus.json",
    "atmart_resultats_emmus_HT.csv",
    "atmart_sante_declaree.json",
-   "atmart_series_trimestrielles_HT.csv",
    "atmart_solaire_communes.json",
    "atmart_sols_communes.json",
    "atmart_transferts_departements.json",
@@ -625,9 +624,10 @@
     "SRC-070",
     "SRC-071",
     "SRC-072",
+    "SRC-073",
     "SRC-ATM-001"
    ],
-   "attribution": "ACLED via HDX ; Atmart Data ; CAM Transfer — maison de transfert agréée par la BRH ; CEP — Conseil électoral provisoire ; CNIGS / UN OCHA ; CNIGS via HaitiData (geoserver WFS) ; CONATEL — Conseil National des Télécommunications ; Election Passport — David Lublin, American University ; GeoNames ; Humanitarian OpenStreetMap Team (HOT) via HDX ; IHSI ; IHSI — Institut Haïtien de Statistique et d'Informatique ; IPC — Cadre intégré de classification de la sécurité alimentaire ; MARNDR avec l'appui de la FAO ; Ministère du Tourisme et des Industries créatives (MTIC) ; OCHA Haïti ; OCHA Haïti (via HDX) ; OIM — Displacement Tracking Matrix (via HDX) ; OpenStreetMap (contributeurs) via Overpass API ; PAM (WFP) ; Programme alimentaire mondial (PAM/WFP) — unité VAM ; UNFPA via OCHA HDX ; Water Point Data Exchange (WPdx) via HDX"
+   "attribution": "ACLED via HDX ; Atmart Data ; CAM Transfer — maison de transfert agréée par la BRH ; CEP — Conseil électoral provisoire ; CNIGS / UN OCHA ; CNIGS via HaitiData (geoserver WFS) ; CONATEL — Conseil National des Télécommunications ; Election Passport — David Lublin, American University ; GeoNames ; Humanitarian OpenStreetMap Team (HOT) via HDX ; IHSI ; IHSI — Institut Haïtien de Statistique et d'Informatique ; IPC — Cadre intégré de classification de la sécurité alimentaire ; MARNDR avec l'appui de la FAO ; Ministère du Tourisme et des Industries créatives (MTIC) ; OCHA Haïti ; OCHA Haïti (via HDX) ; OCHA — Humanitarian Programme Cycle Tools, avec les clusters sectoriels en Haïti ; OIM — Displacement Tracking Matrix (via HDX) ; OpenStreetMap (contributeurs) via Overpass API ; PAM (WFP) ; Programme alimentaire mondial (PAM/WFP) — unité VAM ; UNFPA via OCHA HDX ; Water Point Data Exchange (WPdx) via HDX"
   },
   "atmart_indicateurs_national_HT.csv": {
    "licence": "CC BY 4.0",
@@ -1042,14 +1042,6 @@
     "SRC-ILOSTAT"
    ],
    "attribution": "Banque mondiale ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail"
-  },
-  "atmart_series_trimestrielles_HT.csv": {
-   "licence": "CC BY 4.0",
-   "sources": [
-    "SRC-056",
-    "SRC-060"
-   ],
-   "attribution": "BRH — Banque de la République d'Haïti ; U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
   },
   "atmart_solaire_communes.json": {
    "licence": "CC BY 4.0",

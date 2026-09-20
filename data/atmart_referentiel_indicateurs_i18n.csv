@@ -1091,6 +1091,27 @@ IND-NIV-002,ht,methode_calcul,Ekatip valè selil ki mare ak komin nan.
 IND-NIV-002,ht,nom,Diferans richès andedan komin nan (modèl)
 IND-NIV-002,ht,sens_interpretation,Wo = komin nan pi inegal dapre modèl la
 IND-NIV-002,ht,unite,endis
+IND-NIV-003,en,comparabilite,"Comparable between DEPARTMENTS, never between communes of the same department: they all carry the same rating."
+IND-NIV-003,en,definition,"Class assigned to the department by WFP for how often food insecurity returned between 2007 and 2016: 1 = low, 2 = medium, 3 = high."
+IND-NIV-003,en,limites_connues,"THIS VALUE BELONGS TO THE DEPARTMENT, NOT TO THE COMMUNE. WFP published only ten polygons, one per department, so every commune of a department carries the same rating, and a flat commune in a mountainous department will read « high » through no fault of its own relief. Vintage: published 2017, hazard statistics 1998-2010 — before Matthew (2016) and before the displacement since 2021. IT COUNTS REPETITION, NOT TODAY'S SITUATION: a department often hit between 2007 and 2016 stays « high » even after a good season. For the current state, read the acute malnutrition IPC phase (IND-SAN-011)."
+IND-NIV-003,en,methode_calcul,"The FI_Class field of the « Recurrence of Food Insecurity » layer, same attachment."
+IND-NIV-003,en,nom,Recurrence of food insecurity in the department
+IND-NIV-003,en,sens_interpretation,High = food insecurity returns more often
+IND-NIV-003,en,unite,class (1 to 3)
+IND-NIV-003,es,comparabilite,"Comparable entre DEPARTAMENTOS, nunca entre comunas de un mismo departamento: todas llevan la misma nota."
+IND-NIV-003,es,definition,"Clase asignada al departamento por el PMA según la frecuencia con que la inseguridad alimentaria volvió entre 2007 y 2016: 1 = baja, 2 = media, 3 = alta."
+IND-NIV-003,es,limites_connues,"ESTE VALOR ES EL DEL DEPARTAMENTO, NO EL DE LA COMUNA. El PMA publicó solo diez polígonos, uno por departamento: todas las comunas de un departamento llevan la misma nota, y una comuna llana de un departamento montañoso aparecerá como « alto » sin que su relieve tenga nada que ver. Añada: publicación de 2017, estadísticas de amenazas 1998-2010 — antes de Matthew (2016) y de los desplazamientos desde 2021. CUENTA LA REPETICIÓN, NO LA SITUACIÓN DE HOY: un departamento golpeado a menudo entre 2007 y 2016 sigue siendo « alto » aunque la última temporada haya sido buena. Para el estado actual, leer la fase IPC de desnutrición aguda (IND-SAN-011)."
+IND-NIV-003,es,methode_calcul,"Campo FI_Class de la capa « Recurrence of Food Insecurity », mismo vínculo."
+IND-NIV-003,es,nom,Recurrencia de la inseguridad alimentaria del departamento
+IND-NIV-003,es,sens_interpretation,Alto = el hambre vuelve más a menudo
+IND-NIV-003,es,unite,clase (1 a 3)
+IND-NIV-003,ht,comparabilite,"Nou ka konpare DEPATMAN yo, men pa komin ki nan menm depatman an : yo tout gen menm nòt la."
+IND-NIV-003,ht,definition,"Klas PAM bay depatman an pou konbyen fwa grangou tounen ant 2007 ak 2016 : 1 = fèb, 2 = mwayen, 3 = wo."
+IND-NIV-003,ht,limites_connues,"CHIF SA A SE POU DEPATMAN AN, SE PA POU KOMIN NAN. PAM pibliye dis moso sèlman, yon moso pou chak depatman : se konsa tout komin yon depatman pote menm nòt la. Yon komin ki plat, nan yon depatman ki gen anpil mòn, ap parèt « wo » san mòn pa gen anyen pou wè ladan l. Ane yo : yo pibliye an 2017, sou sa ki pase ant 1998 ak 2010 — anvan Matthew (2016), anvan moun yo kòmanse deplase depi 2021. Li konte konbyen fwa bagay la tounen, li pa di kote nou ye jodi a : yon depatman ki te soufri souvan ant 2007 ak 2016 rete « wo » menm si dènye sezon an te bon. Pou jodi a, gade faz IPC malnitrisyon egi a (IND-SAN-011)."
+IND-NIV-003,ht,methode_calcul,"Chan FI_Class kouch « Recurrence of Food Insecurity » la, menm rattachman an."
+IND-NIV-003,ht,nom,Konbyen fwa grangou tounen nan depatman an
+IND-NIV-003,ht,sens_interpretation,Wo = grangou tounen pi souvan
+IND-NIV-003,ht,unite,klas (1 a 3)
 IND-POP-001,en,comparabilite,A methodological break is likely between the 2003 census and recent estimates — to be flagged.
 IND-POP-001,en,definition,Estimated resident population of the territorial entity.
 IND-POP-001,en,limites_connues,"No fifth census: any recent value is an estimate, status E, never O."
@@ -1679,6 +1700,69 @@ IND-RIS-006,ht,methode_calcul,"Pikselè 90 m nan poligòn komin nan, san dlo pè
 IND-RIS-006,ht,nom,Pòsyon komin nan ki ta anba dlo nan yon inondasyon rivyè ki rive yon fwa chak san an (modèl)
 IND-RIS-006,ht,sens_interpretation,Wo = plis teritwa ki ekspoze
 IND-RIS-006,ht,unite,%
+IND-RIS-007,en,comparabilite,"Comparable between DEPARTMENTS, never between communes of the same department: they all carry the same rating."
+IND-RIS-007,en,definition,"Landslide-risk class assigned to the department by WFP's Integrated Context Analysis: 1 = low, 2 = medium, 3 = high."
+IND-RIS-007,en,limites_connues,"THIS VALUE BELONGS TO THE DEPARTMENT, NOT TO THE COMMUNE. WFP published only ten polygons, one per department, so every commune of a department carries the same rating, and a flat commune in a mountainous department will read « high » through no fault of its own relief. Vintage: published 2017, hazard statistics 1998-2010 — before Matthew (2016) and before the displacement since 2021."
+IND-RIS-007,en,methode_calcul,"The LS_Class field of the « Landslide Risk » layer, attached to the commune through its department p-code (HT01 to HT10); no geometric computation."
+IND-RIS-007,en,nom,Landslide risk of the department
+IND-RIS-007,en,sens_interpretation,High = greater landslide risk
+IND-RIS-007,en,unite,class (1 to 3)
+IND-RIS-007,es,comparabilite,"Comparable entre DEPARTAMENTOS, nunca entre comunas de un mismo departamento: todas llevan la misma nota."
+IND-RIS-007,es,definition,"Clase de riesgo de deslizamiento asignada al departamento por el Análisis de Contexto Integrado del PMA: 1 = bajo, 2 = medio, 3 = alto."
+IND-RIS-007,es,limites_connues,"ESTE VALOR ES EL DEL DEPARTAMENTO, NO EL DE LA COMUNA. El PMA publicó solo diez polígonos, uno por departamento: todas las comunas de un departamento llevan la misma nota, y una comuna llana de un departamento montañoso aparecerá como « alto » sin que su relieve tenga nada que ver. Añada: publicación de 2017, estadísticas de amenazas 1998-2010 — antes de Matthew (2016) y de los desplazamientos desde 2021."
+IND-RIS-007,es,methode_calcul,"Campo LS_Class de la capa « Landslide Risk », vinculado a la comuna por el p-code de su departamento (HT01 a HT10); sin cálculo geométrico."
+IND-RIS-007,es,nom,Riesgo de deslizamiento del departamento
+IND-RIS-007,es,sens_interpretation,Alto = mayor riesgo de deslizamiento
+IND-RIS-007,es,unite,clase (1 a 3)
+IND-RIS-007,ht,comparabilite,"Nou ka konpare DEPATMAN yo, men pa komin ki nan menm depatman an : yo tout gen menm nòt la."
+IND-RIS-007,ht,definition,"Klas risk glisman tèren PAM bay depatman an nan analiz kontèks entegre li a : 1 = fèb, 2 = mwayen, 3 = wo."
+IND-RIS-007,ht,limites_connues,"CHIF SA A SE POU DEPATMAN AN, SE PA POU KOMIN NAN. PAM pibliye dis moso sèlman, yon moso pou chak depatman : se konsa tout komin yon depatman pote menm nòt la. Yon komin ki plat, nan yon depatman ki gen anpil mòn, ap parèt « wo » san mòn pa gen anyen pou wè ladan l. Ane yo : yo pibliye an 2017, sou sa ki pase ant 1998 ak 2010 — anvan Matthew (2016), anvan moun yo kòmanse deplase depi 2021."
+IND-RIS-007,ht,methode_calcul,"Chan LS_Class kouch « Landslide Risk » la, nou rattache l ak komin nan pa p-kòd depatman li (HT01 rive HT10) ; nou pa fè okenn kalkil jeyometrik."
+IND-RIS-007,ht,nom,Risk glisman tèren nan depatman an
+IND-RIS-007,ht,sens_interpretation,Wo = plis risk glisman
+IND-RIS-007,ht,unite,klas (1 a 3)
+IND-RIS-008,en,comparabilite,"Comparable between DEPARTMENTS, never between communes of the same department: they all carry the same rating."
+IND-RIS-008,en,definition,"Drought-risk class assigned to the department by WFP: 1 = low, 2 = medium, 3 = high."
+IND-RIS-008,en,limites_connues,"THIS VALUE BELONGS TO THE DEPARTMENT, NOT TO THE COMMUNE. WFP published only ten polygons, one per department, so every commune of a department carries the same rating, and a flat commune in a mountainous department will read « high » through no fault of its own relief. Vintage: published 2017, hazard statistics 1998-2010 — before Matthew (2016) and before the displacement since 2021."
+IND-RIS-008,en,methode_calcul,"The Dr_Class field of the « Drought Risk » layer, same attachment."
+IND-RIS-008,en,nom,Drought risk of the department
+IND-RIS-008,en,sens_interpretation,High = greater drought risk
+IND-RIS-008,en,unite,class (1 to 3)
+IND-RIS-008,es,comparabilite,"Comparable entre DEPARTAMENTOS, nunca entre comunas de un mismo departamento: todas llevan la misma nota."
+IND-RIS-008,es,definition,"Clase de riesgo de sequía asignada al departamento por el PMA: 1 = bajo, 2 = medio, 3 = alto."
+IND-RIS-008,es,limites_connues,"ESTE VALOR ES EL DEL DEPARTAMENTO, NO EL DE LA COMUNA. El PMA publicó solo diez polígonos, uno por departamento: todas las comunas de un departamento llevan la misma nota, y una comuna llana de un departamento montañoso aparecerá como « alto » sin que su relieve tenga nada que ver. Añada: publicación de 2017, estadísticas de amenazas 1998-2010 — antes de Matthew (2016) y de los desplazamientos desde 2021."
+IND-RIS-008,es,methode_calcul,"Campo Dr_Class de la capa « Drought Risk », mismo vínculo."
+IND-RIS-008,es,nom,Riesgo de sequía del departamento
+IND-RIS-008,es,sens_interpretation,Alto = mayor riesgo de sequía
+IND-RIS-008,es,unite,clase (1 a 3)
+IND-RIS-008,ht,comparabilite,"Nou ka konpare DEPATMAN yo, men pa komin ki nan menm depatman an : yo tout gen menm nòt la."
+IND-RIS-008,ht,definition,"Klas risk sechrès PAM bay depatman an : 1 = fèb, 2 = mwayen, 3 = wo."
+IND-RIS-008,ht,limites_connues,"CHIF SA A SE POU DEPATMAN AN, SE PA POU KOMIN NAN. PAM pibliye dis moso sèlman, yon moso pou chak depatman : se konsa tout komin yon depatman pote menm nòt la. Yon komin ki plat, nan yon depatman ki gen anpil mòn, ap parèt « wo » san mòn pa gen anyen pou wè ladan l. Ane yo : yo pibliye an 2017, sou sa ki pase ant 1998 ak 2010 — anvan Matthew (2016), anvan moun yo kòmanse deplase depi 2021."
+IND-RIS-008,ht,methode_calcul,"Chan Dr_Class kouch « Drought Risk » la, menm rattachman an."
+IND-RIS-008,ht,nom,Risk sechrès nan depatman an
+IND-RIS-008,ht,sens_interpretation,Wo = plis risk sechrès
+IND-RIS-008,ht,unite,klas (1 a 3)
+IND-RIS-009,en,comparabilite,"Comparable between DEPARTMENTS, never between communes of the same department: they all carry the same rating."
+IND-RIS-009,en,definition,"Share of the department's land that WFP's land-degradation study classes as exposed to erosion, from 53.7% (Nord-Est) to 90.3% (Sud-Est)."
+IND-RIS-009,en,limites_connues,"THIS VALUE BELONGS TO THE DEPARTMENT, NOT TO THE COMMUNE. WFP published only ten polygons, one per department, so every commune of a department carries the same rating, and a flat commune in a mountainous department will read « high » through no fault of its own relief. Vintage: published 2017, hazard statistics 1998-2010 — before Matthew (2016) and before the displacement since 2021."
+IND-RIS-009,en,methode_calcul,"The ErosPr field of the « Land Degradation 2001-2012 » layer, as a percentage."
+IND-RIS-009,en,nom,Erosion probability of the department
+IND-RIS-009,en,sens_interpretation,High = larger share exposed to erosion
+IND-RIS-009,en,unite,%
+IND-RIS-009,es,comparabilite,"Comparable entre DEPARTAMENTOS, nunca entre comunas de un mismo departamento: todas llevan la misma nota."
+IND-RIS-009,es,definition,"Parte del territorio del departamento que el estudio de degradación de tierras del PMA clasifica como expuesta a la erosión, del 53,7 % (Noreste) al 90,3 % (Sudeste)."
+IND-RIS-009,es,limites_connues,"ESTE VALOR ES EL DEL DEPARTAMENTO, NO EL DE LA COMUNA. El PMA publicó solo diez polígonos, uno por departamento: todas las comunas de un departamento llevan la misma nota, y una comuna llana de un departamento montañoso aparecerá como « alto » sin que su relieve tenga nada que ver. Añada: publicación de 2017, estadísticas de amenazas 1998-2010 — antes de Matthew (2016) y de los desplazamientos desde 2021."
+IND-RIS-009,es,methode_calcul,"Campo ErosPr de la capa « Land Degradation 2001-2012 », en porcentaje."
+IND-RIS-009,es,nom,Probabilidad de erosión del departamento
+IND-RIS-009,es,sens_interpretation,Alto = mayor parte expuesta a la erosión
+IND-RIS-009,es,unite,%
+IND-RIS-009,ht,comparabilite,"Nou ka konpare DEPATMAN yo, men pa komin ki nan menm depatman an : yo tout gen menm nòt la."
+IND-RIS-009,ht,definition,"Pòsyon tè depatman an etid PAM sou degradasyon tè yo klase kòm tè ki ka pèdi ak ewozyon, depi 53,7 % (Nòdès) rive 90,3 % (Sidès)."
+IND-RIS-009,ht,limites_connues,"CHIF SA A SE POU DEPATMAN AN, SE PA POU KOMIN NAN. PAM pibliye dis moso sèlman, yon moso pou chak depatman : se konsa tout komin yon depatman pote menm nòt la. Yon komin ki plat, nan yon depatman ki gen anpil mòn, ap parèt « wo » san mòn pa gen anyen pou wè ladan l. Ane yo : yo pibliye an 2017, sou sa ki pase ant 1998 ak 2010 — anvan Matthew (2016), anvan moun yo kòmanse deplase depi 2021."
+IND-RIS-009,ht,methode_calcul,"Chan ErosPr kouch « Land Degradation 2001-2012 » la, an pousantaj."
+IND-RIS-009,ht,nom,Pòsyon depatman an ki ka pèdi tè
+IND-RIS-009,ht,sens_interpretation,Wo = plis tè ki ka pèdi
+IND-RIS-009,ht,unite,%
 IND-SAN-001,en,comparabilite,NOT comparable between communes outside the covered area: the source covers only 14 communes out of 140.
 IND-SAN-001,en,definition,Number of operating health facilities recorded.
 IND-SAN-001,en,limites_connues,"PARTIAL COVERAGE — 14 communes (Artibonite, Centre, Nord, Ouest). An absent commune does not have zero facilities: it is not covered, hence status N. 2023 census."

@@ -125,6 +125,69 @@ IND-AGR-001,ht,methode_calcul,Pati piksèl WorldCover yo klase « tè kiltive »
 IND-AGR-001,ht,nom,Pati nan teritwa a ki nan jaden
 IND-AGR-001,ht,sens_interpretation,Wo = plis tè yo travay
 IND-AGR-001,ht,unite,% sifas komin nan
+IND-AGR-002,en,comparabilite,"Comparable between the 35 communes of the three published departments, for the 2008-2009 season."
+IND-AGR-002,en,definition,Number of agricultural holdings counted in the commune by the 2008-2009 general agricultural census.
+IND-AGR-002,en,limites_connues,"A 2008-2009 CENSUS, NEVER UPDATED. It is exhaustive and reliable for its year, and that year precedes the 2010 earthquake, Hurricane Matthew (2016) and the displacement since 2021. THREE DEPARTMENTS ONLY: the Nippes, Sud and Grande-Anse reports are available; the seven others remain to be found. The original unit is the carreau (1 carreau = 1.29 hectares). No licence is declared by the ministry: published with citation, never sold."
+IND-AGR-002,en,methode_calcul,"Table 1.3 of the department report; the sum of the communes must match the printed total, otherwise the reading is refused."
+IND-AGR-002,en,nom,Farms recorded (2008-2009)
+IND-AGR-002,en,sens_interpretation,High = more farms recorded
+IND-AGR-002,en,unite,farms
+IND-AGR-002,es,comparabilite,"Comparable entre las 35 comunas de los tres departamentos publicados, para la campaña 2008-2009."
+IND-AGR-002,es,definition,Número de explotaciones agrícolas contadas en la comuna por el censo general agropecuario de 2008-2009.
+IND-AGR-002,es,limites_connues,"UN CENSO DE 2008-2009, NUNCA ACTUALIZADO. Es exhaustivo y fiable para su año, y ese año precede al terremoto de 2010, al huracán Matthew (2016) y a los desplazamientos desde 2021. SOLO TRES DEPARTAMENTOS: están disponibles los informes de Nippes, Sud y Grande-Anse; los otros siete quedan por encontrar. La unidad original es el carreau (1 carreau = 1,29 hectáreas). El ministerio no declara licencia: publicado con cita, nunca vendido."
+IND-AGR-002,es,methode_calcul,"Cuadro 1.3 del informe departamental; la suma de las comunas debe coincidir con el total impreso, si no la lectura se rechaza."
+IND-AGR-002,es,nom,Explotaciones agrícolas registradas (2008-2009)
+IND-AGR-002,es,sens_interpretation,Alto = más explotaciones registradas
+IND-AGR-002,es,unite,explotaciones
+IND-AGR-002,ht,comparabilite,Nou ka konpare 35 komin nan twa depatman yo pou ane 2008-2009 la.
+IND-AGR-002,ht,definition,Konbyen fèm agrikòl resansman jeneral agrikilti 2008-2009 la te konte nan komin nan.
+IND-AGR-002,ht,limites_connues,"SE YON RESANSMAN 2008-2009, YO PA JANM REFÈ L. Li konte tout bagay e li serye pou ane sa a, men ane sa a vin anvan tranblemanntè 2010 la, anvan siklòn Matthew (2016) e anvan deplasman depi 2021 yo. TWA DEPATMAN SÈLMAN : nou jwenn rapò Nip, Sid ak Grandans ; sèt lòt yo rete pou jwenn. Inite orijinal la se kawo (1 kawo = 1,29 ekta). Ministè a pa deklare okenn lisans : nou pibliye ak sitasyon, nou pa vann li."
+IND-AGR-002,ht,methode_calcul,"Tablo 1.3 rapò depatman an ; total komin yo dwe bay menm chif ak total ki enprime a, sinon nou refize lekti a."
+IND-AGR-002,ht,nom,Fèm agrikòl yo te konte (2008-2009)
+IND-AGR-002,ht,sens_interpretation,Wo = plis fèm yo konte
+IND-AGR-002,ht,unite,fèm
+IND-AGR-003,en,comparabilite,"Comparable between the 35 communes of the three published departments, for the 2008-2009 season."
+IND-AGR-003,en,definition,"Agricultural area used by the commune's holdings, converted to hectares from the census's carreaux."
+IND-AGR-003,en,limites_connues,"A 2008-2009 CENSUS, NEVER UPDATED. It is exhaustive and reliable for its year, and that year precedes the 2010 earthquake, Hurricane Matthew (2016) and the displacement since 2021. THREE DEPARTMENTS ONLY: the Nippes, Sud and Grande-Anse reports are available; the seven others remain to be found. The original unit is the carreau (1 carreau = 1.29 hectares). No licence is declared by the ministry: published with citation, never sold."
+IND-AGR-003,en,methode_calcul,"SAU column of the same table, in carreaux, multiplied by 1.29 to obtain hectares."
+IND-AGR-003,en,nom,Utilised agricultural area (2008-2009)
+IND-AGR-003,en,sens_interpretation,High = more cultivated area
+IND-AGR-003,en,unite,hectares
+IND-AGR-003,es,comparabilite,"Comparable entre las 35 comunas de los tres departamentos publicados, para la campaña 2008-2009."
+IND-AGR-003,es,definition,"Superficie agrícola utilizada por las explotaciones de la comuna, convertida a hectáreas desde los carreaux del censo."
+IND-AGR-003,es,limites_connues,"UN CENSO DE 2008-2009, NUNCA ACTUALIZADO. Es exhaustivo y fiable para su año, y ese año precede al terremoto de 2010, al huracán Matthew (2016) y a los desplazamientos desde 2021. SOLO TRES DEPARTAMENTOS: están disponibles los informes de Nippes, Sud y Grande-Anse; los otros siete quedan por encontrar. La unidad original es el carreau (1 carreau = 1,29 hectáreas). El ministerio no declara licencia: publicado con cita, nunca vendido."
+IND-AGR-003,es,methode_calcul,"Columna SAU del mismo cuadro, en carreaux, multiplicada por 1,29 para obtener hectáreas."
+IND-AGR-003,es,nom,Superficie agrícola utilizada (2008-2009)
+IND-AGR-003,es,sens_interpretation,Alto = más superficie cultivada
+IND-AGR-003,es,unite,hectáreas
+IND-AGR-003,ht,comparabilite,Nou ka konpare 35 komin nan twa depatman yo pou ane 2008-2009 la.
+IND-AGR-003,ht,definition,"Konbyen ekta tè fèm komin nan t ap travay, nou konvèti kawo resansman an an ekta."
+IND-AGR-003,ht,limites_connues,"SE YON RESANSMAN 2008-2009, YO PA JANM REFÈ L. Li konte tout bagay e li serye pou ane sa a, men ane sa a vin anvan tranblemanntè 2010 la, anvan siklòn Matthew (2016) e anvan deplasman depi 2021 yo. TWA DEPATMAN SÈLMAN : nou jwenn rapò Nip, Sid ak Grandans ; sèt lòt yo rete pou jwenn. Inite orijinal la se kawo (1 kawo = 1,29 ekta). Ministè a pa deklare okenn lisans : nou pibliye ak sitasyon, nou pa vann li."
+IND-AGR-003,ht,methode_calcul,"Kolòn SAU menm tablo a, an kawo, miltipliye pa 1,29 pou jwenn ekta."
+IND-AGR-003,ht,nom,Tè agrikòl yo t ap travay (2008-2009)
+IND-AGR-003,ht,sens_interpretation,Wo = plis tè yo travay
+IND-AGR-003,ht,unite,ekta
+IND-AGR-004,en,comparabilite,"Comparable between the 35 communes of the three published departments, for the 2008-2009 season."
+IND-AGR-004,en,definition,Share of the commune's plots that the census reports as irrigated.
+IND-AGR-004,en,limites_connues,"A 2008-2009 CENSUS, NEVER UPDATED. It is exhaustive and reliable for its year, and that year precedes the 2010 earthquake, Hurricane Matthew (2016) and the displacement since 2021. THREE DEPARTMENTS ONLY: the Nippes, Sud and Grande-Anse reports are available; the seven others remain to be found. The original unit is the carreau (1 carreau = 1.29 hectares). No licence is declared by the ministry: published with citation, never sold. Irrigation in 2009 says nothing about the state of the systems today."
+IND-AGR-004,en,methode_calcul,"Table 11-9: irrigated plots ÷ total plots × 100, with the same check against the printed total."
+IND-AGR-004,en,nom,Share of irrigated plots (2008-2009)
+IND-AGR-004,en,sens_interpretation,High = more irrigated plots
+IND-AGR-004,en,unite,%
+IND-AGR-004,es,comparabilite,"Comparable entre las 35 comunas de los tres departamentos publicados, para la campaña 2008-2009."
+IND-AGR-004,es,definition,Parte de las parcelas de la comuna que el censo declara bajo riego.
+IND-AGR-004,es,limites_connues,"UN CENSO DE 2008-2009, NUNCA ACTUALIZADO. Es exhaustivo y fiable para su año, y ese año precede al terremoto de 2010, al huracán Matthew (2016) y a los desplazamientos desde 2021. SOLO TRES DEPARTAMENTOS: están disponibles los informes de Nippes, Sud y Grande-Anse; los otros siete quedan por encontrar. La unidad original es el carreau (1 carreau = 1,29 hectáreas). El ministerio no declara licencia: publicado con cita, nunca vendido. El riego de 2009 no dice en qué estado están hoy los sistemas."
+IND-AGR-004,es,methode_calcul,"Cuadro 11-9: parcelas regadas ÷ parcelas totales × 100, con la misma comprobación del total impreso."
+IND-AGR-004,es,nom,Parte de parcelas bajo riego (2008-2009)
+IND-AGR-004,es,sens_interpretation,Alto = más parcelas bajo riego
+IND-AGR-004,es,unite,%
+IND-AGR-004,ht,comparabilite,Nou ka konpare 35 komin nan twa depatman yo pou ane 2008-2009 la.
+IND-AGR-004,ht,definition,Pòsyon jaden komin nan resansman an di ki gen dlo wouze.
+IND-AGR-004,ht,limites_connues,"SE YON RESANSMAN 2008-2009, YO PA JANM REFÈ L. Li konte tout bagay e li serye pou ane sa a, men ane sa a vin anvan tranblemanntè 2010 la, anvan siklòn Matthew (2016) e anvan deplasman depi 2021 yo. TWA DEPATMAN SÈLMAN : nou jwenn rapò Nip, Sid ak Grandans ; sèt lòt yo rete pou jwenn. Inite orijinal la se kawo (1 kawo = 1,29 ekta). Ministè a pa deklare okenn lisans : nou pibliye ak sitasyon, nou pa vann li. Dlo wouze 2009 pa di nan ki eta sistèm yo ye jodi a."
+IND-AGR-004,ht,methode_calcul,"Tablo 11-9 : jaden ki gen dlo wouze divize pa tout jaden yo, fwa 100, ak menm kontwòl total la."
+IND-AGR-004,ht,nom,Pòsyon jaden ki gen dlo wouze (2008-2009)
+IND-AGR-004,ht,sens_interpretation,Wo = plis jaden ki gen dlo wouze
+IND-AGR-004,ht,unite,%
 IND-BAT-001,en,comparabilite,Comparable between communes of the same reference year.
 IND-BAT-001,en,definition,Number of building footprints detected by satellite imagery in the commune.
 IND-BAT-001,en,limites_connues,"A DETECTED BUILDING IS NOT A DWELLING: warehouses, schools, sheds and shelters all count the same, and two adjoining houses may register as one. DETECTION DEPENDS ON THE IMAGE: under dense tree cover a thatched roof goes unseen — wooded communes are therefore undercounted, and that is not a shortage of buildings."
@@ -587,6 +650,48 @@ IND-ELE-010,ht,methode_calcul,"Pwosè-vèbal ki antre ÷ pwosè-vèbal yo tann �
 IND-ELE-010,ht,nom,"Pwosè-vèbal ki antre, lejislatif 2015 (premye tou)"
 IND-ELE-010,ht,sens_interpretation,Wo = rezilta a pi konplè
 IND-ELE-010,ht,unite,%
+IND-ELE-011,en,comparabilite,Comparable between communes at the same copy date; the directory changes from week to week.
+IND-ELE-011,en,definition,"Number of registration and voting centres that the CEP's public directory places in the commune, for the 2026 electoral cycle, as of 19/09/2026."
+IND-ELE-011,en,limites_connues,"A DIRECTORY STILL BEING BUILT: voter registration is rolled out in waves (32 new centres in the Ouest on 13/08/2026, one at SONAPI on 01/09/2026). A commune without a centre is not necessarily forgotten: the rollout may not have reached it yet, or insecurity may prevent it. Centres in the communes created in 2015, absent from the 140-commune reference list, are matched by their coordinates; two centres with neither commune nor coordinates are not counted. A CEP document republished with citation, never sold."
+IND-ELE-011,en,methode_calcul,"Reading of the list of centres contained in the CEP's public page; each centre is matched to the commune by its commune name (or, for the 2015 communes, by its coordinates), then counted."
+IND-ELE-011,en,nom,Registration and voting centres in the CEP directory
+IND-ELE-011,en,sens_interpretation,"Neutral — a high number means a denser network, not a better vote"
+IND-ELE-011,en,unite,voting centres
+IND-ELE-011,es,comparabilite,Comparable entre comunas a la misma fecha de copia; el directorio cambia de una semana a otra.
+IND-ELE-011,es,definition,"Número de centros de inscripción y votación que el directorio público del CEP sitúa en la comuna, para el ciclo electoral de 2026, a fecha del 19/09/2026."
+IND-ELE-011,es,limites_connues,"UN DIRECTORIO AÚN EN CONSTRUCCIÓN: la inscripción de electores se despliega por oleadas (32 centros nuevos en el Oeste el 13/08/2026, uno en la SONAPI el 01/09/2026). Una comuna sin centro no está necesariamente olvidada: puede que el despliegue aún no haya llegado o que la inseguridad lo impida. Los centros de las comunas creadas en 2015, ausentes del referencial de 140, se vinculan por sus coordenadas; dos centros sin comuna ni coordenadas no se cuentan. Documento del CEP republicado con cita, nunca vendido."
+IND-ELE-011,es,methode_calcul,"Lectura de la lista de centros contenida en la página pública del CEP; cada centro se vincula a la comuna por su nombre de comuna (o, para las comunas de 2015, por sus coordenadas) y se cuenta."
+IND-ELE-011,es,nom,Centros de inscripción y votación en el directorio del CEP
+IND-ELE-011,es,sens_interpretation,"Neutro — un número alto indica una red más densa, no un mejor voto"
+IND-ELE-011,es,unite,centros de votación
+IND-ELE-011,ht,comparabilite,Nou ka konpare komin yo nan menm dat kopi a ; lis la chanje de yon semèn a lòt.
+IND-ELE-011,ht,definition,"Konbyen sant enskripsyon ak vòt lis piblik CEP la mete nan komin nan, pou eleksyon 2026 yo, nan dat 19/09/2026."
+IND-ELE-011,ht,limites_connues,"SE YON LIS KI POKO FINI : enskripsyon elektè yo ap fèt pa vag (32 nouvo sant nan Lwès 13/08/2026, youn nan SONAPI 01/09/2026). Yon komin ki pa gen sant pa fòseman bliye : petèt deplwaman an poko rive la, oswa ensekirite a anpeche l. Nou mare sant komin ki kreye an 2015 yo, ki pa nan referansyèl 140 komin yo, dapre kowòdone yo ; de sant ki pa gen ni komin ni kowòdone pa konte. Se yon dokiman CEP nou pibliye ak sitasyon, nou pa janm vann li."
+IND-ELE-011,ht,methode_calcul,"Nou li lis sant ki nan paj piblik CEP la ; nou mare chak sant ak komin nan dapre non komin nan (oswa, pou komin 2015 yo, dapre kowòdone yo), epi nou konte yo."
+IND-ELE-011,ht,nom,Sant enskripsyon ak vòt ki nan lis CEP la
+IND-ELE-011,ht,sens_interpretation,"Net — anpil sant vle di rezo a pi sere, se pa yon pi bon vòt"
+IND-ELE-011,ht,unite,sant vòt
+IND-ELE-012,en,comparabilite,Comparable between communes at the same copy date; the directory changes from week to week.
+IND-ELE-012,en,definition,"Registration and voting centres in the CEP directory in the commune, per 10,000 residents."
+IND-ELE-012,en,limites_connues,"A DIRECTORY STILL BEING BUILT: voter registration is rolled out in waves (32 new centres in the Ouest on 13/08/2026, one at SONAPI on 01/09/2026). A commune without a centre is not necessarily forgotten: the rollout may not have reached it yet, or insecurity may prevent it. Centres in the communes created in 2015, absent from the 140-commune reference list, are matched by their coordinates; two centres with neither commune nor coordinates are not counted. A CEP document republished with citation, never sold. The population is the COD-PS 2024 projection, all ages: it is not the number of voters."
+IND-ELE-012,en,methode_calcul,"Centres (IND-ELE-011) ÷ population (IND-POP-001) × 10,000."
+IND-ELE-012,en,nom,"Registration and voting centres per 10,000 residents"
+IND-ELE-012,en,sens_interpretation,High = more centres relative to population
+IND-ELE-012,en,unite,"per 10,000 residents"
+IND-ELE-012,es,comparabilite,Comparable entre comunas a la misma fecha de copia; el directorio cambia de una semana a otra.
+IND-ELE-012,es,definition,"Centros de inscripción y votación del directorio del CEP en la comuna, por cada 10 000 habitantes."
+IND-ELE-012,es,limites_connues,"UN DIRECTORIO AÚN EN CONSTRUCCIÓN: la inscripción de electores se despliega por oleadas (32 centros nuevos en el Oeste el 13/08/2026, uno en la SONAPI el 01/09/2026). Una comuna sin centro no está necesariamente olvidada: puede que el despliegue aún no haya llegado o que la inseguridad lo impida. Los centros de las comunas creadas en 2015, ausentes del referencial de 140, se vinculan por sus coordenadas; dos centros sin comuna ni coordenadas no se cuentan. Documento del CEP republicado con cita, nunca vendido. La población es la proyección COD-PS 2024, todas las edades: no es el número de electores."
+IND-ELE-012,es,methode_calcul,Centros (IND-ELE-011) ÷ población (IND-POP-001) × 10 000.
+IND-ELE-012,es,nom,Centros de inscripción y votación por cada 10 000 habitantes
+IND-ELE-012,es,sens_interpretation,Alto = más centros en relación con la población
+IND-ELE-012,es,unite,por cada 10 000 habitantes
+IND-ELE-012,ht,comparabilite,Nou ka konpare komin yo nan menm dat kopi a ; lis la chanje de yon semèn a lòt.
+IND-ELE-012,ht,definition,"Sant enskripsyon ak vòt lis CEP la nan komin nan, pou chak 10 000 moun ki rete ladan l."
+IND-ELE-012,ht,limites_connues,"SE YON LIS KI POKO FINI : enskripsyon elektè yo ap fèt pa vag (32 nouvo sant nan Lwès 13/08/2026, youn nan SONAPI 01/09/2026). Yon komin ki pa gen sant pa fòseman bliye : petèt deplwaman an poko rive la, oswa ensekirite a anpeche l. Nou mare sant komin ki kreye an 2015 yo, ki pa nan referansyèl 140 komin yo, dapre kowòdone yo ; de sant ki pa gen ni komin ni kowòdone pa konte. Se yon dokiman CEP nou pibliye ak sitasyon, nou pa janm vann li. Popilasyon an se pwojeksyon COD-PS 2024 la, tout laj : se pa kantite elektè yo."
+IND-ELE-012,ht,methode_calcul,"Sant yo (IND-ELE-011) divize pa popilasyon an (IND-POP-001), fwa 10 000."
+IND-ELE-012,ht,nom,Sant enskripsyon ak vòt pou chak 10 000 moun
+IND-ELE-012,ht,sens_interpretation,Wo = plis sant konpare ak kantite moun
+IND-ELE-012,ht,unite,pou 10 000 moun
 IND-ENE-001,en,comparabilite,"Comparable between communes, but the gap is small across Haiti: a ranking would exaggerate differences the resource does not carry."
 IND-ENE-001,en,definition,"Photovoltaic output expected from a one-kilowatt-peak installation over a year, averaged across the commune's pixels."
 IND-ENE-001,en,limites_connues,"IT IS A RESOURCE, NOT EQUIPMENT: this figure says what a panel would produce, not what is installed. Differences between communes are small in a country this small and this sunny — a ranking on this indicator separates values that sit within a few per cent of each other. Relief matters more than latitude: the shadow of the mornes makes the difference, and it is averaged here over the whole commune."
@@ -881,6 +986,48 @@ IND-GEO-004,ht,methode_calcul,IND-GEO-003 ÷ IND-GEO-001 × 100.
 IND-GEO-004,ht,nom,Dansite lokalite
 IND-GEO-004,ht,sens_interpretation,"Yon apwòch sou kote moun rete, se pa yon dansite popilasyon."
 IND-GEO-004,ht,unite,lokalite / 100 km²
+IND-JUS-001,en,comparabilite,Comparable between communes with similar mapping intensity (IND-QUA-004).
+IND-JUS-001,en,definition,Number of objects tagged as a police station in OpenStreetMap and matched to the commune.
+IND-JUS-001,en,limites_connues,"WHAT IS MAPPED, NOT WHAT EXISTS: OpenStreetMap is filled in by volunteers. The map shows 224 police stations while the national police reports 413: the gap, nearly half, is the measure of incompleteness. Read this indicator alongside the commune's mapping intensity (IND-QUA-004). It says nothing about court activity or staffing."
+IND-JUS-001,en,methode_calcul,"Count of “amenity=police” objects in the HOT export, matched to the commune by the p-code HOT placed on them."
+IND-JUS-001,en,nom,Mapped police stations
+IND-JUS-001,en,sens_interpretation,High = more stations mapped
+IND-JUS-001,en,unite,police stations
+IND-JUS-001,es,comparabilite,Comparable entre comunas con una intensidad de cartografía similar (IND-QUA-004).
+IND-JUS-001,es,definition,Número de objetos etiquetados como comisaría en OpenStreetMap y vinculados a la comuna.
+IND-JUS-001,es,limites_connues,"LO CARTOGRAFIADO, NO LO QUE EXISTE: OpenStreetMap lo completan voluntarios. El mapa muestra 224 comisarías mientras la policía nacional declara 413: la brecha, casi la mitad, es la medida de la incompletitud. Lea este indicador junto con la intensidad de cartografía de la comuna (IND-QUA-004). No dice nada de la actividad de los tribunales ni del personal."
+IND-JUS-001,es,methode_calcul,"Recuento de los objetos «amenity=police» del extracto de HOT, vinculados a la comuna por el p-code que HOT les puso."
+IND-JUS-001,es,nom,Comisarías cartografiadas
+IND-JUS-001,es,sens_interpretation,Alto = más comisarías cartografiadas
+IND-JUS-001,es,unite,comisarías
+IND-JUS-001,ht,comparabilite,Nou ka konpare komin kote kat la fèt menm jan (IND-QUA-004).
+IND-JUS-001,ht,definition,Konbyen objè yo make pòs polis nan OpenStreetMap ki nan komin nan.
+IND-JUS-001,ht,limites_connues,"SA KI SOU KAT LA, SE PA SA KI EGZISTE : se volontè ki ranpli OpenStreetMap. Kat la montre 224 pòs polis pandan Lapolis nasyonal deklare 413 : diferans lan, prèske mwatye, se mezi sa ki manke a. Li endikatè sa a ansanm ak entansite kat komin nan (IND-QUA-004). Li pa di anyen sou travay tribinal yo ni sou kantite moun k ap travay ladan yo."
+IND-JUS-001,ht,methode_calcul,"Nou konte objè « amenity=police » nan ekstrè HOT la, dapre kòd komin HOT mete sou yo."
+IND-JUS-001,ht,nom,Pòs polis ki sou kat la
+IND-JUS-001,ht,sens_interpretation,Wo = plis pòs polis sou kat la
+IND-JUS-001,ht,unite,pòs polis
+IND-JUS-002,en,comparabilite,Comparable between communes with similar mapping intensity (IND-QUA-004).
+IND-JUS-002,en,definition,Number of objects tagged as a court or a prison in OpenStreetMap and matched to the commune.
+IND-JUS-002,en,limites_connues,"WHAT IS MAPPED, NOT WHAT EXISTS: OpenStreetMap is filled in by volunteers. The map shows 224 police stations while the national police reports 413: the gap, nearly half, is the measure of incompleteness. Read this indicator alongside the commune's mapping intensity (IND-QUA-004). It says nothing about court activity or staffing. Across the country, 77 courts and 18 prisons are mapped."
+IND-JUS-002,en,methode_calcul,"Same count for “amenity=courthouse” and “amenity=prison”, added together."
+IND-JUS-002,en,nom,Mapped courts and prisons
+IND-JUS-002,en,sens_interpretation,High = more facilities mapped
+IND-JUS-002,en,unite,courts and prisons
+IND-JUS-002,es,comparabilite,Comparable entre comunas con una intensidad de cartografía similar (IND-QUA-004).
+IND-JUS-002,es,definition,Número de objetos etiquetados como tribunal o prisión en OpenStreetMap y vinculados a la comuna.
+IND-JUS-002,es,limites_connues,"LO CARTOGRAFIADO, NO LO QUE EXISTE: OpenStreetMap lo completan voluntarios. El mapa muestra 224 comisarías mientras la policía nacional declara 413: la brecha, casi la mitad, es la medida de la incompletitud. Lea este indicador junto con la intensidad de cartografía de la comuna (IND-QUA-004). No dice nada de la actividad de los tribunales ni del personal. En todo el país hay 77 tribunales y 18 prisiones cartografiados."
+IND-JUS-002,es,methode_calcul,"Mismo recuento para «amenity=courthouse» y «amenity=prison», sumados."
+IND-JUS-002,es,nom,Tribunales y prisiones cartografiados
+IND-JUS-002,es,sens_interpretation,Alto = más instalaciones cartografiadas
+IND-JUS-002,es,unite,tribunales y prisiones
+IND-JUS-002,ht,comparabilite,Nou ka konpare komin kote kat la fèt menm jan (IND-QUA-004).
+IND-JUS-002,ht,definition,Konbyen objè yo make tribinal oswa prizon nan OpenStreetMap ki nan komin nan.
+IND-JUS-002,ht,limites_connues,"SA KI SOU KAT LA, SE PA SA KI EGZISTE : se volontè ki ranpli OpenStreetMap. Kat la montre 224 pòs polis pandan Lapolis nasyonal deklare 413 : diferans lan, prèske mwatye, se mezi sa ki manke a. Li endikatè sa a ansanm ak entansite kat komin nan (IND-QUA-004). Li pa di anyen sou travay tribinal yo ni sou kantite moun k ap travay ladan yo. Nan tout peyi a, gen 77 tribinal ak 18 prizon sou kat la."
+IND-JUS-002,ht,methode_calcul,"Menm kont lan pou « amenity=courthouse » ak « amenity=prison », nou adisyone yo."
+IND-JUS-002,ht,nom,Tribinal ak prizon ki sou kat la
+IND-JUS-002,ht,sens_interpretation,Wo = plis enstalasyon sou kat la
+IND-JUS-002,ht,unite,tribinal ak prizon
 IND-MAR-001,en,comparabilite,Comparable over time if the monitoring system does not change.
 IND-MAR-001,en,definition,Number of markets included in the price monitoring system.
 IND-MAR-001,en,limites_connues,"Does not record every market in the country, only those monitored."
@@ -1364,6 +1511,27 @@ IND-QUA-002,ht,methode_calcul,"Pou chak nan twa fanmi yo — sante, lekòl, popi
 IND-QUA-002,ht,nom,Fanmi done ki fèb oswa ki pa verifyab
 IND-QUA-002,ht,sens_interpretation,"Wo = enfòmasyon an mwens si, SE PA teritwa a ki mal ekipe"
 IND-QUA-002,ht,unite,fanmi sou 3
+IND-QUA-004,en,comparabilite,Comparable between communes for the same extract.
+IND-QUA-004,en,definition,"Number of objects mapped in OpenStreetMap (all points of interest) per 1,000 residents of the commune."
+IND-QUA-004,en,limites_connues,"READ ALONGSIDE ANY INDICATOR DRAWN FROM OPENSTREETMAP: without it, a poorly equipped commune cannot be told apart from a poorly mapped one. The range runs from 0.1 to 50 objects per 1,000 residents. It measures contributors' effort, not the territory's wealth: an area mapped after an earthquake or a humanitarian project is better covered than its neighbour."
+IND-QUA-004,en,methode_calcul,"All objects of the HOT export matched to the commune ÷ population (IND-POP-001) × 1,000. Twenty-seven objects without a p-code are counted nowhere."
+IND-QUA-004,en,nom,OpenStreetMap mapping intensity
+IND-QUA-004,en,sens_interpretation,High = better mapped commune
+IND-QUA-004,en,unite,"objects per 1,000 residents"
+IND-QUA-004,es,comparabilite,Comparable entre comunas para el mismo extracto.
+IND-QUA-004,es,definition,Número de objetos cartografiados en OpenStreetMap (todos los puntos de interés) por cada 1 000 habitantes de la comuna.
+IND-QUA-004,es,limites_connues,"LÉASE JUNTO A CUALQUIER INDICADOR PROCEDENTE DE OPENSTREETMAP: sin él no se distingue una comuna poco equipada de una comuna poco cartografiada. El rango va de 0,1 a 50 objetos por cada 1 000 habitantes. Mide el esfuerzo de los voluntarios, no la riqueza del territorio: una zona cartografiada tras un terremoto o un proyecto humanitario está mejor cubierta que su vecina."
+IND-QUA-004,es,methode_calcul,Todos los objetos del extracto de HOT vinculados a la comuna ÷ población (IND-POP-001) × 1 000. Veintisiete objetos sin p-code no se cuentan en ninguna parte.
+IND-QUA-004,es,nom,Intensidad de la cartografía en OpenStreetMap
+IND-QUA-004,es,sens_interpretation,Alto = comuna mejor cartografiada
+IND-QUA-004,es,unite,objetos por cada 1 000 habitantes
+IND-QUA-004,ht,comparabilite,Nou ka konpare komin yo pou menm ekstrè a.
+IND-QUA-004,ht,definition,Konbyen objè ki sou kat OpenStreetMap la (tout pwen enterè ansanm) pou chak 1 000 moun ki rete nan komin nan.
+IND-QUA-004,ht,limites_connues,"POU LI ANSANM AK TOUT ENDIKATÈ KI SOTI NAN OPENSTREETMAP : san li, ou pa ka konnen si yon komin gen tikras bagay oswa si se kat la ki pa fèt. Chif la soti 0,1 rive 50 objè pou 1 000 moun. Li mezire travay volontè yo, se pa richès teritwa a : yon zòn yo kat apre yon tranblemanntè oswa yon pwojè imanitè gen plis bagay sou kat la pase vwazen l."
+IND-QUA-004,ht,methode_calcul,"Tout objè ekstrè HOT la ki nan komin nan divize pa popilasyon an (IND-POP-001), fwa 1 000. Venn-sèt objè san kòd komin pa konte okenn kote."
+IND-QUA-004,ht,nom,Jiskaki pwen komin nan gen kat nan OpenStreetMap
+IND-QUA-004,ht,sens_interpretation,Wo = komin nan gen plis bagay sou kat la
+IND-QUA-004,ht,unite,objè pou 1 000 moun
 IND-QUA-005,en,comparabilite,Comparable between communes with at least ten points.
 IND-QUA-005,en,definition,"Median age, in years, of the latest survey of the commune's water points in the Water Point Data Exchange, at the date of the extract (14/08/2026)."
 IND-QUA-005,en,limites_connues,"THE AGE OF THE DATA, NOT OF THE POINTS: it says how long it has been since anyone reported the state of the commune's water points. Three surveys out of four date from 2016. Computed only where at least ten points are recorded."

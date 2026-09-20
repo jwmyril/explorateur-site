@@ -24,6 +24,11 @@
   "es": "candidato por escaño",
   "fr": "candidat par siège"
  },
+ "centres de vote": {
+  "en": "voting centre",
+  "es": "centro de votación",
+  "fr": "centre de vote"
+ },
  "décès": {
   "en": "death",
   "es": "muerte",
@@ -129,6 +134,11 @@
   "es": "objeto",
   "fr": "objet"
  },
+ "objets pour 1 000 habitants": {
+  "en": "object per 1,000 residents",
+  "es": "objeto por cada 1 000 habitantes",
+  "fr": "objet pour 1 000 habitants"
+ },
  "organisations": {
   "en": "organisation",
   "es": "organización",
@@ -164,6 +174,11 @@
   "es": "punto de servicio",
   "fr": "point de service"
  },
+ "postes de police": {
+  "en": "police station",
+  "es": "comisaría",
+  "fr": "poste de police"
+ },
  "radios communautaires repérées": {
   "en": "community radio station identified",
   "es": "radio comunitaria identificada",
@@ -193,6 +208,11 @@
   "en": "earthquake since 1911",
   "es": "sismo desde 1911",
   "fr": "séisme depuis 1911"
+ },
+ "tribunaux et prisons": {
+  "en": "court or prison",
+  "es": "tribunal o prisión",
+  "fr": "tribunal ou prison"
  },
  "votes": {
   "en": "vote",

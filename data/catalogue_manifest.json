@@ -16,10 +16,10 @@
  "nombre_observations": 13115,
  "nombre_valeurs_sourcees": 11995,
  "nombre_absences_documentees": 1120,
- "nombre_sources": 63,
- "nombre_sources_integrees": 48,
- "nombre_sources_identifiees": 15,
- "nombre_sources_classe_a": 34,
+ "nombre_sources": 64,
+ "nombre_sources_integrees": 51,
+ "nombre_sources_identifiees": 13,
+ "nombre_sources_classe_a": 35,
  "nombre_sources_classe_b": 12,
  "nombre_sources_classe_c": 15,
  "nombre_sources_classe_d": 2,
@@ -152,5 +152,5 @@
  "prd_027_colonnes": 12,
  "prd_055_intervalles": 371,
  "prd_027_series": 84,
- "empreinte": "da88323ff47ce84d"
+ "empreinte": "6b56567b2c51b3af"
 }

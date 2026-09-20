@@ -1,5 +1,6 @@
 indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
 IND-AGR-004,HTC-0812,HT0812,Abricots,Abriko,Grande'Anse,2.3,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0321,HT0321,Acul du Nord,Akil dinò,Nord,6.72,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0523,HT0523,Anse Rouge,Ans Rouj,Artibonite,22.35,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0821,HT0821,Anse d'Hainault,Ansdeno,Grande'Anse,0.22,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0151,HT0151,Anse à Galets,Ansa galè ,Ouest,0.05,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
@@ -10,18 +11,22 @@ IND-AGR-004,HTC-0731,HT0731,Aquin,Aken,Sud,2.81,%,2009,A,B,"MARNDR / FAO / Union
 IND-AGR-004,HTC-0141,HT0141,Arcahaie,Akayè,Ouest,44.41,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-1024,HT1024,Arnaud,Ano,Nippes,0.07,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0723,HT0723,Arniquet,Anikè,Sud,1.35,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0332,HT0332,Bahon,Baron,Nord,0.02,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0932,HT0932,Baie de Henne,Bèdeyèn,Nord-Ouest,9.09,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0221,HT0221,Bainet,Benè,Sud-Est,0.07,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-1031,HT1031,Baradères,Baradè,Nippes,2.32,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0362,HT0362,Bas Limbé,Ba Lenbe,Nord,6.46,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0913,HT0913,Bassin Bleu,Basenble,Nord-Ouest,1.93,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0833,HT0833,Beaumont,Bomon,Grande'Anse,0.04,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0632,HT0632,Belladère,Beladè,Centre,4.76,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0231,HT0231,Belle-Anse,Bèlans,Sud-Est,0.21,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0933,HT0933,Bombardopolis,Bonbadopolis,Nord-Ouest,0.16,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0813,HT0813,Bonbon,Trou Bonbon,Grande'Anse,0.11,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0351,HT0351,Borgne,Bòn,Nord,0.1,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0623,HT0623,Boucan Carré,Boukan Kare,Centre,2.66,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0142,HT0142,Cabaret,Kabarè,Ouest,55.93,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0714,HT0714,Camp-Perrin,Kanperen,Sud,17.13,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0311,HT0311,Cap-Haïtien,Kap Ayisyen,Nord,2.66,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0113,HT0113,Carrefour,Kafou,Ouest,0.41,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0733,HT0733,Cavaillon,Kavayon,Sud,8.97,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0213,HT0213,Cayes-Jacmel,Kay Jakmèl,Sud-Est,5.33,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
@@ -41,6 +46,7 @@ IND-AGR-004,HTC-0822,HT0822,Dame Marie,Dam Mari,Grande'Anse,0.05,%,2009,A,B,"MAR
 IND-AGR-004,HTC-0112,HT0112,Delmas,Dèlma,Ouest,1.35,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0544,HT0544,Desdunes,Dedin,Artibonite,99.79,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0541,HT0541,Dessalines,Desalin,Artibonite,72.45,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0342,HT0342,Dondon,Dondon,Nord,0.76,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0512,HT0512,Ennery,Ènri,Artibonite,17.88,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-1013,HT1013,Fonds des Nègres,Fon dènèg,Nippes,1.51,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0135,HT0135,Fonds-Verrettes,Fonvèrèt,Ouest,15.15,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
@@ -49,6 +55,7 @@ IND-AGR-004,HTC-0511,HT0511,Gonaïves,Gonayiv,Artibonite,46.91,%,2009,A,B,"MARND
 IND-AGR-004,HTC-0232,HT0232,Grand Gosier,Gran Gozye,Sud-Est,0.04,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-1032,HT1032,Grand-Boucan,Gran Boukan,Nippes,0.0,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0123,HT0123,Grand-Goâve,Gran Gwav,Ouest,7.4,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0331,HT0331,Grande Rivière Du Nord,Grann Rivyè dinò,Nord,0.11,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0543,HT0543,Grande Saline,Grand Salin,Artibonite,99.82,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0116,HT0116,Gressier,Gresye,Ouest,4.25,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0521,HT0521,Gros Morne,Gro Mòn,Artibonite,1.61,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
@@ -62,15 +69,19 @@ IND-AGR-004,HTC-0513,HT0513,L'Estère,Lestè,Artibonite,59.71,%,2009,A,B,"MARNDR
 IND-AGR-004,HTC-0533,HT0533,La Chapelle,Lachapèl,Artibonite,10.87,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0912,HT0912,La Tortue,Latòti,Nord-Ouest,0.04,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0214,HT0214,La Vallée,Lavale,Sud-Est,0.14,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0345,HT0345,La Victoire,La viktwa,Nord,0.48,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0631,HT0631,Lascahobas,Laskawobas,Centre,0.14,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0752,HT0752,Les Anglais,Anglè yo,Sud,13.97,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0711,HT0711,Les Cayes,Okay,Sud,20.22,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0823,HT0823,Les Irois,Lèziwa,Grande'Anse,0.19,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0361,HT0361,Limbé,Lenbe,Nord,3.54,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0313,HT0313,Limonade,Limonad,Nord,0.51,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0121,HT0121,Léogâne,Leyogàn,Ouest,11.34,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0715,HT0715,Maniche,Manich,Sud,9.28,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0212,HT0212,Marigot,Marigo,Sud-Est,6.52,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0552,HT0552,Marmelade,Mamelad,Artibonite,0.15,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0612,HT0612,Maïssade,Mayisad,Centre,0.1,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0323,HT0323,Milot,Milo,Nord,3.05,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-1011,HT1011,Miragoâne,Miragwàn,Nippes,11.46,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0621,HT0621,Mirebalais,Mibalè,Centre,11.91,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0814,HT0814,Moron,Mowon,Grande'Anse,0.14,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
@@ -81,13 +92,20 @@ IND-AGR-004,HTC-1022,HT1022,Petit Trou de Nippes,Ti Trou Nip,Nippes,0.57,%,2009,
 IND-AGR-004,HTC-0122,HT0122,Petit-Goâve,Tigwav,Ouest,4.06,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-1012,HT1012,Petite Rivière de Nippes,Ti Rivyè Nip,Nippes,7.86,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0542,HT0542,Petite Rivière de l'Artibonite,Ti Rivyè Latibonit,Artibonite,53.47,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0344,HT0344,Pignon,Piyon,Nord,1.08,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0372,HT0372,Pilate,Pilat,Nord,0.28,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0322,HT0322,Plaine du Nord,Plèn dinò,Nord,8.48,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0371,HT0371,Plaisance,Plezans,Nord,1.29,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-1025,HT1025,Plaisance du Sud,Plezans Disid,Nippes,0.05,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0152,HT0152,Pointe à Raquette,Pwent a Rakèt,Ouest,0.07,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0352,HT0352,Port-Margot,Pòmago,Nord,0.67,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0721,HT0721,Port-Salut,Pò Sali,Sud,0.14,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,12.03,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0911,HT0911,Port-de-Paix,Pòdpè,Nord-Ouest,6.72,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0742,HT0742,Port-à-Piment,Pòtapiman,Sud,3.38,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0114,HT0114,Pétion-Ville,Petyonvil,Ouest,16.36,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0312,HT0312,Quartier Morin,Katye Moren,Nord,7.03,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0343,HT0343,Ranquitte,Rankit,Nord,0.12,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0743,HT0743,Roche à Bâteau,Ròcha Bato,Sud,0.64,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0832,HT0832,Roseaux,Rozo,Grande'Anse,0.11,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0722,HT0722,Saint Jean du Sud,Sen Jan disid.,Sud,0.42,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
@@ -95,6 +113,7 @@ IND-AGR-004,HTC-0732,HT0732,Saint Louis du Sud,Sen Lwi disid,Sud,4.79,%,2009,A,B
 IND-AGR-004,HTC-0921,HT0921,Saint-Louis du Nord,Sen Lwi dinò,Nord-Ouest,0.53,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0531,HT0531,Saint-Marc,Sen Mak,Artibonite,56.57,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0551,HT0551,Saint-Michel de l'Attalaye,Sen Michèl Latalay,Artibonite,4.23,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
+IND-AGR-004,HTC-0341,HT0341,Saint-Raphaël,Sen Rafayèl,Nord,25.62,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0622,HT0622,Saut d'Eau,Sodo,Centre,8.64,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0633,HT0633,Savanette,Savanèt,Centre,3.45,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08
 IND-AGR-004,HTC-0118,HT0118,Tabarre,Taba,Ouest,82.06,%,2009,A,B,"MARNDR / FAO / Union européenne — Recensement général de l'agriculture 2008-2009, résultats provisoires",v1.2026.08

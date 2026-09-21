@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 137
+  "fichiers": 135
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -107,9 +107,7 @@
    "atmart_opinion_serie_HT.csv",
    "atmart_points_transfert.json",
    "atmart_points_transfert_communes_HT.csv",
-   "atmart_professions_communes_HT.csv",
-   "atmart_series_nationales.json",
-   "atmart_series_nationales_HT.csv"
+   "atmart_professions_communes_HT.csv"
   ],
   "CC BY-NC 4.0": [
    "atmart_conflits_HT.csv",
@@ -1028,26 +1026,6 @@
    "licence": "Domaine public (USGS)",
    "sources": [],
    "attribution": "USGS ComCat"
-  },
-  "atmart_series_nationales.json": {
-   "licence": "CC BY 4.0 — transformation ou citation",
-   "sources": [
-    "SRC-015",
-    "SRC-COMTRADE",
-    "SRC-FAOSTAT",
-    "SRC-ILOSTAT"
-   ],
-   "attribution": "Banque mondiale ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail"
-  },
-  "atmart_series_nationales_HT.csv": {
-   "licence": "CC BY 4.0 — transformation ou citation",
-   "sources": [
-    "SRC-015",
-    "SRC-COMTRADE",
-    "SRC-FAOSTAT",
-    "SRC-ILOSTAT"
-   ],
-   "attribution": "Banque mondiale ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail"
   },
   "atmart_solaire_communes.json": {
    "licence": "CC BY 4.0",

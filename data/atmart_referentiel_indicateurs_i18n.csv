@@ -104,6 +104,48 @@ IND-ACC-005,ht,methode_calcul,Nou adisyone kilomèt uit kalite wout machin ka pa
 IND-ACC-005,ht,nom,Konbyen wout machin ka pase pou chak km²
 IND-ACC-005,ht,sens_interpretation,Wo = plis wout
 IND-ACC-005,ht,unite,km pou chak km²
+IND-ACC-006,en,comparabilite,Comparable between communes that have a primary or secondary network; a commune without a main road has no value.
+IND-ACC-006,en,definition,Share of the commune's primary and secondary road kilometres that imagery reports as paved in 2024.
+IND-ACC-006,en,limites_connues,"MAIN ROADS ONLY: 2,516 primary and secondary segments, not local roads or tracks. A commune with no such segment has NO value — that is not « 0% paved », it is « no main road ». Segments of still-unknown surface leave the calculation. The share is published only above three kilometres of known surface. Paved does not mean passable: broken asphalt is still asphalt."
+IND-ACC-006,en,methode_calcul,"Paved kilometres ÷ (paved + unpaved) × 100, over segments whose MIDPOINT falls in the commune."
+IND-ACC-006,en,nom,Share of the main road network paved
+IND-ACC-006,en,sens_interpretation,High = a larger share of main roads paved
+IND-ACC-006,en,unite,%
+IND-ACC-006,es,comparabilite,Comparable entre comunas con red primaria o secundaria; una comuna sin carretera principal no tiene valor.
+IND-ACC-006,es,definition,Parte de los kilómetros de carreteras primarias y secundarias de la comuna que las imágenes dan como asfaltados en 2024.
+IND-ACC-006,es,limites_connues,"SOLO CARRETERAS PRINCIPALES: 2 516 tramos primarios y secundarios, no caminos locales ni pistas. Una comuna sin tramo de ese rango NO tiene valor: no es « 0 % asfaltada », es « sin carretera principal ». Los tramos de superficie desconocida salen del cálculo. La parte se publica solo por encima de tres kilómetros conocidos. Asfaltado no significa transitable."
+IND-ACC-006,es,methode_calcul,"Kilómetros asfaltados ÷ (asfaltados + sin asfaltar) × 100, sobre los tramos cuyo PUNTO MEDIO cae en la comuna."
+IND-ACC-006,es,nom,Parte de la red principal asfaltada
+IND-ACC-006,es,sens_interpretation,Alto = mayor parte de carreteras principales asfaltadas
+IND-ACC-006,es,unite,%
+IND-ACC-006,ht,comparabilite,Nou ka konpare komin ki gen gwo wout ; yon komin ki pa gen youn pa gen valè.
+IND-ACC-006,ht,definition,Pòsyon kilomèt gwo wout komin nan (primè ak segondè) imaj satelit yo bay kòm asfalte an 2024.
+IND-ACC-006,ht,limites_connues,"SE GWO WOUT SÈLMAN : 2 516 tronson primè ak segondè, se pa wout lokal ni chemen. Yon komin ki pa gen wout konsa PA gen valè — se pa « 0 % asfalte », se « pa gen gwo wout ». Tronson kote yo pa konnen sifas la sòti nan kalkil la. Nou pibliye pòsyon an sèlman lè gen plis pase twa kilomèt yo konnen. Asfalte pa vle di pasab : yon asfalt ki kraze rete asfalt."
+IND-ACC-006,ht,methode_calcul,"Kilomèt asfalte ÷ (asfalte + pa asfalte) × 100, sou tronson ki gen MITAN yo nan komin nan."
+IND-ACC-006,ht,nom,Pòsyon gwo wout yo ki gen asfalt
+IND-ACC-006,ht,sens_interpretation,Wo = plis gwo wout ki gen asfalt
+IND-ACC-006,ht,unite,%
+IND-ACC-007,en,comparabilite,Comparable between communes with comparable mapping intensity (IND-QUA-004).
+IND-ACC-007,en,definition,"Number of ports, airports, heliports and border crossings recorded in OpenStreetMap within the commune."
+IND-ACC-007,en,limites_connues,"WHAT IS MAPPED, NOT WHAT EXISTS: OpenStreetMap is filled in by volunteers. Poles and pylons in the same file — 2,565 objects out of 2,977 — are NOT counted: they say a contributor walked along a line, not that a territory is equipped. Lines are not counted either: a line crosses communes that draw no power from it. Zero means « nothing recorded » — read the commune's mapping intensity (IND-QUA-004) alongside. A port sits at the water's edge, so often outside the simplified outline: thirteen nodes were attached to the commune whose outline passes within one kilometre. That threshold excludes neighbouring Dominican facilities — Pedernales is 1.4 km from Anse-à-Pitre. Nothing here distinguishes a commercial port from a jetty."
+IND-ACC-007,en,methode_calcul,"Same count, with the same one-kilometre attachment."
+IND-ACC-007,en,nom,"Ports, airports and border crossings mapped"
+IND-ACC-007,en,sens_interpretation,High = more gateways recorded
+IND-ACC-007,en,unite,transport nodes
+IND-ACC-007,es,comparabilite,Comparable entre comunas con intensidad de cartografía comparable (IND-QUA-004).
+IND-ACC-007,es,definition,"Número de puertos, aeropuertos, helipuertos y pasos fronterizos registrados en OpenStreetMap dentro de la comuna."
+IND-ACC-007,es,limites_connues,"LO QUE ESTÁ CARTOGRAFIADO, NO LO QUE EXISTE: OpenStreetMap lo rellenan voluntarios. Los postes y las torres del mismo archivo — 2 565 objetos de 2 977 — NO se cuentan: dicen que alguien caminó a lo largo de una línea, no que un territorio esté equipado. Las líneas tampoco: una línea cruza comunas que no toman corriente de ella. Cero significa « nada registrado »: leer también la intensidad de cartografía de la comuna (IND-QUA-004). Un puerto está a la orilla del agua, y a menudo queda fuera del contorno simplificado: trece nodos se vincularon a la comuna cuyo contorno pasa a menos de un kilómetro. Ese umbral excluye las instalaciones dominicanas vecinas: Pedernales está a 1,4 km de Anse-à-Pitre. Nada distingue aquí un puerto comercial de un embarcadero."
+IND-ACC-007,es,methode_calcul,"Mismo recuento, con la misma vinculación a un kilómetro."
+IND-ACC-007,es,nom,"Puertos, aeropuertos y pasos fronterizos cartografiados"
+IND-ACC-007,es,sens_interpretation,Alto = más puertas de entrada registradas
+IND-ACC-007,es,unite,nodos de transporte
+IND-ACC-007,ht,comparabilite,Nou ka konpare komin kote moun kat OpenStreetMap la menm jan (IND-QUA-004).
+IND-ACC-007,ht,definition,"Konbyen pò, ayewopò, elipò ak pòs fwontyè OpenStreetMap make nan komin nan."
+IND-ACC-007,ht,limites_connues,"SE SA KI SOU KAT LA, SE PA SA KI EGZISTE : se moun ki bay tan yo ki ranpli OpenStreetMap. Nou pa konte poto ak pilòn yo — 2 565 objè sou 2 977 : yo di yon moun mache bò yon liy, yo pa di yon zòn gen ekipman. Liy yo tou nou pa konte : yon liy travèse komin ki pa pran kouran ladan l. Zewo vle di « pèsòn pa t make anyen » — gade tou konbyen komin nan kat nan OpenStreetMap (IND-QUA-004). Yon pò bò dlo, kidonk souvan deyò kontou senplifye a : trèz pwen nou rattache ak komin ki gen kontou l a mwens yon kilomèt. Sa met deyò ekipman dominiken yo — Pedernales a 1,4 km Ansapit. Anyen pa separe yon pò komès ak yon waf isit la."
+IND-ACC-007,ht,methode_calcul,"Menm konte a, ak menm rattachman an nan yon kilomèt."
+IND-ACC-007,ht,nom,"Pò, ayewopò ak pòs fwontyè ki sou kat la"
+IND-ACC-007,ht,sens_interpretation,Wo = plis pòt antre yo make
+IND-ACC-007,ht,unite,pwen transpò
 IND-AGR-001,en,comparabilite,Comparable between communes of the same reference year.
 IND-AGR-001,en,definition,Share of the commune's area classified as cropland by satellite observation.
 IND-AGR-001,en,limites_connues,"THE SATELLITE SEES A COVER, NOT A FARM: it says neither what is grown, nor by whom, nor whether the harvest took place. A plot lying fallow when the image was taken drops out of the count. THE CREOLE GARDEN, mixing trees and food crops, is often classified as trees or shrubs rather than cropland: this indicator structurally understates Haitian agriculture, and that must be said before comparing two communes."
@@ -356,6 +398,27 @@ IND-EAU-005,ht,methode_calcul,Nou mare chak moso rivyè HydroRIVERS ak komin kot
 IND-EAU-005,ht,nom,Konbyen rivyè pou chak km²
 IND-EAU-005,ht,sens_interpretation,Wo = plis rivyè
 IND-EAU-005,ht,unite,km pou chak km²
+IND-EAU-006,en,comparabilite,Comparable between communes: the same map and the same grid step everywhere.
+IND-EAU-006,en,definition,"Share of the commune's territory that the 2010 hydrogeological map classes as a productive aquifer — alluvial, karstic or highly permeable carbonate."
+IND-EAU-006,en,limites_connues,"THE ROCK, NOT THE WATER AVAILABLE: a productive aquifer means a borehole has a chance of yielding water — not that there is water, nor that it is drinkable, nor that anyone has drilled. The grouping of the nine classes follows WHAT THE MAP ITSELF WRITES (« poorly productive », « highly permeable »); units of « varied productivity » fall in neither group. The share is SAMPLED on a grid, not computed on exact areas. The map is fifteen years old and its producer no longer distributes it."
+IND-EAU-006,en,methode_calcul,A roughly one-kilometre grid over the commune; each interior point takes the class of the hydrogeological unit containing it. Share = points on productive aquifer ÷ points classed.
+IND-EAU-006,en,nom,Share of the commune on a productive aquifer
+IND-EAU-006,en,sens_interpretation,High = a larger share on a productive aquifer
+IND-EAU-006,en,unite,%
+IND-EAU-006,es,comparabilite,Comparable entre comunas: el mismo mapa y el mismo paso de malla en todas partes.
+IND-EAU-006,es,definition,"Parte del territorio de la comuna que el mapa hidrogeológico de 2010 clasifica como acuífero productivo: aluvial, kárstico o carbonatado muy permeable."
+IND-EAU-006,es,limites_connues,"LA ROCA, NO EL AGUA DISPONIBLE: un acuífero productivo significa que un pozo tiene posibilidades de dar agua, no que haya agua, ni que sea potable, ni que alguien haya perforado. La agrupación de las nueve clases sigue LO QUE EL MAPA ESCRIBE (« poco productivos », « muy permeables »); las unidades de « productividad variada » no entran en ninguno de los dos grupos. La parte se MUESTREA sobre una malla, no se calcula sobre áreas exactas. El mapa tiene quince años y su productor ya no lo distribuye."
+IND-EAU-006,es,methode_calcul,Una malla de aproximadamente un kilómetro sobre la comuna; cada punto interior toma la clase de la unidad hidrogeológica que lo contiene.
+IND-EAU-006,es,nom,Parte de la comuna sobre acuífero productivo
+IND-EAU-006,es,sens_interpretation,Alto = mayor parte sobre acuífero productivo
+IND-EAU-006,es,unite,%
+IND-EAU-006,ht,comparabilite,Nou ka konpare komin yo : menm kat la ak menm griy la toupatou.
+IND-EAU-006,ht,definition,"Pòsyon tè komin nan kat idwojeyolojik 2010 la klase kòm nap dlo ki bay — alivyal, kastik oswa kabonate ki byen pèmeyab."
+IND-EAU-006,ht,limites_connues,"SE WÒCH LA, SE PA DLO KI LA : yon nap ki bay vle di yon forè gen chans bay dlo, li pa di gen dlo, ni dlo a bon pou bwè, ni yon moun fore. Jan nou rasanble nèf klas yo swiv SA KAT LA EKRI (« peu productifs », « très perméables ») ; inite « pwodiktivite varye » yo pa nan okenn nan de gwoup yo. Pòsyon an ECHANTIYONNEN sou yon griy, li pa kalkile sou sifas egzak. Kat la gen kenz an e pwodiktè a pa difize l ankò."
+IND-EAU-006,ht,methode_calcul,Yon griy anviwon yon kilomèt sou komin nan ; chak pwen anndan an pran klas inite idwojeyolojik ki kenbe l la. Pòsyon = pwen sou nap ki bay ÷ pwen ki klase.
+IND-EAU-006,ht,nom,Pòsyon komin nan ki sou yon nap dlo ki bay
+IND-EAU-006,ht,sens_interpretation,Wo = plis tè sou yon nap dlo ki bay
+IND-EAU-006,ht,unite,%
 IND-EDU-001,en,comparabilite,"NOT comparable between departments: the source covers only Sud, Ouest, Nippes and Grande'Anse."
 IND-EDU-001,en,definition,Number of schools recorded.
 IND-EDU-001,en,limites_connues,"PARTIAL COVERAGE — 4 departments out of 10, 49 communes out of 140. A zero value means “not recorded”, never “no schools”."
@@ -755,6 +818,48 @@ IND-ENE-003,ht,methode_calcul,"Nou mare chak lokalite DRE Atlas la (10 100) ak k
 IND-ENE-003,ht,nom,Pòsyon moun ki rete nan yon lokalite ki gen limyè lannwit
 IND-ENE-003,ht,sens_interpretation,Wo = plis moun nan lokalite ki gen limyè
 IND-ENE-003,ht,unite,%
+IND-ENE-004,en,comparabilite,Comparable between communes with comparable mapping intensity (IND-QUA-004).
+IND-ENE-004,en,definition,Number of power plants and substations recorded in OpenStreetMap within the commune.
+IND-ENE-004,en,limites_connues,"WHAT IS MAPPED, NOT WHAT EXISTS: OpenStreetMap is filled in by volunteers. Poles and pylons in the same file — 2,565 objects out of 2,977 — are NOT counted: they say a contributor walked along a line, not that a territory is equipped. Lines are not counted either: a line crosses communes that draw no power from it. Zero means « nothing recorded » — read the commune's mapping intensity (IND-QUA-004) alongside. Forty-four facilities for the whole country: the map is very incomplete, and absence proves nothing."
+IND-ENE-004,en,methode_calcul,"Count of OpenStreetMap objects of type `plant` and `substation` falling in the commune, or within one kilometre of its outline."
+IND-ENE-004,en,nom,Power plants and substations mapped
+IND-ENE-004,en,sens_interpretation,High = more power facilities recorded
+IND-ENE-004,en,unite,facilities
+IND-ENE-004,es,comparabilite,Comparable entre comunas con intensidad de cartografía comparable (IND-QUA-004).
+IND-ENE-004,es,definition,Número de centrales eléctricas y subestaciones registradas en OpenStreetMap dentro de la comuna.
+IND-ENE-004,es,limites_connues,"LO QUE ESTÁ CARTOGRAFIADO, NO LO QUE EXISTE: OpenStreetMap lo rellenan voluntarios. Los postes y las torres del mismo archivo — 2 565 objetos de 2 977 — NO se cuentan: dicen que alguien caminó a lo largo de una línea, no que un territorio esté equipado. Las líneas tampoco: una línea cruza comunas que no toman corriente de ella. Cero significa « nada registrado »: leer también la intensidad de cartografía de la comuna (IND-QUA-004). Cuarenta y cuatro instalaciones en todo el país: el mapa está muy incompleto y la ausencia no prueba nada."
+IND-ENE-004,es,methode_calcul,"Recuento de objetos de OpenStreetMap de tipo `plant` y `substation` que caen en la comuna, o a menos de un kilómetro de su contorno."
+IND-ENE-004,es,nom,Centrales y subestaciones cartografiadas
+IND-ENE-004,es,sens_interpretation,Alto = más instalaciones eléctricas registradas
+IND-ENE-004,es,unite,instalaciones
+IND-ENE-004,ht,comparabilite,Nou ka konpare komin kote moun kat OpenStreetMap la menm jan (IND-QUA-004).
+IND-ENE-004,ht,definition,Konbyen santral elektrik ak pòs transfòmasyon OpenStreetMap make nan komin nan.
+IND-ENE-004,ht,limites_connues,"SE SA KI SOU KAT LA, SE PA SA KI EGZISTE : se moun ki bay tan yo ki ranpli OpenStreetMap. Nou pa konte poto ak pilòn yo — 2 565 objè sou 2 977 : yo di yon moun mache bò yon liy, yo pa di yon zòn gen ekipman. Liy yo tou nou pa konte : yon liy travèse komin ki pa pran kouran ladan l. Zewo vle di « pèsòn pa t make anyen » — gade tou konbyen komin nan kat nan OpenStreetMap (IND-QUA-004). Karannkat ekipman pou tout peyi a : kat la byen enkonplè, e sa ki pa la pa pwouve anyen."
+IND-ENE-004,ht,methode_calcul,"Nou konte objè OpenStreetMap ki gen tip `plant` ak `substation` ki tonbe nan komin nan, oswa ki a mwens yon kilomèt kontou li."
+IND-ENE-004,ht,nom,Santral ak pòs elektrik ki sou kat la
+IND-ENE-004,ht,sens_interpretation,Wo = plis ekipman elektrik yo make
+IND-ENE-004,ht,unite,ekipman
+IND-ENE-005,en,comparabilite,"Comparable between the fifty assessed communes; elsewhere, the absence of a value says nothing about needs."
+IND-ENE-005,en,definition,Number of buildings that the design of ANARSE's PHARES programme plans to connect to the solar mini-grid assessed in the commune.
+IND-ENE-005,en,limites_connues,"A PROJECT, NOT A BUILT NETWORK. ANARSE had fifty rural sites assessed in 2020: these figures say what a design assigns to each site, not what exists on the ground. Only the fifty communes concerned have a value; the others were not assessed, which says nothing about their needs. Six sites were left without a building estimate."
+IND-ENE-005,en,methode_calcul,"Sum of the `buildings_minigrid` field over the commune's PHARES sites, after removing duplicates."
+IND-ENE-005,en,nom,Buildings a solar mini-grid would serve (PHARES)
+IND-ENE-005,en,sens_interpretation,High = more buildings planned for connection
+IND-ENE-005,en,unite,buildings
+IND-ENE-005,es,comparabilite,"Comparable entre las cincuenta comunas evaluadas; en otras partes, la ausencia de valor no dice nada sobre las necesidades."
+IND-ENE-005,es,definition,Número de edificios que el diseño del programa PHARES de ANARSE prevé conectar a la mini-red solar evaluada en la comuna.
+IND-ENE-005,es,limites_connues,"UN PROYECTO, NO UNA RED CONSTRUIDA. ANARSE hizo evaluar cincuenta sitios rurales en 2020: estas cifras dicen lo que un diseño asigna a cada sitio, no lo que existe sobre el terreno. Solo las cincuenta comunas afectadas tienen valor; las demás no fueron evaluadas, lo que no dice nada de sus necesidades. Seis sitios quedaron sin estimación."
+IND-ENE-005,es,methode_calcul,"Suma del campo `buildings_minigrid` sobre los sitios PHARES de la comuna, tras eliminar los duplicados."
+IND-ENE-005,es,nom,Edificios que serviría una mini-red solar (PHARES)
+IND-ENE-005,es,sens_interpretation,Alto = más edificios previstos para conexión
+IND-ENE-005,es,unite,edificios
+IND-ENE-005,ht,comparabilite,"Nou ka konpare senkant komin yo evalye yo ; lòt kote, absans valè a pa di anyen sou bezwen yo."
+IND-ENE-005,ht,definition,Konbyen bilding konsepsyon pwogram PHARES ANARSE a prevwa konekte ak mini-rezo solè yo evalye nan komin nan.
+IND-ENE-005,ht,limites_connues,"SE YON PWOJÈ, SE PA YON REZO YO BATI. ANARSE fè evalye senkant sit riral an 2020 : chif sa yo di sa yon konsepsyon ba chak sit, se pa sa ki sou tè a. Se senkant komin sèlman ki gen valè ; lòt yo pa t evalye, e sa pa di anyen sou bezwen yo. Sis sit rete san estimasyon bilding."
+IND-ENE-005,ht,methode_calcul,"Som chan `buildings_minigrid` sit PHARES komin nan, apre nou retire doublon yo."
+IND-ENE-005,ht,nom,Bilding yon mini-rezo solè ta sèvi (PHARES)
+IND-ENE-005,ht,sens_interpretation,Wo = plis bilding yo prevwa konekte
+IND-ENE-005,ht,unite,bilding
 IND-ENV-001,en,comparabilite,Comparable between communes of the same reference year.
 IND-ENV-001,en,definition,"Share of the commune's area classified as ""trees"" by satellite observation."
 IND-ENV-001,en,limites_connues,"Tree cover in the satellite's sense is not forest in the forestry sense: orchards, hedgerows and dense scrub are included. Compare it with the World Bank's national forest area, which gives an entirely different figure — two definitions, two methods."
@@ -1826,6 +1931,27 @@ IND-RIS-009,ht,methode_calcul,"Chan ErosPr kouch « Land Degradation 2001-2012 �
 IND-RIS-009,ht,nom,Pòsyon depatman an ki ka pèdi tè
 IND-RIS-009,ht,sens_interpretation,Wo = plis tè ki ka pèdi
 IND-RIS-009,ht,unite,%
+IND-RIS-010,en,comparabilite,"Comparable between all 140 communes: each is measured from its centre, on the same fault database."
+IND-RIS-010,en,definition,"Distance, in kilometres, between the centre of the commune and the nearest active fault trace in GEM's global database."
+IND-RIS-010,en,limites_connues,"PROXIMITY IS NOT RISK: the ground, the buildings and the depth of the focus matter as much. The 14 August 2021 earthquake killed in Jérémie, far from its epicentre. The distance is measured from the CENTRE of the commune: a large commune may touch the fault at one end while its centre sits twenty kilometres away. Every commune in Haiti is within sixty kilometres of an active trace."
+IND-RIS-010,en,methode_calcul,"Minimum haversine distance between the commune's centre and the 3,806 vertices of the 93 traces."
+IND-RIS-010,en,nom,Distance to the nearest active fault
+IND-RIS-010,en,sens_interpretation,Low = the commune is closer to an active fault
+IND-RIS-010,en,unite,km
+IND-RIS-010,es,comparabilite,"Comparable entre las 140 comunas: cada una se mide desde su centro, sobre la misma base de fallas."
+IND-RIS-010,es,definition,"Distancia, en kilómetros, entre el centro de la comuna y la traza de falla activa más cercana de la base mundial del GEM."
+IND-RIS-010,es,limites_connues,"LA PROXIMIDAD NO ES EL RIESGO: el suelo, la construcción y la profundidad del foco cuentan tanto. El sismo del 14 de agosto de 2021 mató en Jérémie, lejos de su epicentro. La distancia se mide desde el CENTRO de la comuna. Todas las comunas de Haití están a menos de sesenta kilómetros de una traza activa."
+IND-RIS-010,es,methode_calcul,Distancia haversine mínima entre el centro de la comuna y los 3 806 vértices de las 93 trazas.
+IND-RIS-010,es,nom,Distancia a la falla activa más cercana
+IND-RIS-010,es,sens_interpretation,Bajo = la comuna está más cerca de una falla activa
+IND-RIS-010,es,unite,km
+IND-RIS-010,ht,comparabilite,"Nou ka konpare tout 140 komin yo : nou mezire chak depi sant li, sou menm baz fay yo."
+IND-RIS-010,ht,definition,"Distans, an kilomèt, ant sant komin nan ak tras fay aktif ki pi pre a nan baz mondyal GEM la."
+IND-RIS-010,ht,limites_connues,"PI PRE PA VLE DI PI GWO RISK : tè a, jan kay yo bati ak pwofondè foye a konte otan. Tranblemanntè 14 out 2021 la touye moun nan Jeremi, lwen episant li. Nou mezire depi SANT komin nan : yon gwo komin ka touche fay la nan yon bout pandan sant li a ven kilomèt. Tout komin Ayiti yo a mwens pase swasant kilomèt yon tras aktif."
+IND-RIS-010,ht,methode_calcul,Distans haversine minimòm ant sant komin nan ak 3 806 pwen 93 tras yo.
+IND-RIS-010,ht,nom,Distans ak fay aktif ki pi pre a
+IND-RIS-010,ht,sens_interpretation,Ba = komin nan pi pre yon fay aktif
+IND-RIS-010,ht,unite,km
 IND-SAN-001,en,comparabilite,NOT comparable between communes outside the covered area: the source covers only 14 communes out of 140.
 IND-SAN-001,en,definition,Number of operating health facilities recorded.
 IND-SAN-001,en,limites_connues,"PARTIAL COVERAGE — 14 communes (Artibonite, Centre, Nord, Ouest). An absent commune does not have zero facilities: it is not covered, hence status N. 2023 census."

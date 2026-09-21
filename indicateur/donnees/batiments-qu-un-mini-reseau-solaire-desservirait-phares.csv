@@ -1,0 +1,51 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-ENE-005,HTC-0812,HT0812,Abricots,Abriko,Grande'Anse,317.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0523,HT0523,Anse Rouge,Ans Rouj,Artibonite,2214.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0821,HT0821,Anse d'Hainault,Ansdeno,Grande'Anse,1465.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0151,HT0151,Anse à Galets,Ansa galè ,Ouest,6152.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0922,HT0922,Anse-à-Foleur,Ansafolè,Nord-Ouest,961.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0234,HT0234,Anse-à-Pître,Ansapit,Sud-Est,2323.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-1021,HT1021,Anse-à-Veau,Ansavo,Nippes,2161.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-1024,HT1024,Arnaud,Ano,Nippes,2045.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0332,HT0332,Bahon,Baron,Nord,1795.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0932,HT0932,Baie de Henne,Bèdeyèn,Nord-Ouest,747.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0221,HT0221,Bainet,Benè,Sud-Est,1388.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-1031,HT1031,Baradères,Baradè,Nippes,1281.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0913,HT0913,Bassin Bleu,Basenble,Nord-Ouest,2530.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0833,HT0833,Beaumont,Bomon,Grande'Anse,2008.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0231,HT0231,Belle-Anse,Bèlans,Sud-Est,1473.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0813,HT0813,Bonbon,Trou Bonbon,Grande'Anse,401.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0351,HT0351,Borgne,Bòn,Nord,751.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0422,HT0422,Capotille,Kapotiy,Nord-Est,975.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0442,HT0442,Carice,karis,Nord-Est,1218.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0641,HT0641,Cerca La Source,Sèka Lasous,Centre,2649.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0815,HT0815,Chambellan,Chanbelan,Grande'Anse,1644.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0914,HT0914,Chamsolme,Chansòlm,Nord-Ouest,819.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0751,HT0751,Chardonnières,Chadonyè,Sud,871.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0831,HT0831,Corail,Koray,Grande'Anse,651.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0134,HT0134,Cornillon / Grand Bois,Kòniyon / Gran Bwa,Ouest,1383.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0222,HT0222,Côtes de Fer,Kòtdefè,Sud-Est,652.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0822,HT0822,Dame Marie,Dam Mari,Grande'Anse,2244.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0135,HT0135,Fonds-Verrettes,Fonvèrèt,Ouest,1728.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0232,HT0232,Grand Gosier,Gran Gozye,Sud-Est,1715.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-1032,HT1032,Grand-Boucan,Gran Boukan,Nippes,363.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0811,HT0811,Jérémie,Jeremi,Grande'Anse,802.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-1023,HT1023,L'Asile,Lazil,Nippes,2079.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0912,HT0912,La Tortue,Latòti,Nord-Ouest,6934.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0214,HT0214,La Vallée,Lavale,Sud-Est,3540.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0443,HT0443,Mombin Crochu,Monben Krochi,Nord-Est,814.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0423,HT0423,Mont-Organisé,Montòganize,Nord-Est,1668.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0814,HT0814,Moron,Mowon,Grande'Anse,1492.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0413,HT0413,Perches,Pèch,Nord-Est,1205.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0834,HT0834,Pestel,Pestèl,Grande'Anse,1168.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-1022,HT1022,Petit Trou de Nippes,Ti Trou Nip,Nippes,1855.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0372,HT0372,Pilate,Pilat,Nord,2719.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0371,HT0371,Plaisance,Plezans,Nord,1911.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-1025,HT1025,Plaisance du Sud,Plezans Disid,Nippes,1622.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0152,HT0152,Pointe à Raquette,Pwent a Rakèt,Ouest,666.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0832,HT0832,Roseaux,Rozo,Grande'Anse,486.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0633,HT0633,Savanette,Savanèt,Centre,1608.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0522,HT0522,Terre Neuve,Tènèv,Artibonite,884.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0233,HT0233,Thiotte,Tiòt,Sud-Est,3493.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0441,HT0441,Vallières,Valyè,Nord-Est,423.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08
+IND-ENE-005,HTC-0716,HT0716,Île à Vache,Ilavach,Sud,2994.0,bâtiments,2020,A,B,"ANARSE — programme PHARES, études de site 2020 (Village Infrastructure Angels)",v1.2026.08

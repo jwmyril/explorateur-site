@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 136
+  "fichiers": 137
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -81,6 +81,7 @@
    "atmart_resultats_emmus.json",
    "atmart_resultats_emmus_HT.csv",
    "atmart_sante_declaree.json",
+   "atmart_series_trimestrielles_HT.csv",
    "atmart_solaire_communes.json",
    "atmart_sols_communes.json",
    "atmart_transferts_departements.json",
@@ -1047,6 +1048,14 @@
     "SRC-ILOSTAT"
    ],
    "attribution": "Banque mondiale ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail"
+  },
+  "atmart_series_trimestrielles_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-056",
+    "SRC-060"
+   ],
+   "attribution": "BRH — Banque de la République d'Haïti ; U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
   },
   "atmart_solaire_communes.json": {
    "licence": "CC BY 4.0",

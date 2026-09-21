@@ -156,8 +156,8 @@ atmart_licences.json,2026-09-20,archives/atmart_licences/2026-09-20-3.json,3a196
 atmart_licences.json,2026-09-20,archives/atmart_licences/2026-09-20-4.json,e62df7dde2e864334a450b40b144c6ef2ec34c2b8bb852849ee72faa6c96fa10,33523,1159,,,2026-09-20,vitrine,4c4c7fdad6,non
 atmart_licences.json,2026-09-20,archives/atmart_licences/2026-09-20-5.json,93c3a904d8bf28cf1ad776df2d15811893b7c533b4dff170fb6d8ab23783f593,33258,1151,,,2026-09-20,vitrine,042a825da6,non
 atmart_licences.json,2026-09-21,archives/atmart_licences/2026-09-21.json,5b9bcc7fc24cfab13967829105327dceb19ef757a771e82679076f5abd6781ce,33948,1163,,,2026-09-21,vitrine,38c039b460,non
-atmart_licences.json,2026-09-21,archives/atmart_licences/2026-09-21-2.json,042608556ab2e7837d9dd6244e4629d36866f2d663ac6dd53fefeedf6f77a989,33644,1155,,,2026-09-21,vitrine,2ce749b655,non
-atmart_licences.json,2026-09-21,archives/atmart_licences/2026-09-21-3.json,a82f32a8a0f0fd78a8760a2850cb2c359d6460d38b270c32831d9a860663eeec,33963,1164,,,2026-09-21,vitrine,255e1e9bc6,oui
+atmart_licences.json,2026-09-21,archives/atmart_licences/2026-09-21-2.json,042608556ab2e7837d9dd6244e4629d36866f2d663ac6dd53fefeedf6f77a989,33644,1155,,,2026-09-21,vitrine,2ce749b655,oui
+atmart_licences.json,2026-09-21,archives/atmart_licences/2026-09-21-3.json,a82f32a8a0f0fd78a8760a2850cb2c359d6460d38b270c32831d9a860663eeec,33963,1164,,,2026-09-21,vitrine,255e1e9bc6,non
 atmart_licences.json,2026-08-23,archives/atmart_licences/2026-08-23-3.json,3fbe2f7c89f249d64b15fbf0152bc58ef4b637fa117b9ca018d574223656d951,19526,691,,,2026-08-23,site,71b6010f36,non
 atmart_licences_donnees_HT.csv,2026-08-22,archives/atmart_licences_donnees_HT/2026-08-22.csv,60f62aacdf42b6dea8769cc811a07da8a3151bb198b788e414041c96d0b414a4,21568,83,82,lignes,2026-08-22,vitrine,5198a9223d,non
 atmart_licences_donnees_HT.csv,2026-08-23,archives/atmart_licences_donnees_HT/2026-08-23.csv,9de549ee1b429576d6f9e38ebf04cdba78997c5d6fccbcfab916dd56e22f9e8b,23273,88,87,lignes,2026-08-23,vitrine,6c2a1d8ac8,non
@@ -194,8 +194,8 @@ atmart_licences_donnees_HT.csv,2026-09-20,archives/atmart_licences_donnees_HT/20
 atmart_licences_donnees_HT.csv,2026-09-20,archives/atmart_licences_donnees_HT/2026-09-20-4.csv,48ba14dab34f869af85b1676891d962e2a50cba0163535ffaf15068b4dd2c28a,41021,138,137,lignes,2026-09-20,vitrine,4c4c7fdad6,non
 atmart_licences_donnees_HT.csv,2026-09-20,archives/atmart_licences_donnees_HT/2026-09-20-5.csv,801e1f30d1d979515c5f6147af6de4c2d4281ffced0f2c1af2d3434dc57c264f,40793,137,136,lignes,2026-09-20,vitrine,042a825da6,non
 atmart_licences_donnees_HT.csv,2026-09-21,archives/atmart_licences_donnees_HT/2026-09-21.csv,c349378d759ae15a124f2231e4ab01e010463b5e09659407896096381deff9df,41464,138,137,lignes,2026-09-21,vitrine,38c039b460,non
-atmart_licences_donnees_HT.csv,2026-09-21,archives/atmart_licences_donnees_HT/2026-09-21-2.csv,b0ec0b793c689b1a561245d89932edf15027957487550c2fb0e5b410298da9cd,41197,137,136,lignes,2026-09-21,vitrine,2ce749b655,non
-atmart_licences_donnees_HT.csv,2026-09-21,archives/atmart_licences_donnees_HT/2026-09-21-3.csv,cd1c23522150abaad47ca5c991d1e66f68d923628c97073e64d783bb8891058d,41472,138,137,lignes,2026-09-21,vitrine,255e1e9bc6,oui
+atmart_licences_donnees_HT.csv,2026-09-21,archives/atmart_licences_donnees_HT/2026-09-21-2.csv,b0ec0b793c689b1a561245d89932edf15027957487550c2fb0e5b410298da9cd,41197,137,136,lignes,2026-09-21,vitrine,2ce749b655,oui
+atmart_licences_donnees_HT.csv,2026-09-21,archives/atmart_licences_donnees_HT/2026-09-21-3.csv,cd1c23522150abaad47ca5c991d1e66f68d923628c97073e64d783bb8891058d,41472,138,137,lignes,2026-09-21,vitrine,255e1e9bc6,non
 atmart_licences_donnees_HT.csv,2026-08-23,archives/atmart_licences_donnees_HT/2026-08-23-3.csv,4a315725f6c9935b361d64b9681b38871b48e0e79a92c08e0ce7aeadfeec3212,22134,85,84,lignes,2026-08-23,site,71b6010f36,non
 atmart_licences_indicateurs_HT.csv,2026-09-18,archives/atmart_licences_indicateurs_HT/2026-09-18.csv,a0558655d2dac8acee4f694fc20131bed83dcb5ea5906ca329bd1ab590ed03ba,18895,77,76,lignes,2026-09-18,vitrine,de037cc762,non
 atmart_licences_indicateurs_HT.csv,2026-09-19,archives/atmart_licences_indicateurs_HT/2026-09-19.csv,3f1438ac773392c02574ecbfe9679a2498f199ff644c9299b26e369b407523a3,22337,88,87,lignes,2026-09-19,vitrine,14ffb023e6,non
@@ -446,8 +446,8 @@ catalogue_manifest.json,2026-09-20,archives/catalogue_manifest/2026-09-20-2.json
 catalogue_manifest.json,2026-09-20,archives/catalogue_manifest/2026-09-20-3.json,18c6e16a621b2cee43a0bb616a763f56a2158b24fda4f68f0a029a2df532f21a,4170,156,,,2026-09-20,vitrine,f47f5536e7,non
 catalogue_manifest.json,2026-09-20,archives/catalogue_manifest/2026-09-20-4.json,de8f474465307ea40b83855218b9a41da43310b5f07069b072c8e2e9480090dd,4170,156,,,2026-09-20,vitrine,fc7bdc60a8,non
 catalogue_manifest.json,2026-09-20,archives/catalogue_manifest/2026-09-20-5.json,415486135c3d06508f0b2dc9264aae436494ea91eeccf446342f37e089e20225,4170,156,,,2026-09-20,vitrine,4c4c7fdad6,non
-catalogue_manifest.json,2026-09-21,archives/catalogue_manifest/2026-09-21.json,a56ff447ceb4a64ae90cf1cb0addcb08cee4bae024bf5301f8de85fb53e3e76b,4170,156,,,2026-09-21,vitrine,38c039b460,oui
-catalogue_manifest.json,2026-09-21,archives/catalogue_manifest/2026-09-21-2.json,a54ff0079a90d0e0615853e0d7b8f976e351969797e30ec7647401ad79664dbd,4170,156,,,2026-09-21,vitrine,255e1e9bc6,non
+catalogue_manifest.json,2026-09-21,archives/catalogue_manifest/2026-09-21.json,a56ff447ceb4a64ae90cf1cb0addcb08cee4bae024bf5301f8de85fb53e3e76b,4170,156,,,2026-09-21,vitrine,38c039b460,non
+catalogue_manifest.json,2026-09-21,archives/catalogue_manifest/2026-09-21-2.json,a54ff0079a90d0e0615853e0d7b8f976e351969797e30ec7647401ad79664dbd,4170,156,,,2026-09-21,vitrine,255e1e9bc6,oui
 haiti_communes_simplifie.geojson,2026-08-14,archives/haiti_communes_simplifie/2026-08-14.geojson,e0162bfa16e701a3f71804c6b7a574bf0a943801fc5687f065807b2cbb681e64,231716,1,140,entités,2026-08-14,vitrine,5eda4cfd6c,oui
 haiti_contour_simplifie.geojson,2026-07-31,archives/haiti_contour_simplifie/2026-07-31.geojson,15b281bc0d8b87827805908cc7e90d0a9a3ceb8541b866650c1ca19d3946c3c1,16785,0,1,entités,2026-07-31,vitrine,3f56418955,oui
 haiti_departements_simplifie.geojson,2026-08-14,archives/haiti_departements_simplifie/2026-08-14.geojson,9824d2bce124ac292ca1750e679368c7c7fca85eccf997f6e05f0cb1031f3aa2,42967,1,10,entités,2026-08-14,vitrine,5eda4cfd6c,oui

@@ -129,6 +129,11 @@
   "es": "minuto por carretera (mediana de habitantes)",
   "fr": "minute de route (médiane des habitants)"
  },
+ "nœuds de transport": {
+  "en": "transport node",
+  "es": "nodo de transporte",
+  "fr": "nœud de transport"
+ },
  "objets": {
   "en": "object",
   "es": "objeto",
@@ -238,6 +243,11 @@
   "en": "registered voter",
   "es": "elector inscrito",
   "fr": "électeur inscrit"
+ },
+ "équipements": {
+  "en": "facility",
+  "es": "instalación",
+  "fr": "équipement"
  },
  "établissements": {
   "en": "establishment",

@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 135
+  "fichiers": 138
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -81,6 +81,7 @@
    "atmart_resultats_emmus.json",
    "atmart_resultats_emmus_HT.csv",
    "atmart_sante_declaree.json",
+   "atmart_securite_mensuelle_HT.csv",
    "atmart_solaire_communes.json",
    "atmart_sols_communes.json",
    "atmart_tofe_annuel_HT.csv",
@@ -107,7 +108,9 @@
    "atmart_opinion_serie_HT.csv",
    "atmart_points_transfert.json",
    "atmart_points_transfert_communes_HT.csv",
-   "atmart_professions_communes_HT.csv"
+   "atmart_professions_communes_HT.csv",
+   "atmart_series_nationales.json",
+   "atmart_series_nationales_HT.csv"
   ],
   "CC BY-NC 4.0": [
    "atmart_conflits_HT.csv",
@@ -1022,10 +1025,39 @@
    ],
    "attribution": "Ministère de la Santé publique et de la Population (MSPP)"
   },
+  "atmart_securite_mensuelle_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-079"
+   ],
+   "attribution": "BINUH — Bureau intégré des Nations unies en Haïti, pilier Paix et sécurité de l'ONU"
+  },
   "atmart_seismes_communes.json": {
    "licence": "Domaine public (USGS)",
    "sources": [],
    "attribution": "USGS ComCat"
+  },
+  "atmart_series_nationales.json": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-015",
+    "SRC-080",
+    "SRC-COMTRADE",
+    "SRC-FAOSTAT",
+    "SRC-ILOSTAT"
+   ],
+   "attribution": "Banque mondiale ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail"
+  },
+  "atmart_series_nationales_HT.csv": {
+   "licence": "CC BY 4.0 — transformation ou citation",
+   "sources": [
+    "SRC-015",
+    "SRC-080",
+    "SRC-COMTRADE",
+    "SRC-FAOSTAT",
+    "SRC-ILOSTAT"
+   ],
+   "attribution": "Banque mondiale ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail"
   },
   "atmart_solaire_communes.json": {
    "licence": "CC BY 4.0",

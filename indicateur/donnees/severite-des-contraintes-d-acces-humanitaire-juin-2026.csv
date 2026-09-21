@@ -1,0 +1,48 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-SEC-006,HTC-0523,HT0523,Anse Rouge,Ans Rouj,Artibonite,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0151,HT0151,Anse à Galets,Ansa galè ,Ouest,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0141,HT0141,Arcahaie,Akayè,Ouest,3.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0632,HT0632,Belladère,Beladè,Centre,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0623,HT0623,Boucan Carré,Boukan Kare,Centre,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0142,HT0142,Cabaret,Kabarè,Ouest,3.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0113,HT0113,Carrefour,Kafou,Ouest,2.54,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0614,HT0614,Cerca Carvajal,Sèka Kavajal,Centre,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0641,HT0641,Cerca La Source,Sèka Lasous,Centre,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0117,HT0117,Cité Soleil,Site Solèy,Ouest,2.5,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0134,HT0134,Cornillon / Grand Bois,Kòniyon / Gran Bwa,Ouest,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0131,HT0131,Croix-Des-Bouquets,Kwadèboukè,Ouest,3.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0112,HT0112,Delmas,Dèlma,Ouest,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0544,HT0544,Desdunes,Dedin,Artibonite,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0541,HT0541,Dessalines,Desalin,Artibonite,2.33,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0512,HT0512,Ennery,Ènri,Artibonite,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0135,HT0135,Fonds-Verrettes,Fonvèrèt,Ouest,3.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0133,HT0133,Ganthier,Gantye,Ouest,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0511,HT0511,Gonaïves,Gonayiv,Artibonite,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0123,HT0123,Grand-Goâve,Gran Gwav,Ouest,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0543,HT0543,Grande Saline,Grand Salin,Artibonite,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0116,HT0116,Gressier,Gresye,Ouest,3.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0521,HT0521,Gros Morne,Gro Mòn,Artibonite,1.88,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0611,HT0611,Hinche,Ench,Centre,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0115,HT0115,Kenscoff,Kenskòf,Ouest,3.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0513,HT0513,L'Estère,Lestè,Artibonite,2.5,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0533,HT0533,La Chapelle,Lachapèl,Artibonite,4.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0631,HT0631,Lascahobas,Laskawobas,Centre,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0121,HT0121,Léogâne,Leyogàn,Ouest,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0552,HT0552,Marmelade,Mamelad,Artibonite,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0612,HT0612,Maïssade,Mayisad,Centre,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0621,HT0621,Mirebalais,Mibalè,Centre,3.75,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0122,HT0122,Petit-Goâve,Tigwav,Ouest,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0542,HT0542,Petite Rivière de l'Artibonite,Ti Rivyè Latibonit,Artibonite,2.17,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0152,HT0152,Pointe à Raquette,Pwent a Rakèt,Ouest,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,3.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0114,HT0114,Pétion-Ville,Petyonvil,Ouest,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0531,HT0531,Saint-Marc,Sen Mak,Artibonite,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0551,HT0551,Saint-Michel de l'Attalaye,Sen Michèl Latalay,Artibonite,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0622,HT0622,Saut d'Eau,Sodo,Centre,4.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0633,HT0633,Savanette,Savanèt,Centre,2.5,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0118,HT0118,Tabarre,Taba,Ouest,3.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0522,HT0522,Terre Neuve,Tènèv,Artibonite,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0642,HT0642,Thomassique,Tomasik,Centre,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0132,HT0132,Thomazeau,Tomazo,Ouest,2.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0613,HT0613,Thomonde,Tomond,Centre,1.0,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08
+IND-SEC-006,HTC-0532,HT0532,Verrettes,Vèrèt,Artibonite,2.33,niveau,2026,A,B,"OCHA Haïti — Groupe de travail sur l'accès, juin 2026 (CC BY 4.0), agrégation Atmart",v1.2026.08

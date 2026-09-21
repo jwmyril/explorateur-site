@@ -2078,6 +2078,48 @@ IND-SEC-005,ht,methode_calcul,"Òganizasyon diferan (dapre sigle yo) nan komin n
 IND-SEC-005,ht,nom,Òganizasyon pwoteksyon ki deklare
 IND-SEC-005,ht,sens_interpretation,Wo = plis òganizasyon ki deklare
 IND-SEC-005,ht,unite,òganizasyon
+IND-SEC-006,en,comparabilite,"Comparable between the 47 assessed communes, for this round; a commune without a rating is not a better-off commune."
+IND-SEC-006,en,definition,"Average, over the commune's assessed communal sections, of the access-constraint level given by OCHA's Access Working Group: from 1 (least constrained) to 4 in this round."
+IND-SEC-006,en,limites_connues,"FORTY-SEVEN COMMUNES OUT OF ONE HUNDRED AND FORTY, AND A COMMUNE WITHOUT A RATING IS NOT A COMMUNE WHERE AID GETS THROUGH EASILY: the Access Working Group assessed only 210 of the country's 570 communal sections. The remaining 93 communes have no value, never a zero. The rating is humanitarian experts' judgement of their own ability to reach people — not a measure of the insecurity residents live through. It is also the Explorateur's most perishable figure: a June 2026 round that the next edition will replace. An average smooths: a commune with one very constrained section and three quiet ones reads as moderate — read the most constrained section too (IND-SEC-007)."
+IND-SEC-006,en,methode_calcul,"Sheet DB_Severity_ZMPP of OCHA's workbook: mean of Overall_SeverityLevel over the assessed sections, checked against the pivot table the producer ships in the same file."
+IND-SEC-006,en,nom,Humanitarian access severity (June 2026)
+IND-SEC-006,en,sens_interpretation,High = aid reaches residents with more difficulty
+IND-SEC-006,en,unite,level
+IND-SEC-006,es,comparabilite,"Comparable entre las 47 comunas evaluadas, para este relevamiento; una comuna sin nota no es una comuna en mejor situación."
+IND-SEC-006,es,definition,"Promedio, sobre las secciones comunales evaluadas de la comuna, del nivel de restricción de acceso asignado por el Grupo de trabajo sobre el acceso de OCHA: de 1 (menos restringido) a 4 en esta edición."
+IND-SEC-006,es,limites_connues,"CUARENTA Y SIETE COMUNAS DE CIENTO CUARENTA, Y UNA COMUNA SIN NOTA NO ES UNA COMUNA DONDE LA AYUDA LLEGA FÁCILMENTE: el Grupo de trabajo sobre el acceso evaluó solo 210 de las 570 secciones comunales del país. Las 93 comunas restantes no tienen valor, nunca un cero. La nota es el juicio de expertos humanitarios sobre su propia capacidad de llegar a la gente, no una medida de la inseguridad que viven los habitantes. Es además el dato más perecedero del Explorateur: un relevamiento de junio de 2026 que la próxima edición reemplazará. Un promedio suaviza: una comuna con una sección muy restringida y tres tranquilas aparece como moderada; leer también la sección más restringida (IND-SEC-007)."
+IND-SEC-006,es,methode_calcul,"Hoja DB_Severity_ZMPP del libro de OCHA: media de Overall_SeverityLevel sobre las secciones evaluadas, contrastada con la tabla dinámica que el productor incluye en el mismo archivo."
+IND-SEC-006,es,nom,Severidad del acceso humanitario (junio de 2026)
+IND-SEC-006,es,sens_interpretation,Alto = la ayuda llega con más dificultad
+IND-SEC-006,es,unite,nivel
+IND-SEC-006,ht,comparabilite,Nou ka konpare 47 komin yo evalye yo pou releve sa a ; yon komin ki pa gen nòt pa vle di li pi byen.
+IND-SEC-006,ht,definition,"Mwayèn, sou seksyon kominal yo evalye nan komin nan, nivo kontrent aksè Gwoup travay sou aksè OCHA a bay : depi 1 (mwens kontrent) rive 4 nan edisyon sa a."
+IND-SEC-006,ht,limites_connues,"KARANNSÈT KOMIN SOU SANKARANT, E YON KOMIN KI PA GEN NÒT PA VLE DI ÈD LA RIVE FASIL LADAN L : Gwoup travay sou aksè a evalye sèlman 210 nan 570 seksyon kominal peyi a. 93 komin ki rete yo pa gen valè, nou pa janm mete zewo. Nòt la se jijman espè imanitè yo sou pwòp kapasite yo pou yo jwenn moun — se pa yon mezi ensekirite moun yo ap viv. Se done ki gen pi kout lavi nan Explorateur la : yon releve jen 2026 pwochen edisyon an ap ranplase. Yon mwayèn plati bagay yo : si yon sèl seksyon trè kontrent e twa lòt pa, komin nan ap parèt mwayen — gade tou seksyon ki pi kontrent la (IND-SEC-007)."
+IND-SEC-006,ht,methode_calcul,Fey DB_Severity_ZMPP klasè OCHA a : mwayèn chan Overall_SeverityLevel sou seksyon yo evalye yo. Nou konfwonte l ak tablo pwodiktè a mete nan menm fichye a.
+IND-SEC-006,ht,nom,Jan aksè imanitè a difisil (jen 2026)
+IND-SEC-006,ht,sens_interpretation,Wo = èd la pi difisil pou rive jwenn moun
+IND-SEC-006,ht,unite,nivo
+IND-SEC-007,en,comparabilite,"Comparable between the 47 assessed communes, for this round; a commune without a rating is not a better-off commune."
+IND-SEC-007,en,definition,"Access-constraint level of the commune's most constrained communal section, among those assessed."
+IND-SEC-007,en,limites_connues,"FORTY-SEVEN COMMUNES OUT OF ONE HUNDRED AND FORTY, AND A COMMUNE WITHOUT A RATING IS NOT A COMMUNE WHERE AID GETS THROUGH EASILY: the Access Working Group assessed only 210 of the country's 570 communal sections. The remaining 93 communes have no value, never a zero. The rating is humanitarian experts' judgement of their own ability to reach people — not a measure of the insecurity residents live through. It is also the Explorateur's most perishable figure: a June 2026 round that the next edition will replace. Unlike the average, this level is not diluted by the quiet sections: it says whether part of the commune is out of reach. It does not say how many people live there."
+IND-SEC-007,en,methode_calcul,Maximum of the same field over the commune's assessed sections.
+IND-SEC-007,en,nom,Most constrained section for humanitarian access (June 2026)
+IND-SEC-007,en,sens_interpretation,High = at least one section is very hard to reach
+IND-SEC-007,en,unite,level
+IND-SEC-007,es,comparabilite,"Comparable entre las 47 comunas evaluadas, para este relevamiento; una comuna sin nota no es una comuna en mejor situación."
+IND-SEC-007,es,definition,"Nivel de restricción de acceso de la sección comunal más restringida de la comuna, entre las evaluadas."
+IND-SEC-007,es,limites_connues,"CUARENTA Y SIETE COMUNAS DE CIENTO CUARENTA, Y UNA COMUNA SIN NOTA NO ES UNA COMUNA DONDE LA AYUDA LLEGA FÁCILMENTE: el Grupo de trabajo sobre el acceso evaluó solo 210 de las 570 secciones comunales del país. Las 93 comunas restantes no tienen valor, nunca un cero. La nota es el juicio de expertos humanitarios sobre su propia capacidad de llegar a la gente, no una medida de la inseguridad que viven los habitantes. Es además el dato más perecedero del Explorateur: un relevamiento de junio de 2026 que la próxima edición reemplazará. A diferencia del promedio, este nivel no se diluye con las secciones tranquilas: dice si una parte de la comuna está fuera de alcance. No dice cuánta gente vive allí."
+IND-SEC-007,es,methode_calcul,Máximo del mismo campo sobre las secciones evaluadas de la comuna.
+IND-SEC-007,es,nom,Sección más restringida para el acceso humanitario (junio de 2026)
+IND-SEC-007,es,sens_interpretation,Alto = al menos una sección muy difícil de alcanzar
+IND-SEC-007,es,unite,nivel
+IND-SEC-007,ht,comparabilite,Nou ka konpare 47 komin yo evalye yo pou releve sa a ; yon komin ki pa gen nòt pa vle di li pi byen.
+IND-SEC-007,ht,definition,"Nivo kontrent aksè seksyon kominal ki pi kontrent nan komin nan, pami sa yo evalye yo."
+IND-SEC-007,ht,limites_connues,"KARANNSÈT KOMIN SOU SANKARANT, E YON KOMIN KI PA GEN NÒT PA VLE DI ÈD LA RIVE FASIL LADAN L : Gwoup travay sou aksè a evalye sèlman 210 nan 570 seksyon kominal peyi a. 93 komin ki rete yo pa gen valè, nou pa janm mete zewo. Nòt la se jijman espè imanitè yo sou pwòp kapasite yo pou yo jwenn moun — se pa yon mezi ensekirite moun yo ap viv. Se done ki gen pi kout lavi nan Explorateur la : yon releve jen 2026 pwochen edisyon an ap ranplase. Kontrèman ak mwayèn nan, nivo sa a pa dilye nan seksyon trankil yo : li di si gen yon pati nan komin nan kote moun pa ka rive. Li pa di konbyen moun ki rete la."
+IND-SEC-007,ht,methode_calcul,Maksimòm menm chan an sou seksyon yo evalye nan komin nan.
+IND-SEC-007,ht,nom,Seksyon ki pi kontrent pou aksè imanitè (jen 2026)
+IND-SEC-007,ht,sens_interpretation,Wo = omwen yon seksyon trè difisil pou rive
+IND-SEC-007,ht,unite,nivo
 IND-SOC-001,en,comparabilite,Comparable between communes as the location of authorised stations' HEADQUARTERS — not as access to radio: a headquarters is not coverage.
 IND-SOC-001,en,definition,Number of radio stations holding a CONATEL licence whose registered seat is in the commune.
 IND-SOC-001,en,limites_connues,"IT IS AN ADMINISTRATIVE ACT, NOT AN OBSERVATION: a commune at zero has no LICENSED station, which is not the same as no station on air. It is the exact opposite of the contributive layers, where a zero would mean « nobody looked ». THE SEAT IS NOT THE COVERAGE: a station based in Port-au-Prince is heard far beyond it, and a commune without a station is not a commune without radio."

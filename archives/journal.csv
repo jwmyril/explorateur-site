@@ -388,6 +388,7 @@ atmart_retours_forces_HT.csv,2026-09-18,archives/atmart_retours_forces_HT/2026-0
 atmart_retours_forces_points_HT.csv,2026-08-23,archives/atmart_retours_forces_points_HT/2026-08-23.csv,ab5915a0fb08697893ab40104e4b6a0687a0ffb3593fd4dfe1f2e46398c91a10,1741,5,4,lignes,2026-08-23,vitrine,6c2a1d8ac8,non
 atmart_retours_forces_points_HT.csv,2026-09-18,archives/atmart_retours_forces_points_HT/2026-09-18.csv,6d303fbeb1063217bc36687548010c3602ce4017e3c5956459f489703c77af9f,1721,5,4,lignes,2026-09-18,vitrine,de037cc762,oui
 atmart_sante_declaree.json,2026-08-17,archives/atmart_sante_declaree/2026-08-17.json,61772925927af03db189b7b941549305417dc4ce5d0ed78ea12fd26217cf39d0,6930,0,139,entrées,2026-08-17,site,0d423eef1a,oui
+atmart_securite_mensuelle_HT.csv,2026-09-21,archives/atmart_securite_mensuelle_HT/2026-09-21.csv,8c55b2028be32560a61db062652f5007b7c6f7983144fee0e992d118d889f58e,18209,93,92,lignes,2026-09-21,vitrine,79ff4df573,oui
 atmart_seismes_communes.json,2026-08-17,archives/atmart_seismes_communes/2026-08-17.json,a20ea2d311e627a3426e44b6ecfdaff628767aeee5214628403f2603864d5c67,88921,0,140,entrées,2026-08-17,site,b82dbcfef2,oui
 atmart_series_nationales.json,2026-08-18,archives/atmart_series_nationales/2026-08-18.json,1afbc8593eff217e950c8d974f611febd7de0eb983dc08f06d383f6853db9f93,18917,0,34,entrées,2026-08-18,vitrine,202933929e,non
 atmart_series_nationales.json,2026-08-19,archives/atmart_series_nationales/2026-08-19.json,f2d50cdeaa2b1cc26cf78beb5d2ee6c8e5f838d61be748cb8d7a835cd4a718aa,39290,0,63,entrées,2026-08-19,vitrine,a1e6608c6b,non

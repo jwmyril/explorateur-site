@@ -53,10 +53,11 @@ CE QUE CE FICHIER NE COUVRE PAS
   · Les fichiers SOURCES ne sont jamais remis en miroir : l'Explorateur
     publie ce qu'il calcule, pas ce qu'il télécharge.
 
-  · 5 fichier(s) attendent encore leur licence, faute d'une
+  · 6 fichier(s) attendent encore leur licence, faute d'une
     provenance déclarée. Ils ne sont pas réputés libres pour autant :
        atmart_couches_carte_HT.csv
        atmart_enquetes_resultats_HT.csv
+       atmart_securite_mensuelle_HT.csv (source sans registre : SRC-079)
        atmart_series_nationales.json (source sans registre : SRC-080)
        atmart_series_nationales_HT.csv (source sans registre : SRC-080)
        haiti_regions_enquete_simplifie.geojson

@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 138
+  "fichiers": 139
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -60,6 +60,7 @@
    "atmart_millesimes_territoriaux.csv",
    "atmart_occupation_sol.json",
    "atmart_occupation_sol_communes_HT.csv",
+   "atmart_panier_alimentaire_mensuel_HT.csv",
    "atmart_population_modelisee.json",
    "atmart_population_trois_sources.json",
    "atmart_presence_organisations_HT.csv",
@@ -819,6 +820,13 @@
     "SRC-014"
    ],
    "attribution": "LAPOP Lab / Center for Global Democracy, Vanderbilt University"
+  },
+  "atmart_panier_alimentaire_mensuel_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-081"
+   ],
+   "attribution": "CNSA — Coordination nationale de la sécurité alimentaire"
   },
   "atmart_pluie_communes.json": {
    "licence": "Domaine public",

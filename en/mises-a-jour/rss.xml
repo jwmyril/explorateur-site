@@ -8,6 +8,13 @@
   <language>en</language>
   <atom:link href="https://explorateur.atmart.ltd/en/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Updates of 9/22/2026</title>
+    <link>https://explorateur.atmart.ltd/en/mises-a-jour/index.html#d-2026-09-22</link>
+    <guid isPermaLink="false">explorateur-maj-en-2026-09-22</guid>
+    <pubDate>Tue, 22 Sep 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — new version · 4df97240; Atmart source register — new version · 73 rows · 8ec6ded5; atmart_referentiel_indicateurs_i18n.csv — new version · 2,625 rows · bb969bc8; atmart_referentiel_indicateurs.csv — new version · 125 rows · 3571d149; atmart_licences_indicateurs_HT.csv — new version · 125 rows · 71a55cb5; The licence of every published file — new version · 139 rows · f2a05b45; atmart_licences.json — new version · c6b69908; atmart_indicateurs_communes_HT.csv — new version · 15,051 rows · 83f923ae</description>
+  </item>
+  <item>
     <title>Updates of 9/21/2026</title>
     <link>https://explorateur.atmart.ltd/en/mises-a-jour/index.html#d-2026-09-21</link>
     <guid isPermaLink="false">explorateur-maj-en-2026-09-21</guid>

@@ -91,6 +91,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
           <li><a href="mises-a-jour/index.html" data-i18n="nv.maj">Mises à jour</a></li>
           <li><a href="archives.html" data-i18n="ft.arch">Archives &amp; citation</a></li>
           <li><a href="donnees-campus.html" data-i18n-html="nv.campus">Atmart Campus <small>étudiants &amp; chercheurs</small></a></li>
+          <li><a href="#installer" data-installer="1" data-i18n-html="nv.app">Télécharger l'application <small>téléphone ou ordinateur</small></a></li>
         </ul>
       </li>
       <li class="nav-grp"><button type="button" class="nav-grp-btn" aria-controls="nav-sub-serv"><span aria-hidden="true">🤝 </span><span data-i18n="nv.grp_serv">Services &amp; partenariats</span></button>
@@ -378,6 +379,11 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
       <div>
         <a href="/" class="logo">Explorateur <span>Haïti</span></a>
         <p style="margin-top:0.7rem" data-i18n-html="ft.intro">Un produit <a href="https://atmart.ltd/">Atmart Data</a> — des données sourcées, datées, vérifiables sur les 140 communes d'Haïti.</p>
+        <!-- 23/09/2026 : l'installation n'était proposée que par Chrome et Edge, et
+             seulement d'elle-même. Ce lien la rend demandable depuis n'importe quelle
+             page et n'importe quel appareil ; assets/pwa.js déclenche l'invite quand
+             le navigateur en prépare une, et montre les gestes sinon. -->
+        <p style="margin-top:0.7rem"><a href="#installer" data-installer="1" data-i18n="ft.app">Télécharger l'application</a></p>
       </div>
       <div>
         <h4 data-i18n="ft.h_donnees">Données</h4>

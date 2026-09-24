@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 141
+  "fichiers": 143
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -87,6 +87,8 @@
    "atmart_securite_mensuelle_HT.csv",
    "atmart_solaire_communes.json",
    "atmart_sols_communes.json",
+   "atmart_taux_change_brh_HT.csv",
+   "atmart_taux_change_brh_mensuel_HT.csv",
    "atmart_tofe_annuel_HT.csv",
    "atmart_transferts_departements.json",
    "atmart_transferts_departements_HT.csv",
@@ -1095,6 +1097,20 @@
    "licence": "CC BY 4.0",
    "sources": [],
    "attribution": "ISRIC — World Soil Information, SoilGrids 2.0 (CC BY 4.0). Poggio et al. 2021, SOIL 7:217-240."
+  },
+  "atmart_taux_change_brh_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-007"
+   ],
+   "attribution": "BRH"
+  },
+  "atmart_taux_change_brh_mensuel_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-007"
+   ],
+   "attribution": "BRH"
   },
   "atmart_telecom_communes_HT.csv": {
    "licence": "ODbL 1.0",

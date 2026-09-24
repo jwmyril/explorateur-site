@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 139
+  "fichiers": 140
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -66,6 +66,7 @@
    "atmart_presence_organisations_HT.csv",
    "atmart_prix_denrees.json",
    "atmart_prix_denrees_marches_HT.csv",
+   "atmart_prix_fews_marches_HT.csv",
    "atmart_prix_marches_HT.csv",
    "atmart_projets_national.json",
    "atmart_pyramide_ages_HT.csv",
@@ -894,6 +895,13 @@
     "SRC-011"
    ],
    "attribution": "PAM (WFP)"
+  },
+  "atmart_prix_fews_marches_HT.csv": {
+   "licence": "CC BY 4.0",
+   "sources": [
+    "SRC-006"
+   ],
+   "attribution": "CNSA / FEWS NET / WFP"
   },
   "atmart_prix_marches_HT.csv": {
    "licence": "CC BY 4.0",

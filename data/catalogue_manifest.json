@@ -17,8 +17,8 @@
  "nombre_valeurs_sourcees": 13931,
  "nombre_absences_documentees": 1120,
  "nombre_sources": 73,
- "nombre_sources_integrees": 62,
- "nombre_sources_identifiees": 11,
+ "nombre_sources_integrees": 63,
+ "nombre_sources_identifiees": 10,
  "nombre_sources_classe_a": 46,
  "nombre_sources_classe_b": 11,
  "nombre_sources_classe_c": 14,
@@ -37,8 +37,8 @@
  "communes_couvertes_ecoles": 49,
  "communes_couvertes_sante": 14,
  "communes_couvertes_marches": 136,
- "nombre_produits": 69,
- "nombre_produits_gratuits": 57,
+ "nombre_produits": 70,
+ "nombre_produits_gratuits": 58,
  "nombre_produits_payants": 7,
  "nombre_produits_parrainables": 5,
  "source_comptes_produits": "backbone/atmart_catalogue_produits.csv",
@@ -144,6 +144,8 @@
  "prd_209_colonnes": 19,
  "prd_210_lignes": 112,
  "prd_210_colonnes": 11,
+ "prd_211_lignes": 54941,
+ "prd_211_colonnes": 17,
  "prd_040_lignes": 121,
  "prd_040_colonnes": 16,
  "prd_039_lignes": 364,
@@ -158,5 +160,5 @@
  "prd_027_colonnes": 12,
  "prd_055_intervalles": 371,
  "prd_027_series": 107,
- "empreinte": "4e2345dc38a47b61"
+ "empreinte": "6332d26102c08482"
 }

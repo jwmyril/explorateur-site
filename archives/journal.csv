@@ -437,6 +437,8 @@ atmart_solaire_communes.json,2026-08-17,archives/atmart_solaire_communes/2026-08
 atmart_solaire_communes.json,2026-08-17,archives/atmart_solaire_communes/2026-08-17-2.json,aac3de498d1d2a2cf59778c317aab618733b46b9555d5ba27de94a2354363085,169123,0,140,entrées,2026-08-17,site,df46d75237,oui
 atmart_sols_communes.json,2026-08-17,archives/atmart_sols_communes/2026-08-17.json,47daf7bae941c221ae2a690722fbc0dee1809c10402caebc25aa98d1620ec20f,28971,0,140,entrées,2026-08-17,site,2b76d06e4f,non
 atmart_sols_communes.json,2026-08-17,archives/atmart_sols_communes/2026-08-17-2.json,08a40e117909174fb30a653281c37d838c784511c7bd447c82f2346d90833181,28907,0,140,entrées,2026-08-17,site,f0941712df,oui
+atmart_taux_change_brh_HT.csv,2026-09-24,archives/atmart_taux_change_brh_HT/2026-09-24.csv,c34c3bce14ef789b8161817f1dd5a983727bf3e73828e42a905a5f83547fff9c,956700,7802,7801,lignes,2026-09-24,vitrine,a31ae8d8a2,oui
+atmart_taux_change_brh_mensuel_HT.csv,2026-09-24,archives/atmart_taux_change_brh_mensuel_HT/2026-09-24.csv,881799e5cabfd300005a04e1e095bffbf99dff13e792c9ecd39d66fc506c5d2d,52671,384,383,lignes,2026-09-24,vitrine,a31ae8d8a2,oui
 atmart_telecom_communes_HT.csv,2026-08-15,archives/atmart_telecom_communes_HT/2026-08-15.csv,4ba2bfbee081087895546e3dd18cd2f3130275bffa00588b6c5b6e07b617d192,32910,220,219,lignes,2026-08-15,vitrine,72b261b108,oui
 atmart_tofe_annuel_HT.csv,2026-09-21,archives/atmart_tofe_annuel_HT/2026-09-21.csv,2eccdc6bbae190da1465085e5ae02050cac0d30c567c9c516d62a235ae1a4c01,56895,175,174,lignes,2026-09-21,vitrine,bfdd96744c,oui
 atmart_tourisme_communes.json,2026-08-21,archives/atmart_tourisme_communes/2026-08-21.json,cfda294ea25d00e510b412fdb800df3504755b17ac4b92e17a744ea4e1c05e3a,4554,0,107,entrées,2026-08-21,vitrine,7957dbebf8,non

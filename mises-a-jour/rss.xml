@@ -8,6 +8,13 @@
   <language>fr</language>
   <atom:link href="https://explorateur.atmart.ltd/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Mises à jour du 25/09/2026</title>
+    <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-09-25</link>
+    <guid isPermaLink="false">explorateur-maj-fr-2026-09-25</guid>
+    <pubDate>Fri, 25 Sep 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvelle version · 50a13ae4; atmart_referentiel_indicateurs_i18n.csv — nouvelle version · 2 688 lignes · 72ec3c29; atmart_referentiel_indicateurs.csv — nouvelle version · 128 lignes · 563d293a; atmart_licences_indicateurs_HT.csv — nouvelle version · 128 lignes · ee3fda6b; Licence de chaque fichier publié — nouvelle version · 144 lignes · e7c0dc8f; atmart_indicateurs_communes_HT.csv — nouvelle version · 15 375 lignes · 9d4e05ae</description>
+  </item>
+  <item>
     <title>Mises à jour du 24/09/2026</title>
     <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-09-24</link>
     <guid isPermaLink="false">explorateur-maj-fr-2026-09-24</guid>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">explorateur-maj-fr-2026-07-31</guid>
     <pubDate>Fri, 31 Jul 2026 12:00:00 +0000</pubDate>
     <description>Transferts de la diaspora vers Haïti — première publication · 26 lignes · e38973a5; haiti_contour_simplifie.geojson — première publication · 1 entités · 15b281bc; Registre des sources Atmart — première publication · 8 lignes · c363c47c; Registre des sources Atmart — première publication · 12 lignes · 20c2c6a7; atmart_referentiel_territoire_base_HT.csv — première publication · 192 lignes · b4bb6eb0; atmart_referentiel_territoire_base_HT.csv — première publication · 192 lignes · d59beb9e; atmart_referentiel_temps_HT.csv — première publication · 1 201 lignes · e59b0c94; atmart_referentiel_indicateurs_i18n.csv — première publication · 420 lignes · f6d6c228; atmart_referentiel_indicateurs.csv — première publication · 17 lignes · 96a0e9cf; atmart_referentiel_indicateurs.csv — première publication · 20 lignes · 4fe6203a; atmart_millesimes_territoriaux.csv — première publication · 192 lignes · dabc3cfd; atmart_indicateurs_communes_HT.csv — première publication · 1 197 lignes · 79fdb038; atmart_indicateurs_communes_HT.csv — première publication · 1 197 lignes · 14b99d28; atmart_indicateurs_communes_HT.csv — première publication · 1 274 lignes · 555df151; LISEZMOI_transferts_diaspora.md — nouvelle version · e5b253c8; Échantillon — sections communales d'Haïti — nouvelle version · 10 lignes · f87eaa45</description>
-  </item>
-  <item>
-    <title>Mises à jour du 12/06/2026</title>
-    <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-06-12</link>
-    <guid isPermaLink="false">explorateur-maj-fr-2026-06-12</guid>
-    <pubDate>Fri, 12 Jun 2026 12:00:00 +0000</pubDate>
-    <description>LISEZMOI_transferts_diaspora.md — première publication · 01c4ae18; Échantillon — sections communales d'Haïti — première publication · 10 lignes · d2425b67</description>
   </item>
 </channel>
 </rss>

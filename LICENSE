@@ -40,7 +40,7 @@ RÉPARTITION AU 2026-09-25
   par indicateur (par ligne) — voir atmart_licences_in   1 fichier(s)
   par ligne — voir la colonne « licence »                1 fichier(s)
   sous réserve                                           7 fichier(s)
-  à déclarer                                             3 fichier(s)
+  à déclarer                                             4 fichier(s)
 
 ATTRIBUTION MINIMALE, quelle que soit la licence :
   « Explorateur Haïti — Atmart Data », plus l'attribution propre à
@@ -53,10 +53,11 @@ CE QUE CE FICHIER NE COUVRE PAS
   · Les fichiers SOURCES ne sont jamais remis en miroir : l'Explorateur
     publie ce qu'il calcule, pas ce qu'il télécharge.
 
-  · 3 fichier(s) attendent encore leur licence, faute d'une
+  · 4 fichier(s) attendent encore leur licence, faute d'une
     provenance déclarée. Ils ne sont pas réputés libres pour autant :
        atmart_couches_carte_HT.csv
        atmart_enquetes_resultats_HT.csv
+       atmart_secteurs_absents_HT.csv
        haiti_regions_enquete_simplifie.geojson
 
 Engendré par build_licences.py — ne pas éditer à la main.

@@ -2,7 +2,7 @@
  "meta": {
   "titre": "Licence de chaque fichier publié",
   "regle": "La licence d'un fichier est la plus contraignante de ses sources. Le partage à l'identique d'ODbL et de CC BY-SA se transmet aux bases dérivées redistribuées ; les sources hors du champ du droit d'auteur (décret haïtien du 12/10/2005, art. 5) n'imposent rien.",
-  "fichiers": 144
+  "fichiers": 145
  },
  "par_licence": {
   "Accès complet et ouvert (World Data Center) — usage non commercial libre selon la Résolution 40 OMM": [
@@ -177,6 +177,7 @@
   "à déclarer": [
    "atmart_couches_carte_HT.csv",
    "atmart_enquetes_resultats_HT.csv",
+   "atmart_secteurs_absents_HT.csv",
    "haiti_regions_enquete_simplifie.geojson"
   ]
  },
@@ -1060,6 +1061,11 @@
     "SRC-048"
    ],
    "attribution": "Ministère de la Santé publique et de la Population (MSPP)"
+  },
+  "atmart_secteurs_absents_HT.csv": {
+   "licence": "à déclarer",
+   "sources": [],
+   "attribution": ""
   },
   "atmart_securite_mensuelle_HT.csv": {
    "licence": "CC BY 4.0",

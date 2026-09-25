@@ -163,7 +163,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_sources.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "74685"
+       "contentSize": "74806"
       }
      ],
      "isBasedOn": "Atmart"
@@ -2280,10 +2280,80 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_secteurs_absents_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "10432"
+       "contentSize": "11163"
       }
      ],
      "isBasedOn": "Atmart Data — document « Secteurs absents » (21/08/2026), URL re-testées le 25/09/2026"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-216",
+     "identifier": "PRD-216",
+     "name": "FNE — écoles retenues au PAEF 2025, par commune",
+     "description": "Le Programme d'appui à l'éducation et à la formation a retenu 73 écoles, presque toutes dans l'aire métropolitaine de Port-au-Prince, plus Saint-Marc. Ce n'est PAS un recensement du parc scolaire : c'est la trace d'un appui ciblé sur les écoles frappées par l'insécurité. Une commune absente n'est pas une commune sans écoles — son champ est vide, jamais zéro. Effectif faible : ne pas en tirer de taux ni de comparaison entre communes. Rien sur les directeurs : le fichier source les nomme avec téléphone, NIF et NIU ; ici, l'agrégat seul.",
+     "url": "https://explorateur.atmart.ltd/datasets.html#PRD-216",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Social",
+      "Haïti"
+     ],
+     "isAccessibleForFree": true,
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_fne_ecoles_paef_communes_2025_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "414"
+      }
+     ],
+     "isBasedOn": "FNE — Fonds National de l'Éducation, PAEF 2025 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5)"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-217",
+     "identifier": "PRD-217",
+     "name": "FNE — subventions à l'éducation, montants mensuels",
+     "description": "Le journal des subventions du FNE du 1er octobre 2025 au 10 avril 2026, agrégé par mois : combien d'actes, quel montant en gourdes. Aucune ventilation géographique — la source n'en porte pas, le montant reste NATIONAL. Aucun nom : le journal source nomme les bénéficiaires personnes physiques, agrégé ici par mois pour cette raison. Période incomplète, en cours d'exercice : ne pas la traiter comme une année.",
+     "url": "https://explorateur.atmart.ltd/datasets.html#PRD-217",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Social",
+      "Haïti"
+     ],
+     "isAccessibleForFree": true,
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_fne_subventions_national_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "250"
+      }
+     ],
+     "isBasedOn": "FNE — Fonds National de l'Éducation, rapport de subvention oct. 2025–avr. 2026 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5)"
     },
     {
      "@type": "Dataset",
@@ -2471,7 +2541,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_licences_donnees_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "43285"
+       "contentSize": "43981"
       }
      ],
      "isBasedOn": "Registre des sources et passeports juridiques d'Atmart"
@@ -2656,7 +2726,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/datasets.html" />
   <script>window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-pFqcBwNQmhtt2t/hatZ4vPyaV8xe8oZuqblcg8W7Ono=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-eXqRETyBs55sRx+fHMDMlG1f8fEOe+ts7SeY1/AMZvs=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -3378,9 +3448,25 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <span class="tag" data-i18n="ds.t_free">Gratuit</span>
   <h3 data-i18n-html="ds.prd215_h">Ce que l'Explorateur ne peut pas encore dire — les vides par secteur</h3>
   <p data-i18n-html="ds.prd215_p">LE VIDE EST PUBLIABLE. Vingt-trois données qu'un lecteur pourrait attendre et que l'Explorateur ne peut pas montrer, sur douze secteurs : cadastre, réseau électrique, état des routes, couverture en eau potable, choléra par commune, résultats électoraux communaux, registre du commerce, DHIS2, couverture vaccinale, pertes par catastrophe. Pour chacune : la raison, qui détient la donnée quand elle existe, et l'URL du producteur AVEC son statut re-testé le 25 septembre 2026. Une donnée manquante n'est jamais un zéro ; cette liste dit où envoyer des cartographes ou demander un registre.</p>
-  <p class="price" data-i18n-html="ds.prd215_pr">Gratuit <small>23 lignes • 9 colonnes</small></p>
+  <p class="price" data-i18n-html="ds.prd215_pr">Gratuit <small>24 lignes • 9 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd215_meta">📐 Méthode • Sources : Atmart Data — document « Secteurs absents » (21/08/2026), URL re-testées le 25/09/2026 • niveau de confiance A • CC BY 4.0</p>
   <a href="data/atmart_secteurs_absents_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit" id="PRD-216">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd216_h">FNE — écoles retenues au PAEF 2025, par commune</h3>
+  <p data-i18n-html="ds.prd216_p">Le Programme d'appui à l'éducation et à la formation a retenu 73 écoles, presque toutes dans l'aire métropolitaine de Port-au-Prince, plus Saint-Marc. Ce n'est PAS un recensement du parc scolaire : c'est la trace d'un appui ciblé sur les écoles frappées par l'insécurité. Une commune absente n'est pas une commune sans écoles — son champ est vide, jamais zéro. Effectif faible : ne pas en tirer de taux ni de comparaison entre communes. Rien sur les directeurs : le fichier source les nomme avec téléphone, NIF et NIU ; ici, l'agrégat seul.</p>
+  <p class="price" data-i18n-html="ds.prd216_pr">Gratuit <small>6 lignes • 7 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd216_meta">👥 Social • Sources : FNE — Fonds National de l'Éducation, PAEF 2025 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5) • niveau de confiance B • CC BY 4.0</p>
+  <a href="data/atmart_fne_ecoles_paef_communes_2025_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit" id="PRD-217">
+  <span class="tag" data-i18n="ds.t_free">Gratuit</span>
+  <h3 data-i18n-html="ds.prd217_h">FNE — subventions à l'éducation, montants mensuels</h3>
+  <p data-i18n-html="ds.prd217_p">Le journal des subventions du FNE du 1er octobre 2025 au 10 avril 2026, agrégé par mois : combien d'actes, quel montant en gourdes. Aucune ventilation géographique — la source n'en porte pas, le montant reste NATIONAL. Aucun nom : le journal source nomme les bénéficiaires personnes physiques, agrégé ici par mois pour cette raison. Période incomplète, en cours d'exercice : ne pas la traiter comme une année.</p>
+  <p class="price" data-i18n-html="ds.prd217_pr">Gratuit <small>7 lignes • 4 colonnes</small></p>
+  <p class="meta" data-i18n-html="ds.prd217_meta">👥 Social • Sources : FNE — Fonds National de l'Éducation, rapport de subvention oct. 2025–avr. 2026 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5) • niveau de confiance B • CC BY 4.0</p>
+  <a href="data/atmart_fne_subventions_national_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit" id="PRD-040">
   <span class="tag" data-i18n="ds.t_free">Gratuit</span>
@@ -3418,7 +3504,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <span class="tag" data-i18n="ds.t_free">Gratuit</span>
   <h3 data-i18n-html="ds.prd036_h">Licence de chaque fichier publié</h3>
   <p data-i18n-html="ds.prd036_p">Une ligne par fichier du site : sa licence de sortie, les sources dont elle découle, l'attribution à porter et la raison. IL N'Y A PAS UNE LICENCE MAIS PLUSIEURS, et c'est le point : onze fichiers sortent sous ODbL parce qu'ils dérivent d'OpenStreetMap, dont le partage à l'identique se transmet aux bases dérivées redistribuées ; d'autres ne relèvent d'aucune licence, l'article 5 du décret haïtien du 12/10/2005 excluant du droit d'auteur les textes officiels et les simples données. Annoncer CC BY partout aurait autorisé à tort ; annoncer ODbL partout aurait interdit sans raison. Le tableau se recalcule à chaque passage depuis le registre des sources.</p>
-  <p class="price" data-i18n-html="ds.prd036_pr">Gratuit <small>144 lignes • 8 colonnes</small></p>
+  <p class="price" data-i18n-html="ds.prd036_pr">Gratuit <small>149 lignes • 8 colonnes</small></p>
   <p class="meta" data-i18n-html="ds.prd036_meta">📐 Méthode • Sources : Registre des sources et passeports juridiques d'Atmart • niveau de confiance A • CC BY 4.0</p>
   <a href="data/atmart_licences_donnees_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Télécharger (CSV)</a>
 </div>
@@ -3636,7 +3722,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </script>
 <script src="assets/mesure.js?v=4" defer></script>
 <script src="assets/ux.js?v=4" defer></script>
-<script src="assets/i18n.js?v=78"></script>
+<script src="assets/i18n.js?v=81"></script>
 <script src="assets/theme.js?v=3" defer></script>
 <script src="assets/vues.js?v=2"></script>
 </body>

@@ -162,7 +162,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_sources.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "74685"
+       "contentSize": "74806"
       }
      ],
      "isBasedOn": "Atmart"
@@ -2279,10 +2279,80 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_secteurs_absents_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "10432"
+       "contentSize": "11163"
       }
      ],
      "isBasedOn": "Atmart Data — document « Secteurs absents » (21/08/2026), URL re-testées le 25/09/2026"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-216",
+     "identifier": "PRD-216",
+     "name": "FNE — écoles retenues au PAEF 2025, par commune",
+     "description": "Le Programme d'appui à l'éducation et à la formation a retenu 73 écoles, presque toutes dans l'aire métropolitaine de Port-au-Prince, plus Saint-Marc. Ce n'est PAS un recensement du parc scolaire : c'est la trace d'un appui ciblé sur les écoles frappées par l'insécurité. Une commune absente n'est pas une commune sans écoles — son champ est vide, jamais zéro. Effectif faible : ne pas en tirer de taux ni de comparaison entre communes. Rien sur les directeurs : le fichier source les nomme avec téléphone, NIF et NIU ; ici, l'agrégat seul.",
+     "url": "https://explorateur.atmart.ltd/datasets.html#PRD-216",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Social",
+      "Haïti"
+     ],
+     "isAccessibleForFree": true,
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_fne_ecoles_paef_communes_2025_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "414"
+      }
+     ],
+     "isBasedOn": "FNE — Fonds National de l'Éducation, PAEF 2025 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5)"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-217",
+     "identifier": "PRD-217",
+     "name": "FNE — subventions à l'éducation, montants mensuels",
+     "description": "Le journal des subventions du FNE du 1er octobre 2025 au 10 avril 2026, agrégé par mois : combien d'actes, quel montant en gourdes. Aucune ventilation géographique — la source n'en porte pas, le montant reste NATIONAL. Aucun nom : le journal source nomme les bénéficiaires personnes physiques, agrégé ici par mois pour cette raison. Période incomplète, en cours d'exercice : ne pas la traiter comme une année.",
+     "url": "https://explorateur.atmart.ltd/datasets.html#PRD-217",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Social",
+      "Haïti"
+     ],
+     "isAccessibleForFree": true,
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_fne_subventions_national_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "250"
+      }
+     ],
+     "isBasedOn": "FNE — Fonds National de l'Éducation, rapport de subvention oct. 2025–avr. 2026 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5)"
     },
     {
      "@type": "Dataset",
@@ -2470,7 +2540,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_licences_donnees_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "43285"
+       "contentSize": "43981"
       }
      ],
      "isBasedOn": "Registre des sources et passeports juridiques d'Atmart"
@@ -2657,7 +2727,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/datasets.html" />
   <script>window.ATM_LANG_FORCE = "es"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-CckMjSmKNXB3GQWoeKT9XCqlEfEBF/hpHhyDApmKPGA=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-pFqcBwNQmhtt2t/hatZ4vPyaV8xe8oZuqblcg8W7Ono=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-CckMjSmKNXB3GQWoeKT9XCqlEfEBF/hpHhyDApmKPGA=' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-eXqRETyBs55sRx+fHMDMlG1f8fEOe+ts7SeY1/AMZvs=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -3369,9 +3439,25 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <span class="tag" data-i18n="ds.t_free">Gratis</span>
   <h3 data-i18n-html="ds.prd215_h">Lo que el Explorador aún no puede decir — los vacíos por sector</h3>
   <p data-i18n-html="ds.prd215_p">EL VACÍO ES PUBLICABLE. Veintitrés datos que un lector podría esperar y que el Explorador no puede mostrar, en doce sectores: catastro, red eléctrica, estado de las carreteras, cobertura de agua potable, cólera por comuna, resultados electorales comunales, registro mercantil, DHIS2, cobertura de vacunación, pérdidas por desastres. Para cada uno: la razón, quién tiene el dato cuando existe, y la URL del productor CON su estado re-verificado el 25 de septiembre de 2026. Un dato ausente nunca es un cero; esta lista indica dónde enviar cartógrafos o solicitar un registro.</p>
-  <p class="price" data-i18n-html="ds.prd215_pr">Gratis <small>23 filas • 9 columnas</small></p>
+  <p class="price" data-i18n-html="ds.prd215_pr">Gratis <small>24 filas • 9 columnas</small></p>
   <p class="meta" data-i18n-html="ds.prd215_meta">📐 Método • Fuentes: Atmart Data — document « Secteurs absents » (21/08/2026), URL re-testées le 25/09/2026 • nivel de confianza A • CC BY 4.0</p>
   <a href="../data/atmart_secteurs_absents_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Descargar (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit" id="PRD-216">
+  <span class="tag" data-i18n="ds.t_free">Gratis</span>
+  <h3 data-i18n-html="ds.prd216_h">FNE — escuelas seleccionadas en el PAEF 2025, por comuna</h3>
+  <p data-i18n-html="ds.prd216_p">El PAEF 2025 seleccionó 73 escuelas, casi todas en el área metropolitana de Puerto Príncipe más Saint-Marc. No es un censo escolar: es una respuesta focalizada a escuelas golpeadas por la inseguridad. Una comuna ausente tiene el campo vacío, no un cero. Cifras pequeñas, sin comparación entre comunas. Nada sobre los directores, solo el agregado.</p>
+  <p class="price" data-i18n-html="ds.prd216_pr">Gratis <small>6 filas • 7 columnas</small></p>
+  <p class="meta" data-i18n-html="ds.prd216_meta">👥 Social • Fuentes: FNE — Fonds National de l'Éducation, PAEF 2025 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5) • nivel de confianza B • CC BY 4.0</p>
+  <a href="../data/atmart_fne_ecoles_paef_communes_2025_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Descargar (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit" id="PRD-217">
+  <span class="tag" data-i18n="ds.t_free">Gratis</span>
+  <h3 data-i18n-html="ds.prd217_h">FNE — subvenciones a la educación, montos mensuales</h3>
+  <p data-i18n-html="ds.prd217_p">El diario de subvenciones del FNE, del 1 de octubre de 2025 al 10 de abril de 2026, agregado por mes: cuántos actos, cuántas gourdes. Sin desglose geográfico — el monto es nacional. Sin nombres: el diario nombra a los beneficiarios, por eso se agrega por mes. El periodo es incompleto: no tratarlo como un año.</p>
+  <p class="price" data-i18n-html="ds.prd217_pr">Gratis <small>7 filas • 4 columnas</small></p>
+  <p class="meta" data-i18n-html="ds.prd217_meta">👥 Social • Fuentes: FNE — Fonds National de l'Éducation, rapport de subvention oct. 2025–avr. 2026 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5) • nivel de confianza B • CC BY 4.0</p>
+  <a href="../data/atmart_fne_subventions_national_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Descargar (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit" id="PRD-040">
   <span class="tag" data-i18n="ds.t_free">Gratis</span>
@@ -3409,14 +3495,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <span class="tag" data-i18n="ds.t_free">Gratis</span>
   <h3 data-i18n-html="ds.prd036_h">La licencia de cada archivo publicado</h3>
   <p data-i18n-html="ds.prd036_p">Una línea por archivo del sitio: su licencia, las fuentes de las que procede, la atribución que debe llevar y la razón. NO HAY UNA LICENCIA SINO VARIAS, y eso es lo esencial: once archivos salen bajo ODbL porque derivan de OpenStreetMap, cuya cláusula de compartir-igual se transmite a las bases derivadas redistribuidas; otros no están sujetos a licencia alguna, ya que el artículo 5 del decreto haitiano del 12 de octubre de 2005 excluye del derecho de autor los textos oficiales y los datos simples. Anunciar CC BY en todas partes concedería un derecho que la fuente no otorga; anunciar ODbL en todas partes prohibiría sin motivo. La tabla se recalcula desde el registro de fuentes en cada pasada.</p>
-  <p class="price" data-i18n-html="ds.prd036_pr">Gratis <small>144 filas • 8 columnas</small></p>
+  <p class="price" data-i18n-html="ds.prd036_pr">Gratis <small>149 filas • 8 columnas</small></p>
   <p class="meta" data-i18n-html="ds.prd036_meta">📐 Método • Fuentes: Registro de fuentes y pasaportes jurídicos de Atmart • nivel de confianza A • CC BY 4.0</p>
   <a href="../data/atmart_licences_donnees_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Descargar (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit" id="PRD-027">
   <span class="tag" data-i18n="ds.t_free">Gratis</span>
   <h3 data-i18n-html="ds.prd027_h">Series nacionales de Haití</h3>
-  <p data-i18n-html="ds.prd027_p"><span data-mf="prd_027_series">107</span> series nacionales desde 2000 — economía, trabajo, turismo, transporte aéreo, salud, educación, energía, tierras, seguridad alimentaria, comercio, gobernanza, inclusión financiera. NO bajan al municipio y no deben hacerlo: sirven de escala para leer una cifra local. Tres advertencias que lleva cada fila: las series de empleo son estimaciones modelizadas de la OIT; el comercio de mercancías es un dato espejo — Haití no lo declara desde 2017; y las series turísticas se detienen en 2018 o 2019, sin declaración desde la pandemia.</p>
+  <p data-i18n-html="ds.prd027_p"><span data-mf="prd_027_series">84</span> series nacionales desde 2000 — economía, trabajo, turismo, transporte aéreo, salud, educación, energía, tierras, seguridad alimentaria, comercio, gobernanza, inclusión financiera. NO bajan al municipio y no deben hacerlo: sirven de escala para leer una cifra local. Tres advertencias que lleva cada fila: las series de empleo son estimaciones modelizadas de la OIT; el comercio de mercancías es un dato espejo — Haití no lo declara desde 2017; y las series turísticas se detienen en 2018 o 2019, sin declaración desde la pandemia.</p>
   <p class="price" data-i18n-html="ds.prd027_pr">Gratis <small>2 184 filas • 12 columnas</small></p>
   <p class="meta" data-i18n-html="ds.prd027_meta">💰 Economía • Fuentes: Banque mondiale — WDI ; OIT — ILOSTAT ; FAO — FAOSTAT ; UN Comtrade • nivel de confianza A • CC BY 4.0 (Banco Mundial, OIT); CC BY 4.0 con cláusula de no respaldo (FAO); condiciones de la UNSD, solo agregados transformados (Comtrade)</p>
   <a href="../data/atmart_series_nationales_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Descargar (CSV)</a>
@@ -3623,7 +3709,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </script>
 <script src="../assets/mesure.js?v=4" defer></script>
 <script src="../assets/ux.js?v=4" defer></script>
-<script src="../assets/i18n.js?v=78"></script>
+<script src="../assets/i18n.js?v=81"></script>
 <script src="../assets/theme.js?v=3" defer></script>
 <script src="../assets/vues.js?v=2"></script>
 </body>

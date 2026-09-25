@@ -162,7 +162,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_registre_sources.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "74685"
+       "contentSize": "74806"
       }
      ],
      "isBasedOn": "Atmart"
@@ -2279,10 +2279,80 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_secteurs_absents_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "10432"
+       "contentSize": "11163"
       }
      ],
      "isBasedOn": "Atmart Data — document « Secteurs absents » (21/08/2026), URL re-testées le 25/09/2026"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-216",
+     "identifier": "PRD-216",
+     "name": "FNE — écoles retenues au PAEF 2025, par commune",
+     "description": "Le Programme d'appui à l'éducation et à la formation a retenu 73 écoles, presque toutes dans l'aire métropolitaine de Port-au-Prince, plus Saint-Marc. Ce n'est PAS un recensement du parc scolaire : c'est la trace d'un appui ciblé sur les écoles frappées par l'insécurité. Une commune absente n'est pas une commune sans écoles — son champ est vide, jamais zéro. Effectif faible : ne pas en tirer de taux ni de comparaison entre communes. Rien sur les directeurs : le fichier source les nomme avec téléphone, NIF et NIU ; ici, l'agrégat seul.",
+     "url": "https://explorateur.atmart.ltd/datasets.html#PRD-216",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Social",
+      "Haïti"
+     ],
+     "isAccessibleForFree": true,
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_fne_ecoles_paef_communes_2025_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "414"
+      }
+     ],
+     "isBasedOn": "FNE — Fonds National de l'Éducation, PAEF 2025 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5)"
+    },
+    {
+     "@type": "Dataset",
+     "@id": "https://explorateur.atmart.ltd/datasets.html#PRD-217",
+     "identifier": "PRD-217",
+     "name": "FNE — subventions à l'éducation, montants mensuels",
+     "description": "Le journal des subventions du FNE du 1er octobre 2025 au 10 avril 2026, agrégé par mois : combien d'actes, quel montant en gourdes. Aucune ventilation géographique — la source n'en porte pas, le montant reste NATIONAL. Aucun nom : le journal source nomme les bénéficiaires personnes physiques, agrégé ici par mois pour cette raison. Période incomplète, en cours d'exercice : ne pas la traiter comme une année.",
+     "url": "https://explorateur.atmart.ltd/datasets.html#PRD-217",
+     "creator": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "publisher": {
+      "@id": "https://explorateur.atmart.ltd/#organisation"
+     },
+     "spatialCoverage": {
+      "@type": "Country",
+      "name": "Haïti",
+      "identifier": "HT"
+     },
+     "inLanguage": "fr",
+     "keywords": [
+      "Social",
+      "Haïti"
+     ],
+     "isAccessibleForFree": true,
+     "license": "https://creativecommons.org/licenses/by/4.0/",
+     "distribution": [
+      {
+       "@type": "DataDownload",
+       "contentUrl": "https://explorateur.atmart.ltd/data/atmart_fne_subventions_national_HT.csv",
+       "encodingFormat": "text/csv",
+       "contentSize": "250"
+      }
+     ],
+     "isBasedOn": "FNE — Fonds National de l'Éducation, rapport de subvention oct. 2025–avr. 2026 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5)"
     },
     {
      "@type": "Dataset",
@@ -2470,7 +2540,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
        "@type": "DataDownload",
        "contentUrl": "https://explorateur.atmart.ltd/data/atmart_licences_donnees_HT.csv",
        "encodingFormat": "text/csv",
-       "contentSize": "43285"
+       "contentSize": "43981"
       }
      ],
      "isBasedOn": "Registre des sources et passeports juridiques d'Atmart"
@@ -2657,7 +2727,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <link rel="alternate" hreflang="x-default" href="https://explorateur.atmart.ltd/datasets.html" />
   <script>window.ATM_LANG_FORCE = "ht"; window.ATM_I18N_BASE = "../"; window.ATM_LANG_URLS = {"fr": "https://explorateur.atmart.ltd/datasets.html", "ht": "https://explorateur.atmart.ltd/ht/datasets.html", "en": "https://explorateur.atmart.ltd/en/datasets.html", "es": "https://explorateur.atmart.ltd/es/datasets.html"};</script>
 <!-- Sécurité engendrée par build_csp.py — ne pas éditer à la main -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-fixrKEyRASv52mG7cJnr0cxMUo/8UUodX8d0vHqhvpI=' 'sha256-pFqcBwNQmhtt2t/hatZ4vPyaV8xe8oZuqblcg8W7Ono=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-MSRRFHKJSBCIESkLQ8Uqpk9oQNu/PxpKLUoeFrWBBgI=' 'sha256-cPHP6Mu3bFAlnBhWHibvw4hWWbQkGTYdQUV3YMkgDo4=' 'sha256-eXqRETyBs55sRx+fHMDMlG1f8fEOe+ts7SeY1/AMZvs=' 'sha256-fixrKEyRASv52mG7cJnr0cxMUo/8UUodX8d0vHqhvpI=' 'sha256-r2HKAq/FWhIsn3quvlU/mcKGM3yOxnOfUo3hLchfohw=' 'sha256-u33UhClVelgs9uz0Bpn4qlZVrEy30QUSqM0uHg7C2lM='; connect-src 'self' https://atmart-chat.atmartllc.workers.dev; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <!-- /Sécurité -->
 </head>
@@ -3369,9 +3439,25 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <span class="tag" data-i18n="ds.t_free">Gratis</span>
   <h3 data-i18n-html="ds.prd215_h">Sa Eksploratè a poko ka di — vid yo pa sektè</h3>
   <p data-i18n-html="ds.prd215_p">VID LA KA PIBLIYE. Venntwa done yon lektè ta ka atann men Eksploratè a pa ka montre, sou douz sektè : kadas, rezo elektrik, eta wout yo, kouvèti dlo potab, kolera pa komin, rezilta eleksyon pa komin, rejis komès, DHIS2, kouvèti vaksen, pèt akòz katastwòf. Pou chak : rezon an, kilès ki gen done a lè li egziste, ak adrès pwodiktè a AK estati nou re-teste 25 septanm 2026. Yon done ki manke pa janm yon zewo ; lis sa a di kote pou voye moun al kat oswa mande yon rejis.</p>
-  <p class="price" data-i18n-html="ds.prd215_pr">Gratis <small>23 liy • 9 kolòn</small></p>
+  <p class="price" data-i18n-html="ds.prd215_pr">Gratis <small>24 liy • 9 kolòn</small></p>
   <p class="meta" data-i18n-html="ds.prd215_meta">📐 Metòd • Sous : Atmart Data — document « Secteurs absents » (21/08/2026), URL re-testées le 25/09/2026 • nivo konfyans A • CC BY 4.0</p>
   <a href="../data/atmart_secteurs_absents_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Telechaje (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit" id="PRD-216">
+  <span class="tag" data-i18n="ds.t_free">Gratis</span>
+  <h3 data-i18n-html="ds.prd216_h">FNE — lekòl ki chwazi nan PAEF 2025, pa komin</h3>
+  <p data-i18n-html="ds.prd216_p">PAEF la chwazi 73 lekòl an 2025, prèske tout nan gwo Pòtoprens ak Senmak. Se pa yon resansman tout lekòl peyi a : se yon api vize sou lekòl ensekirite frape. Yon komin ki pa parèt, chan li vid — pa zewo. Ti kantite : pa konpare komin yo. Okenn done sou direktè yo, chif rasanble sèlman.</p>
+  <p class="price" data-i18n-html="ds.prd216_pr">Gratis <small>6 liy • 7 kolòn</small></p>
+  <p class="meta" data-i18n-html="ds.prd216_meta">👥 Sosyal • Sous : FNE — Fonds National de l'Éducation, PAEF 2025 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5) • nivo konfyans B • CC BY 4.0</p>
+  <a href="../data/atmart_fne_ecoles_paef_communes_2025_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Telechaje (CSV)</a>
+</div>
+<div class="card" data-cat="gratuit" id="PRD-217">
+  <span class="tag" data-i18n="ds.t_free">Gratis</span>
+  <h3 data-i18n-html="ds.prd217_h">FNE — sibvansyon pou edikasyon, montan chak mwa</h3>
+  <p data-i18n-html="ds.prd217_p">Jounal sibvansyon FNE a, 1ye oktòb 2025 rive 10 avril 2026, rasanble pa mwa : konbyen zak, konbyen goud. Pa gen dekoupaj jeyografik — montan an nasyonal. Pa gen non : jounal la site moun, se poutèt sa nou rasanble l pa mwa. Peryòd la pa konplè : pa trete l tankou yon ane.</p>
+  <p class="price" data-i18n-html="ds.prd217_pr">Gratis <small>7 liy • 4 kolòn</small></p>
+  <p class="meta" data-i18n-html="ds.prd217_meta">👥 Sosyal • Sous : FNE — Fonds National de l'Éducation, rapport de subvention oct. 2025–avr. 2026 (SRC-023, passeport PSP-046, décret 12/10/2005 art. 5) • nivo konfyans B • CC BY 4.0</p>
+  <a href="../data/atmart_fne_subventions_national_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Telechaje (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit" id="PRD-040">
   <span class="tag" data-i18n="ds.t_free">Gratis</span>
@@ -3409,14 +3495,14 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
   <span class="tag" data-i18n="ds.t_free">Gratis</span>
   <h3 data-i18n-html="ds.prd036_h">Lisans chak fichye nou pibliye</h3>
   <p data-i18n-html="ds.prd036_p">Yon liy pou chak fichye ki sou sit la : ki lisans li genyen, ki sous li soti, ki non pou nou site, ak poukisa. PA GEN YON SÈL LISANS, GEN PLIZYÈ, epi se sa ki enpòtan an : onz fichye soti anba ODbL paske yo soti nan OpenStreetMap, ki mande pou tout baz done ki soti nan li rete anba menm lisans lan ; gen lòt ki pa anba okenn lisans, paske atik 5 nan dekrè ayisyen 12 oktòb 2005 la retire tèks ofisyèl ak done senp anba dwa otè. Si nou te mete CC BY toupatou, nou t ap bay moun yon dwa yo pa genyen ; si nou te mete ODbL toupatou, nou t ap entèdi san rezon. Tablo a rekalkile chak fwa depi rejis sous yo.</p>
-  <p class="price" data-i18n-html="ds.prd036_pr">Gratis <small>144 liy • 8 kolòn</small></p>
+  <p class="price" data-i18n-html="ds.prd036_pr">Gratis <small>149 liy • 8 kolòn</small></p>
   <p class="meta" data-i18n-html="ds.prd036_meta">📐 Metòd • Sous : Rejis sous ak paspò jiridik Atmart • nivo konfyans A • CC BY 4.0</p>
   <a href="../data/atmart_licences_donnees_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Telechaje (CSV)</a>
 </div>
 <div class="card" data-cat="gratuit" id="PRD-027">
   <span class="tag" data-i18n="ds.t_free">Gratis</span>
   <h3 data-i18n-html="ds.prd027_h">Seri nasyonal Ayiti yo</h3>
-  <p data-i18n-html="ds.prd027_p"><span data-mf="prd_027_series">107</span> seri nasyonal depi lan 2000 — ekonomi, travay, touris, transpò avyon, sante, edikasyon, enèji, tè, manje, komès, fason peyi a jere, aksè moun genyen nan bank ak lajan mobil. Yo PA desann nan nivo komin nan, epi yo pa dwe desann : yo la kòm yon règ pou w ka mezire yon chif lokal. Twa avètisman chak liy pote : seri travay yo se estimasyon yon modèl BIT fè ; komès machandiz la se done miwa — Ayiti pa deklare l ankò depi 2017 ; epi seri touris yo kanpe an 2018 oswa 2019, paske peyi a pa deklare anyen depi pandemi an.</p>
+  <p data-i18n-html="ds.prd027_p"><span data-mf="prd_027_series">84</span> seri nasyonal depi lan 2000 — ekonomi, travay, touris, transpò avyon, sante, edikasyon, enèji, tè, manje, komès, fason peyi a jere, aksè moun genyen nan bank ak lajan mobil. Yo PA desann nan nivo komin nan, epi yo pa dwe desann : yo la kòm yon règ pou w ka mezire yon chif lokal. Twa avètisman chak liy pote : seri travay yo se estimasyon yon modèl BIT fè ; komès machandiz la se done miwa — Ayiti pa deklare l ankò depi 2017 ; epi seri touris yo kanpe an 2018 oswa 2019, paske peyi a pa deklare anyen depi pandemi an.</p>
   <p class="price" data-i18n-html="ds.prd027_pr">Gratis <small>2 184 liy • 12 kolòn</small></p>
   <p class="meta" data-i18n-html="ds.prd027_meta">💰 Ekonomi • Sous : Banque mondiale — WDI ; OIT — ILOSTAT ; FAO — FAOSTAT ; UN Comtrade • nivo konfyans A • CC BY 4.0 (Bank Mondyal, OIT) ; CC BY 4.0 ak yon kloz ki entèdi sèvi ak non l pou fè pwomosyon (FAO) ; kondisyon UNSD, sèlman agrega ki transfòme (Comtrade)</p>
   <a href="../data/atmart_series_nationales_HT.csv" class="btn btn-primary" download data-i18n="ds.b_csv">Telechaje (CSV)</a>
@@ -3623,7 +3709,7 @@ if(v==="clair"||d)document.documentElement.setAttribute("data-theme",d?"dark":"l
 </script>
 <script src="../assets/mesure.js?v=4" defer></script>
 <script src="../assets/ux.js?v=4" defer></script>
-<script src="../assets/i18n.js?v=78"></script>
+<script src="../assets/i18n.js?v=81"></script>
 <script src="../assets/theme.js?v=3" defer></script>
 <script src="../assets/vues.js?v=2"></script>
 </body>

@@ -377,6 +377,27 @@ IND-EAU-003,ht,methode_calcul,"Pwen « pa mache » divize pa tout pwen WPdx komi
 IND-EAU-003,ht,nom,Pòsyon pwen dlo yo relve ki pa mache
 IND-EAU-003,ht,sens_interpretation,Wo = plis pwen ki pa mache
 IND-EAU-003,ht,unite,%
+IND-EAU-004,en,comparabilite,"Comparable between communes with at least ten tested points, at close survey dates (mostly 2016)."
+IND-EAU-004,en,definition,"Share of the commune's water points, among those tested, where WPdx finds fecal coliform — the mark of fecal contamination."
+IND-EAU-004,en,limites_connues,"SHARE OF TESTED POINTS, NOT OF ALL POINTS: only the commune's water points that were tested for fecal coliform count (2,974 of 6,276 nationally); an untested point enters neither as clean nor as contaminated. The test says fecal contamination is present at the tap when sampled, not that it is constant. Most surveys are from 2016: a past state, not today's. Computed only where at least ten points were tested. From 9% to 84% depending on the commune, with a median of 54%: on tested points, fecal contamination is the rule rather than the exception."
+IND-EAU-004,en,methode_calcul,"WPdx water points attached to the commune (centre inside the CNIGS polygon) whose `fecal_coliform_presence` field is « Present » divided by those that are « Present » or « Absent », times 100. Untested points are excluded. Published if at least ten of the commune's points were tested."
+IND-EAU-004,en,nom,Share of tested water points contaminated with fecal coliform
+IND-EAU-004,en,sens_interpretation,High = more tested points contaminated
+IND-EAU-004,en,unite,%
+IND-EAU-004,es,comparabilite,"Comparable entre comunas con al menos diez puntos analizados, en fechas de relevamiento cercanas (sobre todo 2016)."
+IND-EAU-004,es,definition,"Parte de los puntos de agua de la comuna, entre los analizados, donde WPdx detecta coliformes fecales — la señal de una contaminación de origen fecal."
+IND-EAU-004,es,limites_connues,"PARTE DE LOS PUNTOS ANALIZADOS, NO DE TODOS: solo cuentan los puntos de agua de la comuna que fueron analizados para coliformes fecales (2 974 de 6 276 en el país); un punto no analizado no entra ni como limpio ni como contaminado. La prueba indica que hay contaminación fecal en la toma al muestrear, no que sea constante. La mayoría de los relevamientos son de 2016: un estado pasado, no el de hoy. Se calcula solo donde se analizaron al menos diez puntos. Del 9 % al 84 % según la comuna, con una mediana del 54 %: en los puntos analizados, la contaminación fecal es la regla más que la excepción."
+IND-EAU-004,es,methode_calcul,"Puntos de agua WPdx vinculados a la comuna (centro dentro del polígono CNIGS) cuyo campo `fecal_coliform_presence` es « Present » dividido por los que son « Present » o « Absent », por 100. Los puntos no analizados quedan excluidos. Se publica si al menos diez puntos de la comuna fueron analizados."
+IND-EAU-004,es,nom,Parte de los puntos de agua analizados contaminados con coliformes fecales
+IND-EAU-004,es,sens_interpretation,Alto = más puntos analizados contaminados
+IND-EAU-004,es,unite,%
+IND-EAU-004,ht,comparabilite,"Nou ka konpare komin ki gen omwen dis pwen yo teste, ak dat relve ki pre (sitou 2016)."
+IND-EAU-004,ht,definition,"Pòsyon pwen dlo nan komin nan, pami sa yo te teste, kote WPdx jwenn kolifòm fekal — sa ki make yon kontaminasyon ki soti nan poupou."
+IND-EAU-004,ht,limites_connues,"SE PÒSYON PWEN YO TESTE A, SE PA TOUT PWEN YO : nou konte sèlman pwen dlo nan komin nan kote yo te fè yon tès kolifòm fekal (2 974 sou 6 276 nan peyi a) ; yon pwen yo pa t teste pa antre nan kalkil la, ni kòm bon ni kòm sal. Tès la di gen kontaminasyon fekal nan sous la lè yo teste l, li pa di li la tout tan. Pifò relve yo se 2016 : se yon eta ki pase, se pa jodi a. Nou kalkile l sèlman kote yo teste omwen dis pwen. Soti 9 % rive 84 % selon komin nan, ak yon medyàn 54 % : sou pwen yo teste yo, kontaminasyon fekal la se règ la plis pase eksepsyon."
+IND-EAU-004,ht,methode_calcul,"Pwen dlo WPdx yo rattache ak komin nan (sant nan polygòn CNIGS la) kote kolòn `fecal_coliform_presence` di « Present » divize pa sa ki di « Present » oswa « Absent », fwa 100. Pwen san tès pa antre. Nou pibliye si omwen dis pwen nan komin nan te teste."
+IND-EAU-004,ht,nom,Pòsyon pwen dlo yo teste ki kontamine ak kolifòm fekal
+IND-EAU-004,ht,sens_interpretation,Wo = plis pwen teste ki kontamine
+IND-EAU-004,ht,unite,%
 IND-EAU-005,en,comparabilite,Comparable between communes of at least 50 km²; says nothing about flow or available water.
 IND-EAU-005,en,definition,"Kilometres of rivers in the HydroRIVERS network within the commune, per square kilometre of commune."
 IND-EAU-005,en,limites_connues,"A COMPUTED NETWORK, NOT A SURVEY: HydroRIVERS derives rivers from a ~500 m terrain model and keeps only those whose upstream basin exceeds 10 km² — short ravines are missing, and a river channelled through a city is not always there. Published only for communes of at least 50 km²: below that, a single segment of a few kilometres makes the figure."

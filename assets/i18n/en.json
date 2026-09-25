@@ -1281,7 +1281,7 @@
  "ds.prd026_pr": "Free <small>219 rows • 9 columns</small>",
  "ds.prd027_h": "Haiti's national series",
  "ds.prd027_meta": "💰 Economy • Sources: Banque mondiale — WDI ; OIT — ILOSTAT ; FAO — FAOSTAT ; UN Comtrade • confidence level A • CC BY 4.0 (World Bank, ILO); CC BY 4.0 with a non-endorsement clause (FAO); UNSD terms, transformed aggregates only (Comtrade)",
- "ds.prd027_p": "<span data-mf=\"prd_027_series\">107</span> national series since 2000 — economy, labour, tourism, air transport, health, education, energy, land, food security, trade, governance, financial inclusion. They do NOT go down to the commune and must not: they serve as a yardstick for reading a local figure. Three warnings each row carries: the labour series are ILO modelled estimates; merchandise trade is mirror data — Haiti has not reported it since 2017; and the tourism series stop in 2018 or 2019, with nothing reported since the pandemic.",
+ "ds.prd027_p": "<span data-mf=\"prd_027_series\">84</span> national series since 2000 — economy, labour, tourism, air transport, health, education, energy, land, food security, trade, governance, financial inclusion. They do NOT go down to the commune and must not: they serve as a yardstick for reading a local figure. Three warnings each row carries: the labour series are ILO modelled estimates; merchandise trade is mirror data — Haiti has not reported it since 2017; and the tourism series stop in 2018 or 2019, with nothing reported since the pandemic.",
  "ds.prd027_pr": "Free <small>2,184 rows • 12 columns</small>",
  "ds.prd028_h": "Mapped tourism supply — point layer",
  "ds.prd028_meta": "📄 Tourism • Sources: OpenStreetMap via HOT • confidence level C • ODbL",

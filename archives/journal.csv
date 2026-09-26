@@ -178,7 +178,8 @@ atmart_licences.json,2026-09-24,archives/atmart_licences/2026-09-24.json,3222903
 atmart_licences.json,2026-09-24,archives/atmart_licences/2026-09-24-2.json,b9f11e1f9f4e04462ade82eb75dce8cde09f0fb237c2856f8976315480f40d68,35292,1216,,,2026-09-24,vitrine,7090486c05,non
 atmart_licences.json,2026-09-24,archives/atmart_licences/2026-09-24-3.json,8cba4311c85e856889285895f761b47ea5c41f93af293ced755f3d9983d336ce,35620,1225,,,2026-09-24,vitrine,73cc808cf0,non
 atmart_licences.json,2026-09-25,archives/atmart_licences/2026-09-25.json,2233e1378a3183be41be5f6dad7c9f6763ab62d0b97382b13c8ec84b6e39c510,35769,1231,,,2026-09-25,vitrine,c728a6855b,non
-atmart_licences.json,2026-09-25,archives/atmart_licences/2026-09-25-2.json,ac9516a9e74d389c416eaa321708edfb82557a6163bd5e670a10eeeb46eff1bc,36633,1263,,,2026-09-25,vitrine,3da6826e8e,oui
+atmart_licences.json,2026-09-25,archives/atmart_licences/2026-09-25-2.json,ac9516a9e74d389c416eaa321708edfb82557a6163bd5e670a10eeeb46eff1bc,36633,1263,,,2026-09-25,vitrine,3da6826e8e,non
+atmart_licences.json,2026-09-25,archives/atmart_licences/2026-09-25-3.json,0e28d5a62e6f31eda32d1dd7f8407b48bd8e228c67b29db8b8af47b644a8c177,36753,1265,,,2026-09-25,vitrine,a43025a3b7,oui
 atmart_licences.json,2026-08-23,archives/atmart_licences/2026-08-23-3.json,3fbe2f7c89f249d64b15fbf0152bc58ef4b637fa117b9ca018d574223656d951,19526,691,,,2026-08-23,site,71b6010f36,non
 atmart_licences_donnees_HT.csv,2026-08-22,archives/atmart_licences_donnees_HT/2026-08-22.csv,60f62aacdf42b6dea8769cc811a07da8a3151bb198b788e414041c96d0b414a4,21568,83,82,lignes,2026-08-22,vitrine,5198a9223d,non
 atmart_licences_donnees_HT.csv,2026-08-23,archives/atmart_licences_donnees_HT/2026-08-23.csv,9de549ee1b429576d6f9e38ebf04cdba78997c5d6fccbcfab916dd56e22f9e8b,23273,88,87,lignes,2026-08-23,vitrine,6c2a1d8ac8,non
@@ -230,7 +231,8 @@ atmart_licences_donnees_HT.csv,2026-09-24,archives/atmart_licences_donnees_HT/20
 atmart_licences_donnees_HT.csv,2026-09-24,archives/atmart_licences_donnees_HT/2026-09-24-3.csv,de7bf0a91f1bd06c6f66d7bade76411510320941db622ad9944f130dea95ae22,42896,145,144,lignes,2026-09-24,vitrine,73cc808cf0,non
 atmart_licences_donnees_HT.csv,2026-09-25,archives/atmart_licences_donnees_HT/2026-09-25.csv,e7c0dc8fa91e191baaf3ab7ce7665cd17ee5fcb81d275dcd47d33178c9788920,42896,145,144,lignes,2026-09-25,vitrine,e4c0425383,non
 atmart_licences_donnees_HT.csv,2026-09-25,archives/atmart_licences_donnees_HT/2026-09-25-2.csv,b83294500e1ffa4632a95ad99c437ca430bf94a43b9d46ecbb5fbe5598ed132d,43139,146,145,lignes,2026-09-25,vitrine,c728a6855b,non
-atmart_licences_donnees_HT.csv,2026-09-25,archives/atmart_licences_donnees_HT/2026-09-25-3.csv,756bb8ee0706a1aaec1f5aed5a6c039eb33a7bae116c15f8072034e8409f7aff,43831,150,149,lignes,2026-09-25,vitrine,3da6826e8e,oui
+atmart_licences_donnees_HT.csv,2026-09-25,archives/atmart_licences_donnees_HT/2026-09-25-3.csv,756bb8ee0706a1aaec1f5aed5a6c039eb33a7bae116c15f8072034e8409f7aff,43831,150,149,lignes,2026-09-25,vitrine,3da6826e8e,non
+atmart_licences_donnees_HT.csv,2026-09-25,archives/atmart_licences_donnees_HT/2026-09-25-4.csv,c2ac38fe0b8e4d83e69cd677d7a2d69f4b1ecdae1afa16bf9de11f63133c1604,44003,150,149,lignes,2026-09-25,vitrine,a43025a3b7,oui
 atmart_licences_donnees_HT.csv,2026-08-23,archives/atmart_licences_donnees_HT/2026-08-23-3.csv,4a315725f6c9935b361d64b9681b38871b48e0e79a92c08e0ce7aeadfeec3212,22134,85,84,lignes,2026-08-23,site,71b6010f36,non
 atmart_licences_indicateurs_HT.csv,2026-09-18,archives/atmart_licences_indicateurs_HT/2026-09-18.csv,a0558655d2dac8acee4f694fc20131bed83dcb5ea5906ca329bd1ab590ed03ba,18895,77,76,lignes,2026-09-18,vitrine,de037cc762,non
 atmart_licences_indicateurs_HT.csv,2026-09-19,archives/atmart_licences_indicateurs_HT/2026-09-19.csv,3f1438ac773392c02574ecbfe9679a2498f199ff644c9299b26e369b407523a3,22337,88,87,lignes,2026-09-19,vitrine,14ffb023e6,non
@@ -422,7 +424,8 @@ atmart_registre_sources.csv,2026-09-24,archives/atmart_registre_sources/2026-09-
 atmart_registre_sources.csv,2026-09-24,archives/atmart_registre_sources/2026-09-24-4.csv,37d58ab4cadcae8e63e971001d6159b279f2b5ebc0c2dad98c200a442b8af340,74373,74,73,lignes,2026-09-24,vitrine,ab066f77c2,non
 atmart_registre_sources.csv,2026-09-24,archives/atmart_registre_sources/2026-09-24-5.csv,37ad4e7c6f52006a23006aa39d96ca4b5b13c2a9b230fa6dd5814bdd91bb8660,74628,74,73,lignes,2026-09-24,vitrine,73cc808cf0,non
 atmart_registre_sources.csv,2026-09-24,archives/atmart_registre_sources/2026-09-24-6.csv,f8d9be2298b7d58487a1039b96c01737340bca6abdcdf049038b0046e1f20cd2,74611,74,73,lignes,2026-09-24,vitrine,04cf0bd192,non
-atmart_registre_sources.csv,2026-09-25,archives/atmart_registre_sources/2026-09-25.csv,c746238afa45e167392f6ef0fdc69d24c5660a47145635c00db02d59cf7342b6,74732,74,73,lignes,2026-09-25,vitrine,3da6826e8e,oui
+atmart_registre_sources.csv,2026-09-25,archives/atmart_registre_sources/2026-09-25.csv,c746238afa45e167392f6ef0fdc69d24c5660a47145635c00db02d59cf7342b6,74732,74,73,lignes,2026-09-25,vitrine,3da6826e8e,non
+atmart_registre_sources.csv,2026-09-25,archives/atmart_registre_sources/2026-09-25-2.csv,e492fcdc9691f9f99e1dfb2d96e4add6f95e4d2822fb01bc20cddf06397c055a,75554,75,74,lignes,2026-09-25,vitrine,a43025a3b7,oui
 atmart_registre_sources.csv,2026-08-23,archives/atmart_registre_sources/2026-08-23-3.csv,dfc0fbfde2cfe91e731f5733b78f16cdfe215989e5cc0c15c75b18726570fc2d,44127,47,46,lignes,2026-08-23,site,71b6010f36,non
 atmart_renvois_us.json,2026-08-23,archives/atmart_renvois_us/2026-08-23.json,acfa9c47c823590d7acfcc781e5df95cd2cc3c30fdf9d9666ab44e6e77b6416b,20105,470,,,2026-08-23,vitrine,7aa251bc4a,oui
 atmart_renvois_us_annuel.csv,2026-08-23,archives/atmart_renvois_us_annuel/2026-08-23.csv,c49a1b7223d3d73dc5c419c55fd26800e29ef5840c5db9feacf2557d55f43f45,9196,33,32,lignes,2026-08-23,vitrine,7aa251bc4a,oui
@@ -450,7 +453,8 @@ atmart_series_nationales.json,2026-08-21,archives/atmart_series_nationales/2026-
 atmart_series_nationales.json,2026-08-24,archives/atmart_series_nationales/2026-08-24.json,d622b77e1858e0b915856d32b0c15504c05750d5676e6a6515a328a30b361bd0,49637,0,79,entrées,2026-08-24,vitrine,d2fe3d9d9e,non
 atmart_series_nationales.json,2026-08-26,archives/atmart_series_nationales/2026-08-26.json,ce19634f9b4a387c66b18f9d09e717cd6bd67b52d76584930fcc3054cd759703,59277,0,84,entrées,2026-08-26,vitrine,9c832550e8,non
 atmart_series_nationales.json,2026-09-21,archives/atmart_series_nationales/2026-09-21.json,a9bbd6339c2595b06f075dfaa7ff61d6b806a4cac6e2319d015cad355c58b6a9,69434,0,90,entrées,2026-09-21,vitrine,8f0e9b45c6,non
-atmart_series_nationales.json,2026-09-21,archives/atmart_series_nationales/2026-09-21-2.json,c218fa6690eef3eba16168bdc08cdbc657c2833264b47d31937a5b95a6c796cf,77780,0,107,entrées,2026-09-21,vitrine,f4ae3d4880,oui
+atmart_series_nationales.json,2026-09-21,archives/atmart_series_nationales/2026-09-21-2.json,c218fa6690eef3eba16168bdc08cdbc657c2833264b47d31937a5b95a6c796cf,77780,0,107,entrées,2026-09-21,vitrine,f4ae3d4880,non
+atmart_series_nationales.json,2026-09-25,archives/atmart_series_nationales/2026-09-25.json,25c08218f10f78bb186e919e4af16854d13d5c6548e85e86d297693a3de9e713,80422,0,111,entrées,2026-09-25,vitrine,a43025a3b7,oui
 atmart_series_nationales_HT.csv,2026-08-18,archives/atmart_series_nationales_HT/2026-08-18.csv,8ca7675a16dad1632aa1cc056a8ae8f73182b95ca7b16f0fe31da7deec657076,240437,908,907,lignes,2026-08-18,vitrine,202933929e,non
 atmart_series_nationales_HT.csv,2026-08-19,archives/atmart_series_nationales_HT/2026-08-19.csv,707a1edd198130732e65eb2fa4ab87c3d28b4e05b22d57b421f9dcd5072dad67,442251,1420,1419,lignes,2026-08-19,vitrine,a1e6608c6b,non
 atmart_series_nationales_HT.csv,2026-08-21,archives/atmart_series_nationales_HT/2026-08-21.csv,1ac504f39c2473de60c51b7e4626a4e9dc7c411c056b184f3bf4eacda7e24b69,500160,1586,1585,lignes,2026-08-21,vitrine,7957dbebf8,non
@@ -458,7 +462,8 @@ atmart_series_nationales_HT.csv,2026-08-21,archives/atmart_series_nationales_HT/
 atmart_series_nationales_HT.csv,2026-08-22,archives/atmart_series_nationales_HT/2026-08-22.csv,88f718d9d5ee66d6663f32bad39062dfaec4bab392e2ca5095a841a82fb877bc,542896,1664,1663,lignes,2026-08-22,vitrine,5198a9223d,non
 atmart_series_nationales_HT.csv,2026-08-24,archives/atmart_series_nationales_HT/2026-08-24.csv,300c43f609231999167b955ef89ce012d0a323fccd5216c2c430d9b0d917096c,562188,1713,1712,lignes,2026-08-24,vitrine,d2fe3d9d9e,non
 atmart_series_nationales_HT.csv,2026-09-21,archives/atmart_series_nationales_HT/2026-09-21.csv,a0b71b0289ad36e6a6036ce29cf7dc905ee443f0f06c83e21e15f2c891fb6271,790369,2145,2144,lignes,2026-09-21,vitrine,8f0e9b45c6,non
-atmart_series_nationales_HT.csv,2026-09-21,archives/atmart_series_nationales_HT/2026-09-21-2.csv,942823759c618c221f53f96f0acdaa0da1cb78913e746ff25ef5ce3be905a56e,807123,2185,2184,lignes,2026-09-21,vitrine,f4ae3d4880,oui
+atmart_series_nationales_HT.csv,2026-09-21,archives/atmart_series_nationales_HT/2026-09-21-2.csv,942823759c618c221f53f96f0acdaa0da1cb78913e746ff25ef5ce3be905a56e,807123,2185,2184,lignes,2026-09-21,vitrine,f4ae3d4880,non
+atmart_series_nationales_HT.csv,2026-09-25,archives/atmart_series_nationales_HT/2026-09-25.csv,06913859d701ae4a0b4a0c9f402a8149252565fba9d7f626c6085125172eeef7,837998,2283,2282,lignes,2026-09-25,vitrine,a43025a3b7,oui
 atmart_solaire_communes.json,2026-08-17,archives/atmart_solaire_communes/2026-08-17.json,ecdf68dea2716fee49da1d575aa032d4b73804992b95d5b404a4987125a6a074,190619,4396,140,entrées,2026-08-17,site,4edd662664,non
 atmart_solaire_communes.json,2026-08-17,archives/atmart_solaire_communes/2026-08-17-2.json,aac3de498d1d2a2cf59778c317aab618733b46b9555d5ba27de94a2354363085,169123,0,140,entrées,2026-08-17,site,df46d75237,oui
 atmart_sols_communes.json,2026-08-17,archives/atmart_sols_communes/2026-08-17.json,47daf7bae941c221ae2a690722fbc0dee1809c10402caebc25aa98d1620ec20f,28971,0,140,entrées,2026-08-17,site,2b76d06e4f,non
@@ -529,7 +534,8 @@ catalogue_manifest.json,2026-09-24,archives/catalogue_manifest/2026-09-24-2.json
 catalogue_manifest.json,2026-09-24,archives/catalogue_manifest/2026-09-24-3.json,ab52c21595baadb1f2bc808bc3489c406509eee13a317f9e70b121bf83c403e3,4512,170,,,2026-09-24,vitrine,73cc808cf0,non
 catalogue_manifest.json,2026-09-25,archives/catalogue_manifest/2026-09-25.json,50a13ae45e858f035c92f0bf412902dec018587c6be747564f9df2aab8399395,4512,170,,,2026-09-25,vitrine,e4c0425383,non
 catalogue_manifest.json,2026-09-25,archives/catalogue_manifest/2026-09-25-2.json,683c1eb666cd1873c5620f4f69e3d21e2dbbc3d0bc8a005559e92fcfe08d7c83,4559,172,,,2026-09-25,vitrine,c728a6855b,non
-catalogue_manifest.json,2026-09-25,archives/catalogue_manifest/2026-09-25-3.json,b53be0342a5ab50a9f85ef21cb7893f05b4cead249bb8c6099984270f68aa23b,4651,176,,,2026-09-25,vitrine,3da6826e8e,oui
+catalogue_manifest.json,2026-09-25,archives/catalogue_manifest/2026-09-25-3.json,b53be0342a5ab50a9f85ef21cb7893f05b4cead249bb8c6099984270f68aa23b,4651,176,,,2026-09-25,vitrine,3da6826e8e,non
+catalogue_manifest.json,2026-09-25,archives/catalogue_manifest/2026-09-25-4.json,a3b4235168ff2de751fcb3c9574269dcb6b43909478b1e29ef725447cf264d74,4651,176,,,2026-09-25,vitrine,a43025a3b7,oui
 haiti_communes_simplifie.geojson,2026-08-14,archives/haiti_communes_simplifie/2026-08-14.geojson,e0162bfa16e701a3f71804c6b7a574bf0a943801fc5687f065807b2cbb681e64,231716,1,140,entités,2026-08-14,vitrine,5eda4cfd6c,oui
 haiti_contour_simplifie.geojson,2026-07-31,archives/haiti_contour_simplifie/2026-07-31.geojson,15b281bc0d8b87827805908cc7e90d0a9a3ceb8541b866650c1ca19d3946c3c1,16785,0,1,entités,2026-07-31,vitrine,3f56418955,oui
 haiti_departements_simplifie.geojson,2026-08-14,archives/haiti_departements_simplifie/2026-08-14.geojson,9824d2bce124ac292ca1750e679368c7c7fca85eccf997f6e05f0cb1031f3aa2,42967,1,10,entités,2026-08-14,vitrine,5eda4cfd6c,oui

@@ -8,6 +8,13 @@
   <language>es</language>
   <atom:link href="https://explorateur.atmart.ltd/es/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Actualizaciones del 26/09/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-09-26</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-09-26</guid>
+    <pubDate>Sat, 26 Sep 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nueva versión · 2a0d67f4; Registro de fuentes Atmart — nueva versión · 75 filas · 415007e1; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 2 730 filas · 8782c4e3; atmart_referentiel_indicateurs.csv — nueva versión · 130 filas · 6d142a10; atmart_licences_indicateurs_HT.csv — nueva versión · 130 filas · 062e79d0; La licencia de cada archivo publicado — nueva versión · 149 filas · 907c053d; atmart_licences.json — nueva versión · be0a028d; atmart_indicateurs_communes_HT.csv — nueva versión · 15 655 filas · 8e6b1bb2</description>
+  </item>
+  <item>
     <title>Actualizaciones del 25/09/2026</title>
     <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-09-25</link>
     <guid isPermaLink="false">explorateur-maj-es-2026-09-25</guid>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">explorateur-maj-es-2026-08-10</guid>
     <pubDate>Mon, 10 Aug 2026 12:00:00 +0000</pubDate>
     <description>Registro de fuentes Atmart — nueva versión · 13 filas · f25c59f6; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 420 filas · 6fe94da1; atmart_referentiel_indicateurs.csv — nueva versión · 20 filas · 94553e0b; atmart_indicateurs_communes_HT.csv — nueva versión · 1 414 filas · 5c9c7d56</description>
-  </item>
-  <item>
-    <title>Actualizaciones del 31/07/2026</title>
-    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-07-31</link>
-    <guid isPermaLink="false">explorateur-maj-es-2026-07-31</guid>
-    <pubDate>Fri, 31 Jul 2026 12:00:00 +0000</pubDate>
-    <description>Remesas de la diáspora (2000–2025) — Haití + 7 países — primera publicación · 26 filas · e38973a5; haiti_contour_simplifie.geojson — primera publicación · 1 entidades · 15b281bc; Registro de fuentes Atmart — primera publicación · 8 filas · c363c47c; Registro de fuentes Atmart — primera publicación · 12 filas · 20c2c6a7; atmart_referentiel_territoire_base_HT.csv — primera publicación · 192 filas · b4bb6eb0; atmart_referentiel_territoire_base_HT.csv — primera publicación · 192 filas · d59beb9e; atmart_referentiel_temps_HT.csv — primera publicación · 1 201 filas · e59b0c94; atmart_referentiel_indicateurs_i18n.csv — primera publicación · 420 filas · f6d6c228; atmart_referentiel_indicateurs.csv — primera publicación · 17 filas · 96a0e9cf; atmart_referentiel_indicateurs.csv — primera publicación · 20 filas · 4fe6203a; atmart_millesimes_territoriaux.csv — primera publicación · 192 filas · dabc3cfd; atmart_indicateurs_communes_HT.csv — primera publicación · 1 197 filas · 79fdb038; atmart_indicateurs_communes_HT.csv — primera publicación · 1 197 filas · 14b99d28; atmart_indicateurs_communes_HT.csv — primera publicación · 1 274 filas · 555df151; LISEZMOI_transferts_diaspora.md — nueva versión · e5b253c8; Muestra — secciones comunales de Haití — nueva versión · 10 filas · f87eaa45</description>
   </item>
 </channel>
 </rss>

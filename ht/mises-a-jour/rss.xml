@@ -8,6 +8,13 @@
   <language>ht</language>
   <atom:link href="https://explorateur.atmart.ltd/ht/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Sa ki chanje 26/09/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-09-26</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-09-26</guid>
+    <pubDate>Sat, 26 Sep 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvo vèsyon · 2a0d67f4; Rejis sous Atmart yo — nouvo vèsyon · 75 liy · 415007e1; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 2 730 liy · 8782c4e3; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 130 liy · 6d142a10; atmart_licences_indicateurs_HT.csv — nouvo vèsyon · 130 liy · 062e79d0; Lisans chak fichye nou pibliye — nouvo vèsyon · 149 liy · 907c053d; atmart_licences.json — nouvo vèsyon · be0a028d; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 15 655 liy · 8e6b1bb2</description>
+  </item>
+  <item>
     <title>Sa ki chanje 25/09/2026</title>
     <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-09-25</link>
     <guid isPermaLink="false">explorateur-maj-ht-2026-09-25</guid>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">explorateur-maj-ht-2026-08-10</guid>
     <pubDate>Mon, 10 Aug 2026 12:00:00 +0000</pubDate>
     <description>Rejis sous Atmart yo — nouvo vèsyon · 13 liy · f25c59f6; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 420 liy · 6fe94da1; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 20 liy · 94553e0b; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 1 414 liy · 5c9c7d56</description>
-  </item>
-  <item>
-    <title>Sa ki chanje 31/07/2026</title>
-    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-07-31</link>
-    <guid isPermaLink="false">explorateur-maj-ht-2026-07-31</guid>
-    <pubDate>Fri, 31 Jul 2026 12:00:00 +0000</pubDate>
-    <description>Transfè dyaspora a (2000–2025) — Ayiti + 7 peyi — premye piblikasyon · 26 liy · e38973a5; haiti_contour_simplifie.geojson — premye piblikasyon · 1 eleman · 15b281bc; Rejis sous Atmart yo — premye piblikasyon · 8 liy · c363c47c; Rejis sous Atmart yo — premye piblikasyon · 12 liy · 20c2c6a7; atmart_referentiel_territoire_base_HT.csv — premye piblikasyon · 192 liy · b4bb6eb0; atmart_referentiel_territoire_base_HT.csv — premye piblikasyon · 192 liy · d59beb9e; atmart_referentiel_temps_HT.csv — premye piblikasyon · 1 201 liy · e59b0c94; atmart_referentiel_indicateurs_i18n.csv — premye piblikasyon · 420 liy · f6d6c228; atmart_referentiel_indicateurs.csv — premye piblikasyon · 17 liy · 96a0e9cf; atmart_referentiel_indicateurs.csv — premye piblikasyon · 20 liy · 4fe6203a; atmart_millesimes_territoriaux.csv — premye piblikasyon · 192 liy · dabc3cfd; atmart_indicateurs_communes_HT.csv — premye piblikasyon · 1 197 liy · 79fdb038; atmart_indicateurs_communes_HT.csv — premye piblikasyon · 1 197 liy · 14b99d28; atmart_indicateurs_communes_HT.csv — premye piblikasyon · 1 274 liy · 555df151; LISEZMOI_transferts_diaspora.md — nouvo vèsyon · e5b253c8; Echantiyon — seksyon kominal Ayiti — nouvo vèsyon · 10 liy · f87eaa45</description>
   </item>
 </channel>
 </rss>

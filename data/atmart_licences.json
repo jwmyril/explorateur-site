@@ -1119,9 +1119,10 @@
     "SRC-080",
     "SRC-COMTRADE",
     "SRC-FAOSTAT",
-    "SRC-ILOSTAT"
+    "SRC-ILOSTAT",
+    "SRC-WHO"
    ],
-   "attribution": "Banque mondiale ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail"
+   "attribution": "Banque mondiale ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail ; OMS — Organisation mondiale de la Santé"
   },
   "atmart_series_nationales_HT.csv": {
    "licence": "CC BY 4.0 — transformation ou citation",
@@ -1131,9 +1132,10 @@
     "SRC-080",
     "SRC-COMTRADE",
     "SRC-FAOSTAT",
-    "SRC-ILOSTAT"
+    "SRC-ILOSTAT",
+    "SRC-WHO"
    ],
-   "attribution": "Banque mondiale ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail"
+   "attribution": "Banque mondiale ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail ; OMS — Organisation mondiale de la Santé"
   },
   "atmart_solaire_communes.json": {
    "licence": "CC BY 4.0",

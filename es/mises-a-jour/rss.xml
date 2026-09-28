@@ -8,6 +8,13 @@
   <language>es</language>
   <atom:link href="https://explorateur.atmart.ltd/es/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Actualizaciones del 28/09/2026</title>
+    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-09-28</link>
+    <guid isPermaLink="false">explorateur-maj-es-2026-09-28</guid>
+    <pubDate>Mon, 28 Sep 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nueva versión · d77d8077; Registro de fuentes Atmart — nueva versión · 76 filas · decf350b; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 2 772 filas · 86298bd8; atmart_referentiel_indicateurs.csv — nueva versión · 132 filas · ff632694; atmart_licences_indicateurs_HT.csv — nueva versión · 132 filas · 4fac9d4d; La licencia de cada archivo publicado — nueva versión · 149 filas · c7ca2ed2; atmart_licences.json — nueva versión · 4df838a0; atmart_indicateurs_communes_HT.csv — nueva versión · 15 935 filas · 04d1321f</description>
+  </item>
+  <item>
     <title>Actualizaciones del 26/09/2026</title>
     <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-09-26</link>
     <guid isPermaLink="false">explorateur-maj-es-2026-09-26</guid>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">explorateur-maj-es-2026-08-11</guid>
     <pubDate>Tue, 11 Aug 2026 12:00:00 +0000</pubDate>
     <description>Registro de fuentes Atmart — nueva versión · 13 filas · 450b7f8e; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 441 filas · 7a93aa0f; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 672 filas · c112c2c7; atmart_referentiel_indicateurs.csv — nueva versión · 21 filas · 8f785039; atmart_referentiel_indicateurs.csv — nueva versión · 32 filas · 27d6f2ce; Pirámide de edades de las 140 comunas NUEVO — primera publicación · 7 140 filas · b64692e7; atmart_indicateurs_communes_HT.csv — nueva versión · 1 554 filas · 0ef7966b; atmart_indicateurs_communes_HT.csv — nueva versión · 3 094 filas · ee3bfc04</description>
-  </item>
-  <item>
-    <title>Actualizaciones del 10/08/2026</title>
-    <link>https://explorateur.atmart.ltd/es/mises-a-jour/index.html#d-2026-08-10</link>
-    <guid isPermaLink="false">explorateur-maj-es-2026-08-10</guid>
-    <pubDate>Mon, 10 Aug 2026 12:00:00 +0000</pubDate>
-    <description>Registro de fuentes Atmart — nueva versión · 13 filas · f25c59f6; atmart_referentiel_indicateurs_i18n.csv — nueva versión · 420 filas · 6fe94da1; atmart_referentiel_indicateurs.csv — nueva versión · 20 filas · 94553e0b; atmart_indicateurs_communes_HT.csv — nueva versión · 1 414 filas · 5c9c7d56</description>
   </item>
 </channel>
 </rss>

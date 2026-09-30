@@ -8,6 +8,13 @@
   <language>fr</language>
   <atom:link href="https://explorateur.atmart.ltd/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Mises à jour du 30/09/2026</title>
+    <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-09-30</link>
+    <guid isPermaLink="false">explorateur-maj-fr-2026-09-30</guid>
+    <pubDate>Wed, 30 Sep 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvelle version · c32e5b99; Registre des sources Atmart — nouvelle version · 77 lignes · ebbdfffb; atmart_referentiel_indicateurs_i18n.csv — nouvelle version · 2 793 lignes · 0d930a9a; atmart_referentiel_indicateurs.csv — nouvelle version · 133 lignes · bed0c7e1; atmart_licences_indicateurs_HT.csv — nouvelle version · 133 lignes · 5ec6c10e; Licence de chaque fichier publié — nouvelle version · 149 lignes · 7c551ebd; atmart_licences.json — nouvelle version · 37eb2806; atmart_indicateurs_communes_HT.csv — nouvelle version · 16 075 lignes · 454173d7</description>
+  </item>
+  <item>
     <title>Mises à jour du 28/09/2026</title>
     <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-09-28</link>
     <guid isPermaLink="false">explorateur-maj-fr-2026-09-28</guid>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">explorateur-maj-fr-2026-08-12</guid>
     <pubDate>Wed, 12 Aug 2026 12:00:00 +0000</pubDate>
     <description>atmart_indicateurs_communes_HT.csv — nouvelle version · 3 780 lignes · 9c1aad5a</description>
-  </item>
-  <item>
-    <title>Mises à jour du 11/08/2026</title>
-    <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-08-11</link>
-    <guid isPermaLink="false">explorateur-maj-fr-2026-08-11</guid>
-    <pubDate>Tue, 11 Aug 2026 12:00:00 +0000</pubDate>
-    <description>Registre des sources Atmart — nouvelle version · 13 lignes · 450b7f8e; atmart_referentiel_indicateurs_i18n.csv — nouvelle version · 441 lignes · 7a93aa0f; atmart_referentiel_indicateurs_i18n.csv — nouvelle version · 672 lignes · c112c2c7; atmart_referentiel_indicateurs.csv — nouvelle version · 21 lignes · 8f785039; atmart_referentiel_indicateurs.csv — nouvelle version · 32 lignes · 27d6f2ce; Pyramide des âges des 140 communes — première publication · 7 140 lignes · b64692e7; atmart_indicateurs_communes_HT.csv — nouvelle version · 1 554 lignes · 0ef7966b; atmart_indicateurs_communes_HT.csv — nouvelle version · 3 094 lignes · ee3bfc04</description>
   </item>
 </channel>
 </rss>

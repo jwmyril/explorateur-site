@@ -448,8 +448,9 @@ atmart_registre_sources.csv,2026-09-26,archives/atmart_registre_sources/2026-09-
 atmart_registre_sources.csv,2026-09-26,archives/atmart_registre_sources/2026-09-26-2.csv,4375159dffdc342557d1b671b1b8c1bba93ac26e6e8c3ede9e83168c16ea16fa,76233,76,75,lignes,2026-09-26,vitrine,988fb15d15,non
 atmart_registre_sources.csv,2026-09-28,archives/atmart_registre_sources/2026-09-28.csv,decf350b296d2556520eb72c97f013a443389b100c11eab4ee5fecc88d625c5d,77065,77,76,lignes,2026-09-28,vitrine,c19a79e00a,non
 atmart_registre_sources.csv,2026-09-28,archives/atmart_registre_sources/2026-09-28-2.csv,d927e7057ecc462094d772894db2f0d383a12c4d07e525ca6d5c0dc0a815301e,77048,77,76,lignes,2026-09-28,vitrine,c2de8d130c,non
-atmart_registre_sources.csv,2026-09-30,archives/atmart_registre_sources/2026-09-30.csv,ebbdfffb324137a7d59fa22f4a12dce3ab2bad2006fcc89bc818d5a3fa393747,77720,78,77,lignes,2026-09-30,vitrine,7a5c483aca,oui
+atmart_registre_sources.csv,2026-09-30,archives/atmart_registre_sources/2026-09-30.csv,ebbdfffb324137a7d59fa22f4a12dce3ab2bad2006fcc89bc818d5a3fa393747,77720,78,77,lignes,2026-09-30,vitrine,7a5c483aca,non
 atmart_registre_sources.csv,2026-08-23,archives/atmart_registre_sources/2026-08-23-3.csv,dfc0fbfde2cfe91e731f5733b78f16cdfe215989e5cc0c15c75b18726570fc2d,44127,47,46,lignes,2026-08-23,site,71b6010f36,non
+atmart_registre_sources.csv,2026-09-30,archives/atmart_registre_sources/2026-09-30-2.csv,f76c6579ee32458c33200fd04b2aebbe35ee300ac1e4cc6d9570b5d38b7778b1,77703,78,77,lignes,2026-09-30,site,3d7adac157,oui
 atmart_renvois_us.json,2026-08-23,archives/atmart_renvois_us/2026-08-23.json,acfa9c47c823590d7acfcc781e5df95cd2cc3c30fdf9d9666ab44e6e77b6416b,20105,470,,,2026-08-23,vitrine,7aa251bc4a,oui
 atmart_renvois_us_annuel.csv,2026-08-23,archives/atmart_renvois_us_annuel/2026-08-23.csv,c49a1b7223d3d73dc5c419c55fd26800e29ef5840c5db9feacf2557d55f43f45,9196,33,32,lignes,2026-08-23,vitrine,7aa251bc4a,oui
 atmart_renvois_us_mensuel.csv,2026-08-23,archives/atmart_renvois_us_mensuel/2026-08-23.csv,bd4cbc54afb4eab725aa50b7511bf21011a8f3a59f01b22790940551a0eed8f3,102418,365,364,lignes,2026-08-23,vitrine,7aa251bc4a,oui
@@ -563,7 +564,8 @@ catalogue_manifest.json,2026-09-26,archives/catalogue_manifest/2026-09-26.json,2
 catalogue_manifest.json,2026-09-26,archives/catalogue_manifest/2026-09-26-2.json,6aabfe20a34830737bed9c63d94db4e22a7adf715fe120210f028ec1d7a4ce55,4651,176,,,2026-09-26,vitrine,988fb15d15,non
 catalogue_manifest.json,2026-09-28,archives/catalogue_manifest/2026-09-28.json,d77d807733ca2dbe2abddb83b2b1e4c4d63b8c1186c16774396643f6bafe1e37,4651,176,,,2026-09-28,vitrine,c19a79e00a,non
 catalogue_manifest.json,2026-09-28,archives/catalogue_manifest/2026-09-28-2.json,028fd125c0d83e141bd7c4f441d4806b2a1b5bef0f62a59fefc295ba70f7945c,4651,176,,,2026-09-28,vitrine,c2de8d130c,non
-catalogue_manifest.json,2026-09-30,archives/catalogue_manifest/2026-09-30.json,c32e5b99ad4a44508eee16c0122b4d6288ef8e65401db0d6c30a75ca3f3ef7db,4651,176,,,2026-09-30,vitrine,7a5c483aca,oui
+catalogue_manifest.json,2026-09-30,archives/catalogue_manifest/2026-09-30.json,c32e5b99ad4a44508eee16c0122b4d6288ef8e65401db0d6c30a75ca3f3ef7db,4651,176,,,2026-09-30,vitrine,7a5c483aca,non
+catalogue_manifest.json,2026-09-30,archives/catalogue_manifest/2026-09-30-2.json,4480d9497d5be97cafd7c5bab38b03e81ccd3df71f9c239f670553a9867e8a39,4651,176,,,2026-09-30,site,3d7adac157,oui
 haiti_communes_simplifie.geojson,2026-08-14,archives/haiti_communes_simplifie/2026-08-14.geojson,e0162bfa16e701a3f71804c6b7a574bf0a943801fc5687f065807b2cbb681e64,231716,1,140,entités,2026-08-14,vitrine,5eda4cfd6c,oui
 haiti_contour_simplifie.geojson,2026-07-31,archives/haiti_contour_simplifie/2026-07-31.geojson,15b281bc0d8b87827805908cc7e90d0a9a3ceb8541b866650c1ca19d3946c3c1,16785,0,1,entités,2026-07-31,vitrine,3f56418955,oui
 haiti_departements_simplifie.geojson,2026-08-14,archives/haiti_departements_simplifie/2026-08-14.geojson,9824d2bce124ac292ca1750e679368c7c7fca85eccf997f6e05f0cb1031f3aa2,42967,1,10,entités,2026-08-14,vitrine,5eda4cfd6c,oui

@@ -1,0 +1,56 @@
+{
+ "indicateur_id": "IND-ACC-009",
+ "nom": "Part du port dans les importations maritimes du pays",
+ "definition": "Part, en pourcentage, des importations maritimes d'Haïti qui passent par le port de la commune, d'après PortWatch (FMI). Mesure la dépendance du pays vis-à-vis de ce port.",
+ "unite": "%",
+ "limites_connues": "CETTE VALEUR EST CELLE DU PORT, PAS DE LA COMMUNE ENTIÈRE : elle décrit l'activité du port situé dans la commune, non l'économie de la commune. Seules trois communes d'Haïti ont un port suivi (Port-au-Prince, Cap-Haïtien, Saint-Marc) ; les autres n'ont AUCUNE valeur — pas de port, et non zéro navire. C'est une ESTIMATION à partir des signaux AIS des navires (période 2019-2025), pas un registre douanier : les petits caboteurs et les navires qui n'émettent pas d'AIS y échappent. Port-au-Prince concentre 86 % des importations maritimes du pays : un blocage y arrête l'approvisionnement national.",
+ "fichier_d_origine": "data/atmart_indicateurs_communes_HT.csv",
+ "version_referentiel": "v1.2026.08",
+ "valeurs": [
+  {
+   "indicateur_id": "IND-ACC-009",
+   "atmart_geo_id": "HTC-0311",
+   "pcode_commune": "HT0311",
+   "commune": "Cap-Haïtien",
+   "commune_ht": "Kap Ayisyen",
+   "departement": "Nord",
+   "valeur": "13.15",
+   "unite": "%",
+   "annee_reference": "2025",
+   "statut_valeur": "A",
+   "niveau_qualite": "B",
+   "source": "FMI — PortWatch (portwatch.imf.org), trafic maritime estimé par signaux AIS 2019-2025 ; valeur du PORT rattachée à sa commune",
+   "version": "v1.2026.08"
+  },
+  {
+   "indicateur_id": "IND-ACC-009",
+   "atmart_geo_id": "HTC-0111",
+   "pcode_commune": "HT0111",
+   "commune": "Port-au-Prince",
+   "commune_ht": "Pòtoprens",
+   "departement": "Ouest",
+   "valeur": "86.22",
+   "unite": "%",
+   "annee_reference": "2025",
+   "statut_valeur": "A",
+   "niveau_qualite": "B",
+   "source": "FMI — PortWatch (portwatch.imf.org), trafic maritime estimé par signaux AIS 2019-2025 ; valeur du PORT rattachée à sa commune",
+   "version": "v1.2026.08"
+  },
+  {
+   "indicateur_id": "IND-ACC-009",
+   "atmart_geo_id": "HTC-0531",
+   "pcode_commune": "HT0531",
+   "commune": "Saint-Marc",
+   "commune_ht": "Sen Mak",
+   "departement": "Artibonite",
+   "valeur": "0.63",
+   "unite": "%",
+   "annee_reference": "2025",
+   "statut_valeur": "A",
+   "niveau_qualite": "B",
+   "source": "FMI — PortWatch (portwatch.imf.org), trafic maritime estimé par signaux AIS 2019-2025 ; valeur du PORT rattachée à sa commune",
+   "version": "v1.2026.08"
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+indicateur_id,atmart_geo_id,pcode_commune,commune,commune_ht,departement,valeur,unite,annee_reference,statut_valeur,niveau_qualite,source,version
+IND-ACC-009,HTC-0311,HT0311,Cap-Haïtien,Kap Ayisyen,Nord,13.15,%,2025,A,B,"FMI — PortWatch (portwatch.imf.org), trafic maritime estimé par signaux AIS 2019-2025 ; valeur du PORT rattachée à sa commune",v1.2026.08
+IND-ACC-009,HTC-0111,HT0111,Port-au-Prince,Pòtoprens,Ouest,86.22,%,2025,A,B,"FMI — PortWatch (portwatch.imf.org), trafic maritime estimé par signaux AIS 2019-2025 ; valeur du PORT rattachée à sa commune",v1.2026.08
+IND-ACC-009,HTC-0531,HT0531,Saint-Marc,Sen Mak,Artibonite,0.63,%,2025,A,B,"FMI — PortWatch (portwatch.imf.org), trafic maritime estimé par signaux AIS 2019-2025 ; valeur du PORT rattachée à sa commune",v1.2026.08

@@ -1,0 +1,56 @@
+{
+ "indicateur_id": "IND-ACC-008",
+ "nom": "Trafic maritime annuel du port (navires reçus)",
+ "definition": "Nombre de navires que le port de la commune a reçus sur une année, d'après le suivi PortWatch du FMI par signaux AIS. Cinq types de navires : porte-conteneurs, vraquiers, cargos, rouliers, pétroliers.",
+ "unite": "navires/an",
+ "limites_connues": "CETTE VALEUR EST CELLE DU PORT, PAS DE LA COMMUNE ENTIÈRE : elle décrit l'activité du port situé dans la commune, non l'économie de la commune. Seules trois communes d'Haïti ont un port suivi (Port-au-Prince, Cap-Haïtien, Saint-Marc) ; les autres n'ont AUCUNE valeur — pas de port, et non zéro navire. C'est une ESTIMATION à partir des signaux AIS des navires (période 2019-2025), pas un registre douanier : les petits caboteurs et les navires qui n'émettent pas d'AIS y échappent. Port-au-Prince en reçoit de loin le plus (614/an), devant Cap-Haïtien (133) et Saint-Marc (39).",
+ "fichier_d_origine": "data/atmart_indicateurs_communes_HT.csv",
+ "version_referentiel": "v1.2026.08",
+ "valeurs": [
+  {
+   "indicateur_id": "IND-ACC-008",
+   "atmart_geo_id": "HTC-0311",
+   "pcode_commune": "HT0311",
+   "commune": "Cap-Haïtien",
+   "commune_ht": "Kap Ayisyen",
+   "departement": "Nord",
+   "valeur": "133.0",
+   "unite": "navires/an",
+   "annee_reference": "2025",
+   "statut_valeur": "A",
+   "niveau_qualite": "B",
+   "source": "FMI — PortWatch (portwatch.imf.org), trafic maritime estimé par signaux AIS 2019-2025 ; valeur du PORT rattachée à sa commune",
+   "version": "v1.2026.08"
+  },
+  {
+   "indicateur_id": "IND-ACC-008",
+   "atmart_geo_id": "HTC-0111",
+   "pcode_commune": "HT0111",
+   "commune": "Port-au-Prince",
+   "commune_ht": "Pòtoprens",
+   "departement": "Ouest",
+   "valeur": "614.0",
+   "unite": "navires/an",
+   "annee_reference": "2025",
+   "statut_valeur": "A",
+   "niveau_qualite": "B",
+   "source": "FMI — PortWatch (portwatch.imf.org), trafic maritime estimé par signaux AIS 2019-2025 ; valeur du PORT rattachée à sa commune",
+   "version": "v1.2026.08"
+  },
+  {
+   "indicateur_id": "IND-ACC-008",
+   "atmart_geo_id": "HTC-0531",
+   "pcode_commune": "HT0531",
+   "commune": "Saint-Marc",
+   "commune_ht": "Sen Mak",
+   "departement": "Artibonite",
+   "valeur": "39.0",
+   "unite": "navires/an",
+   "annee_reference": "2025",
+   "statut_valeur": "A",
+   "niveau_qualite": "B",
+   "source": "FMI — PortWatch (portwatch.imf.org), trafic maritime estimé par signaux AIS 2019-2025 ; valeur du PORT rattachée à sa commune",
+   "version": "v1.2026.08"
+  }
+ ]
+}

@@ -8,6 +8,13 @@
   <language>ht</language>
   <atom:link href="https://explorateur.atmart.ltd/ht/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Sa ki chanje 01/10/2026</title>
+    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-10-01</link>
+    <guid isPermaLink="false">explorateur-maj-ht-2026-10-01</guid>
+    <pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvo vèsyon · 38afad81; Seri nasyonal Ayiti yo — nouvo vèsyon · 2 413 liy · 66552b38; atmart_series_nationales.json — nouvo vèsyon · 117 antre · d0466020; Rejis sous Atmart yo — nouvo vèsyon · 80 liy · 44589c18; Lisans chak fichye nou pibliye — nouvo vèsyon · 149 liy · c8cd1300; atmart_licences.json — nouvo vèsyon · a359e22a</description>
+  </item>
+  <item>
     <title>Sa ki chanje 30/09/2026</title>
     <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-09-30</link>
     <guid isPermaLink="false">explorateur-maj-ht-2026-09-30</guid>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">explorateur-maj-ht-2026-08-13</guid>
     <pubDate>Thu, 13 Aug 2026 12:00:00 +0000</pubDate>
     <description>catalogue_manifest.json — premye piblikasyon · 7352f327; catalogue_manifest.json — premye piblikasyon · b433dde7; Rejis sous Atmart yo — nouvo vèsyon · 22 liy · ee7fa77a; Rejis sous Atmart yo — nouvo vèsyon · 22 liy · 633a3f8a; Rejis sous Atmart yo — nouvo vèsyon · 22 liy · c7cf7e6f; Rejis sous Atmart yo — nouvo vèsyon · 23 liy · ec3eddd5; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 672 liy · 98ff3d79; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 672 liy · 69243d43; atmart_referentiel_indicateurs_i18n.csv — nouvo vèsyon · 672 liy · e15bbaf0; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · 774903c1; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · f7a6410b; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · 4a8c0e75; atmart_referentiel_indicateurs.csv — nouvo vèsyon · 32 liy · 83c0d263; Pri nan mache yo — rezo santinèl NOUVO — premye piblikasyon · 14 140 liy · d7104087; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 4 060 liy · 14a33f6b; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 4 200 liy · 48c4d780; atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 4 200 liy · 1fa80a80</description>
-  </item>
-  <item>
-    <title>Sa ki chanje 12/08/2026</title>
-    <link>https://explorateur.atmart.ltd/ht/mises-a-jour/index.html#d-2026-08-12</link>
-    <guid isPermaLink="false">explorateur-maj-ht-2026-08-12</guid>
-    <pubDate>Wed, 12 Aug 2026 12:00:00 +0000</pubDate>
-    <description>atmart_indicateurs_communes_HT.csv — nouvo vèsyon · 3 780 liy · 9c1aad5a</description>
   </item>
 </channel>
 </rss>

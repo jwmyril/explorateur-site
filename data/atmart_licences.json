@@ -1123,12 +1123,13 @@
     "SRC-080",
     "SRC-087",
     "SRC-088",
+    "SRC-089",
     "SRC-COMTRADE",
     "SRC-FAOSTAT",
     "SRC-ILOSTAT",
     "SRC-WHO"
    ],
-   "attribution": "Banque mondiale ; Banque mondiale — International Debt Statistics (IDS) ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail ; OMS — Organisation mondiale de la Santé ; PNUD — Programme des Nations unies pour le développement (Human Development Report Office)"
+   "attribution": "Banque mondiale ; Banque mondiale — International Debt Statistics (IDS) ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; FMI — Fonds monétaire international (Perspectives de l'économie mondiale, WEO) ; OIT — Organisation internationale du Travail ; OMS — Organisation mondiale de la Santé ; PNUD — Programme des Nations unies pour le développement (Human Development Report Office)"
   },
   "atmart_series_nationales_HT.csv": {
    "licence": "CC BY 4.0 — transformation ou citation",
@@ -1138,12 +1139,13 @@
     "SRC-080",
     "SRC-087",
     "SRC-088",
+    "SRC-089",
     "SRC-COMTRADE",
     "SRC-FAOSTAT",
     "SRC-ILOSTAT",
     "SRC-WHO"
    ],
-   "attribution": "Banque mondiale ; Banque mondiale — International Debt Statistics (IDS) ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; OIT — Organisation internationale du Travail ; OMS — Organisation mondiale de la Santé ; PNUD — Programme des Nations unies pour le développement (Human Development Report Office)"
+   "attribution": "Banque mondiale ; Banque mondiale — International Debt Statistics (IDS) ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; FMI — Fonds monétaire international (Perspectives de l'économie mondiale, WEO) ; OIT — Organisation internationale du Travail ; OMS — Organisation mondiale de la Santé ; PNUD — Programme des Nations unies pour le développement (Human Development Report Office)"
   },
   "atmart_solaire_communes.json": {
    "licence": "CC BY 4.0",

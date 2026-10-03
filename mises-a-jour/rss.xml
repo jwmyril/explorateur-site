@@ -8,6 +8,13 @@
   <language>fr</language>
   <atom:link href="https://explorateur.atmart.ltd/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Mises à jour du 03/10/2026</title>
+    <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-10-03</link>
+    <guid isPermaLink="false">explorateur-maj-fr-2026-10-03</guid>
+    <pubDate>Sat, 03 Oct 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvelle version · a60d691d; Séries nationales d'Haïti — nouvelle version · 2 500 lignes · 599eac84; atmart_series_nationales.json — nouvelle version · 121 entrées · 5f528c3d; Registre des sources Atmart — nouvelle version · 82 lignes · 368e068e; Licence de chaque fichier publié — nouvelle version · 149 lignes · 99297295; atmart_licences.json — nouvelle version · 0b3a018d</description>
+  </item>
+  <item>
     <title>Mises à jour du 02/10/2026</title>
     <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-10-02</link>
     <guid isPermaLink="false">explorateur-maj-fr-2026-10-02</guid>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">explorateur-maj-fr-2026-08-15</guid>
     <pubDate>Sat, 15 Aug 2026 12:00:00 +0000</pubDate>
     <description>catalogue_manifest.json — nouvelle version · ca767ad7; Télécom par commune — dénombrement — première publication · 219 lignes · 4ba2bfbe; Registre des sources Atmart — nouvelle version · 36 lignes · 6257387a; Infrastructures par commune — nouvelle version · 2 118 lignes · 2ea96630; Équipements télécom par opérateur — première publication · 498 entités · a6a2bf81</description>
-  </item>
-  <item>
-    <title>Mises à jour du 14/08/2026</title>
-    <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-08-14</link>
-    <guid isPermaLink="false">explorateur-maj-fr-2026-08-14</guid>
-    <pubDate>Fri, 14 Aug 2026 12:00:00 +0000</pubDate>
-    <description>haiti_departements_simplifie.geojson — première publication · 10 entités · 9824d2bc; haiti_communes_simplifie.geojson — première publication · 140 entités · e0162bfa; catalogue_manifest.json — nouvelle version · a5f4ba2d; catalogue_manifest.json — nouvelle version · 57b8c352; catalogue_manifest.json — nouvelle version · 78ff3c79; catalogue_manifest.json — nouvelle version · 69f98f46; catalogue_manifest.json — nouvelle version · 207d1ece; catalogue_manifest.json — nouvelle version · 6d859c9a; catalogue_manifest.json — nouvelle version · 205d1762; catalogue_manifest.json — nouvelle version · 2201ed96; catalogue_manifest.json — nouvelle version · a9710c3a; catalogue_manifest.json — nouvelle version · 94329fbb; Registre des sources Atmart — nouvelle version · 24 lignes · 7f4e695e; Registre des sources Atmart — nouvelle version · 27 lignes · dc0e529f; Registre des sources Atmart — nouvelle version · 31 lignes · 24ccfd0e; Registre des sources Atmart — nouvelle version · 31 lignes · f2c8b769; Registre des sources Atmart — nouvelle version · 34 lignes · 12c05a0e; Registre des sources Atmart — nouvelle version · 35 lignes · f856d7f2; Registre des ONG reconnues — première publication · 680 lignes · 723840f4; Registre des marchés d'Haïti — première publication · 182 lignes · cff51300; atmart_referentiel_indicateurs.csv — nouvelle version · 32 lignes · 714ff55a; atmart_referentiel_indicateurs.csv — nouvelle version · 32 lignes · e27f4f22; Professions juridiques et foncières par commune — première publication · 280 lignes · aa950a5c; Présence des organisations — qui travaille où — première publication · 1 457 lignes · df802ea6; Occupation du sol par commune — première publication · 1 042 lignes · af2f6010; Registre des marchés d'Haïti — première publication · 182 entités · 78f14c70; Insécurité alimentaire — phases IPC — première publication · 210 lignes · c61678bc; Infrastructures par commune — première publication · 1 895 lignes · 2849b2f6; Infrastructures par commune — première publication · 1 899 lignes · fdf9d622; Repères budgétaires nationaux — première publication · 2 lignes · c1cbff8a; Déplacements de population — première publication · 150 lignes · e7b7d870; Zones inondables — première publication · 134 entités · 4436b48a; Banques, guichets et transferts — première publication · 474 entités · 24856ba1; Points d'eau — première publication · 6 276 entités · de7ffd9b; Stations-service — première publication · 310 entités · 4d9e435f; Bassins versants — première publication · 31 entités · 12f15278; Conflits — événements et décès par commune — première publication · 4 368 lignes · 1d728ff2; Part de zone inondable par commune — première publication · 140 lignes · 9628ab5b; EXTRAIT_haiti_lieux_habites_geonames_gps.csv — première publication · 10 lignes · 428ff643; EXTRAIT_haiti_570_sections_communales_gps.csv — première publication · 10 lignes · f87eaa45; EXTRAIT_haiti_140_villes_chefs_lieux_gps.csv — première publication · 10 lignes · 122ecd58; EXTRAIT_geojson.md — première publication · ecbe9838</description>
   </item>
 </channel>
 </rss>

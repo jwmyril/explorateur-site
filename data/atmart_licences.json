@@ -119,8 +119,7 @@
    "atmart_opinion_serie_HT.csv",
    "atmart_points_transfert.json",
    "atmart_points_transfert_communes_HT.csv",
-   "atmart_professions_communes_HT.csv",
-   "atmart_series_nationales_HT.csv"
+   "atmart_professions_communes_HT.csv"
   ],
   "CC BY-NC 4.0": [
    "atmart_conflits_HT.csv",
@@ -167,7 +166,8 @@
    "atmart_indicateurs_communes_HT.csv"
   ],
   "par ligne — voir la colonne « licence »": [
-   "atmart_infrastructures_communes_HT.csv"
+   "atmart_infrastructures_communes_HT.csv",
+   "atmart_series_nationales_HT.csv"
   ],
   "sous réserve": [
    "atmart_deputes_2015_candidats_HT.csv",
@@ -1123,7 +1123,7 @@
    "attribution": "U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
   },
   "atmart_series_nationales_HT.csv": {
-   "licence": "CC BY 4.0 — transformation ou citation",
+   "licence": "par ligne — voir la colonne « licence »",
    "sources": [
     "SRC-015",
     "SRC-018",

@@ -1118,9 +1118,10 @@
   "atmart_series_nationales.json": {
    "licence": "CC BY 4.0",
    "sources": [
-    "SRC-056"
+    "SRC-056",
+    "SRC-090"
    ],
-   "attribution": "U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
+   "attribution": "U.S. Customs and Border Protection (CBP) ; U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS)"
   },
   "atmart_series_nationales_HT.csv": {
    "licence": "par ligne — voir la colonne « licence »",
@@ -1134,12 +1135,13 @@
     "SRC-089",
     "SRC-090",
     "SRC-091",
+    "SRC-092",
     "SRC-COMTRADE",
     "SRC-FAOSTAT",
     "SRC-ILOSTAT",
     "SRC-WHO"
    ],
-   "attribution": "Banque mondiale ; Banque mondiale — International Debt Statistics (IDS) ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; FMI — Fonds monétaire international (Perspectives de l'économie mondiale, WEO) ; OIT — Organisation internationale du Travail ; OMS — Organisation mondiale de la Santé ; PNUD — Programme des Nations unies pour le développement (Human Development Report Office) ; U.S. Customs and Border Protection (CBP) ; U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS) ; UNESCO — Institut de statistique (UIS)"
+   "attribution": "Banque mondiale ; Banque mondiale — International Debt Statistics (IDS) ; Banque mondiale — équipe des Worldwide Governance Indicators ; Division de statistique des Nations unies (UNSD) ; FAO — Organisation des Nations unies pour l'alimentation et l'agriculture ; FMI — Fonds monétaire international (Perspectives de l'économie mondiale, WEO) ; OIT — Organisation internationale du Travail ; OMS — Organisation mondiale de la Santé ; ONU DESA — Division de la population (Nations unies) ; PNUD — Programme des Nations unies pour le développement (Human Development Report Office) ; U.S. Customs and Border Protection (CBP) ; U.S. Department of Homeland Security — Office of Homeland Security Statistics (OHSS) ; UNESCO — Institut de statistique (UIS)"
   },
   "atmart_solaire_communes.json": {
    "licence": "CC BY 4.0",

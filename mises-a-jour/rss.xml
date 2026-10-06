@@ -8,6 +8,13 @@
   <language>fr</language>
   <atom:link href="https://explorateur.atmart.ltd/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Mises à jour du 06/10/2026</title>
+    <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-10-06</link>
+    <guid isPermaLink="false">explorateur-maj-fr-2026-10-06</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — nouvelle version · bd6d23f0; Séries nationales d'Haïti — nouvelle version · 2 677 lignes · f8928e2b; atmart_series_nationales.json — nouvelle version · 127 entrées · c5debb84; Registre des sources Atmart — nouvelle version · 84 lignes · 9028d5c9; Licence de chaque fichier publié — nouvelle version · 149 lignes · fc324047; atmart_licences.json — nouvelle version · b4228e9a</description>
+  </item>
+  <item>
     <title>Mises à jour du 03/10/2026</title>
     <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-10-03</link>
     <guid isPermaLink="false">explorateur-maj-fr-2026-10-03</guid>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">explorateur-maj-fr-2026-08-17</guid>
     <pubDate>Mon, 17 Aug 2026 12:00:00 +0000</pubDate>
     <description>atmart_urbanisation_communes.json — première publication · 140 entrées · e71472c3; atmart_sols_communes.json — première publication · 140 entrées · 47daf7ba; atmart_sols_communes.json — première publication · 140 entrées · 08a40e11; atmart_solaire_communes.json — première publication · 140 entrées · ecdf68de; atmart_solaire_communes.json — première publication · 140 entrées · aac3de49; atmart_seismes_communes.json — première publication · 140 entrées · a20ea2d3; atmart_sante_declaree.json — première publication · 139 entrées · 61772925; atmart_projets_national.json — première publication · 15 entrées · c17abc4f; atmart_projets_national.json — première publication · 15 entrées · 04298f28; atmart_population_trois_sources.json — première publication · 140 entrées · 35149368; atmart_population_modelisee.json — première publication · 140 entrées · c586a180; atmart_pluie_communes.json — première publication · 140 entrées · 8de3dd3b; atmart_occupation_sol.json — première publication · 140 entrées · 2b7460ed; atmart_equipements_hot.json — première publication · 140 entrées · 856cad05; atmart_ecoles_declarees.json — première publication · 140 entrées · e00b5486; atmart_ecoles_declarees.json — première publication · 140 entrées · a05792d6; atmart_eau_surface.json — première publication · 140 entrées · 55e6be90; atmart_cyclones_communes.json — première publication · 140 entrées · dd21091f; atmart_credits_departements.json — première publication · 9b4e5e1d; atmart_couches_carte_HT.csv — première publication · 140 lignes · 8abd36f9; atmart_couches_carte_HT.csv — première publication · 140 lignes · 3343548f; atmart_batiments_communes.json — première publication · 140 entrées · 995e4a34; atmart_bassins_communes.json — première publication · 140 entrées · 19f53c6d; atmart_acces_routier.json — première publication · 140 entrées · b7a6787d</description>
-  </item>
-  <item>
-    <title>Mises à jour du 15/08/2026</title>
-    <link>https://explorateur.atmart.ltd/mises-a-jour/index.html#d-2026-08-15</link>
-    <guid isPermaLink="false">explorateur-maj-fr-2026-08-15</guid>
-    <pubDate>Sat, 15 Aug 2026 12:00:00 +0000</pubDate>
-    <description>catalogue_manifest.json — nouvelle version · ca767ad7; Télécom par commune — dénombrement — première publication · 219 lignes · 4ba2bfbe; Registre des sources Atmart — nouvelle version · 36 lignes · 6257387a; Infrastructures par commune — nouvelle version · 2 118 lignes · 2ea96630; Équipements télécom par opérateur — première publication · 498 entités · a6a2bf81</description>
   </item>
 </channel>
 </rss>

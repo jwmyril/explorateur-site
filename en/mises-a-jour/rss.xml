@@ -8,6 +8,13 @@
   <language>en</language>
   <atom:link href="https://explorateur.atmart.ltd/en/mises-a-jour/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Updates of 10/6/2026</title>
+    <link>https://explorateur.atmart.ltd/en/mises-a-jour/index.html#d-2026-10-06</link>
+    <guid isPermaLink="false">explorateur-maj-en-2026-10-06</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 +0000</pubDate>
+    <description>catalogue_manifest.json — new version · bd6d23f0; Haiti's national series — new version · 2,677 rows · f8928e2b; atmart_series_nationales.json — new version · 127 entries · c5debb84; Atmart source register — new version · 84 rows · 9028d5c9; The licence of every published file — new version · 149 rows · fc324047; atmart_licences.json — new version · b4228e9a</description>
+  </item>
+  <item>
     <title>Updates of 10/3/2026</title>
     <link>https://explorateur.atmart.ltd/en/mises-a-jour/index.html#d-2026-10-03</link>
     <guid isPermaLink="false">explorateur-maj-en-2026-10-03</guid>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">explorateur-maj-en-2026-08-17</guid>
     <pubDate>Mon, 17 Aug 2026 12:00:00 +0000</pubDate>
     <description>atmart_urbanisation_communes.json — first publication · 140 entries · e71472c3; atmart_sols_communes.json — first publication · 140 entries · 47daf7ba; atmart_sols_communes.json — first publication · 140 entries · 08a40e11; atmart_solaire_communes.json — first publication · 140 entries · ecdf68de; atmart_solaire_communes.json — first publication · 140 entries · aac3de49; atmart_seismes_communes.json — first publication · 140 entries · a20ea2d3; atmart_sante_declaree.json — first publication · 139 entries · 61772925; atmart_projets_national.json — first publication · 15 entries · c17abc4f; atmart_projets_national.json — first publication · 15 entries · 04298f28; atmart_population_trois_sources.json — first publication · 140 entries · 35149368; atmart_population_modelisee.json — first publication · 140 entries · c586a180; atmart_pluie_communes.json — first publication · 140 entries · 8de3dd3b; atmart_occupation_sol.json — first publication · 140 entries · 2b7460ed; atmart_equipements_hot.json — first publication · 140 entries · 856cad05; atmart_ecoles_declarees.json — first publication · 140 entries · e00b5486; atmart_ecoles_declarees.json — first publication · 140 entries · a05792d6; atmart_eau_surface.json — first publication · 140 entries · 55e6be90; atmart_cyclones_communes.json — first publication · 140 entries · dd21091f; atmart_credits_departements.json — first publication · 9b4e5e1d; atmart_couches_carte_HT.csv — first publication · 140 rows · 8abd36f9; atmart_couches_carte_HT.csv — first publication · 140 rows · 3343548f; atmart_batiments_communes.json — first publication · 140 entries · 995e4a34; atmart_bassins_communes.json — first publication · 140 entries · 19f53c6d; atmart_acces_routier.json — first publication · 140 entries · b7a6787d</description>
-  </item>
-  <item>
-    <title>Updates of 8/15/2026</title>
-    <link>https://explorateur.atmart.ltd/en/mises-a-jour/index.html#d-2026-08-15</link>
-    <guid isPermaLink="false">explorateur-maj-en-2026-08-15</guid>
-    <pubDate>Sat, 15 Aug 2026 12:00:00 +0000</pubDate>
-    <description>catalogue_manifest.json — new version · ca767ad7; Telecom by commune — count — first publication · 219 rows · 4ba2bfbe; Atmart source register — new version · 36 rows · 6257387a; Infrastructure by commune NEW — new version · 2,118 rows · 2ea96630; Telecom equipment by operator — first publication · 498 features · a6a2bf81</description>
   </item>
 </channel>
 </rss>
